@@ -15324,24 +15324,58 @@ Warning message in read.table(file = file, header = header, sep = sep, quote = q
 <p>On the other hand <code>str()</code> gives us the same kind of information plus a little more.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Two ways to see how many unique entries we have</span>
 <span class="c1"># ?length</span>
-<span class="nf">length</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">microbes</span><span class="p">))</span>
+<span class="nf">length</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">microbes</span><span class="o">$</span><span class="n">genus</span><span class="p">))</span>
 
 <span class="c1"># or</span>
 
-<span class="kc">...</span>
+<span class="nf">str</span><span class="p">(</span><span class="nf">unique</span><span class="p">(</span><span class="n">microbes</span><span class="o">$</span><span class="n">genus</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+251
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> chr [1:251] &#34;Pseudomonas&#34; &#34;Candidatus&#34; &#34;Lachnoclostridium&#34; &#34;Trichococcus&#34; ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15354,10 +15388,10 @@ Warning message in read.table(file = file, header = header, sep = sep, quote = q
 <p>We can use this command in Jupyter so let's take a glimpse at <code>glimpse()</code>.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># View(microbes)</span>
@@ -15368,12 +15402,61 @@ Warning message in read.table(file = file, header = header, sep = sep, quote = q
 <span class="nf">str</span><span class="p">(</span><span class="n">microbes</span><span class="p">)</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="s">&quot;glimpse(microbes)&quot;</span><span class="p">)</span>
-<span class="kc">...</span>
+<span class="nf">glimpse</span><span class="p">(</span><span class="n">microbes</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;str(microbes)&#34;
+&#39;data.frame&#39;:	6656 obs. of  12 variables:
+ $ abundance: num  40.69 11.71 11.13 6.14 3.97 ...
+ $ compound : chr  &#34;compound-free&#34; &#34;compound-free&#34; &#34;compound-free&#34; &#34;compound-free&#34; ...
+ $ salinity : chr  &#34;brackish&#34; &#34;brackish&#34; &#34;brackish&#34; &#34;brackish&#34; ...
+ $ group    : chr  &#34;control&#34; &#34;control&#34; &#34;control&#34; &#34;control&#34; ...
+ $ replicate: int  1 1 1 1 1 1 1 1 1 1 ...
+ $ kingdom  : chr  &#34;Bacteria&#34; &#34;Bacteria&#34; &#34;Bacteria&#34; &#34;Bacteria&#34; ...
+ $ phylum   : chr  &#34;Proteobacteria&#34; &#34;Proteobacteria&#34; &#34;Firmicutes&#34; &#34;Firmicutes&#34; ...
+ $ class    : chr  &#34;Gammaproteobacteria&#34; &#34;Alphaproteobacteria&#34; &#34;Clostridia&#34; &#34;Bacilli&#34; ...
+ $ order    : chr  &#34;Pseudomonadales&#34; &#34;Rhodospirillales&#34; &#34;Clostridiales&#34; &#34;Lactobacillales&#34; ...
+ $ family   : chr  &#34;Pseudomonadaceae&#34; &#34;Rhodospirillaceae&#34; &#34;Lachnospiraceae&#34; &#34;Carnobacteriaceae&#34; ...
+ $ genus    : chr  &#34;Pseudomonas&#34; &#34;Candidatus&#34; &#34;Lachnoclostridium&#34; &#34;Trichococcus&#34; ...
+ $ ASV      : chr  &#34;GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGCCTTGACATGCAGAGAACTTTCCAGAGATGGATTGGTGC&#34;| __truncated__ &#34;GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGCAGAACCTTACCCACCTTTGACATGGGACGTATGGGAAGCAGAGATGTTTTCCT&#34;| __truncated__ &#34;GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAAGTCTTGACATCGGAATGACCGGTCCGTAACGGGGCCTTCC&#34;| __truncated__ &#34;GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGTCTTGACATCCTTTGACAATCCTAGAGATAGGACTTTCC&#34;| __truncated__ ...
+[1] &#34;glimpse(microbes)&#34;
+Rows: 6,656
+Columns: 12
+$ abundance <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 40.69, 11.71, 11.13, 6.14, 3.97, 3.90, 2.88, 2.54, 1.22, ...
+$ compound  <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;compound-free&#34;, &#34;compound-free&#34;, &#34;compound-free&#34;, &#34;compo...
+$ salinity  <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;brackish&#34;, &#34;brackish&#34;, &#34;brackish&#34;, &#34;brackish&#34;, &#34;brackish...
+$ group     <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;control&#34;, &#34;control&#34;, &#34;control&#34;, &#34;control&#34;, &#34;control&#34;, &#34;c...
+$ replicate <span class="ansi-black-intense-fg">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+$ kingdom   <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;Bacteria&#34;, &#34;Bacteria&#34;, &#34;Bacteria&#34;, &#34;Bacteria&#34;, &#34;Bacteria...
+$ phylum    <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;Proteobacteria&#34;, &#34;Proteobacteria&#34;, &#34;Firmicutes&#34;, &#34;Firmic...
+$ class     <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;Gammaproteobacteria&#34;, &#34;Alphaproteobacteria&#34;, &#34;Clostridia...
+$ order     <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;Pseudomonadales&#34;, &#34;Rhodospirillales&#34;, &#34;Clostridiales&#34;, &#34;...
+$ family    <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;Pseudomonadaceae&#34;, &#34;Rhodospirillaceae&#34;, &#34;Lachnospiraceae...
+$ genus     <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;Pseudomonas&#34;, &#34;Candidatus&#34;, &#34;Lachnoclostridium&#34;, &#34;Tricho...
+$ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGC...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
