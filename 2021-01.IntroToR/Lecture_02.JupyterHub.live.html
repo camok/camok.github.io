@@ -14916,21 +14916,58 @@ Warning message in read.table(file = file, header = header, sep = sep, quote = q
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Assign our first sheet to it&#39;s own variable</span>
 <span class="n">excel_sheets_list_microbes</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">excel_sheets_list</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span>
 
-<span class="nf">he</span><span class="p">(</span><span class="n">excel_sheets_list_microbes</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">excel_sheets_list_microbes</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 12</caption>
+<thead>
+	<tr><th></th><th scope=col>abundance</th><th scope=col>compound</th><th scope=col>salinity</th><th scope=col>group</th><th scope=col>replicate</th><th scope=col>kingdom</th><th scope=col>phylum</th><th scope=col>class</th><th scope=col>order</th><th scope=col>family</th><th scope=col>genus</th><th scope=col>ASV</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>40.69</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Proteobacteria</td><td>Gammaproteobacteria</td><td>Pseudomonadales    </td><td>Pseudomonadaceae    </td><td>Pseudomonas      </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGCCTTGACATGCAGAGAACTTTCCAGAGATGGATTGGTGCCTTCGGGAACTCTGACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGTAACGAGCGCAACCCTTGTCCTTAGTTACCAGCACGTTAAGGTGGGCACTCTAAGGAGACTGCCGGTGACAAACCGGAGGAAGGTGGGGATGACGTCAAGTCATCATGGCCCTTACGGCCTGGGCTACACACGTGCTACAATGGTCGGTACAAAGGGTTGCCAAGCCGCGAGGTGGAGCTAATCCCATAAAACCGATCGTAGTCCGGATCGCAGTCTGCAACTCGACTGCGTGAAGTCGGAATCGCTAGTAATCGTGAATCAGAATGTCACGGTGAATACGTTCCCGGGCCTTGTACA </td></tr>
+	<tr><th scope=row>2</th><td>11.71</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Proteobacteria</td><td>Alphaproteobacteria</td><td>Rhodospirillales   </td><td>Rhodospirillaceae   </td><td>Candidatus       </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGCAGAACCTTACCCACCTTTGACATGGGACGTATGGGAAGCAGAGATGTTTTCCTTCAGTTCGGCTGGCGTCCACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTCGCCTTCAGTTGCCATCATTCAGTTGGGCACTCTGAAGGAACTGCCGGTGACAAGCCGGAGGAAGGTGGGGATGACGTCAAGTCCTCATGGCCCTTACAGGTGGGGCTACACACGTGCTACAATGGCGACTACAGAGGGGAGCTACCTCGCGAGAGGGCGCCAATCTCAAAAAGTCGTCTCAGTTCGGATTGCACTCTGCAACTCGAGTGCATGAAGTCGGAATCGCTAGTAATCGCGGATCAGCATGCCGCGGTGAATACGTTCCCGGGCCTTGTACA</td></tr>
+	<tr><th scope=row>3</th><td>11.13</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Firmicutes    </td><td>Clostridia         </td><td>Clostridiales      </td><td>Lachnospiraceae     </td><td>Lachnoclostridium</td><td>GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAAGTCTTGACATCGGAATGACCGGTCCGTAACGGGGCCTTCCCTACGGGGCATTCCAGACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTTATCCTTAGTAGCCAGCAGTTCGGCTGGGCACTCTGGGGAGACTGCCAGGGATAACCTGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGATTTGGGCTACACACGTGCTACAATGGCGTAAACAAAGGGAAGCGAAGGAGTGATCCGGAGCAAATCTCAAAAATAACGTCTCAGTTCGGATTGTAGTCTGCAACTCGACTACATGAAGCTGGAATCGCTAGTAATCGCGGATCAGAATGCCGCGGTGAATACGTTCCCGGGTCTTGTACA  </td></tr>
+	<tr><th scope=row>4</th><td>6.14 </td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Firmicutes    </td><td>Bacilli            </td><td>Lactobacillales    </td><td>Carnobacteriaceae   </td><td>Trichococcus     </td><td>GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGTCTTGACATCCTTTGACAATCCTAGAGATAGGACTTTCCCTTCGGGGACAAAGTGACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCCTATTGTTAGTTGCCAGCATTCAGTTGGGCACTCTAATGAGACTGCCGGTGACAAACCGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGACCTGGGCTACACACGTGCTACAATGGATGGTACAACGAGCAGCAAGACCGCGAGGTCAAGCGAATCTCTTAAAGCCATTCTCAGTTCGGATTGCAGGCTGCAACTCGCCTGCATGAAGCCGGAATCGCTAGTAATCGCGGATCAGCACGCCGCGGTGAATACGTTCCCGGGTCTTGTACA   </td></tr>
+	<tr><th scope=row>5</th><td>3.97 </td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Bacteroidetes </td><td>Bacteroidia        </td><td>Bacteroidales      </td><td>Porphyromonadaceae  </td><td>Proteiniphilum   </td><td>GAATTGACGGGGGCCCGCACAAGCGGAGGAACATGTGGTTTAATTCGATGATACGCGAGGAACCTTACCCGGGCTTGAAATGCATCTGACGTATTCGGAAACGGATATTCCCTACGGGGCAGATGTGTAGGTGCTGCATGGTTGTCGTCAGCTCGTGCCGTGAGGTGTCGGCTTAAGTGCCATAACGAGCGCAACCCTCATCGTCAGTTACCATCAGGTAAAGCTGGGGACTCTGGCGAGACTGCCATCGTAAGATGCGAGGAAGGTGGGGATGACGTCAAATCAGCACGGCCCTTACGTCCGGGGCGACACACGTGTTACAATGGGTGGTACAAAGGGCAGCTACCTGGCGACAGGATGCTAATCTCCAAAACCACTCTCAGTTCGGATCGGAGTCTGCAACTCGACTCCGTGAAGCTGGATTCGCTAGTAATCGCGCATCAGCCACGGCGCGGTGAATACGTTCCCGGGCCTTGTACA  </td></tr>
+	<tr><th scope=row>6</th><td>3.9  </td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Actinobacteria</td><td>Actinobacteria     </td><td>Propionibacteriales</td><td>Propionibacteriaceae</td><td>Tessaracoccus    </td><td>GAATTGACGGGGCCCCGCACAAGCGGCGGAGCATGCGGATTAATTCGATGCAACGCGAAGAACCTTACCTGGGTTTGACATATGCCGGAAACATCTAGAGATAGGTGCCCCTTTATGGTCGGTTTACAGGTGGTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTCGTCCTATGTTGCCAGCGGGTAATGCCGGGGACTCATAGGAGACCGCCGGGGTCAACTCGGAGGAAGGTGGGGATGACGTCAAGTCATCATGCCCCTTATGTCCAGGGCTTCACGCATGCTACAATGGCCGGTACAAAGAGCTGCGAACCTGCAAGGGTGAGCGAATCTCAAAAAGCCGGTCTCAGTTCGGATTGGGGTCTGCAACTCGACCCCATGAAGTCGGAGTCGCTAGTAATCGCAGATCAGCAACGCTGCGGTGAATACGTTCCCGGGGCTTGTACA  </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
