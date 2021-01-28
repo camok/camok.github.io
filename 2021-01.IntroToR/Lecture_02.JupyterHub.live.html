@@ -17295,15 +17295,15 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># adding columns can also be done using &quot;base R&quot; code:</span>
 <span class="c1"># This will permanently change microbes</span>
-<span class="n">microbes</span><span class="o">$</span><span class="n">compound_salinity</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">microbes</span><span class="p">)</span>
+<span class="n">microbes</span><span class="o">$</span><span class="n">compound_salinity</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">microbes</span><span class="o">$</span><span class="n">compound</span><span class="p">,</span> <span class="n">microbes</span><span class="o">$</span><span class="n">salinity</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">)</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">microbes</span><span class="p">)</span>
 </pre></div>
@@ -17311,6 +17311,43 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 13</caption>
+<thead>
+	<tr><th></th><th scope=col>abundance</th><th scope=col>compound</th><th scope=col>salinity</th><th scope=col>group</th><th scope=col>replicate</th><th scope=col>kingdom</th><th scope=col>phylum</th><th scope=col>class</th><th scope=col>order</th><th scope=col>family</th><th scope=col>genus</th><th scope=col>ASV</th><th scope=col>compound_salinity</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>40.69</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Proteobacteria</td><td>Gammaproteobacteria</td><td>Pseudomonadales    </td><td>Pseudomonadaceae    </td><td>Pseudomonas      </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGCCTTGACATGCAGAGAACTTTCCAGAGATGGATTGGTGCCTTCGGGAACTCTGACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGTAACGAGCGCAACCCTTGTCCTTAGTTACCAGCACGTTAAGGTGGGCACTCTAAGGAGACTGCCGGTGACAAACCGGAGGAAGGTGGGGATGACGTCAAGTCATCATGGCCCTTACGGCCTGGGCTACACACGTGCTACAATGGTCGGTACAAAGGGTTGCCAAGCCGCGAGGTGGAGCTAATCCCATAAAACCGATCGTAGTCCGGATCGCAGTCTGCAACTCGACTGCGTGAAGTCGGAATCGCTAGTAATCGTGAATCAGAATGTCACGGTGAATACGTTCCCGGGCCTTGTACA </td><td>compound-free_brackish</td></tr>
+	<tr><th scope=row>2</th><td>11.71</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Proteobacteria</td><td>Alphaproteobacteria</td><td>Rhodospirillales   </td><td>Rhodospirillaceae   </td><td>Candidatus       </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGCAGAACCTTACCCACCTTTGACATGGGACGTATGGGAAGCAGAGATGTTTTCCTTCAGTTCGGCTGGCGTCCACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTCGCCTTCAGTTGCCATCATTCAGTTGGGCACTCTGAAGGAACTGCCGGTGACAAGCCGGAGGAAGGTGGGGATGACGTCAAGTCCTCATGGCCCTTACAGGTGGGGCTACACACGTGCTACAATGGCGACTACAGAGGGGAGCTACCTCGCGAGAGGGCGCCAATCTCAAAAAGTCGTCTCAGTTCGGATTGCACTCTGCAACTCGAGTGCATGAAGTCGGAATCGCTAGTAATCGCGGATCAGCATGCCGCGGTGAATACGTTCCCGGGCCTTGTACA</td><td>compound-free_brackish</td></tr>
+	<tr><th scope=row>3</th><td>11.13</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Firmicutes    </td><td>Clostridia         </td><td>Clostridiales      </td><td>Lachnospiraceae     </td><td>Lachnoclostridium</td><td>GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAAGTCTTGACATCGGAATGACCGGTCCGTAACGGGGCCTTCCCTACGGGGCATTCCAGACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTTATCCTTAGTAGCCAGCAGTTCGGCTGGGCACTCTGGGGAGACTGCCAGGGATAACCTGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGATTTGGGCTACACACGTGCTACAATGGCGTAAACAAAGGGAAGCGAAGGAGTGATCCGGAGCAAATCTCAAAAATAACGTCTCAGTTCGGATTGTAGTCTGCAACTCGACTACATGAAGCTGGAATCGCTAGTAATCGCGGATCAGAATGCCGCGGTGAATACGTTCCCGGGTCTTGTACA  </td><td>compound-free_brackish</td></tr>
+	<tr><th scope=row>4</th><td> 6.14</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Firmicutes    </td><td>Bacilli            </td><td>Lactobacillales    </td><td>Carnobacteriaceae   </td><td>Trichococcus     </td><td>GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGTCTTGACATCCTTTGACAATCCTAGAGATAGGACTTTCCCTTCGGGGACAAAGTGACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCCTATTGTTAGTTGCCAGCATTCAGTTGGGCACTCTAATGAGACTGCCGGTGACAAACCGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGACCTGGGCTACACACGTGCTACAATGGATGGTACAACGAGCAGCAAGACCGCGAGGTCAAGCGAATCTCTTAAAGCCATTCTCAGTTCGGATTGCAGGCTGCAACTCGCCTGCATGAAGCCGGAATCGCTAGTAATCGCGGATCAGCACGCCGCGGTGAATACGTTCCCGGGTCTTGTACA   </td><td>compound-free_brackish</td></tr>
+	<tr><th scope=row>5</th><td> 3.97</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Bacteroidetes </td><td>Bacteroidia        </td><td>Bacteroidales      </td><td>Porphyromonadaceae  </td><td>Proteiniphilum   </td><td>GAATTGACGGGGGCCCGCACAAGCGGAGGAACATGTGGTTTAATTCGATGATACGCGAGGAACCTTACCCGGGCTTGAAATGCATCTGACGTATTCGGAAACGGATATTCCCTACGGGGCAGATGTGTAGGTGCTGCATGGTTGTCGTCAGCTCGTGCCGTGAGGTGTCGGCTTAAGTGCCATAACGAGCGCAACCCTCATCGTCAGTTACCATCAGGTAAAGCTGGGGACTCTGGCGAGACTGCCATCGTAAGATGCGAGGAAGGTGGGGATGACGTCAAATCAGCACGGCCCTTACGTCCGGGGCGACACACGTGTTACAATGGGTGGTACAAAGGGCAGCTACCTGGCGACAGGATGCTAATCTCCAAAACCACTCTCAGTTCGGATCGGAGTCTGCAACTCGACTCCGTGAAGCTGGATTCGCTAGTAATCGCGCATCAGCCACGGCGCGGTGAATACGTTCCCGGGCCTTGTACA  </td><td>compound-free_brackish</td></tr>
+	<tr><th scope=row>6</th><td> 3.90</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Actinobacteria</td><td>Actinobacteria     </td><td>Propionibacteriales</td><td>Propionibacteriaceae</td><td>Tessaracoccus    </td><td>GAATTGACGGGGCCCCGCACAAGCGGCGGAGCATGCGGATTAATTCGATGCAACGCGAAGAACCTTACCTGGGTTTGACATATGCCGGAAACATCTAGAGATAGGTGCCCCTTTATGGTCGGTTTACAGGTGGTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTCGTCCTATGTTGCCAGCGGGTAATGCCGGGGACTCATAGGAGACCGCCGGGGTCAACTCGGAGGAAGGTGGGGATGACGTCAAGTCATCATGCCCCTTATGTCCAGGGCTTCACGCATGCTACAATGGCCGGTACAAAGAGCTGCGAACCTGCAAGGGTGAGCGAATCTCAAAAAGCCGGTCTCAGTTCGGATTGGGGTCTGCAACTCGACCCCATGAAGTCGGAGTCGCTAGTAATCGCAGATCAGCAACGCTGCGGTGAATACGTTCCCGGGGCTTGTACA  </td><td>compound-free_brackish</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -17322,7 +17359,7 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Check the column names before and after removing `compound_salinity`</span>
@@ -17356,7 +17393,7 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 .list-inline>li {display: inline-block}
 .list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
 </style>
-<ol class=list-inline><li>'abundance'</li><li>'compound'</li><li>'salinity'</li><li>'group'</li><li>'replicate'</li><li>'kingdom'</li><li>'phylum'</li><li>'class'</li><li>'order'</li><li>'family'</li><li>'genus'</li><li>'ASV'</li></ol>
+<ol class=list-inline><li>'abundance'</li><li>'compound'</li><li>'salinity'</li><li>'group'</li><li>'replicate'</li><li>'kingdom'</li><li>'phylum'</li><li>'class'</li><li>'order'</li><li>'family'</li><li>'genus'</li><li>'ASV'</li><li>'compound_salinity'</li></ol>
 
 </div>
 
@@ -17368,32 +17405,26 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Error: Can&#39;t subset columns that don&#39;t exist.
-<span class="ansi-red-fg">x</span> Column `compound_salinity` doesn&#39;t exist.
-Traceback:
 
-1. select(microbes, -compound_salinity)
-2. select.data.frame(microbes, -compound_salinity)
-3. tidyselect::eval_select(expr(c(...)), .data)
-4. eval_select_impl(data, names(data), as_quosure(expr, env), include = include, 
- .     exclude = exclude, strict = strict, name_spec = name_spec, 
- .     allow_rename = allow_rename)
-5. with_subscript_errors(vars_select_eval(vars, expr, strict, data = x, 
- .     name_spec = name_spec, uniquely_named = uniquely_named, allow_rename = allow_rename, 
- .     type = type), type = type)
-6. tryCatch(instrument_base_errors(expr), vctrs_error_subscript = function(cnd) {
- .     cnd$subscript_action &lt;- subscript_action(type)
- .     cnd$subscript_elt &lt;- &#34;column&#34;
- .     cnd_signal(cnd)
- . })
-7. tryCatchList(expr, classes, parentenv, handlers)
-8. tryCatchOne(expr, names, parentenv, handlers[[1L]])
-9. value[[3L]](cond)
-10. cnd_signal(cnd)
-11. rlang:::signal_abort(x)</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 12</caption>
+<thead>
+	<tr><th></th><th scope=col>abundance</th><th scope=col>compound</th><th scope=col>salinity</th><th scope=col>group</th><th scope=col>replicate</th><th scope=col>kingdom</th><th scope=col>phylum</th><th scope=col>class</th><th scope=col>order</th><th scope=col>family</th><th scope=col>genus</th><th scope=col>ASV</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>40.69</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Proteobacteria</td><td>Gammaproteobacteria</td><td>Pseudomonadales    </td><td>Pseudomonadaceae    </td><td>Pseudomonas      </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGCCTTGACATGCAGAGAACTTTCCAGAGATGGATTGGTGCCTTCGGGAACTCTGACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGTAACGAGCGCAACCCTTGTCCTTAGTTACCAGCACGTTAAGGTGGGCACTCTAAGGAGACTGCCGGTGACAAACCGGAGGAAGGTGGGGATGACGTCAAGTCATCATGGCCCTTACGGCCTGGGCTACACACGTGCTACAATGGTCGGTACAAAGGGTTGCCAAGCCGCGAGGTGGAGCTAATCCCATAAAACCGATCGTAGTCCGGATCGCAGTCTGCAACTCGACTGCGTGAAGTCGGAATCGCTAGTAATCGTGAATCAGAATGTCACGGTGAATACGTTCCCGGGCCTTGTACA </td></tr>
+	<tr><th scope=row>2</th><td>11.71</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Proteobacteria</td><td>Alphaproteobacteria</td><td>Rhodospirillales   </td><td>Rhodospirillaceae   </td><td>Candidatus       </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGCAGAACCTTACCCACCTTTGACATGGGACGTATGGGAAGCAGAGATGTTTTCCTTCAGTTCGGCTGGCGTCCACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTCGCCTTCAGTTGCCATCATTCAGTTGGGCACTCTGAAGGAACTGCCGGTGACAAGCCGGAGGAAGGTGGGGATGACGTCAAGTCCTCATGGCCCTTACAGGTGGGGCTACACACGTGCTACAATGGCGACTACAGAGGGGAGCTACCTCGCGAGAGGGCGCCAATCTCAAAAAGTCGTCTCAGTTCGGATTGCACTCTGCAACTCGAGTGCATGAAGTCGGAATCGCTAGTAATCGCGGATCAGCATGCCGCGGTGAATACGTTCCCGGGCCTTGTACA</td></tr>
+	<tr><th scope=row>3</th><td>11.13</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Firmicutes    </td><td>Clostridia         </td><td>Clostridiales      </td><td>Lachnospiraceae     </td><td>Lachnoclostridium</td><td>GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAAGTCTTGACATCGGAATGACCGGTCCGTAACGGGGCCTTCCCTACGGGGCATTCCAGACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTTATCCTTAGTAGCCAGCAGTTCGGCTGGGCACTCTGGGGAGACTGCCAGGGATAACCTGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGATTTGGGCTACACACGTGCTACAATGGCGTAAACAAAGGGAAGCGAAGGAGTGATCCGGAGCAAATCTCAAAAATAACGTCTCAGTTCGGATTGTAGTCTGCAACTCGACTACATGAAGCTGGAATCGCTAGTAATCGCGGATCAGAATGCCGCGGTGAATACGTTCCCGGGTCTTGTACA  </td></tr>
+	<tr><th scope=row>4</th><td> 6.14</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Firmicutes    </td><td>Bacilli            </td><td>Lactobacillales    </td><td>Carnobacteriaceae   </td><td>Trichococcus     </td><td>GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGTCTTGACATCCTTTGACAATCCTAGAGATAGGACTTTCCCTTCGGGGACAAAGTGACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCCTATTGTTAGTTGCCAGCATTCAGTTGGGCACTCTAATGAGACTGCCGGTGACAAACCGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGACCTGGGCTACACACGTGCTACAATGGATGGTACAACGAGCAGCAAGACCGCGAGGTCAAGCGAATCTCTTAAAGCCATTCTCAGTTCGGATTGCAGGCTGCAACTCGCCTGCATGAAGCCGGAATCGCTAGTAATCGCGGATCAGCACGCCGCGGTGAATACGTTCCCGGGTCTTGTACA   </td></tr>
+	<tr><th scope=row>5</th><td> 3.97</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Bacteroidetes </td><td>Bacteroidia        </td><td>Bacteroidales      </td><td>Porphyromonadaceae  </td><td>Proteiniphilum   </td><td>GAATTGACGGGGGCCCGCACAAGCGGAGGAACATGTGGTTTAATTCGATGATACGCGAGGAACCTTACCCGGGCTTGAAATGCATCTGACGTATTCGGAAACGGATATTCCCTACGGGGCAGATGTGTAGGTGCTGCATGGTTGTCGTCAGCTCGTGCCGTGAGGTGTCGGCTTAAGTGCCATAACGAGCGCAACCCTCATCGTCAGTTACCATCAGGTAAAGCTGGGGACTCTGGCGAGACTGCCATCGTAAGATGCGAGGAAGGTGGGGATGACGTCAAATCAGCACGGCCCTTACGTCCGGGGCGACACACGTGTTACAATGGGTGGTACAAAGGGCAGCTACCTGGCGACAGGATGCTAATCTCCAAAACCACTCTCAGTTCGGATCGGAGTCTGCAACTCGACTCCGTGAAGCTGGATTCGCTAGTAATCGCGCATCAGCCACGGCGCGGTGAATACGTTCCCGGGCCTTGTACA  </td></tr>
+	<tr><th scope=row>6</th><td> 3.90</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Actinobacteria</td><td>Actinobacteria     </td><td>Propionibacteriales</td><td>Propionibacteriaceae</td><td>Tessaracoccus    </td><td>GAATTGACGGGGCCCCGCACAAGCGGCGGAGCATGCGGATTAATTCGATGCAACGCGAAGAACCTTACCTGGGTTTGACATATGCCGGAAACATCTAGAGATAGGTGCCCCTTTATGGTCGGTTTACAGGTGGTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTCGTCCTATGTTGCCAGCGGGTAATGCCGGGGACTCATAGGAGACCGCCGGGGTCAACTCGGAGGAAGGTGGGGATGACGTCAAGTCATCATGCCCCTTATGTCCAGGGCTTCACGCATGCTACAATGGCCGGTACAAAGAGCTGCGAACCTGCAAGGGTGAGCGAATCTCAAAAAGCCGGTCTCAGTTCGGATTGGGGTCTGCAACTCGACCCCATGAAGTCGGAGTCGCTAGTAATCGCAGATCAGCAACGCTGCGGTGAATACGTTCCCGGGGCTTGTACA  </td></tr>
+</tbody>
+</table>
+
 </div>
+
 </div>
 
 </div>
@@ -17406,20 +17437,58 @@ Traceback:
 <h2 id="2.8.0-Use-transmute()-to-create-a-new-data-frame">2.8.0 Use <code>transmute()</code> to create a new data frame<a class="anchor-link" href="#2.8.0-Use-transmute()-to-create-a-new-data-frame">&#182;</a></h2><p><code>transmute()</code> will also create a new variable(s), but it will drop the existing variables (it will give you a single column of your new variable). The output for <code>transmute()</code> is a data frame of your new variable(s).</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">microbes</span> <span class="o">%&gt;%</span> 
-  <span class="kc">...</span> 
+  <span class="nf">transmute</span><span class="p">(</span><span class="n">compound_salinity</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">compound</span><span class="p">,</span> <span class="n">salinity</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">),</span>
+        <span class="n">family_genus</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">family</span><span class="p">,</span> <span class="n">genus</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">))</span>  <span class="o">%&gt;%</span>  
             <span class="nf">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 2</caption>
+<thead>
+	<tr><th></th><th scope=col>compound_salinity</th><th scope=col>family_genus</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>compound-free_brackish</td><td>Pseudomonadaceae_Pseudomonas      </td></tr>
+	<tr><th scope=row>2</th><td>compound-free_brackish</td><td>Rhodospirillaceae_Candidatus      </td></tr>
+	<tr><th scope=row>3</th><td>compound-free_brackish</td><td>Lachnospiraceae_Lachnoclostridium </td></tr>
+	<tr><th scope=row>4</th><td>compound-free_brackish</td><td>Carnobacteriaceae_Trichococcus    </td></tr>
+	<tr><th scope=row>5</th><td>compound-free_brackish</td><td>Porphyromonadaceae_Proteiniphilum </td></tr>
+	<tr><th scope=row>6</th><td>compound-free_brackish</td><td>Propionibacteriaceae_Tessaracoccus</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -17484,7 +17553,7 @@ Traceback:
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">getwd</span><span class="p">()</span>
 
-<span class="nf">write.csv</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">write.csv</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
      </div>
