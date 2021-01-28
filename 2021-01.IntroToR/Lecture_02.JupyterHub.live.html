@@ -17303,7 +17303,7 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># adding columns can also be done using &quot;base R&quot; code:</span>
 <span class="c1"># This will permanently change microbes</span>
-<span class="n">microbes</span><span class="o">$</span><span class="n">compound_salinity</span> <span class="o">=</span> <span class="kc">...</span>
+<span class="n">microbes</span><span class="o">$</span><span class="n">compound_salinity</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">microbes</span><span class="p">)</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">microbes</span><span class="p">)</span>
 </pre></div>
@@ -17319,16 +17319,16 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <h2 id="2.7.1-Use-select()-to-remove-columns">2.7.1 Use <code>select()</code> to remove columns<a class="anchor-link" href="#2.7.1-Use-select()-to-remove-columns">&#182;</a></h2><p>Note how our last call made a permanent change to microbes. To exclude the variable <code>compound_salinity</code> from <code>microbes</code>, we can use <code>select()</code>, then overwrite microbes. Simply add a dash (minus) in front of <code>compound_salinity</code>.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Check the column names before and after removing `compound_salinity`</span>
 <span class="nf">colnames</span><span class="p">(</span><span class="n">microbes</span><span class="p">)</span>
 
-<span class="n">microbes</span> <span class="o">&lt;-</span> <span class="kc">...</span> <span class="c1"># remove column compound_saline</span>
+<span class="n">microbes</span> <span class="o">&lt;-</span> <span class="nf">select</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="o">-</span><span class="n">compound_salinity</span><span class="p">)</span> <span class="c1"># remove column compound_saline</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">microbes</span><span class="p">)</span>
 </pre></div>
@@ -17336,6 +17336,68 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'abundance'</li><li>'compound'</li><li>'salinity'</li><li>'group'</li><li>'replicate'</li><li>'kingdom'</li><li>'phylum'</li><li>'class'</li><li>'order'</li><li>'family'</li><li>'genus'</li><li>'ASV'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+Error: Can&#39;t subset columns that don&#39;t exist.
+<span class="ansi-red-fg">x</span> Column `compound_salinity` doesn&#39;t exist.
+Traceback:
+
+1. select(microbes, -compound_salinity)
+2. select.data.frame(microbes, -compound_salinity)
+3. tidyselect::eval_select(expr(c(...)), .data)
+4. eval_select_impl(data, names(data), as_quosure(expr, env), include = include, 
+ .     exclude = exclude, strict = strict, name_spec = name_spec, 
+ .     allow_rename = allow_rename)
+5. with_subscript_errors(vars_select_eval(vars, expr, strict, data = x, 
+ .     name_spec = name_spec, uniquely_named = uniquely_named, allow_rename = allow_rename, 
+ .     type = type), type = type)
+6. tryCatch(instrument_base_errors(expr), vctrs_error_subscript = function(cnd) {
+ .     cnd$subscript_action &lt;- subscript_action(type)
+ .     cnd$subscript_elt &lt;- &#34;column&#34;
+ .     cnd_signal(cnd)
+ . })
+7. tryCatchList(expr, classes, parentenv, handlers)
+8. tryCatchOne(expr, names, parentenv, handlers[[1L]])
+9. value[[3L]](cond)
+10. cnd_signal(cnd)
+11. rlang:::signal_abort(x)</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
