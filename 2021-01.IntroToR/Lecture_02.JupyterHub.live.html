@@ -17152,15 +17152,15 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <p>Notice that the <code>summarise()</code> created a new object and it has the columns <code>abundance_mean</code> and <code>abundance_sd</code>. You can name them whatever you want</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># The above code is equivalent to</span>
 <span class="n">microbes</span>  <span class="o">%&gt;%</span> 
-<span class="n">group_by</span>
+<span class="nf">group_by</span><span class="p">(</span><span class="n">compound</span><span class="p">)</span>  <span class="o">%&gt;%</span> 
   <span class="nf">summarise</span><span class="p">(</span><span class="n">abundance_mean</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">abundance</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span> 
             <span class="n">abundance_sd</span> <span class="o">=</span> <span class="nf">sd</span><span class="p">(</span><span class="n">abundance</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
 </pre></div>
@@ -17168,6 +17168,53 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>`summarise()` ungrouping output (override with `.groups` argument)
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A tibble: 3 × 3</caption>
+<thead>
+	<tr><th scope=col>compound</th><th scope=col>abundance_mean</th><th scope=col>abundance_sd</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>compound-free</td><td>0.3185560</td><td>1.967123</td></tr>
+	<tr><td>pyrene       </td><td>0.3247483</td><td>1.607803</td></tr>
+	<tr><td>toluene      </td><td>0.3179514</td><td>1.629708</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -17180,7 +17227,7 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Let&#39;s just re-initialize microbes here</span>
