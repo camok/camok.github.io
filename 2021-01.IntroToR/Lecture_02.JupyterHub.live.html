@@ -16352,13 +16352,13 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <h2 id="2.3.1-Use-starts_with()-and-ends_with()-to-specify-elements-from-a-vector">2.3.1 Use <code>starts_with()</code> and <code>ends_with()</code> to specify elements from a vector<a class="anchor-link" href="#2.3.1-Use-starts_with()-and-ends_with()-to-specify-elements-from-a-vector">&#182;</a></h2><p><code>dplyr</code> also includes some helper functions that allow you to select variables (columns) based on their names. For example, if we had multiple carbon sources listed in "compound1" and "compound2" we could select for columns that started with "com" using the <code>starts_with()</code> function.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span><span class="kc">...</span><span class="p">))</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="nf">starts_with</span><span class="p">(</span><span class="s">&quot;com&quot;</span><span class="p">)))</span>
 </pre></div>
 
      </div>
@@ -16366,19 +16366,93 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 1</caption>
+<thead>
+	<tr><th></th><th scope=col>compound</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>compound-free</td></tr>
+	<tr><th scope=row>2</th><td>compound-free</td></tr>
+	<tr><th scope=row>3</th><td>compound-free</td></tr>
+	<tr><th scope=row>4</th><td>compound-free</td></tr>
+	<tr><th scope=row>5</th><td>compound-free</td></tr>
+	<tr><th scope=row>6</th><td>compound-free</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Select a variable using the last three letters of its name using `ends_with()`.</span>
-<span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span><span class="kc">...</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="nf">ends_with</span><span class="p">(</span><span class="s">&quot;und&quot;</span><span class="p">)))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 1</caption>
+<thead>
+	<tr><th></th><th scope=col>compound</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>compound-free</td></tr>
+	<tr><th scope=row>2</th><td>compound-free</td></tr>
+	<tr><th scope=row>3</th><td>compound-free</td></tr>
+	<tr><th scope=row>4</th><td>compound-free</td></tr>
+	<tr><th scope=row>5</th><td>compound-free</td></tr>
+	<tr><th scope=row>6</th><td>compound-free</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
