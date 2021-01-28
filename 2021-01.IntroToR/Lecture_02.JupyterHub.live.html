@@ -16461,21 +16461,86 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <h2 id="2.3.3-Bonus-challenge">2.3.3 Bonus challenge<a class="anchor-link" href="#2.3.3-Bonus-challenge">&#182;</a></h2><p>Check out 'select' in the help menu. Grab all of the variables that <strong>contain</strong> the letter "u". Retain genus either as rownames or in a column.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Explicitly take genus and then add any variables that have a &quot;u&quot; in them</span>
-<span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="n">genus</span><span class="p">,</span> <span class="kc">...</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="n">genus</span><span class="p">,</span> <span class="nf">contains</span><span class="p">(</span><span class="s">&quot;u&quot;</span><span class="p">)))</span>
 
-<span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="n">genus</span><span class="p">,</span> <span class="kc">...</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="n">genus</span><span class="p">,</span> <span class="nf">matches</span><span class="p">(</span><span class="s">&quot;g&quot;</span><span class="p">)))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 5</caption>
+<thead>
+	<tr><th></th><th scope=col>genus</th><th scope=col>abundance</th><th scope=col>compound</th><th scope=col>group</th><th scope=col>phylum</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>Pseudomonas      </td><td>40.69</td><td>compound-free</td><td>control</td><td>Proteobacteria</td></tr>
+	<tr><th scope=row>2</th><td>Candidatus       </td><td>11.71</td><td>compound-free</td><td>control</td><td>Proteobacteria</td></tr>
+	<tr><th scope=row>3</th><td>Lachnoclostridium</td><td>11.13</td><td>compound-free</td><td>control</td><td>Firmicutes    </td></tr>
+	<tr><th scope=row>4</th><td>Trichococcus     </td><td> 6.14</td><td>compound-free</td><td>control</td><td>Firmicutes    </td></tr>
+	<tr><th scope=row>5</th><td>Proteiniphilum   </td><td> 3.97</td><td>compound-free</td><td>control</td><td>Bacteroidetes </td></tr>
+	<tr><th scope=row>6</th><td>Tessaracoccus    </td><td> 3.90</td><td>compound-free</td><td>control</td><td>Actinobacteria</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 3</caption>
+<thead>
+	<tr><th></th><th scope=col>genus</th><th scope=col>group</th><th scope=col>kingdom</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>Pseudomonas      </td><td>control</td><td>Bacteria</td></tr>
+	<tr><th scope=row>2</th><td>Candidatus       </td><td>control</td><td>Bacteria</td></tr>
+	<tr><th scope=row>3</th><td>Lachnoclostridium</td><td>control</td><td>Bacteria</td></tr>
+	<tr><th scope=row>4</th><td>Trichococcus     </td><td>control</td><td>Bacteria</td></tr>
+	<tr><th scope=row>5</th><td>Proteiniphilum   </td><td>control</td><td>Bacteria</td></tr>
+	<tr><th scope=row>6</th><td>Tessaracoccus    </td><td>control</td><td>Bacteria</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16485,19 +16550,56 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <h2 id="2.4.0-Sort-your-data-with-arrange()">2.4.0 Sort your data with <code>arrange()</code><a class="anchor-link" href="#2.4.0-Sort-your-data-with-arrange()">&#182;</a></h2><p>The <code>arrange()</code> function helps you to sort your data. The default is ordered from smallest to largest (or a-z for character data). You can switch the order by specifying <code>desc()</code> (descending) as shown below.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">descending_abundance</span> <span class="o">&lt;-</span> <span class="kc">...</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">descending_abundance</span> <span class="o">&lt;-</span> <span class="nf">arrange</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="nf">desc</span><span class="p">(</span><span class="n">abundance</span><span class="p">))</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">descending_abundance</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 12</caption>
+<thead>
+	<tr><th></th><th scope=col>abundance</th><th scope=col>compound</th><th scope=col>salinity</th><th scope=col>group</th><th scope=col>replicate</th><th scope=col>kingdom</th><th scope=col>phylum</th><th scope=col>class</th><th scope=col>order</th><th scope=col>family</th><th scope=col>genus</th><th scope=col>ASV</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>40.69</td><td>compound-free</td><td>brackish</td><td>control  </td><td>1</td><td>Bacteria</td><td>Proteobacteria</td><td>Gammaproteobacteria</td><td>Pseudomonadales  </td><td>Pseudomonadaceae </td><td>Pseudomonas      </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGCCTTGACATGCAGAGAACTTTCCAGAGATGGATTGGTGCCTTCGGGAACTCTGACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGTAACGAGCGCAACCCTTGTCCTTAGTTACCAGCACGTTAAGGTGGGCACTCTAAGGAGACTGCCGGTGACAAACCGGAGGAAGGTGGGGATGACGTCAAGTCATCATGGCCCTTACGGCCTGGGCTACACACGTGCTACAATGGTCGGTACAAAGGGTTGCCAAGCCGCGAGGTGGAGCTAATCCCATAAAACCGATCGTAGTCCGGATCGCAGTCTGCAACTCGACTGCGTGAAGTCGGAATCGCTAGTAATCGTGAATCAGAATGTCACGGTGAATACGTTCCCGGGCCTTGTACA </td></tr>
+	<tr><th scope=row>2</th><td>29.58</td><td>toluene      </td><td>brackish</td><td>treatment</td><td>2</td><td>Bacteria</td><td>Firmicutes    </td><td>Clostridia         </td><td>Clostridiales    </td><td>Lachnospiraceae  </td><td>Lachnoclostridium</td><td>GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAAGTCTTGACATCGGAATGACCGGTCCGTAACGGGGCCTTCCCTACGGGGCATTCCAGACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTTATCCTTAGTAGCCAGCAGTTCGGCTGGGCACTCTGGGGAGACTGCCAGGGATAACCTGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGATTTGGGCTACACACGTGCTACAATGGCGTAAACAAAGGGAAGCGAAGGAGTGATCCGGAGCAAATCTCAAAAATAACGTCTCAGTTCGGATTGTAGTCTGCAACTCGACTACATGAAGCTGGAATCGCTAGTAATCGCGGATCAGAATGCCGCGGTGAATACGTTCCCGGGTCTTGTACA  </td></tr>
+	<tr><th scope=row>3</th><td>25.44</td><td>toluene      </td><td>brackish</td><td>treatment</td><td>2</td><td>Bacteria</td><td>Proteobacteria</td><td>Alphaproteobacteria</td><td>Rhodospirillales </td><td>Rhodospirillaceae</td><td>Candidatus       </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGCAGAACCTTACCCACCTTTGACATGGGACGTATGGGAAGCAGAGATGTTTTCCTTCAGTTCGGCTGGCGTCCACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTCGCCTTCAGTTGCCATCATTCAGTTGGGCACTCTGAAGGAACTGCCGGTGACAAGCCGGAGGAAGGTGGGGATGACGTCAAGTCCTCATGGCCCTTACAGGTGGGGCTACACACGTGCTACAATGGCGACTACAGAGGGGAGCTACCTCGCGAGAGGGCGCCAATCTCAAAAAGTCGTCTCAGTTCGGATTGCACTCTGCAACTCGAGTGCATGAAGTCGGAATCGCTAGTAATCGCGGATCAGCATGCCGCGGTGAATACGTTCCCGGGCCTTGTACA</td></tr>
+	<tr><th scope=row>4</th><td>24.57</td><td>compound-free</td><td>brackish</td><td>control  </td><td>3</td><td>Archaea </td><td>Euryarchaeota </td><td>Methanomicrobia    </td><td>Methanosarcinales</td><td>Methanosaetaceae </td><td>Methanosaeta     </td><td>GAATTGGCGGGGGAGCACCACAACGGGTGGAGCTTGCGGTTTAATTGGATTCAACGCCGGAAATCTTACCGGGACCGACAGCAATATGAAGGCCAGGCTGAAGACTTTGCCGGATTAGCTGAGAGGTGGTGCATGGCCGTCGTCAGTTCGTACTGTGAAGCATCCTGTTAAGTCAGGCAACGAGCGAGACCCACGCCCACAGTTGCCAGCGTACTCTCTGGAGTGACGGGTACACTGTGGGGACCGCCGCTGCTAAAGCGGAGGAAGGAATGGGCAACGGTAGGTCAGTATGCCCCGAATATCCCGGGCTACACGCGAGCTACAATGGTTGGTACAATGGGTATCTACCCCGAAAGGGGACGGGAATCTCCTAAAACCAATCTTAGTTCGGATTGAGGGCTGCAACTCGCCCTCATGAAGCTGGAATCCGTAGTAATCGCGTTTCAACAGAACGCGGTGAATACGTCCCTGCTCCTTGCACA</td></tr>
+	<tr><th scope=row>5</th><td>24.31</td><td>compound-free</td><td>brackish</td><td>control  </td><td>2</td><td>Bacteria</td><td>Firmicutes    </td><td>Clostridia         </td><td>Clostridiales    </td><td>Lachnospiraceae  </td><td>Lachnoclostridium</td><td>GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAAGTCTTGACATCGGAATGACCGGTCCGTAACGGGGCCTTCCCTACGGGGCATTCCAGACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTTATCCTTAGTAGCCAGCAGTTCGGCTGGGCACTCTGGGGAGACTGCCAGGGATAACCTGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGATTTGGGCTACACACGTGCTACAATGGCGTAAACAAAGGGAAGCGAAGGAGTGATCCGGAGCAAATCTCAAAAATAACGTCTCAGTTCGGATTGTAGTCTGCAACTCGACTACATGAAGCTGGAATCGCTAGTAATCGCGGATCAGAATGCCGCGGTGAATACGTTCCCGGGTCTTGTACA  </td></tr>
+	<tr><th scope=row>6</th><td>23.90</td><td>compound-free</td><td>brackish</td><td>control  </td><td>2</td><td>Bacteria</td><td>Proteobacteria</td><td>Gammaproteobacteria</td><td>Pseudomonadales  </td><td>Pseudomonadaceae </td><td>Pseudomonas      </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGCCTTGACATGCAGAGAACTTTCCAGAGATGGATTGGTGCCTTCGGGAACTCTGACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGTAACGAGCGCAACCCTTGTCCTTAGTTACCAGCACGTTAAGGTGGGCACTCTAAGGAGACTGCCGGTGACAAACCGGAGGAAGGTGGGGATGACGTCAAGTCATCATGGCCCTTACGGCCTGGGCTACACACGTGCTACAATGGTCGGTACAAAGGGTTGCCAAGCCGCGAGGTGGAGCTAATCCCATAAAACCGATCGTAGTCCGGATCGCAGTCTGCAACTCGACTGCGTGAAGTCGGAATCGCTAGTAATCGTGAATCAGAATGTCACGGTGAATACGTTCCCGGGCCTTGTACA </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
