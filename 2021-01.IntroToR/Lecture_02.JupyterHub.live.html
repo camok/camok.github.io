@@ -15898,15 +15898,15 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <p><code>%in%</code> is a logical operator that says "for each element in <code>$genus</code>, does that element exist in the vector <code>c("Smithella", "Methanobacterium")</code>".</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Take a look at the behavior of %in% as a stand-alone function</span>
 
-<span class="nf">head</span><span class="p">(</span><span class="n">microbes</span><span class="o">$</span><span class="n">genus</span> <span class="o">==</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Smithella&quot;</span><span class="p">,</span> <span class="s">&quot;Methanosaeta&quot;</span><span class="p">),</span> <span class="kc">...</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">microbes</span><span class="o">$</span><span class="n">genus</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Smithella&quot;</span><span class="p">,</span> <span class="s">&quot;Methanosaeta&quot;</span><span class="p">),</span> <span class="m">20</span><span class="p">)</span>
 
 <span class="c1"># It&#39;s a logical operator</span>
 </pre></div>
@@ -15916,19 +15916,69 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>TRUE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li><li>FALSE</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Use the right operator to get the job done when filtering with vectors</span>
-<span class="nf">nrow</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="kc">...</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Smithella&quot;</span><span class="p">,</span> <span class="s">&quot;Methanobacterium&quot;</span><span class="p">)))</span>
+<span class="nf">nrow</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="n">genus</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Smithella&quot;</span><span class="p">,</span> <span class="s">&quot;Methanobacterium&quot;</span><span class="p">)))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+52
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
