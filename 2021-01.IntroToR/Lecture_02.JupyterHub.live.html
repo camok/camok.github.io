@@ -14347,10 +14347,10 @@ a.anchor-link {
 <p><strong>Note:</strong> To get your input printed in the console instead of inline, click on the Gear icon and select "Chunck Output in Console". Similarly, go to Tools/Global options/R Markdown/R Notebooks, and uncheck "hide console automatically when executing notebook chunks"</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#install.packages(&quot;tidyverse&quot;, dependencies = TRUE) # This package should already be installed on Jupyter Hub</span>
@@ -14361,12 +14361,71 @@ a.anchor-link {
 
 <span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
 
-<span class="nf">head</span><span class="p">(</span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;data/microbes.csv&quot;</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>-- <span class="ansi-bold">Attaching packages</span> --------------------------------------- tidyverse 1.3.0 --
+
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">ggplot2</span> 3.3.2     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">purrr  </span> 0.3.4
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">tibble </span> 3.0.4     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">dplyr  </span> 1.0.2
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">tidyr  </span> 1.1.2     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">stringr</span> 1.4.0
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">readr  </span> 1.4.0     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">forcats</span> 0.5.0
+
+-- <span class="ansi-bold">Conflicts</span> ------------------------------------------ tidyverse_conflicts() --
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">filter()</span> masks <span class="ansi-blue-fg">stats</span>::filter()
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">lag()</span>    masks <span class="ansi-blue-fg">stats</span>::lag()
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 12</caption>
+<thead>
+	<tr><th></th><th scope=col>abundance</th><th scope=col>compound</th><th scope=col>salinity</th><th scope=col>group</th><th scope=col>replicate</th><th scope=col>kingdom</th><th scope=col>phylum</th><th scope=col>class</th><th scope=col>order</th><th scope=col>family</th><th scope=col>genus</th><th scope=col>ASV</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>40.69</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Proteobacteria</td><td>Gammaproteobacteria</td><td>Pseudomonadales    </td><td>Pseudomonadaceae    </td><td>Pseudomonas      </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGCCTTGACATGCAGAGAACTTTCCAGAGATGGATTGGTGCCTTCGGGAACTCTGACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGTAACGAGCGCAACCCTTGTCCTTAGTTACCAGCACGTTAAGGTGGGCACTCTAAGGAGACTGCCGGTGACAAACCGGAGGAAGGTGGGGATGACGTCAAGTCATCATGGCCCTTACGGCCTGGGCTACACACGTGCTACAATGGTCGGTACAAAGGGTTGCCAAGCCGCGAGGTGGAGCTAATCCCATAAAACCGATCGTAGTCCGGATCGCAGTCTGCAACTCGACTGCGTGAAGTCGGAATCGCTAGTAATCGTGAATCAGAATGTCACGGTGAATACGTTCCCGGGCCTTGTACA </td></tr>
+	<tr><th scope=row>2</th><td>11.71</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Proteobacteria</td><td>Alphaproteobacteria</td><td>Rhodospirillales   </td><td>Rhodospirillaceae   </td><td>Candidatus       </td><td>GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGCAGAACCTTACCCACCTTTGACATGGGACGTATGGGAAGCAGAGATGTTTTCCTTCAGTTCGGCTGGCGTCCACACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTCGCCTTCAGTTGCCATCATTCAGTTGGGCACTCTGAAGGAACTGCCGGTGACAAGCCGGAGGAAGGTGGGGATGACGTCAAGTCCTCATGGCCCTTACAGGTGGGGCTACACACGTGCTACAATGGCGACTACAGAGGGGAGCTACCTCGCGAGAGGGCGCCAATCTCAAAAAGTCGTCTCAGTTCGGATTGCACTCTGCAACTCGAGTGCATGAAGTCGGAATCGCTAGTAATCGCGGATCAGCATGCCGCGGTGAATACGTTCCCGGGCCTTGTACA</td></tr>
+	<tr><th scope=row>3</th><td>11.13</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Firmicutes    </td><td>Clostridia         </td><td>Clostridiales      </td><td>Lachnospiraceae     </td><td>Lachnoclostridium</td><td>GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAAGTCTTGACATCGGAATGACCGGTCCGTAACGGGGCCTTCCCTACGGGGCATTCCAGACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTTATCCTTAGTAGCCAGCAGTTCGGCTGGGCACTCTGGGGAGACTGCCAGGGATAACCTGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGATTTGGGCTACACACGTGCTACAATGGCGTAAACAAAGGGAAGCGAAGGAGTGATCCGGAGCAAATCTCAAAAATAACGTCTCAGTTCGGATTGTAGTCTGCAACTCGACTACATGAAGCTGGAATCGCTAGTAATCGCGGATCAGAATGCCGCGGTGAATACGTTCCCGGGTCTTGTACA  </td></tr>
+	<tr><th scope=row>4</th><td> 6.14</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Firmicutes    </td><td>Bacilli            </td><td>Lactobacillales    </td><td>Carnobacteriaceae   </td><td>Trichococcus     </td><td>GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGTCTTGACATCCTTTGACAATCCTAGAGATAGGACTTTCCCTTCGGGGACAAAGTGACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCCTATTGTTAGTTGCCAGCATTCAGTTGGGCACTCTAATGAGACTGCCGGTGACAAACCGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGACCTGGGCTACACACGTGCTACAATGGATGGTACAACGAGCAGCAAGACCGCGAGGTCAAGCGAATCTCTTAAAGCCATTCTCAGTTCGGATTGCAGGCTGCAACTCGCCTGCATGAAGCCGGAATCGCTAGTAATCGCGGATCAGCACGCCGCGGTGAATACGTTCCCGGGTCTTGTACA   </td></tr>
+	<tr><th scope=row>5</th><td> 3.97</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Bacteroidetes </td><td>Bacteroidia        </td><td>Bacteroidales      </td><td>Porphyromonadaceae  </td><td>Proteiniphilum   </td><td>GAATTGACGGGGGCCCGCACAAGCGGAGGAACATGTGGTTTAATTCGATGATACGCGAGGAACCTTACCCGGGCTTGAAATGCATCTGACGTATTCGGAAACGGATATTCCCTACGGGGCAGATGTGTAGGTGCTGCATGGTTGTCGTCAGCTCGTGCCGTGAGGTGTCGGCTTAAGTGCCATAACGAGCGCAACCCTCATCGTCAGTTACCATCAGGTAAAGCTGGGGACTCTGGCGAGACTGCCATCGTAAGATGCGAGGAAGGTGGGGATGACGTCAAATCAGCACGGCCCTTACGTCCGGGGCGACACACGTGTTACAATGGGTGGTACAAAGGGCAGCTACCTGGCGACAGGATGCTAATCTCCAAAACCACTCTCAGTTCGGATCGGAGTCTGCAACTCGACTCCGTGAAGCTGGATTCGCTAGTAATCGCGCATCAGCCACGGCGCGGTGAATACGTTCCCGGGCCTTGTACA  </td></tr>
+	<tr><th scope=row>6</th><td> 3.90</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Actinobacteria</td><td>Actinobacteria     </td><td>Propionibacteriales</td><td>Propionibacteriaceae</td><td>Tessaracoccus    </td><td>GAATTGACGGGGCCCCGCACAAGCGGCGGAGCATGCGGATTAATTCGATGCAACGCGAAGAACCTTACCTGGGTTTGACATATGCCGGAAACATCTAGAGATAGGTGCCCCTTTATGGTCGGTTTACAGGTGGTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTCGTCCTATGTTGCCAGCGGGTAATGCCGGGGACTCATAGGAGACCGCCGGGGTCAACTCGGAGGAAGGTGGGGATGACGTCAAGTCATCATGCCCCTTATGTCCAGGGCTTCACGCATGCTACAATGGCCGGTACAAAGAGCTGCGAACCTGCAAGGGTGAGCGAATCTCAAAAAGCCGGTCTCAGTTCGGATTGGGGTCTGCAACTCGACCCCATGAAGTCGGAGTCGCTAGTAATCGCAGATCAGCAACGCTGCGGTGAATACGTTCCCGGGGCTTGTACA  </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
