@@ -16615,8 +16615,7 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">filtered_toluene_descending_abundance</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="kc">...</span>
-                                               <span class="p">)</span> <span class="c1"># Extra var 1</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">filtered_toluene_descending_abundance</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">descending_abundance</span><span class="p">,</span> <span class="n">abundance</span> <span class="o">&gt;</span> <span class="m">10</span> <span class="o">&amp;</span> <span class="n">compound</span> <span class="o">==</span> <span class="s">&quot;toluene&quot;</span><span class="p">)</span> <span class="c1"># Extra var 1</span>
 
 <span class="n">select_genera</span> <span class="o">&lt;-</span> <span class="kc">...</span> <span class="c1"># Extra var 2</span>
  
