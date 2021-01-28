@@ -16855,18 +16855,60 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <h2 id="2.5.1-Use-spacing-and-new-lines-to-keep-track-of-your-directing">2.5.1 Use spacing and new lines to keep track of your directing<a class="anchor-link" href="#2.5.1-Use-spacing-and-new-lines-to-keep-track-of-your-directing">&#182;</a></h2><p>When using more than 2 pipes <code>%&gt;%</code> it gets hard to follow for a reader (or yourself). Starting a new line after each pipe, allows a reader to easily see which function is operating and makes it easier to follow your logic. Using pipes also has the benefit that extra intermediate variables do not need to be created, freeing up your global environment for objects you are interested in keeping.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="kc">...</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">microbes</span>  <span class="o">%&gt;%</span> 
+<span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">abundance</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">filter</span><span class="p">(</span><span class="n">abundance</span> <span class="o">&gt;</span> <span class="m">10</span> <span class="o">&amp;</span> <span class="n">compound</span> <span class="o">==</span> <span class="s">&quot;toluene&quot;</span><span class="p">)</span>  <span class="o">%&gt;%</span> 
+<span class="nf">select</span><span class="p">(</span><span class="n">genus</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">unique</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 7 × 1</caption>
+<thead>
+	<tr><th></th><th scope=col>genus</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>Lachnoclostridium  </td></tr>
+	<tr><th scope=row>2</th><td>Candidatus         </td></tr>
+	<tr><th scope=row>5</th><td>Methanosaeta       </td></tr>
+	<tr><th scope=row>6</th><td>Pseudomonas        </td></tr>
+	<tr><th scope=row>10</th><td>Smithella          </td></tr>
+	<tr><th scope=row>15</th><td>Proteiniphilum     </td></tr>
+	<tr><th scope=row>19</th><td>tolueneylobacterium</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16875,20 +16917,52 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <h2 id="2.6.0-Retrieve-quick-summaries-of-your-data-with-summarise()">2.6.0 Retrieve quick summaries of your data with <code>summarise()</code><a class="anchor-link" href="#2.6.0-Retrieve-quick-summaries-of-your-data-with-summarise()">&#182;</a></h2><p>We can use <code>summarise()</code> to define and retrieve summarised information about our dataset in a simplified way.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">summarise</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> 
-          <span class="n">abundance_mean</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>
-          <span class="n">abundance_sd</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span>
+          <span class="n">abundance_mean</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">abundance</span><span class="p">),</span>
+          <span class="n">abundance_sd</span> <span class="o">=</span> <span class="nf">sd</span><span class="p">(</span><span class="n">abundance</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 1 × 2</caption>
+<thead>
+	<tr><th scope=col>abundance_mean</th><th scope=col>abundance_sd</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>NA</td><td>NA</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -16897,20 +16971,52 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <h2 id="2.6.1-Don't-forget-what-we've-learned-about-NAs">2.6.1 Don't forget what we've learned about NAs<a class="anchor-link" href="#2.6.1-Don't-forget-what-we've-learned-about-NAs">&#182;</a></h2><p>Remember that a number of functions can be told to ignore NA values when calculating their products. You'll have to check their argument information to be sure. For instance using <code>?mean</code> to solve our problem.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">summarise</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> 
-          <span class="n">abundance_mean</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">abundance</span><span class="p">,</span> <span class="kc">...</span><span class="p">),</span>
-          <span class="n">abundance_sd</span> <span class="o">=</span> <span class="nf">sd</span><span class="p">(</span><span class="n">abundance</span><span class="p">,</span> <span class="kc">...</span><span class="p">))</span>
+          <span class="n">abundance_mean</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">abundance</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">),</span>
+          <span class="n">abundance_sd</span> <span class="o">=</span> <span class="nf">sd</span><span class="p">(</span><span class="n">abundance</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 1 × 2</caption>
+<thead>
+	<tr><th scope=col>abundance_mean</th><th scope=col>abundance_sd</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>0.3204917</td><td>1.732993</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
