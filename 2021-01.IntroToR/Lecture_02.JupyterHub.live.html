@@ -16295,18 +16295,55 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <p>I want to to compare the depth of latrine 2 at 9cm compared to 10cm, but I want genus in the last column.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">()</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="n">abundance</span><span class="p">,</span> <span class="n">compound</span><span class="p">,</span> <span class="n">genus</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 3</caption>
+<thead>
+	<tr><th></th><th scope=col>abundance</th><th scope=col>compound</th><th scope=col>genus</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>40.69</td><td>compound-free</td><td>Pseudomonas      </td></tr>
+	<tr><th scope=row>2</th><td>11.71</td><td>compound-free</td><td>Candidatus       </td></tr>
+	<tr><th scope=row>3</th><td>11.13</td><td>compound-free</td><td>Lachnoclostridium</td></tr>
+	<tr><th scope=row>4</th><td> 6.14</td><td>compound-free</td><td>Trichococcus     </td></tr>
+	<tr><th scope=row>5</th><td> 3.97</td><td>compound-free</td><td>Proteiniphilum   </td></tr>
+	<tr><th scope=row>6</th><td> 3.90</td><td>compound-free</td><td>Tessaracoccus    </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
