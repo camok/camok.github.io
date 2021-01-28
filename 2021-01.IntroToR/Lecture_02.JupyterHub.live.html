@@ -14868,19 +14868,52 @@ Warning message in read.table(file = file, header = header, sep = sep, quote = q
 <p>You can subset the sheet you would like to work with using the syntax <code>list[[x]]</code> and store it as a variable using <code>data.frame()</code> (or work with all sheets at once - see the <code>purrr</code> package for working with list objects).</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># You can see the structure of our first list element</span>
-<span class="nf">str</span><span class="p">(</span><span class="n">excel_sheets_list</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">excel_sheets_list</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [6,656 x 12] (S3: tbl_df/tbl/data.frame)
+ $ abundance: chr [1:6656] &#34;40.69&#34; &#34;11.71&#34; &#34;11.13&#34; &#34;6.14&#34; ...
+ $ compound : chr [1:6656] &#34;compound-free&#34; &#34;compound-free&#34; &#34;compound-free&#34; &#34;compound-free&#34; ...
+ $ salinity : chr [1:6656] &#34;brackish&#34; &#34;brackish&#34; &#34;brackish&#34; &#34;brackish&#34; ...
+ $ group    : chr [1:6656] &#34;control&#34; &#34;control&#34; &#34;control&#34; &#34;control&#34; ...
+ $ replicate: num [1:6656] 1 1 1 1 1 1 1 1 1 1 ...
+ $ kingdom  : chr [1:6656] &#34;Bacteria&#34; &#34;Bacteria&#34; &#34;Bacteria&#34; &#34;Bacteria&#34; ...
+ $ phylum   : chr [1:6656] &#34;Proteobacteria&#34; &#34;Proteobacteria&#34; &#34;Firmicutes&#34; &#34;Firmicutes&#34; ...
+ $ class    : chr [1:6656] &#34;Gammaproteobacteria&#34; &#34;Alphaproteobacteria&#34; &#34;Clostridia&#34; &#34;Bacilli&#34; ...
+ $ order    : chr [1:6656] &#34;Pseudomonadales&#34; &#34;Rhodospirillales&#34; &#34;Clostridiales&#34; &#34;Lactobacillales&#34; ...
+ $ family   : chr [1:6656] &#34;Pseudomonadaceae&#34; &#34;Rhodospirillaceae&#34; &#34;Lachnospiraceae&#34; &#34;Carnobacteriaceae&#34; ...
+ $ genus    : chr [1:6656] &#34;Pseudomonas&#34; &#34;Candidatus&#34; &#34;Lachnoclostridium&#34; &#34;Trichococcus&#34; ...
+ $ ASV      : chr [1:6656] &#34;GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGCCTTGACATGCAGAGAACTTTCCAGAGATGGATTGGTGC&#34;| __truncated__ &#34;GAATTGACGGGGGCCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGCAGAACCTTACCCACCTTTGACATGGGACGTATGGGAAGCAGAGATGTTTTCCT&#34;| __truncated__ &#34;GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAAGTCTTGACATCGGAATGACCGGTCCGTAACGGGGCCTTCC&#34;| __truncated__ &#34;GAATTGACGGGGACCCGCACAAGCGGTGGAGCATGTGGTTTAATTCGAAGCAACGCGAAGAACCTTACCAGGTCTTGACATCCTTTGACAATCCTAGAGATAGGACTTTCC&#34;| __truncated__ ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14892,7 +14925,7 @@ Warning message in read.table(file = file, header = header, sep = sep, quote = q
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Assign our first sheet to it&#39;s own variable</span>
 <span class="n">excel_sheets_list_microbes</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">excel_sheets_list</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span>
 
-<span class="p">(</span><span class="n">excel_sheets_list_microbes</span><span class="p">)</span>
+<span class="nf">he</span><span class="p">(</span><span class="n">excel_sheets_list_microbes</span><span class="p">)</span>
 </pre></div>
 
      </div>
