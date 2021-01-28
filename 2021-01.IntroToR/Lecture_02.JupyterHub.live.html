@@ -14434,23 +14434,73 @@ a.anchor-link {
 <h2 id="1.2.0-Read-excel-spreadsheets-with-readxl-package">1.2.0 Read excel spreadsheets with <code>readxl</code> package<a class="anchor-link" href="#1.2.0-Read-excel-spreadsheets-with-readxl-package">&#182;</a></h2><p>What happens if we have a good, "old-fashioned" excel file? The <code>readxl()</code> package will recognize both xls and xlsx files. It expects tabular data. We will use the <code>read_excel()</code> function to accomplish our task.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;data/miscellaneous.xlsx&quot;</span><span class="p">))</span> <span class="c1"># doesn&#39;t work for excel files</span>
 
-<span class="nf">library</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span>
 
 <span class="c1"># let&#39;s take a peek at the miscellaneous.xlsx sheet</span>
-<span class="kc">...</span>
+<span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;data/mi&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message in read.table(file = file, header = header, sep = sep, quote = quote, :
+&#34;line 1 appears to contain embedded nulls&#34;
+Warning message in read.table(file = file, header = header, sep = sep, quote = quote, :
+&#34;line 4 appears to contain embedded nulls&#34;
+Warning message in read.table(file = file, header = header, sep = sep, quote = quote, :
+&#34;line 5 appears to contain embedded nulls&#34;
+Warning message in read.table(file = file, header = header, sep = sep, quote = quote, :
+&#34;incomplete final line found by readTableHeader on &#39;data/miscellaneous.xlsx&#39;&#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 0 × 1</caption>
+<thead>
+	<tr><th scope=col>PK...</th></tr>
+	<tr><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
