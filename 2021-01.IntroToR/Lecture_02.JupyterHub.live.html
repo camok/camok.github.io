@@ -15534,23 +15534,70 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#A cautionary example about filtering your data. Watch out for this command!</span>
 
-<span class="nf">nrow</span><span class="p">(</span><span class="n">microbes</span><span class="p">[</span><span class="kc">...</span><span class="p">])</span>
+<span class="nf">nrow</span><span class="p">(</span><span class="n">microbes</span><span class="p">[(</span><span class="n">microbes</span><span class="o">$</span><span class="n">genus</span> <span class="o">==</span> <span class="s">&quot;Smithella&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="n">microbes</span><span class="o">$</span><span class="n">genus</span> <span class="o">==</span> <span class="s">&quot;Methanobacterium&quot;</span><span class="p">,])</span>
 
 <span class="c1">#The above command will also return any entries with NA in your filtered criteria.</span>
-<span class="n">microbes</span><span class="p">[</span><span class="kc">...</span><span class="p">]</span>
+<span class="n">microbes</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">microbes</span><span class="o">$</span><span class="n">genus</span><span class="p">)),</span> <span class="p">]</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+55
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 3 × 12</caption>
+<thead>
+	<tr><th></th><th scope=col>abundance</th><th scope=col>compound</th><th scope=col>salinity</th><th scope=col>group</th><th scope=col>replicate</th><th scope=col>kingdom</th><th scope=col>phylum</th><th scope=col>class</th><th scope=col>order</th><th scope=col>family</th><th scope=col>genus</th><th scope=col>ASV</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>51</th><td>0.07</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Planctomycetes</td><td>Planctomycetacia</td><td>Planctomycetales</td><td>Planctomycetaceae</td><td>NA</td><td>GAATTGGCGGGGGCTCACACAAGCGGTGGAGGATGTGGCTTAATTCGAGGCTACGCGAAGAACCTTATCCTAGACTTGACATGCTTAAGAATCTTCTGGAAACAGAGGAGTGCCCTTCGGGGAGCTTTTGCACAGGTGCTGCATGGCTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCTTAACGAGCGAAACCCTTATCTTTAGTTGCCAGCGGGTAATGCCGGGGACTCTAAAGAGACTGCCGGTGTCAAACCGGAGGAAGGTGGGGATGACGTCAAGTCCTCATGGCCCTTATGTTTAGGGCTGCACACGTCCTACAATGGTACGTACAAAGGGAAGCAAAGTCGCGAGGCCAAGCTAATCCCAAAAAGCGTGCCTCAGTTCGGATTGTAGGCTGCAATTCGCCTACATGAAGCTGGAATCGCTAGTAATCGCGGGTCAGCATACCGCGGTGAATGTGTTCCTGAGCCTTGTACA  </td></tr>
+	<tr><th scope=row>182</th><td>0.00</td><td>compound-free</td><td>brackish</td><td>control</td><td>1</td><td>Bacteria</td><td>Planctomycetes</td><td>Phycisphaerae   </td><td>Phycisphaerales </td><td>Phycisphaeraceae </td><td>NA</td><td>GAATTGACGGGGGCTCACACAAGCGGTGGAGCATGTTGCTTAATTCGAGGCAACGCGAAGAACCTTACCTGGGTTTGACATGCATGGATCAACTCGGTGAAAGCCGAGCCACAGTCGCAAGACCGGAACATGCACAGGTGCTGCATGGCTGTCGTCAGCTCGTGCTGTGAAGTGTCGGGTTAAGTCCTCTAACGAGCGCAACCCCTGTCGTTAGTTGCTCACGGGTTATGCCGAGTACTCTAACGAGACTGCCGCTGTAAAGCGGAGGAAGGTGGGGATGACGTCAAGTCCTCATGGCCCTTACATCCAGGGTTGCAAACGTGCTACAATGGCGCGTACAAAGCGAAGCGAGGCCGCGAGGCGGAGCAAATCGCAAAAAGCGCGCCCCAGTTCGGATTGCAGGCTGCAACTCGCCTGCATGAAGTCGGAATCGCTAGTAATCGGAGATCAGCTACGCTCCGGTGAATGTGTTCCTGAGCCTTGTACA</td></tr>
+	<tr><th scope=row>459</th><td>0.00</td><td>compound-free</td><td>brackish</td><td>control</td><td>2</td><td>Bacteria</td><td>Actinobacteria</td><td>Actinobacteria  </td><td>Frankiales      </td><td>Sporichthyaceae  </td><td>NA</td><td>GAATTGGCGGGGCCCCGCACAAGCAGCGGAGCATGCGGCTTAATTCGACGCAACGCGAAGAACCTTACCAAGGCTTGACATATACAGGAATATGGCAGAGATGTCATAGCCGCAAGGTCTGTATACAGGTGGTGCATGGTTGTCGTCAGCTCGTGTCGTGAGATGTTGGGTTAAGTCCCGCAACGAGCGCAACCCTCGTTCTGTGTTGCCAGCATTTAGTTGGGGACTCACAGGAGACTGCCGGGGTTAACTCGGAGGAAGGTGGGGATGACGTCAAATCATCATGCCCCTTATGTCTTGGGCTGCACGCATGCTACAATGGCTGGTACAAACGGCTGCGATACCGCAAGGTGGAGCGAATCCGAAAAAGCCAGTCTCAGTTCGGATTGGGGTCTGCAACTCGACCCCATGAAGTCGGAGTTGCTAGTAATCGTAGATCAGCAACGCTACGGTGAATACGTTCCCGGGGCTTGCACA          </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -15560,7 +15607,8 @@ $ ASV       <span class="ansi-black-intense-fg">&lt;chr&gt;</span> &#34;GAATTGAC
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># But the syntax using filter is much more human readable</span>
-<span class="nf">head</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">microbes</span><span class="p">,</span> <span class="n">genus</span> <span class="o">==</span> <span class="s">&quot;Smithella&quot;</span> <span class="o">&amp;</span> 
+           <span class="n">genus</span> <span class="o">==</span> <span class="s">&quot;Methanobacterium&quot;</span><span class="p">))</span>
 </pre></div>
 
      </div>
