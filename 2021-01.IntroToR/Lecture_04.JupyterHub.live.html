@@ -14606,18 +14606,117 @@ height=420
 <p>Luckily there are some defaults, so we don't have to specify everything, but you can start to see how ggplot objects are highly customizable. So far, we have only specified the data aspect of this object.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Let&#39;s take a quick look at structure of a ggplot object</span>
+<span class="nf">str</span><span class="p">(</span><span class="nf">ggplot</span><span class="p">(</span><span class="n">metadata</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>List of 9
+ $ data       : tibble [81 x 7] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+  ..$ Country       : chr [1:81] &#34;Tanzania&#34; &#34;Tanzania&#34; &#34;Tanzania&#34; &#34;Tanzania&#34; ...
+  ..$ Latrine_Number: chr [1:81] &#34;2&#34; &#34;2&#34; &#34;2&#34; &#34;2&#34; ...
+  ..$ Depth         : chr [1:81] &#34;1&#34; &#34;10&#34; &#34;12&#34; &#34;2&#34; ...
+  ..$ pH            : num [1:81] 7.82 9.08 8.84 6.49 6.46 7.69 7.48 7.6 7.55 7.68 ...
+  ..$ Temp          : num [1:81] 25.1 24.2 25.1 29.6 27.9 28.7 29.8 25 28.8 28.9 ...
+  ..$ TS            : num [1:81] 14.5 37.8 71.1 13.9 29.4 ...
+  ..$ CODt          : num [1:81] 874 102 35 389 161 57 107 62 384 372 ...
+  ..- attr(*, &#34;spec&#34;)=
+  .. .. cols(
+  .. ..   Country = <span class="ansi-red-fg">col_character()</span>,
+  .. ..   Latrine_Number = <span class="ansi-red-fg">col_character()</span>,
+  .. ..   Depth = <span class="ansi-red-fg">col_character()</span>,
+  .. ..   pH = <span class="ansi-green-fg">col_number()</span>,
+  .. ..   Temp = <span class="ansi-green-fg">col_number()</span>,
+  .. ..   TS = <span class="ansi-green-fg">col_number()</span>,
+  .. ..   CODt = <span class="ansi-green-fg">col_number()</span>
+  .. .. )
+ $ layers     : list()
+ $ scales     :Classes &#39;ScalesList&#39;, &#39;ggproto&#39;, &#39;gg&#39; &lt;ggproto object: Class ScalesList, gg&gt;
+    add: function
+    clone: function
+    find: function
+    get_scales: function
+    has_scale: function
+    input: function
+    n: function
+    non_position_scales: function
+    scales: NULL
+    super:  &lt;ggproto object: Class ScalesList, gg&gt; 
+ $ mapping    : Named list()
+  ..- attr(*, &#34;class&#34;)= chr &#34;uneval&#34;
+ $ theme      : list()
+ $ coordinates:Classes &#39;CoordCartesian&#39;, &#39;Coord&#39;, &#39;ggproto&#39;, &#39;gg&#39; &lt;ggproto object: Class CoordCartesian, Coord, gg&gt;
+    aspect: function
+    backtransform_range: function
+    clip: on
+    default: TRUE
+    distance: function
+    expand: TRUE
+    is_free: function
+    is_linear: function
+    labels: function
+    limits: list
+    modify_scales: function
+    range: function
+    render_axis_h: function
+    render_axis_v: function
+    render_bg: function
+    render_fg: function
+    setup_data: function
+    setup_layout: function
+    setup_panel_guides: function
+    setup_panel_params: function
+    setup_params: function
+    train_panel_guides: function
+    transform: function
+    super:  &lt;ggproto object: Class CoordCartesian, Coord, gg&gt; 
+ $ facet      :Classes &#39;FacetNull&#39;, &#39;Facet&#39;, &#39;ggproto&#39;, &#39;gg&#39; &lt;ggproto object: Class FacetNull, Facet, gg&gt;
+    compute_layout: function
+    draw_back: function
+    draw_front: function
+    draw_labels: function
+    draw_panels: function
+    finish_data: function
+    init_scales: function
+    map_data: function
+    params: list
+    setup_data: function
+    setup_params: function
+    shrink: TRUE
+    train_scales: function
+    vars: function
+    super:  &lt;ggproto object: Class FacetNull, Facet, gg&gt; 
+ $ plot_env   :&lt;environment: R_GlobalEnv&gt; 
+ $ labels     : Named list()
+ - attr(*, &#34;class&#34;)= chr [1:2] &#34;gg&#34; &#34;ggplot&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
