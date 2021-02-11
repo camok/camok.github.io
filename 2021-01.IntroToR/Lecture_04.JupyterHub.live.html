@@ -35051,11 +35051,11 @@ height=420
     <span class="c1">#theme(axis.text.x = element_text(angle=90, hjust=1)) + </span>
     <span class="nf">scale_y_log10</span><span class="p">()</span>
     
-<span class="nf">ggarrange</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="c1"># First call</span>
-          <span class="nf">ggarrange</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="c1"># nested call</span>
-                    <span class="kc">...</span><span class="p">,</span>
+<span class="nf">ggarrange</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="c1"># First call</span>
+          <span class="nf">ggarrange</span><span class="p">(</span><span class="n">hist</span><span class="p">,</span> <span class="n">dot</span><span class="p">,</span> <span class="c1"># nested call</span>
+                    <span class="n">labels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">,</span> <span class="s">&quot;C&quot;</span><span class="p">),</span>
                     <span class="kc">...</span><span class="p">),</span>
-          <span class="kc">...</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+          <span class="n">ncol</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="s">&quot;A&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
