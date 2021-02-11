@@ -22911,20 +22911,21 @@ height=420
 <p>We can facet our plot by Country to verify we have only commonly appearing OTUs.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">keep</span> <span class="o">&lt;-</span> <span class="n">filtered_latrines</span> <span class="o">%&gt;%</span> 
-    <span class="nf">group_by</span><span class="p">(</span><span class="o">%&gt;%</span> 
-    <span class="c1">#count the number of entries</span>
-    <span class="c1"># get rid of any entries with only a single sample</span>
-    <span class="c1"># remove the grouping </span>
+    <span class="nf">group_by</span><span class="p">(</span><span class="n">Country</span><span class="p">,</span> <span class="n">Taxa</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+    <span class="nf">summarize</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>  <span class="o">%&gt;%</span>  <span class="c1">#count the number of entries</span>
+    <span class="nf">filter</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="m">1</span><span class="p">)</span>  <span class="o">%&gt;%</span> <span class="c1"># get rid of any entries with only a single sample</span>
+    <span class="nf">ungroup</span><span class="p">()</span>  <span class="c1"># remove the grouping </span>
     <span class="c1"># look only at the Taxa column</span>
     <span class="c1"># keep only the samples that are listed twice (ie in both countries)</span>
 
+<span class="nf">head</span><span class="p">(</span><span class="n">keep</span><span class="p">)</span>
 <span class="c1"># Make a new object that filters your taxa</span>
 <span class="c1"># sub_filtered_latrines &lt;- ...</span>
 </pre></div>
@@ -22932,6 +22933,56 @@ height=420
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>`summarise()` regrouping output by &#39;Country&#39; (override with `.groups` argument)
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>Country</th><th scope=col>Taxa</th><th scope=col>n</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Tanzania</td><td>Acidobacteria_Gp18 </td><td> 5</td></tr>
+	<tr><td>Tanzania</td><td>Acidobacteria_Gp3  </td><td> 2</td></tr>
+	<tr><td>Tanzania</td><td>Actinobacteria     </td><td>27</td></tr>
+	<tr><td>Tanzania</td><td>Alphaproteobacteria</td><td>21</td></tr>
+	<tr><td>Tanzania</td><td>Anaerolineae       </td><td>17</td></tr>
+	<tr><td>Tanzania</td><td>Bacilli            </td><td>27</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
