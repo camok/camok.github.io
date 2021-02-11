@@ -18801,8 +18801,8 @@ height=420
 <div class=" highlight hl-r"><pre><span></span><span class="n">latrines</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">OTUs</span> <span class="o">&gt;=</span><span class="m">2</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="c1"># call data and filter &quot;on the fly&quot;</span>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">)</span> <span class="o">+</span>
     <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">OTUs</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">Country</span><span class="p">)</span> <span class="o">+</span> 
-    <span class="kc">...</span> <span class="o">+</span>
-    <span class="n">..</span> <span class="o">+</span>
+    <span class="nf">geom_density</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="m">0.3</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">geom_rug</span><span class="p">()</span> <span class="o">+</span>
     <span class="kc">...</span>
 
     <span class="c1"># geom_rug adds lines on the desired axis to indicate data points. </span>
