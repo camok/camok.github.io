@@ -36302,19 +36302,19 @@ height=420
 <p>I have picked 8 different Taxa, which would make a crazy venn diagram with a lot of zeros in it since a couple of these Taxa are rare.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[143]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">subtax</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">subtax</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;data/SPE_pitlatrine.csv&quot;</span><span class="p">,</span> <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
 
 <span class="n">eight</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Chloroflexi&quot;</span><span class="p">,</span> <span class="s">&quot;Acidobacteria_Gp16&quot;</span><span class="p">,</span> <span class="s">&quot;Acidobacteria_Gp5&quot;</span><span class="p">,</span> <span class="s">&quot;Cyanobacteria&quot;</span><span class="p">,</span> 
            <span class="s">&quot;Lentisphaeria&quot;</span><span class="p">,</span> <span class="s">&quot;Deinococci&quot;</span><span class="p">,</span> <span class="s">&quot;Alphaproteobacteria&quot;</span><span class="p">,</span> <span class="s">&quot;Clostridia&quot;</span><span class="p">)</span>
 
 <span class="c1">#subset for the 8 taxa</span>
-<span class="n">subtax</span> <span class="o">&lt;-</span> <span class="n">subtax</span> <span class="o">%&gt;%</span> <span class="kc">...</span>
+<span class="n">subtax</span> <span class="o">&lt;-</span> <span class="n">subtax</span> <span class="o">%&gt;%</span> <span class="nf">filter</span><span class="p">(</span><span class="n">Taxa</span> <span class="o">%in%</span> <span class="n">eight</span><span class="p">)</span>
 
 <span class="n">subtax</span>
 </pre></div>
@@ -36322,6 +36322,45 @@ height=420
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 8 × 82</caption>
+<thead>
+	<tr><th scope=col>Taxa</th><th scope=col>T_2_1</th><th scope=col>T_2_10</th><th scope=col>T_2_12</th><th scope=col>T_2_2</th><th scope=col>T_2_3</th><th scope=col>T_2_6</th><th scope=col>T_2_7</th><th scope=col>T_2_9</th><th scope=col>T_3_2</th><th scope=col>...</th><th scope=col>V_6_2</th><th scope=col>V_6_3</th><th scope=col>V_7_1</th><th scope=col>V_7_2</th><th scope=col>V_7_3</th><th scope=col>V_8_2</th><th scope=col>V_9_1</th><th scope=col>V_9_2</th><th scope=col>V_9_3</th><th scope=col>V_9_4</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>...</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Acidobacteria_Gp16 </td><td>   0</td><td> 0</td><td>0</td><td>   0</td><td>    0</td><td>    0</td><td> 0</td><td>    0</td><td>   0</td><td>...</td><td>   0</td><td>   0</td><td>   0</td><td>  0</td><td>   0</td><td>   0</td><td>   0</td><td>  0</td><td> 0</td><td>   0</td></tr>
+	<tr><td>Acidobacteria_Gp5  </td><td>   0</td><td> 0</td><td>0</td><td>   0</td><td>    0</td><td>    0</td><td> 0</td><td>    0</td><td>   0</td><td>...</td><td>   0</td><td>   0</td><td>   0</td><td>  0</td><td>   8</td><td>   0</td><td>   0</td><td>  0</td><td> 0</td><td>   0</td></tr>
+	<tr><td>Alphaproteobacteria</td><td>  11</td><td> 0</td><td>2</td><td>  21</td><td>   11</td><td>   49</td><td> 0</td><td>   71</td><td>  13</td><td>...</td><td> 592</td><td> 589</td><td>  90</td><td>632</td><td> 510</td><td>1000</td><td>  27</td><td>122</td><td> 1</td><td> 411</td></tr>
+	<tr><td>Chloroflexi        </td><td>   0</td><td> 0</td><td>0</td><td>   0</td><td>    0</td><td>    0</td><td> 0</td><td>    0</td><td>   0</td><td>...</td><td>   0</td><td>   0</td><td>   0</td><td>  0</td><td>   0</td><td>   0</td><td>   0</td><td>  0</td><td> 0</td><td>   0</td></tr>
+	<tr><td>Clostridia         </td><td>6213</td><td>71</td><td>0</td><td>8999</td><td>10944</td><td>12169</td><td>28</td><td>17471</td><td>3431</td><td>...</td><td>6048</td><td>1432</td><td>4213</td><td>717</td><td>3134</td><td>3084</td><td>2356</td><td>143</td><td>18</td><td>3051</td></tr>
+	<tr><td>Cyanobacteria      </td><td>   0</td><td> 0</td><td>0</td><td>   0</td><td>    0</td><td>    0</td><td> 0</td><td>    0</td><td>   0</td><td>...</td><td>   0</td><td>   1</td><td>   1</td><td>  3</td><td>   0</td><td>   0</td><td>   0</td><td>  0</td><td> 0</td><td>   1</td></tr>
+	<tr><td>Deinococci         </td><td>   0</td><td> 0</td><td>0</td><td>   0</td><td>    0</td><td>    3</td><td> 0</td><td>    2</td><td>   1</td><td>...</td><td> 104</td><td> 292</td><td>  51</td><td>197</td><td>  81</td><td>1102</td><td>   9</td><td> 61</td><td> 2</td><td>  88</td></tr>
+	<tr><td>Lentisphaeria      </td><td>   0</td><td> 0</td><td>0</td><td>   0</td><td>    0</td><td>    1</td><td> 0</td><td>    1</td><td>   0</td><td>...</td><td>   0</td><td>   0</td><td>   0</td><td>  0</td><td>   0</td><td>   0</td><td>   2</td><td>  0</td><td> 0</td><td>   0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
