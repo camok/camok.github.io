@@ -16896,7 +16896,7 @@ height=420
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Change our point shape by Country and facet by Depth</span>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span> <span class="o">+</span> 
-    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">TS</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">CODt</span><span class="p">,</span> <span class="n">colour</span> <span class="o">=</span> <span class="n">Temp</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">TS</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">CODt</span><span class="p">,</span> <span class="n">colour</span> <span class="o">=</span> <span class="n">Temp</span><span class="p">,</span> <span class="n">shape</span> <span class="o">=</span> <span class="n">Country</span><span class="p">)</span> <span class="o">+</span>
     <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span>
     <span class="nf">scale_y_log10</span><span class="p">()</span> <span class="o">+</span>
     <span class="nf">facet_grid</span><span class="p">(</span><span class="o">~</span><span class="n">Depth</span><span class="p">)</span>
