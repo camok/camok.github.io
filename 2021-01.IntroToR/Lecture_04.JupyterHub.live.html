@@ -22921,13 +22921,13 @@ height=420
     <span class="nf">group_by</span><span class="p">(</span><span class="n">Country</span><span class="p">,</span> <span class="n">Taxa</span><span class="p">)</span> <span class="o">%&gt;%</span> 
     <span class="nf">summarize</span><span class="p">(</span><span class="n">n</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>  <span class="o">%&gt;%</span>  <span class="c1">#count the number of entries</span>
     <span class="nf">filter</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="m">1</span><span class="p">)</span>  <span class="o">%&gt;%</span> <span class="c1"># get rid of any entries with only a single sample</span>
-    <span class="nf">ungroup</span><span class="p">()</span>  <span class="c1"># remove the grouping </span>
-    <span class="c1"># look only at the Taxa column</span>
-    <span class="c1"># keep only the samples that are listed twice (ie in both countries)</span>
+    <span class="nf">ungroup</span><span class="p">()</span>  <span class="o">%&gt;%</span> <span class="c1"># remove the grouping </span>
+    <span class="nf">select</span><span class="p">(</span><span class="n">Taxa</span><span class="p">)</span>  <span class="o">%&gt;%</span>  <span class="c1"># look only at the Taxa column</span>
+    <span class="nf">filter</span><span class="p">(</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">.</span><span class="p">))</span> <span class="c1"># keep only the samples that are listed twice (ie in both countries)</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">keep</span><span class="p">)</span>
 <span class="c1"># Make a new object that filters your taxa</span>
-<span class="c1"># sub_filtered_latrines &lt;- ...</span>
+<span class="n">sub_filtered_latrines</span> <span class="o">&lt;-</span> <span class="n">filtere</span>
 </pre></div>
 
      </div>
