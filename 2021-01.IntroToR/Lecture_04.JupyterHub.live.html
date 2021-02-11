@@ -15278,25 +15278,64 @@ height=420
 <p>To accomplish this, we first need to make sure that "Country" is a <strong>factor</strong>.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Our original metadata file&quot;</span><span class="p">)</span>
-<span class="nf">str</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># print(&quot;Our original metadata file&quot;)</span>
+<span class="c1"># str(metadata)</span>
 
 <span class="c1"># Convert Country to a factor</span>
-<span class="c1">#metadata$Country &lt;- ...</span>
+<span class="n">metadata</span><span class="o">$</span><span class="n">Country</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">metadata</span><span class="o">$</span><span class="n">Country</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="nf">unique</span><span class="p">(</span><span class="n">metadata</span><span class="o">$</span><span class="n">Country</span><span class="p">))</span>
 
-<span class="c1"># print(&quot;Our updated metadata file&quot;)</span>
-<span class="c1"># str(metadata)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">&quot;Our updated metadata file&quot;</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">metadata</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;Our updated metadata file&#34;
+tibble [81 x 7] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ Country       : Factor w/ 2 levels &#34;Tanzania&#34;,&#34;Vietnam&#34;: 1 1 1 1 1 1 1 1 1 1 ...
+ $ Latrine_Number: chr [1:81] &#34;2&#34; &#34;2&#34; &#34;2&#34; &#34;2&#34; ...
+ $ Depth         : chr [1:81] &#34;1&#34; &#34;10&#34; &#34;12&#34; &#34;2&#34; ...
+ $ pH            : num [1:81] 7.82 9.08 8.84 6.49 6.46 7.69 7.48 7.6 7.55 7.68 ...
+ $ Temp          : num [1:81] 25.1 24.2 25.1 29.6 27.9 28.7 29.8 25 28.8 28.9 ...
+ $ TS            : num [1:81] 14.5 37.8 71.1 13.9 29.4 ...
+ $ CODt          : num [1:81] 874 102 35 389 161 57 107 62 384 372 ...
+ - attr(*, &#34;spec&#34;)=
+  .. cols(
+  ..   Country = <span class="ansi-red-fg">col_character()</span>,
+  ..   Latrine_Number = <span class="ansi-red-fg">col_character()</span>,
+  ..   Depth = <span class="ansi-red-fg">col_character()</span>,
+  ..   pH = <span class="ansi-green-fg">col_number()</span>,
+  ..   Temp = <span class="ansi-green-fg">col_number()</span>,
+  ..   TS = <span class="ansi-green-fg">col_number()</span>,
+  ..   CODt = <span class="ansi-green-fg">col_number()</span>
+  .. )
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
