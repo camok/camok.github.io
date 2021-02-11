@@ -34461,8 +34461,8 @@ height=420
     <span class="nf">xlim</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">1000</span><span class="p">)</span> <span class="o">+</span>
     <span class="nf">ylim</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="m">150</span><span class="p">)</span> <span class="o">+</span>
     <span class="nf">geom_rug</span><span class="p">()</span> <span class="o">+</span>
-    <span class="kc">...</span> <span class="o">+</span> <span class="c1"># Remove the alpha legend</span>
-    <span class="kc">...</span> <span class="c1"># Move our bar legend</span>
+    <span class="nf">guides</span><span class="p">(</span><span class="n">alpha</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span> <span class="c1"># Remove the alpha legend</span>
+    <span class="nf">theme</span><span class="p">(</span><span class="n">legend.justification</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span> <span class="nf">legend.position</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">)))</span> <span class="c1"># Move our bar legend</span>
     
 
 <span class="nf">ggarrange</span><span class="p">(</span><span class="n">dot</span><span class="p">,</span> <span class="n">hist</span><span class="p">,</span> 
