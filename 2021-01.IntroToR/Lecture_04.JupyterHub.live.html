@@ -32463,25 +32463,51 @@ height=420
 <p>As mentioned the last call to <code>theme()</code> will override previous calls that conflict. Therefore, if we want to start with <code>theme_minimal()</code> as our base, it has to be in our code BEFORE the other modifications.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[131]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Add our own theme elements</span>
 <span class="n">my_plot</span> <span class="o">+</span> 
   <span class="nf">theme_minimal</span><span class="p">()</span> <span class="o">+</span>
-  <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>
-        <span class="n">panel.border</span> <span class="o">=</span><span class="kc">...</span><span class="p">,</span>
-        <span class="n">strip.text.x</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>
-        <span class="n">plot.title</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>
-        <span class="n">axis.ticks.y</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span>
+  <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">,</span> <span class="n">hjust</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">vjust</span> <span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">14</span><span class="p">,</span>
+        <span class="n">panel.border</span> <span class="o">=</span> <span class="nf">element_rect</span><span class="p">(</span><span class="n">fill</span><span class="o">=</span><span class="kc">NA</span><span class="p">),</span>
+        <span class="n">strip.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">face</span><span class="o">=</span><span class="s">&quot;bold&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">16</span><span class="p">),</span>
+        <span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="m">18</span><span class="p">),</span>
+        <span class="n">axis.ticks.y</span> <span class="o">=</span> <span class="nf">element_line</span><span class="p">())</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+Error in parse(text = x, srcfile = src): &lt;text&gt;:9:0: unexpected end of input
+7:         plot.title = element_text(hjust=0.5, size=18),
+8:         axis.ticks.y = element_line())
+  ^
+Traceback:
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
