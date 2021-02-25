@@ -15477,7 +15477,7 @@ height=420
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Add an age_group variable to our cholesterol dataset</span>
 <span class="n">cholesterol</span> <span class="o">&lt;-</span> <span class="n">cholesterol</span> <span class="o">%&gt;%</span> 
-  <span class="kc">...</span>
+  <span class="nf">mutate</span><span class="p">(</span><span class="n">age_group</span> <span class="o">=</span> <span class="nf">ifelse</span><span class="p">(</span><span class="n">test</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="o">$</span><span class="n">age</span> <span class="o">&gt;</span> <span class="m">55</span><span class="p">,</span> <span class="n">yes</span> <span class="o">=</span> <span class="m">1</span><span class="p">))</span>
 
 <span class="c1"># Check our update dataset</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">cholesterol</span><span class="p">)</span>
