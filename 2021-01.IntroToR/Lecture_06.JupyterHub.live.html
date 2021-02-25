@@ -20236,19 +20236,46 @@ F-statistic: 4.487 on 2 and 397 DF,  p-value: 0.01184
 <p>So, leave this as an additional option to explore when generating more complex models.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># An equivalent command would be using aov()</span>
-<span class="nf">summary</span><span class="p">(</span><span class="nf">a</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">cholesterol</span><span class="p">))</span>
+<span class="nf">summary</span><span class="p">(</span><span class="nf">aov</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">cholesterol</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>                     Df Sum Sq Mean Sq F value Pr(&gt;F)  
+as.factor(rs174548)   2   4314  2157.1   4.487 0.0118 *
+Residuals           397 190875   480.8                 
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
