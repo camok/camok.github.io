@@ -18611,22 +18611,64 @@ height=420
 <h3 id="2.4.2.1-Building-our-multiple-linear-regression-model">2.4.2.1 Building our multiple linear regression model<a class="anchor-link" href="#2.4.2.1-Building-our-multiple-linear-regression-model">&#182;</a></h3><p>From our analysis, we see that cholesterol increases with BMI. Furthermore, we see that BMI tends to increases with age. We will look at the association of age and cholesterol while holding BMI constant. This will indicate if the significance of our previous relationship between increasing cholesterol with increasing age was affected by BMI.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Define our multiple linear regression</span>
 <span class="n">ageBMIFit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="n">age</span> <span class="o">+</span> <span class="n">BMI</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="c1"># summarise the model</span>
-<span class="nf">summary</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">ageBMIFit</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+Call:
+lm(formula = chol ~ age + BMI, data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-58.994 -15.793   0.571  14.159  62.992 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 137.1612     9.0061  15.230  &lt; 2e-16 ***
+age           0.2023     0.0795   2.544 0.011327 *  
+BMI           1.4266     0.3822   3.732 0.000217 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 21.34 on 397 degrees of freedom
+Multiple R-squared:  0.07351,	Adjusted R-squared:  0.06884 
+F-statistic: 15.75 on 2 and 397 DF,  p-value: 2.62e-07
+</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
