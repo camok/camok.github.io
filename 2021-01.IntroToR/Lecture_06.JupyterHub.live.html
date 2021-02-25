@@ -16537,17 +16537,17 @@ height=420
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">## Bartlett&#39;s H0: There is homoskedasticity between samples cholesterol of age groups</span>
 <span class="nf">bartlett.test</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="n">age_group</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="c1">#equivalent to</span>
-<span class="c1">#bartlett.test(..., ...)</span>
+<span class="nf">bartlett.test</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">,</span> <span class="n">cholesterol</span><span class="o">$</span><span class="n">age_group</span><span class="p">)</span>
 
 <span class="c1"># If Chi-squared &gt; Bartlett&#39;s K-squared, means that data are homoskedastic (not reject H0)</span>
-<span class="c1">#qchisq(p = 0.950, df = 1)</span>
+<span class="nf">qchisq</span><span class="p">(</span><span class="n">p</span> <span class="o">=</span> <span class="m">0.950</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16575,6 +16575,38 @@ height=420
 data:  chol by age_group
 Bartlett&#39;s K-squared = 2.7431, df = 1, p-value = 0.09767
 </pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+	Bartlett test of homogeneity of variances
+
+data:  cholesterol$chol and cholesterol$age_group
+Bartlett&#39;s K-squared = 2.7431, df = 1, p-value = 0.09767
+</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+3.84145882069412
 </div>
 
 </div>
