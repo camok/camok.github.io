@@ -20304,14 +20304,14 @@ $\mu_0$ = $\mu_1$, $\mu_0$ = $\mu_2$, $\mu_1$ = $\mu_2$</p>
 <p>For the comparisons you want to make. The simplest contrast matrix is a matrix of 0, 1, and -1's, where the relationship -1 and 1 are the factor levels for which you want to test the differences.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># test the fit of our model</span>
-<span class="n">rs174548TestFit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span> <span class="c1"># -1 drops the intercept</span>
+<span class="n">rs174548TestFit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">)</span> <span class="m">-1</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span> <span class="c1"># -1 drops the intercept</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">rs174548TestFit</span><span class="p">)</span>
 </pre></div>
 
@@ -20320,17 +20320,59 @@ $\mu_0$ = $\mu_1$, $\mu_0$ = $\mu_2$, $\mu_1$ = $\mu_2$</p>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+Call:
+lm(formula = chol ~ as.factor(rs174548) - 1, data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-64.062 -15.913  -0.062  14.938  59.136 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(&gt;|t|)    
+as.factor(rs174548)0  181.062      1.455  124.41   &lt;2e-16 ***
+as.factor(rs174548)1  187.864      1.809  103.88   &lt;2e-16 ***
+as.factor(rs174548)2  186.500      4.300   43.37   &lt;2e-16 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 21.93 on 397 degrees of freedom
+Multiple R-squared:  0.9861,	Adjusted R-squared:  0.986 
+F-statistic:  9383 on 3 and 397 DF,  p-value: &lt; 2.2e-16
+</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># A contrMat is a one degree of freedom test comparing means. </span>
 <span class="c1"># It can compare more than two means if you group them in such way that at the end, </span>
 <span class="c1"># there are only two groups being compared: average of the means of groups 1 and 2 versus the mean of group 3</span>
 
-<span class="n">M</span> <span class="o">&lt;-</span> 
+<span class="n">M</span> <span class="o">&lt;-</span> <span class="nf">contrMat</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">rs174548</span><span class="p">),</span> <span class="n">type</span> <span class="o">=</span> <span class="s">&quot;Tukey&quot;</span><span class="p">)</span>
 <span class="c1"># tukey is a single-step multi pair-wise comparison test to find differences in means</span>
 <span class="n">M</span>
 
@@ -20342,6 +20384,56 @@ $\mu_0$ = $\mu_1$, $\mu_0$ = $\mu_2$, $\mu_1$ = $\mu_2$</p>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A contrMat: 3 × 3 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>0</th><th scope=col>1</th><th scope=col>2</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1 - 0</th><td>-1</td><td> 1</td><td>0</td></tr>
+	<tr><th scope=row>2 - 0</th><td>-1</td><td> 0</td><td>1</td></tr>
+	<tr><th scope=row>2 - 1</th><td> 0</td><td>-1</td><td>1</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;Structure of M&#34;
+ &#39;contrMat&#39; num [1:3, 1:3] -1 -1 0 1 0 -1 0 1 1
+ - attr(*, &#34;dimnames&#34;)=List of 2
+  ..$ : chr [1:3] &#34;1 - 0&#34; &#34;2 - 0&#34; &#34;2 - 1&#34;
+  ..$ : chr [1:3] &#34;0&#34; &#34;1&#34; &#34;2&#34;
+ - attr(*, &#34;type&#34;)= chr &#34;Tukey&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
