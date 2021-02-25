@@ -17666,19 +17666,49 @@ $\bar{y}$ - sample mean</p>
 <p>As we are used to writing equations, our dependent variable (cholesterol) is on the left side the <code>lm</code> formula and our independent variable (age) is on the right side; tilde <code>~</code> separates these sides. We also input the dataset to the <code>lm</code> function.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Generating a linear model. Looks a lot like the bartlett.test() format right?</span>
-<span class="nf">lm</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
+<span class="nf">lm</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="n">chol</span> <span class="o">~</span> <span class="n">age</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+Call:
+lm(formula = chol ~ age, data = cholesterol)
+
+Coefficients:
+(Intercept)          age  
+   166.9017       0.3103  
+</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
