@@ -20759,14 +20759,14 @@ F-statistic:  12.2 on 3 and 396 DF,  p-value: 1.196e-07
 <p>How does this compare to the model with sex alone as a predictor?</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Build a linear model based on the &quot;sex&quot; variable</span>
-<span class="n">sexFit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="kc">...</span><span class="p">),</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
+<span class="n">sexFit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">sex</span><span class="p">),</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">sexFit</span><span class="p">)</span>
 </pre></div>
 
@@ -20775,18 +20775,93 @@ F-statistic:  12.2 on 3 and 396 DF,  p-value: 1.196e-07
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+Call:
+lm(formula = chol ~ as.factor(sex), data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-62.299 -14.343  -0.888  14.701  57.701 
+
+Coefficients:
+                Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)      178.477      1.522  117.26  &lt; 2e-16 ***
+as.factor(sex)1   10.821      2.147    5.04 7.09e-07 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 21.47 on 398 degrees of freedom
+Multiple R-squared:  0.05999,	Adjusted R-squared:  0.05763 
+F-statistic:  25.4 on 1 and 398 DF,  p-value: 7.087e-07
+</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Compare the two models with anova</span>
+<span class="nf">anova</span><span class="p">(</span><span class="n">sexFit</span><span class="p">,</span> <span class="n">sex_rs174548Fit</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A anova: 2 × 6</caption>
+<thead>
+	<tr><th></th><th scope=col>Res.Df</th><th scope=col>RSS</th><th scope=col>Df</th><th scope=col>Sum of Sq</th><th scope=col>F</th><th scope=col>Pr(&gt;F)</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>398</td><td>183479.7</td><td>NA</td><td>      NA</td><td>      NA</td><td>         NA</td></tr>
+	<tr><th scope=row>2</th><td>396</td><td>178680.6</td><td> 2</td><td>4799.139</td><td>5.318035</td><td>0.005258707</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
