@@ -17923,19 +17923,61 @@ Y \sim Normal(a + b_1x + b_2x^2, {\sigma^2})
 <p><code>lm(y ~ x + I(x^2))</code></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># summarize the results of a multiple linear regression</span>
-<span class="nf">summary</span><span class="p">(</span><span class="nf">lm</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">))</span>
+<span class="nf">summary</span><span class="p">(</span><span class="nf">lm</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="n">age</span> <span class="o">+</span> <span class="nf">I</span><span class="p">(</span><span class="n">age</span><span class="o">^</span><span class="m">2</span><span class="p">),</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+Call:
+lm(formula = chol ~ age + I(age^2), data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-56.836 -15.063  -0.654  14.534  60.246 
+
+Coefficients:
+              Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 120.890937  16.722415   7.229 2.51e-12 ***
+age           2.120309   0.640815   3.309  0.00102 ** 
+I(age^2)     -0.016562   0.005824  -2.844  0.00469 ** 
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 21.5 on 397 degrees of freedom
+Multiple R-squared:  0.06014,	Adjusted R-squared:  0.05541 
+F-statistic:  12.7 on 2 and 397 DF,  p-value: 4.498e-06
+</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
