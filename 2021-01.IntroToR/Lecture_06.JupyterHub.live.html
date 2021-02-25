@@ -18618,7 +18618,7 @@ height=420
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Define our multiple linear regression</span>
-<span class="n">ageBMIFit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
+<span class="n">ageBMIFit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="n">age</span> <span class="o">+</span> <span class="n">BMI</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="c1"># summarise the model</span>
 <span class="nf">summary</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
