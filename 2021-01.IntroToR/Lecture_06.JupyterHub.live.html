@@ -17717,25 +17717,134 @@ Coefficients:
 <p>The function will output our formula, the slope and the intercept. However, if we save the output of the function into an object, 'fit', we get a list object of the model, the input, and all associated statistics. We can look at a <code>summary()</code> and get residuals, errors, p-values and more in addition to our coefficients.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Assign the linear model to an object</span>
-<span class="n">ageFit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
+<span class="n">ageFit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">formula</span> <span class="o">=</span> <span class="n">chol</span> <span class="o">~</span> <span class="n">age</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="c1"># ageFit is a list of 12 elements that can be individually accessed by using the dollar operator</span>
-<span class="kc">...</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">ageFit</span><span class="p">)</span>
 
 <span class="c1"># Look at the summary information of &#39;fit&#39;</span>
-<span class="kc">...</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">ageFit</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>List of 12
+ $ coefficients : Named num [1:2] 166.9 0.31
+  ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;(Intercept)&#34; &#34;age&#34;
+ $ residuals    : Named num [1:400] 25.13 21.27 18.24 4.55 -8.04 ...
+  ..- attr(*, &#34;names&#34;)= chr [1:400] &#34;1&#34; &#34;2&#34; &#34;3&#34; &#34;4&#34; ...
+ $ effects      : Named num [1:400] -3678.3 89.45 17.61 1.86 -9.49 ...
+  ..- attr(*, &#34;names&#34;)= chr [1:400] &#34;(Intercept)&#34; &#34;age&#34; &#34;&#34; &#34;&#34; ...
+ $ rank         : int 2
+ $ fitted.values: Named num [1:400] 190 183 187 177 183 ...
+  ..- attr(*, &#34;names&#34;)= chr [1:400] &#34;1&#34; &#34;2&#34; &#34;3&#34; &#34;4&#34; ...
+ $ assign       : int [1:2] 0 1
+ $ qr           :List of 5
+  ..$ qr   : num [1:400, 1:2] -20 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 ...
+  .. ..- attr(*, &#34;dimnames&#34;)=List of 2
+  .. .. ..$ : chr [1:400] &#34;1&#34; &#34;2&#34; &#34;3&#34; &#34;4&#34; ...
+  .. .. ..$ : chr [1:2] &#34;(Intercept)&#34; &#34;age&#34;
+  .. ..- attr(*, &#34;assign&#34;)= int [1:2] 0 1
+  ..$ qraux: num [1:2] 1.05 1.02
+  ..$ pivot: int [1:2] 1 2
+  ..$ tol  : num 1e-07
+  ..$ rank : int 2
+  ..- attr(*, &#34;class&#34;)= chr &#34;qr&#34;
+ $ df.residual  : int 398
+ $ xlevels      : Named list()
+ $ call         : language lm(formula = chol ~ age, data = cholesterol)
+ $ terms        :Classes &#39;terms&#39;, &#39;formula&#39;  language chol ~ age
+  .. ..- attr(*, &#34;variables&#34;)= language list(chol, age)
+  .. ..- attr(*, &#34;factors&#34;)= int [1:2, 1] 0 1
+  .. .. ..- attr(*, &#34;dimnames&#34;)=List of 2
+  .. .. .. ..$ : chr [1:2] &#34;chol&#34; &#34;age&#34;
+  .. .. .. ..$ : chr &#34;age&#34;
+  .. ..- attr(*, &#34;term.labels&#34;)= chr &#34;age&#34;
+  .. ..- attr(*, &#34;order&#34;)= int 1
+  .. ..- attr(*, &#34;intercept&#34;)= int 1
+  .. ..- attr(*, &#34;response&#34;)= int 1
+  .. ..- attr(*, &#34;.Environment&#34;)=&lt;environment: R_GlobalEnv&gt; 
+  .. ..- attr(*, &#34;predvars&#34;)= language list(chol, age)
+  .. ..- attr(*, &#34;dataClasses&#34;)= Named chr [1:2] &#34;numeric&#34; &#34;numeric&#34;
+  .. .. ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;chol&#34; &#34;age&#34;
+ $ model        :&#39;data.frame&#39;:	400 obs. of  2 variables:
+  ..$ chol: int [1:400] 215 204 205 182 175 176 159 169 175 189 ...
+  ..$ age : int [1:400] 74 51 64 34 52 39 79 38 52 58 ...
+  ..- attr(*, &#34;terms&#34;)=Classes &#39;terms&#39;, &#39;formula&#39;  language chol ~ age
+  .. .. ..- attr(*, &#34;variables&#34;)= language list(chol, age)
+  .. .. ..- attr(*, &#34;factors&#34;)= int [1:2, 1] 0 1
+  .. .. .. ..- attr(*, &#34;dimnames&#34;)=List of 2
+  .. .. .. .. ..$ : chr [1:2] &#34;chol&#34; &#34;age&#34;
+  .. .. .. .. ..$ : chr &#34;age&#34;
+  .. .. ..- attr(*, &#34;term.labels&#34;)= chr &#34;age&#34;
+  .. .. ..- attr(*, &#34;order&#34;)= int 1
+  .. .. ..- attr(*, &#34;intercept&#34;)= int 1
+  .. .. ..- attr(*, &#34;response&#34;)= int 1
+  .. .. ..- attr(*, &#34;.Environment&#34;)=&lt;environment: R_GlobalEnv&gt; 
+  .. .. ..- attr(*, &#34;predvars&#34;)= language list(chol, age)
+  .. .. ..- attr(*, &#34;dataClasses&#34;)= Named chr [1:2] &#34;numeric&#34; &#34;numeric&#34;
+  .. .. .. ..- attr(*, &#34;names&#34;)= chr [1:2] &#34;chol&#34; &#34;age&#34;
+ - attr(*, &#34;class&#34;)= chr &#34;lm&#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+Call:
+lm(formula = chol ~ age, data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-60.453 -14.643  -0.022  14.659  58.995 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 166.90168    4.26488  39.134  &lt; 2e-16 ***
+age           0.31033    0.07524   4.125 4.52e-05 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 21.69 on 398 degrees of freedom
+Multiple R-squared:  0.04099,	Adjusted R-squared:  0.03858 
+F-statistic: 17.01 on 1 and 398 DF,  p-value: 4.522e-05
+</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
