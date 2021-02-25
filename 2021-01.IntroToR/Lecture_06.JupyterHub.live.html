@@ -20872,14 +20872,14 @@ F-statistic:  25.4 on 1 and 398 DF,  p-value: 7.087e-07
 <p>We can now check the two-way ANOVA model with the interaction.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Build an interaction model with two factors with aov()</span>
-<span class="n">sexInt_rs174548Fit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
+<span class="n">sexInt_rs174548Fit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span> <span class="o">*</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">),</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="nf">summary</span><span class="p">(</span><span class="n">sexInt_rs174548Fit</span><span class="p">)</span>
 </pre></div>
@@ -20887,6 +20887,51 @@ F-statistic:  25.4 on 1 and 398 DF,  p-value: 7.087e-07
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+Call:
+lm(formula = chol ~ as.factor(sex) * as.factor(rs174548), data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-70.529 -13.604  -0.974  14.171  54.882 
+
+Coefficients:
+                                     Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                          178.1182     2.0089  88.666  &lt; 2e-16 ***
+as.factor(sex)1                        5.7109     2.7982   2.041  0.04192 *  
+as.factor(rs174548)1                   0.9597     3.1306   0.307  0.75933    
+as.factor(rs174548)2                  -0.2015     6.4053  -0.031  0.97492    
+as.factor(sex)1:as.factor(rs174548)1  12.7398     4.4650   2.853  0.00456 ** 
+as.factor(sex)1:as.factor(rs174548)2  10.2296     8.7482   1.169  0.24297    
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 21.07 on 394 degrees of freedom
+Multiple R-squared:  0.1039,	Adjusted R-squared:  0.09257 
+F-statistic:  9.14 on 5 and 394 DF,  p-value: 3.062e-08
+</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
