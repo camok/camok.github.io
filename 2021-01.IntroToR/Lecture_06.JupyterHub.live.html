@@ -17856,19 +17856,51 @@ F-statistic: 17.01 on 1 and 398 DF,  p-value: 4.522e-05
 <p>Basically, each <code>Pr(&gt;|t|)</code> is an evaluation of the co-efficient producing this t-statistic against a null hypothesis that the true co-efficient is 0. The second <code>p-value</code> tells us about the model overall and whether it is predicting better than just random noise. We will discuss F-values a little more in just a few sections.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Generate a confidence interval with confint()</span>
-<span class="kc">...</span>
+<span class="nf">confint</span><span class="p">(</span><span class="n">ageFit</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A matrix: 2 × 2 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>2.5 %</th><th scope=col>97.5 %</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>(Intercept)</th><td>158.5171656</td><td>175.2861949</td></tr>
+	<tr><th scope=row>age</th><td>  0.1624211</td><td>  0.4582481</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
