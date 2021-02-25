@@ -16825,23 +16825,57 @@ height=420
 <p>You can alternatively enter your variables in a <code>formula</code>, in this case <code>y ~ x</code>. The <code>~</code> in r language is used to separate the left and right sides of a formula. (You can run a 1-sided t-test by specifying <code>alternative = 'greater'</code> or <code>alternative = 'less'</code>). In this case, <code>alternative = 'two-sided'</code> and <code>conf.level = 0.95</code> are the default parameters and only included for clarity. For now we are assuming that equal variance is true from our previous tests.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#?t.test</span>
 
 <span class="c1"># Provide t.test with the two groups of data to compare</span>
-<span class="nf">t.test</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="c1"># 55 years or younger</span>
-       <span class="n">y</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="c1"># 56 years or older</span>
+<span class="nf">t.test</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">age_group</span> <span class="o">==</span> <span class="m">0</span><span class="p">],</span> <span class="c1"># 55 years or younger</span>
+       <span class="n">y</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">age_group</span> <span class="o">==</span> <span class="m">1</span><span class="p">],</span> <span class="c1"># 56 years or older</span>
        <span class="n">alternative</span> <span class="o">=</span> <span class="s">&quot;two.sided&quot;</span><span class="p">,</span> <span class="n">conf.level</span> <span class="o">=</span> <span class="m">0.95</span><span class="p">,</span> <span class="n">var.equal</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+	Two Sample t-test
+
+data:  cholesterol$chol[cholesterol$age_group == 0] and cholesterol$chol[cholesterol$age_group == 1]
+t = -3.6349, df = 398, p-value = 0.0003146
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -12.202574  -3.636122
+sample estimates:
+mean of x mean of y 
+ 179.9751  187.8945 
+</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
