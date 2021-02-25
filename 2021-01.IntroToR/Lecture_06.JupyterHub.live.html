@@ -19055,18 +19055,43 @@ height=420
 <h2 id="2.5.3-Comparing-models-with-AIC()">2.5.3 Comparing models with <code>AIC()</code><a class="anchor-link" href="#2.5.3-Comparing-models-with-AIC()">&#182;</a></h2><p>The Akaike Information Criterion (AIC) is a another method for model selection. The AIC works to balance the trade-offs between the complexity of a given model and its goodness of fit (how well the models fits the data), where the <strong>best</strong> model is the one that provides the maximum fit for the fewest predictors. Its interpretation is fairly straight forward: The lower the score, the better a model is <strong>relative</strong> to the other models. If many models have similarly low AICs, you should choose the one with the fewest model terms (variables or parameters).</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># compare ageFit and ageBMIFit using AIC()</span>
+<span class="nf">AIC</span><span class="p">(</span><span class="n">ageFIT</span><span class="p">,</span> <span class="n">ageBMIFit</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+Error in AIC(ageFIT, ageBMIFit): object &#39;ageFIT&#39; not found
+Traceback:
+
+1. AIC(ageFIT, ageBMIFit)</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
