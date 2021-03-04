@@ -14419,15 +14419,24 @@ Loading required package: viridisLite
 <p>For example, let's say that we want to add <code>a + 2</code> 10 times and overwrite it everytime:</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Increment a by 2, the bad way...</span>
 <span class="n">a</span> <span class="o">&lt;-</span> <span class="m">2</span>
-<span class="n">a</span> <span class="o">&lt;-</span> 
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="m">2</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="m">2</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="m">2</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="m">2</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="m">2</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="m">2</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="m">2</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="m">2</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="m">2</span>
+<span class="n">a</span> <span class="o">&lt;-</span> <span class="n">a</span> <span class="o">+</span> <span class="m">2</span>
 <span class="n">a</span>
 </pre></div>
 
@@ -14436,24 +14445,46 @@ Loading required package: viridisLite
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+22
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Sure, 10 times is doable by hand, just copy-paste. But what if you need to perform that same task, say 1,000 times? What if the code was more complex than <code>a &lt;- 2</code>? That is when <code>for</code> loops come to the rescue.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Increment &#39;anything&#39; using a for loop</span>
-<span class="n">anything</span> <span class="o">=</span> <span class="kc">...</span>
+<span class="n">anything</span> <span class="o">=</span> <span class="m">10</span>
 
 <span class="c1"># Set up your for loop with a &#39;tally&#39; count</span>
-<span class="nf">for </span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">anything</span> <span class="o">&lt;-</span> <span class="kc">...</span>     
+<span class="nf">for </span><span class="p">(</span><span class="n">tally</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="m">1000</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">anything</span> <span class="o">&lt;-</span> <span class="n">anything</span> <span class="o">+</span> <span class="m">2</span>     
 <span class="p">}</span>
 
 <span class="n">tally</span>
@@ -14463,6 +14494,41 @@ Loading required package: viridisLite
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+1000
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+2010
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
