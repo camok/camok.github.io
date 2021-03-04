@@ -15122,10 +15122,10 @@ Traceback:
 <span class="nf">rect</span><span class="p">(</span><span class="nf">par</span><span class="p">(</span><span class="s">&quot;usr&quot;</span><span class="p">)[</span><span class="m">1</span><span class="p">],</span><span class="nf">par</span><span class="p">(</span><span class="s">&quot;usr&quot;</span><span class="p">)[</span><span class="m">3</span><span class="p">],</span><span class="nf">par</span><span class="p">(</span><span class="s">&quot;usr&quot;</span><span class="p">)[</span><span class="m">2</span><span class="p">],</span><span class="nf">par</span><span class="p">(</span><span class="s">&quot;usr&quot;</span><span class="p">)[</span><span class="m">4</span><span class="p">],</span><span class="n">col</span> <span class="o">=</span> <span class="s">&quot;gray80&quot;</span><span class="p">)</span>
 
 <span class="c1"># we can use the variable to select different data each time</span>
-<span class="nf">for</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
+<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="nf">nrow</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">))</span> <span class="p">{</span>
     <span class="nf">points</span><span class="p">(</span><span class="n">mean_methane</span> <span class="o">~</span> <span class="n">day</span><span class="p">,</span>
-        <span class="n">data</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>
-        <span class="n">col</span> <span class="o">=</span> <span class="nf">magma</span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">))</span><span class="kc">...</span><span class="p">,</span> 
+        <span class="n">data</span> <span class="o">=</span> <span class="n">compounds_data</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">],</span>
+        <span class="n">col</span> <span class="o">=</span> <span class="nf">magma</span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">))[</span><span class="n">i</span><span class="p">],</span> 
         <span class="n">pch</span><span class="o">=</span><span class="m">20</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
