@@ -16099,7 +16099,7 @@ else {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Check if our file exists</span>
@@ -16112,6 +16112,8 @@ else {
     <span class="c1"># The file does not exist, print the go-ahead and save the file</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">&quot;No files with the same name. Good to go!&quot;</span><span class="p">)</span>
     <span class="c1"># Write the file as part of the same control statement</span>
+    <span class="nf">write.csv</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">compound_mean</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;Methane mean by compound.csv&quot;</span><span class="p">,</span>
+              <span class="n">row.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">quote</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
 
