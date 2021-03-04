@@ -15707,15 +15707,15 @@ height=420
 
 <span class="c1"># for loop to calculate difference in means between fresh vs saline groups in salinity</span>
 
-<span class="c1"># for(...) {</span>
-<span class="c1">#     # Generate a t-test on subset by day</span>
-<span class="c1">#     t &lt;- t.test(mean_methane ~ salinity, ...)</span>
-<span class="c1">#     # write the results to our data frame</span>
-<span class="c1">#     result[result$day == i, &quot;difference&quot;] &lt;- ...</span>
-<span class="c1">#     result[result$day == i, &quot;p_value&quot;] &lt;- ...</span>
-<span class="c1"># }</span>
+<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="n">result</span><span class="o">$</span><span class="n">day</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1"># Generate a t-test on subset by day</span>
+    <span class="n">t</span> <span class="o">&lt;-</span> <span class="nf">t.test</span><span class="p">(</span><span class="n">mean_methane</span> <span class="o">~</span> <span class="n">salinity</span><span class="p">,</span> <span class="n">subdata</span><span class="p">[</span><span class="n">subdata</span><span class="o">$</span><span class="n">day</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="p">])</span>
+    <span class="c1"># write the results to our data frame</span>
+    <span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="o">$</span><span class="n">day</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="s">&quot;difference&quot;</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kc">...</span>
+    <span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="o">$</span><span class="n">day</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="s">&quot;p_value&quot;</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kc">...</span>
+<span class="p">}</span>
 
-<span class="c1"># result</span>
+<span class="n">result</span>
 </pre></div>
 
      </div>
