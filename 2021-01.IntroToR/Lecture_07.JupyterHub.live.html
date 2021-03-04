@@ -15688,39 +15688,76 @@ height=420
 <p>Lets use a <code>t.test()</code> to look for methane production differences between the salinity levels of every 10th day (starting at day 2), excluding the "brackish" salinity group.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># subset dataset every day that ends in a 2 and exclude brackish</span>
 <span class="c1"># %% is a quick math symbol for modulo (return a remainder)</span>
 
 <span class="n">subdata</span> <span class="o">&lt;-</span> <span class="n">compounds_data</span>  <span class="o">%&gt;%</span> 
-    <span class="nf">filter</span><span class="p">(</span><span class="n">da</span><span class="p">)</span>
+    <span class="nf">filter</span><span class="p">(</span><span class="n">day</span> <span class="o">%%</span> <span class="m">10</span> <span class="o">==</span> <span class="m">2</span><span class="p">,</span> <span class="n">salinity</span> <span class="o">!=</span> <span class="s">&quot;brackish&quot;</span><span class="p">)</span>
 
 
 <span class="c1"># create an empty data frame to store the output of the for loop</span>
-<span class="n">result</span> <span class="o">&lt;-</span> <span class="kc">...</span>
+<span class="n">result</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">day</span> <span class="o">=</span> <span class="nf">unique</span><span class="p">(</span><span class="n">subdata</span><span class="o">$</span><span class="n">day</span><span class="p">),</span> <span class="n">difference</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
 <span class="n">result</span>
 
 <span class="c1"># for loop to calculate difference in means between fresh vs saline groups in salinity</span>
 
-<span class="nf">for</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1"># Generate a t-test on subset by day</span>
-    <span class="n">t</span> <span class="o">&lt;-</span> <span class="nf">t.test</span><span class="p">(</span><span class="n">mean_methane</span> <span class="o">~</span> <span class="n">salinity</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
-    <span class="c1"># write the results to our data frame</span>
-    <span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="o">$</span><span class="n">day</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="s">&quot;difference&quot;</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kc">...</span>
-    <span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="o">$</span><span class="n">day</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="s">&quot;p_value&quot;</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="kc">...</span>
-<span class="p">}</span>
+<span class="c1"># for(...) {</span>
+<span class="c1">#     # Generate a t-test on subset by day</span>
+<span class="c1">#     t &lt;- t.test(mean_methane ~ salinity, ...)</span>
+<span class="c1">#     # write the results to our data frame</span>
+<span class="c1">#     result[result$day == i, &quot;difference&quot;] &lt;- ...</span>
+<span class="c1">#     result[result$day == i, &quot;p_value&quot;] &lt;- ...</span>
+<span class="c1"># }</span>
 
-<span class="n">result</span>
+<span class="c1"># result</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>day</th><th scope=col>difference</th><th scope=col>p_value</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td> 62</td><td>NA</td><td>NA</td></tr>
+	<tr><td> 72</td><td>NA</td><td>NA</td></tr>
+	<tr><td>102</td><td>NA</td><td>NA</td></tr>
+	<tr><td>242</td><td>NA</td><td>NA</td></tr>
+	<tr><td>272</td><td>NA</td><td>NA</td></tr>
+	<tr><td>312</td><td>NA</td><td>NA</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
