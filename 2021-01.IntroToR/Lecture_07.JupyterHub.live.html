@@ -19710,7 +19710,7 @@ height=420
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[74]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Input: </span>
@@ -19720,7 +19720,7 @@ height=420
 <span class="c1"># Output: make.facet.plot will generate a facet plot from data.df based on the salinity.val</span>
 <span class="c1"># The plot will be saved to a file ending in &quot;graph.facet.function.png&quot;</span>
 
-<span class="kc">...</span>
+<span class="n">make.facet.plot</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">data.df</span><span class="p">,</span> <span class="n">salinity.val</span><span class="p">)</span> <span class="p">{</span>
     
     <span class="c1"># Make the plot</span>
     
@@ -19741,9 +19741,9 @@ height=420
     <span class="nf">print</span><span class="p">(</span><span class="n">salinity_plot</span><span class="p">)</span> <span class="c1"># The only way to see the plot is to print it within a for loop</span>
     
     <span class="c1"># save the plot</span>
-    <span class="nf">ggsave</span><span class="p">(</span><span class="n">plot</span> <span class="o">=</span> <span class="n">salinity_plot</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">salinity.val</span><span class="p">,</span> <span class="s">&quot;graph.facet.function.png&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">),</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;images/&quot;</span> <span class="p">,</span>
+    <span class="nf">ggsave</span><span class="p">(</span><span class="n">plot</span> <span class="o">=</span> <span class="n">salinity_plot</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">salinity.val</span><span class="p">,</span> <span class="s">&quot;graph.facet.function.png&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">),</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;data/&quot;</span> <span class="p">,</span>
          <span class="n">scale</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">device</span> <span class="o">=</span> <span class="s">&quot;png&quot;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;cm&quot;</span><span class="p">))</span>
-<span class="kc">...</span>
+<span class="p">}</span>
 </pre></div>
 
      </div>
