@@ -16024,28 +16024,49 @@ else {
 }</code></pre>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Practice with a complex if() statement</span>
 <span class="n">x</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;what&quot;</span><span class="p">,</span> <span class="s">&quot;is&quot;</span><span class="p">,</span> <span class="s">&quot;truth&quot;</span><span class="p">)</span>
 
 <span class="c1"># Build a complex cascade of statements looking for Truth</span>
-<span class="nf">if</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
+<span class="nf">if</span><span class="p">(</span><span class="s">&quot;TRUTH&quot;</span> <span class="o">%in%</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">&quot;TRUTH is found&quot;</span><span class="p">)</span>
-<span class="p">}</span> <span class="n">else</span> <span class="nf">if </span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span> 
+<span class="p">}</span> <span class="n">else</span> <span class="nf">if </span><span class="p">(</span><span class="s">&quot;Truth&quot;</span> <span class="o">%in%</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span> 
     <span class="nf">print </span><span class="p">(</span><span class="s">&quot;Truth is found&quot;</span><span class="p">)</span>
 <span class="p">}</span> <span class="n">else</span> <span class="p">{</span> <span class="c1"># notice the placement of else is directly after the closing }</span>
-    <span class="nf">print </span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+    <span class="nf">print </span><span class="p">(</span><span class="s">&quot;The truth is out there... somewhere&quot;</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;The truth is out there... somewhere&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
