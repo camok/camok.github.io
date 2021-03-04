@@ -15795,10 +15795,10 @@ height=420
 <h2 id="1.1.7-Application-of-for-loops-through-replication-of-tapply()">1.1.7 Application of for loops through replication of <code>tapply()</code><a class="anchor-link" href="#1.1.7-Application-of-for-loops-through-replication-of-tapply()">&#182;</a></h2><p>Let's replicate the <code>tapply()</code> function although don't need it to have the same formatting. <code>tapply()</code> applies "a function to each cell of a ragged array, that is to each (non-empty) group of values given by a unique combination of the levels of certain factors". We'll use it on our dataset <code>compounds_data</code> and save the result in <code>compound_mean</code>.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># take alook at the apply family of functions R</span>
@@ -15811,15 +15811,52 @@ height=420
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 6</caption>
+<thead>
+	<tr><th></th><th scope=col>compound</th><th scope=col>salinity</th><th scope=col>group</th><th scope=col>day</th><th scope=col>mean_methane</th><th scope=col>sd_methane</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>substrate_free</td><td>brackish</td><td>media_only</td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>2</th><td>substrate_free</td><td>fresh   </td><td>media_only</td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>3</th><td>substrate_free</td><td>saline  </td><td>media_only</td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>4</th><td>benzene       </td><td>brackish</td><td>sterile   </td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>5</th><td>hexane        </td><td>brackish</td><td>sterile   </td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>6</th><td>toluene       </td><td>brackish</td><td>sterile   </td><td>1</td><td>0</td><td>0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># use tapply to get the mean_methane value when grouping by compound</span>
-<span class="nf">tapply</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span>
-       <span class="kc">...</span><span class="p">,</span>
+<span class="nf">tapply</span><span class="p">(</span><span class="n">compounds_data</span><span class="o">$</span><span class="n">mean_methane</span><span class="p">,</span>
+       <span class="n">compounds_data</span><span class="o">$</span><span class="n">compound</span><span class="p">,</span>
        <span class="n">mean</span><span class="p">,</span>
        <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
@@ -15827,6 +15864,34 @@ height=420
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>benzene</dt><dd>19.5372222222222</dd><dt>hexane</dt><dd>22.5370138888889</dd><dt>substrate_free</dt><dd>12.7518055555556</dd><dt>toluene</dt><dd>21.0144444444444</dd></dl>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
