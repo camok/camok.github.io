@@ -15894,10 +15894,10 @@ height=420
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># mimic tapply using for loop</span>
@@ -15911,7 +15911,7 @@ height=420
   <span class="n">curr_compound</span> <span class="o">&lt;-</span> <span class="n">compound_mean</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="m">1</span><span class="p">]</span>  <span class="c1"># this could also be written as compound_mean$compound[i]</span>
 
   <span class="c1"># calculate the mean of all samples that share the same compound name.</span>
-  <span class="n">compound_mean</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="m">2</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="nf">mean</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">[</span><span class="n">compounds_data</span><span class="o">$</span><span class="n">compound</span> <span class="o">==</span> <span class="n">curr_compound</span><span class="p">,</span> <span class="s">&quot;mean_methane&quot;</span><span class="p">],</span> <span class="n">na</span><span class="p">)</span>
+  <span class="n">compound_mean</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="m">2</span><span class="p">]</span> <span class="o">&lt;-</span> <span class="nf">mean</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">[</span><span class="n">compounds_data</span><span class="o">$</span><span class="n">compound</span> <span class="o">==</span> <span class="n">curr_compound</span><span class="p">,</span> <span class="s">&quot;mean_methane&quot;</span><span class="p">],</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="n">compound_mean</span>
@@ -15920,6 +15920,41 @@ height=420
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 4 × 2</caption>
+<thead>
+	<tr><th scope=col>compound</th><th scope=col>mean_methane</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>substrate_free</td><td>12.75181</td></tr>
+	<tr><td>benzene       </td><td>19.53722</td></tr>
+	<tr><td>hexane        </td><td>22.53701</td></tr>
+	<tr><td>toluene       </td><td>21.01444</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
