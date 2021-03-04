@@ -16679,7 +16679,7 @@ else {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">repr</span><span class="p">)</span>
@@ -16693,10 +16693,10 @@ else {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># An alternate way to create a new column in your data frame</span>
@@ -16707,7 +16707,7 @@ else {
 
 <span class="c1"># Use dplyr to help you do it instead! The code is slightly simpler</span>
 <span class="n">compounds_data</span> <span class="o">&lt;-</span> <span class="n">compounds_data</span> <span class="o">%&gt;%</span> 
-   <span class="kc">...</span>
+   <span class="nf">mutate</span><span class="p">(</span><span class="n">unique_identifier</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">salinity</span><span class="p">,</span> <span class="n">compound</span><span class="p">,</span> <span class="n">group</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">))</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">)</span>
 </pre></div>
@@ -16717,6 +16717,43 @@ else {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 7</caption>
+<thead>
+	<tr><th></th><th scope=col>compound</th><th scope=col>salinity</th><th scope=col>group</th><th scope=col>day</th><th scope=col>mean_methane</th><th scope=col>sd_methane</th><th scope=col>unique_identifier</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>substrate_free</td><td>brackish</td><td>media_only</td><td>1</td><td>0</td><td>0</td><td>brackish_substrate_free_media_only</td></tr>
+	<tr><th scope=row>2</th><td>substrate_free</td><td>fresh   </td><td>media_only</td><td>1</td><td>0</td><td>0</td><td>fresh_substrate_free_media_only   </td></tr>
+	<tr><th scope=row>3</th><td>substrate_free</td><td>saline  </td><td>media_only</td><td>1</td><td>0</td><td>0</td><td>saline_substrate_free_media_only  </td></tr>
+	<tr><th scope=row>4</th><td>benzene       </td><td>brackish</td><td>sterile   </td><td>1</td><td>0</td><td>0</td><td>brackish_benzene_sterile          </td></tr>
+	<tr><th scope=row>5</th><td>hexane        </td><td>brackish</td><td>sterile   </td><td>1</td><td>0</td><td>0</td><td>brackish_hexane_sterile           </td></tr>
+	<tr><th scope=row>6</th><td>toluene       </td><td>brackish</td><td>sterile   </td><td>1</td><td>0</td><td>0</td><td>brackish_toluene_sterile          </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
@@ -16724,7 +16761,7 @@ else {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># we want one plot per salinity</span>
-<span class="nf">ggplot</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">+</span>
+<span class="nf">ggplot</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">)</span> <span class="o">+</span>
     <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">day</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span> <span class="n">mean_methane</span><span class="p">)</span> <span class="o">+</span>
     <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="n">unique_identifier</span><span class="p">))</span>
 </pre></div>
