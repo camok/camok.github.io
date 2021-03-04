@@ -14392,14 +14392,14 @@ Loading required package: viridisLite
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># set working directory</span>
 <span class="nf">getwd</span><span class="p">()</span>
 
 <span class="c1"># read our file in with read.csv()</span>
-<span class="n">compounds_data</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;./data/&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> 
+<span class="n">compounds_data</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&quot;./data/compounds_stats.csv&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span> 
                            <span class="n">stringsAsFactors</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="n">check.names</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
 
 <span class="c1"># explore our loaded data frame</span>
@@ -14435,30 +14435,26 @@ Loading required package: viridisLite
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>Warning message in file(file, &#34;rt&#34;):
-&#34;cannot open file &#39;./data/&#39;: Permission denied&#34;
-</pre>
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 6</caption>
+<thead>
+	<tr><th></th><th scope=col>compound</th><th scope=col>salinity</th><th scope=col>group</th><th scope=col>day</th><th scope=col>mean_methane</th><th scope=col>sd_methane</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>substrate_free</td><td>brackish</td><td>media_only</td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>2</th><td>substrate_free</td><td>fresh   </td><td>media_only</td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>3</th><td>substrate_free</td><td>saline  </td><td>media_only</td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>4</th><td>benzene       </td><td>brackish</td><td>sterile   </td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>5</th><td>hexane        </td><td>brackish</td><td>sterile   </td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><th scope=row>6</th><td>toluene       </td><td>brackish</td><td>sterile   </td><td>1</td><td>0</td><td>0</td></tr>
+</tbody>
+</table>
+
 </div>
-</div>
 
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Error in file(file, &#34;rt&#34;): cannot open the connection
-Traceback:
-
-1. read.csv(&#34;./data/&#34;, header = TRUE, stringsAsFactors = FALSE, 
- .     check.names = FALSE)
-2. read.table(file = file, header = header, sep = sep, quote = quote, 
- .     dec = dec, fill = fill, comment.char = comment.char, ...)
-3. file(file, &#34;rt&#34;)</pre>
-</div>
 </div>
 
 </div>
@@ -15053,20 +15049,66 @@ Traceback:
 <h2 id="1.1.5-Cycle-through-values-using-a-for()-loop">1.1.5 Cycle through values using a <code>for()</code> loop<a class="anchor-link" href="#1.1.5-Cycle-through-values-using-a-for()-loop">&#182;</a></h2><p>The most useful thing to do with a for loop is to cycle through values. Let's plot methane per day of each individual row using base R's plotting functions (instead of ggplot).</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Pull down the structure and colnames of our compounds_data</span>
-<span class="nf">str</span><span class="p">()</span>
-<span class="nf">colnames</span><span class="p">()</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&#39;data.frame&#39;:	480 obs. of  6 variables:
+ $ compound    : chr  &#34;substrate_free&#34; &#34;substrate_free&#34; &#34;substrate_free&#34; &#34;benzene&#34; ...
+ $ salinity    : chr  &#34;brackish&#34; &#34;fresh&#34; &#34;saline&#34; &#34;brackish&#34; ...
+ $ group       : chr  &#34;media_only&#34; &#34;media_only&#34; &#34;media_only&#34; &#34;sterile&#34; ...
+ $ day         : int  1 1 1 1 1 1 1 1 1 1 ...
+ $ mean_methane: num  0 0 0 0 0 0 0 0 0 0 ...
+ $ sd_methane  : num  0 0 0 0 0 0 0 0 0 0 ...
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'compound'</li><li>'salinity'</li><li>'group'</li><li>'day'</li><li>'mean_methane'</li><li>'sd_methane'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
