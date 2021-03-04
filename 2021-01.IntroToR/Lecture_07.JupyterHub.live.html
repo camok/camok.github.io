@@ -22784,7 +22784,7 @@ surprise.class : function (name)  </pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Let&#39;s try surprise.class()</span>
@@ -22808,12 +22808,11 @@ surprise.class : function (name)  </pre>
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Error in suprise.class(&#34;Lucia and Ceda&#34;): could not find function &#34;suprise.class&#34;
-Traceback:
-</pre>
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+'Good luck on your journey Lucia and Ceda'
 </div>
+
 </div>
 
 </div>
@@ -22827,20 +22826,48 @@ Traceback:
 <h2 id="4.2.0-save()-objects-or-your-whole-kernel-memory!">4.2.0 <code>save()</code> objects or your whole kernel memory!<a class="anchor-link" href="#4.2.0-save()-objects-or-your-whole-kernel-memory!">&#182;</a></h2><p>From time to time you may have objects from analyses that aren't simply represented translated back as data tables or excel files. Perhaps you may want to save objects or plots from a complex analysis for later use. You can accomplish this with the <code>save()</code> command by providing a list of one or more objects to save.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">print</span><span class="p">(</span><span class="nf">ls</span><span class="p">())</span>
 
-<span class="nf">save</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">save</span><span class="p">(</span><span class="n">brackish.plot</span><span class="p">,</span> <span class="n">compound_mean</span><span class="p">,</span> <span class="n">compounds_data</span><span class="p">,</span> <span class="n">file</span> <span class="o">=</span> <span class="s">&quot;./data/Lecture07.Rdata&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> [1] &#34;a&#34;                 &#34;anything&#34;          &#34;brackish.plot&#34;    
+ [4] &#34;codon_translation&#34; &#34;codonToAA&#34;         &#34;compound_mean&#34;    
+ [7] &#34;compounds_data&#34;    &#34;curr_compound&#34;     &#34;goodbye.class&#34;    
+[10] &#34;i&#34;                 &#34;make.facet.plot&#34;   &#34;n&#34;                
+[13] &#34;programmer&#34;        &#34;result&#34;            &#34;salinity_plot&#34;    
+[16] &#34;save.facet.plot&#34;   &#34;seq&#34;               &#34;subdata&#34;          
+[19] &#34;surprise.class&#34;    &#34;t&#34;                 &#34;tally&#34;            
+[22] &#34;variable&#34;          &#34;x&#34;                
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
