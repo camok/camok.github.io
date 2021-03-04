@@ -17308,21 +17308,22 @@ height=420
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># instead of repeating that code three times, once for each salinity, </span>
 <span class="c1"># we can just use a for loop that generates and writes one plot per salinity</span>
 
-<span class="nf">for </span><span class="p">(</span><span class="kc">...</span><span class="p">){</span>
+<span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="nf">unique</span><span class="p">(</span><span class="n">compounds_data</span><span class="o">$</span><span class="n">salinity</span><span class="p">)){</span>
   
-    <span class="kc">...</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">[</span><span class="n">compounds_data</span><span class="o">$</span><span class="n">salinity</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="p">])</span> <span class="o">+</span> 
+    <span class="n">salinity_plot</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">compounds_data</span><span class="p">[</span><span class="n">compounds_data</span><span class="o">$</span><span class="n">salinity</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="p">])</span> <span class="o">+</span> 
         <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">day</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">mean_methane</span><span class="p">)</span> <span class="o">+</span>
         <span class="nf">geom_line</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="n">unique_identifier</span><span class="p">))</span> <span class="o">+</span>
         <span class="nf">theme_grey</span><span class="p">()</span> <span class="o">+</span>
         <span class="nf">geom_point</span><span class="p">()</span> <span class="o">+</span> <span class="c1">#aes(shape = replicate), size = 2) +</span>
         <span class="nf">scale_y_continuous</span><span class="p">(</span><span class="s">&quot;Methane (umoles)&quot;</span><span class="p">,</span> <span class="n">limits</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">200</span><span class="p">))</span> <span class="o">+</span>
         <span class="nf">scale_x_continuous</span><span class="p">(</span><span class="s">&quot;Time (days)&quot;</span><span class="p">)</span> <span class="o">+</span>
+    
         <span class="nf">ggtitle</span><span class="p">(</span><span class="nf">paste</span><span class="p">(</span><span class="s">&quot;Mean methane counts per day based on &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span>   <span class="s">&quot; growth condition&quot;</span> <span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">))</span> <span class="c1"># plot title</span>
 
-    <span class="nf">print</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="c1"># The only way to see the plot is to print it within a for loop</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">salinity_plot</span><span class="p">)</span> <span class="c1"># The only way to see the plot is to print it within a for loop</span>
  
     <span class="c1"># Save each plot as it&#39;s generated</span>
-    <span class="nf">ggsave</span><span class="p">(</span><span class="n">plot</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;images/&quot;</span> <span class="p">,</span> 
+    <span class="nf">ggsave</span><span class="p">(</span><span class="n">plot</span> <span class="o">=</span> <span class="n">salinty_plot</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;images/&quot;</span> <span class="p">,</span> 
            <span class="n">scale</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">device</span> <span class="o">=</span> <span class="s">&quot;png&quot;</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;cm&quot;</span><span class="p">))</span>
 <span class="p">}</span>
 </pre></div>
