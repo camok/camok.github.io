@@ -22554,7 +22554,7 @@ height=420
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[82]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#?source</span>
@@ -22574,19 +22574,47 @@ height=420
 <h2 id="4.1.0-Query-your-environment-with-ls()-to-find-variables-and-functions">4.1.0 Query your environment with <code>ls()</code> to find variables and functions<a class="anchor-link" href="#4.1.0-Query-your-environment-with-ls()-to-find-variables-and-functions">&#182;</a></h2><p>After loading your script into memory, you may want to see what is available in your environment's memory. The <code>ls()</code> command allows you to see what is available but it does not discriminate between objects or functions.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[83]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># See what variables and functions you have in memory</span>
-<span class="nf">print</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">ls</span><span class="p">())</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> [1] &#34;a&#34;                 &#34;anything&#34;          &#34;brackish.plot&#34;    
+ [4] &#34;codon_translation&#34; &#34;codonToAA&#34;         &#34;compound_mean&#34;    
+ [7] &#34;compounds_data&#34;    &#34;curr_compound&#34;     &#34;goodbye.class&#34;    
+[10] &#34;i&#34;                 &#34;make.facet.plot&#34;   &#34;n&#34;                
+[13] &#34;programmer&#34;        &#34;result&#34;            &#34;salinity_plot&#34;    
+[16] &#34;save.facet.plot&#34;   &#34;seq&#34;               &#34;subdata&#34;          
+[19] &#34;surprise.class&#34;    &#34;t&#34;                 &#34;tally&#34;            
+[22] &#34;variable&#34;          &#34;x&#34;                
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -22596,14 +22624,14 @@ height=420
 <h2 id="4.1.1-Check-functions-loaded-into-memory-with-lsf.str()">4.1.1 Check functions loaded into memory with <code>lsf.str()</code><a class="anchor-link" href="#4.1.1-Check-functions-loaded-into-memory-with-lsf.str()">&#182;</a></h2><p>As you can see from above, using <code>ls()</code> returns all of the objects currently saved in memory but also the functions we've previously declared and possibly some new ones imported from our call to <code>source()</code>. To see which functions we have loaded outside of those from packages in memory, we can use <code>lsf.str()</code>. Let's see what's new and try something out.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[84]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># To see which functions are available in memory</span>
-<span class="kc">...</span>
+<span class="nf">lsf.str</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -22611,19 +22639,71 @@ height=420
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>codonToAA : function (codon)  
+goodbye.class : function ()  
+make.facet.plot : function (data.df, salinity.val)  
+save.facet.plot : function (data.df, salinity.val = &#34;brackish&#34;)  
+surprise.class : function (name)  </pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Let&#39;s try a new function from &quot;Lecture07.R&quot;</span>
-<span class="kc">...</span>
+<span class="n">codonToAA</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre class=language-r><code>function (codon) 
+{
+<span style=white-space:pre-wrap>    return(str_replace_all(codon, codon_translation))</span>
+}</code></pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
