@@ -26407,8 +26407,8 @@ cols(
                                          <span class="n">replacement</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Filter the data for cumulative information </span>
-<span class="nf">filter</span><span class="p">(</span><span class="n">period</span> <span class="o">==</span> <span class="kc">...</span><span class="p">,</span>
-       <span class="n">geographic_area</span> <span class="o">!=</span> <span class="kc">...</span><span class="p">,</span> <span class="c1"># Drop Ontario data</span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">period</span> <span class="o">==</span> <span class="s">&quot;Cumulative&quot;</span><span class="p">,</span>
+       <span class="n">geographic_area</span> <span class="o">!=</span> <span class="s">&quot;Ontario&quot;</span><span class="p">,</span> <span class="c1"># Drop Ontario data</span>
        <span class="n">age_group</span> <span class="o">!=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span>  <span class="c1"># Drop all age data</span>
 
 <span class="c1"># Pare down the dataset to just total_cases, total_deaths, and total_hospitalizations</span>
