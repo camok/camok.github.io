@@ -36236,7 +36236,7 @@ height=600
 <span class="nf">mutate</span><span class="p">(</span><span class="n">stat_group</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">stat_group</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;percent_deaths&quot;</span><span class="p">,</span> <span class="s">&quot;percent_hospitalizations&quot;</span><span class="p">,</span> <span class="s">&quot;percent_cases&quot;</span><span class="p">)))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Now we&#39;re going to pivot out wide to give each age_group ito</span>
-<span class="nf">pivot_wider</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> 
+<span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="n">age_group</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="n">percent_PHU_total</span><span class="p">)</span> 
 
 <span class="c1"># Generate a ggplot object</span>
 <span class="c1"># 1. Data and Geoms</span>
