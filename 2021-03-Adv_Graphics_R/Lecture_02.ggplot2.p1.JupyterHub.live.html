@@ -26420,7 +26420,7 @@ cols(
 
 <span class="c1"># Group the data so you can &quot;summarise&quot; in the next steps</span>
 <span class="nf">group_by</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">)</span> <span class="o">%&gt;%</span> 
-<span class="nf">mutate</span><span class="p">(</span><span class="n">percent_cases</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="c1"># generate percent cases for each age group within a PHU</span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">percent_cases</span> <span class="o">=</span> <span class="n">total_cases</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">total_cases</span><span class="p">),</span> <span class="c1"># generate percent cases for each age group within a PHU</span>
        <span class="n">percent_deaths</span> <span class="o">=</span> <span class="n">total_deaths</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">total_deaths</span><span class="p">),</span> <span class="c1"># generate percent deaths for each age group within a PHU</span>
        <span class="c1"># generate percent hospitalizations for each age group within a PHU</span>
        <span class="n">percent_hospitalizations</span> <span class="o">=</span> <span class="n">total_hospitalizations_count</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">total_hospitalizations_count</span><span class="p">))</span> 
