@@ -26386,10 +26386,10 @@ cols(
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Format our dataset to focus on total_cases and total_deaths</span>
@@ -26427,11 +26427,68 @@ cols(
        
 <span class="c1"># Take a look at the different age demographics</span>
 <span class="nf">levels</span><span class="p">(</span><span class="n">covid_demographics_total.df</span><span class="o">$</span><span class="n">age_group</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">covid_demographics_total.df</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'0 to 09'</li><li>'10 to 19'</li><li>'20 to 29'</li><li>'30 to 39'</li><li>'40 to 49'</li><li>'50 to 59'</li><li>'60 to 69'</li><li>'70 to 79'</li><li>'80 to 89'</li><li>'90+'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A grouped_df: 6 × 10</caption>
+<thead>
+	<tr><th scope=col>from_date</th><th scope=col>to_date</th><th scope=col>public_health_unit</th><th scope=col>age_group</th><th scope=col>total_cases</th><th scope=col>total_deaths</th><th scope=col>total_hospitalizations_count</th><th scope=col>percent_cases</th><th scope=col>percent_deaths</th><th scope=col>percent_hospitalizations</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>0 to 09 </td><td> 0</td><td>0</td><td>0</td><td>0.00000000</td><td>0.00</td><td>0.0000000</td></tr>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>10 to 19</td><td>20</td><td>0</td><td>0</td><td>0.09174312</td><td>0.00</td><td>0.0000000</td></tr>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>20 to 29</td><td>49</td><td>1</td><td>0</td><td>0.22477064</td><td>0.25</td><td>0.0000000</td></tr>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>30 to 39</td><td>36</td><td>0</td><td>0</td><td>0.16513761</td><td>0.00</td><td>0.0000000</td></tr>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>40 to 49</td><td>36</td><td>0</td><td>1</td><td>0.16513761</td><td>0.00</td><td>0.1666667</td></tr>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>50 to 59</td><td>27</td><td>0</td><td>0</td><td>0.12385321</td><td>0.00</td><td>0.0000000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
