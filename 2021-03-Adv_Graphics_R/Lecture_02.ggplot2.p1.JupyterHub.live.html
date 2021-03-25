@@ -26236,13 +26236,13 @@ height=1200
 <p>After all of our transformations, we'll have specific portions of infections, deaths, and hospitalizations within each PHU for each age group.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="n">covid_demographics.df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">covid_demographics.df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;./data/Ontario_age_sex_COVID-19.csv&quot;</span><span class="p">)</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">covid_demographics.df</span><span class="p">)</span>
 <span class="nf">tail</span><span class="p">(</span><span class="n">covid_demographics.df</span><span class="p">)</span>
 </pre></div>
@@ -26250,6 +26250,140 @@ height=1200
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">--------------------------------------------------------</span>
+cols(
+  .default = col_double(),
+  Period = <span class="ansi-red-fg">col_character()</span>,
+  `From date` = <span class="ansi-red-fg">col_character()</span>,
+  `To date` = <span class="ansi-red-fg">col_character()</span>,
+  `Geographic area` = <span class="ansi-red-fg">col_character()</span>,
+  `Age group` = <span class="ansi-red-fg">col_character()</span>
+)
+<span class="ansi-cyan-fg">i</span> Use <span class="ansi-black-fg ansi-white-bg">`spec()`</span> for the full column specifications.
+
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [770 x 29] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ Period                                 : chr [1:770] &#34;recent COVID-19 cases&#34; &#34;recent COVID-19 cases&#34; &#34;recent COVID-19 cases&#34; &#34;recent COVID-19 cases&#34; ...
+ $ From date                              : chr [1:770] &#34;March 5, 2021&#34; &#34;March 5, 2021&#34; &#34;March 5, 2021&#34; &#34;March 5, 2021&#34; ...
+ $ To date                                : chr [1:770] &#34;March 19, 2021&#34; &#34;March 19, 2021&#34; &#34;March 19, 2021&#34; &#34;March 19, 2021&#34; ...
+ $ Geographic area                        : chr [1:770] &#34;Ontario&#34; &#34;Ontario&#34; &#34;Ontario&#34; &#34;Ontario&#34; ...
+ $ Age group                              : chr [1:770] &#34;0 to 09&#34; &#34;10 to 19&#34; &#34;20 to 29&#34; &#34;30 to 39&#34; ...
+ $ Male Cases                             : num [1:770] 717 1072 1959 1486 1209 ...
+ $ Male Rate                              : num [1:770] 92 129 182 147 132 ...
+ $ Female Cases                           : num [1:770] 671 1014 1725 1374 1277 ...
+ $ Female Rate                            : num [1:770] 90.8 128.8 168.3 131.2 133.4 ...
+ $ Total Cases                            : num [1:770] 1412 2114 3748 2898 2514 ...
+ $ Total Rate                             : num [1:770] 93 131 178 141 134 ...
+ $ Male Hospitalizations                  : num [1:770] 3 2 14 23 29 58 67 80 64 15 ...
+ $ Male Hospitalizations Rate             : num [1:770] 0.4 0.2 1.3 2.3 3.2 5.7 7.7 14.8 27.9 33.6 ...
+ $ Female Hospitalizations                : num [1:770] 3 4 15 26 28 37 48 63 55 27 ...
+ $ Female Hospitalizations Rate           : num [1:770] 0.4 0.5 1.5 2.5 2.9 3.6 5.2 10.2 17.7 28.5 ...
+ $ Total Hospitalizations Count           : num [1:770] 6 7 29 50 59 95 115 144 121 42 ...
+ $ Total Hospitalizations Rate            : num [1:770] 0.4 0.4 1.4 2.4 3.1 4.6 6.4 12.4 22.4 30.1 ...
+ $ Male Deaths                            : num [1:770] 0 0 0 0 1 1 0 12 10 2 ...
+ $ Male Death Rate                        : num [1:770] 0 0 0 0 0.1 0.1 0 2.2 4.4 4.5 ...
+ $ Female Deaths                          : num [1:770] 0 0 0 1 2 3 1 5 11 10 ...
+ $ Female Death Rate                      : num [1:770] 0 0 0 0.1 0.2 0.3 0.1 0.8 3.5 10.5 ...
+ $ Total Deaths                           : num [1:770] 0 0 0 1 3 4 1 17 22 12 ...
+ $ Total Deaths Rate                      : num [1:770] 0 0 0 0 0.2 0.2 0.1 1.5 4.1 8.6 ...
+ $ Unknown Gender Deaths                  : num [1:770] 0 0 0 0 0 0 0 0 1 0 ...
+ $ Unknown Gender Hospitalizations        : num [1:770] 0 1 0 1 2 0 0 1 2 0 ...
+ $ Unknown Gender Cases                   : num [1:770] 24 28 64 38 28 21 13 5 7 1 ...
+ $ Unknown Age and Gender Deaths          : num [1:770] 0 0 0 0 0 0 0 0 0 0 ...
+ $ Unknown Age and Gender Hospitalizations: num [1:770] 0 0 0 0 0 0 0 0 0 0 ...
+ $ Unknown Age and Gender Cases           : num [1:770] 0 0 0 0 0 0 0 0 0 0 ...
+ - attr(*, &#34;spec&#34;)=
+  .. cols(
+  ..   Period = <span class="ansi-red-fg">col_character()</span>,
+  ..   `From date` = <span class="ansi-red-fg">col_character()</span>,
+  ..   `To date` = <span class="ansi-red-fg">col_character()</span>,
+  ..   `Geographic area` = <span class="ansi-red-fg">col_character()</span>,
+  ..   `Age group` = <span class="ansi-red-fg">col_character()</span>,
+  ..   `Male Cases` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Male Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Female Cases` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Female Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Total Cases` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Total Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Male Hospitalizations` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Male Hospitalizations Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Female Hospitalizations` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Female Hospitalizations Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Total Hospitalizations Count` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Total Hospitalizations Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Male Deaths` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Male Death Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Female Deaths` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Female Death Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Total Deaths` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Total Deaths Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Unknown Gender Deaths` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Unknown Gender Hospitalizations` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Unknown Gender Cases` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Unknown Age and Gender Deaths` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Unknown Age and Gender Hospitalizations` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Unknown Age and Gender Cases` = <span class="ansi-green-fg">col_double()</span>
+  .. )
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A tibble: 6 × 29</caption>
+<thead>
+	<tr><th scope=col>Period</th><th scope=col>From date</th><th scope=col>To date</th><th scope=col>Geographic area</th><th scope=col>Age group</th><th scope=col>Male Cases</th><th scope=col>Male Rate</th><th scope=col>Female Cases</th><th scope=col>Female Rate</th><th scope=col>Total Cases</th><th scope=col>...</th><th scope=col>Female Deaths</th><th scope=col>Female Death Rate</th><th scope=col>Total Deaths</th><th scope=col>Total Deaths Rate</th><th scope=col>Unknown Gender Deaths</th><th scope=col>Unknown Gender Hospitalizations</th><th scope=col>Unknown Gender Cases</th><th scope=col>Unknown Age and Gender Deaths</th><th scope=col>Unknown Age and Gender Hospitalizations</th><th scope=col>Unknown Age and Gender Cases</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>...</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Cumulative</td><td>January 15, 2020</td><td>March 19, 2021</td><td>Southwestern Public Health</td><td>50 to 59</td><td> 166</td><td>1107.6</td><td> 193</td><td>1291.4</td><td> 361</td><td>...</td><td> 0</td><td>   0.0</td><td> 3</td><td> 10.0</td><td>0</td><td>0</td><td> 2</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>Cumulative</td><td>January 15, 2020</td><td>March 19, 2021</td><td>Southwestern Public Health</td><td>60 to 69</td><td> 130</td><td> 964.5</td><td> 133</td><td> 956.6</td><td> 264</td><td>...</td><td> 4</td><td>  28.8</td><td> 6</td><td> 21.9</td><td>0</td><td>0</td><td> 1</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>Cumulative</td><td>January 15, 2020</td><td>March 19, 2021</td><td>Southwestern Public Health</td><td>70 to 79</td><td>  93</td><td>1064.4</td><td>  91</td><td> 919.2</td><td> 185</td><td>...</td><td> 8</td><td>  80.8</td><td>19</td><td>101.9</td><td>0</td><td>0</td><td> 1</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>Cumulative</td><td>January 15, 2020</td><td>March 19, 2021</td><td>Southwestern Public Health</td><td>80 to 89</td><td>  45</td><td>1192.4</td><td>  71</td><td>1432.0</td><td> 116</td><td>...</td><td> 8</td><td> 161.4</td><td>17</td><td>194.7</td><td>0</td><td>0</td><td> 0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>Cumulative</td><td>January 15, 2020</td><td>March 19, 2021</td><td>Southwestern Public Health</td><td>90+     </td><td>  13</td><td>1846.6</td><td>  59</td><td>4008.2</td><td>  74</td><td>...</td><td>15</td><td>1019.0</td><td>20</td><td>919.1</td><td>1</td><td>0</td><td> 2</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>Cumulative</td><td>January 15, 2020</td><td>March 19, 2021</td><td>Southwestern Public Health</td><td>All ages</td><td>1264</td><td>1205.6</td><td>1390</td><td>1303.3</td><td>2669</td><td>...</td><td>36</td><td>  33.8</td><td>67</td><td> 31.7</td><td>1</td><td>0</td><td>15</td><td>0</td><td>0</td><td>0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
