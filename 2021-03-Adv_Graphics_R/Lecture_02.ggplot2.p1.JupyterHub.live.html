@@ -14479,10 +14479,10 @@ The Major Components of the Grammar of Graphics by <a href="https://towardsdatas
 <p>Let's open that up with our friend <code>read_csv()</code></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">phu_information.df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;./data/PHU_population_information.csv&quot;</span><span class="p">)</span>
@@ -14493,6 +14493,105 @@ The Major Components of the Grammar of Graphics by <a href="https://towardsdatas
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">--------------------------------------------------------</span>
+cols(
+  `Geographic area` = <span class="ansi-red-fg">col_character()</span>,
+  `Recent Case Count` = <span class="ansi-green-fg">col_number()</span>,
+  `Recent Case Rate` = <span class="ansi-green-fg">col_double()</span>,
+  `Cumulative Case Count` = <span class="ansi-green-fg">col_number()</span>,
+  `Cumulative Case Rate` = <span class="ansi-green-fg">col_number()</span>,
+  `Cumulative Hospitalizations Count` = <span class="ansi-green-fg">col_number()</span>,
+  `Cumulative Hospitalizations Rate` = <span class="ansi-green-fg">col_double()</span>,
+  `Cumulative Deaths Count` = <span class="ansi-green-fg">col_number()</span>,
+  `Cumulative Deaths Rate` = <span class="ansi-green-fg">col_double()</span>,
+  Population = <span class="ansi-green-fg">col_number()</span>
+)
+
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [35 x 10] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ Geographic area                  : chr [1:35] &#34;Ontario&#34; &#34;Algoma Public Health&#34; &#34;Brant County Health Unit&#34; &#34;Durham Region Health Department&#34; ...
+ $ Recent Case Count                : num [1:35] 17841 13 187 604 19 ...
+ $ Recent Case Rate                 : num [1:35] 120 11.4 120.5 84.8 11.2 ...
+ $ Cumulative Case Count            : num [1:35] 325254 219 2045 12693 716 ...
+ $ Cumulative Case Rate             : num [1:35] 2188 191 1318 1782 422 ...
+ $ Cumulative Hospitalizations Count: num [1:35] 16183 6 59 611 25 ...
+ $ Cumulative Hospitalizations Rate : num [1:35] 108.9 5.2 38 85.8 14.7 ...
+ $ Cumulative Deaths Count          : num [1:35] 7212 4 14 303 2 ...
+ $ Cumulative Deaths Rate           : num [1:35] 48.5 3.5 9 42.5 1.2 39.4 29.6 31.8 50.5 3.6 ...
+ $ Population                       : num [1:35] 14864428 114434 155203 712402 169884 ...
+ - attr(*, &#34;spec&#34;)=
+  .. cols(
+  ..   `Geographic area` = <span class="ansi-red-fg">col_character()</span>,
+  ..   `Recent Case Count` = <span class="ansi-green-fg">col_number()</span>,
+  ..   `Recent Case Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Cumulative Case Count` = <span class="ansi-green-fg">col_number()</span>,
+  ..   `Cumulative Case Rate` = <span class="ansi-green-fg">col_number()</span>,
+  ..   `Cumulative Hospitalizations Count` = <span class="ansi-green-fg">col_number()</span>,
+  ..   `Cumulative Hospitalizations Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Cumulative Deaths Count` = <span class="ansi-green-fg">col_number()</span>,
+  ..   `Cumulative Deaths Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   Population = <span class="ansi-green-fg">col_number()</span>
+  .. )
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A tibble: 6 × 10</caption>
+<thead>
+	<tr><th scope=col>Geographic area</th><th scope=col>Recent Case Count</th><th scope=col>Recent Case Rate</th><th scope=col>Cumulative Case Count</th><th scope=col>Cumulative Case Rate</th><th scope=col>Cumulative Hospitalizations Count</th><th scope=col>Cumulative Hospitalizations Rate</th><th scope=col>Cumulative Deaths Count</th><th scope=col>Cumulative Deaths Rate</th><th scope=col>Population</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Ontario                        </td><td>17841</td><td>120.0</td><td>325254</td><td>2188.1</td><td>16183</td><td>108.9</td><td>7212</td><td>48.5</td><td>14864428</td></tr>
+	<tr><td>Algoma Public Health           </td><td>   13</td><td> 11.4</td><td>   219</td><td> 191.4</td><td>    6</td><td>  5.2</td><td>   4</td><td> 3.5</td><td>  114434</td></tr>
+	<tr><td>Brant County Health Unit       </td><td>  187</td><td>120.5</td><td>  2045</td><td>1317.6</td><td>   59</td><td> 38.0</td><td>  14</td><td> 9.0</td><td>  155203</td></tr>
+	<tr><td>Durham Region Health Department</td><td>  604</td><td> 84.8</td><td> 12693</td><td>1781.7</td><td>  611</td><td> 85.8</td><td> 303</td><td>42.5</td><td>  712402</td></tr>
+	<tr><td>Grey Bruce Health Unit         </td><td>   19</td><td> 11.2</td><td>   716</td><td> 421.5</td><td>   25</td><td> 14.7</td><td>   2</td><td> 1.2</td><td>  169884</td></tr>
+	<tr><td>Haldimand-Norfolk Health Unit  </td><td>   79</td><td> 69.2</td><td>  1491</td><td>1307.0</td><td>   63</td><td> 55.2</td><td>  45</td><td>39.4</td><td>  114081</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
