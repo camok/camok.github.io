@@ -14761,12 +14761,12 @@ cols(
 
 <span class="c1"># scatter plot of case_count vs hospitalizations_count</span>
 <span class="n">phu_information.df</span> <span class="o">%&gt;%</span> 
-<span class="nf">slice</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">slice</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="nf">n</span><span class="p">())</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># 1. Data</span>
 <span class="nf">ggplot</span><span class="p">()</span> <span class="o">+</span>
     <span class="c1"># 2. Aesthetics</span>
-    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">case_count</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">hospitalizations_count</span><span class="p">)</span> <span class="o">+</span>
     <span class="nf">theme</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">20</span><span class="p">))</span> <span class="o">+</span> <span class="c1"># set text size</span>
 
     <span class="c1"># 4. Geoms</span>
