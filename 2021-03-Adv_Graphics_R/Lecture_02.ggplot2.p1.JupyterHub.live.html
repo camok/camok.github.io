@@ -19966,12 +19966,12 @@ height=600
 <span class="c1"># Start with our PHU covid data</span>
 <span class="n">covid_phu.df</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Filter to just look at a few PHUs</span>
-<span class="nf">filter</span><span class="p">(</span><span class="kc">...</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Toronto&quot;</span><span class="p">,</span> <span class="s">&quot;Peel&quot;</span><span class="p">,</span> <span class="s">&quot;York Region&quot;</span><span class="p">,</span> <span class="s">&quot;Ottawa&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">filter</span><span class="p">(</span><span class="n">public_health_unit</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Toronto&quot;</span><span class="p">,</span> <span class="s">&quot;Peel&quot;</span><span class="p">,</span> <span class="s">&quot;York Region&quot;</span><span class="p">,</span> <span class="s">&quot;Ottawa&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># 1. Data</span>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">)</span> <span class="o">+</span>
     <span class="c1"># 2. Aesthetics</span>
-    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span> <span class="kc">...</span><span class="p">,</span> 
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="nf">as.Date</span><span class="p">(</span><span class="nf">as.yearmon</span><span class="p">(</span><span class="n">date</span><span class="p">)),</span> <span class="n">y</span><span class="o">=</span> <span class="n">new_cases</span><span class="p">,</span> 
         <span class="n">fill</span> <span class="o">=</span> <span class="nf">fct_reorder</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">,</span> <span class="n">new_cases</span><span class="p">,</span> <span class="n">.desc</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span> <span class="o">+</span> <span class="c1"># set our fill colour instead of line colour</span>
     <span class="nf">theme</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="m">20</span><span class="p">))</span> <span class="o">+</span> <span class="c1"># set text size</span>
 
