@@ -26409,14 +26409,14 @@ cols(
 <span class="c1"># Filter the data for cumulative information </span>
 <span class="nf">filter</span><span class="p">(</span><span class="n">period</span> <span class="o">==</span> <span class="s">&quot;Cumulative&quot;</span><span class="p">,</span>
        <span class="n">geographic_area</span> <span class="o">!=</span> <span class="s">&quot;Ontario&quot;</span><span class="p">,</span> <span class="c1"># Drop Ontario data</span>
-       <span class="n">age_group</span> <span class="o">!=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span>  <span class="c1"># Drop all age data</span>
+       <span class="n">age_group</span> <span class="o">!=</span> <span class="s">&quot;All ages&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>  <span class="c1"># Drop all age data</span>
 
 <span class="c1"># Pare down the dataset to just total_cases, total_deaths, and total_hospitalizations</span>
 <span class="nf">select</span><span class="p">(</span><span class="n">from_date</span><span class="p">,</span> <span class="n">to_date</span><span class="p">,</span> <span class="n">geographic_area</span><span class="p">,</span> <span class="n">age_group</span><span class="p">,</span> 
-       <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+       <span class="n">total_cases</span><span class="p">,</span> <span class="n">total_deaths</span><span class="p">,</span> <span class="n">total_hospitalizations_count</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Convert the age_group into a factor</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">age_group</span> <span class="o">=</span> <span class="nf">...</span><span class="p">(</span><span class="n">age_group</span><span class="p">))</span> <span class="o">%&gt;%</span> 
-<span class="nf">rename</span><span class="p">(</span><span class="n">public_health_unit</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">mutate</span><span class="p">(</span><span class="n">age_group</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">age_group</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">rename</span><span class="p">(</span><span class="n">public_health_unit</span> <span class="o">=</span> <span class="n">geographic_area</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Group the data so you can &quot;summarise&quot; in the next steps</span>
 <span class="nf">group_by</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">)</span> <span class="o">%&gt;%</span> 
