@@ -37957,7 +37957,7 @@ height=600
 <span class="nf">select</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">,</span> <span class="n">age_group</span><span class="p">,</span> <span class="n">total_cases</span><span class="p">,</span> <span class="n">total_deaths</span><span class="p">,</span> <span class="n">total_hospitalizations_count</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Generate our new calculations and save to our data frame</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">prob_death</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">prob_death</span> <span class="o">=</span> <span class="n">total_deaths</span><span class="o">/</span><span class="n">total_cases</span><span class="p">,</span>
        <span class="n">prob_hospitalization</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Drop any potential NA data due to division by 0</span>
