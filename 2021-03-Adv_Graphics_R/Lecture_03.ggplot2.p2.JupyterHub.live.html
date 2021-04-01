@@ -14574,7 +14574,7 @@ The following objects are masked from &#39;package:base&#39;:
 
 <span class="n">covid_phu_window.df</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Filter for the top 5 infected PHUs</span>
-<span class="nf">filter</span><span class="p">(</span><span class="n">public_health_unit</span> <span class="o">%in%</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">filter</span><span class="p">(</span><span class="n">public_health_unit</span> <span class="o">%in%</span> <span class="n">phu_by_total_cases_desc</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">])</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># redirect the filtered result to ggplot</span>
 <span class="c1"># 1. Data</span>
