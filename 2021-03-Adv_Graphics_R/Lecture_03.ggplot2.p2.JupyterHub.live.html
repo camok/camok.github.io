@@ -27420,19 +27420,49 @@ height=600
 <p>Names of colours as well as hex colour codes are accepted. You can supply a manual list using the <code>scale_*_manual()</code> command.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Fill the boxplot using a rep() command</span>
-<span class="n">phu_window.plot</span> <span class="o">+</span> <span class="nf">scale_colour_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span> <span class="kc">...</span><span class="p">,</span> <span class="s">&quot;#FF0000&quot;</span><span class="p">))</span>
+<span class="n">phu_window.plot</span> <span class="o">+</span> <span class="nf">scale_colour_manual</span><span class="p">(</span><span class="n">values</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;purple&quot;</span><span class="p">,</span> <span class="s">&quot;cornflowerblue&quot;</span><span class="p">,</span> <span class="s">&quot;orange&quot;</span><span class="p">,</span> <span class="s">&quot;#FF0000&quot;</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message:
+&#34;Removed 448 row(s) containing missing values (geom_path).&#34;
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+&#34;font family not found in Windows font database&#34;
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+&#34;font family not found in Windows font database&#34;
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+&#34;font family not found in Windows font database&#34;
+Warning message in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, :
+&#34;font family not found in Windows font database&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
