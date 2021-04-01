@@ -33772,7 +33772,7 @@ height=600
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># This is going to be a simpler graph so adjust our plot window size accordingly</span>
@@ -33835,8 +33835,8 @@ height=600
     <span class="nf">geom_line</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">date</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">window_mean</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="n">public_health_unit</span><span class="p">,</span> <span class="n">colour</span> <span class="o">=</span> <span class="n">public_health_unit</span><span class="p">))</span> <span class="o">+</span>
 
     <span class="c1">### 3.3.0 Highlight just the top 4 PHUs</span>
-    <span class="c1">#gghighlight(public_health_unit %in% phu_by_total_cases_desc[1:4]) +</span>
-    <span class="nf">gghighlight</span><span class="p">(</span><span class="n">window_mean</span><span class="p">)</span>
+    <span class="nf">gghighlight</span><span class="p">(</span><span class="n">public_health_unit</span> <span class="o">%in%</span> <span class="n">phu_by_total_cases_desc</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">4</span><span class="p">])</span> <span class="o">+</span>
+    <span class="c1">#gghighlight(window_mean &gt; 200, label_key = public_health_unit) +</span>
 
     <span class="c1">### 3.3.0 Generate direct labels for the plot</span>
     <span class="nf">geom_dl</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="nf">list</span><span class="p">(</span><span class="s">&quot;last.qp&quot;</span><span class="p">,</span> <span class="n">cex</span><span class="o">=</span><span class="m">2</span><span class="p">),</span> <span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">public_health_unit</span><span class="p">))</span> <span class="o">+</span>
