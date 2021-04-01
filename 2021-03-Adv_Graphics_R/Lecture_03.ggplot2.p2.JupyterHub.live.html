@@ -42728,7 +42728,7 @@ height=600
           <span class="n">median</span> <span class="o">=</span> <span class="nf">median</span><span class="p">(</span><span class="n">percent_PHU_total</span><span class="p">),</span>
           <span class="n">count</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
 
-<span class="kc">...</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="n">summary.df</span><span class="o">$</span><span class="n">count</span><span class="p">)</span>
+<span class="n">sample.min</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="n">summary.df</span><span class="o">$</span><span class="n">count</span><span class="p">)</span>
 
 <span class="c1"># Plot the data as a mixture of multiple geoms</span>
 <span class="n">phu_age.plot</span> <span class="o">&lt;-</span>
@@ -42746,7 +42746,7 @@ height=600
          <span class="n">x</span> <span class="o">=</span> <span class="s">&quot;\nAge group&quot;</span><span class="p">,</span>
          <span class="n">y</span> <span class="o">=</span> <span class="s">&quot;% representation within PHU\n&quot;</span><span class="p">,</span>
          <span class="n">colour</span> <span class="o">=</span> <span class="s">&quot;Public Health Unit&quot;</span><span class="p">,</span>
-         <span class="n">caption</span> <span class="o">=</span> <span class="kc">...</span>
+         <span class="n">caption</span> <span class="o">=</span> <span class="nf">bquote</span><span class="p">(</span><span class="s">&quot;Errorbars represent mean &quot;</span><span class="o">%+-%</span><span class="s">&quot; standard deviation&quot;</span><span class="p">)</span>
          <span class="p">)</span> <span class="o">+</span>
     
     <span class="c1"># Set our other guides</span>
