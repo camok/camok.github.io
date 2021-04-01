@@ -15526,7 +15526,7 @@ You update or set your individual elements using the <code>element_*()</code> fu
     <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">date</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">window_mean</span><span class="p">,</span> <span class="n">colour</span> <span class="o">=</span> <span class="nf">fct_reorder</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">,</span> <span class="n">new_cases</span><span class="p">,</span> <span class="n">.desc</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">))</span> <span class="o">+</span>
 
     <span class="c1"># Theme elements</span>
-    <span class="nf">theme</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="c1"># set text size to 20</span>
+    <span class="nf">theme</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">si</span><span class="p">,</span> <span class="c1"># set text size to 20</span>
           <span class="c1"># Move the legend to the bottom</span>
           <span class="kc">...</span>
          <span class="p">)</span> <span class="o">+</span> 
