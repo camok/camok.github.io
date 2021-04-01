@@ -14465,10 +14465,10 @@ The following objects are masked from &#39;package:base&#39;:
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">ls</span><span class="p">()</span>
@@ -14484,18 +14484,83 @@ The following objects are masked from &#39;package:base&#39;:
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'covid_demographics_total.df'</li><li>'covid_phu_long.df'</li><li>'covid_phu_window.df'</li><li>'phu_by_total_cases_desc'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">covid_phu_window.df</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A tibble: 6 × 5</caption>
+<thead>
+	<tr><th scope=col>date</th><th scope=col>public_health_unit</th><th scope=col>new_cases</th><th scope=col>total_phu_new</th><th scope=col>window_mean</th></tr>
+	<tr><th scope=col>&lt;date&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>2020-03-24</td><td>Algoma</td><td>0</td><td>  0</td><td>0.5000000</td></tr>
+	<tr><td>2020-03-25</td><td>Algoma</td><td>0</td><td> 46</td><td>0.5000000</td></tr>
+	<tr><td>2020-03-26</td><td>Algoma</td><td>0</td><td> 69</td><td>0.5714286</td></tr>
+	<tr><td>2020-03-27</td><td>Algoma</td><td>0</td><td>124</td><td>0.5714286</td></tr>
+	<tr><td>2020-03-28</td><td>Algoma</td><td>0</td><td>  0</td><td>0.5714286</td></tr>
+	<tr><td>2020-03-29</td><td>Algoma</td><td>0</td><td>  0</td><td>0.6428571</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
