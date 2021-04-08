@@ -26068,16 +26068,16 @@ height=600
 <span class="n">blanco_data_long.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Filter our data list using our genes of interest</span>
-<span class="nf">filter</span><span class="p">(</span><span class="n">GeneName</span> <span class="o">%in%</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">filter</span><span class="p">(</span><span class="n">GeneName</span> <span class="o">%in%</span> <span class="n">SARS_CoV_2.list</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># convert our L2FC data to a logical based on a value of &gt;2</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">upregulated</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">mutate</span><span class="p">(</span><span class="n">upregulated</span> <span class="o">=</span> <span class="nf">as.double</span><span class="p">(</span><span class="n">L2FC</span> <span class="o">&gt;=</span> <span class="m">2</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Select just the gene names, experiments, and the logical variable</span>
-<span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="n">GeneName</span><span class="p">,</span> <span class="n">experiment</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="n">GeneName</span><span class="p">,</span> <span class="n">experiment</span><span class="p">,</span> <span class="n">upregulated</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Pivot our data wide so that each experiment is now a row, each gene is a column</span>
-<span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="n">experiment</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="n">upregulated</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="nf">as.data.frame</span><span class="p">()</span>
 
 <span class="nf">str</span><span class="p">(</span><span class="n">blanco_upset.df</span><span class="p">)</span>
