@@ -25982,10 +25982,10 @@ height=600
 <h2 id="4.3.2-Working-with-UpsetR-to-visualize-overlapping-datasets">4.3.2 Working with <code>UpsetR</code> to visualize overlapping datasets<a class="anchor-link" href="#4.3.2-Working-with-UpsetR-to-visualize-overlapping-datasets">&#182;</a></h2><p>Let's see how UpSet plots work practically. We can compare our data from <code>blanco_data_long.df</code> and compare the overlap of DE genes (after filtering or not). To do this in a practical sense, we again need to convert our values to a more boolean system after some more data wrangling. Let's look at our data structure again.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">blanco_data_long.df</span><span class="p">)</span>
@@ -25996,10 +25996,47 @@ height=600
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A tibble: 6 × 7</caption>
+<thead>
+	<tr><th scope=col>GeneName</th><th scope=col>experiment</th><th scope=col>exp_info</th><th scope=col>pathogen</th><th scope=col>host</th><th scope=col>L2FC</th><th scope=col>padj</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>IFNL1</td><td>SARS-CoV-1        </td><td>SARS-CoV-1_MRC5  </td><td>SARS-CoV-1</td><td>MRC5  </td><td>0.000000</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL1</td><td>IAV               </td><td>IAV_A549         </td><td>IAV       </td><td>A549  </td><td>1.369700</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL1</td><td>MERS-CoV          </td><td>MERS-CoV_MRC5    </td><td>MERS-CoV  </td><td>MRC5  </td><td>0.000000</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL1</td><td>HPIV3             </td><td>HPIV3_A549       </td><td>HPIV3     </td><td>A549  </td><td>7.837988</td><td> 2.62e-68</td></tr>
+	<tr><td>IFNL1</td><td>RSV               </td><td>RSV_A549         </td><td>RSV       </td><td>A549  </td><td>7.142762</td><td> 4.51e-44</td></tr>
+	<tr><td>IFNL1</td><td>SARS-CoV-2(Calu-3)</td><td>SARS-CoV-2_Calu-3</td><td>SARS-CoV-2</td><td>Calu-3</td><td>7.239900</td><td>2.53e-139</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># filter for upregulated genes in our SARS-CoV-2/A549 data set and make a list of gene names</span>
@@ -26007,7 +26044,7 @@ height=600
 <span class="n">blanco_data_long.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Filter our data</span>
-<span class="nf">filter</span><span class="p">(</span><span class="n">pathogen</span> <span class="o">==</span> <span class="s">&quot;SARS-CoV-2&quot;</span><span class="p">,</span> <span class="n">host</span> <span class="o">==</span> <span class="s">&quot;A549&quot;</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">filter</span><span class="p">(</span><span class="n">pathogen</span> <span class="o">==</span> <span class="s">&quot;SARS-CoV-2&quot;</span><span class="p">,</span> <span class="n">host</span> <span class="o">==</span> <span class="s">&quot;A549&quot;</span><span class="p">,</span> <span class="n">L2FC</span> <span class="o">&gt;=</span> <span class="m">2</span><span class="p">,</span> <span class="n">padj</span> <span class="o">&lt;</span><span class="m">0.05</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Select just our gene names</span>
 <span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="n">GeneName</span><span class="p">)</span> <span class="o">%&gt;%</span> 
@@ -26020,10 +26057,10 @@ height=600
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Generate our upset data</span>
@@ -26049,6 +26086,37 @@ height=600
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+Error in h(simpleError(msg, call)): error in evaluating the argument &#39;x&#39; in selecting a method for function &#39;as.data.frame&#39;: &#39;...&#39; used in an incorrect context
+Traceback:
+
+1. blanco_data_long.df %&gt;% filter(GeneName %in% ...) %&gt;% mutate(upregulated = ...) %&gt;% 
+ .     dplyr::select(GeneName, experiment, ...) %&gt;% pivot_wider(names_from = ..., 
+ .     values_from = ...) %&gt;% as.data.frame()
+2. as.data.frame(.)
+3. .handleSimpleError(function (cond) 
+ . .Internal(C_tryCatchHelper(addr, 1L, cond)), &#34;&#39;...&#39; used in an incorrect context&#34;, 
+ .     base::quote(as.data.frame(.)))
+4. h(simpleError(msg, call))</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
