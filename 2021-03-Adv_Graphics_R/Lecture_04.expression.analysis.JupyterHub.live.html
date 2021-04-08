@@ -24239,14 +24239,14 @@ height=600
 <p>For more information on this process see the <code>goseq</code> package vignette <a href="https://bioconductor.org/packages/devel/bioc/vignettes/goseq/inst/doc/goseq.pdf">here</a></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Generate our go enrichment analysis</span>
-<span class="n">GO.wall_SARS_CoV_2</span> <span class="o">&lt;-</span> <span class="nf">goseq</span><span class="p">(</span><span class="n">pwf_SARS_CoV_2</span><span class="p">)</span>
+<span class="n">GO.wall_SARS_CoV_2</span> <span class="o">&lt;-</span> <span class="nf">goseq</span><span class="p">(</span><span class="n">pwf_SARS_CoV_2</span><span class="p">,</span> <span class="s">&quot;hg19&quot;</span><span class="p">,</span> <span class="s">&quot;geneSymbol&quot;</span><span class="p">)</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">GO.wall_SARS_CoV_2</span><span class="p">)</span>
 </pre></div>
@@ -24254,6 +24254,66 @@ height=600
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Fetching GO annotations...
+
+For 5229 genes, we could not find any categories. These genes will be excluded.
+
+To force their use, please run with use_genes_without_cat=TRUE (see documentation).
+
+This was the default behavior for version 1.15.1 and earlier.
+
+Calculating the p-values...
+
+&#39;select()&#39; returned 1:1 mapping between keys and columns
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 7</caption>
+<thead>
+	<tr><th></th><th scope=col>category</th><th scope=col>over_represented_pvalue</th><th scope=col>under_represented_pvalue</th><th scope=col>numDEInCat</th><th scope=col>numInCat</th><th scope=col>term</th><th scope=col>ontology</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>3050</th><td>GO:0006261</td><td>2.864576e-10</td><td>1</td><td>20</td><td> 142</td><td>DNA-dependent DNA replication                           </td><td>BP</td></tr>
+	<tr><th scope=row>1621</th><td>GO:0003688</td><td>2.304593e-09</td><td>1</td><td> 9</td><td>  23</td><td>DNA replication origin binding                          </td><td>MF</td></tr>
+	<tr><th scope=row>267</th><td>GO:0000727</td><td>3.831010e-09</td><td>1</td><td> 7</td><td>  12</td><td>double-strand break repair via break-induced replication</td><td>BP</td></tr>
+	<tr><th scope=row>4006</th><td>GO:0008283</td><td>7.782412e-09</td><td>1</td><td>83</td><td>1967</td><td>cell population proliferation                           </td><td>BP</td></tr>
+	<tr><th scope=row>10685</th><td>GO:0042127</td><td>2.074005e-08</td><td>1</td><td>73</td><td>1694</td><td>regulation of cell population proliferation             </td><td>BP</td></tr>
+	<tr><th scope=row>3057</th><td>GO:0006270</td><td>2.357825e-08</td><td>1</td><td>10</td><td>  39</td><td>DNA replication initiation                              </td><td>BP</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
