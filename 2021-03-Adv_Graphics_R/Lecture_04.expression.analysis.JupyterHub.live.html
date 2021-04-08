@@ -15353,11 +15353,11 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 <span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">21</span><span class="p">),</span> <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;experiment&quot;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;value&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># add our experimental info to each observation. Note that each gene has multiple obs now.</span>
-<span class="nf">full_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">blanco_exp_inf</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;experiment&quot;</span> <span class="o">=</span> <span class="kc">...</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">full_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">blanco_exp_info.df</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;experiment&quot;</span> <span class="o">=</span> <span class="s">&quot;Field&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># We need to fix all of the padj_experiment values to experiment_padj format</span>
 <span class="nf">mutate</span><span class="p">(</span><span class="n">experiment</span> <span class="o">=</span> <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">.</span><span class="o">$</span><span class="n">experiment</span><span class="p">,</span> 
-                                    <span class="n">pattern</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span> 
+                                    <span class="n">pattern</span><span class="o">=</span><span class="s">&quot;(padj)&quot;</span><span class="p">,</span> 
                                     <span class="n">replacement</span> <span class="o">=</span> <span class="kc">...</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Now we want to split the experiment column into two: experiment and data_type (L2FC or padj)</span>
