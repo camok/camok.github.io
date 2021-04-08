@@ -23876,20 +23876,54 @@ height=600
 <h2 id="4.1.1-Choose-the-correct-database-to-map-your-gene-symbols-to-GO-terms">4.1.1 Choose the correct database to map your gene symbols to GO terms<a class="anchor-link" href="#4.1.1-Choose-the-correct-database-to-map-your-gene-symbols-to-GO-terms">&#182;</a></h2><p>The <code>goseq</code> package is compatible with a number of organisms and gene names for mapping your data to the GO database. To view <em>which</em> organisms are supported, we can use <code>supportedOrganisms()</code> to view. The human genome version we'll be working with is <code>hg19</code>. We'll use the information provided to generate</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Pull down the supported organisms and look for the human &quot;hg19&quot; genome</span>
 <span class="nf">supportedOrganisms</span><span class="p">()</span> <span class="o">%&gt;%</span> 
-<span class="nf">filter</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">Genome</span> <span class="o">==</span> <span class="s">&quot;hg19&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 3 × 5</caption>
+<thead>
+	<tr><th scope=col>Genome</th><th scope=col>Id</th><th scope=col>Id Description</th><th scope=col>Lengths in geneLeneDataBase</th><th scope=col>GO Annotation Available</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>hg19</td><td>knownGene </td><td>Entrez Gene ID </td><td>TRUE</td><td>TRUE</td></tr>
+	<tr><td>hg19</td><td>ensGene   </td><td>Ensembl gene ID</td><td>TRUE</td><td>TRUE</td></tr>
+	<tr><td>hg19</td><td>geneSymbol</td><td>Gene Symbol    </td><td>TRUE</td><td>TRUE</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
