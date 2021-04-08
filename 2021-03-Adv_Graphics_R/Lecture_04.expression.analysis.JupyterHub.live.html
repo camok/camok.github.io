@@ -15343,7 +15343,7 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">blanco_data_long.df</span> <span class="o">&lt;-</span>
@@ -15388,73 +15388,73 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table>
-<caption>A tibble: 474200 × 7</caption>
+<caption>A tibble: 237100 × 7</caption>
 <thead>
-	<tr><th scope=col>GeneName</th><th scope=col>experiment</th><th scope=col>data_type</th><th scope=col>value</th><th scope=col>exp_info</th><th scope=col>pathogen</th><th scope=col>host</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+	<tr><th scope=col>GeneName</th><th scope=col>experiment</th><th scope=col>exp_info</th><th scope=col>pathogen</th><th scope=col>host</th><th scope=col>L2FC</th><th scope=col>padj</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>IFNL1</td><td>SARS-CoV-1                       </td><td>L2FC</td><td> 0.000000e+00</td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
-	<tr><td>IFNL1</td><td>IAV                              </td><td>L2FC</td><td> 1.369700e+00</td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td></tr>
-	<tr><td>IFNL1</td><td>MERS-CoV                         </td><td>L2FC</td><td> 0.000000e+00</td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
-	<tr><td>IFNL1</td><td>HPIV3                            </td><td>L2FC</td><td> 7.837988e+00</td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td></tr>
-	<tr><td>IFNL1</td><td>RSV                              </td><td>L2FC</td><td> 7.142762e+00</td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-2(Calu-3)               </td><td>L2FC</td><td> 7.239900e+00</td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-2(A549)                 </td><td>L2FC</td><td> 0.000000e+00</td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>L2FC</td><td> 0.000000e+00</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>L2FC</td><td> 5.077692e+00</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>L2FC</td><td> 3.547628e+00</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-1                       </td><td>padj</td><td> 1.000000e+00</td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
-	<tr><td>IFNL1</td><td>IAV                              </td><td>padj</td><td> 1.000000e+00</td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td></tr>
-	<tr><td>IFNL1</td><td>MERS-CoV                         </td><td>padj</td><td> 1.000000e+00</td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
-	<tr><td>IFNL1</td><td>HPIV3                            </td><td>padj</td><td> 2.620000e-68</td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td></tr>
-	<tr><td>IFNL1</td><td>RSV                              </td><td>padj</td><td> 4.510000e-44</td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-2(Calu-3)               </td><td>padj</td><td>2.530000e-139</td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-2(A549)                 </td><td>padj</td><td> 1.000000e+00</td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>padj</td><td> 0.000000e+00</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>padj</td><td> 1.000000e+00</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>IFNL1</td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>padj</td><td> 1.000000e+00</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>IFNL2</td><td>SARS-CoV-1                       </td><td>L2FC</td><td> 0.000000e+00</td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
-	<tr><td>IFNL2</td><td>IAV                              </td><td>L2FC</td><td> 1.379280e+00</td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td></tr>
-	<tr><td>IFNL2</td><td>MERS-CoV                         </td><td>L2FC</td><td> 1.253100e-01</td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
-	<tr><td>IFNL2</td><td>HPIV3                            </td><td>L2FC</td><td> 6.843922e+00</td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td></tr>
-	<tr><td>IFNL2</td><td>RSV                              </td><td>L2FC</td><td> 4.838329e+00</td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td></tr>
-	<tr><td>IFNL2</td><td>SARS-CoV-2(Calu-3)               </td><td>L2FC</td><td> 7.877920e+00</td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
-	<tr><td>IFNL2</td><td>SARS-CoV-2(A549)                 </td><td>L2FC</td><td> 0.000000e+00</td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td></tr>
-	<tr><td>IFNL2</td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>L2FC</td><td> 0.000000e+00</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>IFNL2</td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>L2FC</td><td> 5.246026e+00</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>IFNL2</td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>L2FC</td><td> 1.947436e+00</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>IFNL1</td><td>SARS-CoV-1                       </td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td><td>0.000000</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL1</td><td>IAV                              </td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td><td>1.369700</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL1</td><td>MERS-CoV                         </td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td><td>0.000000</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL1</td><td>HPIV3                            </td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td><td>7.837988</td><td> 2.62e-68</td></tr>
+	<tr><td>IFNL1</td><td>RSV                              </td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td><td>7.142762</td><td> 4.51e-44</td></tr>
+	<tr><td>IFNL1</td><td>SARS-CoV-2(Calu-3)               </td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td><td>7.239900</td><td>2.53e-139</td></tr>
+	<tr><td>IFNL1</td><td>SARS-CoV-2(A549)                 </td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td><td>0.000000</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL1</td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>0.000000</td><td> 0.00e+00</td></tr>
+	<tr><td>IFNL1</td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>5.077692</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL1</td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>3.547628</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL2</td><td>SARS-CoV-1                       </td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td><td>0.000000</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL2</td><td>IAV                              </td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td><td>1.379280</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL2</td><td>MERS-CoV                         </td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td><td>0.125310</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL2</td><td>HPIV3                            </td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td><td>6.843922</td><td> 1.48e-48</td></tr>
+	<tr><td>IFNL2</td><td>RSV                              </td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td><td>4.838329</td><td> 9.74e-17</td></tr>
+	<tr><td>IFNL2</td><td>SARS-CoV-2(Calu-3)               </td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td><td>7.877920</td><td>5.69e-107</td></tr>
+	<tr><td>IFNL2</td><td>SARS-CoV-2(A549)                 </td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td><td>0.000000</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL2</td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>0.000000</td><td> 0.00e+00</td></tr>
+	<tr><td>IFNL2</td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>5.246026</td><td> 2.69e-20</td></tr>
+	<tr><td>IFNL2</td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>1.947436</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL3</td><td>SARS-CoV-1                       </td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td><td>0.000000</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL3</td><td>IAV                              </td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td><td>1.815420</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL3</td><td>MERS-CoV                         </td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td><td>0.000000</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL3</td><td>HPIV3                            </td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td><td>6.225043</td><td> 3.66e-35</td></tr>
+	<tr><td>IFNL3</td><td>RSV                              </td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td><td>4.827347</td><td> 3.19e-16</td></tr>
+	<tr><td>IFNL3</td><td>SARS-CoV-2(Calu-3)               </td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td><td>7.468010</td><td>5.51e-102</td></tr>
+	<tr><td>IFNL3</td><td>SARS-CoV-2(A549)                 </td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td><td>0.000000</td><td> 1.00e+00</td></tr>
+	<tr><td>IFNL3</td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>0.000000</td><td> 0.00e+00</td></tr>
+	<tr><td>IFNL3</td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>5.045848</td><td> 2.37e-18</td></tr>
+	<tr><td>IFNL3</td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>2.510746</td><td> 1.00e+00</td></tr>
 	<tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
-	<tr><td>ZZEF1</td><td>SARS-CoV-1                       </td><td>padj</td><td>1.130588e-01</td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
-	<tr><td>ZZEF1</td><td>IAV                              </td><td>padj</td><td>9.543538e-01</td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td></tr>
-	<tr><td>ZZEF1</td><td>MERS-CoV                         </td><td>padj</td><td>8.630000e-12</td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
-	<tr><td>ZZEF1</td><td>HPIV3                            </td><td>padj</td><td>9.539934e-01</td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td></tr>
-	<tr><td>ZZEF1</td><td>RSV                              </td><td>padj</td><td>7.303373e-01</td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td></tr>
-	<tr><td>ZZEF1</td><td>SARS-CoV-2(Calu-3)               </td><td>padj</td><td>6.288487e-01</td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
-	<tr><td>ZZEF1</td><td>SARS-CoV-2(A549)                 </td><td>padj</td><td>2.040000e-05</td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td></tr>
-	<tr><td>ZZEF1</td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>padj</td><td>4.836400e-02</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>ZZEF1</td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>padj</td><td>2.990000e-20</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>ZZEF1</td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>padj</td><td>6.260000e-27</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-1                       </td><td>L2FC</td><td>5.281100e-01</td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
-	<tr><td>ZZZ3 </td><td>IAV                              </td><td>L2FC</td><td>2.227700e-01</td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td></tr>
-	<tr><td>ZZZ3 </td><td>MERS-CoV                         </td><td>L2FC</td><td>2.773000e-01</td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
-	<tr><td>ZZZ3 </td><td>HPIV3                            </td><td>L2FC</td><td>6.710255e-01</td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td></tr>
-	<tr><td>ZZZ3 </td><td>RSV                              </td><td>L2FC</td><td>5.035949e-01</td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-2(Calu-3)               </td><td>L2FC</td><td>5.458600e-01</td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549)                 </td><td>L2FC</td><td>6.478100e-01</td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>L2FC</td><td>2.195400e-01</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>L2FC</td><td>5.666576e-01</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>L2FC</td><td>5.875997e-01</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-1                       </td><td>padj</td><td>1.000000e+00</td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
-	<tr><td>ZZZ3 </td><td>IAV                              </td><td>padj</td><td>7.546104e-01</td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td></tr>
-	<tr><td>ZZZ3 </td><td>MERS-CoV                         </td><td>padj</td><td>1.000000e+00</td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
-	<tr><td>ZZZ3 </td><td>HPIV3                            </td><td>padj</td><td>3.948680e-01</td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td></tr>
-	<tr><td>ZZZ3 </td><td>RSV                              </td><td>padj</td><td>5.614496e-01</td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-2(Calu-3)               </td><td>padj</td><td>1.678310e-04</td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549)                 </td><td>padj</td><td>5.870000e-12</td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>padj</td><td>3.634203e-01</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>padj</td><td>3.990000e-07</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
-	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>padj</td><td>1.220000e-07</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>ZYX  </td><td>SARS-CoV-1                       </td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td><td>-0.18373000</td><td>2.324264e-01</td></tr>
+	<tr><td>ZYX  </td><td>IAV                              </td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td><td>-0.08268000</td><td>9.116034e-01</td></tr>
+	<tr><td>ZYX  </td><td>MERS-CoV                         </td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td><td>-0.01463000</td><td>9.330340e-01</td></tr>
+	<tr><td>ZYX  </td><td>HPIV3                            </td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td><td>-0.79141202</td><td>2.379019e-01</td></tr>
+	<tr><td>ZYX  </td><td>RSV                              </td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td><td>-0.23437155</td><td>7.462522e-01</td></tr>
+	<tr><td>ZYX  </td><td>SARS-CoV-2(Calu-3)               </td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td><td> 0.42730000</td><td>1.435731e-02</td></tr>
+	<tr><td>ZYX  </td><td>SARS-CoV-2(A549)                 </td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td><td> 0.20066000</td><td>2.510894e-02</td></tr>
+	<tr><td>ZYX  </td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>-0.85993000</td><td>2.900000e-06</td></tr>
+	<tr><td>ZYX  </td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>-0.42121314</td><td>4.865060e-04</td></tr>
+	<tr><td>ZYX  </td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td>-0.60178189</td><td>3.080000e-07</td></tr>
+	<tr><td>ZZEF1</td><td>SARS-CoV-1                       </td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td><td> 0.19146000</td><td>1.130588e-01</td></tr>
+	<tr><td>ZZEF1</td><td>IAV                              </td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td><td>-0.04038000</td><td>9.543538e-01</td></tr>
+	<tr><td>ZZEF1</td><td>MERS-CoV                         </td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td><td> 0.69079000</td><td>8.630000e-12</td></tr>
+	<tr><td>ZZEF1</td><td>HPIV3                            </td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td><td> 0.03538851</td><td>9.539934e-01</td></tr>
+	<tr><td>ZZEF1</td><td>RSV                              </td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td><td> 0.21774106</td><td>7.303373e-01</td></tr>
+	<tr><td>ZZEF1</td><td>SARS-CoV-2(Calu-3)               </td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td><td> 0.11892000</td><td>6.288487e-01</td></tr>
+	<tr><td>ZZEF1</td><td>SARS-CoV-2(A549)                 </td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td><td>-0.36100000</td><td>2.040000e-05</td></tr>
+	<tr><td>ZZEF1</td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td> 0.27388000</td><td>4.836400e-02</td></tr>
+	<tr><td>ZZEF1</td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td> 0.77057363</td><td>2.990000e-20</td></tr>
+	<tr><td>ZZEF1</td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td> 0.84691177</td><td>6.260000e-27</td></tr>
+	<tr><td>ZZZ3 </td><td>SARS-CoV-1                       </td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td><td> 0.52811000</td><td>1.000000e+00</td></tr>
+	<tr><td>ZZZ3 </td><td>IAV                              </td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td><td> 0.22277000</td><td>7.546104e-01</td></tr>
+	<tr><td>ZZZ3 </td><td>MERS-CoV                         </td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td><td> 0.27730000</td><td>1.000000e+00</td></tr>
+	<tr><td>ZZZ3 </td><td>HPIV3                            </td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td><td> 0.67102547</td><td>3.948680e-01</td></tr>
+	<tr><td>ZZZ3 </td><td>RSV                              </td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td><td> 0.50359494</td><td>5.614496e-01</td></tr>
+	<tr><td>ZZZ3 </td><td>SARS-CoV-2(Calu-3)               </td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td><td> 0.54586000</td><td>1.678310e-04</td></tr>
+	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549)                 </td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td><td> 0.64781000</td><td>5.870000e-12</td></tr>
+	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549-ACE2)LowMOI      </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td> 0.21954000</td><td>3.634203e-01</td></tr>
+	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549-ACE2)HiMOI       </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td> 0.56665763</td><td>3.990000e-07</td></tr>
+	<tr><td>ZZZ3 </td><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td><td> 0.58759967</td><td>1.220000e-07</td></tr>
 </tbody>
 </table>
 
