@@ -23802,10 +23802,10 @@ height=600
 <p>We'll store our categorized set of genes in <code>genes_SARS_CoV_2</code> where a 1 represents over/underexpressed genes in our set, and 0 represents all remaining genes.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Set up the gene information we need for the GO-term analysis</span>
@@ -23817,7 +23817,7 @@ height=600
                                <span class="nf">abs</span><span class="p">(</span><span class="n">blanco_data.df</span><span class="o">$</span><span class="n">`SARS-CoV-2(A549)_L2FC`</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">1.5</span><span class="p">)</span> <span class="c1"># absolute L2FC &gt; 1.5</span>
 
 <span class="c1"># We&#39;ll name each element in our vector by the gene names</span>
-<span class="nf">names</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">=</span> <span class="n">blanco_data.df</span><span class="o">$</span><span class="n">GeneName</span>
+<span class="nf">names</span><span class="p">(</span><span class="n">genes_SARS_CoV_2</span><span class="p">)</span> <span class="o">=</span> <span class="n">blanco_data.df</span><span class="o">$</span><span class="n">GeneName</span>
 
 <span class="c1"># What is our object?</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">genes_SARS_CoV_2</span><span class="p">)</span>
@@ -23829,6 +23829,44 @@ height=600
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> Named int [1:23710] 0 0 0 0 0 1 0 0 1 0 ...
+ - attr(*, &#34;names&#34;)= chr [1:23710] &#34;IFNL1&#34; &#34;IFNL2&#34; &#34;IFNL3&#34; &#34;IFNB1&#34; ...
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>genes_SARS_CoV_2
+    0     1 
+23232   478 </pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
