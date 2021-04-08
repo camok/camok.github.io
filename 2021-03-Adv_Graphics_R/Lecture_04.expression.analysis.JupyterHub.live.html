@@ -15245,10 +15245,10 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Add this new information to our legend information</span>
@@ -15261,10 +15261,10 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
        <span class="n">host</span> <span class="o">=</span> <span class="n">exp_info</span><span class="p">[,</span><span class="m">3</span><span class="p">])</span> <span class="o">%&gt;%</span> <span class="c1"># Our host information </span>
 
 <span class="c1"># Combine our pathogen and host information into a single column as well</span>
-<span class="nf">unite</span><span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="n">exp_info</span><span class="p">,</span> <span class="kc">...</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">,</span> <span class="n">remove</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">unite</span><span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="n">exp_info</span><span class="p">,</span> <span class="n">pathogen</span><span class="o">:</span><span class="n">host</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">,</span> <span class="n">remove</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Just keep the original Field column and the new ones</span>
-<span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> 
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">)</span> 
 
 <span class="c1"># Take a look at what we are working with</span>
 <span class="n">blanco_exp_info.df</span>
@@ -15273,6 +15273,57 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A tibble: 20 × 4</caption>
+<thead>
+	<tr><th scope=col>Field</th><th scope=col>exp_info</th><th scope=col>pathogen</th><th scope=col>host</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>SARS-CoV-2(A549)_L2FC                 </td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td></tr>
+	<tr><td>SARS-CoV-1_L2FC                       </td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
+	<tr><td>MERS-CoV_L2FC                         </td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
+	<tr><td>RSV_L2FC                              </td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td></tr>
+	<tr><td>HPIV3_L2FC                            </td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td></tr>
+	<tr><td>IAV_L2FC                              </td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td></tr>
+	<tr><td>SARS-CoV-2(Calu-3)_L2FC               </td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
+	<tr><td>SARS-CoV-2(A549-ACE2)LowMOI_L2FC      </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2(A549-ACE2)HiMOI_L2FC       </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib_L2FC</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>padj_SARS-CoV-2(A549)                 </td><td>SARS-CoV-2_A549     </td><td>SARS-CoV-2</td><td>A549     </td></tr>
+	<tr><td>padj_SARS-CoV-1                       </td><td>SARS-CoV-1_MRC5     </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
+	<tr><td>padj_MERS-CoV                         </td><td>MERS-CoV_MRC5       </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
+	<tr><td>padj_RSV                              </td><td>RSV_A549            </td><td>RSV       </td><td>A549     </td></tr>
+	<tr><td>padj_HPIV3                            </td><td>HPIV3_A549          </td><td>HPIV3     </td><td>A549     </td></tr>
+	<tr><td>padj_IAV                              </td><td>IAV_A549            </td><td>IAV       </td><td>A549     </td></tr>
+	<tr><td>padj_SARS-CoV-2(Calu-3)               </td><td>SARS-CoV-2_Calu-3   </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
+	<tr><td>padj_SARS-CoV-2(A549-ACE2)LowMOI      </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>padj_SARS-CoV-2(A549-ACE2)HiMOI       </td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>padj_SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>SARS-CoV-2_A549-ACE2</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15299,10 +15350,10 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 <span class="n">blanco_data.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># collapse all of the data columns</span>
-<span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">(</span><span class="kc">...</span><span class="p">),</span> <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;experiment&quot;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;value&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">21</span><span class="p">),</span> <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;experiment&quot;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;value&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># add our experimental info to each observation. Note that each gene has multiple obs now.</span>
-<span class="nf">full_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="kc">...</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;experiment&quot;</span> <span class="o">=</span> <span class="kc">...</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">full_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">blanco_exp_inf</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;experiment&quot;</span> <span class="o">=</span> <span class="kc">...</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># We need to fix all of the padj_experiment values to experiment_padj format</span>
 <span class="nf">mutate</span><span class="p">(</span><span class="n">experiment</span> <span class="o">=</span> <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">.</span><span class="o">$</span><span class="n">experiment</span><span class="p">,</span> 
