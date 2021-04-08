@@ -15158,7 +15158,7 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># pattern match for pathogen and host information and save it into a datafram you can access later.</span>
@@ -15170,7 +15170,7 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 <span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="n">Notes</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Use str_match_all to grab the pattern we want, piece by piece</span>
-<span class="nf">str_match_all</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;([\\w-]+)[\\s\\w]+\\(([\\w-]+)&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">str_match_all</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;([\\w-]+)[\\s\\w]+\\(([\\w-]+)\\s*cells&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="nf">as.data.frame</span><span class="p">()</span>
 
 <span class="n">exp_info</span>
@@ -15208,32 +15208,32 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table>
-<caption>A data.frame: 20 × 2</caption>
+<caption>A data.frame: 20 × 3</caption>
 <thead>
-	<tr><th scope=col>X1</th><th scope=col>X2</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+	<tr><th scope=col>X1</th><th scope=col>X2</th><th scope=col>X3</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
 </thead>
 <tbody>
-	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
-	<tr><td>SARS-CoV-1 infection (                 </td><td>SARS-CoV-1</td></tr>
-	<tr><td>MERS-CoV infection (                   </td><td>MERS-CoV  </td></tr>
-	<tr><td>RSV (                                  </td><td>RSV       </td></tr>
-	<tr><td>HPIV3 (                                </td><td>HPIV3     </td></tr>
-	<tr><td>IAV (                                  </td><td>IAV       </td></tr>
-	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
-	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
-	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
-	<tr><td>SARS-CoV-2 infection with Ruxolitinib (</td><td>SARS-CoV-2</td></tr>
-	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
-	<tr><td>SARS-CoV-1 infection (                 </td><td>SARS-CoV-1</td></tr>
-	<tr><td>MERS-CoV infection (                   </td><td>MERS-CoV  </td></tr>
-	<tr><td>RSV (                                  </td><td>RSV       </td></tr>
-	<tr><td>HPIV3 (                                </td><td>HPIV3     </td></tr>
-	<tr><td>IAV (                                  </td><td>IAV       </td></tr>
-	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
-	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
-	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
-	<tr><td>SARS-CoV-2 infection with Ruxolitinib (</td><td>SARS-CoV-2</td></tr>
+	<tr><td>SARS-CoV-2 infection (A549 cells                      </td><td>SARS-CoV-2</td><td>A549     </td></tr>
+	<tr><td>SARS-CoV-1 infection (MRC5 cells                      </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
+	<tr><td>MERS-CoV infection (MRC5 cells                        </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
+	<tr><td>RSV (A549 cells                                       </td><td>RSV       </td><td>A549     </td></tr>
+	<tr><td>HPIV3 (A549 cells                                     </td><td>HPIV3     </td><td>A549     </td></tr>
+	<tr><td>IAV (A549 cells                                       </td><td>IAV       </td><td>A549     </td></tr>
+	<tr><td>SARS-CoV-2 infection (Calu-3cells                     </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
+	<tr><td>SARS-CoV-2 infection (A549-ACE2 cells                 </td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2 infection (A549-ACE2 cells                 </td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2 infection with Ruxolitinib (A549-ACE2 cells</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2 infection (A549 cells                      </td><td>SARS-CoV-2</td><td>A549     </td></tr>
+	<tr><td>SARS-CoV-1 infection (MRC5 cells                      </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
+	<tr><td>MERS-CoV infection (MRC5 cells                        </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
+	<tr><td>RSV (A549 cells                                       </td><td>RSV       </td><td>A549     </td></tr>
+	<tr><td>HPIV3 (A549 cells                                     </td><td>HPIV3     </td><td>A549     </td></tr>
+	<tr><td>IAV (A549 cells                                       </td><td>IAV       </td><td>A549     </td></tr>
+	<tr><td>SARS-CoV-2 infection (Calu-3cells                     </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
+	<tr><td>SARS-CoV-2 infection (A549-ACE2 cells                 </td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2 infection (A549-ACE2 cells                 </td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2 infection with Ruxolitinib (A549-ACE2 cells</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
 </tbody>
 </table>
 
@@ -15257,11 +15257,11 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 <span class="n">blanco_legend.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Make some new columns with pathogen and host information</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">pathogen</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="c1"># Our pathogen information</span>
-       <span class="n">host</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="c1"># Our host information </span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">pathogen</span> <span class="o">=</span> <span class="n">exp_info</span><span class="p">[,</span><span class="m">2</span><span class="p">],</span> <span class="c1"># Our pathogen information</span>
+       <span class="n">host</span> <span class="o">=</span> <span class="n">exp_info</span><span class="p">[,</span><span class="m">3</span><span class="p">])</span> <span class="o">%&gt;%</span> <span class="c1"># Our host information </span>
 
 <span class="c1"># Combine our pathogen and host information into a single column as well</span>
-<span class="nf">unite</span><span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="kc">...</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">,</span> <span class="n">remove</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">unite</span><span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="n">exp_info</span><span class="p">,</span> <span class="kc">...</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;_&quot;</span><span class="p">,</span> <span class="n">remove</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Just keep the original Field column and the new ones</span>
 <span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> 
