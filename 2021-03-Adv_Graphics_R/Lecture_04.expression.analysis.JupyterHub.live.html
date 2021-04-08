@@ -20431,10 +20431,10 @@ height=600
 <p>After selecting a subset of genes we can begin to compare their DE data more meaningfully across different sample sets. Let's start by generating a list of the highest DE genes with low p-values in the SARS-CoV-2 infection scenario.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Select the genes we want to visualize</span>
@@ -20442,8 +20442,8 @@ height=600
 <span class="n">blanco_data_long.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># filter for data from a specific experiment, and then by high positive L2FC values with low p-values</span>
-<span class="nf">filter</span><span class="p">(</span><span class="n">pathogen</span> <span class="o">==</span> <span class="s">&quot;SARS-CoV-2&quot;</span><span class="p">,</span> <span class="n">host</span> <span class="o">==</span> <span class="s">&quot;A549&quot;</span><span class="p">,</span> <span class="n">L2FC</span> <span class="o">&gt;</span> <span class="kc">...</span><span class="p">,</span> <span class="n">padj</span> <span class="o">&lt;</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
-<span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">unlist</span><span class="p">()</span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">pathogen</span> <span class="o">==</span> <span class="s">&quot;SARS-CoV-2&quot;</span><span class="p">,</span> <span class="n">host</span> <span class="o">==</span> <span class="s">&quot;A549&quot;</span><span class="p">,</span> <span class="n">L2FC</span> <span class="o">&gt;</span> <span class="m">3</span><span class="p">,</span> <span class="n">padj</span> <span class="o">&lt;</span> <span class="m">0.001</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="n">GeneName</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">unlist</span><span class="p">()</span>
 
 <span class="nf">str</span><span class="p">(</span><span class="n">heatmap_gene.list</span><span class="p">)</span>
 </pre></div>
@@ -20451,6 +20451,28 @@ height=600
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> Named chr [1:18] &#34;IL6&#34; &#34;IL1A&#34; &#34;CSF2&#34; &#34;PTX3&#34; &#34;ULBP1&#34; &#34;STC2&#34; &#34;ADM2&#34; &#34;MMP10&#34; ...
+ - attr(*, &#34;names&#34;)= chr [1:18] &#34;GeneName1&#34; &#34;GeneName2&#34; &#34;GeneName3&#34; &#34;GeneName4&#34; ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
