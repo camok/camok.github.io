@@ -23186,13 +23186,13 @@ height=600
 <span class="n">single_genes</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;CCL5&quot;</span><span class="p">,</span> <span class="s">&quot;CCL2&quot;</span><span class="p">,</span> <span class="s">&quot;CCL20&quot;</span><span class="p">,</span> <span class="s">&quot;CCL17&quot;</span><span class="p">,</span> <span class="s">&quot;IL6&quot;</span><span class="p">,</span> <span class="s">&quot;IL1A&quot;</span><span class="p">)</span>
 
 <span class="n">blanco_data_long.df</span> <span class="o">%&gt;%</span> 
-<span class="nf">filter</span><span class="p">(</span><span class="n">GeneName</span> <span class="o">%in%</span> <span class="kc">...</span><span class="p">,</span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">GeneName</span> <span class="o">%in%</span> <span class="n">single_genes</span><span class="p">,</span>
       <span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># 1. Data</span>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">)</span> <span class="o">+</span>
     <span class="c1"># 2. Aesthetics</span>
-    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">GeneName</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">L2FC</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="kc">...</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">GeneName</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">L2FC</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="n">pathogen</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="n">host</span><span class="p">)</span> <span class="o">+</span>
 
     <span class="c1"># Theme</span>
     <span class="nf">theme_bw</span><span class="p">()</span><span class="o">+</span>
@@ -23204,7 +23204,7 @@ height=600
     <span class="nf">scale_size</span><span class="p">(</span><span class="n">range</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">8</span><span class="p">,</span> <span class="m">4</span><span class="p">))</span> <span class="o">+</span>
 
     <span class="c1"># 4. Geoms</span>
-    <span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="kc">...</span><span class="p">),</span> <span class="n">alpha</span> <span class="o">=</span> <span class="m">0.8</span><span class="p">)</span>
+    <span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="n">padj</span><span class="p">),</span> <span class="n">alpha</span> <span class="o">=</span> <span class="m">0.8</span><span class="p">)</span>
 </pre></div>
 
      </div>
