@@ -15155,10 +15155,10 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 </table>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># pattern match for pathogen and host information and save it into a datafram you can access later.</span>
@@ -15170,7 +15170,7 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 <span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="n">Notes</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Use str_match_all to grab the pattern we want, piece by piece</span>
-<span class="nf">str_match_all</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;([\\w-]+)&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">str_match_all</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;([\\w-]+)[\\s\\w]+\\(([\\w-]+)&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="nf">as.data.frame</span><span class="p">()</span>
 
 <span class="n">exp_info</span>
@@ -15179,6 +15179,70 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message in stri_match_all_regex(string, pattern, omit_no_match = TRUE, opts_regex = opts(pattern)):
+&#34;argument is not an atomic vector; coercing&#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 20 × 2</caption>
+<thead>
+	<tr><th scope=col>X1</th><th scope=col>X2</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
+	<tr><td>SARS-CoV-1 infection (                 </td><td>SARS-CoV-1</td></tr>
+	<tr><td>MERS-CoV infection (                   </td><td>MERS-CoV  </td></tr>
+	<tr><td>RSV (                                  </td><td>RSV       </td></tr>
+	<tr><td>HPIV3 (                                </td><td>HPIV3     </td></tr>
+	<tr><td>IAV (                                  </td><td>IAV       </td></tr>
+	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
+	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
+	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
+	<tr><td>SARS-CoV-2 infection with Ruxolitinib (</td><td>SARS-CoV-2</td></tr>
+	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
+	<tr><td>SARS-CoV-1 infection (                 </td><td>SARS-CoV-1</td></tr>
+	<tr><td>MERS-CoV infection (                   </td><td>MERS-CoV  </td></tr>
+	<tr><td>RSV (                                  </td><td>RSV       </td></tr>
+	<tr><td>HPIV3 (                                </td><td>HPIV3     </td></tr>
+	<tr><td>IAV (                                  </td><td>IAV       </td></tr>
+	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
+	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
+	<tr><td>SARS-CoV-2 infection (                 </td><td>SARS-CoV-2</td></tr>
+	<tr><td>SARS-CoV-2 infection with Ruxolitinib (</td><td>SARS-CoV-2</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
