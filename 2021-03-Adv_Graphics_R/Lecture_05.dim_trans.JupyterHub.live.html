@@ -14683,7 +14683,7 @@ Warning message:
 <span class="c1"># It&#39;s kind of awkward to need this requirement.</span>
 
 <span class="c1"># Cast our matrix and drop the first column</span>
-<span class="n">covid_demographics_norm.mx</span> <span class="o">&lt;-</span> <span class="nf">as.matrix</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">covid_demographics_norm.mx</span> <span class="o">&lt;-</span> <span class="nf">as.matrix</span><span class="p">(</span><span class="n">covid_demographics_norm.df</span><span class="p">[])</span>
 
 <span class="c1"># Set the row names using the information from the data frame</span>
 <span class="nf">rownames</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="kc">...</span>
