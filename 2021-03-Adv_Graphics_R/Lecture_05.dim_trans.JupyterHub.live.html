@@ -31425,10 +31425,10 @@ height=900
 <h2 id="3.6.2-The-quality-and-representation-of-your-variables-in-the-PCA">3.6.2 The quality and representation of your variables in the PCA<a class="anchor-link" href="#3.6.2-The-quality-and-representation-of-your-variables-in-the-PCA">&#182;</a></h2><p>From the remaining variable information <code>coord</code> and <code>cor</code> can both be used to plot our original variables on along different pairs of principal components. These values are the same because this is not a <em>projection</em> of our variables onto the PCs but a correlation of them! The distance between the origin and the variable coordinates gauges the quality of the variables on the map. This number is summarized in the <code>cos2</code> (squared cosine) element.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Look at the coordinates of our variables across the PCs.</span>
@@ -31439,6 +31439,77 @@ height=900
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A matrix: 10 × 10 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>Dim.1</th><th scope=col>Dim.2</th><th scope=col>Dim.3</th><th scope=col>Dim.4</th><th scope=col>Dim.5</th><th scope=col>Dim.6</th><th scope=col>Dim.7</th><th scope=col>Dim.8</th><th scope=col>Dim.9</th><th scope=col>Dim.10</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>0 to 09</th><td>0.8492777</td><td>-0.39190834</td><td> 0.346983009</td><td>-0.005483971</td><td>-0.05946308</td><td> 0.032930097</td><td>-0.003389976</td><td> 0.0018335144</td><td>-0.008436492</td><td>-0.001304010</td></tr>
+	<tr><th scope=row>10 to 19</th><td>0.9518224</td><td>-0.19594215</td><td> 0.009960277</td><td>-0.128981456</td><td> 0.19660830</td><td>-0.003798478</td><td> 0.001729962</td><td> 0.0045472027</td><td> 0.014480440</td><td>-0.001670423</td></tr>
+	<tr><th scope=row>20 to 29</th><td>0.9474426</td><td>-0.19714100</td><td>-0.094673232</td><td> 0.212912269</td><td> 0.06721187</td><td> 0.056088300</td><td> 0.036485339</td><td> 0.0013219117</td><td>-0.012926165</td><td> 0.005468405</td></tr>
+	<tr><th scope=row>30 to 39</th><td>0.9784155</td><td>-0.14257000</td><td>-0.062369208</td><td> 0.091938266</td><td>-0.03444177</td><td>-0.057105344</td><td>-0.063740636</td><td> 0.0083303147</td><td> 0.030659648</td><td>-0.022691115</td></tr>
+	<tr><th scope=row>40 to 49</th><td>0.9827005</td><td>-0.12921248</td><td>-0.078285631</td><td>-0.025014781</td><td>-0.01977025</td><td>-0.080972195</td><td>-0.042638669</td><td>-0.0203122866</td><td>-0.028786161</td><td> 0.029033093</td></tr>
+	<tr><th scope=row>50 to 59</th><td>0.9860070</td><td>-0.06721323</td><td>-0.061766667</td><td>-0.052068721</td><td>-0.07161495</td><td>-0.056922106</td><td> 0.083258275</td><td>-0.0349699714</td><td> 0.008796969</td><td>-0.012054683</td></tr>
+	<tr><th scope=row>60 to 69</th><td>0.9832518</td><td>-0.01034034</td><td>-0.118710243</td><td>-0.078976818</td><td>-0.08361427</td><td> 0.034027411</td><td> 0.017545864</td><td> 0.0648612910</td><td> 0.004056330</td><td> 0.009950142</td></tr>
+	<tr><th scope=row>70 to 79</th><td>0.9625043</td><td> 0.20839172</td><td>-0.076539659</td><td>-0.059556144</td><td>-0.03663138</td><td> 0.128389099</td><td>-0.036048591</td><td>-0.0399374913</td><td> 0.005491270</td><td>-0.001661468</td></tr>
+	<tr><th scope=row>80 to 89</th><td>0.8901170</td><td> 0.44844234</td><td> 0.049094153</td><td>-0.005899689</td><td> 0.03070889</td><td>-0.022568060</td><td>-0.004131062</td><td> 0.0147846333</td><td>-0.042849001</td><td>-0.024940814</td></tr>
+	<tr><th scope=row>90+</th><td>0.8142800</td><td> 0.55175925</td><td> 0.160977876</td><td> 0.063736783</td><td> 0.01665491</td><td>-0.028081704</td><td> 0.012230836</td><td> 0.0008084024</td><td> 0.029611687</td><td> 0.020986437</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A matrix: 10 × 10 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>Dim.1</th><th scope=col>Dim.2</th><th scope=col>Dim.3</th><th scope=col>Dim.4</th><th scope=col>Dim.5</th><th scope=col>Dim.6</th><th scope=col>Dim.7</th><th scope=col>Dim.8</th><th scope=col>Dim.9</th><th scope=col>Dim.10</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>0 to 09</th><td>0.8492777</td><td>-0.39190834</td><td> 0.346983009</td><td>-0.005483971</td><td>-0.05946308</td><td> 0.032930097</td><td>-0.003389976</td><td> 0.0018335144</td><td>-0.008436492</td><td>-0.001304010</td></tr>
+	<tr><th scope=row>10 to 19</th><td>0.9518224</td><td>-0.19594215</td><td> 0.009960277</td><td>-0.128981456</td><td> 0.19660830</td><td>-0.003798478</td><td> 0.001729962</td><td> 0.0045472027</td><td> 0.014480440</td><td>-0.001670423</td></tr>
+	<tr><th scope=row>20 to 29</th><td>0.9474426</td><td>-0.19714100</td><td>-0.094673232</td><td> 0.212912269</td><td> 0.06721187</td><td> 0.056088300</td><td> 0.036485339</td><td> 0.0013219117</td><td>-0.012926165</td><td> 0.005468405</td></tr>
+	<tr><th scope=row>30 to 39</th><td>0.9784155</td><td>-0.14257000</td><td>-0.062369208</td><td> 0.091938266</td><td>-0.03444177</td><td>-0.057105344</td><td>-0.063740636</td><td> 0.0083303147</td><td> 0.030659648</td><td>-0.022691115</td></tr>
+	<tr><th scope=row>40 to 49</th><td>0.9827005</td><td>-0.12921248</td><td>-0.078285631</td><td>-0.025014781</td><td>-0.01977025</td><td>-0.080972195</td><td>-0.042638669</td><td>-0.0203122866</td><td>-0.028786161</td><td> 0.029033093</td></tr>
+	<tr><th scope=row>50 to 59</th><td>0.9860070</td><td>-0.06721323</td><td>-0.061766667</td><td>-0.052068721</td><td>-0.07161495</td><td>-0.056922106</td><td> 0.083258275</td><td>-0.0349699714</td><td> 0.008796969</td><td>-0.012054683</td></tr>
+	<tr><th scope=row>60 to 69</th><td>0.9832518</td><td>-0.01034034</td><td>-0.118710243</td><td>-0.078976818</td><td>-0.08361427</td><td> 0.034027411</td><td> 0.017545864</td><td> 0.0648612910</td><td> 0.004056330</td><td> 0.009950142</td></tr>
+	<tr><th scope=row>70 to 79</th><td>0.9625043</td><td> 0.20839172</td><td>-0.076539659</td><td>-0.059556144</td><td>-0.03663138</td><td> 0.128389099</td><td>-0.036048591</td><td>-0.0399374913</td><td> 0.005491270</td><td>-0.001661468</td></tr>
+	<tr><th scope=row>80 to 89</th><td>0.8901170</td><td> 0.44844234</td><td> 0.049094153</td><td>-0.005899689</td><td> 0.03070889</td><td>-0.022568060</td><td>-0.004131062</td><td> 0.0147846333</td><td>-0.042849001</td><td>-0.024940814</td></tr>
+	<tr><th scope=row>90+</th><td>0.8142800</td><td> 0.55175925</td><td> 0.160977876</td><td> 0.063736783</td><td> 0.01665491</td><td>-0.028081704</td><td> 0.012230836</td><td> 0.0008084024</td><td> 0.029611687</td><td> 0.020986437</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
