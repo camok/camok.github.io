@@ -44324,7 +44324,7 @@ mm2</th></tr>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># We want to add some additional sample information before assessing the data</span>
@@ -44389,6 +44389,41 @@ mm2</th></tr>
 <pre>Warning message in stri_match_all_regex(string, pattern, omit_no_match = TRUE, opts_regex = opts(pattern)):
 &#34;argument is not an atomic vector; coercing&#34;
 </pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+Error: Join columns must be present in data.
+<span class="ansi-red-fg">x</span> Problem with `case_num`.
+Traceback:
+
+1. tissue_RNAseq.df %&gt;% select(sample) %&gt;% str_match_all(., pattern = &#34;case([\\w]+)\\.([a-z]+)([\\d|\\.NYC]*)|(NegControl\\d)&#34;) %&gt;% 
+ .     do.call(rbind, .) %&gt;% as.data.frame() %&gt;% rename(., sample = V1, 
+ .     case_num = V2, tissue = V3, tissue_num = V4, neg_num = V5) %&gt;% 
+ .     mutate(case_num = coalesce(case_num, neg_num), tissue_num = str_replace_all(.$tissue_num, 
+ .         pattern = &#34;\\.&#34;, replace = &#34;&#34;)) %&gt;% select(1:4) %&gt;% full_join(., 
+ .     y = tissue_RNAseq.df, by = c(sample = &#34;sample&#34;)) %&gt;% right_join(patient_viral_load.df, 
+ .     y = ., by = c(Case_No = &#34;case_num&#34;)) %&gt;% rename(case_num = Case_No, 
+ .     viral_load = `Viral_high_vs._viral_low*`, viral_load_percent = `Viral_load_(%_positive_tissue_area_by_RNA_ISH)`)
+2. rename(., case_num = Case_No, viral_load = `Viral_high_vs._viral_low*`, 
+ .     viral_load_percent = `Viral_load_(%_positive_tissue_area_by_RNA_ISH)`)
+3. right_join(patient_viral_load.df, y = ., by = c(Case_No = &#34;case_num&#34;))
+4. right_join.data.frame(patient_viral_load.df, y = ., by = c(Case_No = &#34;case_num&#34;))
+5. join_mutate(x, y, by = by, type = &#34;right&#34;, suffix = suffix, na_matches = na_matches, 
+ .     keep = keep)
+6. join_cols(tbl_vars(x), tbl_vars(y), by = by, suffix = suffix, 
+ .     keep = keep)
+7. standardise_join_by(by, x_names = x_names, y_names = y_names)
+8. check_join_vars(by$y, y_names)
+9. abort(c(&#34;Join columns must be present in data.&#34;, x = glue(&#34;Problem with {err_vars(missing)}.&#34;)))
+10. signal_abort(cnd)</pre>
 </div>
 </div>
 
