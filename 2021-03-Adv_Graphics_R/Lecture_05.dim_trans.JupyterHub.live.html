@@ -44039,12 +44039,12 @@ mm2</th></tr>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">patient_viral_load.df</span> <span class="o">&lt;-</span>
 <span class="n">patient_data.df</span> <span class="o">%&gt;%</span> 
-<span class="nf">rename_with</span><span class="p">(</span><span class="n">str_replace_all</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span> <span class="n">replacement</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">rename_with</span><span class="p">(</span><span class="n">str_replace_all</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s">&quot;\\r\\n|\\s&quot;</span><span class="p">,</span> <span class="n">replacement</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="nf">select</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">)</span>
 </pre></div>
 
