@@ -43856,14 +43856,14 @@ height=900
 <p>There are two popular projections we'll discuss today but first let's put together a more complex dataset based on some RNAseq data in <code>GSE150316_DeseqNormCounts_final.txt</code> and it's companion file <code>2020.07.30.20165241-supp_tables.xlsx</code></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Read in our RNAseq data</span>
-<span class="n">tissue_data.df</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>
+<span class="n">tissue_data.df</span> <span class="o">&lt;-</span> <span class="nf">read.table</span><span class="p">(</span><span class="n">file</span> <span class="o">=</span> <span class="s">&quot;./data/GSE150316_DeseqNormCounts_final.txt&quot;</span><span class="p">,</span>
                              <span class="n">header</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
                              <span class="n">row.names</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span>
 <span class="c1"># Take a quick look at it</span>
@@ -43871,7 +43871,7 @@ height=900
 <span class="nf">dim</span><span class="p">(</span><span class="n">tissue_data.df</span><span class="p">)</span>
 
 <span class="c1"># Read in some additional patient data</span>
-<span class="n">patient_data.df</span> <span class="o">&lt;-</span> <span class="nf">read_excel</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">patient_data.df</span> <span class="o">&lt;-</span> <span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;./data/2020.07.30.20165241-supp_tables.xlsx&quot;</span><span class="p">,</span> <span class="n">sheet</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
 
 <span class="c1"># Take a quick look at it</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">patient_data.df</span><span class="p">)</span>
@@ -43881,6 +43881,152 @@ height=900
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A data.frame: 6 × 88</caption>
+<thead>
+	<tr><th></th><th scope=col>case1.lung1</th><th scope=col>case1.lung2</th><th scope=col>case1.lung3</th><th scope=col>case1.lung4</th><th scope=col>case1.heart1</th><th scope=col>case2.lung1</th><th scope=col>case2.lung2</th><th scope=col>case2.jejunum1</th><th scope=col>case2.lung3</th><th scope=col>case2.heart1</th><th scope=col>...</th><th scope=col>caseP4.placenta1</th><th scope=col>caseF.lung.NYC</th><th scope=col>caseE.lung.NYC</th><th scope=col>caseG.lung.NYC</th><th scope=col>caseH.lung.NYC</th><th scope=col>caseI.lung.NYC</th><th scope=col>caseJ.lung.NYC</th><th scope=col>case3.liver1</th><th scope=col>case10.liver1</th><th scope=col>case12.liver1</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>...</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>5S_rRNA</th><td>7.96319457</td><td>4.5713330</td><td>7.6071080</td><td>39.461459</td><td>225.083082</td><td>3.7434610</td><td>7.1978551</td><td>1.7137780</td><td>2.195275</td><td>11.33237</td><td>...</td><td>5.1152960</td><td>2.0354397</td><td>13.931242</td><td>7.0430417</td><td>3.5559007</td><td>222.868159</td><td>8.437777</td><td>117.519303</td><td>156.222134</td><td>4907.10184</td></tr>
+	<tr><th scope=row>5_8S_rRNA</th><td>1.01657803</td><td>0.0000000</td><td>1.0867297</td><td>10.961516</td><td> 83.364104</td><td>1.4037979</td><td>1.6936130</td><td>0.0000000</td><td>2.927033</td><td>12.20409</td><td>...</td><td>0.2692261</td><td>0.2907771</td><td>10.216244</td><td>3.3143726</td><td>0.0000000</td><td> 81.613692</td><td>7.500246</td><td> 42.476857</td><td> 32.888870</td><td> 687.61937</td></tr>
+	<tr><th scope=row>7SK</th><td>0.42357418</td><td>0.0000000</td><td>0.0000000</td><td> 2.192303</td><td>  2.778803</td><td>0.0000000</td><td>0.4234032</td><td>0.0000000</td><td>0.000000</td><td> 0.00000</td><td>...</td><td>2.9614871</td><td>0.0000000</td><td> 2.786248</td><td>0.8285931</td><td>1.6163185</td><td>  0.000000</td><td>2.343827</td><td>  1.415895</td><td>  8.222218</td><td>   0.00000</td></tr>
+	<tr><th scope=row>A1BG</th><td>0.16942967</td><td>0.0000000</td><td>0.5433649</td><td> 0.000000</td><td>  2.778803</td><td>0.0000000</td><td>0.8468065</td><td>0.0000000</td><td>0.000000</td><td> 0.00000</td><td>...</td><td>0.2692261</td><td>0.0000000</td><td> 0.000000</td><td>0.0000000</td><td>0.0000000</td><td>  0.000000</td><td>0.000000</td><td>  8.495371</td><td>  0.000000</td><td>  31.25543</td></tr>
+	<tr><th scope=row>A1BG-AS1</th><td>0.16942967</td><td>0.9142666</td><td>0.5433649</td><td> 8.769213</td><td>  0.000000</td><td>0.4679326</td><td>0.8468065</td><td>0.0000000</td><td>1.829396</td><td> 0.00000</td><td>...</td><td>0.2692261</td><td>0.2907771</td><td> 0.000000</td><td>0.0000000</td><td>0.9697911</td><td>  0.000000</td><td>0.000000</td><td>  4.247686</td><td>  0.000000</td><td>   0.00000</td></tr>
+	<tr><th scope=row>A1CF</th><td>0.08471484</td><td>0.0000000</td><td>0.5433649</td><td> 0.000000</td><td> 36.124445</td><td>0.0000000</td><td>0.0000000</td><td>0.4284445</td><td>0.000000</td><td> 0.00000</td><td>...</td><td>0.0000000</td><td>0.0000000</td><td> 0.000000</td><td>0.0000000</td><td>0.3232637</td><td>  9.416964</td><td>0.000000</td><td> 89.201399</td><td> 73.999958</td><td>   0.00000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>59090</li><li>88</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A tibble: 6 × 18</caption>
+<thead>
+	<tr><th scope=col>Case
+No</th><th scope=col>Viral
+high
+vs.
+viral
+low*</th><th scope=col>Viral
+load
+(%
+positive
+tissue
+area by
+RNA
+ISH)</th><th scope=col>ISH
+hyaline
+membrane
+reactivity</th><th scope=col>RNA
+seq
+coverage</th><th scope=col>qRT
+PCR**</th><th scope=col>Keratin
+cells /
+mm2</th><th scope=col>Napsin
+A cells
+/ mm2</th><th scope=col>CD1 63
+cells/
+mm2</th><th scope=col>CD 3
+Cells/
+mm2</th><th scope=col>CD 4
+cells/
+mm2</th><th scope=col>CD8
+cells/
+mm2</th><th scope=col>CD20
+cells/
+mm2</th><th scope=col>CD123
+cells/
+mm2</th><th scope=col>CD18
+cells/
+mm2</th><th scope=col>CD56
+cells/
+mm2</th><th scope=col>IDO1
+cells/
+mm2</th><th scope=col>PD
+L1
+cells/
+mm2</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>High</td><td>81.2 </td><td>Present</td><td>99.96</td><td>Positive</td><td>192 </td><td>174</td><td>216 </td><td>174</td><td>98 </td><td>24 </td><td>17</td><td>6 </td><td>3  </td><td>59</td><td>51</td><td>50 </td></tr>
+	<tr><td>2</td><td>Low </td><td>0.5  </td><td>Absent </td><td>9.4  </td><td>Positive</td><td>335 </td><td>429</td><td>1026</td><td>420</td><td>225</td><td>78 </td><td>21</td><td>63</td><td>17 </td><td>31</td><td>68</td><td>13 </td></tr>
+	<tr><td>3</td><td>Low </td><td>2    </td><td>Absent </td><td>1.27 </td><td>Positive</td><td>663 </td><td>474</td><td>855 </td><td>956</td><td>354</td><td>212</td><td>51</td><td>14</td><td>3  </td><td>25</td><td>52</td><td>1  </td></tr>
+	<tr><td>4</td><td>Low </td><td>&lt;0.01</td><td>Absent </td><td>0.15 </td><td>Negative</td><td>1045</td><td>680</td><td>723 </td><td>290</td><td>152</td><td>39 </td><td>23</td><td>31</td><td><span style=white-space:pre-wrap>7  </span></td><td>54</td><td>27</td><td><span style=white-space:pre-wrap>1  </span></td></tr>
+	<tr><td>5</td><td>High</td><td>18.5 </td><td>Present</td><td>24.27</td><td>Positive</td><td>478 </td><td>183</td><td>1010</td><td>386</td><td>203</td><td>65 </td><td>12</td><td>4 </td><td>2  </td><td>20</td><td>28</td><td>10 </td></tr>
+	<tr><td>6</td><td>Low </td><td>0.02 </td><td>Absent </td><td>0.17 </td><td>Negative</td><td>198 </td><td>294</td><td>317 </td><td>167</td><td>50 </td><td>10 </td><td>15</td><td>3 </td><td>0.4</td><td>24</td><td>11</td><td>0.2</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>24</li><li>18</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
