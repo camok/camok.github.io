@@ -44350,7 +44350,7 @@ placenta     skin
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Generate a matrix version of our data but drop the sample information!</span>
-<span class="n">tissue_RNAseq.mx</span> <span class="o">&lt;-</span> <span class="nf">as.matrix</span><span class="p">(</span><span class="n">tissue_RNAseq.df</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="o">:</span><span class="m">-6</span><span class="p">)])</span>
+<span class="n">tissue_RNAseq.mx</span> <span class="o">&lt;-</span> <span class="nf">as.matrix</span><span class="p">(</span><span class="n">tissue_RNAseq.df</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="o">:</span><span class="m">-6</span><span class="p">)])</span><span class="n">b</span>
 </pre></div>
 
      </div>
@@ -44386,10 +44386,10 @@ placenta     skin
 </ul>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Rtsne prefers using a matrix for memory issues</span>
@@ -44398,9 +44398,9 @@ placenta     skin
 
 <span class="c1"># Try for perplexity of 30 can go as high as 29 before crash</span>
 <span class="c1"># We have just 90 samples, but between 1-52 samples per &quot;group&quot;</span>
-<span class="n">tissue_tsne</span> <span class="o">&lt;-</span> <span class="nf">Rtsne</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> 
+<span class="n">tissue_tsne</span> <span class="o">&lt;-</span> <span class="nf">Rtsne</span><span class="p">(</span><span class="n">tissue_RNAseq.mx</span><span class="p">,</span> 
                      <span class="n">dims</span><span class="o">=</span><span class="m">2</span><span class="p">,</span> 
-                     <span class="n">perplexity</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span> 
+                     <span class="n">perplexity</span><span class="o">=</span><span class="m">5</span><span class="p">,</span> 
                      <span class="n">verbose</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span> 
                      <span class="n">pca_scale</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">,</span>
                      <span class="n">max_iter</span> <span class="o">=</span> <span class="m">1500</span><span class="p">)</span>
@@ -44409,6 +44409,36 @@ placenta     skin
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+Error in na.fail.default(X): missing values in object
+Traceback:
+
+1. Rtsne(tissue_RNAseq.mx, dims = 2, perplexity = 5, verbose = TRUE, 
+ .     pca_scale = TRUE, max_iter = 1500)
+2. Rtsne.default(tissue_RNAseq.mx, dims = 2, perplexity = 5, verbose = TRUE, 
+ .     pca_scale = TRUE, max_iter = 1500)
+3. na.fail(X)
+4. na.fail.default(X)
+5. stop(&#34;missing values in object&#34;)</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
