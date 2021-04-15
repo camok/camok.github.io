@@ -44176,7 +44176,7 @@ mm2</th></tr>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># You need to transpose the data. </span>
@@ -44188,7 +44188,7 @@ mm2</th></tr>
 
 <span class="nf">select</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">89</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="c1"># trim down the columns</span>
 
-<span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span> <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;sample&quot;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;norm_counts&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">89</span><span class="p">),</span> <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;sample&quot;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;norm_counts&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="n">gene</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="n">norm_counts</span><span class="p">)</span>
 </pre></div>
@@ -44214,7 +44214,7 @@ mm2</th></tr>
 <span class="nf">select</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Grab information from it like case number, tissue, and tissue number</span>
-<span class="nf">str_match_all</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="kc">...</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">str_match_all</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="nf">c</span><span class="p">())</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Bind it all together</span>
 <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span> <span class="n">.</span><span class="p">)</span> <span class="o">%&gt;%</span> 
