@@ -44214,7 +44214,7 @@ mm2</th></tr>
 <span class="nf">select</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Grab information from it like case number, tissue, and tissue number</span>
-<span class="nf">str_match_all</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="nf">c</span><span class="p">())</span> <span class="o">%&gt;%</span> 
+<span class="nf">str_match_all</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s">&quot;case([\\w]+)\\.([a-z]+)([\\d|\\.NYC])|(NegControl\\d)&quot;</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Bind it all together</span>
 <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span> <span class="n">.</span><span class="p">)</span> <span class="o">%&gt;%</span> 
