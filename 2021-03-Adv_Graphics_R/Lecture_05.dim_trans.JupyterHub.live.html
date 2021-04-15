@@ -24813,19 +24813,56 @@ height=900
 <p>What we really wanted to know was, if the PHUs all were similar based on the <em>proportion</em> of cases in each age group. That data can be found in <code>covid_demographics_percent.df</code></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Take a look at the normalized percentage version of our demographics data</span>
-<span class="nf">head</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">covid_demographics_percent.df</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table>
+<caption>A grouped_df: 6 × 10</caption>
+<thead>
+	<tr><th scope=col>from_date</th><th scope=col>to_date</th><th scope=col>public_health_unit</th><th scope=col>age_group</th><th scope=col>total_cases</th><th scope=col>total_deaths</th><th scope=col>total_hospitalizations_count</th><th scope=col>percent_cases</th><th scope=col>percent_deaths</th><th scope=col>percent_hospitalizations</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>0 to 09 </td><td> 0</td><td>0</td><td>0</td><td>0.00000000</td><td>0.00</td><td>0.0000000</td></tr>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>10 to 19</td><td>20</td><td>0</td><td>0</td><td>0.09174312</td><td>0.00</td><td>0.0000000</td></tr>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>20 to 29</td><td>49</td><td>1</td><td>0</td><td>0.22477064</td><td>0.25</td><td>0.0000000</td></tr>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>30 to 39</td><td>36</td><td>0</td><td>0</td><td>0.16513761</td><td>0.00</td><td>0.0000000</td></tr>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>40 to 49</td><td>36</td><td>0</td><td>1</td><td>0.16513761</td><td>0.00</td><td>0.1666667</td></tr>
+	<tr><td>January 15, 2020</td><td>March 19, 2021</td><td>Algoma</td><td>50 to 59</td><td>27</td><td>0</td><td>0</td><td>0.12385321</td><td>0.00</td><td>0.0000000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
