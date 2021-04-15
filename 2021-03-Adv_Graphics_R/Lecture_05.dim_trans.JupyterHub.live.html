@@ -44176,7 +44176,7 @@ mm2</th></tr>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># You need to transpose the data. </span>
@@ -44324,7 +44324,7 @@ mm2</th></tr>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># We want to add some additional sample information before assessing the data</span>
@@ -44337,7 +44337,7 @@ mm2</th></tr>
 <span class="nf">select</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Grab information from it like case number, tissue, and tissue number</span>
-<span class="nf">str_match_all</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s">&quot;case([\\w]+)\\.([a-z]+)([\\d|\\.NYC])|(NegControl\\d)&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">str_match_all</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s">&quot;case([\\w]+)\\.([a-z]+)([\\d|\\.NYC]*)|(NegControl\\d)&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Bind it all together</span>
 <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span> <span class="n">.</span><span class="p">)</span> <span class="o">%&gt;%</span> 
@@ -44390,34 +44390,6 @@ mm2</th></tr>
 &#34;argument is not an atomic vector; coercing&#34;
 </pre>
 </div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<table>
-<caption>A tibble: 6 × 29226</caption>
-<thead>
-	<tr><th scope=col>case_num</th><th scope=col>viral_load</th><th scope=col>viral_load_percent</th><th scope=col>sample</th><th scope=col>tissue</th><th scope=col>tissue_num</th><th scope=col>MT-ND5</th><th scope=col>MT-RNR2</th><th scope=col>MT-ND6</th><th scope=col>MT-ND4</th><th scope=col>...</th><th scope=col>ZSCAN32</th><th scope=col>SUGT1P2</th><th scope=col>XX-FW83563B9.5</th><th scope=col>CTC-506B8.1</th><th scope=col>RPS15AP10</th><th scope=col>RP11-157P1.4</th><th scope=col>WASH1</th><th scope=col>CTD-3157E16.1</th><th scope=col>CSNK2A3</th><th scope=col>RP11-568G11.4</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>...</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>1</td><td>High</td><td>81.2</td><td>case1.lung1 </td><td>lung </td><td>1</td><td> 148.1662</td><td> 1819.929</td><td>  56.58951</td><td> 271.1722</td><td>...</td><td>0.1694297</td><td>0.4235742</td><td>0.2541445</td><td>0.08471484</td><td>0.6777187</td><td>0.5930039</td><td>1.5248670</td><td>1.016578</td><td>0.5930039</td><td>0.5930039</td></tr>
-	<tr><td>1</td><td>High</td><td>81.2</td><td>case1.lung2 </td><td>lung </td><td>2</td><td> 223.5382</td><td> 1450.027</td><td>  79.99833</td><td> 335.9930</td><td>...</td><td>0.4571333</td><td>0.0000000</td><td>0.4571333</td><td>0.45713330</td><td>1.3713999</td><td>1.3713999</td><td>0.9142666</td><td>1.828533</td><td>0.4571333</td><td>1.8285332</td></tr>
-	<tr><td>1</td><td>High</td><td>81.2</td><td>case1.lung3 </td><td>lung </td><td>3</td><td> 328.1924</td><td> 3469.928</td><td> 146.16515</td><td> 484.6815</td><td>...</td><td>1.0867297</td><td>0.5433649</td><td>0.5433649</td><td>0.54336486</td><td>1.6300946</td><td>1.6300946</td><td>0.0000000</td><td>0.000000</td><td>0.0000000</td><td>1.0867297</td></tr>
-	<tr><td>1</td><td>High</td><td>81.2</td><td>case1.lung4 </td><td>lung </td><td>4</td><td> 541.4989</td><td> 4106.184</td><td> 190.73039</td><td> 506.4221</td><td>...</td><td>0.0000000</td><td>2.1923033</td><td>0.0000000</td><td>0.00000000</td><td>0.0000000</td><td>0.0000000</td><td>0.0000000</td><td>0.000000</td><td>2.1923033</td><td>0.0000000</td></tr>
-	<tr><td>1</td><td>High</td><td>81.2</td><td>case1.heart1</td><td>heart</td><td>1</td><td>4854.5697</td><td>21257.847</td><td>1889.58637</td><td>7808.4378</td><td>...</td><td>0.0000000</td><td>2.7788035</td><td>0.0000000</td><td>0.00000000</td><td>0.0000000</td><td>0.0000000</td><td>5.5576070</td><td>0.000000</td><td>0.0000000</td><td>0.0000000</td></tr>
-	<tr><td>2</td><td>Low </td><td>0.5 </td><td>case2.lung1 </td><td>lung </td><td>1</td><td>6289.0144</td><td> 5766.334</td><td>2698.09948</td><td>7505.6392</td><td>...</td><td>0.0000000</td><td>0.9358652</td><td>0.4679326</td><td>4.67932620</td><td>0.9358652</td><td>1.4037979</td><td>0.4679326</td><td>0.000000</td><td>0.0000000</td><td>0.4679326</td></tr>
-</tbody>
-</table>
-
-</div>
-
 </div>
 
 </div>
