@@ -44198,7 +44198,7 @@ mm2</th></tr>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
@@ -44214,7 +44214,7 @@ mm2</th></tr>
 <span class="nf">select</span><span class="p">(</span><span class="n">sample</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Grab information from it like case number, tissue, and tissue number</span>
-<span class="nf">str_match_all</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s">&quot;case([\\w]+)\\.([a-z]+)([\\d|\\.NYC])|(NegControl\\d)&quot;</span> <span class="o">%&gt;%</span> 
+<span class="nf">str_match_all</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">pattern</span><span class="o">=</span><span class="s">&quot;case([\\w]+)\\.([a-z]+)([\\d|\\.NYC])|(NegControl\\d)&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Bind it all together</span>
 <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind</span><span class="p">,</span> <span class="n">.</span><span class="p">)</span> <span class="o">%&gt;%</span> 
@@ -44226,7 +44226,7 @@ mm2</th></tr>
 <span class="nf">rename</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">sample</span> <span class="o">=</span> <span class="n">V1</span><span class="p">,</span> <span class="n">case_num</span> <span class="o">=</span> <span class="n">V2</span><span class="p">,</span> <span class="n">tissue</span> <span class="o">=</span> <span class="n">V3</span><span class="p">,</span> <span class="n">tissue_num</span> <span class="o">=</span> <span class="n">V4</span><span class="p">,</span> <span class="n">neg_num</span> <span class="o">=</span> <span class="n">V5</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Coalesce some of the info due to negative control samples and clean up a column</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">case_num</span> <span class="o">=</span> <span class="nf">coalesce</span><span class="p">(</span><span class="kc">...</span><span class="p">),</span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">case_num</span> <span class="o">=</span> <span class="nf">coalesce</span><span class="p">(</span><span class="n">case_num</span><span class="p">,</span> <span class="n">neg_num</span><span class="p">),</span>
        <span class="n">tissue_num</span> <span class="o">=</span> <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">.</span><span class="o">$</span><span class="n">tissue_num</span><span class="p">,</span> <span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;\\.&quot;</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span>  
 
 <span class="c1"># Drop the neg_num column</span>
@@ -44249,6 +44249,28 @@ mm2</th></tr>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message in stri_match_all_regex(string, pattern, omit_no_match = TRUE, opts_regex = opts(pattern)):
+&#34;argument is not an atomic vector; coercing&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
