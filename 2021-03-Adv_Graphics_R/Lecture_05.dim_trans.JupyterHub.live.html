@@ -44346,25 +44346,11 @@ placenta     skin
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Generate a matrix version of our data but drop the sample information!</span>
 <span class="n">tissue_RNAseq.mx</span> <span class="o">&lt;-</span> <span class="nf">as.matrix</span><span class="p">(</span><span class="n">tissue_RNAseq.df</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="o">:</span><span class="m">-6</span><span class="p">)])</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">save</span><span class="p">(</span><span class="n">tissue_RNAseq.df</span><span class="p">,</span> <span class="n">covid_demographics_percent_norm.df</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="s">&quot;./assignment/data/Assignment05.RData&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
