@@ -44079,7 +44079,7 @@ mm2</th></tr>
 <span class="nf">rowwise</span><span class="p">()</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Calculate the mean expression of each gene across all tissue samples</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">mean</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">mutate</span><span class="p">(</span><span class="n">mean</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="nf">c_across</span><span class="p">(</span><span class="nf">where</span><span class="p">(</span><span class="n">is.numeric</span><span class="p">))))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Filter for samples with low expression</span>
 <span class="nf">filter</span><span class="p">(</span><span class="n">mean</span> <span class="o">&gt;</span> <span class="m">0.5</span><span class="p">)</span> <span class="o">%&gt;%</span> 
