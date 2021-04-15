@@ -14602,12 +14602,12 @@ Warning message:
 <span class="nf">select</span><span class="p">(</span><span class="m">3</span><span class="o">:</span><span class="m">5</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Pivot wider to spread the age_group information across columns</span>
-<span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>
-            <span class="n">values_from</span> <span class="o">=</span> <span class="kc">...</span>
+<span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="n">age_group</span><span class="p">,</span>
+            <span class="n">values_from</span> <span class="o">=</span> <span class="n">total_cases</span>
            <span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Join to the PHU information to get population size for each PHU</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">phu_information.df</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">8</span><span class="p">)],</span> <span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;public_health_unit&quot;</span> <span class="o">=</span> <span class="s">&quot;public_health_unit&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">left_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">phu_information.df</span><span class="p">[,</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">8</span><span class="p">)],</span> <span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;public_health_unit&quot;</span> <span class="o">=</span> <span class="s">&quot;public_health_unit&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Normalize the numbers by PHU size</span>
 <span class="nf">mutate</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
