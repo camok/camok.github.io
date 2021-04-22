@@ -33494,7 +33494,7 @@ height=1200
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Here&#39;s our representative list of tips from multiple clades</span>
@@ -33549,7 +33549,7 @@ height=1200
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Make a new list of tips to drop</span>
@@ -33579,7 +33579,7 @@ height=1200
 <span class="n">SC2_variants_time.tree</span> <span class="o">%&gt;%</span>
 
 <span class="c1"># Drop the tips we created</span>
-<span class="nf">drop.tip</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">drop.tip</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">curated_drop_list</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Convert to a tibble</span>
 <span class="nf">as_tibble</span><span class="p">()</span> <span class="o">%&gt;%</span> 
