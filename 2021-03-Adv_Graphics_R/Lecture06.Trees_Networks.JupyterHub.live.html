@@ -36636,7 +36636,7 @@ height=1200
 <p>We'll add back in our original tip labels as well for this graph.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
@@ -36686,10 +36686,10 @@ height=1200
     <span class="nf">scale_fill_discrete</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Nextstrain\nClade&quot;</span><span class="p">,</span> 
                         <span class="n">guide</span> <span class="o">=</span> <span class="nf">guide_legend</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="m">2</span><span class="p">))</span>
 
-<span class="n">tree.plot</span> <span class="o">&lt;-</span> <span class="n">tree.plot</span> <span class="o">+</span> <span class="kc">...</span> <span class="c1"># use this </span>
+<span class="n">tree.plot</span> <span class="o">&lt;-</span> <span class="n">tree.plot</span> <span class="o">+</span> <span class="nf">new_scale_fill</span><span class="p">()</span> <span class="c1"># use this </span>
 
 <span class="n">tree.plot</span> <span class="o">&lt;-</span> 
-    <span class="nf">gheatmap</span><span class="p">(</span><span class="n">tree.plot</span><span class="p">,</span> <span class="n">curated_tree_info.df</span> <span class="o">%&gt;%</span> <span class="nf">select</span><span class="p">(</span><span class="kc">...</span><span class="p">),</span> 
+    <span class="nf">gheatmap</span><span class="p">(</span><span class="n">tree.plot</span><span class="p">,</span> <span class="n">curated_tree_info.df</span> <span class="o">%&gt;%</span> <span class="nf">select</span><span class="p">(</span><span class="m">3</span><span class="p">),</span> 
              <span class="n">offset</span> <span class="o">=</span> <span class="m">0.17</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="m">0.1</span><span class="p">,</span>
              <span class="n">colnames_angle</span> <span class="o">=</span> <span class="m">90</span><span class="p">,</span> <span class="n">font.size</span> <span class="o">=</span> <span class="m">12</span><span class="p">)</span> <span class="o">+</span>     
     <span class="nf">scale_fill_manual</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="n">combo.colours</span><span class="p">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;PANGO\nlineage&quot;</span><span class="p">,</span> 
@@ -36701,6 +36701,36 @@ height=1200
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message:
+&#34;Duplicated aesthetics after name standardisation: size&#34;
+Warning message:
+&#34;Duplicated aesthetics after name standardisation: size&#34;
+Scale for &#39;fill&#39; is already present. Adding another scale for &#39;fill&#39;, which
+will replace the existing scale.
+
+Scale for &#39;fill&#39; is already present. Adding another scale for &#39;fill&#39;, which
+will replace the existing scale.
+
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
