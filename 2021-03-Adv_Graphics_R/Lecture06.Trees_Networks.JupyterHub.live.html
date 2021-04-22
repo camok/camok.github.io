@@ -14582,17 +14582,17 @@ Diagram of phylogenetic tree terms from <a href="https://vivadifferences.com/dif
 <p>Let's begin by opening up the tree data and some related metadata before taking a look under the hood.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Import our Newick Tree</span>
-<span class="n">SC2_variants_time.phylo</span> <span class="o">&lt;-</span> <span class="nf">read.tree</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">SC2_variants_time.phylo</span> <span class="o">&lt;-</span> <span class="nf">read.tree</span><span class="p">(</span><span class="s">&quot;./data/nextstrain_ncov_north-america_canada_timetree.nwk&quot;</span><span class="p">)</span>
 
 <span class="c1"># Import our metadata</span>
-<span class="n">SC2_metadata.df</span> <span class="o">&lt;-</span> <span class="nf">read_tsv</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">SC2_metadata.df</span> <span class="o">&lt;-</span> <span class="nf">read_tsv</span><span class="p">(</span><span class="s">&quot;./data/nextstrain_ncov_north-america_canada_metadata.tsv&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14600,19 +14600,79 @@ Diagram of phylogenetic tree terms from <a href="https://vivadifferences.com/dif
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">--------------------------------------------------------</span>
+cols(
+  .default = col_character(),
+  Age = <span class="ansi-green-fg">col_double()</span>,
+  url = <span class="ansi-yellow-fg">col_logical()</span>,
+  `Collection Data` = <span class="ansi-blue-fg">col_date(format = &#34;&#34;)</span>
+)
+<span class="ansi-cyan-fg">i</span> Use <span class="ansi-black-fg ansi-white-bg">`spec()`</span> for the full column specifications.
+
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># What does the tree look like?</span>
-<span class="nf">str</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">SC2_variants_time.phylo</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>List of 6
+ $ edge       : int [1:12776, 1:2] 6628 6628 6629 6630 6631 6630 6632 6632 6633 6629 ...
+ $ edge.length: num [1:12776] 0.0757 0.0848 0.0336 0.0501 0 ...
+ $ Nnode      : int 6150
+ $ node.label : chr [1:6150] &#34;NODE_0008606&#34; &#34;NODE_0000001&#34; &#34;NODE_0000061&#34; &#34;USA/MA1/2020_travel_history&#34; ...
+ $ tip.label  : chr [1:6627] &#34;Wuhan/WH01/2019&#34; &#34;USA/MA1/2020&#34; &#34;Canada/ON_ON-VIDO-01-2/2020&#34; &#34;Canada/ON_VIDO-01/2020&#34; ...
+ $ root.edge  : num 2020
+ - attr(*, &#34;class&#34;)= chr &#34;phylo&#34;
+ - attr(*, &#34;order&#34;)= chr &#34;cladewise&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
