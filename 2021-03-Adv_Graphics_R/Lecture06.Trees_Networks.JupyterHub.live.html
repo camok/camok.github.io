@@ -14962,10 +14962,10 @@ cols(
 <p>Let's pull that information down and add it to our <code>tbl_tree</code> before converting it to a <code>treedata</code> object.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Add phylogenetic information to our tree</span>
@@ -14985,7 +14985,7 @@ cols(
        <span class="n">strain_date</span> <span class="o">=</span> <span class="s">&#39;Collection Data&#39;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># full_join to our tree to ensure no data is lost although you could also carefully use a left_join</span>
-<span class="nf">full_join</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">full_join</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">SC2_variants_time.tb</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">.</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;label&quot;</span> <span class="o">=</span> <span class="s">&quot;strain&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Convert to a tidytree format</span>
 <span class="nf">as.treedata</span><span class="p">()</span>
@@ -14997,6 +14997,71 @@ cols(
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message:
+&#34;`mutate_()` is deprecated as of dplyr 0.7.0.
+Please use `mutate()` instead.
+See vignette(&#39;programming&#39;) for more help
+<span class="ansi-black-intense-fg">This warning is displayed once every 8 hours.</span>
+<span class="ansi-black-intense-fg">Call `lifecycle::last_warnings()` to see where this warning was generated.</span>&#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Formal class &#39;treedata&#39; [package &#34;tidytree&#34;] with 11 slots
+  ..@ file       : chr(0) 
+  ..@ treetext   : chr(0) 
+  ..@ phylo      :List of 5
+  .. ..$ edge       : int [1:12776, 1:2] 6628 6631 6632 6633 6636 6635 6638 6638 6639 6640 ...
+  .. .. ..- attr(*, &#34;dimnames&#34;)=List of 2
+  .. .. .. ..$ : NULL
+  .. .. .. ..$ : chr [1:2] &#34;parent&#34; &#34;node&#34;
+  .. ..$ edge.length: num [1:12776] 0.0757 0 0.0077 0 0 ...
+  .. ..$ tip.label  : chr [1:6627] &#34;Wuhan/WH01/2019&#34; &#34;USA/MA1/2020&#34; &#34;Canada/ON_ON-VIDO-01-2/2020&#34; &#34;Canada/ON_VIDO-01/2020&#34; ...
+  .. ..$ node.label : chr [1:6150] &#34;NODE_0008606&#34; &#34;NODE_0000001&#34; &#34;NODE_0000061&#34; &#34;USA/MA1/2020_travel_history&#34; ...
+  .. ..$ Nnode      : int 6150
+  .. ..- attr(*, &#34;class&#34;)= chr &#34;phylo&#34;
+  ..@ data       : tibble [12,777 x 6] (S3: tbl_df/tbl/data.frame)
+  .. ..$ node               : int [1:12777] 1 2 3 4 5 6 7 8 9 10 ...
+  .. ..$ GISAID             : chr [1:12777] &#34;L&#34; &#34;L&#34; &#34;L&#34; &#34;L&#34; ...
+  .. ..$ emerging_nextstrain: chr [1:12777] &#34;19A&#34; &#34;19A&#34; &#34;19A&#34; &#34;19A&#34; ...
+  .. ..$ PANGO              : chr [1:12777] &#34;B&#34; &#34;B&#34; &#34;B&#34; &#34;B&#34; ...
+  .. ..$ strain_location    : chr [1:12777] &#34;Asia&#34; &#34;Massachusetts&#34; &#34;Ontario&#34; &#34;Ontario&#34; ...
+  .. ..$ strain_date        : Date[1:12777], format: &#34;2019-12-26&#34; &#34;2020-01-29&#34; ...
+  ..@ extraInfo  : tibble [0 x 0] (S3: tbl_df/tbl/data.frame)
+ Named list()
+  ..@ tip_seq    : &#39;DNAbin&#39; raw(0) 
+  ..@ anc_seq    : &#39;DNAbin&#39; raw(0) 
+  ..@ seq_type   : chr(0) 
+  ..@ tipseq_file: chr(0) 
+  ..@ ancseq_file: chr(0) 
+  ..@ info       : list()
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
