@@ -16460,8 +16460,8 @@ height=1200
 <span class="n">SC2_metadata.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Filter for strains that are not from Canada and are from before 2020-11-01</span>
-<span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">Country</span> <span class="o">==</span> <span class="kc">...</span> <span class="o">&amp;</span>
-         <span class="n">`Collection Data`</span> <span class="o">&gt;=</span> <span class="kc">...</span>
+<span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">Country</span> <span class="o">==</span> <span class="s">&quot;Canada&quot;</span> <span class="o">&amp;</span>
+         <span class="n">`Collection Data`</span> <span class="o">&gt;=</span> <span class="nf">as.Data</span><span class="p">(</span><span class="s">&quot;2020-11-01&quot;</span><span class="p">)</span>
         <span class="p">))</span> <span class="o">%&gt;%</span>
 
 <span class="c1"># Just keep the strain information</span>
