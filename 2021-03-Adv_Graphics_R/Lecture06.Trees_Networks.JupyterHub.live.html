@@ -14753,14 +14753,7 @@ Diagram of phylogenetic tree terms from <a href="https://vivadifferences.com/dif
 </div>
 </div>
 
-</div># At the same time make a dataset to keep. You'll use this to update the information in the tree later
-to_keep <- SC2_metadata.df %>% filter(!Strain %in% to_drop)
-
-# Which tips are we keeping?
-str(to_keep, give.attr = FALSE)
-
-# temp <- lapply(unique(to_keep$Clade), function(x) {to_keep[to_keep$Clade %in% x,]$Strain})
-# names(temp) = unique(to_keep$Clade)             
+</div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
