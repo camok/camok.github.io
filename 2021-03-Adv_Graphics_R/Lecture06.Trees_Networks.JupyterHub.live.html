@@ -16446,10 +16446,10 @@ height=1200
 <p>As it stands, there's just way too much data here to look at and work with. We can trim that data using the <code>drop.tip()</code> function without worrying about how the tree is parsed. Internally, all that pruning will take place within the function. To do this, we'll generate a list of tips we want to <em>remove</em> first.</p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># You can make a list of tips to drop when you&#39;re making your ggtree</span>
@@ -16461,7 +16461,7 @@ height=1200
 
 <span class="c1"># Filter for strains that are not from Canada and are from before 2020-11-01</span>
 <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">Country</span> <span class="o">==</span> <span class="s">&quot;Canada&quot;</span> <span class="o">&amp;</span>
-         <span class="n">`Collection Data`</span> <span class="o">&gt;=</span> <span class="nf">as.Data</span><span class="p">(</span><span class="s">&quot;2020-11-01&quot;</span><span class="p">)</span>
+         <span class="n">`Collection Data`</span> <span class="o">&gt;=</span> <span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2020-11-01&quot;</span><span class="p">)</span>
         <span class="p">))</span> <span class="o">%&gt;%</span>
 
 <span class="c1"># Just keep the strain information</span>
@@ -16475,6 +16475,28 @@ height=1200
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> Named chr [1:6199] &#34;Wuhan/WH01/2019&#34; &#34;USA/MA1/2020&#34; ...
+ - attr(*, &#34;names&#34;)= chr [1:6199] &#34;Strain1&#34; &#34;Strain2&#34; &#34;Strain3&#34; &#34;Strain4&#34; ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
