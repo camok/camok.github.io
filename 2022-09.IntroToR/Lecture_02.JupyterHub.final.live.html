@@ -20765,18 +20765,18 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Check the column names before and after removing `compound_salinity`</span>
 <span class="nf">colnames</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">)</span>
 
-<span class="n">meta_trimmed.tbl</span> <span class="o">&lt;-</span> <span class="nf">select</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="c1"># remove column spore_strain_lot</span>
+<span class="n">meta_trimmed.tbl</span> <span class="o">&lt;-</span> <span class="nf">select</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">,</span> <span class="o">-</span><span class="n">spore_strain_lot</span><span class="p">)</span> <span class="c1"># remove column spore_strain_lot</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">)</span>
 </pre></div>
@@ -20784,6 +20784,64 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'experiment'</li><li>'Worm_strain'</li><li>'Spore Strain'</li><li>'Spore Lot'</li><li>'Total Spores (M)'</li><li>'Spores/cm2'</li><li>'Infection Date'</li><li>'Fixing Date'</li><li>'Staining Date'</li><li>'Imaging Date'</li><li>'spore_strain_lot'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 10</caption>
+<thead>
+	<tr><th scope=col>experiment</th><th scope=col>Worm_strain</th><th scope=col>Spore Strain</th><th scope=col>Spore Lot</th><th scope=col>Total Spores (M)</th><th scope=col>Spores/cm2</th><th scope=col>Infection Date</th><th scope=col>Fixing Date</th><th scope=col>Staining Date</th><th scope=col>Imaging Date</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>VC20019</td><td>LUAm1</td><td>2A</td><td> 0</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>N2     </td><td>LUAm1</td><td>2A</td><td> 0</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190430</td><td>190502</td></tr>
+	<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -20810,7 +20868,7 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 <div class=" highlight hl-r"><pre><span></span><span class="n">meta_trimmed.tbl</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Transmute some new columns</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">spore_strain_lot</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">`Spore Strain`</span><span class="p">,</span> <span class="n">`Spore Lot`</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">transmute</span><span class="p">(</span><span class="n">spore_strain_lot</span> <span class="o">=</span> <span class="nf">paste</span><span class="p">(</span><span class="n">`Spore Strain`</span><span class="p">,</span> <span class="n">`Spore Lot`</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># look at the unique combinations</span>
 <span class="nf">unique</span><span class="p">()</span>
