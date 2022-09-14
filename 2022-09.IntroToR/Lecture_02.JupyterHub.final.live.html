@@ -18338,12 +18338,12 @@ TRUE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Find out more about the match operator by using double quotes</span>
@@ -18358,17 +18358,40 @@ TRUE
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> logi [1:276] FALSE FALSE FALSE TRUE TRUE TRUE ...
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># You can filter your data using basic R commands</span>
 <span class="c1"># Use the conditional result to index our data.frame</span>
-<span class="nf">head</span><span class="p">(</span><span class="kc">...</span><span class="p">[</span><span class="n">infection_meta.tbl</span><span class="o">$</span><span class="n">Worm_strain</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;N2&quot;</span><span class="p">,</span> <span class="s">&quot;JU1400&quot;</span><span class="p">),])</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">[</span><span class="n">infection_meta.tbl</span><span class="o">$</span><span class="n">Worm_strain</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;N2&quot;</span><span class="p">,</span> <span class="s">&quot;JU1400&quot;</span><span class="p">),])</span>
 
 <span class="c1"># how many rows (entries) do we find with our query?</span>
 <span class="nf">nrow</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">[</span><span class="n">infection_meta.tbl</span><span class="o">$</span><span class="n">Worm_strain</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;N2&quot;</span><span class="p">,</span> <span class="s">&quot;JU1400&quot;</span><span class="p">),])</span>
@@ -18377,6 +18400,58 @@ TRUE
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 29</caption>
+<thead>
+	<tr><th scope=col>experiment</th><th scope=col>experimenter</th><th scope=col>description</th><th scope=col>Infection Date</th><th scope=col>Plate Number</th><th scope=col>Worm_strain</th><th scope=col>Total Worms</th><th scope=col>Spore Strain</th><th scope=col>Spore Lot</th><th scope=col>Lot concentration</th><th scope=col>...</th><th scope=col>timepoint</th><th scope=col>infection.type</th><th scope=col>Fixing Date</th><th scope=col>Location</th><th scope=col>Staining Date</th><th scope=col>Stain type</th><th scope=col>Slide date</th><th scope=col>Slide number</th><th scope=col>Slide Box</th><th scope=col>Imaging Date</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>...</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>190426_N2_LUAm1_0M_72hpi     </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td> 4</td><td>N2    </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190430</td><td>DY96            </td><td>190501</td><td> 4</td><td>2</td><td>190502</td></tr>
+	<tr><td>190426_N2_LUAm1_10M_72hpi    </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td> 5</td><td>N2    </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td> 5</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_20M_72hpi    </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td> 6</td><td>N2    </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td> 6</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_JU1400_LUAm1_0M_72hpi </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>25</td><td>JU1400</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190430</td><td>DY96            </td><td>190501</td><td>25</td><td>2</td><td>190502</td></tr>
+	<tr><td>190426_JU1400_LUAm1_10M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>26</td><td>JU1400</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>26</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_JU1400_LUAm1_20M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>27</td><td>JU1400</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>27</td><td>2</td><td>190516</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+151
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
