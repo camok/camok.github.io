@@ -18036,18 +18036,18 @@ TRUE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Use the apply function to find columns with NA and then determine which columns return TRUE</span>
-<span class="nf">which</span><span class="p">(</span><span class="nf">apply</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> 
-            <span class="n">MARGIN</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>                  <span class="c1"># Use the columns</span>
-            <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="kc">...</span><span class="p">)</span>    <span class="c1"># Here&#39;s our function to examine each column for NA values </span>
+<span class="nf">which</span><span class="p">(</span><span class="nf">apply</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span> 
+            <span class="n">MARGIN</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span>                  <span class="c1"># Use the columns</span>
+            <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="nf">any</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>    <span class="c1"># Here&#39;s our function to examine each column for NA values </span>
             <span class="p">)</span> <span class="c1"># end apply</span>
      <span class="p">)</span> <span class="c1"># end which</span>
 </pre></div>
@@ -18055,6 +18055,36 @@ TRUE
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>Time plated</dt><dd>17</dd><dt>Time Incubated</dt><dd>18</dd><dt>Location</dt><dd>23</dd></dl>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
