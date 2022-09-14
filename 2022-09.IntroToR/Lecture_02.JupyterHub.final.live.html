@@ -15288,21 +15288,74 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># read_csv() doesn&#39;t work for excel files</span>
-<span class="nf">head</span><span class="p">(</span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/infection_data_all.xlsx&quot;</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Multiple files in zip: reading &#39;[Content_Types].xml&#39;
+<span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">1</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">1</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">----------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> &#34;,&#34;
+<span class="ansi-red-fg">chr</span> (1): &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 1 × 1</caption>
+<thead>
+	<tr><th scope=col>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>&lt;Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"&gt;&lt;Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/&gt;&lt;Default Extension="xml" ContentType="application/xml"/&gt;&lt;Override PartName="/xl/workbook.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml"/&gt;&lt;Override PartName="/xl/worksheets/sheet1.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/&gt;&lt;Override PartName="/xl/worksheets/sheet2.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/&gt;&lt;Override PartName="/xl/worksheets/sheet3.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml"/&gt;&lt;Override PartName="/xl/theme/theme1.xml" ContentType="application/vnd.openxmlformats-officedocument.theme+xml"/&gt;&lt;Override PartName="/xl/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml"/&gt;&lt;Override PartName="/xl/sharedStrings.xml" ContentType="application/vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings+xml"/&gt;&lt;Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/&gt;&lt;Override PartName="/docProps/app.xml" ContentType="application/vnd.openxmlformats-officedocument.extended-properties+xml"/&gt;&lt;/Types&gt;</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15317,24 +15370,63 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># The readxl package is not a core component of the tidyverse so we need to load it</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">readxl</span><span class="p">)</span> <span class="c1"># Note that we&#39;ve already loaded it in section 1.5.0</span>
 
 <span class="c1"># let&#39;s take a peek at the miscellaneous.xlsx sheet</span>
-<span class="nf">head</span><span class="p">(</span><span class="nf">...</span><span class="p">(</span><span class="s">&quot;data/infection_data_all.xlsx&quot;</span><span class="p">))</span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;data/infection_data_all.xlsx&quot;</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 29</caption>
+<thead>
+	<tr><th scope=col>experiment</th><th scope=col>experimenter</th><th scope=col>description</th><th scope=col>Infection Date</th><th scope=col>Plate Number</th><th scope=col>Worm_strain</th><th scope=col>Total Worms</th><th scope=col>Spore Strain</th><th scope=col>Spore Lot</th><th scope=col>Lot concentration</th><th scope=col>...</th><th scope=col>timepoint</th><th scope=col>infection.type</th><th scope=col>Fixing Date</th><th scope=col>Location</th><th scope=col>Staining Date</th><th scope=col>Stain type</th><th scope=col>Slide date</th><th scope=col>Slide number</th><th scope=col>Slide Box</th><th scope=col>Imaging Date</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>...</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>1</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>1</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>2</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>2</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>3</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>3</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>4</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190430</td><td>DY96            </td><td>190501</td><td>4</td><td>2</td><td>190502</td></tr>
+	<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>5</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>5</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>6</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>6</td><td>2</td><td>190516</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
