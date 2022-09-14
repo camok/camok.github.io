@@ -18454,18 +18454,18 @@ TRUE
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># A near-equivalent command using the logical OR</span>
 <span class="c1"># This, however, is a cautionary example about filtering your data. Watch out for this command!</span>
 
-<span class="nf">nrow</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">[(</span><span class="n">infection_meta.tbl</span><span class="o">$</span><span class="n">Worm_strain</span> <span class="o">==</span> <span class="s">&quot;N2&quot;</span> <span class="kc">...</span> <span class="n">infection_meta.tbl</span><span class="o">$</span><span class="n">Worm_strain</span> <span class="o">==</span> <span class="s">&quot;JU1400&quot;</span> <span class="p">),])</span>
+<span class="nf">nrow</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">[(</span><span class="n">infection_meta.tbl</span><span class="o">$</span><span class="n">Worm_strain</span> <span class="o">==</span> <span class="s">&quot;N2&quot;</span> <span class="o">|</span> <span class="n">infection_meta.tbl</span><span class="o">$</span><span class="n">Worm_strain</span> <span class="o">==</span> <span class="s">&quot;JU1400&quot;</span> <span class="p">),])</span>
 
 <span class="c1">#The above command will also return any entries with NA in your filtered criteria.</span>
 <span class="nf">nrow</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">[(</span><span class="n">infection_meta.tbl</span><span class="o">$</span><span class="n">`Time plated`</span> <span class="o">==</span> <span class="m">1300</span><span class="p">),])</span>
@@ -18474,6 +18474,43 @@ TRUE
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+151
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+276
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
