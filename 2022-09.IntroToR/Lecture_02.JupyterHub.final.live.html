@@ -15754,8 +15754,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#?lapply</span>
 
 <span class="c1"># Use lapply and provide a list of excel sheet names, then apply a function to each element (Sheet name) of the list!</span>
-<span class="n">excel_sheets_list</span> <span class="o">&lt;-</span> <span class="nf">lapply</span><span class="p">(</span><span class="n">X</span> <span class="o">=</span> <span class="nf">...</span><span class="p">(</span><span class="s">&quot;data/infection_data_all.xlsx&quot;</span><span class="p">),</span> <span class="c1"># this will set X to a character vector</span>
-                            <span class="n">FUN</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>
+<span class="n">excel_sheets_list</span> <span class="o">&lt;-</span> <span class="nf">lapply</span><span class="p">(</span><span class="n">X</span> <span class="o">=</span> <span class="nf">excel_sheets</span><span class="p">(</span><span class="s">&quot;data/infection_data_all.xlsx&quot;</span><span class="p">),</span> <span class="c1"># this will set X to a character vector</span>
+                            <span class="n">FUN</span> <span class="o">=</span> <span class="n">read_excel</span><span class="p">,</span>
                             <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;...&quot;</span> <span class="c1"># This is an argument for read_excel()</span>
                            <span class="p">)</span> 
 
