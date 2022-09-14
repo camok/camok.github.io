@@ -19976,29 +19976,124 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Remember the R evaluates () from the inner to outer</span>
 <span class="nf">head</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">,</span> <span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">))</span>
 
 <span class="c1"># equivalent to</span>
-<span class="n">meta_trimmed.tbl</span>  <span class="o">%&gt;%</span>  <span class="nf">filter</span><span class="p">(</span><span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span>  <span class="o">%&gt;%</span>  <span class="n">head</span>
+<span class="n">meta_trimmed.tbl</span>  <span class="o">%&gt;%</span>  <span class="nf">filter</span><span class="p">(</span><span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span>  <span class="o">%&gt;%</span>  <span class="nf">head</span><span class="p">()</span>
 
 <span class="c1"># equivalent to</span>
 <span class="n">meta_trimmed.tbl</span> <span class="o">%&gt;%</span>
     <span class="c1"># Notice the &quot;.&quot; in the first position of filter - this is where data normally is assigned as a parameter</span>
-    <span class="nf">filter</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="n">head</span>
+    <span class="nf">filter</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 10</caption>
+<thead>
+	<tr><th scope=col>experiment</th><th scope=col>Worm_strain</th><th scope=col>Spore Strain</th><th scope=col>Spore Lot</th><th scope=col>Total Spores (M)</th><th scope=col>Spores/cm2</th><th scope=col>Infection Date</th><th scope=col>Fixing Date</th><th scope=col>Staining Date</th><th scope=col>Imaging Date</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_AB1_LUAm1_10M_72hpi    </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_AB1_LUAm1_20M_72hpi    </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 10</caption>
+<thead>
+	<tr><th scope=col>experiment</th><th scope=col>Worm_strain</th><th scope=col>Spore Strain</th><th scope=col>Spore Lot</th><th scope=col>Total Spores (M)</th><th scope=col>Spores/cm2</th><th scope=col>Infection Date</th><th scope=col>Fixing Date</th><th scope=col>Staining Date</th><th scope=col>Imaging Date</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_AB1_LUAm1_10M_72hpi    </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_AB1_LUAm1_20M_72hpi    </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 10</caption>
+<thead>
+	<tr><th scope=col>experiment</th><th scope=col>Worm_strain</th><th scope=col>Spore Strain</th><th scope=col>Spore Lot</th><th scope=col>Total Spores (M)</th><th scope=col>Spores/cm2</th><th scope=col>Infection Date</th><th scope=col>Fixing Date</th><th scope=col>Staining Date</th><th scope=col>Imaging Date</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_AB1_LUAm1_10M_72hpi    </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td>10</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+	<tr><td>190426_AB1_LUAm1_20M_72hpi    </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td>20</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -20028,7 +20123,9 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 <span class="c1"># 3. Grab the experiment</span>
 <span class="c1"># 4. Print the first 20 entries</span>
 <span class="n">meta_trimmed.tbl</span> <span class="o">%&gt;%</span> 
-    <span class="nf">filter</span><span class="p">(</span><span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">,</span> <span class="n">Worm_strain</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;N2&quot;</span><span class="p">,</span> <span class="s">&quot;JU1400&quot;</span><span class="p">),</span><span class="n">`Spore Strain`</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;LUAm1&quot;</span><span class="p">,</span> <span class="s">&quot;ERTm5&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+    <span class="nf">filter</span><span class="p">(</span><span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">,</span> 
+           <span class="n">Worm_strain</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;N2&quot;</span><span class="p">,</span> <span class="s">&quot;JU1400&quot;</span><span class="p">),</span>
+           <span class="n">`Spore Strain`</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;LUAm1&quot;</span><span class="p">,</span> <span class="s">&quot;ERTm5&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
     <span class="nf">arrange</span><span class="p">(</span><span class="n">`Infection Date`</span><span class="p">)</span> <span class="o">%&gt;%</span> 
     <span class="nf">select</span><span class="p">(</span><span class="n">experiment</span><span class="p">)</span> <span class="o">%&gt;%</span> 
     <span class="nf">head</span><span class="p">(</span><span class="m">20</span><span class="p">)</span>
