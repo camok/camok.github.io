@@ -18178,22 +18178,22 @@ TRUE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Copy our table over to new version</span>
 <span class="n">comprehension_meta.tbl</span> <span class="o">&lt;-</span> <span class="n">infection_meta.tbl</span>
 
 <span class="c1"># Fix the Time plated column</span>
-<span class="n">comprehension_meta.tbl</span><span class="p">[</span><span class="kc">...</span><span class="p">),</span> <span class="p">]</span><span class="o">$</span><span class="kc">...</span> <span class="o">&lt;-</span> <span class="m">1300</span>
+<span class="n">comprehension_meta.tbl</span><span class="p">[</span><span class="nf">is.na</span><span class="p">(</span><span class="n">comprehension_meta.tbl</span><span class="o">$</span><span class="n">`Time plated`</span><span class="p">),</span> <span class="p">]</span><span class="o">$</span><span class="n">`Time plated`</span> <span class="o">&lt;-</span> <span class="m">1300</span>
 
 <span class="c1"># Fix the Time Incubated column</span>
-<span class="n">comprehension_meta.tbl</span><span class="p">[</span><span class="kc">...</span><span class="p">),</span> <span class="p">]</span><span class="o">$</span><span class="kc">...</span> <span class="o">&lt;-</span> <span class="m">1600</span>
+<span class="c1"># comprehension_meta.tbl[...), ]$... &lt;- 1600</span>
 
 <span class="c1"># Will we have any NA values left?</span>
 <span class="nf">any</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">comprehension_meta.tbl</span><span class="p">))</span>
@@ -18202,6 +18202,30 @@ TRUE
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+TRUE
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
