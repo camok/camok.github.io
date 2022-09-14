@@ -19988,7 +19988,7 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 <span class="nf">head</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">,</span> <span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">))</span>
 
 <span class="c1"># equivalent to</span>
-<span class="n">meta_trimmed.tbl</span> <span class="kc">...</span> <span class="nf">filter</span><span class="p">(</span><span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="kc">...</span> <span class="n">head</span>
+<span class="n">meta_trimmed.tbl</span>  <span class="o">%&gt;%</span>  <span class="nf">filter</span><span class="p">(</span><span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span>  <span class="o">%&gt;%</span>  <span class="n">head</span>
 
 <span class="c1"># equivalent to</span>
 <span class="n">meta_trimmed.tbl</span> <span class="o">%&gt;%</span>
