@@ -19908,25 +19908,25 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Filter the data by Total spores, worm strains, and microsporidia strains</span>
 <span class="n">desc_totalSpores_filtered</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">desc_totalSpores</span><span class="p">,</span>
                                     <span class="n">`Total Spores (M)`</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">,</span>
                                     <span class="n">Worm_strain</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;N2&quot;</span><span class="p">,</span> <span class="s">&quot;JU1400&quot;</span><span class="p">),</span>
-                                    <span class="n">`Spore Strain`</span> <span class="o">%in%</span> <span class="kc">...</span><span class="p">)</span> <span class="c1"># Extra var 1</span>
+                                    <span class="n">`Spore Strain`</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;LUAm1&quot;</span><span class="p">,</span> <span class="s">&quot;ERTm5&quot;</span><span class="p">))</span> <span class="c1"># Extra var 1</span>
 
 <span class="c1"># Sort the data by Infection Date</span>
-<span class="n">desc_totalSpores_filtered_asc</span> <span class="o">&lt;-</span> <span class="nf">arrange </span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">`Infection Date`</span><span class="p">)</span> <span class="c1"># Extra var 2</span>
+<span class="n">desc_totalSpores_filtered_asc</span> <span class="o">&lt;-</span> <span class="nf">arrange</span><span class="p">(</span><span class="n">desc_totalSpores_filtered</span><span class="p">,</span> <span class="n">`Infection Date`</span><span class="p">)</span> <span class="c1"># Extra var 2</span>
 
 <span class="c1"># Retrieve the experiment names</span>
-<span class="n">select_experiments</span> <span class="o">&lt;-</span> <span class="nf">select</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">experiment</span><span class="p">)</span> <span class="c1"># Extra var 3</span>
+<span class="n">select_experiments</span> <span class="o">&lt;-</span> <span class="nf">select</span><span class="p">(</span><span class="n">desc_totalSpores_filtered_asc</span><span class="p">,</span> <span class="n">experiment</span><span class="p">)</span> <span class="c1"># Extra var 3</span>
 
 <span class="c1"># How many observations (rows) are there?</span>
 <span class="nf">nrow</span><span class="p">(</span><span class="n">select_experiments</span><span class="p">)</span>
@@ -19935,6 +19935,30 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+74
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
