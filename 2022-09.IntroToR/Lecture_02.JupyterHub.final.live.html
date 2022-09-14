@@ -15576,24 +15576,65 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># read in an excel files by a specific row range</span>
 
 <span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;data/infection_data_all.xlsx&quot;</span><span class="p">,</span> 
            <span class="n">sheet</span> <span class="o">=</span> <span class="s">&quot;infection_metadata&quot;</span><span class="p">,</span> 
-           <span class="n">range</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span>
+           <span class="n">range</span> <span class="o">=</span> <span class="nf">cell_rows</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">9</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 8 × 29</caption>
+<thead>
+	<tr><th scope=col>experiment</th><th scope=col>experimenter</th><th scope=col>description</th><th scope=col>Infection Date</th><th scope=col>Plate Number</th><th scope=col>Worm_strain</th><th scope=col>Total Worms</th><th scope=col>Spore Strain</th><th scope=col>Spore Lot</th><th scope=col>Lot concentration</th><th scope=col>...</th><th scope=col>timepoint</th><th scope=col>infection.type</th><th scope=col>Fixing Date</th><th scope=col>Location</th><th scope=col>Staining Date</th><th scope=col>Stain type</th><th scope=col>Slide date</th><th scope=col>Slide number</th><th scope=col>Slide Box</th><th scope=col>Imaging Date</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>...</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>1</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>1</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>2</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>2</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>3</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>3</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>4</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190430</td><td>DY96            </td><td>190501</td><td>4</td><td>2</td><td>190502</td></tr>
+	<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>5</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>5</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>6</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>6</td><td>2</td><td>190516</td></tr>
+	<tr><td>190426_AB1_LUAm1_0M_72hpi     </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>7</td><td>AB1    </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190430</td><td>DY96            </td><td>190501</td><td>7</td><td>2</td><td>190502</td></tr>
+	<tr><td>190426_AB1_LUAm1_10M_72hpi    </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>8</td><td>AB1    </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72hpi</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>8</td><td>2</td><td>190516</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15609,24 +15650,63 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># read in an excel files by a specific column range</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;data/infection_data_all.xlsx&quot;</span><span class="p">,</span> 
                 <span class="n">sheet</span> <span class="o">=</span> <span class="s">&quot;infection_metadata&quot;</span><span class="p">,</span> 
-                <span class="n">range</span> <span class="o">=</span> <span class="kc">...</span><span class="p">))</span>
+                <span class="n">range</span> <span class="o">=</span> <span class="nf">cell_cols</span><span class="p">(</span><span class="s">&quot;B:D&quot;</span><span class="p">)))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>experimenter</th><th scope=col>description</th><th scope=col>Infection Date</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+	<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+	<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+	<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+	<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+	<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
