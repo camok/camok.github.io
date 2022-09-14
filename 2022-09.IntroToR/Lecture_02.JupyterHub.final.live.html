@@ -18110,7 +18110,7 @@ TRUE
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Replace the NA values in our table under the &quot;Location&quot; column.</span>
 <span class="c1"># Note that this will permanently change our tibble!</span>
-<span class="n">infection_meta.tbl</span><span class="p">[</span><span class="kc">...</span><span class="p">]</span><span class="kc">...</span> <span class="o">&lt;-</span> <span class="s">&quot;None&quot;</span>
+<span class="n">infection_meta.tbl</span><span class="p">[</span><span class="nf">is.na</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="o">$</span><span class="n">Location</span><span class="p">),</span> <span class="p">]</span><span class="o">$</span><span class="n">Location</span> <span class="o">&lt;-</span> <span class="s">&quot;None&quot;</span>
 
 <span class="c1"># Check which columns have NA values now</span>
 <span class="nf">which</span><span class="p">(</span><span class="nf">apply</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span> <span class="n">MARGIN</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="nf">any</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">x</span><span class="p">))))</span>
