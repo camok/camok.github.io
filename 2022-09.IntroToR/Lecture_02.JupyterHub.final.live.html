@@ -19475,23 +19475,76 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Be careful how you filter your data! If none of the rows meet your criteria, it can return an empty tibble!</span>
 <span class="c1"># Query experiments for any instances of Spores/cm2 &lt; 0.</span>
 <span class="nf">glimpse</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span>
-               <span class="n">`Spores/cm2`</span> <span class="kc">...</span> <span class="m">0</span><span class="p">))</span>
+               <span class="n">`Spores/cm2`</span> <span class="o">&lt;</span> <span class="m">0</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Rows: 0
+Columns: 29
+$ experiment          <span class="ansi-black-intense-fg">&lt;chr&gt;</span> 
+$ experimenter        <span class="ansi-black-intense-fg">&lt;chr&gt;</span> 
+$ description         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> 
+$ `Infection Date`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Plate Number`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ Worm_strain         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> 
+$ `Total Worms`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Spore Strain`      <span class="ansi-black-intense-fg">&lt;chr&gt;</span> 
+$ `Spore Lot`         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> 
+$ `Lot concentration` <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Total Spores (M)`  <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Total ul spore`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Infection Round`   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `40X OP50 (mL)`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Plate Size`        <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Spores/cm2`        <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Time plated`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Time Incubated`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ Temp                <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ timepoint           <span class="ansi-black-intense-fg">&lt;chr&gt;</span> 
+$ infection.type      <span class="ansi-black-intense-fg">&lt;chr&gt;</span> 
+$ `Fixing Date`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ Location            <span class="ansi-black-intense-fg">&lt;chr&gt;</span> 
+$ `Staining Date`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Stain type`        <span class="ansi-black-intense-fg">&lt;chr&gt;</span> 
+$ `Slide date`        <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Slide number`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Slide Box`         <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+$ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
