@@ -17103,23 +17103,60 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Use the mean() function and see what happens with NA values</span>
 <span class="nf">mean</span><span class="p">(</span><span class="n">rating</span><span class="p">)</span> <span class="c1"># some functions need to be explicitly told what to do with NAs. No errors though!</span>
 
-<span class="nf">mean</span><span class="p">(</span><span class="n">rating</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span> <span class="c1">#Avoid using just &quot;T&quot; as an abbreviation for &quot;TRUE&quot;</span>
+<span class="nf">mean</span><span class="p">(</span><span class="n">rating</span><span class="p">,</span> <span class="n">na.rm</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="c1">#Avoid using just &quot;T&quot; as an abbreviation for &quot;TRUE&quot;</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+&lt;NA&gt;
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+6
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -17135,12 +17172,12 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">counts</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">Site1</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="n">geneA</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">geneB</span> <span class="o">=</span> <span class="m">4</span><span class="p">,</span> <span class="n">geneC</span> <span class="o">=</span> <span class="m">12</span><span class="p">,</span> <span class="n">geneD</span> <span class="o">=</span> <span class="m">8</span><span class="p">),</span>
@@ -17150,12 +17187,68 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190
 <span class="n">counts</span>
 
 <span class="c1"># Notice that we can only pass the function name &quot;mean&quot; and not any parameters</span>
-<span class="nf">apply</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">MARGIN</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<span class="nf">apply</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span> <span class="n">MARGIN</span> <span class="o">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">mean</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A data.frame: 4 × 3</caption>
+<thead>
+	<tr><th></th><th scope=col>Site1</th><th scope=col>Site2</th><th scope=col>Site3</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>geneA</th><td> 2</td><td>15</td><td>10</td></tr>
+	<tr><th scope=row>geneB</th><td> 4</td><td>NA</td><td> 7</td></tr>
+	<tr><th scope=row>geneC</th><td>12</td><td>27</td><td>13</td></tr>
+	<tr><th scope=row>geneD</th><td> 8</td><td>28</td><td>NA</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>geneA</dt><dd>9</dd><dt>geneB</dt><dd>&lt;NA&gt;</dd><dt>geneC</dt><dd>17.3333333333333</dd><dt>geneD</dt><dd>&lt;NA&gt;</dd></dl>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
