@@ -17029,18 +17029,18 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Set up some vectors for a data.frame</span>
 <span class="n">brand</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;wildrose&quot;</span><span class="p">,</span> <span class="s">&quot;guinness&quot;</span><span class="p">,</span> <span class="s">&quot;grasshoper&quot;</span><span class="p">)</span>
 <span class="n">wheat.type</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Hard Red Spring&quot;</span><span class="p">,</span> <span class="s">&quot;Hard Red Winter&quot;</span><span class="p">,</span> <span class="s">&quot;Soft Red Winter&quot;</span> <span class="p">)</span>
-<span class="n">rating</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<span class="n">rating</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="kc">NA</span><span class="p">)</span>
 
 <span class="c1"># Put it all together with cbind (you can use this for data.frames too!)</span>
 <span class="n">NA.example</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">brand</span><span class="p">,</span> <span class="n">wheat.type</span><span class="p">,</span> <span class="n">rating</span><span class="p">)</span>
@@ -17052,6 +17052,42 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A data.frame: 3 × 3</caption>
+<thead>
+	<tr><th scope=col>brand</th><th scope=col>wheat.type</th><th scope=col>rating</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>wildrose  </td><td>Hard Red Spring</td><td> 5</td></tr>
+	<tr><td>guinness  </td><td>Hard Red Winter</td><td> 7</td></tr>
+	<tr><td>grasshoper</td><td>Soft Red Winter</td><td>NA</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
