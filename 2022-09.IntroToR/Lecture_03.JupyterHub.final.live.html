@@ -14748,7 +14748,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <hr>
 <h3 id="0.4.4-Microsporidia-infection-data-set-description">0.4.4 Microsporidia infection data set description<a class="anchor-link" href="#0.4.4-Microsporidia-infection-data-set-description">&#182;</a></h3><p>The following datasets used in this week's class come from a preprint manuscript on bioRxiv entitled "High-throughput phenotyping of <em>C. elegans</em> wild isolates reveals specific resistance and susceptibility traits to infection by distinct microsporidia species" by <a href="https://www.biorxiv.org/content/10.1101/2022.06.20.496912v1">Mok et al., 2022</a>. These datasets focus on the an analysis of infection in wild isolate strains of the nematode <em>C. elegans</em> by environmental pathogens known as microsporidia. The authors collected embryo counts from individual animal in the population after population-wide infection by microsporidia and we'll spend our next few classes working with the dataset to learn how to format and manipulate it.</p>
 <h3 id="0.4.4.1-Dataset-1:-/data/embryo_data_wide.csv">0.4.4.1 Dataset 1: /data/embryo_data_wide.csv<a class="anchor-link" href="#0.4.4.1-Dataset-1:-/data/embryo_data_wide.csv">&#182;</a></h3><p>This is a comma-separated version of measurements from a series of experiments where <em>C. elegans</em> strains are infected under different conditions with one of many possible <em>Nematocida</em> microsporidia species. Each column name carries unique identifiers for each experiment while the values represent the presence of mature <strong><code>spores</code></strong> appearing after spore infection/replication (1 = yes, 0 = no), <strong><code>meronts</code></strong> or immature spores (1 = yes, 0 = no), and the number of <strong><code>embryos</code></strong> present in each animal observed. These values are separated by an <code>_</code> symbol.</p>
-<h3 id="0.4.4.2-Dataset-2:-/data/infection_fixing_metadata.csv">0.4.4.2 Dataset 2: /data/infection_fixing_metadata.csv<a class="anchor-link" href="#0.4.4.2-Dataset-2:-/data/infection_fixing_metadata.csv">&#182;</a></h3><p>This is a comma-separated version of the metadata data from our measurements. This dataset tracks information for each experimental condition measured including variables including experimental dates, reagent versions, and sample locations. We'll use this file to ease our way into importing, manipulating, and exporting in today's class.</p>
+<h3 id="0.4.4.2-Dataset-2:-/data/infection_meta.csv">0.4.4.2 Dataset 2: /data/infection_meta.csv<a class="anchor-link" href="#0.4.4.2-Dataset-2:-/data/infection_meta.csv">&#182;</a></h3><p>This is a comma-separated version of the metadata data from our measurements. This dataset tracks information for each experimental condition measured including variables including experimental dates, reagent versions, and sample locations. We'll use this file to ease our way into importing, manipulating, and exporting in today's class.</p>
 <h3 id="0.4.4.3-Dataset-3:-/data/spore_info.txt">0.4.4.3 Dataset 3: /data/spore_info.txt<a class="anchor-link" href="#0.4.4.3-Dataset-3:-/data/spore_info.txt">&#182;</a></h3><p>This is a tab-separated version of microsporidia metadata. This small table holds information specific to each microsporidia strain such as species names, where it was first identified, where it is observed to infect.</p>
 <hr>
 <h3 id="0.4.5-Gapminder-dataset-description">0.4.5 Gapminder dataset description<a class="anchor-link" href="#0.4.5-Gapminder-dataset-description">&#182;</a></h3><p>This data comes from the <code>gapminder</code> package which has an excerpt of data from gapminder.org circa 2010. It is a dataset we will use for exploring data and formatting it.</p>
@@ -14768,7 +14768,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h2 id="0.5.0-Packages-Used-in-This-Lesson">0.5.0 Packages Used in This Lesson<a class="anchor-link" href="#0.5.0-Packages-Used-in-This-Lesson">&#182;</a></h2><p>The following packages are used in this lesson:</p>
 <ul>
 <li><code>tidyverse</code> (tidyverse installs several packages for you, like <code>dplyr</code>, <code>readr</code>, <code>readxl</code>, <code>tibble</code>, and <code>ggplot2</code>)</li>
-<li><code>gapminder</code> a dataset used for exploring data formatting with data pulled from gapminder.org circa 2010</li>
 </ul>
 <h3 id="0.5.1-Quick-review-for-how-to-install-R-packages-in-Anaconda">0.5.1 Quick review for how to install R packages in Anaconda<a class="anchor-link" href="#0.5.1-Quick-review-for-how-to-install-R-packages-in-Anaconda">&#182;</a></h3><p>Open up the <strong>Anaconda prompt</strong> and use install your packages of interest.</p>
 <p><code>conda install</code> - starting command to call the installer for anaconda.
@@ -14791,7 +14790,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#--------- Install packages to for today&#39;s session ----------#</span>
 <span class="c1"># install.packages(&quot;tidyverse&quot;, dependencies = TRUE) # This package should already be installed on Jupyter Hub</span>
 
-<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;gapminder&quot;</span><span class="p">,</span> <span class="n">dependencies</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+<span class="c1"># install.packages(&quot;gapminder&quot;, dependencies = TRUE)</span>
 
 <span class="c1">#--------- Load packages to for today&#39;s session ----------#</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
@@ -14846,11 +14845,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <hr>
 <h2 id="0.7.0-Some-data-preparation">0.7.0 Some data preparation<a class="anchor-link" href="#0.7.0-Some-data-preparation">&#182;</a></h2><p>In this lesson we want to answer 3 simple questions from our data:</p>
 <ol>
-<li><p>Which microsporidia strain causes the most severe effect on embryo production when infecting the host <em>C. elegans</em>?</p>
+<li><p>How much variation in mean embryo production exists between uninfected samples of <em>C. elegans</em> strains?</p>
 </li>
-<li><p>Which <em>C. elegans</em> strains are most (ie susceptible) and least (ie resistant) affected by microsporidia infection in general?</p>
+<li><p>Which microsporidia does N2 interact most poorly with?</p>
 </li>
-<li><p>Is there any change to host embryo production when infecting with more or less spores?</p>
+<li><p>Which worm strain has the worst looking interactions across all microsporidia strains?</p>
 </li>
 </ol>
 <p>Last lesson, we learned how to filter and select data subsets we were interested in. However, we can make data manipulation more efficient by controlling the overall structure or format of our data.</p>
@@ -15653,7 +15652,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </li>
 <li><p>Which microsporidia does N2 interact most poorly with?</p>
 </li>
-<li><p>Which worms strain has the worst looking interactions across all microsporidia strains?</p>
+<li><p>Which worm strain has the worst looking interactions across all microsporidia strains?</p>
 </li>
 </ol>
 <h2 id="2.1.0-Question:-How-much-variation-in-mean-embryo-production-exists-between-uninfected-samples-of-C.-elegans-strains?">2.1.0 Question: How much variation in mean embryo production exists between uninfected samples of <em>C. elegans</em> strains?<a class="anchor-link" href="#2.1.0-Question:-How-much-variation-in-mean-embryo-production-exists-between-uninfected-samples-of-C.-elegans-strains?">&#182;</a></h2><p>What steps do we need to take to answer this question? Before we dive in, let's consider what is needed to answer this question.</p>
