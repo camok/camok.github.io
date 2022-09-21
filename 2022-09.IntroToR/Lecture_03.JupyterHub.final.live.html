@@ -16697,12 +16697,12 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Save the results of the wrangling</span>
@@ -16711,7 +16711,7 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <span class="n">split_embryo_long.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Filter the data to focus on sporeDose of 0 (ie uninfected conditions)</span>
-<span class="nf">filter</span><span class="p">(</span><span class="n">womrStrain</span> <span class="o">==</span> <span class="s">&quot;N2&quot;</span><span class="p">,</span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">wormStrain</span> <span class="o">==</span> <span class="s">&quot;N2&quot;</span><span class="p">,</span>
        <span class="n">expTimepoint</span> <span class="o">==</span> <span class="m">72</span><span class="p">,</span>    <span class="c1"># Recall there are some 72-hour and 96-hour timepoints. We should stick with one.</span>
        <span class="n">embryos</span> <span class="o">&gt;=</span> <span class="m">0</span>           <span class="c1"># Theres a quirk of the data in here so we need an extra filter</span>
       <span class="p">)</span> <span class="o">%&gt;%</span> 
@@ -16727,7 +16727,7 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <span class="nf">group_by</span><span class="p">(</span><span class="n">sporeStrain</span><span class="p">,</span> <span class="n">sporeDose</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Calculate the mean of the means so that each replicate has the same weight</span>
-<span class="nf">summarise</span><span class="p">(</span><span class="n">groupMean</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="kc">...</span><span class="p">))</span>
+<span class="nf">summarise</span><span class="p">(</span><span class="n">groupMean</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">meanEmb</span><span class="p">))</span>
 
 <span class="c1"># Sort the data to group by spore strain</span>
 <span class="nf">arrange</span><span class="p">(</span><span class="n">wormSporeDose_summary.df</span><span class="p">)</span>
@@ -16736,6 +16736,78 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>`summarise()` has grouped output by &#39;fixingDate&#39;, &#39;sporeStrain&#39;. You can override using the `.groups` argument.
+`summarise()` has grouped output by &#39;sporeStrain&#39;. You can override using the `.groups` argument.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A grouped_df: 26 × 3</caption>
+<thead>
+	<tr><th scope=col>sporeStrain</th><th scope=col>sporeDose</th><th scope=col>groupMean</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>AWRm78   </td><td> 3.500</td><td>11.393333</td></tr>
+	<tr><td>ERTm1    </td><td> 0.000</td><td>20.274630</td></tr>
+	<tr><td>ERTm1    </td><td> 0.750</td><td>18.513333</td></tr>
+	<tr><td>ERTm1    </td><td> 1.250</td><td>14.400000</td></tr>
+	<tr><td>ERTm1    </td><td> 1.500</td><td>15.037451</td></tr>
+	<tr><td>ERTm2    </td><td> 0.000</td><td>19.358209</td></tr>
+	<tr><td>ERTm2    </td><td> 0.500</td><td> 9.921875</td></tr>
+	<tr><td>ERTm2    </td><td> 1.250</td><td> 1.250000</td></tr>
+	<tr><td>ERTm2    </td><td> 1.500</td><td> 2.111111</td></tr>
+	<tr><td>ERTm5    </td><td> 0.000</td><td>17.963889</td></tr>
+	<tr><td>ERTm5    </td><td> 0.200</td><td>16.340000</td></tr>
+	<tr><td>ERTm5    </td><td> 0.350</td><td>16.200000</td></tr>
+	<tr><td>ERTm5    </td><td> 0.875</td><td>13.220000</td></tr>
+	<tr><td>ERTm5    </td><td> 1.250</td><td>12.600000</td></tr>
+	<tr><td>ERTm5    </td><td> 1.750</td><td> 9.855759</td></tr>
+	<tr><td>ERTm5    </td><td> 3.500</td><td> 4.870471</td></tr>
+	<tr><td>LUAm1    </td><td> 0.000</td><td>17.946349</td></tr>
+	<tr><td>LUAm1    </td><td>10.000</td><td>11.286667</td></tr>
+	<tr><td>LUAm1    </td><td>15.000</td><td> 8.755102</td></tr>
+	<tr><td>LUAm1    </td><td>20.000</td><td> 7.700000</td></tr>
+	<tr><td>LUAm1-HK </td><td>10.000</td><td>19.400000</td></tr>
+	<tr><td>LUAm1-pel</td><td>10.000</td><td>14.140000</td></tr>
+	<tr><td>LUAm1-sup</td><td>10.000</td><td>20.200000</td></tr>
+	<tr><td>LUAm3    </td><td>10.000</td><td>12.340000</td></tr>
+	<tr><td>MAM1     </td><td> 4.000</td><td>14.786667</td></tr>
+	<tr><td>MAM1     </td><td> 8.000</td><td>14.310000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
