@@ -18841,7 +18841,7 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 <li><code>aes()</code>: this sets the details of <strong><em>how</em></strong> your data will be used. For example the <code>x</code> and <code>y</code> axes are set here, if applicable. You can also define how data are grouped with arguments like <code>colour</code>, <code>fill</code>, and <code>size</code>, setting these using variable names from <code>data</code>.</li>
 <li><code>geom_*()</code>: or geometric object defines the <strong><em>type</em></strong> of plot you want to visualize. The simplest verions are <code>geom_line()</code> (line graph), <code>geom_bar()</code> (bar chart), and <code>geom_point()</code> (scatterplots, dotplots, and bubble charts).</li>
 </ol>
-<h2 id="6.1.0-Generate-a-line-graph-of-split_embry_long.df">6.1.0 Generate a line graph of <code>split_embry_long.df</code><a class="anchor-link" href="#6.1.0-Generate-a-line-graph-of-split_embry_long.df">&#182;</a></h2><p>Let's filter some of our <code>split_embryo_long.df</code> data to plot as a line graph. To make our plot we'll:</p>
+<h2 id="6.1.0-Generate-a-line-graph-of-split_embryo_long.df">6.1.0 Generate a line graph of <code>split_embryo_long.df</code><a class="anchor-link" href="#6.1.0-Generate-a-line-graph-of-split_embryo_long.df">&#182;</a></h2><p>Let's filter some of our <code>split_embryo_long.df</code> data to plot as a line graph. To make our plot we'll:</p>
 <ol>
 <li>Focus on the spore strain LUAm1 at the 72-hour timepoint of infection</li>
 <li>Group/summarise the embryo data for each condition.</li>
@@ -18857,7 +18857,7 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Load the repr package to change default plot width</span>
@@ -18895,7 +18895,7 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 <span class="c1"># Plot the data</span>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">.</span><span class="p">)</span> <span class="o">+</span>
     <span class="c1"># Set the x and y axis variables, and how you want to colour the lines</span>
-    <span class="nf">aes</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span><span class="p">)</span> <span class="o">+</span>
     <span class="c1"># Set the type of visualization to a line graph</span>
     <span class="nf">geom_line</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
 </pre></div>
