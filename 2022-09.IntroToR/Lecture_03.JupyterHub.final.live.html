@@ -16460,12 +16460,12 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">split_embryo_long.df</span> <span class="o">%&gt;%</span> 
@@ -16475,7 +16475,7 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <span class="nf">group_by</span><span class="p">(</span><span class="n">fixingDate</span><span class="p">,</span> <span class="n">sporeStrain</span><span class="p">,</span> <span class="n">sporeDose</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Ungroup the data</span>
 <span class="nf">summarise</span><span class="p">(</span><span class="n">nWorms</span> <span class="o">=</span> <span class="nf">n</span><span class="p">(),</span>
-          <span class="n">meanEmb</span> <span class="o">=</span> <span class="n">mean</span><span class="p">,</span>
+          <span class="n">meanEmb</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">embryos</span><span class="p">),</span>
           <span class="n">medianEmb</span> <span class="o">=</span> <span class="nf">median</span><span class="p">(</span><span class="n">embryos</span><span class="p">),</span>
           <span class="n">sdEmb</span> <span class="o">=</span> <span class="nf">sd</span><span class="p">(</span><span class="n">embryos</span><span class="p">),</span>
           <span class="n">maxEmb</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">embryos</span><span class="p">)</span>          
@@ -16486,6 +16486,71 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>`summarise()` has grouped output by &#39;fixingDate&#39;, &#39;sporeStrain&#39;. You can override using the `.groups` argument.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A grouped_df: 20 × 8</caption>
+<thead>
+	<tr><th scope=col>fixingDate</th><th scope=col>sporeStrain</th><th scope=col>sporeDose</th><th scope=col>nWorms</th><th scope=col>meanEmb</th><th scope=col>medianEmb</th><th scope=col>sdEmb</th><th scope=col>maxEmb</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>190426</td><td>ERTm5</td><td> 0.00</td><td> 377</td><td>15.477454</td><td>15.0</td><td>6.804265</td><td>32</td></tr>
+	<tr><td>190426</td><td>ERTm5</td><td> 1.75</td><td> 366</td><td> 9.554645</td><td> 8.0</td><td>7.396854</td><td>34</td></tr>
+	<tr><td>190426</td><td>ERTm5</td><td> 3.50</td><td> 446</td><td> 5.121076</td><td> 4.0</td><td>5.914268</td><td>32</td></tr>
+	<tr><td>190426</td><td>LUAm1</td><td> 0.00</td><td> 664</td><td>13.096386</td><td>13.0</td><td>4.658120</td><td>31</td></tr>
+	<tr><td>190426</td><td>LUAm1</td><td>10.00</td><td> 649</td><td> 6.471495</td><td> 7.0</td><td>5.318226</td><td>23</td></tr>
+	<tr><td>190426</td><td>LUAm1</td><td>20.00</td><td> 564</td><td> 4.164894</td><td> 2.0</td><td>4.690352</td><td>29</td></tr>
+	<tr><td>191123</td><td>LUAm1</td><td> 0.00</td><td> 858</td><td> 9.196970</td><td>12.0</td><td>7.151447</td><td>25</td></tr>
+	<tr><td>191123</td><td>LUAm1</td><td>10.00</td><td>1167</td><td> 2.554413</td><td> 0.0</td><td>4.402390</td><td>21</td></tr>
+	<tr><td>200707</td><td>ERTm5</td><td> 1.75</td><td> 147</td><td> 8.278912</td><td> 9.0</td><td>5.650533</td><td>24</td></tr>
+	<tr><td>200707</td><td>ERTm5</td><td> 3.50</td><td> 150</td><td> 5.066667</td><td> 4.5</td><td>4.715627</td><td>19</td></tr>
+	<tr><td>200707</td><td>LUAm1</td><td> 0.00</td><td> 248</td><td>11.645161</td><td>11.0</td><td>3.843483</td><td>26</td></tr>
+	<tr><td>200707</td><td>LUAm1</td><td>10.00</td><td> 227</td><td> 2.995595</td><td> 0.0</td><td>4.494340</td><td>18</td></tr>
+	<tr><td>200714</td><td>ERTm5</td><td> 1.75</td><td> 150</td><td>10.153333</td><td> 9.0</td><td>4.675707</td><td>26</td></tr>
+	<tr><td>200714</td><td>ERTm5</td><td> 3.50</td><td> 150</td><td> 6.120000</td><td> 6.0</td><td>4.806204</td><td>20</td></tr>
+	<tr><td>200714</td><td>LUAm1</td><td> 0.00</td><td> 250</td><td>12.296000</td><td>12.0</td><td>4.356639</td><td>26</td></tr>
+	<tr><td>200714</td><td>LUAm1</td><td>10.00</td><td> 250</td><td> 2.860000</td><td> 1.0</td><td>3.962728</td><td>19</td></tr>
+	<tr><td>200714</td><td>LUAm1</td><td>15.00</td><td> 249</td><td> 2.293173</td><td> 0.0</td><td>4.208094</td><td>27</td></tr>
+	<tr><td>200721</td><td>ERTm5</td><td> 1.75</td><td> 150</td><td> 9.960000</td><td>10.0</td><td>5.562193</td><td>26</td></tr>
+	<tr><td>200721</td><td>ERTm5</td><td> 3.50</td><td> 150</td><td> 6.206667</td><td> 5.0</td><td>5.109928</td><td>22</td></tr>
+	<tr><td>200721</td><td>LUAm1</td><td> 0.00</td><td> 250</td><td>11.648000</td><td>11.0</td><td>4.819232</td><td>26</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
