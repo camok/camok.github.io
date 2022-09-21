@@ -18681,12 +18681,12 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Save the result as </span>
@@ -18707,7 +18707,7 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 <span class="nf">pivot_wider</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">names_from</span> <span class="o">=</span> <span class="n">obs_type</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="n">obs_value</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1">### 5.2.4 re-arrange the column order with select()</span>
-<span class="nf">select</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">select</span><span class="p">(</span><span class="n">continent</span><span class="p">,</span> <span class="n">country</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">lifeExp</span><span class="p">,</span> <span class="n">pop</span><span class="p">,</span> <span class="n">gdpPercap</span><span class="p">)</span> <span class="o">%&gt;%</span> 
     
 <span class="nf">arrange</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">country</span><span class="p">)</span>
 
@@ -18723,12 +18723,69 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 6</caption>
+<thead>
+	<tr><th scope=col>continent</th><th scope=col>country</th><th scope=col>year</th><th scope=col>lifeExp</th><th scope=col>pop</th><th scope=col>gdpPercap</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Asia</td><td>Afghanistan</td><td>1952</td><td>28.801</td><td> 8425333</td><td>779.4453</td></tr>
+	<tr><td>Asia</td><td>Afghanistan</td><td>1957</td><td>30.332</td><td> 9240934</td><td>820.8530</td></tr>
+	<tr><td>Asia</td><td>Afghanistan</td><td>1962</td><td>31.997</td><td>10267083</td><td>853.1007</td></tr>
+	<tr><td>Asia</td><td>Afghanistan</td><td>1967</td><td>34.020</td><td>11537966</td><td>836.1971</td></tr>
+	<tr><td>Asia</td><td>Afghanistan</td><td>1972</td><td>36.088</td><td>13079460</td><td>739.9811</td></tr>
+	<tr><td>Asia</td><td>Afghanistan</td><td>1977</td><td>38.438</td><td>14880372</td><td>786.1134</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [1,704 x 6] (S3: tbl_df/tbl/data.frame)
+ $ continent: chr [1:1704] &#34;Asia&#34; &#34;Asia&#34; &#34;Asia&#34; &#34;Asia&#34; ...
+ $ country  : chr [1:1704] &#34;Afghanistan&#34; &#34;Afghanistan&#34; &#34;Afghanistan&#34; &#34;Afghanistan&#34; ...
+ $ year     : int [1:1704] 1952 1957 1962 1967 1972 1977 1982 1987 1992 1997 ...
+ $ lifeExp  : num [1:1704] 28.8 30.3 32 34 36.1 ...
+ $ pop      : num [1:1704] 8425333 9240934 10267083 11537966 13079460 ...
+ $ gdpPercap: num [1:1704] 779 821 853 836 740 ...
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Check the directory</span>
@@ -18743,6 +18800,30 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+'C:/Users/mokca/Dropbox/!CAGEF/Course_Materials/Introduction_to_R/2022.09_Intro_to_R/lecture_03_tidy_data'
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
