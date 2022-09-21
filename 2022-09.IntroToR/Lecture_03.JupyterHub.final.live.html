@@ -15704,8 +15704,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <span class="c1">### 1.3.2-1 Break up the experiment information</span>
 <span class="nf">separate</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">.</span><span class="p">,</span> 
-         <span class="n">col</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> 
-         <span class="n">into</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;fixingDate&quot;</span><span class="p">,</span> <span class="s">&quot;wormStrain&quot;</span><span class="p">,</span> <span class="s">&quot;sporeStrain&quot;</span><span class="p">,</span> <span class="s">&quot;sporeDose&quot;</span><span class="p">,</span> <span class="s">&quot;...&quot;</span><span class="p">),</span>
+         <span class="n">col</span> <span class="o">=</span> <span class="n">experiment</span><span class="p">,</span> 
+         <span class="n">into</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;fixingDate&quot;</span><span class="p">,</span> <span class="s">&quot;wormStrain&quot;</span><span class="p">,</span> <span class="s">&quot;sporeStrain&quot;</span><span class="p">,</span> <span class="s">&quot;sporeDose&quot;</span><span class="p">,</span> <span class="s">&quot;expTimepoint&quot;</span><span class="p">),</span>
          <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;...&quot;</span><span class="p">,</span>
          <span class="n">remove</span> <span class="o">=</span> <span class="kc">FALSE</span> <span class="c1"># Keep the original column!</span>
         <span class="p">)</span> <span class="o">%&gt;%</span> 
