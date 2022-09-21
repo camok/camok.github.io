@@ -18536,12 +18536,12 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Spread data from obs_type as its contents should be their own variables</span>
@@ -18556,7 +18556,7 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 <span class="nf">separate</span><span class="p">(</span><span class="n">obs_type</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;obs_type&quot;</span><span class="p">,</span> <span class="s">&quot;year&quot;</span><span class="p">),</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">,</span> <span class="n">convert</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1">### 5.2.3 pivot the table partially wider</span>
-<span class="nf">pivot_wider</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">names_from</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">pivot_wider</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">names_from</span> <span class="o">=</span> <span class="n">obs_type</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="n">obs_value</span> <span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Take a peek at the long-format result</span>
 <span class="nf">head</span><span class="p">()</span>
@@ -18565,6 +18565,45 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 6</caption>
+<thead>
+	<tr><th scope=col>continent</th><th scope=col>country</th><th scope=col>year</th><th scope=col>gdpPercap</th><th scope=col>lifeExp</th><th scope=col>pop</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Africa</td><td>Algeria</td><td>1952</td><td>2449.008</td><td>43.077</td><td> 9279525</td></tr>
+	<tr><td>Africa</td><td>Algeria</td><td>1957</td><td>3013.976</td><td>45.685</td><td>10270856</td></tr>
+	<tr><td>Africa</td><td>Algeria</td><td>1962</td><td>2550.817</td><td>48.303</td><td>11000948</td></tr>
+	<tr><td>Africa</td><td>Algeria</td><td>1967</td><td>3246.992</td><td>51.407</td><td>12760499</td></tr>
+	<tr><td>Africa</td><td>Algeria</td><td>1972</td><td>4182.664</td><td>54.518</td><td>14760787</td></tr>
+	<tr><td>Africa</td><td>Algeria</td><td>1977</td><td>4910.417</td><td>58.014</td><td>17152804</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
