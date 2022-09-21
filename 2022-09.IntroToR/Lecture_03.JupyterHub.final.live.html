@@ -16711,21 +16711,20 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <span class="n">split_embryo_long.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Filter the data to focus on sporeDose of 0 (ie uninfected conditions)</span>
-<span class="nf">filter</span><span class="p">(</span><span class="n">womrStrain</span> <span class="o">==</span> <span class="n">N2</span><span class="p">,</span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">womrStrain</span> <span class="o">==</span> <span class="s">&quot;N2&quot;</span><span class="p">,</span>
        <span class="n">expTimepoint</span> <span class="o">==</span> <span class="m">72</span><span class="p">,</span>    <span class="c1"># Recall there are some 72-hour and 96-hour timepoints. We should stick with one.</span>
        <span class="n">embryos</span> <span class="o">&gt;=</span> <span class="m">0</span>           <span class="c1"># Theres a quirk of the data in here so we need an extra filter</span>
       <span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Group the data so that each rep/fixing Date is grouped together </span>
-<span class="c1"># group_by(sporeStrain, sporeDose) %&gt;% </span>
-<span class="nf">group_by</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">group_by</span><span class="p">(</span><span class="n">fixingDate</span><span class="p">,</span> <span class="n">sporeStrain</span><span class="p">,</span> <span class="n">sporeDose</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Get the mean embryos for each replicate</span>
 <span class="nf">summarise</span><span class="p">(</span><span class="n">meanEmb</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">embryos</span><span class="p">),</span>
          <span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Group the data again but aggregate the fixing dates for each conditions</span>
-<span class="nf">group_by</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">group_by</span><span class="p">(</span><span class="n">sporeStrain</span><span class="p">,</span> <span class="n">sporeDose</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Calculate the mean of the means so that each replicate has the same weight</span>
 <span class="nf">summarise</span><span class="p">(</span><span class="n">groupMean</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="kc">...</span><span class="p">))</span>
