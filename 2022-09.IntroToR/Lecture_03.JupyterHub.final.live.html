@@ -14954,17 +14954,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Read in our file. </span>
 <span class="c1"># Remember we&#39;re using the tidyverse to import our data!</span>
-<span class="n">embryos.df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">)</span>
+<span class="n">embryos.df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/embryo_data_wide.csv&quot;</span><span class="p">)</span>
 
 <span class="c1"># Take a look at the head and structure of your data</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">)</span>
@@ -14976,6 +14976,97 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">154</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">301</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">----------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> &#34;,&#34;
+<span class="ansi-red-fg">chr</span> (300): 200707_N2_LUAm1_0M_72hpi, 200707_N2_LUAm1_10M_72hpi, 200707_JU140...
+<span class="ansi-green-fg">dbl</span>   (1): worm.number
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 301</caption>
+<thead>
+	<tr><th scope=col>worm.number</th><th scope=col>200707_N2_LUAm1_0M_72hpi</th><th scope=col>200707_N2_LUAm1_10M_72hpi</th><th scope=col>200707_JU1400_LUAm1_0M_72hpi</th><th scope=col>200707_JU1400_LUAm1_10M_72hpi</th><th scope=col>200707_ED3052A_LUAm1_0M_72hpi</th><th scope=col>200707_ED3052A_LUAm1_10M_72hpi</th><th scope=col>200707_ED3052B_LUAm1_0M_72hpi</th><th scope=col>200707_ED3052B_LUAm1_10M_72hpi</th><th scope=col>200707_MY1_LUAm1_0M_72hpi</th><th scope=col>...</th><th scope=col>220302_JU1400_ERTm5_3.5M_72hpi</th><th scope=col>220205_JU1400_ERTm5-96H_0M_96hpi</th><th scope=col>220219_JU1400_ERTm5-96H_0M_96hpi</th><th scope=col>220302_JU1400_ERTm5-96H_0M_96hpi</th><th scope=col>220205_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope=col>220219_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope=col>220302_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope=col>220205_JU1400_ERTm5-96H_3.5M_96hpi</th><th scope=col>220219_JU1400_ERTm5-96H_3.5M_96hpi</th><th scope=col>220302_JU1400_ERTm5-96H_3.5M_96hpi</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>...</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>0_0_18</td><td>0_1_7 </td><td>0_0_10</td><td>0_1_0</td><td>0_0_12</td><td>0_1_0</td><td>0_0_5 </td><td>0_1_9</td><td>0_0_11</td><td>...</td><td>0_0_5</td><td>0_0_21</td><td>0_0_42</td><td>0_0_20</td><td>0_0_35</td><td>0_0_23</td><td>0_0_8 </td><td>0_0_17</td><td>0_0_0 </td><td>0_0_3</td></tr>
+	<tr><td>2</td><td>0_0_18</td><td>0_1_3 </td><td>0_0_9 </td><td>0_1_0</td><td>0_0_11</td><td>0_1_0</td><td>0_0_12</td><td>0_1_2</td><td>0_0_9 </td><td>...</td><td>0_0_5</td><td>0_0_6 </td><td>0_0_34</td><td>0_0_11</td><td>0_0_25</td><td>0_0_22</td><td>0_0_3 </td><td>0_0_39</td><td>0_0_10</td><td>0_0_4</td></tr>
+	<tr><td>3</td><td>0_0_9 </td><td>0_1_10</td><td>0_0_13</td><td>0_1_0</td><td>0_0_14</td><td>0_1_1</td><td>0_0_11</td><td>0_1_4</td><td>0_0_10</td><td>...</td><td>0_0_3</td><td>0_0_21</td><td>0_0_38</td><td>0_0_19</td><td>0_0_19</td><td>0_0_1 </td><td>0_0_4 </td><td>0_0_28</td><td>0_0_3 </td><td>0_0_6</td></tr>
+	<tr><td>4</td><td>0_0_15</td><td>0_1_8 </td><td>0_0_10</td><td>0_1_0</td><td>0_0_11</td><td>0_1_3</td><td>0_0_9 </td><td>0_1_0</td><td>0_0_11</td><td>...</td><td>0_0_4</td><td>0_0_25</td><td>0_0_33</td><td>0_0_18</td><td>0_0_18</td><td>0_0_24</td><td>0_0_6 </td><td>0_0_15</td><td>0_0_2 </td><td>0_0_5</td></tr>
+	<tr><td>5</td><td>0_0_15</td><td>0_1_14</td><td>0_0_11</td><td>0_1_0</td><td>0_0_13</td><td>0_1_0</td><td>0_0_13</td><td>0_1_0</td><td>0_0_10</td><td>...</td><td>0_0_1</td><td>0_0_27</td><td>0_0_33</td><td>0_0_20</td><td>0_0_36</td><td>0_0_14</td><td>0_0_7 </td><td>0_0_26</td><td>0_0_4 </td><td>0_0_8</td></tr>
+	<tr><td>6</td><td>0_0_12</td><td>0_1_9 </td><td>0_0_9 </td><td>0_1_0</td><td>0_0_11</td><td>0_1_0</td><td>0_0_7 </td><td>0_1_1</td><td>0_0_21</td><td>...</td><td>0_0_0</td><td>0_0_18</td><td>0_0_34</td><td>0_0_8 </td><td>0_0_27</td><td>0_0_18</td><td>0_0_22</td><td>0_0_33</td><td>0_0_2 </td><td>0_0_6</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>spec_tbl_df [154 x 301] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ worm.number                            : num [1:154] 1 2 3 4 5 6 7 8 9 10 ...
+ $ 200707_N2_LUAm1_0M_72hpi               : chr [1:154] &#34;0_0_18&#34; &#34;0_0_18&#34; &#34;0_0_9&#34; &#34;0_0_15&#34; ...
+ $ 200707_N2_LUAm1_10M_72hpi              : chr [1:154] &#34;0_1_7&#34; &#34;0_1_3&#34; &#34;0_1_10&#34; &#34;0_1_8&#34; ...
+ $ 200707_JU1400_LUAm1_0M_72hpi           : chr [1:154] &#34;0_0_10&#34; &#34;0_0_9&#34; &#34;0_0_13&#34; &#34;0_0_10&#34; ...
+ $ 200707_JU1400_LUAm1_10M_72hpi          : chr [1:154] &#34;0_1_0&#34; &#34;0_1_0&#34; &#34;0_1_0&#34; &#34;0_1_0&#34; ...
+ $ 200707_ED3052A_LUAm1_0M_72hpi          : chr [1:154] &#34;0_0_12&#34; &#34;0_0_11&#34; &#34;0_0_14&#34; &#34;0_0_11&#34; ...
+ $ 200707_ED3052A_LUAm1_10M_72hpi         : chr [1:154] &#34;0_1_0&#34; &#34;0_1_0&#34; &#34;0_1_1&#34; &#34;0_1_3&#34; ...
+ $ 200707_ED3052B_LUAm1_0M_72hpi          : chr [1:154] &#34;0_0_5&#34; &#34;0_0_12&#34; &#34;0_0_11&#34; &#34;0_0_9&#34; ...
+ $ 200707_ED3052B_LUAm1_10M_72hpi         : chr [1:154] &#34;0_1_9&#34; &#34;0_1_2&#34; &#34;0_1_4&#34; &#34;0_1_0&#34; ...
+ $ 200707_MY1_LUAm1_0M_72hpi              : chr [1:154] &#34;0_0_11&#34; &#34;0_0_9&#34; &#34;0_0_10&#34; &#34;0_0_11&#34; ...
+ $ 200707_MY1_LUAm1_10M_72hpi             : chr [1:154] &#34;0_1_0&#34; &#34;0_1_0&#34; &#34;0_1_1&#34; &#34;0_1_0&#34; ...
+ $ 200707_N2_MAM1_4M_72hpi                : chr [1:154] &#34;0_1_15&#34; &#34;0_1_18&#34; &#34;0_1_15&#34; &#34;0_1_13&#34; ...
+ $ 200707_JU1400_MAM1_4M_72hpi            : chr [1:154] &#34;1_1_2&#34; &#34;1_1_3&#34; &#34;0_0_8&#34; &#34;0_1_4&#34; ...
+ $ 200707_N2_LUAm3_10M_72hpi              : chr [1:154] &#34;0_1_27&#34; &#34;0_0_7&#34; &#34;0_1_16&#34; &#34;0_1_12&#34; ...
+ $ 200707_JU1400_LUAm3_10M_72hpi          : chr [1:154] &#34;0_1_0&#34; &#34;0_1_0&#34; &#34;0_1_0&#34; &#34;0_1_0&#34; ...
+ $ 200707_N2_AWRm78_3.5M_72hpi            : chr [1:154] &#34;1_1_15&#34; &#34;1_1_4&#34; &#34;1_1_23&#34; &#34;1_1_18&#34; ...
+ $ 200707_JU1400_AWRm78_3.5M_72hpi        : chr [1:154] &#34;0_1_0&#34; &#34;0_0_0&#34; &#34;0_1_3&#34; &#34;1_1_4&#34; ...
+ $ 200707_N2_ERTm5_1.75M_72hpi            : chr [1:154] &#34;1_1_9&#34; &#34;0_1_13&#34; &#34;0_1_0&#34; &#34;1_1_8&#34; ...
+ $ 200707_N2_ERTm5_3.5M_72hpi             : chr [1:154] &#34;1_1_1&#34; &#34;1_1_4&#34; &#34;0_1_12&#34; &#34;1_1_13&#34; ...
+ $ 200707_JU1400_ERTm5_1.75M_72hpi        : chr [1:154] &#34;0_0_3&#34; &#34;0_0_3&#34; &#34;0_0_5&#34; &#34;0_1_8&#34; ...
+  [list output truncated]
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
