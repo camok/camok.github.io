@@ -15274,12 +15274,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Remember we are piping &quot;data&quot; in as the first argument of pivot_longer</span>
@@ -15287,9 +15287,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <span class="c1"># Use the pivot_longer command </span>
 <span class="nf">pivot_longer</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">.</span><span class="p">,</span>                    <span class="c1"># Recall what the &quot;.&quot; represents?</span>
-             <span class="n">cols</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>                 <span class="c1"># The first column is worm.number and we don&#39;t need to pivot that</span>
-             <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;...&quot;</span><span class="p">,</span>           <span class="c1"># The variable where we&#39;ll store columns names</span>
-             <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;...&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>      <span class="c1"># The variable where we&#39;ll store column values</span>
+             <span class="n">cols</span> <span class="o">=</span> <span class="m">2</span><span class="o">:</span><span class="m">301</span><span class="p">,</span>                 <span class="c1"># The first column is worm.number and we don&#39;t need to pivot that</span>
+             <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;experiment&quot;</span><span class="p">,</span>           <span class="c1"># The variable where we&#39;ll store columns names</span>
+             <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;spores_meronts_embryos&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>      <span class="c1"># The variable where we&#39;ll store column values</span>
 
 <span class="c1"># Take a peek at the result</span>
 <span class="nf">head</span><span class="p">()</span>
@@ -15298,6 +15298,45 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>worm.number</th><th scope=col>experiment</th><th scope=col>spores_meronts_embryos</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>200707_N2_LUAm1_0M_72hpi      </td><td>0_0_18</td></tr>
+	<tr><td>1</td><td>200707_N2_LUAm1_10M_72hpi     </td><td>0_1_7 </td></tr>
+	<tr><td>1</td><td>200707_JU1400_LUAm1_0M_72hpi  </td><td>0_0_10</td></tr>
+	<tr><td>1</td><td>200707_JU1400_LUAm1_10M_72hpi </td><td>0_1_0 </td></tr>
+	<tr><td>1</td><td>200707_ED3052A_LUAm1_0M_72hpi </td><td>0_0_12</td></tr>
+	<tr><td>1</td><td>200707_ED3052A_LUAm1_10M_72hpi</td><td>0_1_0 </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
