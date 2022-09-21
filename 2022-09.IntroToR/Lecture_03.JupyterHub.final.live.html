@@ -17035,7 +17035,7 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <span class="nf">mutate</span><span class="p">(</span><span class="n">spores</span> <span class="o">=</span> <span class="nf">as.integer</span><span class="p">(</span><span class="n">spores</span><span class="p">),</span> <span class="n">meronts</span> <span class="o">=</span> <span class="nf">as.integer</span><span class="p">(</span><span class="n">meronts</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1">### 3.1.0 Unite the measurement data again</span>
-<span class="nf">unite</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">,</span> <span class="n">spores</span><span class="p">,</span> <span class="n">meronts</span><span class="p">,</span> <span class="n">embryos</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">unite</span><span class="p">(</span><span class="s">&quot;spores_meronts_embryos&quot;</span><span class="p">,</span> <span class="n">spores</span><span class="p">,</span> <span class="n">meronts</span><span class="p">,</span> <span class="n">embryos</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Remove the previously separate metadata columns. We kept &quot;experiment&quot; so no need to reunite!</span>
 <span class="nf">select</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
