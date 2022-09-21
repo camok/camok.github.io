@@ -17627,7 +17627,7 @@ tibble [276 x 15] (S3: tbl_df/tbl/data.frame)
 <span class="n">split_embryo_long.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Use the inner join on the experiment columns</span>
-<span class="nf">inner_join</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="kc">...</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">inner_join</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">.</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">trimmed_infection_meta.df</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;experiment&quot;</span> <span class="o">=</span> <span class="s">&quot;experiment&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Look at the resulting data structure</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">give.attr</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
