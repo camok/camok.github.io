@@ -16114,12 +16114,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">split_embryo_long.df</span> <span class="o">&lt;-</span>
@@ -16128,10 +16128,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="n">split_embryo_long.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Separate the sporeDose column and drop the &quot;M&quot; units</span>
-<span class="nf">separate</span><span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="n">sporeDose</span><span class="p">,</span> <span class="n">into</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;sporeDose&quot;</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">separate</span><span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="n">sporeDose</span><span class="p">,</span> <span class="n">into</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;sporeDose&quot;</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;M&quot;</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Separate the expTimepoint column and drop the &quot;hpi&quot; units</span>
-<span class="nf">separate</span><span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="n">expTimepoint</span><span class="p">,</span> <span class="n">into</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;expTimepoint&quot;</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">separate</span><span class="p">(</span><span class="n">col</span> <span class="o">=</span> <span class="n">expTimepoint</span><span class="p">,</span> <span class="n">into</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;expTimepoint&quot;</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s">&quot;hpi&quot;</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">embryos</span><span class="p">))</span>
 
@@ -16142,6 +16142,60 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message:
+&#34;Expected 1 pieces. Additional pieces discarded in 46200 rows [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ...].&#34;
+Warning message:
+&#34;Expected 1 pieces. Additional pieces discarded in 46200 rows [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, ...].&#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 10</caption>
+<thead>
+	<tr><th scope=col>worm.number</th><th scope=col>experiment</th><th scope=col>fixingDate</th><th scope=col>wormStrain</th><th scope=col>sporeStrain</th><th scope=col>sporeDose</th><th scope=col>expTimepoint</th><th scope=col>spores</th><th scope=col>meronts</th><th scope=col>embryos</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>200707_N2_LUAm1_0M_72hpi      </td><td>200707</td><td>N2     </td><td>LUAm1</td><td> 0</td><td>72</td><td>FALSE</td><td>FALSE</td><td>18</td></tr>
+	<tr><td>1</td><td>200707_N2_LUAm1_10M_72hpi     </td><td>200707</td><td>N2     </td><td>LUAm1</td><td>10</td><td>72</td><td>FALSE</td><td> TRUE</td><td> 7</td></tr>
+	<tr><td>1</td><td>200707_JU1400_LUAm1_0M_72hpi  </td><td>200707</td><td>JU1400 </td><td>LUAm1</td><td> 0</td><td>72</td><td>FALSE</td><td>FALSE</td><td>10</td></tr>
+	<tr><td>1</td><td>200707_JU1400_LUAm1_10M_72hpi </td><td>200707</td><td>JU1400 </td><td>LUAm1</td><td>10</td><td>72</td><td>FALSE</td><td> TRUE</td><td> 0</td></tr>
+	<tr><td>1</td><td>200707_ED3052A_LUAm1_0M_72hpi </td><td>200707</td><td>ED3052A</td><td>LUAm1</td><td> 0</td><td>72</td><td>FALSE</td><td>FALSE</td><td>12</td></tr>
+	<tr><td>1</td><td>200707_ED3052A_LUAm1_10M_72hpi</td><td>200707</td><td>ED3052A</td><td>LUAm1</td><td>10</td><td>72</td><td>FALSE</td><td> TRUE</td><td> 0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
