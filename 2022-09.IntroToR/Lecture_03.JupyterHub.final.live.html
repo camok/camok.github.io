@@ -17998,12 +17998,12 @@ grouped_df [26 x 3] (S3: grouped_df/tbl_df/tbl/data.frame)
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Save the results of our filtering and joining</span>
@@ -18013,10 +18013,10 @@ grouped_df [26 x 3] (S3: grouped_df/tbl_df/tbl/data.frame)
 <span class="n">wormSporeDose_summary.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Filter the spore dose values</span>
-<span class="nf">filter</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">filter</span><span class="p">(</span><span class="n">sporeDose</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Join this with the spore metadata</span>
-<span class="nf">inner_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;sporeStrain&quot;</span> <span class="o">=</span> <span class="s">&quot;spore.strain&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">inner_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">spore_metadata.df</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;sporeStrain&quot;</span> <span class="o">=</span> <span class="s">&quot;spore.strain&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Sort the data by spore species and then by spore dose</span>
 <span class="nf">arrange</span><span class="p">(</span><span class="n">spore.species</span><span class="p">,</span> <span class="n">sporeStrain</span><span class="p">,</span> <span class="n">sporeDose</span><span class="p">)</span>
@@ -18027,6 +18027,51 @@ grouped_df [26 x 3] (S3: grouped_df/tbl_df/tbl/data.frame)
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A grouped_df: 12 × 7</caption>
+<thead>
+	<tr><th scope=col>sporeStrain</th><th scope=col>sporeDose</th><th scope=col>groupMean</th><th scope=col>spore.species</th><th scope=col>infection.location</th><th scope=col>original.nematode.species</th><th scope=col>original.location</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ERTm2 </td><td> 0.500</td><td> 9.921875</td><td>N. ausubeli   </td><td>intestine</td><td>C. briggsae</td><td>India          </td></tr>
+	<tr><td>ERTm2 </td><td> 1.250</td><td> 1.250000</td><td>N. ausubeli   </td><td>intestine</td><td>C. briggsae</td><td>India          </td></tr>
+	<tr><td>ERTm2 </td><td> 1.500</td><td> 2.111111</td><td>N. ausubeli   </td><td>intestine</td><td>C. briggsae</td><td>India          </td></tr>
+	<tr><td>LUAm1 </td><td>10.000</td><td>11.286667</td><td>N. ferruginous</td><td>epidermis</td><td>C. elegans </td><td>France         </td></tr>
+	<tr><td>LUAm1 </td><td>15.000</td><td> 8.755102</td><td>N. ferruginous</td><td>epidermis</td><td>C. elegans </td><td>France         </td></tr>
+	<tr><td>LUAm1 </td><td>20.000</td><td> 7.700000</td><td>N. ferruginous</td><td>epidermis</td><td>C. elegans </td><td>France         </td></tr>
+	<tr><td>LUAm3 </td><td>10.000</td><td>12.340000</td><td>N. ferruginous</td><td>epidermis</td><td>C. elegans </td><td>France         </td></tr>
+	<tr><td>AWRm78</td><td> 3.500</td><td>11.393333</td><td>N. ironsii    </td><td>intestine</td><td>C. elegans </td><td>Ontario, Canada</td></tr>
+	<tr><td>ERTm5 </td><td> 0.200</td><td>16.340000</td><td>N. ironsii    </td><td>intestine</td><td>C. briggsae</td><td>Hawaii, USA    </td></tr>
+	<tr><td>ERTm5 </td><td> 0.350</td><td>16.200000</td><td>N. ironsii    </td><td>intestine</td><td>C. briggsae</td><td>Hawaii, USA    </td></tr>
+	<tr><td>ERTm5 </td><td> 0.875</td><td>13.220000</td><td>N. ironsii    </td><td>intestine</td><td>C. briggsae</td><td>Hawaii, USA    </td></tr>
+	<tr><td>ERTm5 </td><td> 1.250</td><td>12.600000</td><td>N. ironsii    </td><td>intestine</td><td>C. briggsae</td><td>Hawaii, USA    </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
