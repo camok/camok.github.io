@@ -18087,23 +18087,60 @@ grouped_df [26 x 3] (S3: grouped_df/tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">wormSporeDose_summary.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Use filter to pull out the rows we want to view</span>
-<span class="nf">filter</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">sporeDose</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A grouped_df: 4 × 3</caption>
+<thead>
+	<tr><th scope=col>sporeStrain</th><th scope=col>sporeDose</th><th scope=col>groupMean</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>ERTm1</td><td>0</td><td>20.27463</td></tr>
+	<tr><td>ERTm2</td><td>0</td><td>19.35821</td></tr>
+	<tr><td>ERTm5</td><td>0</td><td>17.96389</td></tr>
+	<tr><td>LUAm1</td><td>0</td><td>17.94635</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -18194,7 +18231,7 @@ grouped_df [26 x 3] (S3: grouped_df/tbl_df/tbl/data.frame)
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># read gapminder_wide.csv</span>
-<span class="n">gapminder_wide</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">)</span>
+<span class="n">gapminder_wide</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/gap&quot;</span><span class="p">)</span>
 
 <span class="c1"># Take a peek at the data</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">gapminder_wide</span><span class="p">)</span>
