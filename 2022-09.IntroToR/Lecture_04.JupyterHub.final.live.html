@@ -51575,24 +51575,54 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Confirm the object type of our multiplot </span>
 <span class="nf">class</span><span class="p">(</span><span class="n">multiplot</span><span class="p">)</span>
 
 <span class="c1"># Save it to a JPEG file for using in our presentations</span>
-<span class="nf">ggsave</span><span class="p">(</span><span class="n">plot</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="s">&quot;data/multiplot.jpg&quot;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="m">200</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">110</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s">&quot;mm&quot;</span><span class="p">)</span>
+<span class="nf">ggsave</span><span class="p">(</span><span class="n">plot</span> <span class="o">=</span> <span class="n">multiplot</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="s">&quot;data/multiplot.jpg&quot;</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="m">200</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">110</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s">&quot;mm&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'gg'</li><li>'ggplot'</li><li>'ggarrange'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -51643,16 +51673,16 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Import the infection metadata</span>
-<span class="n">infection_meta.df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">)</span>
+<span class="n">infection_meta.df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/infection_meta.csv&quot;</span><span class="p">)</span>
 
 <span class="c1">#Take a look at the data structure</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">infection_meta.df</span><span class="p">,</span> <span class="n">give.attr</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
@@ -51661,6 +51691,77 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">276</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">29</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">----------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> &#34;,&#34;
+<span class="ansi-red-fg">chr</span> (10): experiment, experimenter, description, Worm_strain, Spore Strain, ...
+<span class="ansi-green-fg">dbl</span> (19): Infection Date, Plate Number, Total Worms, Lot concentration, Tota...
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>spec_tbl_df [276 x 29] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ experiment       : chr [1:276] &#34;190426_VC20019_LUAm1_0M_72hpi&#34; &#34;190426_VC20019_LUAm1_10M_72hpi&#34; &#34;190426_VC20019_LUAm1_20M_72hpi&#34; &#34;190426_N2_LUAm1_0M_72hpi&#34; ...
+ $ experimenter     : chr [1:276] &#34;CM&#34; &#34;CM&#34; &#34;CM&#34; &#34;CM&#34; ...
+ $ description      : chr [1:276] &#34;Wild isolate phenoMIP retest&#34; &#34;Wild isolate phenoMIP retest&#34; &#34;Wild isolate phenoMIP retest&#34; &#34;Wild isolate phenoMIP retest&#34; ...
+ $ Infection Date   : num [1:276] 190423 190423 190423 190423 190423 ...
+ $ Plate Number     : num [1:276] 1 2 3 4 5 6 7 8 9 10 ...
+ $ Worm_strain      : chr [1:276] &#34;VC20019&#34; &#34;VC20019&#34; &#34;VC20019&#34; &#34;N2&#34; ...
+ $ Total Worms      : num [1:276] 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 ...
+ $ Spore Strain     : chr [1:276] &#34;LUAm1&#34; &#34;LUAm1&#34; &#34;LUAm1&#34; &#34;LUAm1&#34; ...
+ $ Spore Lot        : chr [1:276] &#34;2A&#34; &#34;2A&#34; &#34;2A&#34; &#34;2A&#34; ...
+ $ Lot concentration: num [1:276] 176000 176000 176000 176000 176000 176000 176000 176000 176000 176000 ...
+ $ Total Spores (M) : num [1:276] 0 10 20 0 10 20 0 10 20 0 ...
+ $ Total ul spore   : num [1:276] 0 56.8 113.6 0 56.8 ...
+ $ Infection Round  : num [1:276] 1 1 1 1 1 1 1 1 1 1 ...
+ $ 40X OP50 (mL)    : num [1:276] 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 ...
+ $ Plate Size       : num [1:276] 6 6 6 6 6 6 6 6 6 6 ...
+ $ Spores(M)/cm2    : num [1:276] 0 0.354 0.708 0 0.354 ...
+ $ Time plated      : num [1:276] 1300 1300 1300 1300 1300 1300 1300 1300 1300 1300 ...
+ $ Time Incubated   : num [1:276] 1600 1600 1600 1600 1600 1600 1600 1600 1600 1600 ...
+ $ Temp             : num [1:276] 21 21 21 21 21 21 21 21 21 21 ...
+ $ timepoint        : chr [1:276] &#34;72&#34; &#34;72&#34; &#34;72&#34; &#34;72&#34; ...
+ $ infection.type   : chr [1:276] &#34;continuous&#34; &#34;continuous&#34; &#34;continuous&#34; &#34;continuous&#34; ...
+ $ Fixing Date      : num [1:276] 190426 190426 190426 190426 190426 ...
+ $ Location         : chr [1:276] &#34;Sample exhausted&#34; &#34;Sample exhausted&#34; &#34;Sample exhausted&#34; &#34;Sample exhausted&#34; ...
+ $ Staining Date    : num [1:276] 190513 190513 190513 190430 190513 ...
+ $ Stain type       : chr [1:276] &#34;Sp.9 FISH + DY96&#34; &#34;Sp.9 FISH + DY96&#34; &#34;Sp.9 FISH + DY96&#34; &#34;DY96&#34; ...
+ $ Slide date       : num [1:276] 190515 190515 190515 190501 190515 ...
+ $ Slide number     : num [1:276] 1 2 3 4 5 6 7 8 9 10 ...
+ $ Slide Box        : num [1:276] 2 2 2 2 2 2 2 2 2 2 ...
+ $ Imaging Date     : num [1:276] 190516 190516 190516 190502 190516 ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
