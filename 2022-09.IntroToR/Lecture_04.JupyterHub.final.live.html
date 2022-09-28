@@ -45092,21 +45092,45 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Save the last plot displayed by ggplot</span>
-<span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;data&quot;</span><span class="p">)</span>
+<span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;data/crazy_blue_graph2.png&quot;</span><span class="p">,</span> <span class="n">path</span> <span class="o">=</span> <span class="s">&quot;data&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Saving 6.67 x 6.67 in image
+
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -45127,7 +45151,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Save our altered plot to an object</span>
@@ -45137,7 +45161,7 @@ class="
 <span class="nf">ggsave</span><span class="p">(</span><span class="s">&quot;data/crazy_blue_graph2.pdf&quot;</span><span class="p">,</span> <span class="c1"># The path for our output</span>
        <span class="n">plot</span> <span class="o">=</span> <span class="n">saved_plot</span><span class="p">,</span> <span class="c1"># The object we want to save</span>
        <span class="n">device</span> <span class="o">=</span> <span class="s">&quot;pdf&quot;</span><span class="p">,</span> <span class="c1"># explicitly name the type of file we want to make, despite the name</span>
-       <span class="n">scale</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="m">250</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">110</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s">&quot;...&quot;</span><span class="p">)</span> <span class="c1"># Set some parameters for the final size</span>
+       <span class="n">scale</span> <span class="o">=</span> <span class="m">2</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="m">250</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="m">110</span><span class="p">,</span> <span class="n">units</span> <span class="o">=</span> <span class="s">&quot;mm&quot;</span><span class="p">)</span> <span class="c1"># Set some parameters for the final size</span>
 </pre></div>
 
      </div>
