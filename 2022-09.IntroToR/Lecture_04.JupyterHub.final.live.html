@@ -51778,12 +51778,12 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># save our results to this variable</span>
@@ -51791,13 +51791,13 @@ class="
 <span class="c1"># Pass along the metadata</span>
 <span class="n">infection_meta.df</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Group by worm strain and spore strain</span>
-<span class="nf">group_by</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">group_by</span><span class="p">(</span><span class="n">Worm_strain</span><span class="p">,</span> <span class="n">`Spore Strain`</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Count occurences within each group</span>
-<span class="nf">summarise</span><span class="p">(</span><span class="n">nTotal</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span> <span class="o">%&gt;%</span> 
+<span class="nf">summarise</span><span class="p">(</span><span class="n">nTotal</span> <span class="o">=</span> <span class="nf">n</span><span class="p">())</span>
 <span class="c1"># Ungroup the data</span>
-<span class="nf">ungroup</span><span class="p">()</span> <span class="o">%&gt;%</span> 
-<span class="c1"># Pivot the summary table to move the spore strain names as their own columns</span>
-<span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">values_from</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">values_fill</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span>
+<span class="c1"># ungroup() %&gt;% </span>
+<span class="c1"># # Pivot the summary table to move the spore strain names as their own columns</span>
+<span class="c1"># pivot_wider(names_from = ..., values_from = ..., values_fill = ...)</span>
 
 <span class="c1"># Take a peek at the result</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">infection_combinations.df</span><span class="p">)</span>
@@ -51807,6 +51807,72 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>`summarise()` has grouped output by &#39;Worm_strain&#39;. You can override using the `.groups` argument.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A grouped_df: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>Worm_strain</th><th scope=col>Spore Strain</th><th scope=col>nTotal</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>AB1   </td><td>LUAm1</td><td>3</td></tr>
+	<tr><td>AWR144</td><td>ERTm5</td><td>5</td></tr>
+	<tr><td>AWR144</td><td>LUAm1</td><td>6</td></tr>
+	<tr><td>AWR145</td><td>ERTm5</td><td>5</td></tr>
+	<tr><td>AWR145</td><td>LUAm1</td><td>6</td></tr>
+	<tr><td>CB4856</td><td>ERTm5</td><td>3</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>grouped_df [49 x 3] (S3: grouped_df/tbl_df/tbl/data.frame)
+ $ Worm_strain : chr [1:49] &#34;AB1&#34; &#34;AWR144&#34; &#34;AWR144&#34; &#34;AWR145&#34; ...
+ $ Spore Strain: chr [1:49] &#34;LUAm1&#34; &#34;ERTm5&#34; &#34;LUAm1&#34; &#34;ERTm5&#34; ...
+ $ nTotal      : int [1:49] 3 5 6 5 6 3 3 7 7 3 ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
