@@ -31346,7 +31346,7 @@ class="
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">)</span> <span class="o">+</span>
     <span class="c1"># 2. Aesthetics</span>
     <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">experiment</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">normEmb</span><span class="p">)</span> <span class="o">+</span> <span class="c1"># Break data up by experiment along the x-axis</span>
-    <span class="nf">theme</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">+</span>  <span class="c1">### 2.5.1 Rotate the x-axis text</span>
+    <span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">())</span> <span class="o">+</span>  <span class="c1">### 2.5.1 Rotate the x-axis text</span>
     <span class="c1"># 4. Geoms</span>
     <span class="nf">geom_boxplot</span><span class="p">()</span>        <span class="c1"># 2.5.0 Switch over to a boxplot geom</span>
 </pre></div>
