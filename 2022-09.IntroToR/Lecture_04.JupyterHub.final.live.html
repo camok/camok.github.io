@@ -23337,7 +23337,7 @@ class="
 <span class="c1"># We only need to select a few columns from our data - enough to properly join to the original data.</span>
 <span class="nf">select</span><span class="p">(</span><span class="n">`Infection Date`</span><span class="p">,</span> <span class="n">wormStrain</span><span class="p">,</span> <span class="n">expTimepoint</span><span class="p">,</span> <span class="n">meanEmb</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Join the data with the original with the normalization information</span>
-<span class="nf">inner_join</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">inner_join</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">embryo_long.df</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">.</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Normalize the data</span>
 <span class="nf">mutate</span><span class="p">(</span><span class="n">normEmb</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span>
 
