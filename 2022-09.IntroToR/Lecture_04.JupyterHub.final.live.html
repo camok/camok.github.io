@@ -46648,7 +46648,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">##----------## Alter our KDE ##----------##</span>
@@ -46660,9 +46660,9 @@ class="
     <span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">)</span> <span class="o">+</span>
         <span class="c1"># 2. Aesthetics</span>
         <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">normEmb</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">`Infection Date`</span><span class="p">)</span> <span class="o">+</span> 
-        <span class="nf">theme</span><span class="p">(</span><span class="n">legend.justification</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span>           <span class="c1"># Set the anchor position of the legend box.</span>
-              <span class="n">legend.position</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span>                <span class="c1"># Reposition the legend based on its anchor to the top right</span>
-              <span class="n">legend.background</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>   <span class="c1"># Remove the background of the legend</span>
+        <span class="nf">theme</span><span class="p">(</span><span class="n">legend.justification</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span>           <span class="c1"># Set the anchor position of the legend box.</span>
+              <span class="n">legend.position</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">),</span>                <span class="c1"># Reposition the legend based on its anchor to the top right</span>
+              <span class="n">legend.background</span> <span class="o">=</span> <span class="nf">element_blank</span><span class="p">(),</span>   <span class="c1"># Remove the background of the legend</span>
               <span class="n">plot.title</span> <span class="o">=</span> <span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">,</span> <span class="n">size</span> <span class="o">=</span> <span class="m">18</span><span class="p">))</span> <span class="o">+</span> 
 
         <span class="c1"># Add a title and axis labels</span>
