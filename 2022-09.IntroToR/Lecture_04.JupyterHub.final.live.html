@@ -23312,12 +23312,12 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">embryo_norm.df</span> <span class="o">&lt;-</span>
@@ -23339,7 +23339,7 @@ class="
 <span class="c1"># Join the data with the original with the normalization information</span>
 <span class="nf">inner_join</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">embryo_long.df</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">.</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Normalize the data</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">normEmb</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">normEmb</span> <span class="o">=</span> <span class="n">embryos</span><span class="o">/</span><span class="n">meanEmb</span><span class="p">)</span>
 
 <span class="c1"># Take a look at the resulting dataframe</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">embryo_norm.df</span><span class="p">)</span>
@@ -23348,6 +23348,57 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Joining, by = c(&#34;Infection Date&#34;, &#34;wormStrain&#34;, &#34;expTimepoint&#34;)
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 21</caption>
+<thead>
+	<tr><th scope=col>experiment</th><th scope=col>worm.number</th><th scope=col>Infection Date</th><th scope=col>wormStrain</th><th scope=col>sporeStrain</th><th scope=col>sporeDose</th><th scope=col>Spores(M)/cm2</th><th scope=col>doseLevel</th><th scope=col>spores</th><th scope=col>meronts</th><th scope=col>...</th><th scope=col>expTimepoint</th><th scope=col>infection.type</th><th scope=col>Total Worms</th><th scope=col>Plate Size</th><th scope=col>fixingDate</th><th scope=col>Staining Date</th><th scope=col>Slide date</th><th scope=col>Imaging Date</th><th scope=col>meanEmb</th><th scope=col>normEmb</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>&lt;lgl&gt;</th><th scope=col>...</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>200707_N2_LUAm1_0M_72hpi      </td><td>1</td><td>200704</td><td>N2     </td><td>LUAm1</td><td> 0</td><td>0.000000</td><td>Mock  </td><td>FALSE</td><td>FALSE</td><td>...</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td><td>16.30</td><td>1.1042945</td></tr>
+	<tr><td>200707_N2_LUAm1_10M_72hpi     </td><td>1</td><td>200704</td><td>N2     </td><td>LUAm1</td><td>10</td><td>0.353857</td><td>Medium</td><td>FALSE</td><td> TRUE</td><td>...</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td><td>16.30</td><td>0.4294479</td></tr>
+	<tr><td>200707_JU1400_LUAm1_0M_72hpi  </td><td>1</td><td>200704</td><td>JU1400 </td><td>LUAm1</td><td> 0</td><td>0.000000</td><td>Mock  </td><td>FALSE</td><td>FALSE</td><td>...</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td><td> 9.68</td><td>1.0330579</td></tr>
+	<tr><td>200707_JU1400_LUAm1_10M_72hpi </td><td>1</td><td>200704</td><td>JU1400 </td><td>LUAm1</td><td>10</td><td>0.353857</td><td>Medium</td><td>FALSE</td><td> TRUE</td><td>...</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td><td> 9.68</td><td>0.0000000</td></tr>
+	<tr><td>200707_ED3052A_LUAm1_0M_72hpi </td><td>1</td><td>200704</td><td>ED3052A</td><td>LUAm1</td><td> 0</td><td>0.000000</td><td>Mock  </td><td>FALSE</td><td>FALSE</td><td>...</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td><td>10.68</td><td>1.1235955</td></tr>
+	<tr><td>200707_ED3052A_LUAm1_10M_72hpi</td><td>1</td><td>200704</td><td>ED3052A</td><td>LUAm1</td><td>10</td><td>0.353857</td><td>Medium</td><td>FALSE</td><td> TRUE</td><td>...</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td><td>10.68</td><td>0.0000000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
