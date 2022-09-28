@@ -23096,7 +23096,7 @@ class="
 
 <span class="c1"># Add our data points to the ggplot object</span>
 <span class="n">infection_sig.df</span> <span class="o">%&gt;%</span> 
-<span class="kc">...</span> <span class="o">%&gt;%</span> 
+<span class="nf">mutate</span><span class="p">(</span><span class="n">strain</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">strain</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;N2&quot;</span><span class="p">)))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># 1. Data</span>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">.</span><span class="p">)</span> <span class="o">+</span> 
