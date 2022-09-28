@@ -51896,12 +51896,12 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Replace our combo information with the new values of either 0 or 1</span>
@@ -51909,8 +51909,8 @@ class="
 <span class="c1"># Pass the combinations tibble</span>
 <span class="n">infection_combinations.df</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Mutate columns 2-11</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="nf">across</span><span class="p">(</span><span class="n">.cols</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> 
-              <span class="n">.fns</span> <span class="o">=</span> <span class="kc">...</span><span class="p">))</span> <span class="c1"># Define our function by casting a conditional result to numeric</span>
+<span class="nf">mutate</span><span class="p">(</span><span class="nf">across</span><span class="p">(</span><span class="n">.cols</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">11</span><span class="p">),</span> 
+              <span class="n">.fns</span> <span class="o">=</span> <span class="o">~</span> <span class="nf">as.numeric</span><span class="p">(</span><span class="n">.x</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)))</span> <span class="c1"># Define our function by casting a conditional result to numeric</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">infection_combinations.df</span><span class="p">)</span>
 </pre></div>
@@ -51918,6 +51918,45 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 11</caption>
+<thead>
+	<tr><th scope=col>Worm_strain</th><th scope=col>LUAm1</th><th scope=col>ERTm5</th><th scope=col>AWRm78</th><th scope=col>ERTm5-96H</th><th scope=col>LUAm1-HK</th><th scope=col>LUAm1-pel</th><th scope=col>LUAm1-sup</th><th scope=col>LUAm3</th><th scope=col>MAM1</th><th scope=col>ERTm2</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>AB1    </td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>AWR144 </td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>AWR145 </td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>CB4856 </td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>ED3042 </td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>ED3052A</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
