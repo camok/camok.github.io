@@ -23243,7 +23243,7 @@ class="
 <span class="c1"># Grab the mean embryo count for each exp and make that a new column</span>
 <span class="nf">mutate</span><span class="p">(</span><span class="n">meanEmb</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">embryos</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Grab the first entry of each group</span>
-<span class="nf">group_modify</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">group_modify</span><span class="p">(</span><span class="n">.data</span> <span class="o">=</span> <span class="n">.</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Take a peek at the resulting tables</span>
 <span class="nf">head</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
 </pre></div>
