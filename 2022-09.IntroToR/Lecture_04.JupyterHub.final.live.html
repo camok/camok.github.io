@@ -15887,19 +15887,19 @@ class="
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Update our dataframe to convert some variables to factors</span>
 <span class="n">infection_sig.df</span> <span class="o">&lt;-</span>
 <span class="n">infection_sig.df</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Use the mutate function to replace variables with factor versions of themselves</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">strain</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> 
+<span class="nf">mutate</span><span class="p">(</span><span class="n">strain</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">strain</span><span class="p">),</span> 
        <span class="n">spore.strain</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">spore.strain</span><span class="p">),</span> 
        <span class="n">spore.species</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">spore.species</span><span class="p">),</span>
        <span class="n">fixing.date</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">fixing.date</span><span class="p">),</span> 
@@ -15912,6 +15912,43 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [456 x 14] (S3: tbl_df/tbl/data.frame)
+ $ exp.name        : chr [1:456] &#34;N2-LUAm1-1.8&#34; &#34;N2-LUAm1-1.8&#34; &#34;N2-LUAm1-1.8&#34; &#34;N2-LUAm1-1.8&#34; ...
+ $ strain          : Factor w/ 4 levels &#34;AWR144&#34;,&#34;AWR145&#34;,..: 4 4 4 4 4 4 4 4 4 4 ...
+ $ spore.strain    : Factor w/ 1 level &#34;LUAm1&#34;: 1 1 1 1 1 1 1 1 1 1 ...
+ $ spore.species   : Factor w/ 1 level &#34;N.ferruginous&#34;: 1 1 1 1 1 1 1 1 1 1 ...
+ $ dose            : Factor w/ 1 level &#34;pulse-72H&#34;: 1 1 1 1 1 1 1 1 1 1 ...
+ $ spores          : num [1:456] 1.8 1.8 1.8 1.8 1.8 1.8 1.8 1.8 1.8 1.8 ...
+ $ fixing.date     : Factor w/ 3 levels &#34;rep1&#34;,&#34;rep2&#34;,..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ slide           : num [1:456] 1 1 1 1 1 1 1 1 1 1 ...
+ $ file            : chr [1:456] &#34;N2.LUAm1.rep1&#34; &#34;N2.LUAm1.rep1&#34; &#34;N2.LUAm1.rep1&#34; &#34;N2.LUAm1.rep1&#34; ...
+ $ worm.number     : num [1:456] 1 2 3 4 5 6 7 8 9 10 ...
+ $ area            : num [1:456] 49838 50425 45533 46459 49215 ...
+ $ percent.infected: num [1:456] 18.53 0 31.16 3.88 0 ...
+ $ area.infected   : num [1:456] 9235 0 14188 1803 0 ...
+ $ timepoint       : chr [1:456] &#34;72hpi&#34; &#34;72hpi&#34; &#34;72hpi&#34; &#34;72hpi&#34; ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
