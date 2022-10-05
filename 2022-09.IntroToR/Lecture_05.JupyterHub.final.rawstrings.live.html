@@ -19553,12 +19553,12 @@ Traceback:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Now use do.call</span>
@@ -19571,6 +19571,45 @@ Traceback:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A data.frame: 6 × 4</caption>
+<thead>
+	<tr><th></th><th scope=col>V2</th><th scope=col>V3</th><th scope=col>V4</th><th scope=col>V5</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>NP_683696.2   </td><td>forkhead box protein P2 isoform II </td><td>Homo</td><td>sapiens</td></tr>
+	<tr><th scope=row>2</th><td>NP_683697.2   </td><td>forkhead box protein P2 isoform III</td><td>Homo</td><td>sapiens</td></tr>
+	<tr><th scope=row>3</th><td>NP_683698.2   </td><td>forkhead box protein P2 isoform IV </td><td>Homo</td><td>sapiens</td></tr>
+	<tr><th scope=row>4</th><td>NP_001166238.1</td><td>forkhead box protein P2 isoform VI </td><td>Homo</td><td>sapiens</td></tr>
+	<tr><th scope=row>5</th><td>NP_001166237.1</td><td>forkhead box protein P2 isoform V  </td><td>Homo</td><td>sapiens</td></tr>
+	<tr><th scope=row>6</th><td>NP_055306.1   </td><td>forkhead box protein P2 isoform I  </td><td>Homo</td><td>sapiens</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -19586,16 +19625,16 @@ Traceback:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># rename the columns &quot;Accession_number&quot;, &quot;Protein_info&quot;, &quot;Genus&quot;, and &quot;Species&quot;</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">header.df</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Accession_number&quot;</span><span class="p">,</span> <span class="s">&quot;Protein_info&quot;</span><span class="p">,</span> <span class="s">&quot;Genus&quot;</span><span class="p">,</span> <span class="s">&quot;Species&quot;</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">header.df</span><span class="p">)</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;Accession_number&quot;</span><span class="p">,</span> <span class="s">&quot;Protein_info&quot;</span><span class="p">,</span> <span class="s">&quot;Genus&quot;</span><span class="p">,</span> <span class="s">&quot;Species&quot;</span><span class="p">)</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">header.df</span><span class="p">,</span><span class="m">2</span><span class="p">)</span>
 </pre></div>
@@ -19603,6 +19642,41 @@ Traceback:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A data.frame: 2 × 4</caption>
+<thead>
+	<tr><th></th><th scope=col>Accession_number</th><th scope=col>Protein_info</th><th scope=col>Genus</th><th scope=col>Species</th></tr>
+	<tr><th></th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>NP_683696.2</td><td>forkhead box protein P2 isoform II </td><td>Homo</td><td>sapiens</td></tr>
+	<tr><th scope=row>2</th><td>NP_683697.2</td><td>forkhead box protein P2 isoform III</td><td>Homo</td><td>sapiens</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -19623,12 +19697,12 @@ Traceback:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Take a closer look at our tibble</span>
@@ -19640,12 +19714,37 @@ Traceback:
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [68 x 2] (S3: tbl_df/tbl/data.frame)
+ $ V1: chr [1:68] &#34;NP_683696.2 forkhead box protein P2 isoform II Homo sapiens&#34; &#34;NP_683697.2 forkhead box protein P2 isoform III Homo sapiens&#34; &#34;NP_683698.2 forkhead box protein P2 isoform IV Homo sapiens&#34; &#34;NP_001166238.1 forkhead box protein P2 isoform VI Homo sapiens&#34; ...
+ $ V2: chr [1:68] &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQELLPETKLCICGHSSGDGHPH&#34;| __truncated__ &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQI&#34;| __truncated__ &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQI&#34;| __truncated__ &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQELLPETKLCICGHSSGDGHPH&#34;| __truncated__ ...
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Confirm what our sequence data looks like</span>
@@ -19655,6 +19754,32 @@ Traceback:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre><span class="ansi-black-intense-fg"># A tibble: 1 x 1</span>
+  V2                                                                            
+  <span class="ansi-black-intense-fg">&lt;chr&gt;</span>                                                                         
+<span class="ansi-black-intense-fg">1</span> <span class="ansi-black-intense-fg">&#34;</span>MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSG~
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
