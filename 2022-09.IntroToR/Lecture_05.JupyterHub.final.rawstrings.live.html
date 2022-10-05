@@ -20432,21 +20432,21 @@ Traceback:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[80]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">infection.df</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Let&#39;s make sure all words in our names are separated with a space</span>
 <span class="nf">rename_with</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">.fn</span> <span class="o">=</span> <span class="o">~</span> <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">string</span> <span class="o">=</span> <span class="n">.x</span><span class="p">,</span> <span class="n">pattern</span> <span class="o">=</span> <span class="n">r</span><span class="s">&quot;(\.|_)&quot;</span><span class="p">,</span> <span class="n">replacement</span> <span class="o">=</span> <span class="s">&quot; &quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 <span class="c1">### 5.2.0 Make sure all of the words begin with a capital letter</span>
-<span class="nf">rename_with</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">.fn</span> <span class="o">=</span> <span class="o">~</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">rename_with</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">.fn</span> <span class="o">=</span> <span class="o">~</span> <span class="nf">str_to_title</span><span class="p">(</span><span class="n">.x</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 <span class="c1">### 5.2.0 now bring all of the words together</span>
-<span class="nf">rename_with</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">.fn</span> <span class="o">=</span> <span class="o">~</span> <span class="nf">...</span><span class="p">(</span><span class="n">.x</span><span class="p">,</span> <span class="n">pattern</span> <span class="o">=</span> <span class="n">r</span><span class="s">&quot;(\s)&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+<span class="nf">rename_with</span><span class="p">(</span><span class="n">.</span><span class="p">,</span> <span class="n">.fn</span> <span class="o">=</span> <span class="o">~</span> <span class="nf">str_remove_all</span><span class="p">(</span><span class="n">.x</span><span class="p">,</span> <span class="n">pattern</span> <span class="o">=</span> <span class="n">r</span><span class="s">&quot;(\s)&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 <span class="c1"># Look at the column names</span>
 <span class="nf">colnames</span><span class="p">()</span>
 </pre></div>
@@ -20454,6 +20454,36 @@ Traceback:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Experiment'</li><li>'Experimenter'</li><li>'Description'</li><li>'InfectionDate'</li><li>'PlateNumber'</li><li>'WormStrain'</li><li>'TotalWorms'</li><li>'SporeStrain'</li><li>'SporeLot'</li><li>'LotConcentration'</li><li>'TotalSpores(M)'</li><li>'TotalUlSpore'</li><li>'InfectionRound'</li><li>'40xOp50(Ml)'</li><li>'PlateSize'</li><li>'Spores(M)/Cm2'</li><li>'TimePlated'</li><li>'TimeIncubated'</li><li>'Temp'</li><li>'Timepoint'</li><li>'InfectionType'</li><li>'FixingDate'</li><li>'Location'</li><li>'StainingDate'</li><li>'StainType'</li><li>'SlideDate'</li><li>'SlideNumber'</li><li>'SlideBox'</li><li>'ImagingDate'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
