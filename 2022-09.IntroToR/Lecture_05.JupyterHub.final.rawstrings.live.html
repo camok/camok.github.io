@@ -16489,24 +16489,91 @@ TRUE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># try out string locate on mrna</span>
 <span class="nf">str_locate</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="n">mrna</span><span class="p">,</span> <span class="n">mrna</span><span class="p">),</span> <span class="s">&quot;AUG&quot;</span><span class="p">)</span>
 
 <span class="c1"># vs string locate all on mrna</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">mrna</span><span class="p">,</span> <span class="s">&quot;AUG&quot;</span><span class="p">)</span>
+<span class="nf">str_locate_all</span><span class="p">(</span><span class="n">mrna</span><span class="p">,</span> <span class="s">&quot;AUG&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 2 × 2 of type int</caption>
+<thead>
+	<tr><th scope=col>start</th><th scope=col>end</th></tr>
+</thead>
+<tbody>
+	<tr><td>90</td><td>92</td></tr>
+	<tr><td>90</td><td>92</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<ol>
+	<li><table class="dataframe">
+<caption>A matrix: 9 × 2 of type int</caption>
+<thead>
+	<tr><th scope=col>start</th><th scope=col>end</th></tr>
+</thead>
+<tbody>
+	<tr><td>  90</td><td>  92</td></tr>
+	<tr><td> 139</td><td> 141</td></tr>
+	<tr><td> 146</td><td> 148</td></tr>
+	<tr><td> 192</td><td> 194</td></tr>
+	<tr><td> 608</td><td> 610</td></tr>
+	<tr><td> 759</td><td> 761</td></tr>
+	<tr><td> 808</td><td> 810</td></tr>
+	<tr><td> 815</td><td> 817</td></tr>
+	<tr><td>1003</td><td>1005</td></tr>
+</tbody>
+</table>
+</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
