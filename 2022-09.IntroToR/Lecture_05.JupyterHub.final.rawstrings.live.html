@@ -19108,14 +19108,14 @@ DDREIEEEPLSEDLE                         </td></tr>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># What happens if we call rbind?</span>
 <span class="nf">rbind</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span> <span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
 
 <span class="c1"># What about rbind.data.frame?</span>
-<span class="nf">rbind.data</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span> <span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
+<span class="nf">rbind.data.frame</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span> <span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -19140,6 +19140,30 @@ DDREIEEEPLSEDLE                         </td></tr>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 <table class="dataframe">
 <caption>A matrix: 2 × 4 of type chr</caption>
+<tbody>
+	<tr><td>NP_683696.2</td><td>forkhead box protein P2 isoform II </td><td>Homo</td><td>sapiens</td></tr>
+	<tr><td>NP_683697.2</td><td>forkhead box protein P2 isoform III</td><td>Homo</td><td>sapiens</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A data.frame: 2 × 4</caption>
+<thead>
+	<tr><th scope=col>c..NP_683696.2....NP_683697.2..</th><th scope=col>c..forkhead.box.protein.P2.isoform.II....forkhead.box.protein.P2.isoform.III.</th><th scope=col>c..Homo....Homo..</th><th scope=col>c..sapiens....sapiens..</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
 <tbody>
 	<tr><td>NP_683696.2</td><td>forkhead box protein P2 isoform II </td><td>Homo</td><td>sapiens</td></tr>
 	<tr><td>NP_683697.2</td><td>forkhead box protein P2 isoform III</td><td>Homo</td><td>sapiens</td></tr>
@@ -19180,7 +19204,7 @@ DDREIEEEPLSEDLE                         </td></tr>
 
 <span class="nf">rm</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c1">## remove any previous instances of i</span>
 
-<span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="kc">...</span><span class="p">){</span>
+<span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">2</span><span class="o">:</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">)</span><span class="m">-1</span><span class="p">)){</span>
 
     <span class="n">header.df</span> <span class="o">&lt;-</span> <span class="nf">rbind.data.frame</span><span class="p">(</span><span class="n">header.df</span><span class="p">,</span> <span class="n">fasta_header</span><span class="p">[[</span><span class="kc">...</span><span class="p">]][,</span> <span class="m">-1</span><span class="p">])</span>
 <span class="p">}</span>
