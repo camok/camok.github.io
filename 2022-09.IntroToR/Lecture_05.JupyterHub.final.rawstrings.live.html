@@ -19497,22 +19497,46 @@ Traceback:
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># If we use do.call, it breaks the elements out of the list before passing them all at once to sum()</span>
 <span class="c1"># Note that we are providing the function name, &quot;sum&quot;, not calling on the function using &quot;sum()&quot;</span>
-<span class="kc">...</span>
+<span class="nf">do.call</span><span class="p">(</span><span class="n">sum</span><span class="p">,</span> <span class="n">listNum</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+231
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -19538,7 +19562,7 @@ Traceback:
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Now use do.call</span>
-<span class="n">header.df</span> <span class="o">&lt;-</span> <span class="nf">do.call</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="n">header.df</span> <span class="o">&lt;-</span> <span class="nf">do.call</span><span class="p">(</span><span class="n">rbind.data.frame</span><span class="p">,</span> <span class="n">fasta_header</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="nf">select</span><span class="p">(</span><span class="m">-1</span><span class="p">)</span> <span class="c1"># remember you need to get rid of the first column</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">header.df</span><span class="p">)</span>
