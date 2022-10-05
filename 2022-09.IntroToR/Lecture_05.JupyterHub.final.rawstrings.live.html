@@ -18556,16 +18556,16 @@ DDREIEEEPLSEDLE                         </td></tr>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Use which to filter out duplicated copies</span>
-<span class="n">header_seq_subset</span> <span class="o">&lt;-</span> <span class="n">header_seq_fasta</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">header_seq_fasta</span><span class="p">[,</span><span class="m">2</span><span class="p">]))]</span>
+<span class="n">header_seq_subset</span> <span class="o">&lt;-</span> <span class="n">header_seq_fasta</span><span class="p">[</span><span class="o">-</span><span class="nf">which</span><span class="p">(</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">header_seq_fasta</span><span class="p">[,</span><span class="m">2</span><span class="p">])),]</span>
 
 <span class="c1"># Take a look at the resulting subset</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">header_seq_subset</span><span class="p">)</span>
@@ -18574,6 +18574,31 @@ DDREIEEEPLSEDLE                         </td></tr>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [68 x 2] (S3: tbl_df/tbl/data.frame)
+ $ V1: chr [1:68] &#34;NP_683696.2 forkhead box protein P2 isoform II Homo sapiens&#34; &#34;NP_683697.2 forkhead box protein P2 isoform III Homo sapiens&#34; &#34;NP_683698.2 forkhead box protein P2 isoform IV Homo sapiens&#34; &#34;NP_001166238.1 forkhead box protein P2 isoform VI Homo sapiens&#34; ...
+ $ V2: chr [1:68] &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQELLPETKLCICGHSSGDGHPH&#34;| __truncated__ &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQI&#34;| __truncated__ &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQI&#34;| __truncated__ &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQELLPETKLCICGHSSGDGHPH&#34;| __truncated__ ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -18593,18 +18618,18 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Use filter to remove duplicated entries</span>
 <span class="n">header_seq_subset</span> <span class="o">&lt;-</span> 
 <span class="n">header_seq_fasta</span> <span class="o">%&gt;%</span>           <span class="c1"># Pass the header/seq data to filter</span>
-<span class="nf">filter</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>     <span class="c1"># identify the duplicated entries and filter on the negated result</span>
+<span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">.</span><span class="p">[,</span><span class="m">2</span><span class="p">]))</span>     <span class="c1"># identify the duplicated entries and filter on the negated result</span>
 
 <span class="nf">str</span><span class="p">(</span><span class="n">header_seq_subset</span><span class="p">)</span>
 </pre></div>
@@ -18612,6 +18637,31 @@ DDREIEEEPLSEDLE                         </td></tr>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [68 x 2] (S3: tbl_df/tbl/data.frame)
+ $ V1: chr [1:68] &#34;NP_683696.2 forkhead box protein P2 isoform II Homo sapiens&#34; &#34;NP_683697.2 forkhead box protein P2 isoform III Homo sapiens&#34; &#34;NP_683698.2 forkhead box protein P2 isoform IV Homo sapiens&#34; &#34;NP_001166238.1 forkhead box protein P2 isoform VI Homo sapiens&#34; ...
+ $ V2: chr [1:68] &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQELLPETKLCICGHSSGDGHPH&#34;| __truncated__ &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQI&#34;| __truncated__ &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQI&#34;| __truncated__ &#34;MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQELLPETKLCICGHSSGDGHPH&#34;| __truncated__ ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
