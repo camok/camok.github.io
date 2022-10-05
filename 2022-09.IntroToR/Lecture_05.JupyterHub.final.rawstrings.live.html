@@ -18767,7 +18767,7 @@ DDREIEEEPLSEDLE                         </td></tr>
 <div class=" highlight hl-r"><pre><span></span><span class="n">fasta_header</span> <span class="o">&lt;-</span>
 <span class="n">header_seq_subset</span> <span class="o">%&gt;%</span>    <span class="c1"># Pass along the data frame</span>
 <span class="nf">pull</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="o">%&gt;%</span>              <span class="c1"># Retrieve just a single column (vs select) as a vector</span>
-<span class="nf">str_match_all</span><span class="p">()</span>      <span class="c1"># Use the power of regex and greedy matching</span>
+<span class="nf">str_match_all</span><span class="p">(</span><span class="n">r</span><span class="s">&quot;(^(\w+\.\d)\s(.+)\s(\w+)\s())&quot;</span><span class="p">)</span>      <span class="c1"># Use the power of regex and greedy matching</span>
 
 <span class="c1"># Take a look at the last few rows of our result</span>
 <span class="nf">tail</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
