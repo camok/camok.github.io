@@ -18832,12 +18832,12 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Look at the first entry of fasta_header</span>
@@ -18845,15 +18845,107 @@ DDREIEEEPLSEDLE                         </td></tr>
 
 <span class="c1"># Two ways to drop the first column</span>
 <span class="nf">print</span><span class="p">(</span><span class="s">&quot;Select our columns specifically...&quot;</span><span class="p">)</span>
-<span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,]</span>
+<span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="s">&quot;Leave a column behind&quot;</span><span class="p">)</span>
-<span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="kc">...</span><span class="p">]</span>
+<span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span> <span class="m">-1</span><span class="p">]</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 1 × 5 of type chr</caption>
+<tbody>
+	<tr><td>NP_683696.2 forkhead box protein P2 isoform II Homo sapiens</td><td>NP_683696.2</td><td>forkhead box protein P2 isoform II</td><td>Homo</td><td>sapiens</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;Select our columns specifically...&#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'NP_683696.2'</li><li>'forkhead box protein P2 isoform II'</li><li>'Homo'</li><li>'sapiens'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;Leave a column behind&#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'NP_683696.2'</li><li>'forkhead box protein P2 isoform II'</li><li>'Homo'</li><li>'sapiens'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -18873,24 +18965,84 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Convert the results of str_match_all into a data frame</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">])</span>
+<span class="nf">data.frame</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">])</span>
 
 <span class="c1"># You need to transpose the trimmed data for proper coercion</span>
-<span class="nf">data.frame</span><span class="p">(</span><span class="nf">...</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span> <span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]))</span>
+<span class="nf">data.frame</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span> <span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A data.frame: 4 × 1</caption>
+<thead>
+	<tr><th scope=col>fasta_header..1.....2.5.</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>NP_683696.2                       </td></tr>
+	<tr><td>forkhead box protein P2 isoform II</td></tr>
+	<tr><td>Homo                              </td></tr>
+	<tr><td>sapiens                           </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A data.frame: 1 × 4</caption>
+<thead>
+	<tr><th scope=col>X1</th><th scope=col>X2</th><th scope=col>X3</th><th scope=col>X4</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>NP_683696.2</td><td>forkhead box protein P2 isoform II</td><td>Homo</td><td>sapiens</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
