@@ -18298,12 +18298,12 @@ NAATWKNAVRHNLSLHKCF
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Break each entry into 2 columns with str_split_fixed and save it</span>
@@ -18313,7 +18313,7 @@ NAATWKNAVRHNLSLHKCF
 <span class="nf">str_split</span><span class="p">(</span><span class="n">r</span><span class="s">&quot;(\r\n\r\n)&quot;</span><span class="p">)</span>  <span class="o">%&gt;%</span> <span class="c1"># Use str_split to break up the line breaks. On unix you can use \\n\\n</span>
 <span class="nf">unlist</span><span class="p">()</span>  <span class="o">%&gt;%</span> <span class="c1"># You need to unlist the result to work with easier</span>
 <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;^&gt;&quot;</span><span class="p">,</span> <span class="n">replacement</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>  <span class="c1"># remove the &quot;&gt;&quot; from the start of each entry</span>
-<span class="nf">str_split_fixed</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="c1"># Split the string by the first occurence of our pattern</span>
+<span class="nf">str_split_fixed</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="n">r</span><span class="s">&quot;(\r\n)&quot;</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="m">2</span><span class="p">)</span> <span class="c1"># Split the string by the first occurence of our pattern</span>
 
 <span class="nf">class</span><span class="p">(</span><span class="n">header_seq_fasta</span><span class="p">)</span>
 </pre></div>
@@ -18321,6 +18321,36 @@ NAATWKNAVRHNLSLHKCF
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'matrix'</li><li>'array'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -18336,18 +18366,18 @@ NAATWKNAVRHNLSLHKCF
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Convert the object to a tibble and overwrite it to the original header_seq_fasta</span>
 <span class="n">header_seq_fasta</span> <span class="o">&lt;-</span>
 <span class="n">header_seq_fasta</span> <span class="o">%&gt;%</span> 
-<span class="kc">...</span>           <span class="c1"># Notice that this casting doesn&#39;t use the same &quot;as.object()&quot; format but rather as_object()</span>
+<span class="nf">as_tibble</span><span class="p">()</span>           <span class="c1"># Notice that this casting doesn&#39;t use the same &quot;as.object()&quot; format but rather as_object()</span>
 
 <span class="c1"># double check that the conversion worked</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">header_seq_fasta</span><span class="p">)</span>
@@ -18356,6 +18386,113 @@ NAATWKNAVRHNLSLHKCF
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message:
+&#34;The `x` argument of `as_tibble.matrix()` must have unique column names if `.name_repair` is omitted as of tibble 2.0.0.
+Using compatibility `.name_repair`.
+<span class="ansi-black-intense-fg">This warning is displayed once every 8 hours.</span>
+<span class="ansi-black-intense-fg">Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</span>&#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 2</caption>
+<thead>
+	<tr><th scope=col>V1</th><th scope=col>V2</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>NP_683696.2 forkhead box protein P2 isoform II Homo sapiens   </td><td>MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT
+SGLKSPKSSDKQRPLQELLPETKLCICGHSSGDGHPHNTFAVPVSVAMMTPQVITPQQMQQILQQQVLSP
+QQLQALLQQQQAVMLQQQQLQEFYKKQQEQLHLQLLQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQHPGKQAKEQQQQQQQQQQLAAQQLVFQQQLLQMQQLQQQQHLLSLQRQGLISIPPGQAALPVQS
+LPQAGLSPAEIQQLWKEVTGVHSMEDNGIKHGGLDLTTNNSSSTTSSNTSKASPPITHHSIVNGQSSVLS
+ARRDSSSHEETGASHTLYGHGVCKWPGCESICEDFGQFLKHLNNEHALDDRSTAQCRVQMQVVQQLEIQL
+SKERERLQAMMTHLHMRPSEPKPSPKPLNLVSSVTMSKNMLETSPQSLPQTPTTPTAPVTPITQGPSVIT
+PASVPNVGAIRRRHSDKYNIPMSSEIAPNYEFYKNADVRPPFTYATLIRQAIMESSDRQLTLNEIYSWFT
+RTFAYFRRNAATWKNAVRHNLSLHKCFVRVENVKGAVWTVDEVEYQKRRSQKITGSPTLVKNIPTSLGYG
+AALNASLQAALAESSLPLLSNPGLINNASSGLLQAVHEDLNGSLDHIDSNGNSSPGCSPQPHIHSIHVKE
+EPVIAEDEDCPMSLVTTANHSPELEDDREIEEEPLSEDLE</td></tr>
+	<tr><td>NP_683697.2 forkhead box protein P2 isoform III Homo sapiens  </td><td>MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT
+SGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQILQQQVLSPQQLQALLQQQQAVMLQQQQLQEFYK
+KQQEQLHLQLLQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQHPGKQAKEQQQQQQQQQQL
+AAQQLVFQQQLLQMQQLQQQQHLLSLQRQGLISIPPGQAALPVQSLPQAGLSPAEIQQLWKEVTGVHSME
+DNGIKHGGLDLTTNNSSSTTSSNTSKASPPITHHSIVNGQSSVLSARRDSSSHEETGASHTLYGHGVCKW
+PGCESICEDFGQFLKHLNNEHALDDRSTAQCRVQMQVVQQLEIQLSKERERLQAMMTHLHMRPSEPKPSP
+KPVSAYCFINSK                                                                                                                                                                                                                                                                                                                                    </td></tr>
+	<tr><td>NP_683698.2 forkhead box protein P2 isoform IV Homo sapiens   </td><td>MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT
+SGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQILQQQVLSPQQLQALLQQQQAVMLQQDFLDSGLE
+NFRAALEKNQQLQEFYKKQQEQLHLQLLQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQHP
+GKQAKEQQQQQQQQQQLAAQQLVFQQQLLQMQQLQQQQHLLSLQRQGLISIPPGQAALPVQSLPQAGLSP
+AEIQQLWKEVTGVHSMEDNGIKHGGLDLTTNNSSSTTSSNTSKASPPITHHSIVNGQSSVLSARRDSSSH
+EETGASHTLYGHGVCKWPGCESICEDFGQFLKHLNNEHALDDRSTAQCRVQMQVVQQLEIQLSKERERLQ
+AMMTHLHMRPSEPKPSPKPLNLVSSVTMSKNMLETSPQSLPQTPTTPTAPVTPITQGPSVITPASVPNVG
+AIRRRHSDKYNIPMSSEIAPNYEFYKNADVRPPFTYATLIRQAIMESSDRQLTLNEIYSWFTRTFAYFRR
+NAATWKNAVRHNLSLHKCFVRVENVKGAVWTVDEVEYQKRRSQKITGSPTLVKNIPTSLGYGAALNASLQ
+AALAESSLPLLSNPGLINNASSGLLQAVHEDLNGSLDHIDSNGNSSPGCSPQPHIHSIHVKEEPVIAEDE
+DCPMSLVTTANHSPELEDDREIEEEPLSEDLE        </td></tr>
+	<tr><td>NP_001166238.1 forkhead box protein P2 isoform VI Homo sapiens</td><td>MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT
+SGLKSPKSSDKQRPLQELLPETKLCICGHSSGDGHPHNTFAVPVSVAMMTPQVITPQQMQQILQQQVLSP
+QQLQALLQQQQAVMLQQQQLQEFYKKQQEQLHLQLLQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ
+QQQQQQHPGKQAKEQQQQQQQQQQLAAQQLVFQQQLLQMQQLQQQQHLLSLQRQGLISIPPGQAALPVQS
+LPQAGLSPAEIQQLWKEVTGVHSMEDNGIKHGGLDLTTNNSSSTTSSNTSKASPPITHHSIVNGQSSVLS
+ARRDSSSHEETGASHTLYGHGVCKWPGCESICEDFGQFLKHLNNEHALDDRSTAQCRVQMQVVQQLEIQL
+SKERERLQAMMTHLHMRPSEPKPSPKPVSAYCFINSK                                                                                                                                                                                                                                                                                                           </td></tr>
+	<tr><td>NP_001166237.1 forkhead box protein P2 isoform V Homo sapiens </td><td>MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT
+SGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQILQQQVLSPQQLQALLQQQQAVMLQQQQLQEFYK
+KQQEQLHLQLLQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQHPGKQAKEQQQQQQQQQLA
+AQQLVFQQQLLQMQQLQQQQHLLSLQRQGLISIPPGQAALPVQSLPQAGLSPAEIQQLWKEVTGVHSMED
+NGIKHGGLDLTTNNSSSTTSSNTSKASPPITHHSIVNGQSSVLSARRDSSSHEETGASHTLYGHGVCKWP
+GCESICEDFGQFLKHLNNEHALDDRSTAQCRVQMQVVQQLEIQLSKERERLQAMMTHLHMRPSEPKPSPK
+PLNLVSSVTMSKNMLETSPQSLPQTPTTPTAPVTPITQGPSVITPASVPNVGAIRRRHSDKYNIPMSSEI
+APNYEFYKNADVRPPFTYATLIRQAIMESSDRQLTLNEIYSWFTRTFAYFRRNAATWKNAVRHNLSLHKC
+FVRVENVKGAVWTVDEVEYQKRRSQKITGSPTLVKNIPTSLGYGAALNASLQAALAESSLPLLSNPGLIN
+NASSGLLQAVHEDLNGSLDHIDSNGNSSPGCSPQPHIHSIHVKEEPVIAEDEDCPMSLVTTANHSPELED
+DREIEEEPLSEDLE                          </td></tr>
+	<tr><td>NP_055306.1 forkhead box protein P2 isoform I Homo sapiens    </td><td>MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT
+SGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQILQQQVLSPQQLQALLQQQQAVMLQQQQLQEFYK
+KQQEQLHLQLLQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQHPGKQAKEQQQQQQQQQQL
+AAQQLVFQQQLLQMQQLQQQQHLLSLQRQGLISIPPGQAALPVQSLPQAGLSPAEIQQLWKEVTGVHSME
+DNGIKHGGLDLTTNNSSSTTSSNTSKASPPITHHSIVNGQSSVLSARRDSSSHEETGASHTLYGHGVCKW
+PGCESICEDFGQFLKHLNNEHALDDRSTAQCRVQMQVVQQLEIQLSKERERLQAMMTHLHMRPSEPKPSP
+KPLNLVSSVTMSKNMLETSPQSLPQTPTTPTAPVTPITQGPSVITPASVPNVGAIRRRHSDKYNIPMSSE
+IAPNYEFYKNADVRPPFTYATLIRQAIMESSDRQLTLNEIYSWFTRTFAYFRRNAATWKNAVRHNLSLHK
+CFVRVENVKGAVWTVDEVEYQKRRSQKITGSPTLVKNIPTSLGYGAALNASLQAALAESSLPLLSNPGLI
+NNASSGLLQAVHEDLNGSLDHIDSNGNSSPGCSPQPHIHSIHVKEEPVIAEDEDCPMSLVTTANHSPELE
+DDREIEEEPLSEDLE                         </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
