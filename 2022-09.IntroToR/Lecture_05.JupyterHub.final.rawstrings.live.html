@@ -19064,12 +19064,12 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]])</span>
@@ -19080,24 +19080,78 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> chr [1, 1:5] &#34;NP_683697.2 forkhead box protein P2 isoform III Homo sapiens&#34; ...
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># What happens if we call rbind?</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span> <span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
+<span class="nf">rbind</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span> <span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
 
 <span class="c1"># What about rbind.data.frame?</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span> <span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
+<span class="nf">rbind.data</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span> <span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 2 × 4 of type chr</caption>
+<tbody>
+	<tr><td>NP_683696.2</td><td>forkhead box protein P2 isoform II </td><td>Homo</td><td>sapiens</td></tr>
+	<tr><td>NP_683697.2</td><td>forkhead box protein P2 isoform III</td><td>Homo</td><td>sapiens</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
