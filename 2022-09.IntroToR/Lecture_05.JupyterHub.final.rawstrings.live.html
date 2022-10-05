@@ -14747,12 +14747,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <h3 id="0.4.3-Post-lecture-PDFs-and-Recordings">0.4.3 Post-lecture PDFs and Recordings<a class="anchor-link" href="#0.4.3-Post-lecture-PDFs-and-Recordings">&#182;</a></h3><p>As mentioned above, at the end of each lecture there will be a completed version of the lecture code released as a PDF file under the Modules section of Quercus.</p>
 <hr>
 <h3 id="0.4.4-Data-used-in-this-session">0.4.4 Data used in this session<a class="anchor-link" href="#0.4.4-Data-used-in-this-session">&#182;</a></h3><p>Today we have 2 data files to help us work through the concepts of data cleaning with regular expressions.</p>
-<h3 id="0.4.4.1-Datafile-1:-data/regex_word.docx">0.4.4.1 Datafile 1: data/regex_word.docx<a class="anchor-link" href="#0.4.4.1-Datafile-1:-data/regex_word.docx">&#182;</a></h3><p>This is an example file for us to start playing with the idea of regular expressions.</p>
+<h3 id="0.4.4.1-Datafile-1:-data/ScallionCakes.docx">0.4.4.1 Datafile 1: data/ScallionCakes.docx<a class="anchor-link" href="#0.4.4.1-Datafile-1:-data/ScallionCakes.docx">&#182;</a></h3><p>This is an example file for us to start playing with the idea of regular expressions.</p>
 <h3 id="0.4.4.2-Datafile-2:-data/FoxP2_primate.fasta">0.4.4.2 Datafile 2: data/FoxP2_primate.fasta<a class="anchor-link" href="#0.4.4.2-Datafile-2:-data/FoxP2_primate.fasta">&#182;</a></h3><p>This is the main file that we'll be working with for the rest of the lecture. We'll search, replace, and manipulate data from this file after importing it into our notebooks.</p>
-<h3 id="0.4.4-Microsporidia-infection-data-set-description">0.4.4 Microsporidia infection data set description<a class="anchor-link" href="#0.4.4-Microsporidia-infection-data-set-description">&#182;</a></h3><p>The following datasets used in this week's class come from a preprint manuscript on bioRxiv entitled "High-throughput phenotyping of <em>C. elegans</em> wild isolates reveals specific resistance and susceptibility traits to infection by distinct microsporidia species" by <a href="https://www.biorxiv.org/content/10.1101/2022.06.20.496912v1">Mok et al., 2022</a>. These datasets focus on the an analysis of infection in wild isolate strains of the nematode <em>C. elegans</em> by environmental pathogens known as microsporidia. The authors collected embryo counts from individual animal in the population after population-wide infection by microsporidia and we'll spend our next few classes working with the dataset to learn how to format and manipulate it.</p>
-<h3 id="0.4.4.1-Dataset-1:-data/infection_signal.tsv">0.4.4.1 Dataset 1: data/infection_signal.tsv<a class="anchor-link" href="#0.4.4.1-Dataset-1:-data/infection_signal.tsv">&#182;</a></h3><p>This is an imaging analysis of infected <em>C. elegans</em> strains N2 and JU1400 measuring the overall number of pixels for each animals and the number of fluorescent (infected) pixels within the same area.</p>
-<h3 id="0.4.4.2-Dataset-2:-data/embryo_data_long_merged.csv">0.4.4.2 Dataset 2: data/embryo_data_long_merged.csv<a class="anchor-link" href="#0.4.4.2-Dataset-2:-data/embryo_data_long_merged.csv">&#182;</a></h3><p>This is a result of our efforts (mostly) from last lecture. After transforming a wide-format version of our measurement data, we merged it with some metadata regarding our experiments and now it is ready to be visualized!</p>
-<h3 id="0.4.4.3-Dataset-3:-data/infection_meta.csv">0.4.4.3 Dataset 3: data/infection_meta.csv<a class="anchor-link" href="#0.4.4.3-Dataset-3:-data/infection_meta.csv">&#182;</a></h3><p>We'll return to this metadata towards the end of lecture but it holds all of the experimental condition information that has been integrated into the <code>embryo_data_long_merged.csv</code> file.</p>
+<h3 id="0.4.4.3-Dataset-3:-data/infection_meta.csv">0.4.4.3 Dataset 3: data/infection_meta.csv<a class="anchor-link" href="#0.4.4.3-Dataset-3:-data/infection_meta.csv">&#182;</a></h3><p>We'll return to this metadata towards the end of lecture but it holds all of the experimental condition information that we've been going over all term.</p>
 
 </div>
 </div>
@@ -14774,12 +14771,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#--------- Install packages to for today&#39;s session ----------#</span>
@@ -14792,6 +14789,36 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>-- <span class="ansi-bold">Attaching packages</span> ----------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse 1.3.2 --
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">ggplot2</span> 3.3.5     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">purrr  </span> 0.3.4
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">tibble </span> 3.1.6     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">dplyr  </span> 1.0.8
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">tidyr  </span> 1.2.0     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">stringr</span> 1.4.0
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">readr  </span> 2.1.2     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">forcats</span> 0.5.1
+-- <span class="ansi-bold">Conflicts</span> -------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">filter()</span> masks <span class="ansi-blue-fg">stats</span>::filter()
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">lag()</span>    masks <span class="ansi-blue-fg">stats</span>::lag()
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14830,6 +14857,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </tr>
 </tbody>
 </table>
+<h3 id="1.0.1-Regex-example-with-Microsoft-word">1.0.1 Regex example with Microsoft word<a class="anchor-link" href="#1.0.1-Regex-example-with-Microsoft-word">&#182;</a></h3><p>For our first regex exercise, use Microsoft Word to open the file "ScallionCakes.docx". This file contains the beginnings of some pre-amble text for a recipe blog. Here is what we are going to do:</p>
+<ul>
+<li>Once the document is opened, press <code>ctrl</code>+<code>h</code> to launch the find/replace function</li>
+<li>Replace <strong>"pan"</strong> with <strong>"wok"</strong>. Notice that there are some undesired changes? The word <strong>pan</strong> certainly came up a lot in those sentences! Now we have words like <strong>wokdemic</strong> and <strong>wokacea</strong>. Was this really our intention? We could be more stringent by changing settings such as case-sensitive or adding spaces. </li>
+<li>Go back to the original form of the sentence by undoing the changes we made, then try it again but this time check the "Match case" box. Does it match our intentions yet?</li>
+<li>Revert to the original sentence and try again with the "Find whole words only" option.</li>
+<li>Next, since these are really more like cakes by name, replace <strong>"panc"</strong> with just <strong>"c"</strong>. You get a similar problem. We really should have specified replacing <strong>"pancake"</strong> with <strong>"cake"</strong>. </li>
+</ul>
+<p>The key to this example, of course, is being more specific with what we want to search for and replace. To accomplish that we turn to RegEx which offers a structured language/syntax for identifying string patterns. Let's take a closer look at it now.</p>
 
 </div>
 </div>
