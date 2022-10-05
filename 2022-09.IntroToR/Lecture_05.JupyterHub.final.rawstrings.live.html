@@ -17987,7 +17987,7 @@ NAATWKNAVRHNLSLHKCF</pre>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Make a smaller version of our string to play with</span>
@@ -18023,8 +18023,8 @@ NAATWKNAVRHNLSLHKCF</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">subfasta</span>  <span class="o">%&gt;%</span> 
-<span class="nf">str_replace_all</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span>     <span class="c1"># look for opening or closing squared brackets</span>
-                <span class="n">replacement</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span>    <span class="c1"># replace squared brackets with nothing</span>
+<span class="nf">str_replace_all</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="n">r</span><span class="s">&quot;(\[|\])&quot;</span><span class="p">,</span>     <span class="c1"># look for opening or closing squared brackets</span>
+                <span class="n">replacement</span> <span class="o">=</span> <span class="p">)</span> <span class="o">%&gt;%</span>    <span class="c1"># replace squared brackets with nothing</span>
 <span class="nf">writeLines</span><span class="p">()</span> <span class="c1"># Let&#39;s make it easier to look at</span>
 </pre></div>
 
