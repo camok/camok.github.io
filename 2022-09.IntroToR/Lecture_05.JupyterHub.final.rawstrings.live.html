@@ -18313,7 +18313,7 @@ NAATWKNAVRHNLSLHKCF
 <span class="nf">str_split</span><span class="p">(</span><span class="n">r</span><span class="s">&quot;(\r\n\r\n)&quot;</span><span class="p">)</span>  <span class="o">%&gt;%</span> <span class="c1"># Use str_split to break up the line breaks. On unix you can use \\n\\n</span>
 <span class="nf">unlist</span><span class="p">()</span>  <span class="o">%&gt;%</span> <span class="c1"># You need to unlist the result to work with easier</span>
 <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;^&gt;&quot;</span><span class="p">,</span> <span class="n">replacement</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span>  <span class="c1"># remove the &quot;&gt;&quot; from the start of each entry</span>
-<span class="nf">str_split_fixed</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="c1"># Split the string by the first occurence of our pattern</span>
+<span class="nf">str_split_fixed</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="c1"># Split the string by the first occurence of our pattern</span>
 
 <span class="nf">class</span><span class="p">(</span><span class="n">header_seq_fasta</span><span class="p">)</span>
 </pre></div>
