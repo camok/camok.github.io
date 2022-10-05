@@ -18756,18 +18756,18 @@ DDREIEEEPLSEDLE                         </td></tr>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">fasta_header</span> <span class="o">&lt;-</span>
 <span class="n">header_seq_subset</span> <span class="o">%&gt;%</span>    <span class="c1"># Pass along the data frame</span>
 <span class="nf">pull</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="o">%&gt;%</span>              <span class="c1"># Retrieve just a single column (vs select) as a vector</span>
-<span class="nf">str_match_all</span><span class="p">(</span><span class="n">r</span><span class="s">&quot;(^(\w+\.\d)\s(.+)\s(\w+)\s())&quot;</span><span class="p">)</span>      <span class="c1"># Use the power of regex and greedy matching</span>
+<span class="nf">str_match_all</span><span class="p">(</span><span class="n">r</span><span class="s">&quot;(^(\w+\.\d)\s(.+)\s(\w+)\s(\w+))&quot;</span><span class="p">)</span>      <span class="c1"># Use the power of regex and greedy matching</span>
 
 <span class="c1"># Take a look at the last few rows of our result</span>
 <span class="nf">tail</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">,</span> <span class="m">3</span><span class="p">)</span>
@@ -18776,6 +18776,47 @@ DDREIEEEPLSEDLE                         </td></tr>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<ol>
+	<li><table class="dataframe">
+<caption>A matrix: 1 × 5 of type chr</caption>
+<tbody>
+	<tr><td>XP_007980836.1 PREDICTED: forkhead box protein P2 isoform X2 Chlorocebus sabaeus</td><td>XP_007980836.1</td><td>PREDICTED: forkhead box protein P2 isoform X2</td><td>Chlorocebus</td><td>sabaeus</td></tr>
+</tbody>
+</table>
+</li>
+	<li><table class="dataframe">
+<caption>A matrix: 1 × 5 of type chr</caption>
+<tbody>
+	<tr><td>XP_007980835.1 PREDICTED: forkhead box protein P2 isoform X1 Chlorocebus sabaeus</td><td>XP_007980835.1</td><td>PREDICTED: forkhead box protein P2 isoform X1</td><td>Chlorocebus</td><td>sabaeus</td></tr>
+</tbody>
+</table>
+</li>
+	<li></li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -18804,7 +18845,7 @@ DDREIEEEPLSEDLE                         </td></tr>
 
 <span class="c1"># Two ways to drop the first column</span>
 <span class="nf">print</span><span class="p">(</span><span class="s">&quot;Select our columns specifically...&quot;</span><span class="p">)</span>
-<span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="kc">...</span><span class="p">]</span>
+<span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,]</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="s">&quot;Leave a column behind&quot;</span><span class="p">)</span>
 <span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][</span><span class="kc">...</span><span class="p">]</span>
