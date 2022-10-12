@@ -15375,12 +15375,12 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#Revisit the structure of our data</span>
@@ -15388,15 +15388,15 @@ class="
 
 <span class="c1"># Pipe our dataset over to the summarise function (mean, median, min, max, sd, variance)</span>
 <span class="n">cholesterol</span> <span class="o">%&gt;%</span> 
-    <span class="nf">summarise</span><span class="p">(</span><span class="n">mean_chol</span> <span class="o">=</span> <span class="nf">...</span><span class="p">(</span><span class="n">chol</span><span class="p">),</span> 
-              <span class="n">median_chol</span> <span class="o">=</span> <span class="nf">...</span><span class="p">(</span><span class="n">chol</span><span class="p">),</span> 
-              <span class="n">min_chol</span> <span class="o">=</span> <span class="nf">...</span><span class="p">(</span><span class="n">chol</span><span class="p">),</span>
-              <span class="n">max_chol</span> <span class="o">=</span> <span class="nf">...</span><span class="p">(</span><span class="n">chol</span><span class="p">),</span> 
+    <span class="nf">summarise</span><span class="p">(</span><span class="n">mean_chol</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">chol</span><span class="p">),</span> 
+              <span class="n">median_chol</span> <span class="o">=</span> <span class="nf">median</span><span class="p">(</span><span class="n">chol</span><span class="p">),</span> 
+              <span class="n">min_chol</span> <span class="o">=</span> <span class="nf">min</span><span class="p">(</span><span class="n">chol</span><span class="p">),</span>
+              <span class="n">max_chol</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">chol</span><span class="p">),</span> 
               <span class="n">sd_chol</span> <span class="o">=</span> <span class="nf">sd</span><span class="p">(</span><span class="n">chol</span><span class="p">),</span> 
               <span class="n">variance_chol</span> <span class="o">=</span> <span class="nf">var</span><span class="p">(</span><span class="n">chol</span><span class="p">))</span>
 
 <span class="c1"># We need to calculate mode on our own by sorting</span>
-<span class="n">mode</span> <span class="o">&lt;-</span> <span class="nf">sort</span><span class="p">(</span><span class="nf">...</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">),</span> <span class="n">decreasing</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+<span class="n">mode</span> <span class="o">&lt;-</span> <span class="nf">sort</span><span class="p">(</span><span class="nf">table</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">),</span> <span class="n">decreasing</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
 <span class="c1"># Note: we can&#39;t use arrange on the resulting table</span>
 
 <span class="c1"># We can access table header information using the names() function</span>
@@ -15407,6 +15407,72 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&#39;data.frame&#39;:	400 obs. of  9 variables:
+ $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ sex      : int  1 1 0 0 1 1 0 0 0 0 ...
+ $ age      : int  74 51 64 34 52 39 79 38 52 58 ...
+ $ chol     : int  215 204 205 182 175 176 159 169 175 189 ...
+ $ BMI      : num  26.2 24.7 24.2 23.8 34.1 22.7 22.9 24.9 20.4 22 ...
+ $ TG       : int  367 150 213 111 328 53 274 137 125 209 ...
+ $ rs174548 : int  1 2 0 1 0 0 2 1 0 0 ...
+ $ rs4775401: int  2 1 1 1 0 2 1 1 1 1 ...
+ $ APOE     : int  4 4 4 1 1 4 1 1 4 5 ...
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+	<tr><th scope=col>mean_chol</th><th scope=col>median_chol</th><th scope=col>min_chol</th><th scope=col>max_chol</th><th scope=col>sd_chol</th><th scope=col>variance_chol</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>183.915</td><td>184</td><td>117</td><td>247</td><td>22.11777</td><td>489.1958</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Most frequent chol value is: 191 with 12 occurrences</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
