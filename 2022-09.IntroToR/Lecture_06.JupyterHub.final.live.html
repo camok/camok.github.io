@@ -21734,7 +21734,7 @@ Y \sim Normal({\beta_0 + \beta_1x_1 + \beta_2x_2}, {\sigma^2})
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Create a one-way anova model by converting rs174548 to a factor</span>
 <span class="c1"># Note that R will create the dummmy variable for us</span>
-<span class="n">rs174548Fit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span> <span class="c1"># C/C, represented by 0, is our reference variable (intercept)</span>
+<span class="n">rs174548Fit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">),</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span> <span class="c1"># C/C, represented by 0, is our reference variable (intercept)</span>
 
 <span class="c1"># Retrieve a summary of our model</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">rs174548Fit</span><span class="p">)</span>
