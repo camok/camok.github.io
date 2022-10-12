@@ -16839,11 +16839,11 @@ class="
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># qqplot with a qqline</span>
 
-<span class="nf">...</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">);</span> <span class="nf">...</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">)</span>
+<span class="nf">qqnorm</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">);</span> <span class="nf">qqline</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">)</span>
 
 <span class="c1"># log transform your data</span>
 
-<span class="nf">qqnorm</span><span class="p">(</span><span class="nf">...</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">));</span> <span class="nf">qqline</span><span class="p">(</span><span class="nf">...</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">))</span>
+<span class="nf">qqnorm</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">));</span> <span class="nf">qqline</span><span class="p">(</span><span class="nf">log</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">))</span>
 </pre></div>
 
      </div>
