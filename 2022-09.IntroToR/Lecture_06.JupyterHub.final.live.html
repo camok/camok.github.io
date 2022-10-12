@@ -22453,16 +22453,16 @@ Y \sim Normal({\alpha_i} + {\beta_j}, {\sigma^2})
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Two-way factor model with no interaction</span>
-<span class="n">sex_rs174548Fit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
+<span class="n">sex_rs174548Fit</span> <span class="o">&lt;-</span> <span class="nf">lm</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span> <span class="o">+</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">),</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="nf">summary</span><span class="p">(</span><span class="n">sex_rs174548Fit</span><span class="p">)</span>
 
@@ -22474,16 +22474,61 @@ Y \sim Normal({\alpha_i} + {\beta_j}, {\sigma^2})
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+Call:
+lm(formula = chol ~ as.factor(sex) + as.factor(rs174548), data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-66.653 -14.463  -0.601  15.445  57.635 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)           175.365      1.786  98.208  &lt; 2e-16 ***
+as.factor(sex)1        11.053      2.126   5.199 3.22e-07 ***
+as.factor(rs174548)1    7.236      2.250   3.215  0.00141 ** 
+as.factor(rs174548)2    5.184      4.398   1.179  0.23928    
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 21.24 on 396 degrees of freedom
+Multiple R-squared:  0.08458,	Adjusted R-squared:  0.07764 
+F-statistic:  12.2 on 3 and 396 DF,  p-value: 1.196e-07
+</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Use aov to generate our linear model</span>
-<span class="n">sex_rs174548Fit_aov</span> <span class="o">&lt;-</span> <span class="nf">...</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span> <span class="o">+</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">),</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
+<span class="n">sex_rs174548Fit_aov</span> <span class="o">&lt;-</span> <span class="nf">aov</span><span class="p">(</span><span class="n">chol</span> <span class="o">~</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span> <span class="o">+</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">),</span> <span class="n">data</span> <span class="o">=</span> <span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="c1"># Look at a summary of the model</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">sex_rs174548Fit_aov</span><span class="p">)</span>
@@ -22492,6 +22537,36 @@ Y \sim Normal({\alpha_i} + {\beta_j}, {\sigma^2})
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>                     Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+as.factor(sex)        1  11709   11709  25.951 5.43e-07 ***
+as.factor(rs174548)   2   4799    2400   5.318  0.00526 ** 
+Residuals           396 178681     451                     
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
