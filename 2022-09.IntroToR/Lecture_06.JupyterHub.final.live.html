@@ -20529,28 +20529,112 @@ F-statistic: 10.49 on 3 and 396 DF,  p-value: 1.182e-06
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Compare to our previous models</span>
 <span class="c1"># linear vs. interaction</span>
-<span class="nf">anova</span><span class="p">(</span><span class="n">ageFit</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<span class="nf">anova</span><span class="p">(</span><span class="n">ageFit</span><span class="p">,</span> <span class="n">ageIntBMIFit</span><span class="p">)</span>
 
 <span class="c1"># multiple linear vs. interaction</span>
-<span class="nf">anova</span><span class="p">(</span><span class="n">ageBMIFit</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<span class="nf">anova</span><span class="p">(</span><span class="n">ageBMIFit</span><span class="p">,</span> <span class="n">ageIntBMIFit</span><span class="p">)</span>
 
 <span class="c1"># AIC of all three</span>
-<span class="nf">AIC</span><span class="p">(</span><span class="n">ageFit</span><span class="p">,</span> <span class="n">ageBMIFit</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<span class="nf">AIC</span><span class="p">(</span><span class="n">ageFit</span><span class="p">,</span> <span class="n">ageBMIFit</span><span class="p">,</span> <span class="n">ageIntBMIFit</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A anova: 2 × 6</caption>
+<thead>
+	<tr><th></th><th scope=col>Res.Df</th><th scope=col>RSS</th><th scope=col>Df</th><th scope=col>Sum of Sq</th><th scope=col>F</th><th scope=col>Pr(&gt;F)</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>398</td><td>187187.5</td><td>NA</td><td>      NA</td><td>      NA</td><td>         NA</td></tr>
+	<tr><th scope=row>2</th><td>396</td><td>180819.5</td><td> 2</td><td>6367.976</td><td>6.973028</td><td>0.001056228</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A anova: 2 × 6</caption>
+<thead>
+	<tr><th></th><th scope=col>Res.Df</th><th scope=col>RSS</th><th scope=col>Df</th><th scope=col>Sum of Sq</th><th scope=col>F</th><th scope=col>Pr(&gt;F)</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>1</th><td>397</td><td>180841.7</td><td>NA</td><td>     NA</td><td>        NA</td><td>       NA</td></tr>
+	<tr><th scope=row>2</th><td>396</td><td>180819.5</td><td> 1</td><td>22.2158</td><td>0.04865327</td><td>0.8255372</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A data.frame: 3 × 2</caption>
+<thead>
+	<tr><th></th><th scope=col>df</th><th scope=col>AIC</th></tr>
+	<tr><th></th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>ageFit</th><td>3</td><td>3600.511</td></tr>
+	<tr><th scope=row>ageBMIFit</th><td>4</td><td>3588.716</td></tr>
+	<tr><th scope=row>ageIntBMIFit</th><td>5</td><td>3590.667</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
