@@ -21724,12 +21724,12 @@ Y \sim Normal({\beta_0 + \beta_1x_1 + \beta_2x_2}, {\sigma^2})
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Create a one-way anova model by converting rs174548 to a factor</span>
@@ -21743,6 +21743,50 @@ Y \sim Normal({\beta_0 + \beta_1x_1 + \beta_2x_2}, {\sigma^2})
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+Call:
+lm(formula = chol ~ as.factor(rs174548), data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-64.062 -15.913  -0.062  14.938  59.136 
+
+Coefficients:
+                     Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)           181.062      1.455 124.411  &lt; 2e-16 ***
+as.factor(rs174548)1    6.802      2.321   2.930  0.00358 ** 
+as.factor(rs174548)2    5.438      4.540   1.198  0.23167    
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 21.93 on 397 degrees of freedom
+Multiple R-squared:  0.0221,	Adjusted R-squared:  0.01718 
+F-statistic: 4.487 on 2 and 397 DF,  p-value: 0.01184
+</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
