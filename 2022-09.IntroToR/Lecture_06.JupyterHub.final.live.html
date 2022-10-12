@@ -20026,12 +20026,12 @@ F &amp;= \frac{MS_\Delta}{MS_{R1}} &amp;\text{The ratio of the variation between
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Let&#39;s prove to ourselves that the formulas work!</span>
@@ -20039,11 +20039,11 @@ F &amp;= \frac{MS_\Delta}{MS_{R1}} &amp;\text{The ratio of the variation between
 
 <span class="n">rss.m1</span> <span class="o">=</span> <span class="m">180841.7</span> <span class="c1"># RSS1</span>
 
-<span class="n">rss.diff</span> <span class="o">=</span> <span class="n">rss.</span> <span class="c1">#SSdelta</span>
+<span class="n">rss.diff</span> <span class="o">=</span> <span class="n">rss.m0</span> <span class="o">-</span> <span class="n">rss.m1</span> <span class="c1">#SSdelta</span>
 
-<span class="n">ms.diff</span> <span class="o">=</span> <span class="kc">...</span> <span class="c1"># MSdelta</span>
+<span class="n">ms.diff</span> <span class="o">=</span> <span class="n">rss.diff</span><span class="o">/</span><span class="m">1</span> <span class="c1"># MSdelta</span>
 
-<span class="n">ms.res</span> <span class="o">=</span> <span class="kc">...</span> <span class="c1"># MSR1</span>
+<span class="n">ms.res</span> <span class="o">=</span> <span class="n">rss.m1</span><span class="o">/</span><span class="m">397</span> <span class="c1"># MSR1</span>
 
 <span class="n">ms.diff</span><span class="o">/</span><span class="n">ms.res</span> <span class="c1"># F-value</span>
 </pre></div>
@@ -20051,6 +20051,30 @@ F &amp;= \frac{MS_\Delta}{MS_{R1}} &amp;\text{The ratio of the variation between
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+13.9308721384503
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
