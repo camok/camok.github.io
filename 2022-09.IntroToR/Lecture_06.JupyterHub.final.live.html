@@ -23248,21 +23248,78 @@ F-statistic:  9.14 on 5 and 394 DF,  p-value: 3.062e-08
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Run TukeyHSD on our aov model</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">sexInt_rs174548Fit_aov</span><span class="p">)</span>
+<span class="nf">TukeyHSD</span><span class="p">(</span><span class="n">sexInt_rs174548Fit_aov</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>  Tukey multiple comparisons of means
+    95% family-wise confidence level
+
+Fit: aov(formula = chol ~ as.factor(sex) * as.factor(rs174548), data = cholesterol)
+
+$`as.factor(sex)`
+        diff     lwr      upr p adj
+1-0 10.82112 6.67885 14.96339 4e-07
+
+$`as.factor(rs174548)`
+         diff        lwr       upr     p adj
+1-0  7.226763   1.979148 12.474378 0.0037045
+2-0  5.188975  -5.073650 15.451599 0.4601131
+2-1 -2.037788 -12.583490  8.507913 0.8923855
+
+$`as.factor(sex):as.factor(rs174548)`
+               diff        lwr        upr     p adj
+1:0-0:0   5.7108780  -2.302497 13.7242525 0.3210884
+0:1-0:0   0.9597403  -8.005685  9.9251653 0.9996369
+1:1-0:0  19.4103896  10.185043 28.6357359 0.0000001
+0:2-0:0  -0.2015152 -18.545122 18.1420918 1.0000000
+1:2-0:0  15.7389610  -1.382557 32.8604791 0.0919315
+0:1-1:0  -4.7511378 -13.605440  4.1031648 0.6407148
+1:1-1:0  13.6995116   4.582119 22.8169038 0.0003054
+0:2-1:0  -5.9123932 -24.201946 12.3771597 0.9397462
+1:2-1:0  10.0280830  -7.035510 27.0916761 0.5438558
+1:1-0:1  18.4506494   8.486137 28.4151622 0.0000028
+0:2-0:1  -1.1612554 -19.887505 17.5649940 0.9999755
+1:2-0:1  14.7792208  -2.751634 32.3100760 0.1537630
+0:2-1:1 -19.6119048 -38.463976 -0.7598336 0.0360298
+1:2-1:1  -3.6714286 -21.336622 13.9937646 0.9913267
+1:2-0:2  15.9404762  -7.796414 39.6773663 0.3894713
+</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
