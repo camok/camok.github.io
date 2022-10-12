@@ -22243,18 +22243,18 @@ Depending on the nature of your data, and how many tests you've completed you wa
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Adjust the p-values by Bonferroni</span>
 <span class="c1"># Bonferroni corrects by testing each individual hypothesis at a significance level of α/m, </span>
 <span class="c1"># where α is the desired overall alpha level and m is the number of hypotheses</span>
-<span class="nf">summary</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="nf">adjusted</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">))</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="nf">adjusted</span><span class="p">(</span><span class="s">&quot;bonferroni&quot;</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -22262,22 +22262,134 @@ Depending on the nature of your data, and how many tests you've completed you wa
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+	 Simultaneous Tests for General Linear Hypotheses
+
+Multiple Comparisons of Means: Tukey Contrasts
+
+
+Fit: lm(formula = chol ~ as.factor(rs174548) - 1, data = cholesterol)
+
+Linear Hypotheses:
+           Estimate Std. Error t value Pr(&gt;|t|)  
+1 - 0 == 0    6.802      2.321   2.930   0.0107 *
+2 - 0 == 0    5.438      4.540   1.198   0.6950  
+2 - 1 == 0   -1.364      4.665  -0.292   1.0000  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+(Adjusted p values reported -- bonferroni method)
+</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Control for the false discovery rate (FDR)</span>
-<span class="nf">summary</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="nf">adjusted</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">))</span> <span class="c1"># Benjamini &amp; Hochberg </span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="nf">adjusted</span><span class="p">(</span><span class="s">&quot;BH&quot;</span><span class="p">))</span> <span class="c1"># Benjamini &amp; Hochberg </span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">mc</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="nf">adjusted</span><span class="p">(</span><span class="s">&quot;fdr&quot;</span><span class="p">))</span> <span class="c1"># alias for BH</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+	 Simultaneous Tests for General Linear Hypotheses
+
+Multiple Comparisons of Means: Tukey Contrasts
+
+
+Fit: lm(formula = chol ~ as.factor(rs174548) - 1, data = cholesterol)
+
+Linear Hypotheses:
+           Estimate Std. Error t value Pr(&gt;|t|)  
+1 - 0 == 0    6.802      2.321   2.930   0.0107 *
+2 - 0 == 0    5.438      4.540   1.198   0.3475  
+2 - 1 == 0   -1.364      4.665  -0.292   0.7702  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+(Adjusted p values reported -- BH method)
+</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+	 Simultaneous Tests for General Linear Hypotheses
+
+Multiple Comparisons of Means: Tukey Contrasts
+
+
+Fit: lm(formula = chol ~ as.factor(rs174548) - 1, data = cholesterol)
+
+Linear Hypotheses:
+           Estimate Std. Error t value Pr(&gt;|t|)  
+1 - 0 == 0    6.802      2.321   2.930   0.0107 *
+2 - 0 == 0    5.438      4.540   1.198   0.3475  
+2 - 1 == 0   -1.364      4.665  -0.292   0.7702  
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+(Adjusted p values reported -- fdr method)
+</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
