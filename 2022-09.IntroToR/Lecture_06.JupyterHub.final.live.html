@@ -16157,17 +16157,17 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Run the Shapiro-Wilks on both age groups</span>
-<span class="nf">shapiro.test</span><span class="p">(</span><span class="kc">...</span><span class="p">])</span> <span class="c1"># Younger than 55 years</span>
-<span class="nf">shapiro.test</span><span class="p">(</span><span class="kc">...</span><span class="p">])</span> <span class="c1"># Older than 55 years</span>
+<span class="nf">shapiro.test</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">age_group</span> <span class="o">==</span> <span class="m">0</span><span class="p">])</span> <span class="c1"># Younger than 55 years</span>
+<span class="nf">shapiro.test</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">age_group</span> <span class="o">==</span> <span class="m">1</span><span class="p">])</span> <span class="c1"># Older than 55 years</span>
 
 <span class="c1"># Normality test for all cholesterol levels, regardless of the age group</span>
 <span class="c1"># H0 or null hypothesis: samples come from a population that follows a normal distribution</span>
@@ -16181,6 +16181,74 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+	Shapiro-Wilk normality test
+
+data:  cholesterol$chol[cholesterol$age_group == 0]
+W = 0.99489, p-value = 0.7306
+</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+	Shapiro-Wilk normality test
+
+data:  cholesterol$chol[cholesterol$age_group == 1]
+W = 0.99166, p-value = 0.311
+</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+	Shapiro-Wilk normality test
+
+data:  log(cholesterol$chol)
+W = 0.98982, p-value = 0.007116
+</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
