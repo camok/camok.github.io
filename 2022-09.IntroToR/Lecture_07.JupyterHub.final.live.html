@@ -32672,14 +32672,14 @@ Traceback:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Make a function to filter data, make the plot, then save the plot</span>
 <span class="n">save.facet.plot</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">data.df</span><span class="p">,</span> <span class="n">infDate</span><span class="p">)</span> <span class="p">{</span>
     
     <span class="c1"># filter the data</span>
-    <span class="n">out</span> <span class="o">&lt;-</span> <span class="nf">...</span><span class="p">({</span>
+    <span class="n">out</span> <span class="o">&lt;-</span> <span class="nf">tryCatch</span><span class="p">({</span>
         <span class="n">infection.data</span> <span class="o">&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">data.df</span><span class="p">,</span> <span class="n">infectionDate</span> <span class="o">==</span> <span class="n">infDate</span><span class="p">)</span>
         <span class="c1"># What happens if we pick a non-existent infection date?</span>
     <span class="p">},</span>
@@ -32687,13 +32687,13 @@ Traceback:
         <span class="c1"># Assume the error occurs when no salinity.val is provided</span>
         <span class="nf">message</span><span class="p">(</span><span class="s">&quot;Error: potentially missing parameter information&quot;</span><span class="p">)</span>
         
-        <span class="nf">return</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+        <span class="nf">return</span><span class="p">(</span><span class="kc">NULL</span><span class="p">)</span>
         <span class="c1"># You&#39;re kind of a function inside a function.</span>
         <span class="c1"># when you return, you&#39;ll leave to the next section.</span>
         
     <span class="p">})</span> <span class="c1"># End tryCatch</span>
     
-    <span class="nf">if </span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">if </span><span class="p">(</span><span class="o">!</span><span class="nf">is.null</span><span class="p">(</span><span class="n">out</span><span class="p">))</span> <span class="p">{</span>
         
         <span class="c1"># make the plotted data</span>
         <span class="n">infection.plot</span> <span class="o">&lt;-</span> <span class="nf">make.facet.plot</span><span class="p">(</span><span class="n">infection.data</span><span class="p">,</span> <span class="n">infDate</span><span class="p">)</span>
@@ -32718,12 +32718,12 @@ Traceback:
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># save a facet plot but look at the output of the plot</span>
@@ -32733,6 +32733,44 @@ Traceback:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Error: potentially missing parameter information
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>NULL</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
