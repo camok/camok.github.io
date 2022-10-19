@@ -34484,16 +34484,16 @@ surprise.class : function (name)  </pre>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Let&#39;s try a new function from &quot;Lecture07.R&quot;</span>
-<span class="n">codon</span>
+<span class="n">codonToAA</span>
 </pre></div>
 
      </div>
@@ -34501,12 +34501,39 @@ surprise.class : function (name)  </pre>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<pre class=language-r><code>function (codon) 
+{
+<span style=white-space:pre-wrap>    return(str_replace_all(codon, codon_translation))</span>
+}</code></pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Look up newly added variables</span>
@@ -34516,7 +34543,7 @@ surprise.class : function (name)  </pre>
 <span class="nf">codonToAA</span><span class="p">(</span><span class="s">&quot;AUA&quot;</span><span class="p">)</span>
 
 <span class="c1"># Use codonToAA on multiple codons</span>
-<span class="nf">codonToAA</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="kc">...</span><span class="p">))</span>  <span class="o">%&gt;%</span> <span class="nf">str_flatten</span><span class="p">()</span>
+<span class="nf">codonToAA</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;AUA&quot;</span><span class="p">,</span> <span class="s">&quot;UAG&quot;</span><span class="p">))</span>  <span class="o">%&gt;%</span> <span class="nf">str_flatten</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -34524,22 +34551,102 @@ surprise.class : function (name)  </pre>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>UUU</dt><dd>'F'</dd><dt>UCU</dt><dd>'S'</dd><dt>UAU</dt><dd>'Y'</dd><dt>UGU</dt><dd>'C'</dd><dt>UUC</dt><dd>'F'</dd><dt>UCC</dt><dd>'S'</dd><dt>UAC</dt><dd>'Y'</dd><dt>UGC</dt><dd>'C'</dd><dt>UUA</dt><dd>'L'</dd><dt>UCA</dt><dd>'S'</dd><dt>UAA</dt><dd>'*'</dd><dt>UGA</dt><dd>'*'</dd><dt>UUG</dt><dd>'L'</dd><dt>UCG</dt><dd>'S'</dd><dt>UAG</dt><dd>'*'</dd><dt>UGG</dt><dd>'W'</dd><dt>CUU</dt><dd>'L'</dd><dt>CCU</dt><dd>'P'</dd><dt>CAU</dt><dd>'H'</dd><dt>CGU</dt><dd>'R'</dd><dt>CUC</dt><dd>'L'</dd><dt>CCC</dt><dd>'P'</dd><dt>CAC</dt><dd>'H'</dd><dt>CGC</dt><dd>'R'</dd><dt>CUA</dt><dd>'L'</dd><dt>CCA</dt><dd>'P'</dd><dt>CAA</dt><dd>'Q'</dd><dt>CGA</dt><dd>'R'</dd><dt>CUG</dt><dd>'L'</dd><dt>CCG</dt><dd>'P'</dd><dt>CAG</dt><dd>'Q'</dd><dt>CGG</dt><dd>'R'</dd><dt>AUU</dt><dd>'I'</dd><dt>ACU</dt><dd>'T'</dd><dt>AAU</dt><dd>'N'</dd><dt>AGU</dt><dd>'S'</dd><dt>AUC</dt><dd>'I'</dd><dt>ACC</dt><dd>'T'</dd><dt>AAC</dt><dd>'N'</dd><dt>AGC</dt><dd>'S'</dd><dt>AUA</dt><dd>'I'</dd><dt>ACA</dt><dd>'T'</dd><dt>AAA</dt><dd>'K'</dd><dt>AGA</dt><dd>'R'</dd><dt>AUG</dt><dd>'M'</dd><dt>ACG</dt><dd>'T'</dd><dt>AAG</dt><dd>'K'</dd><dt>AGG</dt><dd>'R'</dd><dt>GUU</dt><dd>'V'</dd><dt>GCU</dt><dd>'A'</dd><dt>GAU</dt><dd>'D'</dd><dt>GGU</dt><dd>'G'</dd><dt>GUC</dt><dd>'V'</dd><dt>GCC</dt><dd>'A'</dd><dt>GAC</dt><dd>'D'</dd><dt>GGC</dt><dd>'G'</dd><dt>GUA</dt><dd>'V'</dd><dt>GCA</dt><dd>'A'</dd><dt>GAA</dt><dd>'E'</dd><dt>GGA</dt><dd>'G'</dd><dt>GUG</dt><dd>'V'</dd><dt>GCG</dt><dd>'A'</dd><dt>GAG</dt><dd>'E'</dd><dt>GGG</dt><dd>'G'</dd></dl>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+'I'
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+'I*'
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Let&#39;s try surprise.class()</span>
 
-<span class="nf">surprise.class</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">)</span>
+<span class="nf">surprise.class</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+'Good luck on your journey class'
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
