@@ -31849,17 +31849,17 @@ NaN
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">get.log10</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span>
     
-    <span class="nf">if</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="m">0</span><span class="p">)</span> <span class="nf">stop</span><span class="p">(</span><span class="s">&quot;Execution stop&quot;</span><span class="p">)</span>
+    <span class="nf">if</span><span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="m">0</span><span class="p">)</span> <span class="nf">stop</span><span class="p">(</span><span class="s">&quot;Execution stopped:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s">&quot; is not acceptable input&quot;</span><span class="p">)</span>
     <span class="nf">log10</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="p">}</span>
 
@@ -31871,6 +31871,46 @@ NaN
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+0
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+Error in get.log10(-1): Execution stopped:-1 is not acceptable input
+Traceback:
+
+1. get.log10(-1)
+2. stop(&#34;Execution stopped:&#34;, x, &#34; is not acceptable input&#34;)   # at line 3 of file &lt;text&gt;</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
