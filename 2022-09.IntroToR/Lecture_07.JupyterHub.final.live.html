@@ -30153,12 +30153,12 @@ If you need to pass information to the function like a variable, dataframe, list
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Rerun our function without an infection date</span>
@@ -30168,6 +30168,60 @@ If you need to pass information to the function like a variable, dataframe, list
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-yellow-intense-fg ansi-bold">Error</span><span class="ansi-bold"> in </span><span class="ansi-bold">`filter()`:</span>
+<span class="ansi-yellow-fg">!</span> Problem while computing `..1 = infectionDate == infDate`.
+<span class="ansi-bold">Caused by error:</span>
+<span class="ansi-yellow-fg">!</span> argument &#34;infDate&#34; is missing, with no default
+Traceback:
+
+1. save.facet.plot(embryos.df)
+2. data.df %&gt;% filter(infectionDate == infDate)   # at line 18 of file &lt;text&gt;
+3. filter(., infectionDate == infDate)
+4. filter.data.frame(., infectionDate == infDate)
+5. filter_rows(.data, ..., caller_env = caller_env())
+6. filter_eval(dots, mask = mask, error_call = error_call)
+7. withCallingHandlers({
+ .     mask$eval_all_filter(dots, env_filter)
+ . }, error = function(e) {
+ .     local_error_context(dots = dots, .index = env_filter$current_expression, 
+ .         mask = mask)
+ .     bullets &lt;- c(cnd_bullet_header(&#34;computing&#34;), filter_bullets(e))
+ .     abort(bullets, call = error_call, parent = skip_internal_condition(e))
+ . })
+8. mask$eval_all_filter(dots, env_filter)
+9. .handleSimpleError(function (e) 
+ . {
+ .     local_error_context(dots = dots, .index = env_filter$current_expression, 
+ .         mask = mask)
+ .     bullets &lt;- c(cnd_bullet_header(&#34;computing&#34;), filter_bullets(e))
+ .     abort(bullets, call = error_call, parent = skip_internal_condition(e))
+ . }, &#34;argument \&#34;infDate\&#34; is missing, with no default&#34;, base::quote(mask$eval_all_filter(dots, 
+ .     env_filter)))
+10. h(simpleError(msg, call))
+11. abort(bullets, call = error_call, parent = skip_internal_condition(e))
+12. signal_abort(cnd, .file)</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
