@@ -21415,11 +21415,11 @@ class="
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Only proceed if you have data in embryos.df</span>
 <span class="n">numVector</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">)</span>
 
-<span class="nf">if</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
+<span class="nf">if</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">numVector</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1"># You have data to look at so print it</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">numVector</span><span class="p">)</span>
     
-    <span class="nf">if</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">if</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">numVector</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">8</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1"># Your vector has a minimum sum</span>
         <span class="nf">print</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">numVector</span><span class="p">))</span>
         
