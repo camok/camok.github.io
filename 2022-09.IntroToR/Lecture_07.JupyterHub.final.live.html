@@ -20987,7 +20987,7 @@ class="
       <span class="p">)</span>
 
 <span class="c1"># create an empty data frame to store the output of the for loop</span>
-<span class="n">result</span> <span class="o">&lt;-</span> <span class="nf">...</span><span class="p">(</span><span class="n">infectionDate</span> <span class="o">=</span> <span class="nf">unique</span><span class="p">(</span><span class="n">subdata</span><span class="o">$</span><span class="n">infectionDate</span><span class="p">),</span>
+<span class="n">result</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">infectionDate</span> <span class="o">=</span> <span class="nf">unique</span><span class="p">(</span><span class="n">subdata</span><span class="o">$</span><span class="n">infectionDate</span><span class="p">),</span>
                      <span class="n">difference</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">,</span>
                      <span class="n">p_value</span> <span class="o">=</span> <span class="kc">NA</span><span class="p">)</span>
 
@@ -20995,7 +20995,7 @@ class="
 
 <span class="c1"># for loop to calculate difference in means between fresh vs saline groups in salinity</span>
 
-<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
+<span class="nf">for</span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="n">result</span><span class="o">$</span><span class="n">infectionDate</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1"># Generate a t-test on subset by day</span>
     <span class="n">t</span> <span class="o">&lt;-</span> <span class="nf">t.test</span><span class="p">(</span><span class="n">embryos</span> <span class="o">~</span> <span class="n">wormStrain</span><span class="p">,</span> <span class="n">subdata</span><span class="p">[</span><span class="n">subdata</span><span class="o">$</span><span class="n">infectionDate</span> <span class="o">==</span> <span class="n">i</span><span class="p">,</span> <span class="p">])</span>
     <span class="c1"># write the results to our data frame</span>
