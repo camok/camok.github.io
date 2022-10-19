@@ -20906,12 +20906,12 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># for loop in a single line, with brackets</span>
@@ -20925,6 +20925,35 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;I&#34;
+[1] &#34;scream;&#34;
+[1] &#34;You&#34;
+[1] &#34;scream;&#34;
+[1] &#34;We all&#34;
+[1] &#34;scream;&#34;
+[1] &#34;for ice cream&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -20952,9 +20981,9 @@ class="
 <span class="c1"># infected by a medium does of LUAm1</span>
 <span class="n">subdata</span> <span class="o">&lt;-</span>
 <span class="n">embryos.df</span> <span class="o">%&gt;%</span> 
-<span class="nf">filter</span><span class="p">(</span><span class="kc">...</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;N2&quot;</span><span class="p">,</span> <span class="s">&quot;JU1400&quot;</span><span class="p">),</span>
-       <span class="kc">...</span> <span class="o">==</span> <span class="s">&quot;LUAm1&quot;</span><span class="p">,</span>
-       <span class="kc">...</span> <span class="o">==</span> <span class="s">&quot;Medium&quot;</span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">wormStrain</span> <span class="o">%in%</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;N2&quot;</span><span class="p">,</span> <span class="s">&quot;JU1400&quot;</span><span class="p">),</span>
+       <span class="n">sporeStrain</span> <span class="o">==</span> <span class="s">&quot;LUAm1&quot;</span><span class="p">,</span>
+       <span class="n">doseLevel</span> <span class="o">==</span> <span class="s">&quot;Medium&quot;</span>
       <span class="p">)</span>
 
 <span class="c1"># create an empty data frame to store the output of the for loop</span>
