@@ -34342,12 +34342,12 @@ Traceback:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1">#?source</span>
 <span class="c1"># Load data and information from another R script</span>
-<span class="nf">source</span><span class="p">(</span><span class="s">&quot;...&quot;</span><span class="p">)</span>
+<span class="nf">source</span><span class="p">(</span><span class="s">&quot;./data/Lecture07.R&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -34368,21 +34368,56 @@ Traceback:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># See what variables and functions you have in memory</span>
-<span class="nf">print</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">ls</span><span class="p">())</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> [1] &#34;a&#34;                 &#34;anything&#34;          &#34;codon_translation&#34;
+ [4] &#34;codonToAA&#34;         &#34;cube&#34;              &#34;days&#34;             
+ [7] &#34;dexType&#34;           &#34;embryos.df&#34;        &#34;get.log10&#34;        
+[10] &#34;goodbye.class&#34;     &#34;grade&#34;             &#34;i&#34;                
+[13] &#34;inf200704.plot&#34;    &#34;infection.data&#34;    &#34;infection.results&#34;
+[16] &#34;infectionRep&#34;      &#34;letterGrade&#34;       &#34;make.embryo.plot&#34; 
+[19] &#34;make.facet.plot&#34;   &#34;make.power&#34;        &#34;n&#34;                
+[22] &#34;numVector&#34;         &#34;plot&#34;              &#34;pokemon&#34;          
+[25] &#34;programmer&#34;        &#34;result&#34;            &#34;save.facet.plot&#34;  
+[28] &#34;set.facet.plot&#34;    &#34;subdata&#34;           &#34;subdata_ttest&#34;    
+[31] &#34;surprise.class&#34;    &#34;t&#34;                 &#34;tally&#34;            
+[34] &#34;variable&#34;          &#34;x&#34;                 &#34;y&#34;                
+[37] &#34;z&#34;                
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -34398,21 +34433,55 @@ Traceback:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># To see which functions are available in memory</span>
-<span class="kc">...</span>
+<span class="nf">lsf.str</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>codonToAA : function (codon)  
+cube : function (base)  
+get.log10 : function (x)  
+goodbye.class : function ()  
+make.embryo.plot : function (infDate = &#34;190423&#34;)  
+make.facet.plot : function (infection.data, infDate)  
+make.power : function (power)  
+save.facet.plot : function (data.df, infDate)  
+set.facet.plot : function (data.df)  
+surprise.class : function (name)  </pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -34424,7 +34493,7 @@ Traceback:
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Let&#39;s try a new function from &quot;Lecture07.R&quot;</span>
-<span class="kc">...</span>
+<span class="n">codon</span>
 </pre></div>
 
      </div>
