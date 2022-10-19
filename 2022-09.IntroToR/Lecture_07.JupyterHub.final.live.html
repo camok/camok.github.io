@@ -31062,13 +31062,13 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Define our function(s)</span>
-<span class="n">make.power</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span> <span class="c1"># This sets the variable values (via lexical scoping) of the exponent</span>
+<span class="n">make.power</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">power</span><span class="p">)</span> <span class="p">{</span> <span class="c1"># This sets the variable values (via lexical scoping) of the exponent</span>
     
-    <span class="n">pow</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span> <span class="c1"># When we call on the resulting function it will require a base value</span>
+    <span class="n">pow</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="p">{</span> <span class="c1"># When we call on the resulting function it will require a base value</span>
         
         <span class="n">base</span><span class="o">^</span><span class="n">power</span> <span class="c1"># Make the actual calculation</span>
     <span class="p">}</span>    
@@ -31089,7 +31089,7 @@ class="
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Define a new function that does cubic calculations</span>
-<span class="n">cube</span> <span class="o">=</span> <span class="nf">make.power</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">cube</span> <span class="o">=</span> <span class="nf">make.power</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
 
 <span class="c1"># Call on our cubic function using a base of 4</span>
 <span class="nf">cube</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
