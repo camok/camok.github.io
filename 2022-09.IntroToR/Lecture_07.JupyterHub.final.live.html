@@ -31080,24 +31080,48 @@ class="
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Define a new function that does cubic calculations</span>
 <span class="n">cube</span> <span class="o">=</span> <span class="nf">make.power</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
 
 <span class="c1"># Call on our cubic function using a base of 4</span>
-<span class="nf">cube</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">cube</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+64
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -31137,7 +31161,7 @@ class="
 <span class="c1"># [3] save plot filename</span>
 
 <span class="c1"># Define a new function where we set the data.df parameter as input.</span>
-<span class="n">set.facet.plot</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">set.facet.plot</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">data.df</span><span class="p">)</span> <span class="p">{</span>
 
     <span class="c1"># Set the default value of infDate to 190423</span>
     <span class="n">save.facet.plot</span> <span class="o">=</span> <span class="nf">function</span><span class="p">(</span><span class="n">infDate</span> <span class="o">=</span> <span class="s">&quot;190423&quot;</span><span class="p">)</span> <span class="p">{</span>
