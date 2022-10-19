@@ -15572,12 +15572,12 @@ Warning message in rm(result, i):
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Clear some memory and check th value of variables that may already exist</span>
@@ -15594,7 +15594,7 @@ Warning message in rm(result, i):
     <span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="m">1</span><span class="o">:</span><span class="n">n</span><span class="p">){</span>
         <span class="n">result</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
         <span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-        <span class="n">j</span> <span class="o">&lt;-</span> <span class="kc">...</span> <span class="c1"># assign a value to j</span>
+        <span class="n">j</span> <span class="o">&lt;-</span> <span class="n">result</span> <span class="c1"># assign a value to j</span>
     <span class="p">}</span>
 <span class="p">)</span>
 
@@ -15606,6 +15606,73 @@ Warning message in rm(result, i):
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message in rm(result, j):
+&#34;object &#39;j&#39; not found&#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>The prior value of i is : 7 
+[1] 100   1   2   3   4   5
+ [1] 100   1   2   3   4   5   1   2   3   4   5
+ [1] 100   1   2   3   4   5   1   2   3   4   5   1   2   3   4   5
+ [1] 100   1   2   3   4   5   1   2   3   4   5   1   2   3   4   5   1   2   3
+[20]   4   5
+ [1] 100   1   2   3   4   5   1   2   3   4   5   1   2   3   4   5   1   2   3
+[20]   4   5   1   2   3   4   5
+ [1] 100   1   2   3   4   5   1   2   3   4   5   1   2   3   4   5   1   2   3
+[20]   4   5   1   2   3   4   5   1   2   3   4   5
+ [1] 100   1   2   3   4   5   1   2   3   4   5   1   2   3   4   5   1   2   3
+[20]   4   5   1   2   3   4   5   1   2   3   4   5   1   2   3   4   5
+ [1] 100   1   2   3   4   5   1   2   3   4   5   1   2   3   4   5   1   2   3
+[20]   4   5   1   2   3   4   5   1   2   3   4   5   1   2   3   4   5   1   2
+[39]   3   4   5
+The value of result is:  100 
+The value of i is : 7 
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+Error in cat(&#34;The value of j is :&#34;, j): object &#39;j&#39; not found
+Traceback:
+
+1. cat(&#34;The value of j is :&#34;, j)</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
