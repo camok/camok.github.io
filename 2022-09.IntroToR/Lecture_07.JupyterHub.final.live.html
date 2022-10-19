@@ -32811,10 +32811,10 @@ Traceback:
         
         <span class="c1"># Remember: we are in a mini function at the moment</span>
         <span class="c1"># We need to go up a level and set infDate within the save.facet.plot function</span>
-        <span class="n">infDate</span> <span class="kc">...</span> <span class="nf">levels</span><span class="p">(</span><span class="n">data.df</span><span class="o">$</span><span class="n">infectionDate</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span> 
+        <span class="n">infDate</span> <span class="o">&lt;&lt;-</span> <span class="nf">levels</span><span class="p">(</span><span class="n">data.df</span><span class="o">$</span><span class="n">infectionDate</span><span class="p">)[</span><span class="m">1</span><span class="p">]</span> 
         
         <span class="c1"># Then we&#39;ll remake the data subset</span>
-        <span class="n">infection.data</span> <span class="kc">...</span> <span class="nf">filter</span><span class="p">(</span><span class="n">data.df</span><span class="p">,</span> <span class="n">infectionDate</span> <span class="o">==</span> <span class="n">infDate</span><span class="p">)</span>
+        <span class="n">infection.data</span> <span class="o">&lt;&lt;-</span> <span class="nf">filter</span><span class="p">(</span><span class="n">data.df</span><span class="p">,</span> <span class="n">infectionDate</span> <span class="o">==</span> <span class="n">infDate</span><span class="p">)</span>
         <span class="c1"># This will allow us to proceed with the rest of the code as though nothing were amiss</span>
         
     <span class="p">})</span> <span class="c1"># End tryCatch  </span>
