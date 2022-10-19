@@ -14602,7 +14602,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Student-Name:-Calvin-Mok">Student Name: Calvin Mok<a class="anchor-link" href="#Student-Name:-Calvin-Mok">&#182;</a></h2><h2 id="Student-ID:-NA-testing-live-updater">Student ID: NA testing live updater<a class="anchor-link" href="#Student-ID:-NA-testing-live-updater">&#182;</a></h2>
+<h2 id="Student-Name:-Calvin-Mok">Student Name: Calvin Mok<a class="anchor-link" href="#Student-Name:-Calvin-Mok">&#182;</a></h2><h2 id="Student-ID:-NA">Student ID: NA<a class="anchor-link" href="#Student-ID:-NA">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14866,7 +14866,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="nf">list.files</span><span class="p">(</span><span class="s">&quot;./data&quot;</span><span class="p">)</span>
 
 <span class="c1"># read our file in with read_csv()</span>
-<span class="c1"># compounds_data &lt;- read_csv(&quot;data/compounds_stats.csv&quot;, col_names = TRUE)</span>
 <span class="n">embryos.df</span> <span class="o">&lt;-</span> <span class="nf">...</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">col_types</span> <span class="o">=</span> <span class="s">&quot;cdffffdfllddfddffff&quot;</span><span class="p">)</span>
 
 <span class="c1"># explore our loaded data frame</span>
@@ -15184,7 +15183,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Pull down the structure and colnames of our compounds_data</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Pull down the structure and colnames of our embryos.df</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">,</span> <span class="n">give.attr</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
 <span class="nf">...</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">)</span>
 </pre></div>
@@ -16294,7 +16293,7 @@ Take the time to visually and mentally test your code using a series of base cas
             <span class="c1">#2 Aesthetics</span>
             <span class="nf">aes</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="n">wormStrain</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">embryos</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">wormStrain</span><span class="p">)</span> <span class="o">+</span>
             <span class="nf">theme_grey</span><span class="p">()</span> <span class="o">+</span>
-            <span class="nf">ggtitle</span><span class="p">(</span><span class="nf">paste0</span><span class="p">(</span><span class="s">&quot;Embryo counts on infection date: &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="o">+</span> <span class="c1"># plot title</span>
+            <span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Embryo counts&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="c1"># plot title</span>
             <span class="c1"># 4. Geoms</span>
             <span class="nf">geom_boxplot</span><span class="p">()</span>
     
@@ -16677,9 +16676,12 @@ Take the time to visually and mentally test your code using a series of base cas
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="3.2.1-You-can-nest-functions-within-functions">3.2.1 You can nest functions within functions<a class="anchor-link" href="#3.2.1-You-can-nest-functions-within-functions">&#182;</a></h3><p>One of the things you can do as your functions and needs become more complex is to nest functions within other functions. We've already applied this when we call <code>ggplot()</code> functions within <code>save.facet.plot()</code>.</p>
 <hr>
-<h2 id="3.3.0-Arguments-for-your-functions-can-have-a-default-value">3.3.0 Arguments for your functions can have a default value<a class="anchor-link" href="#3.3.0-Arguments-for-your-functions-can-have-a-default-value">&#182;</a></h2><p>The last helpful part of making functions it to consider providing default values for some of your arguments. In some cases you may have a subset of datasets that need to be treated differently so including an argument for your function to toggle certain behaviours is helpful. Including these arguments, however, means you have to define them <strong><em>every time</em></strong> you call on the function <em>unless</em> you assign a default value.</p>
+<div class="alert alert-block alert-success">
+<b>Treat your functions like a black box!</b> Now that you know how to build a function and return data from it, you should consider that it is <b>best practice</b> to treat your functions like a black box. What does that really mean? Your functions should stand alone, independent. If you were to copy it from one program or notebook to another, they should still work (for the most part). That means they should never have to rely on variables that exist <b><i>outside of</b></i> the function itself. 
+
+If you need to pass information to the function like a variable, dataframe, list etc - do this through the arguments! Whenever you need to return information, then return it as part of a list if needed. The function should be agnostic of the world around it. Some assumptions can be made like loading preset libraries outside the function, but you can even do that within your functions!
+</div><h2 id="3.3.0-Arguments-for-your-functions-can-have-a-default-value">3.3.0 Arguments for your functions can have a default value<a class="anchor-link" href="#3.3.0-Arguments-for-your-functions-can-have-a-default-value">&#182;</a></h2><p>The last helpful part of making functions it to consider providing default values for some of your arguments. In some cases you may have a subset of datasets that need to be treated differently so including an argument for your function to toggle certain behaviours is helpful. Including these arguments, however, means you have to define them <strong><em>every time</em></strong> you call on the function <em>unless</em> you assign a default value.</p>
 <p>Default values are only overridden by supplied arguments, otherwise these will be applied within your function.</p>
 <p>Before we update our <code>save.facet.plot()</code> let's see what happens if we simply forget to include a parameter.</p>
 
@@ -16859,7 +16861,7 @@ Take the time to visually and mentally test your code using a series of base cas
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<p>Now let's revisit our plot-saving function. We'll make a new plot-setting function that we can use to permanently set the data frame that is used when making plots. We can initialize this newly set function and save it as the function <code>make.compound.plot()</code>.</p>
+<p>Now let's revisit our plot-saving function. We'll make a new plot-setting function that we can use to permanently set the data frame that is used when making plots. We can initialize this newly set function and save it as the function <code>set.facet.plot()</code>.</p>
 
 </div>
 </div>
@@ -16937,7 +16939,7 @@ Take the time to visually and mentally test your code using a series of base cas
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Step 2. Make a function where the data set is the compounds_data</span>
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Step 2. Make a function where the data set is embryos.df</span>
 <span class="n">make.embryo.plot</span> <span class="o">&lt;-</span> <span class="nf">set.facet.plot</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
 
 <span class="c1"># Make a plot and filter it by infection Date</span>
@@ -17107,7 +17109,8 @@ Take the time to visually and mentally test your code using a series of base cas
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h3 id="3.6.2-Call-on-subfunctions-within-your-function-to-simplify-debugging">3.6.2 Call on subfunctions within your function to simplify debugging<a class="anchor-link" href="#3.6.2-Call-on-subfunctions-within-your-function-to-simplify-debugging">&#182;</a></h3><p>Next we want to generate a second function that will be able to filter a set like <code>compounds_data</code>, call on <code>make.facet.plot()</code>, and save the results as needed. In doing so we simplify the debugging process and it will help when we begin to incorporate a <code>tryCatch()</code> structure into our code.</p>
+<h3 id="3.6.2-Call-on-subfunctions-within-your-function-to-simplify-debugging">3.6.2 Call on subfunctions within your function to simplify debugging<a class="anchor-link" href="#3.6.2-Call-on-subfunctions-within-your-function-to-simplify-debugging">&#182;</a></h3><p>One of the things you can do as your functions and needs become more complex is to nest functions within other functions. We've already applied this when we call <code>ggplot()</code> functions within <code>save.facet.plot()</code>.</p>
+<p>Next we want to generate a second function that will be able to filter a set like <code>embryos.df</code>, call on <code>make.facet.plot()</code>, and save the results as needed. In doing so we simplify the debugging process and it will help when we begin to incorporate a <code>tryCatch()</code> structure into our code.</p>
 
 </div>
 </div>
