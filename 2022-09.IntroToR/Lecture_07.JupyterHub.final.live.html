@@ -21490,7 +21490,7 @@ class="
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Check if our file exists</span>
 <span class="c1"># Use dir() to return a vector of file names and then ask if any match ours. </span>
-<span class="nf">if</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
+<span class="nf">if</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="nf">dir</span><span class="p">()</span> <span class="o">==</span> <span class="s">&quot;embryo_subdata_ttest.csv&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
     
   <span class="nf">print</span><span class="p">(</span><span class="s">&quot;Stop! A file with that same name already exists&quot;</span><span class="p">)</span>
 
