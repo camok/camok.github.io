@@ -34018,20 +34018,90 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">save.facet.plot</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">,</span> <span class="s">&quot;...&quot;</span><span class="p">)[[</span><span class="m">2</span><span class="p">]]</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">save.facet.plot</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">,</span> <span class="s">&quot;221019&quot;</span><span class="p">)[[</span><span class="m">2</span><span class="p">]]</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Saving 33.9 x 33.9 cm image
+
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-yellow-intense-fg ansi-bold">Error</span><span class="ansi-bold"> in </span><span class="ansi-bold">`combine_vars()`:</span>
+<span class="ansi-yellow-fg">!</span> Faceting variables must have at least one value
+Traceback:
+
+1. save.facet.plot(embryos.df, &#34;221019&#34;)
+2. tryCatch({
+ .     infection.data &lt;- filter(data.df, infectionDate == infDate)
+ . }, error = function(c) {
+ .     message(&#34;Warning: No infection date provided&#34;)
+ .     message(&#34;substituting with a first-level value&#34;)
+ .     infDate &lt;&lt;- levels(data.df$infectionDate)[1]
+ .     infection.data &lt;- filter(data.df, infectionDate == infDate)
+ . }, finally = {
+ .     infection.plot &lt;- make.facet.plot(infection.data, infDate)
+ .     save.file = paste(infDate, &#34;graph.facet.saveFunction.tryCatchv2.png&#34;, 
+ .         sep = &#34;_&#34;)
+ .     ggsave(plot = infection.plot, filename = save.file, path = &#34;data/&#34;, 
+ .         scale = 2, device = &#34;png&#34;, units = c(&#34;cm&#34;))
+ .     return(list(infection.data, infection.plot, save.file))
+ . })   # at line 5-37 of file &lt;text&gt;
+3. ggsave(plot = infection.plot, filename = save.file, path = &#34;data/&#34;, 
+ .     scale = 2, device = &#34;png&#34;, units = c(&#34;cm&#34;))   # at line 31-32 of file &lt;text&gt;
+4. grid.draw(plot)
+5. grid.draw.ggplot(plot)
+6. print(x)
+7. print.ggplot(x)
+8. ggplot_build(x)
+9. ggplot_build.ggplot(x)
+10. layout$setup(data, plot$data, plot$plot_env)
+11. f(..., self = self)
+12. self$facet$compute_layout(data, self$facet_params)
+13. f(...)
+14. combine_vars(data, params$plot_env, rows, drop = params$drop)
+15. abort(&#34;Faceting variables must have at least one value&#34;)
+16. signal_abort(cnd, .file)</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -34052,7 +34122,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Make a function to filter data, make the plot, then save the plot</span>
@@ -34081,7 +34151,7 @@ class="
     <span class="p">})</span> <span class="c1"># End the tryCatch having made a subset or default version if no infDate is supplied</span>
     
     <span class="c1"># In the case of an INCORRECT infDate there are a couple of ways to go about doing it</span>
-    <span class="nf">if</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">if</span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">infection.data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
         
         <span class="n">infection.plot</span> <span class="o">&lt;-</span> <span class="nf">make.facet.plot</span><span class="p">(</span><span class="n">infection.data</span><span class="p">,</span> <span class="n">infDate</span><span class="p">)</span>
 
