@@ -18452,12 +18452,12 @@ Input <span class="ansi-green-intense-fg ansi-bold">In [52]</span>, in <span cla
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">aminoacids_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Alanine&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;Ala&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>  <span class="s2">&quot;GCA GCC GCG GCT&quot;</span><span class="p">},</span>
@@ -18483,7 +18483,7 @@ Input <span class="ansi-green-intense-fg ansi-bold">In [52]</span>, in <span cla
                         <span class="p">}</span>
 
 <span class="c1"># What is the typing of our new dictionary?</span>
-<span class="nb">type</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">aminoacids_dict</span><span class="p">)</span>
 
 <span class="c1"># Print out our dictionary</span>
 <span class="n">aminoacids_dict</span>                        
@@ -18492,6 +18492,45 @@ Input <span class="ansi-green-intense-fg ansi-bold">In [52]</span>, in <span cla
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;class &#39;dict&#39;&gt;</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;Alanine&#39;: {&#39;Ala&#39;, &#39;A&#39;, &#39;GCA GCC GCG GCT&#39;}, &#39;Cysteine&#39;: {&#39;Cys&#39;, &#39;TGC, TGT&#39;, &#39;C&#39;}, &#39;Aspartic acid&#39;: {&#39;GAC GAT&#39;, &#39;D&#39;, &#39;Asp&#39;}, &#39;Glutamic acid&#39;: {&#39;GAA GAG&#39;, &#39;Glu&#39;, &#39;E&#39;}, &#39;Phenylalanine&#39;: {&#39;Phe&#39;, &#39;F&#39;, &#39;TTC TTT&#39;}, &#39;Glycine&#39;: {&#39;Gly&#39;, &#39;G&#39;, &#39;GGA GGC GGG GGT&#39;}, &#39;Histidine&#39;: {&#39;H&#39;, &#39;His&#39;, &#39;CAC CAT&#39;}, &#39;Isoleucine&#39;: {&#39;Ile&#39;, &#39;ATA ATC ATT&#39;, &#39;I&#39;}, &#39;Lysine&#39;: {&#39;Lys&#39;, &#39;AAA AAG&#39;, &#39;K&#39;}, &#39;Leucine&#39;: {&#39;TTA TTG CTA CTC CTG CTT&#39;, &#39;L&#39;, &#39;Leu&#39;}, &#39;Methionine&#39;: {&#39;MATG&#39;, &#39;Met&#39;}, &#39;Asparagine&#39;: {&#39;N&#39;, &#39;Asn&#39;, &#39;AAC AAT&#39;}, &#39;Proline&#39;: {&#39;Pro&#39;, &#39;P&#39;, &#39;CCA CCC CCG CCT&#39;}, &#39;Glutamine&#39;: {&#39;Q&#39;, &#39;CAA CAG&#39;, &#39;Gln&#39;}, &#39;Arginine&#39;: {&#39;AGA AGG CGA CGC CGG CGT&#39;, &#39;Arg&#39;, &#39;R&#39;}, &#39;Serine&#39;: {&#39;Ser&#39;, &#39;S&#39;, &#39;AGC AGT TCA TCC TCG TCT&#39;}, &#39;Threonine&#39;: {&#39;ACA ACC ACG ACU&#39;, &#39;T&#39;, &#39;Thr&#39;}, &#39;Valine&#39;: {&#39;Val&#39;, &#39;V&#39;, &#39;GTA GTC GTG GTT&#39;}, &#39;Tryptophan&#39;: {&#39;W&#39;, &#39;TGG&#39;, &#39;Trp&#39;}, &#39;Tyrosine&#39;: {&#39;Tyr&#39;, &#39;Y,TAC TAT&#39;}}</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -18508,22 +18547,47 @@ Input <span class="ansi-green-intense-fg ansi-bold">In [52]</span>, in <span cla
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replace the Alanine values in our dictionary with .update()</span>
-<span class="n">aminoacids_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Alanine&quot;</span><span class="p">:</span> <span class="o">...</span><span class="p">})</span>
+<span class="n">aminoacids_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s2">&quot;Alanine&quot;</span><span class="p">:</span> <span class="s1">&#39;Changed values&#39;</span><span class="p">})</span>
 <span class="n">aminoacids_dict</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[58]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;Alanine&#39;: &#39;Changed values&#39;, &#39;Cysteine&#39;: {&#39;Cys&#39;, &#39;TGC, TGT&#39;, &#39;C&#39;}, &#39;Aspartic acid&#39;: {&#39;GAC GAT&#39;, &#39;D&#39;, &#39;Asp&#39;}, &#39;Glutamic acid&#39;: {&#39;GAA GAG&#39;, &#39;Glu&#39;, &#39;E&#39;}, &#39;Phenylalanine&#39;: {&#39;Phe&#39;, &#39;F&#39;, &#39;TTC TTT&#39;}, &#39;Glycine&#39;: {&#39;Gly&#39;, &#39;G&#39;, &#39;GGA GGC GGG GGT&#39;}, &#39;Histidine&#39;: {&#39;H&#39;, &#39;His&#39;, &#39;CAC CAT&#39;}, &#39;Isoleucine&#39;: {&#39;Ile&#39;, &#39;ATA ATC ATT&#39;, &#39;I&#39;}, &#39;Lysine&#39;: {&#39;Lys&#39;, &#39;AAA AAG&#39;, &#39;K&#39;}, &#39;Leucine&#39;: {&#39;TTA TTG CTA CTC CTG CTT&#39;, &#39;L&#39;, &#39;Leu&#39;}, &#39;Methionine&#39;: {&#39;MATG&#39;, &#39;Met&#39;}, &#39;Asparagine&#39;: {&#39;N&#39;, &#39;Asn&#39;, &#39;AAC AAT&#39;}, &#39;Proline&#39;: {&#39;Pro&#39;, &#39;P&#39;, &#39;CCA CCC CCG CCT&#39;}, &#39;Glutamine&#39;: {&#39;Q&#39;, &#39;CAA CAG&#39;, &#39;Gln&#39;}, &#39;Arginine&#39;: {&#39;AGA AGG CGA CGC CGG CGT&#39;, &#39;Arg&#39;, &#39;R&#39;}, &#39;Serine&#39;: {&#39;Ser&#39;, &#39;S&#39;, &#39;AGC AGT TCA TCC TCG TCT&#39;}, &#39;Threonine&#39;: {&#39;ACA ACC ACG ACU&#39;, &#39;T&#39;, &#39;Thr&#39;}, &#39;Valine&#39;: {&#39;Val&#39;, &#39;V&#39;, &#39;GTA GTC GTG GTT&#39;}, &#39;Tryptophan&#39;: {&#39;W&#39;, &#39;TGG&#39;, &#39;Trp&#39;}, &#39;Tyrosine&#39;: {&#39;Tyr&#39;, &#39;Y,TAC TAT&#39;}}</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -18549,7 +18613,7 @@ Input <span class="ansi-green-intense-fg ansi-bold">In [52]</span>, in <span cla
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Revert the Alanine values in our dictionary using =</span>
-<span class="n">aminoacids_dict</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Ala&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;GCA GCC GCG GCT&#39;</span><span class="p">}</span>
+<span class="n">aminoacids_dict</span><span class="p">[</span><span class="s2">&quot;Alan&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Ala&#39;</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;GCA GCC GCG GCT&#39;</span><span class="p">}</span>
 <span class="n">aminoacids_dict</span>
 </pre></div>
 
