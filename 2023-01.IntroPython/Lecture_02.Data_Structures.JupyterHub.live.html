@@ -17777,21 +17777,46 @@ genome
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># is count a method or an attribute?</span>
-<span class="o">...</span><span class="p">(</span><span class="n">list_alanine</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">)</span>
+<span class="nb">getattr</span><span class="p">(</span><span class="n">list_alanine</span><span class="p">,</span> <span class="s2">&quot;count&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;built-in method count of list object at 0x000001623C260540&gt;</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -17812,7 +17837,7 @@ genome
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The codon GCC is present &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">list_alanine</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;GCC&quot;</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; time(s) in list_alanine&quot;</span><span class="p">)</span>
 
 <span class="c1"># Locate GCC in list_alanine with .index()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The codon GCC can be found at index &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="o">...</span><span class="p">(</span><span class="s2">&quot;GCC&quot;</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The codon GCC can be found at index &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">list_alanine</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;GCC&quot;</span><span class="p">)))</span>
 </pre></div>
 
      </div>
