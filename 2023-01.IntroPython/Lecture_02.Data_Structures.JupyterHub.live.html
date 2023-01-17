@@ -19285,12 +19285,12 @@ get(self, key, default=None, /)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Try to pull an element out by index position. What happens?</span>
@@ -19300,6 +19300,35 @@ get(self, key, default=None, /)
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">KeyError</span>                                  Traceback (most recent call last)
+Input <span class="ansi-green-intense-fg ansi-bold">In [68]</span>, in <span class="ansi-cyan-fg">&lt;cell line: 2&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-fg">      1</span> <span style="color: rgb(95,135,135)"># Try to pull an element out by index position. What happens?</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span> <span class="ansi-yellow-bg">aminoacids_subset_dict</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0</span><span class="ansi-yellow-bg">]</span>
+
+<span class="ansi-red-intense-fg ansi-bold">KeyError</span>: 0</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -19328,10 +19357,10 @@ get(self, key, default=None, /)
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># grab the first inserted key:value pair in the dictionary</span>
-<span class="nb">tuple</span><span class="p">(</span><span class="n">aminoacids_dict</span><span class="o">.</span><span class="n">items</span><span class="p">())[</span><span class="o">...</span><span class="p">]</span>
+<span class="nb">tuple</span><span class="p">(</span><span class="n">aminoacids_dict</span><span class="o">.</span><span class="n">items</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># grab the last inserted key:value pair in the dictionary</span>
-<span class="nb">tuple</span><span class="p">(</span><span class="n">aminoacids_dict</span><span class="o">.</span><span class="n">items</span><span class="p">())[</span><span class="o">...</span><span class="p">]</span>
+<span class="nb">tuple</span><span class="p">(</span><span class="n">aminoacids_dict</span><span class="o">.</span><span class="n">items</span><span class="p">())[</span><span class="o">-</span><span class="p">]</span>
 
 <span class="c1"># grab the fifth inserted key:value pair in the dictionary</span>
 <span class="nb">tuple</span><span class="p">(</span><span class="n">aminoacids_dict</span><span class="o">.</span><span class="n">items</span><span class="p">())[</span><span class="o">...</span><span class="p">]</span>
