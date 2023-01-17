@@ -24296,31 +24296,309 @@ Name: Aminoacid, dtype: object</pre>
 <hr>
 <div class="alert alert-block alert-danger">
     <b>Section 4.0.0 Comprehension Question:</b> Use the .iloc method to replicate the output of:
-    <p style="margin-left: 40px"><b>aminoacids_csv.loc[["Ala", "Ser", "Pyl"]]</b><br>
-        <b>aminoacids_csv.loc[["Ala", "Ser", "Pyl"] , ["Aminoacid", "DNA codons"]]</b><br>
-        <b>aminoacids_csv.loc[ : , ["Aminoacid", "DNA codons"]]</b> 
+    <p style="margin-left: 40px"><b>aminoacids_df.loc[["Ala", "Ser", "Pyl"]]</b><br>
+        <b>aminoacids_df.loc[["Ala", "Ser", "Pyl"] , ["Aminoacid", "DNA codons"]]</b><br>
+        <b>aminoacids_df.loc[ : , ["Aminoacid", "DNA codons"]]</b> 
     </p>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[127]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Replicate the output of the following .loc coding using the .iloc() method!</span>
-<span class="n">aminoacids_csv_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s2">&quot;Ala&quot;</span><span class="p">,</span> <span class="s2">&quot;Ser&quot;</span><span class="p">,</span> <span class="s2">&quot;Pyl&quot;</span><span class="p">]]</span>
-<span class="n">aminoacids_csv_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s2">&quot;Ala&quot;</span><span class="p">,</span> <span class="s2">&quot;Ser&quot;</span><span class="p">,</span> <span class="s2">&quot;Pyl&quot;</span><span class="p">]</span> <span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Aminoacid&quot;</span><span class="p">,</span> <span class="s2">&quot;DNA codons&quot;</span><span class="p">]]</span>
-<span class="n">aminoacids_csv_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span> <span class="p">:</span> <span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Aminoacid&quot;</span><span class="p">,</span> <span class="s2">&quot;DNA codons&quot;</span><span class="p">]]</span>
+<span class="n">aminoacids_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s2">&quot;Ala&quot;</span><span class="p">,</span> <span class="s2">&quot;Ser&quot;</span><span class="p">,</span> <span class="s2">&quot;Pyl&quot;</span><span class="p">]]</span>
+<span class="n">aminoacids_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="s2">&quot;Ala&quot;</span><span class="p">,</span> <span class="s2">&quot;Ser&quot;</span><span class="p">,</span> <span class="s2">&quot;Pyl&quot;</span><span class="p">]</span> <span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Aminoacid&quot;</span><span class="p">,</span> <span class="s2">&quot;DNA codons&quot;</span><span class="p">]]</span>
+<span class="n">aminoacids_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span> <span class="p">:</span> <span class="p">,</span> <span class="p">[</span><span class="s2">&quot;Aminoacid&quot;</span><span class="p">,</span> <span class="s2">&quot;DNA codons&quot;</span><span class="p">]]</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[127]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Aminoacid</th>
+      <th>single letter symbol</th>
+      <th>DNA codons</th>
+      <th>Compressed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ala</th>
+      <td>Alanine</td>
+      <td>A</td>
+      <td>GCT GCC GCA GCG</td>
+      <td>GCN</td>
+    </tr>
+    <tr>
+      <th>Ser</th>
+      <td>Serine</td>
+      <td>S</td>
+      <td>TCT TCC TCA TCG AGT AGC</td>
+      <td>TCN AGY</td>
+    </tr>
+    <tr>
+      <th>Pyl</th>
+      <td>Pyrrolysine</td>
+      <td>O</td>
+      <td>TAG</td>
+      <td>TAG</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[127]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Aminoacid</th>
+      <th>DNA codons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ala</th>
+      <td>Alanine</td>
+      <td>GCT GCC GCA GCG</td>
+    </tr>
+    <tr>
+      <th>Ser</th>
+      <td>Serine</td>
+      <td>TCT TCC TCA TCG AGT AGC</td>
+    </tr>
+    <tr>
+      <th>Pyl</th>
+      <td>Pyrrolysine</td>
+      <td>TAG</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[127]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Aminoacid</th>
+      <th>DNA codons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Ala</th>
+      <td>Alanine</td>
+      <td>GCT GCC GCA GCG</td>
+    </tr>
+    <tr>
+      <th>Arg</th>
+      <td>Arginine</td>
+      <td>CGT CGC CGA CGG AGA AGG</td>
+    </tr>
+    <tr>
+      <th>Asn</th>
+      <td>Asparagine</td>
+      <td>AAT AAC</td>
+    </tr>
+    <tr>
+      <th>Asp</th>
+      <td>Aspartic acid</td>
+      <td>GAT GAC</td>
+    </tr>
+    <tr>
+      <th>Cys</th>
+      <td>Cysteine</td>
+      <td>TGT TGC</td>
+    </tr>
+    <tr>
+      <th>Gln</th>
+      <td>Glutamine</td>
+      <td>CAA CAG CAR</td>
+    </tr>
+    <tr>
+      <th>Glu</th>
+      <td>Glutamic acid</td>
+      <td>GAA GAG</td>
+    </tr>
+    <tr>
+      <th>Gly</th>
+      <td>Glycine</td>
+      <td>GGT GGC GGA GGG</td>
+    </tr>
+    <tr>
+      <th>His</th>
+      <td>Histidine</td>
+      <td>CAT CAC</td>
+    </tr>
+    <tr>
+      <th>Ile</th>
+      <td>Isoleucine</td>
+      <td>ATT ATC ATA</td>
+    </tr>
+    <tr>
+      <th>Leu</th>
+      <td>Leucine</td>
+      <td>TTA TTG CTT CTC CTA CTG</td>
+    </tr>
+    <tr>
+      <th>Lys</th>
+      <td>Lysine</td>
+      <td>AAA AAG</td>
+    </tr>
+    <tr>
+      <th>Met</th>
+      <td>Methionine</td>
+      <td>ATG</td>
+    </tr>
+    <tr>
+      <th>Phe</th>
+      <td>Phenylalanine</td>
+      <td>TTT TTC</td>
+    </tr>
+    <tr>
+      <th>Pro</th>
+      <td>Proline</td>
+      <td>CCT CCC CCA CCG</td>
+    </tr>
+    <tr>
+      <th>Pyl</th>
+      <td>Pyrrolysine</td>
+      <td>TAG</td>
+    </tr>
+    <tr>
+      <th>Ser</th>
+      <td>Serine</td>
+      <td>TCT TCC TCA TCG AGT AGC</td>
+    </tr>
+    <tr>
+      <th>Thr</th>
+      <td>Threonine</td>
+      <td>ACT ACC ACA ACG ACN</td>
+    </tr>
+    <tr>
+      <th>Trp</th>
+      <td>Tryptophan</td>
+      <td>TGG</td>
+    </tr>
+    <tr>
+      <th>Tyr</th>
+      <td>Tyrosine</td>
+      <td>TAT TAC</td>
+    </tr>
+    <tr>
+      <th>Val</th>
+      <td>Valine</td>
+      <td>GTT GTC GTA GTG</td>
+    </tr>
+    <tr>
+      <th>START</th>
+      <td>START</td>
+      <td>ATG</td>
+    </tr>
+    <tr>
+      <th>STOP</th>
+      <td>STOP</td>
+      <td>TAA TGA TAG</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
