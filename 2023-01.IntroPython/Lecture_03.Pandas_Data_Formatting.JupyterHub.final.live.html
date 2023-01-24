@@ -24062,21 +24062,71 @@ Name: pathogenStrain, dtype: object</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Look at the subsite information</span>
-<span class="n">embryo_long_final</span><span class="p">[</span><span class="s2">&quot;wormStrain&quot;</span><span class="p">]</span><span class="o">...</span>
+<span class="n">embryo_long_final</span><span class="p">[</span><span class="s2">&quot;wormStrain&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;N2&#39;,
+ &#39;JU1400&#39;,
+ &#39;ED3052A&#39;,
+ &#39;ED3052B&#39;,
+ &#39;MY1&#39;,
+ &#39;VC40171&#39;,
+ &#39;AWR144&#39;,
+ &#39;AWR145&#39;,
+ &#39;JU1400-cross&#39;,
+ &#39;MY1-cross&#39;,
+ &#39;ED3042-cross&#39;,
+ &#39;JU360-cross&#39;,
+ &#39;JU1400-MY1-cross&#39;,
+ &#39;ED3042-MY1-cross&#39;,
+ &#39;JU360-MY1-cross&#39;,
+ &#39;VC20019&#39;,
+ &#39;ED3042&#39;,
+ &#39;JU360&#39;,
+ &#39;AB1&#39;,
+ &#39;JU397&#39;,
+ &#39;JU642&#39;,
+ &#39;MY6&#39;,
+ &#39;LUA1&#39;,
+ &#39;CB4856&#39;,
+ &#39;JU300&#39;,
+ &#39;MY2&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -24101,10 +24151,10 @@ Name: pathogenStrain, dtype: object</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Pull down the values from our DataFrame</span>
-<span class="n">embryo_long_final</span><span class="o">...</span>  <span class="c1"># easier to see when we have smaller datasets. </span>
+<span class="n">embryo_long_final</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># easier to see when we have smaller datasets. </span>
 
 <span class="c1"># Subset the values into a 2D array of objects</span>
-<span class="n">embryo_long_final</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">embryo_long_final</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="p">:]</span>
 </pre></div>
 
      </div>
