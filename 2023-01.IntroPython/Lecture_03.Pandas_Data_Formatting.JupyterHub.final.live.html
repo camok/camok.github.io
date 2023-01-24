@@ -20703,7 +20703,7 @@ embryo_wide_subset.sample<span class="o">?</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Make a quick copy of our subset</span>
@@ -20716,12 +20716,12 @@ embryo_wide_subset.sample<span class="o">?</span>
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Look at the first 5 rows</span>
@@ -20729,15 +20729,179 @@ embryo_wide_subset.sample<span class="o">?</span>
 
 <span class="c1"># Cast the DataFrame to a list </span>
 <span class="c1"># Just print the first 5 column names since it&#39;s a pretty long list</span>
-<span class="nb">list</span><span class="p">(</span><span class="n">embryo_wide_subset</span><span class="p">)[</span><span class="o">...</span><span class="p">]</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">embryo_wide_subset</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
 
 <span class="c1"># Alternative code but it&#39;s longer</span>
-<span class="n">embryo_wide_subset</span><span class="o">...</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+<span class="n">embryo_wide_subset</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>worm.number</th>
+      <th>220205_N2_ERTm5_1.75M_72hpi</th>
+      <th>190426_N2_ERTm2_0.5M_72hpi</th>
+      <th>190426_MY2_ERTm2_1.5M_72hpi</th>
+      <th>200916_JU1400_ERTm5-96H_3.5M_96hpi</th>
+      <th>190426_JU1400_LUAm1_0M_72hpi</th>
+      <th>200821_AWR145_LUAm1_10M_72hpi</th>
+      <th>200721_JU1400_MAM1_4M_72hpi</th>
+      <th>200714_JU1400_ERTm5_3.5M_72hpi</th>
+      <th>190426_N2_ERTm5_0M_72hpi</th>
+      <th>190426_MY2_ERTm5_3.5M_72hpi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>93</th>
+      <td>94</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>123</th>
+      <td>124</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>76</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18</td>
+      <td>0_0_7</td>
+      <td>1_-1_0</td>
+      <td>1_-1_0</td>
+      <td>0_0_3</td>
+      <td>0_0_6</td>
+      <td>0_1_0</td>
+      <td>0_1_9</td>
+      <td>0_0_0</td>
+      <td>0_-1_15</td>
+      <td>1_-1_8</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>87</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;worm.number&#39;,
+ &#39;220205_N2_ERTm5_1.75M_72hpi&#39;,
+ &#39;190426_N2_ERTm2_0.5M_72hpi&#39;,
+ &#39;190426_MY2_ERTm2_1.5M_72hpi&#39;,
+ &#39;200916_JU1400_ERTm5-96H_3.5M_96hpi&#39;]</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;worm.number&#39;,
+ &#39;220205_N2_ERTm5_1.75M_72hpi&#39;,
+ &#39;190426_N2_ERTm2_0.5M_72hpi&#39;,
+ &#39;190426_MY2_ERTm2_1.5M_72hpi&#39;,
+ &#39;200916_JU1400_ERTm5-96H_3.5M_96hpi&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -20763,7 +20927,7 @@ embryo_wide_subset.sample<span class="o">?</span>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop a column by its index</span>
-<span class="n">embryo_wide_subset</span> <span class="o">=</span> <span class="n">embryo_wide_subset</span><span class="o">...</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">embryo_wide_subset</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">embryo_wide_subset</span> <span class="o">=</span> <span class="n">embryo_wide_subset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="n">embryo_wide_subset</span><span class="o">.</span><span class="n">columns</span><span class="p">[[</span><span class="mi">0</span><span class="p">]],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="c1"># this syntax will remove one everytime you run the code</span>
 
 <span class="c1"># Look at the resulting DataFrame</span>
