@@ -23235,7 +23235,7 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\l
                       <span class="p">)</span>
 
 <span class="c1"># Save your final DataFrame</span>
-<span class="n">embryo_long_final</span> <span class="o">=</span> <span class="p">(</span><span class="o">...</span>
+<span class="n">embryo_long_final</span> <span class="o">=</span> <span class="p">(</span><span class="n">embryo_long_trimmed</span>
                      <span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="c1"># Join what follows to the trimmed data</span>
                          <span class="c1"># pop() the experiment column</span>
                          <span class="n">embryo_long_trimmed</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;experiment&quot;</span><span class="p">)</span>    
@@ -23247,7 +23247,7 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\l
                          
                      <span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="c1"># To the joined data, join the following data</span>
                          <span class="c1"># pop() the measurements column</span>
-                         <span class="o">...</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;measurements&quot;</span><span class="p">)</span>
+                         <span class="n">embryo_long_trimmed</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;measurements&quot;</span><span class="p">)</span>
                          <span class="c1"># split the data into a DataFrame</span>
                          <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pat</span> <span class="o">=</span> <span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="n">expand</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
                          <span class="c1"># rename the columns</span>
