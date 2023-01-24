@@ -22344,19 +22344,19 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\l
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save all these steps into a variable</span>
 <span class="n">experiment_Info</span> <span class="o">=</span> <span class="p">(</span><span class="n">embryo_long_subset_trimmed</span>
                    <span class="c1"># Recall that pop() removes and returns what was taken out</span>
-                   <span class="o">...</span><span class="p">(</span><span class="s1">&#39;experiment&#39;</span><span class="p">)</span>
-                   <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pat</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span> <span class="n">expand</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span> <span class="c1"># We want a DataFrame as our result</span>
+                   <span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;experiment&#39;</span><span class="p">)</span>
+                   <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pat</span> <span class="o">=</span> <span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="n">expand</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="c1"># We want a DataFrame as our result</span>
 <span class="p">)</span>
 
 <span class="c1"># Check out the resulting DataFrame</span>
@@ -22369,6 +22369,161 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\l
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>220205</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>1.75M</td>
+      <td>72hpi</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>220205</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>1.75M</td>
+      <td>72hpi</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>220205</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>1.75M</td>
+      <td>72hpi</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>220205</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>1.75M</td>
+      <td>72hpi</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>220205</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>1.75M</td>
+      <td>72hpi</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>worm.number</th>
+      <th>measurements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>18</td>
+      <td>0_0_7</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>5</td>
+      <td>0_0_16</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>17</td>
+      <td>0_0_13</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>3</td>
+      <td>0_0_12</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>15</td>
+      <td>0_0_14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
