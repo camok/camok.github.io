@@ -23667,21 +23667,55 @@ memory usage: 1.7+ MB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># What types of data do we have in each variable</span>
-<span class="n">embryo_long_final</span><span class="o">...</span>
+<span class="n">embryo_long_final</span><span class="o">.</span><span class="n">dtypes</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[61]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>worm.number        int64
+date              object
+wormStrain        object
+pathogenStrain    object
+pathogenDose      object
+timepoint         object
+sporesPresent     object
+merontsPresent    object
+numEmbryos        object
+dtype: object</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -23709,7 +23743,7 @@ memory usage: 1.7+ MB
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Save the updated DataFrame to the original variable</span>
 <span class="n">embryo_long_final</span> <span class="o">=</span> <span class="n">embryo_long_final</span><span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s1">&#39;sporesPresent&#39;</span><span class="p">:</span><span class="s1">&#39;int64&#39;</span><span class="p">,</span> 
                                               <span class="s1">&#39;merontsPresent&#39;</span><span class="p">:</span><span class="s1">&#39;int64&#39;</span><span class="p">,</span> 
-                                              <span class="o">...</span><span class="p">})</span>
+                                              <span class="s1">&#39;numEmbryos&#39;</span><span class="p">:</span><span class="s1">&#39;int64&#39;</span><span class="p">})</span>
 
 <span class="c1"># What are the data types now?</span>
 <span class="n">embryo_long_final</span><span class="o">.</span><span class="n">dtypes</span>
