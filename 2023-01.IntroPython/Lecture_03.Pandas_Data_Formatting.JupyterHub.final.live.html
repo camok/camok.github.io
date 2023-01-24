@@ -21641,24 +21641,141 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\l
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Call on the melt function</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">frame</span> <span class="o">=</span> <span class="n">embryo_wide_subset</span><span class="p">,</span>
         <span class="n">id_vars</span><span class="o">=</span> <span class="n">embryo_wide_subset</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-        <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
-        <span class="n">value_name</span><span class="o">=...</span><span class="p">)</span>
+        <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;experiment&quot;</span><span class="p">,</span>
+        <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;measurements&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>worm.number</th>
+      <th>experiment</th>
+      <th>measurements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>94</td>
+      <td>220205_N2_ERTm5_1.75M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>124</td>
+      <td>220205_N2_ERTm5_1.75M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>76</td>
+      <td>220205_N2_ERTm5_1.75M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>18</td>
+      <td>220205_N2_ERTm5_1.75M_72hpi</td>
+      <td>0_0_7</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>87</td>
+      <td>220205_N2_ERTm5_1.75M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>6</td>
+      <td>190426_MY2_ERTm5_3.5M_72hpi</td>
+      <td>0_-1_30</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>44</td>
+      <td>190426_MY2_ERTm5_3.5M_72hpi</td>
+      <td>1_-1_22</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>104</td>
+      <td>190426_MY2_ERTm5_3.5M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>109</td>
+      <td>190426_MY2_ERTm5_3.5M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>41</td>
+      <td>190426_MY2_ERTm5_3.5M_72hpi</td>
+      <td>1_-1_7</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 3 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -21673,16 +21790,16 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\l
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Call on the melt method from the DataFrame object itself</span>
-<span class="n">embryo_wide_subset</span><span class="o">...</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span> <span class="n">embryo_wide_subset</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+<span class="n">embryo_wide_subset</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span> <span class="n">embryo_wide_subset</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
                         <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;experiment&quot;</span><span class="p">,</span>
                         <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;measurements&quot;</span><span class="p">)</span>
 </pre></div>
@@ -21690,6 +21807,123 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\l
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>worm.number</th>
+      <th>experiment</th>
+      <th>measurements</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>94</td>
+      <td>220205_N2_ERTm5_1.75M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>124</td>
+      <td>220205_N2_ERTm5_1.75M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>76</td>
+      <td>220205_N2_ERTm5_1.75M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>18</td>
+      <td>220205_N2_ERTm5_1.75M_72hpi</td>
+      <td>0_0_7</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>87</td>
+      <td>220205_N2_ERTm5_1.75M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>6</td>
+      <td>190426_MY2_ERTm5_3.5M_72hpi</td>
+      <td>0_-1_30</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>44</td>
+      <td>190426_MY2_ERTm5_3.5M_72hpi</td>
+      <td>1_-1_22</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>104</td>
+      <td>190426_MY2_ERTm5_3.5M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>109</td>
+      <td>190426_MY2_ERTm5_3.5M_72hpi</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>41</td>
+      <td>190426_MY2_ERTm5_3.5M_72hpi</td>
+      <td>1_-1_7</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 3 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
