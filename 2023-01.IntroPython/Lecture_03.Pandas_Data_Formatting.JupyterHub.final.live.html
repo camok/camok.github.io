@@ -15987,27 +15987,69 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Generate an ExcelFile object which will contain information about our excel file</span>
-<span class="n">infection_xl</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="s1">&#39;infection_data_all.xlsx&#39;</span><span class="p">)</span>
+<span class="n">infection_xl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">ExcelFile</span><span class="p">(</span><span class="s1">&#39;infection_data_all.xlsx&#39;</span><span class="p">)</span>
 
 <span class="c1"># What is this object?</span>
 <span class="nb">type</span><span class="p">(</span><span class="n">infection_xl</span><span class="p">)</span>
 
 <span class="c1"># List the sheet names</span>
-<span class="n">infection_xl</span><span class="o">...</span>
+<span class="n">infection_xl</span><span class="o">.</span><span class="n">sheet_names</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>pandas.io.excel._base.ExcelFile</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;infection_metadata&#39;,
+ &#39;embryo_data_wide&#39;,
+ &#39;microsporidia_info&#39;,
+ &#39;nematode_info&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -16019,7 +16061,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Take our excel object and parse a specific file</span>
-<span class="n">infection_xl</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">sheet_name</span> <span class="o">=</span> <span class="o">...</span><span class="p">)</span>
+<span class="n">infection_xl</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">sheet_name</span> <span class="o">=</span> <span class="s2">&quot;embryo_data_wide&quot;</span><span class="p">)</span>
 
 <span class="c1"># Close the file when we&#39;re done with it. This releases it from memory.</span>
 <span class="n">infection_xl</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
