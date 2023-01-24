@@ -18192,23 +18192,91 @@ memory usage: 62.7+ KB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Apply the any() method to the same call</span>
 <span class="n">embryo_metadata</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">()</span>
 
-<span class="nb">type</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">embryo_metadata</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">())</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>experiment           False
+experimenter         False
+description          False
+Infection Date       False
+Plate Number         False
+Worm_strain          False
+Total Worms          False
+Spore Strain         False
+Spore Lot            False
+Lot concentration    False
+Total Spores (M)     False
+Total ul spore       False
+Infection Round      False
+40X OP50 (mL)        False
+Plate Size           False
+Spores/cm2           False
+Time plated           True
+Time Incubated        True
+Temp                 False
+timepoint            False
+infection.type       False
+Fixing Date          False
+Location              True
+Staining Date        False
+Stain type           False
+Slide date           False
+Slide number         False
+Slide Box            False
+Imaging Date         False
+dtype: bool</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>pandas.core.series.Series</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -18226,23 +18294,69 @@ memory usage: 62.7+ KB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Pull up a list of columns from our DataFrame</span>
-<span class="n">embryo_metadata</span><span class="o">...</span>
+<span class="n">embryo_metadata</span><span class="o">.</span><span class="n">columns</span>
 
-<span class="nb">type</span><span class="p">(</span><span class="n">embryo_metadata</span><span class="o">...</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">embryo_metadata</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>Index([&#39;experiment&#39;, &#39;experimenter&#39;, &#39;description&#39;, &#39;Infection Date&#39;,
+       &#39;Plate Number&#39;, &#39;Worm_strain&#39;, &#39;Total Worms&#39;, &#39;Spore Strain&#39;,
+       &#39;Spore Lot&#39;, &#39;Lot concentration&#39;, &#39;Total Spores (M)&#39;, &#39;Total ul spore&#39;,
+       &#39;Infection Round&#39;, &#39;40X OP50 (mL)&#39;, &#39;Plate Size&#39;, &#39;Spores/cm2&#39;,
+       &#39;Time plated&#39;, &#39;Time Incubated&#39;, &#39;Temp&#39;, &#39;timepoint&#39;, &#39;infection.type&#39;,
+       &#39;Fixing Date&#39;, &#39;Location&#39;, &#39;Staining Date&#39;, &#39;Stain type&#39;, &#39;Slide date&#39;,
+       &#39;Slide number&#39;, &#39;Slide Box&#39;, &#39;Imaging Date&#39;],
+      dtype=&#39;object&#39;)</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>pandas.core.indexes.base.Index</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -18254,7 +18368,7 @@ memory usage: 62.7+ KB
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Take our series of booleans and retrieve ONLY the column names that are true</span>
-<span class="n">embryo_metadata</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">embryo_metadata</span><span class="o">...</span><span class="p">]</span>
+<span class="n">embryo_metadata</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">embryo_metadata</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">()]</span>
 
 <span class="c1"># What is the object we get back?</span>
 <span class="nb">type</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
