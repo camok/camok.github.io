@@ -25001,12 +25001,12 @@ memory usage: 10.9+ KB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># What size is our measurement dataset?</span>
@@ -25019,6 +25019,45 @@ memory usage: 10.9+ KB
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(15128, 9)</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(276, 26)</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -25034,20 +25073,20 @@ memory usage: 10.9+ KB
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Merge the datasets based on matching the correct columns between each</span>
 <span class="c1"># Perform an &#39;inner&#39; merge so only intersecting data remains.</span>
 
-<span class="n">embryo_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-                         <span class="n">how</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-                         <span class="n">on</span> <span class="o">=</span> <span class="o">...</span>
+<span class="n">embryo_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span> <span class="o">=</span> <span class="n">embryo_long_final</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="n">embryo_metadata</span><span class="p">,</span>
+                         <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;inner&#39;</span><span class="p">,</span>
+                         <span class="n">on</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;wormStrain&#39;</span><span class="p">,</span> <span class="s1">&#39;pathogenStrain&#39;</span><span class="p">,</span> <span class="s1">&#39;pathogenDose&#39;</span><span class="p">,</span> <span class="s1">&#39;timepoint&#39;</span><span class="p">]</span>
                         <span class="p">)</span>
 
 <span class="n">embryo_merged</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -25056,6 +25095,65 @@ memory usage: 10.9+ KB
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Int64Index: 11149 entries, 0 to 11148
+Data columns (total 30 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   worm.number        11149 non-null  int64  
+ 1   date               11149 non-null  object 
+ 2   wormStrain         11149 non-null  object 
+ 3   pathogenStrain     11149 non-null  object 
+ 4   pathogenDose       11149 non-null  object 
+ 5   timepoint          11149 non-null  object 
+ 6   sporesPresent      11149 non-null  int64  
+ 7   merontsPresent     11149 non-null  int64  
+ 8   numEmbryos         11149 non-null  int64  
+ 9   experiment         11149 non-null  object 
+ 10  experimenter       11149 non-null  object 
+ 11  description        11149 non-null  object 
+ 12  Infection Date     11149 non-null  int64  
+ 13  Plate Number       11149 non-null  int64  
+ 14  Total Worms        11149 non-null  int64  
+ 15  Spore Lot          11149 non-null  object 
+ 16  Lot concentration  11149 non-null  int64  
+ 17  Total ul spore     11149 non-null  float64
+ 18  Infection Round    11149 non-null  int64  
+ 19  40X OP50 (mL)      11149 non-null  float64
+ 20  Plate Size         11149 non-null  int64  
+ 21  Spores/cm2         11149 non-null  float64
+ 22  Temp               11149 non-null  int64  
+ 23  infection.type     11149 non-null  object 
+ 24  Staining Date      11149 non-null  int64  
+ 25  Stain type         11149 non-null  object 
+ 26  Slide date         11149 non-null  int64  
+ 27  Slide number       11149 non-null  int64  
+ 28  Slide Box          11149 non-null  int64  
+ 29  Imaging Date       11149 non-null  int64  
+dtypes: float64(3), int64(16), object(11)
+memory usage: 2.6+ MB
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
