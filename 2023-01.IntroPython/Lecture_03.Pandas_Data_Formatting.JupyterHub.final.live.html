@@ -22874,12 +22874,12 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\l
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">measurement_Info</span> <span class="o">=</span> <span class="p">(</span><span class="n">embryo_long_subset_trimmed</span>
@@ -22891,7 +22891,7 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\l
                     <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pat</span> <span class="o">=</span> <span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="n">expand</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>       
                     
                     <span class="c1"># Supply a dictionary to rename with</span>
-                    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;sporesPresent&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">&#39;merontsPresent&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">})</span> <span class="c1"># Rename the columns</span>
+                    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="s1">&#39;sporesPresent&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">&#39;merontsPresent&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">&#39;numEmbryos&#39;</span><span class="p">})</span> <span class="c1"># Rename the columns</span>
                             
                    <span class="p">)</span>
 
@@ -22904,21 +22904,290 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\l
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[56]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sporesPresent</th>
+      <th>merontsPresent</th>
+      <th>numEmbryos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>0</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>0</td>
+      <td>0</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>0</td>
+      <td>0</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>0</td>
+      <td>0</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>0</td>
+      <td>0</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How does it all look when joined?</span>
-<span class="n">embryo_long_subset_trimmed</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">experiment_Info</span><span class="p">)</span><span class="o">...</span>
+<span class="n">embryo_long_subset_trimmed</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">experiment_Info</span><span class="p">)</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">measurement_Info</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[57]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>worm.number</th>
+      <th>date</th>
+      <th>wormStrain</th>
+      <th>pathogenStrain</th>
+      <th>pathogenDose</th>
+      <th>timepoint</th>
+      <th>sporesPresent</th>
+      <th>merontsPresent</th>
+      <th>numEmbryos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>18</td>
+      <td>220205</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>1.75M</td>
+      <td>72hpi</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>5</td>
+      <td>220205</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>1.75M</td>
+      <td>72hpi</td>
+      <td>0</td>
+      <td>0</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>17</td>
+      <td>220205</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>1.75M</td>
+      <td>72hpi</td>
+      <td>0</td>
+      <td>0</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>3</td>
+      <td>220205</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>1.75M</td>
+      <td>72hpi</td>
+      <td>0</td>
+      <td>0</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>15</td>
+      <td>220205</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>1.75M</td>
+      <td>72hpi</td>
+      <td>0</td>
+      <td>0</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>991</th>
+      <td>56</td>
+      <td>190426</td>
+      <td>MY2</td>
+      <td>ERTm5</td>
+      <td>3.5M</td>
+      <td>72hpi</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>994</th>
+      <td>11</td>
+      <td>190426</td>
+      <td>MY2</td>
+      <td>ERTm5</td>
+      <td>3.5M</td>
+      <td>72hpi</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>6</td>
+      <td>190426</td>
+      <td>MY2</td>
+      <td>ERTm5</td>
+      <td>3.5M</td>
+      <td>72hpi</td>
+      <td>0</td>
+      <td>-1</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>44</td>
+      <td>190426</td>
+      <td>MY2</td>
+      <td>ERTm5</td>
+      <td>3.5M</td>
+      <td>72hpi</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>41</td>
+      <td>190426</td>
+      <td>MY2</td>
+      <td>ERTm5</td>
+      <td>3.5M</td>
+      <td>72hpi</td>
+      <td>1</td>
+      <td>-1</td>
+      <td>7</td>
+    </tr>
+  </tbody>
+</table>
+<p>360 rows × 9 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
