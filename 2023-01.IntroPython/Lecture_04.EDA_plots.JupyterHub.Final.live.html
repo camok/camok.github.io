@@ -20954,12 +20954,12 @@ jp-needs-light-background
 
 <span class="c1"># Use catplot to make our boxplot</span>
 <span class="n">snsPlot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">mean_Embryo_data</span><span class="p">,</span>
-                      <span class="n">x</span> <span class="o">=</span> <span class="o">...</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;numEmbryos&quot;</span><span class="p">,</span> 
+                      <span class="n">x</span> <span class="o">=</span> <span class="s2">&quot;doseLevel&quot;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s2">&quot;numEmbryos&quot;</span><span class="p">,</span> 
                       <span class="n">kind</span> <span class="o">=</span> <span class="s2">&quot;box&quot;</span><span class="p">,</span>                        <span class="c1"># Make a boxplot</span>
                       <span class="n">height</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">aspect</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
                       <span class="n">width</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">,</span>                <span class="c1"># Put some more distance between categories by decreasing width</span>
                       <span class="n">col</span> <span class="o">=</span> <span class="s2">&quot;wormStrain&quot;</span><span class="p">,</span>
-                      <span class="o">...</span>
+                      <span class="n">col_wrap</span> <span class="o">=</span> <span class="mi">5</span>
                      <span class="p">)</span>
 
 <span class="c1"># Alter the xtick attributes</span>
