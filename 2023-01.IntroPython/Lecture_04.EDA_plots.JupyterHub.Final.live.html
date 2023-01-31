@@ -20409,17 +20409,17 @@ jp-needs-light-background
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Filter for only uninfected data</span>
-<span class="n">mean_Embryo_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">embryo_merged_subset</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">embryo_merged_subset</span><span class="p">[</span><span class="s1">&#39;doseLevel&#39;</span><span class="p">]</span><span class="o">.</span>
-                                             <span class="n">isin</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mock&quot;</span><span class="p">,</span> <span class="s2">&quot;Medium&quot;</span><span class="p">])]</span> <span class="c1"># filter by doseLevel</span>
+<span class="n">mean_Embryo_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">embryo_merged_subset</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">embryo_merged_subset</span><span class="p">[</span><span class="s1">&#39;doseLevel&#39;</span><span class="p">]</span>
+                                             <span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Mock&quot;</span><span class="p">,</span> <span class="s2">&quot;Medium&quot;</span><span class="p">])]</span> <span class="c1"># filter by doseLevel</span>
  
                     <span class="c1"># Group by infection experiment </span>
                     <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="s1">&#39;wormStrain&#39;</span><span class="p">,</span> <span class="s1">&#39;pathogenStrain&#39;</span><span class="p">,</span> <span class="s1">&#39;doseLevel&#39;</span><span class="p">])</span>
@@ -20431,7 +20431,7 @@ jp-needs-light-background
                     <span class="c1"># Recall, when we reset the index, it converts the indices back into columns</span>
                     <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
                     
-                    <span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="o">...</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">})</span>
+                    <span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="s1">&#39;doseLevel&#39;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span><span class="p">})</span>
 <span class="p">)</span>
 
 <span class="c1"># Check out our summarized data</span>
@@ -20441,6 +20441,147 @@ jp-needs-light-background
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[50]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>date</th>
+      <th>wormStrain</th>
+      <th>pathogenStrain</th>
+      <th>doseLevel</th>
+      <th>numEmbryos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>Medium</td>
+      <td>8.583333</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>Mock</td>
+      <td>10.903226</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>190426</td>
+      <td>CB4856</td>
+      <td>ERTm5</td>
+      <td>Medium</td>
+      <td>17.484375</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>190426</td>
+      <td>CB4856</td>
+      <td>ERTm5</td>
+      <td>Mock</td>
+      <td>20.750000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>Medium</td>
+      <td>2.352941</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>138</th>
+      <td>200916</td>
+      <td>N2</td>
+      <td>ERTm5-96H</td>
+      <td>Mock</td>
+      <td>20.140000</td>
+    </tr>
+    <tr>
+      <th>139</th>
+      <td>200918</td>
+      <td>AWR144</td>
+      <td>ERTm5</td>
+      <td>Mock</td>
+      <td>20.060000</td>
+    </tr>
+    <tr>
+      <th>140</th>
+      <td>200918</td>
+      <td>AWR145</td>
+      <td>ERTm5</td>
+      <td>Mock</td>
+      <td>21.760000</td>
+    </tr>
+    <tr>
+      <th>141</th>
+      <td>200918</td>
+      <td>JU1400</td>
+      <td>ERTm5</td>
+      <td>Mock</td>
+      <td>14.140000</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>200918</td>
+      <td>N2</td>
+      <td>ERTm5</td>
+      <td>Mock</td>
+      <td>21.360000</td>
+    </tr>
+  </tbody>
+</table>
+<p>143 rows × 5 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
