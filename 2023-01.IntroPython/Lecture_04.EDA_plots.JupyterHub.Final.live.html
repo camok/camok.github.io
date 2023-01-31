@@ -21657,7 +21657,7 @@ class="
                <span class="n">inner</span> <span class="o">=</span> <span class="s2">&quot;quartile&quot;</span><span class="p">,</span>         <span class="c1"># Add quartile markers to each half of the violin</span>
                <span class="n">palette</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Mock&quot;</span><span class="p">:</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="s2">&quot;Medium&quot;</span><span class="p">:</span> <span class="s2">&quot;yellow&quot;</span><span class="p">},</span>
                <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">,</span>
-               <span class="n">ax</span> <span class="o">=</span> <span class="o">...</span>
+               <span class="n">ax</span> <span class="o">=</span> <span class="n">ax2</span>
               <span class="p">)</span>
 
 <span class="c1"># Overlay a swarmplot on our catplot</span>
@@ -21668,7 +21668,7 @@ class="
               <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;dark:black&quot;</span><span class="p">,</span>     <span class="c1"># Recolour all of the points to black</span>
               <span class="n">size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>                   <span class="c1"># Set the size of our points so they can be seen</span>
               <span class="n">dodge</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-              <span class="n">ax</span> <span class="o">=</span> <span class="o">...</span>
+              <span class="n">ax</span> <span class="o">=</span> <span class="n">ax2</span>
              <span class="p">)</span>
 
 <span class="c1"># Directly set the labels on the x-axis and y-axis of ax2</span>
@@ -21676,7 +21676,7 @@ class="
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;embryos per animal&quot;</span><span class="p">)</span>
 
 <span class="c1"># Alter the xtick attributes</span>
-<span class="n">ax2</span><span class="o">...</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="n">rotation</span> <span class="o">=</span> <span class="mi">90</span><span class="p">)</span>
 
 <span class="c1"># Show the plot</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
