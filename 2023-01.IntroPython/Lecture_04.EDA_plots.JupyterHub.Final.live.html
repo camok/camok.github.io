@@ -18279,6 +18279,99 @@ color or other plot-specific attributes. Let's update the fill and line colours 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
+<h1 id="7.0.0-Appendix-1---In-case-your-kernel-should-crash">7.0.0 Appendix 1 - In case your kernel should crash<a class="anchor-link" href="#7.0.0-Appendix-1---In-case-your-kernel-should-crash">&#182;</a></h1><p>In the case that your kernel crashes, you can use this code cell to recreate all of the data that is used in <strong>section 5.0.0</strong>. Convert the below cell into a coding cell by using the "Y" key when highlighting it in "Command" mode. Then simply run the cell and it should recreate the datasets needed.</p>
+
+</div>
+</div>
+</div>
+</div># ----- Always run this at the beginning of class so we can get multi-command output ----- #
+
+# Access options from the iPython core
+from IPython.core.interactiveshell import InteractiveShell
+
+# Change the value of ast_node_interactivity
+InteractiveShell.ast_node_interactivity = "all"
+
+# ----- Additional packages we want to import for class ----- #
+
+# Import the pandas package
+import pandas as pd
+from matplotlib import pyplot as plt
+import numpy as np
+
+# !pip install seaborn
+
+# Read in embryo_long_merged.csv
+embryo_merged = pd.read_csv('data/embryo_long_merged.csv') 
+
+# Subset the data from our dataset
+embryo_merged_subset = embryo_merged.iloc[:, :19]
+
+# Use the insert method
+embryo_merged_subset.insert(loc = 4,                   # Location to insert at
+                            column = 'pathogenDose',   # The column name after insertion
+                            
+                            # To calculate the value, we'll pop from the subset
+                            value = (embryo_merged_subset.pop('pathogenDose')
+                            
+                                     # Break up the float from the "M"
+                                     .str.split(pat = "M", expand = True)
+                            
+                                     # Convert the first column to a float, and then provide only that to insert
+                                     .astype({0:'float64'})[0])
+                           )
+
+# Filter the data by N2 animals with a pathogenDose of 0
+N2_mock_data = embryo_merged_subset.loc[(embryo_merged_subset['wormStrain'] == "N2") &
+                                        (embryo_merged_subset['pathogenDose'] == 0), 
+                                       :]
+
+# Convert our date variable with the astype() method
+N2_mock_data = N2_mock_data.astype({'date':'category'})
+
+# Take the unique values and flip the order
+date_list = N2_mock_data.date.unique()[::-1].tolist()
+
+# We'll need to pull out and replace the date column
+N2_mock_data['date'] = (N2_mock_data['date']
+                        # access the categorical property
+                        .cat
+                        # Reorder the categorical data
+                        .reorder_categories(new_categories = date_list)
+                       )
+
+# Filter for only uninfected data
+mean_Embryo_data = (embryo_merged_subset.loc[embryo_merged_subset['doseLevel'].
+                                             isin(values = ["Mock", "Medium"])] # filter by doseLevel
+ 
+                    # Group by infection experiment 
+                    .groupby(by = ['date', 'wormStrain', 'pathogenStrain', 'doseLevel'])
+
+                    # Create the frequency table on numEmbryos
+                    ['numEmbryos']
+                    .agg('mean')
+
+                    # Recall, when we reset the index, it converts the indices back into columns
+                    .reset_index()
+                    
+                    .astype({'doseLevel':'category'})
+)
+
+# Pull out our doseLevel data and replace it with a newly categorized version
+mean_Embryo_data['doseLevel'] = (mean_Embryo_data['doseLevel']
+                                 .cat
+                                 .reorder_categories(new_categories = ["Mock", "Medium"])
+                                )
+
+# Read the pitlatrine data in from file
+infectionSig_data = pd.read_csv("data/infection_signal.tsv", sep = "\t")
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
 <h2 id="The-Center-for-the-Analysis-of-Genome-Evolution-and-Function-(CAGEF)">The Center for the Analysis of Genome Evolution and Function (CAGEF)<a class="anchor-link" href="#The-Center-for-the-Analysis-of-Genome-Evolution-and-Function-(CAGEF)">&#182;</a></h2><p>The Centre for the Analysis of Genome Evolution and Function (CAGEF) at the University of Toronto offers comprehensive experimental design, research, and analysis services in microbiome and metagenomic studies, genomics, proteomics, and bioinformatics.</p>
 <p>From targeted DNA amplicon sequencing to transcriptomes, whole genomes, and metagenomes, from protein identification to post-translational modification, CAGEF has the tools and knowledge to support your research. Our state-of-the-art facility and experienced research staff provide a broad range of services, including both standard analyses and techniques developed by our team. In particular, we have special expertise in microbial, plant, and environmental systems.</p>
 <p>For more information about us and the services we offer, please visit <a href="https://www.cagef.utoronto.ca/">https://www.cagef.utoronto.ca/</a>.</p>
