@@ -21901,12 +21901,12 @@ else:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Unlist into data frames and then join into a single data frame</span>
@@ -21919,11 +21919,10 @@ else:
     <span class="n">list_a</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">strainData_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
     
     <span class="c1"># Add that element into list_b</span>
-    <span class="n">list_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="n">list_b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">list_a</span><span class="p">)</span>
         
-    <span class="c1"># Concatenate list_b to df_test</span>
-    <span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">list_b</span><span class="p">)</span> <span class="c1"># Does this belong inside or outside the loop?</span>
-
+<span class="c1"># Concatenate list_b to df_test</span>
+<span class="n">df_test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">list_b</span><span class="p">)</span> <span class="c1"># Does this belong inside or outside the loop?</span>
 
 <span class="c1"># Output the data</span>
 <span class="n">df_test</span>
@@ -21936,21 +21935,307 @@ else:
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[85]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>worm.number</th>
+      <th>date</th>
+      <th>wormStrain</th>
+      <th>pathogenStrain</th>
+      <th>pathogenDose</th>
+      <th>doseLevel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>1</td>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>2</td>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>3</td>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>4</td>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>5</td>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Note, we already have a list of DataFrames so...</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">strainData_list</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[86]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>worm.number</th>
+      <th>date</th>
+      <th>wormStrain</th>
+      <th>pathogenStrain</th>
+      <th>pathogenDose</th>
+      <th>doseLevel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>190426</td>
+      <td>AB1</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>1</td>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>2</td>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>3</td>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>4</td>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>5</td>
+      <td>190426</td>
+      <td>ED3042</td>
+      <td>LUAm1</td>
+      <td>0M</td>
+      <td>Mock</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
