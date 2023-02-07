@@ -20518,16 +20518,16 @@ Pathogen strain: AWRm78
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Using the groupby will return only the combinations that TRULY exist in our dataset.</span>
-<span class="p">(</span><span class="n">data</span><span class="o">...</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;wormStrain&quot;</span><span class="p">,</span> <span class="s2">&quot;pathogenStrain&quot;</span><span class="p">])</span>      <span class="c1"># Group the data</span>
+<span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;wormStrain&quot;</span><span class="p">,</span> <span class="s2">&quot;pathogenStrain&quot;</span><span class="p">])</span>      <span class="c1"># Group the data</span>
  <span class="p">[</span><span class="s2">&quot;numEmbryos&quot;</span><span class="p">]</span>       <span class="c1"># Select on embryo counts</span>
  <span class="o">.</span><span class="n">sum</span><span class="p">()</span>               <span class="c1"># Sum on the numeric data</span>
  <span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>       <span class="c1"># convert back to ungrouped DataFrame</span>
@@ -20538,6 +20538,31 @@ Pathogen strain: AWRm78
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>(42, 3)</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
