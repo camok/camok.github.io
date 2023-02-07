@@ -20616,11 +20616,11 @@ Pathogen strain: AWRm78
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Build a for loop to print just 2 subsets of data</span>
 
 <span class="c1"># What strains are we going to look at? N2 and JU1400</span>
-<span class="n">strain_list</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="n">strain_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;N2&quot;</span><span class="p">,</span> <span class="s2">&quot;JU1400&quot;</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">strain</span> <span class="ow">in</span> <span class="n">strain_list</span><span class="p">:</span>
     
-    <span class="n">current_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;wormStrain&#39;</span><span class="p">]</span><span class="o">...</span><span class="p">,]</span>
+    <span class="n">current_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;wormStrain&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="n">strain</span><span class="p">]),]</span>
     
     <span class="c1"># Create a plot</span>
     <span class="n">curr_plot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">catplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">current_data</span><span class="p">,</span>
