@@ -19426,8 +19426,8 @@ wormStrain: MY2
 <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;numEmbryos&#39;</span><span class="p">]:</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="o">...</span>
-    <span class="o">...</span> <span class="o">=</span> <span class="n">total</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;numEmbryos&#39;</span><span class="p">])</span> <span class="c1"># Should this belong in the for loop?</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">t</span>
+    <span class="n">embryo_mean</span> <span class="o">=</span> <span class="n">total</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;numEmbryos&#39;</span><span class="p">])</span> <span class="c1"># Should this belong in the for loop?</span>
     
 <span class="nb">print</span><span class="p">(</span><span class="n">embryo_mean</span><span class="p">)</span>
 
