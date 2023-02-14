@@ -20787,7 +20787,7 @@ memory usage: 2.4+ MB
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Keep all of the column names with the word Date OR worm in them</span>
-<span class="n">data</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;...&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">data</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;.*[dD]ate&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
 
 <span class="c1"># This version is a little more comprehensive (ie errorproofed) but accomplishes the same task</span>
 <span class="n">data</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;...&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span>
