@@ -19524,12 +19524,12 @@ split 14:AGCCCGUCGCAACCCAGG
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 1. Remove the &quot;.&quot; and remember the &quot;\&quot; to treat it as a literal!</span>
@@ -19542,7 +19542,7 @@ split 14:AGCCCGUCGCAACCCAGG
                    <span class="p">)</span> <span class="k">for</span> <span class="n">colname</span> <span class="ow">in</span> <span class="n">data_cols</span><span class="p">]</span>
 
 <span class="c1"># 3. Convert all first words to lowercase</span>
-<span class="n">data_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;...&#39;</span><span class="p">,</span>
+<span class="n">data_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;^\w&#39;</span><span class="p">,</span>
                     <span class="n">repl</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="o">.</span><span class="n">lower</span><span class="p">(),</span>
                     <span class="n">string</span> <span class="o">=</span> <span class="n">colname</span>
                    <span class="p">)</span> <span class="k">for</span> <span class="n">colname</span> <span class="ow">in</span> <span class="n">data_cols</span><span class="p">]</span>
@@ -19554,6 +19554,61 @@ split 14:AGCCCGUCGCAACCCAGG
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[79]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;worm Number&#39;,
+ &#39;date&#39;,
+ &#39;wormStrain&#39;,
+ &#39;pathogenStrain&#39;,
+ &#39;pathogenDose&#39;,
+ &#39;doseLevel&#39;,
+ &#39;timepoint&#39;,
+ &#39;merontsPresent&#39;,
+ &#39;sporesPresent&#39;,
+ &#39;numEmbryos&#39;,
+ &#39;experiment&#39;,
+ &#39;experimenter&#39;,
+ &#39;description&#39;,
+ &#39;infection Date&#39;,
+ &#39;plate Number&#39;,
+ &#39;total Worms&#39;,
+ &#39;spore Lot&#39;,
+ &#39;lot Concentration&#39;,
+ &#39;total Ul Spore&#39;,
+ &#39;infection Round&#39;,
+ &#39;40X OP50 (mL)&#39;,
+ &#39;plate Size&#39;,
+ &#39;spores/cm2&#39;,
+ &#39;temp&#39;,
+ &#39;infection Type&#39;,
+ &#39;staining Date&#39;,
+ &#39;stain Type&#39;,
+ &#39;slide Date&#39;,
+ &#39;slide Number&#39;,
+ &#39;slide Box&#39;,
+ &#39;imaging Date&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
