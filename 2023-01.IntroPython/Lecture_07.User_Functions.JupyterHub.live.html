@@ -18994,22 +18994,22 @@ jp-needs-light-background
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Set up your base URL</span>
 <span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://data.ontario.ca&quot;</span>
 
 <span class="c1"># We know what the structure of our query URL will look like</span>
-<span class="n">QUERY</span> <span class="o">=</span> <span class="s2">&quot;/dataset?q=co&quot;</span>
+<span class="n">QUERY</span> <span class="o">=</span> <span class="s2">&quot;/dataset?q=covid+hospital+cases&quot;</span>
 
 <span class="c1"># Combine the two strings to make a search request</span>
-<span class="n">searchPage</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">searchPage</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">BASE_URL</span><span class="o">+</span><span class="n">QUERY</span><span class="p">)</span>
 
 <span class="c1"># We should get back a &quot;Response&quot; object</span>
 <span class="n">searchPage</span><span class="o">.</span><span class="n">ok</span>
@@ -19018,6 +19018,31 @@ jp-needs-light-background
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[72]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -19033,21 +19058,3230 @@ jp-needs-light-background
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># How can we access the text of the page?</span>
-<span class="o">...</span><span class="p">(</span><span class="n">searchPage</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">searchPage</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>
+
+&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 9]&gt; &lt;html lang=&#34;en&#34; class=&#34;ie9&#34;&gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html lang=&#34;en&#34;&gt; &lt;!--&lt;![endif]--&gt;
+  &lt;head&gt;
+    &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;/fanstatic/vendor/:version:2022-10-27T16:13:53.38/select2/select2.min.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;/fanstatic/css/:version:2022-10-27T16:13:53.34/main.min.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;/fanstatic/vendor/:version:2022-10-27T16:13:53.38/font-awesome/css/font-awesome.min.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;/fanstatic/ontario_theme/:version:2022-12-07T01:14:28.38/ontario_theme.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;/fanstatic/ontario_theme_common/:version:2022-12-07T01:14:28.38/:bundle:fonts_googleapis.css;common.css&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;/fanstatic/ontario_theme_external/:version:2022-12-07T01:14:28.38/ontario_theme.css&#34; /&gt;
+
+    &lt;meta charset=&#34;utf-8&#34; /&gt;
+      &lt;meta name=&#34;generator&#34; content=&#34;ckan 2.8.12&#34; /&gt;
+      &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;Datasets - Ontario Data Catalogue&lt;/title&gt;
+
+    
+    &lt;link rel=&#34;shortcut icon&#34; href=&#34;/favicon.ico&#34; /&gt;
+    
+  &lt;script src=&#34;//www.webservices.gov.on.ca/metrics.js&#34; type=&#34;text/javascript&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+  
+  &lt;!-- Google Tag Manager --&gt;
+&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#39;gtm.start&#39;:
+new Date().getTime(),event:&#39;gtm.js&#39;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.async=true;j.src=
+&#39;https://www.googletagmanager.com/gtm.js?id=&#39;+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,&#39;script&#39;,&#39;dataLayer&#39;,&#39;GTM-TK6PW9Z&#39;);&lt;/script&gt;
+&lt;!-- End Google Tag Manager --&gt;  
+  
+  
+  
+  
+  &lt;script&gt;
+    // This dataLayer will fire on all page loads, but dataset-related
+    // parameter values are filled in only on dataset page views, and
+    // resource-related parameter values are filled in only on resource
+    // page views. Otherwise, empty values are passed.
+
+    window.dataLayer = window.dataLayer || [];
+
+    // Set `resourceName` for resource page views.
+    //  is only non-empty for resource views
+    if (&#39;&#39;.length &gt; 0) {
+        // If a resource exists, it might not have a name.
+        // In this case, default to name &#34;Data&#34;.
+        resourceName = &#39;&#39; ? &#39;&#39; : &#39;Data&#39;;
+    }
+    // Pass an empty string for all pages other than resource views
+    else {
+        resourceName = &#39;&#39;;
+    }
+
+    // Set `datasetName` for dataset and resource page views.
+    //  is non-empty for both page views and resource views
+    if (&#39;&#39;.length &gt; 0) {
+        window.dataLayer.push({
+            &#39;event&#39;: &#39;Pageview&#39;,
+            &#39;ministryTag&#39;: &#39;&#39;,
+            &#39;group&#39;: &#39;&#39;,
+            &#39;dataAvailability&#39;: &#39;&#39;,
+            &#39;datasetName&#39;: &#39;&amp;lt;built-in method title of str object at 0x7f640f0018d0&amp;gt;&#39;,
+            &#39;resourceName&#39;: resourceName
+        });
+    }
+    // Push an empty dict when a page other than a dataset or resource page is viewed
+    else {
+        window.dataLayer.push({
+            &#39;event&#39;: &#39;Pageview&#39;,
+            &#39;ministryTag&#39;: &#39;&#39;,
+            &#39;group&#39;: &#39;&#39;,
+            &#39;dataAvailability&#39;: &#39;&#39;,
+            &#39;datasetName&#39;: &#39;&#39;,
+            &#39;resourceName&#39;: &#39;&#39;
+        });
+    }
+&lt;/script&gt;
+  &lt;!-- Google Tag Manager --&gt;
+&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#39;gtm.start&#39;:
+new Date().getTime(),event:&#39;gtm.js&#39;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.async=true;j.src=
+&#39;https://www.googletagmanager.com/gtm.js?id=&#39;+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,&#39;script&#39;,&#39;dataLayer&#39;,&#39;GTM-TK6PW9Z&#39;);&lt;/script&gt;
+&lt;!-- End Google Tag Manager --&gt;
+
+
+  
+  
+      
+    
+  
+  
+  
+
+  
+
+
+    
+      
+      
+    
+    
+  &lt;/head&gt;
+
+  
+  &lt;body data-site-root=&#34;https://data.ontario.ca/&#34; data-locale-root=&#34;https://data.ontario.ca/&#34; &gt;
+
+    
+  &lt;!-- Google Tag Manager (noscript) --&gt;
+&lt;noscript&gt;&lt;iframe src=&#34;https://www.googletagmanager.com/ns.html?id=GTM-TK6PW9Z&#34;
+height=&#34;0&#34; width=&#34;0&#34; style=&#34;display:none;visibility:hidden&#34;&gt;&lt;/iframe&gt;&lt;/noscript&gt;
+&lt;!-- End Google Tag Manager (noscript) --&gt;  
+  &lt;a href=&#34;#content&#34; class=&#34;skip-main sr-only sr-only-focusable&#34;&gt;Skip to content&lt;/a&gt; 
+
+
+  
+    
+
+ 
+  
+  
+    &lt;header class=&#34;account-masthead&#34;&gt;
+      &lt;div class=&#34;container&#34;&gt;
+        
+        &lt;hgroup class=&#34;header-text-logo navbar-left&#34;&gt;
+          &lt;a class=&#34;logo&#34; href=&#34;https://ontario.ca/&#34;&gt;&lt;img src=&#34;/logo-ontario@2x.png&#34; alt=&#34;Government of Ontario&#34; /&gt;&lt;/a&gt;
+        &lt;/hgroup&gt;
+        
+         
+          &lt;nav class=&#34;account not-authed&#34;&gt;
+            &lt;ul class=&#34;list-unstyled&#34;&gt;
+              
+                
+                
+                &lt;li&gt;
+                  
+
+
+
+
+&lt;a href=&#34;/fr/dataset?q=covid+hospital+cases&#34; title=&#34;fr&#34;&gt;
+  français
+&lt;/a&gt;
+                &lt;/li&gt;
+              
+            &lt;/ul&gt;
+          &lt;/nav&gt;
+         
+      &lt;/div&gt;
+    &lt;/header&gt;
+  
+
+&lt;header class=&#34;navbar navbar-static-top masthead&#34;&gt;
+    
+  &lt;div class=&#34;container&#34;&gt;
+    &lt;div class=&#34;navbar-right&#34;&gt;
+      &lt;button data-target=&#34;#main-navigation-toggle&#34; data-toggle=&#34;collapse&#34; class=&#34;navbar-toggle collapsed&#34; aria-expanded=&#34;false&#34; type=&#34;button&#34; aria-label=&#34;Toggle navigation&#34;&gt;
+        &lt;span class=&#34;sr-only&#34;&gt;Toggle navigation&lt;/span&gt;
+        &lt;span class=&#34;fa fa-bars&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;hgroup class=&#34;header-text-logo navbar-left&#34;&gt;
+      
+  
+    
+    &lt;a href=&#34;/&#34;&gt;Data Catalogue&lt;/a&gt;
+    
+    
+  
+
+    &lt;/hgroup&gt;
+
+    &lt;div class=&#34;collapse navbar-collapse&#34; id=&#34;main-navigation-toggle&#34;&gt;
+      
+        &lt;nav class=&#34;section navigation&#34;&gt;
+          &lt;ul class=&#34;list-inline&#34;&gt;
+            
+              &lt;li class=&#34;active&#34;&gt;&lt;a href=&#34;/dataset&#34;&gt;Datasets&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/organization&#34;&gt;Organizations&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/group&#34;&gt;Groups&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/about&#34;&gt;About&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;/help&#34;&gt;Help&lt;/a&gt;&lt;/li&gt;
+            
+          &lt;/ul&gt;
+        &lt;/nav&gt; 
+      
+      
+        &lt;form class=&#34;section site-search simple-input&#34; action=&#34;/dataset&#34; method=&#34;get&#34;&gt;
+          &lt;div class=&#34;field&#34;&gt;
+            &lt;label for=&#34;field-sitewide-search&#34;&gt;Search Datasets&lt;/label&gt;
+            &lt;input id=&#34;field-sitewide-search&#34; type=&#34;text&#34; class=&#34;form-control&#34; name=&#34;q&#34; placeholder=&#34;Search Ontario&amp;#39;s Data&#34; /&gt;
+            &lt;button class=&#34;btn-search&#34; type=&#34;submit&#34; aria-label=&#34;Submit Search&#34;&gt;&lt;i class=&#34;fa fa-search&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;span class=&#34;sr-only&#34;&gt;Submit Search&lt;/span&gt;&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+  &lt;header id=&#34;survey&#34;&gt;
+    &lt;div class=&#34;alert alert-warning alert-clear alert-banner&#34;&gt;
+      &lt;div class=&#34;container&#34;&gt;
+        
+        
+        
+        Tell us what you think about our data and how you’re using it. &lt;a href=&#34;https://www.ontario.ca/form/survey-open-data-catalogue?page=/dataset%3Fq%3Dcovid%2Bhospital%2Bcases&#34; target=&#34;_blank&#34;&gt;Take our survey&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+
+  
+    &lt;div role=&#34;main&#34;&gt;
+      &lt;div id=&#34;content&#34; class=&#34;container&#34;&gt;
+        
+  
+    
+            &lt;div class=&#34;flash-messages&#34;&gt;
+              
+                
+              
+            &lt;/div&gt;
+          
+  
+
+  
+    &lt;div class=&#34;toolbar&#34; role=&#34;navigation&#34; aria-label=&#34;Breadcrumb&#34;&gt;
+      
+        
+          &lt;ol class=&#34;breadcrumb&#34;&gt;
+            &lt;li class=&#34;home&#34;&gt;
+  &lt;a href=&#34;/&#34; aria-label=&#34;Home&#34;&gt;
+      Home
+  &lt;/a&gt;
+&lt;/li&gt;
+
+            
+  &lt;li class=&#34;active&#34;&gt;&lt;a class=&#34; active&#34; href=&#34;/dataset&#34;&gt;Datasets&lt;/a&gt;&lt;/li&gt;
+
+          &lt;/ol&gt;
+        
+      
+    &lt;/div&gt;
+  
+
+  
+  &lt;div class=&#34;row no-padding&#34;&gt;
+    
+
+    
+      
+        
+      
+    
+
+    
+      
+      
+      
+
+
+
+
+
+
+
+&lt;form id=&#34;dataset-search-form&#34; class=&#34;search-form&#34; method=&#34;get&#34; data-module=&#34;select-switch&#34;&gt;
+
+  
+    &lt;div class=&#34;input-group search-input-group&#34;&gt;
+      &lt;input aria-label=&#34;Search datasets...&#34; id=&#34;field-giant-search&#34; type=&#34;text&#34; class=&#34;form-control input-lg&#34; name=&#34;q&#34; value=&#34;covid hospital cases&#34; autocomplete=&#34;off&#34; placeholder=&#34;Search datasets...&#34;&gt;
+      
+&lt;span class=&#34;input-group-btn&#34;&gt;
+  &lt;button class=&#34;btn btn-default btn-lg&#34; type=&#34;submit&#34; value=&#34;search&#34; aria-label=&#34;Search&#34;&gt;
+    &lt;i class=&#34;fa fa-search&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+    &lt;span class=&#34;sr-only&#34;&gt;Search&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/span&gt;
+
+    &lt;/div&gt;
+  
+
+  
+    
+  
+
+  
+    
+      &lt;div class=&#34;form-select form-group control-order-by&#34;&gt;
+        &lt;label for=&#34;field-order-by&#34;&gt;Order by&lt;/label&gt;
+        &lt;select id=&#34;field-order-by&#34; name=&#34;sort&#34; class=&#34;form-control&#34;&gt;
+          
+            
+              &lt;option value=&#34;score desc, metadata_modified desc&#34; selected=&#34;selected&#34;&gt;Relevance&lt;/option&gt;
+            
+          
+            
+              &lt;option value=&#34;title_string asc&#34;&gt;Name Ascending&lt;/option&gt;
+            
+          
+            
+              &lt;option value=&#34;title_string desc&#34;&gt;Name Descending&lt;/option&gt;
+            
+          
+            
+              &lt;option value=&#34;metadata_modified desc&#34;&gt;Last Modified&lt;/option&gt;
+            
+          
+            
+              &lt;option value=&#34;dataset_published_date desc&#34;&gt;Recently Created&lt;/option&gt;
+            
+          
+            
+              &lt;option value=&#34;num_resources desc, metadata_modified desc&#34;&gt;Datasets With Data&lt;/option&gt;
+            
+          
+            
+              &lt;option value=&#34;views_recent desc&#34;&gt;Popular&lt;/option&gt;
+            
+          
+        &lt;/select&gt;
+        
+        &lt;button class=&#34;btn btn-default js-hide&#34; type=&#34;submit&#34;&gt;Go&lt;/button&gt;
+        
+      &lt;/div&gt;
+    
+  
+
+  
+    
+      &lt;h2&gt;
+
+  
+  
+  
+  
+
+26 datasets found for &amp;#34;covid hospital cases&amp;#34;&lt;/h2&gt;
+    
+  
+
+  
+  
+    &lt;p class=&#34;filter-list&#34;&gt;
+    
+      
+      &lt;span&gt;
+        &lt;span class=&#34;facet&#34;&gt;with the keyword(s):&lt;/span&gt;
+        &lt;span class=&#34;filtered pill&#34;&gt;
+          covid hospital cases
+          &lt;a href=&#34;dataset&#34; class=&#34;remove&#34; title=&#34;Remove&#34;&gt;&lt;i class=&#34;fa fa-times&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/span&gt;
+      &lt;/span&gt;
+      
+    
+        
+    
+    &lt;/p&gt;
+    &lt;a class=&#34;show-filters btn btn-default&#34;&gt;Filter Results&lt;/a&gt;
+  
+
+
+&lt;/form&gt;
+
+
+
+
+
+    
+  &lt;/div&gt;
+
+  
+  &lt;div class=&#34;row wrapper&#34;&gt;
+    
+    
+
+
+    
+      
+              &lt;aside class=&#34;secondary col-sm-3&#34;&gt;
+                
+                
+  &lt;div class=&#34;filters&#34;&gt;
+    &lt;div&gt;
+      &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+        
+          &lt;h2 class=&#34;module-heading&#34;&gt;
+            &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+            
+            Datasets with data
+          &lt;/h2&gt;
+        
+        
+          
+          &lt;nav&gt;
+            &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+              
+              &lt;li class=&#34;nav-item&#34;&gt;
+                &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;num_resources=%5B1+TO+%2A%5D&#34; title=&#34;Datasets with data&#34;&gt;
+                  &lt;span&gt;Datasets with data&lt;/span&gt;
+                &lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/nav&gt;
+        
+      &lt;/section&gt;
+    &lt;/div&gt;
+
+  &lt;div&gt;
+    
+
+
+  
+
+
+
+  
+  
+    
+      
+      
+        &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+          
+  
+
+  &lt;h2 class=&#34;module-heading&#34;&gt;
+    &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+    
+    Keywords
+    
+    
+                     
+     
+  &lt;/h2&gt;
+  &lt;span class=&#34;sr-only&#34;&gt;No search filters applied for Keywords. Options are &lt;/span&gt;
+  
+
+          
+
+  
+  
+    &lt;nav&gt;
+      &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?keywords_en=Health&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Health (17)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?keywords_en=COVID-19&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;COVID-19 (15)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;keywords_en=Health+and+wellness&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Health and wellness (8)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?keywords_en=health&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;health (7)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;keywords_en=health+and+wellness&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;health and wellness (5)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?keywords_en=Education+and+Training&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Education and Training (3)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;keywords_en=corrections&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;corrections (2)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;keywords_en=deaths&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;deaths (2)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;keywords_en=Economy+and+Business&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Economy and Business (2)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;keywords_en=Government+and+Finance&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Government and Finance (2)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;p class=&#34;module-footer&#34;&gt;
+      
+        
+          &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;_keywords_en_limit=0&#34; class=&#34;read-more&#34;&gt;Show More Keywords&lt;/a&gt;
+        
+      
+    &lt;/p&gt;
+  
+  
+
+        &lt;/section&gt;
+      
+    
+  
+
+
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+        &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+          
+  
+
+  &lt;h2 class=&#34;module-heading&#34;&gt;
+    &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+    
+    Jurisdiction
+    
+    
+                     
+     
+  &lt;/h2&gt;
+  &lt;span class=&#34;sr-only&#34;&gt;No search filters applied for Jurisdiction. Options are &lt;/span&gt;
+  
+
+          
+
+  
+  
+    &lt;nav&gt;
+      &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?organization_jurisdiction=provincial&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Provincial (26)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;p class=&#34;module-footer&#34;&gt;
+      
+        
+      
+    &lt;/p&gt;
+  
+  
+
+        &lt;/section&gt;
+      
+    
+  
+
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    
+
+
+
+
+
+
+
+  
+  
+    
+      
+      
+        &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+          
+  
+
+  &lt;h2 class=&#34;module-heading&#34;&gt;
+    &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+    
+    Category
+    
+    
+                     
+     
+  &lt;/h2&gt;
+  &lt;span class=&#34;sr-only&#34;&gt;No search filters applied for Category. Options are &lt;/span&gt;
+  
+
+          
+
+  
+  
+    &lt;nav&gt;
+      &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?organization_category=ministry&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Ministry (26)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;p class=&#34;module-footer&#34;&gt;
+      
+        
+      
+    &lt;/p&gt;
+  
+  
+
+        &lt;/section&gt;
+      
+    
+  
+
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    
+    
+
+    
+      
+        
+
+
+
+  
+  
+    
+      
+      
+        &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+          
+  
+
+  &lt;h2 class=&#34;module-heading&#34;&gt;
+    &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+    
+    Organizations
+    
+    
+                     
+     
+  &lt;/h2&gt;
+  &lt;span class=&#34;sr-only&#34;&gt;No search filters applied for Organizations. Options are &lt;/span&gt;
+  
+
+          
+
+  
+  
+    &lt;nav&gt;
+      &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;organization=health&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Health (15)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;organization=education&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Education (5)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?organization=solicitor-general&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Solicitor General (2)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?organization=energy&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Energy (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?organization=public-and-business-service-delivery&amp;amp;q=covid+hospital+cases&#34; title=&#34;Public and Business Service Delivery&#34;&gt;
+                &lt;span&gt;Public and Business... (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;organization=long-term-care&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Long-Term Care (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?organization=treasury-board-secretariat&amp;amp;q=covid+hospital+cases&#34; title=&#34;Treasury Board Secretariat&#34;&gt;
+                &lt;span&gt;Treasury Board Secr... (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;p class=&#34;module-footer&#34;&gt;
+      
+        
+      
+    &lt;/p&gt;
+  
+  
+
+        &lt;/section&gt;
+      
+    
+  
+
+      
+    
+      
+        
+
+
+
+  
+  
+    
+      
+      
+        &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+          
+  
+
+  &lt;h2 class=&#34;module-heading&#34;&gt;
+    &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+    
+    Groups
+    
+    
+                     
+     
+  &lt;/h2&gt;
+  &lt;span class=&#34;sr-only&#34;&gt;No search filters applied for Groups. Options are &lt;/span&gt;
+  
+
+          
+
+  
+  
+    &lt;nav&gt;
+      &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?groups=2019-novel-coronavirus&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;2019 Novel Coronavirus (15)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?groups=artificial-intelligence-and-algorithms&amp;amp;q=covid+hospital+cases&#34; title=&#34;Artificial Intelligence and Algorithms&#34;&gt;
+                &lt;span&gt;Artificial Intellig... (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;p class=&#34;module-footer&#34;&gt;
+      
+        
+      
+    &lt;/p&gt;
+  
+  
+
+        &lt;/section&gt;
+      
+    
+  
+
+      
+    
+      
+        
+
+
+
+  
+  
+    
+      
+      
+        &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+          
+  
+
+  &lt;h2 class=&#34;module-heading&#34;&gt;
+    &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+    
+    Formats
+    
+    
+                     
+     
+  &lt;/h2&gt;
+  &lt;span class=&#34;sr-only&#34;&gt;No search filters applied for Formats. Options are &lt;/span&gt;
+  
+
+          
+
+  
+  
+    &lt;nav&gt;
+      &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?res_format=CSV&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;CSV (16)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?res_format=XLSX&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;XLSX (13)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?res_format=TXT&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;TXT (5)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;res_format=DOCX&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;DOCX (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?res_format=JSON&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;JSON (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;res_format=ZIP&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;ZIP (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;p class=&#34;module-footer&#34;&gt;
+      
+        
+      
+    &lt;/p&gt;
+  
+  
+
+        &lt;/section&gt;
+      
+    
+  
+
+      
+    
+      
+        
+
+
+
+  
+  
+    
+      
+      
+        &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+          
+  
+
+  &lt;h2 class=&#34;module-heading&#34;&gt;
+    &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+    
+    Licenses
+    
+    
+                     
+     
+  &lt;/h2&gt;
+  &lt;span class=&#34;sr-only&#34;&gt;No search filters applied for Licenses. Options are &lt;/span&gt;
+  
+
+          
+
+  
+  
+    &lt;nav&gt;
+      &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?license_id=OGL-ON-1.0&amp;amp;q=covid+hospital+cases&#34; title=&#34;Open Government Licence – Ontario&#34;&gt;
+                &lt;span&gt;Open Government Lic... (19)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?license_id=notspecified&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;License Not Specified (5)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?license_id=apache-license-2.0&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Apache License 2.0 (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;license_id=ontario.ca-tou&#34; title=&#34;Ontario.ca Terms of Use&#34;&gt;
+                &lt;span&gt;Ontario.ca Terms of... (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;p class=&#34;module-footer&#34;&gt;
+      
+        
+      
+    &lt;/p&gt;
+  
+  
+
+        &lt;/section&gt;
+      
+    
+  
+
+      
+    
+      
+        
+
+
+
+  
+  
+    
+      
+      
+        &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+          
+  
+
+  &lt;h2 class=&#34;module-heading&#34;&gt;
+    &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+    
+    Access Level
+    
+    
+                     
+     
+  &lt;/h2&gt;
+  &lt;span class=&#34;sr-only&#34;&gt;No search filters applied for Access Level. Options are &lt;/span&gt;
+  
+
+          
+
+  
+  
+    &lt;nav&gt;
+      &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;access_level=open&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Open (21)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;access_level=restricted&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Restricted (5)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;p class=&#34;module-footer&#34;&gt;
+      
+        
+      
+    &lt;/p&gt;
+  
+  
+
+        &lt;/section&gt;
+      
+    
+  
+
+      
+    
+      
+        
+
+
+
+  
+  
+    
+      
+      
+        &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+          
+  
+
+  &lt;h2 class=&#34;module-heading&#34;&gt;
+    &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+    
+    Asset Type
+    
+    
+                     
+     
+  &lt;/h2&gt;
+  &lt;span class=&#34;sr-only&#34;&gt;No search filters applied for Asset Type. Options are &lt;/span&gt;
+  
+
+          
+
+  
+  
+    &lt;nav&gt;
+      &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;asset_type=dataset&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Dataset (25)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?asset_type=algorithm&amp;amp;q=covid+hospital+cases&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Algorithm (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;p class=&#34;module-footer&#34;&gt;
+      
+        
+      
+    &lt;/p&gt;
+  
+  
+
+        &lt;/section&gt;
+      
+    
+  
+
+      
+    
+      
+        
+
+
+
+  
+  
+    
+      
+      
+        &lt;section class=&#34;module module-narrow module-shallow&#34;&gt;
+          
+  
+
+  &lt;h2 class=&#34;module-heading&#34;&gt;
+    &lt;i class=&#34;fa fa-filter&#34;&gt;&lt;/i&gt;
+    
+    Update Frequency
+    
+    
+                     
+     
+  &lt;/h2&gt;
+  &lt;span class=&#34;sr-only&#34;&gt;No search filters applied for Update Frequency. Options are &lt;/span&gt;
+  
+
+          
+
+  
+  
+    &lt;nav&gt;
+      &lt;ul class=&#34;list-unstyled nav nav-simple nav-facet&#34;&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;update_frequency=daily&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Daily (11)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;update_frequency=as_required&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;As required (4)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;update_frequency=yearly&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Yearly (4)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;update_frequency=monthly&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Monthly (2)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;update_frequency=never&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Never (2)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;update_frequency=other&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Other (2)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            &lt;li class=&#34;nav-item&#34;&gt;
+                                
+              &lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;update_frequency=quarterly&#34; title=&#34;&#34;&gt;
+                &lt;span&gt;Quarterly (1)&lt;/span&gt;
+              &lt;/a&gt;
+            &lt;/li&gt;
+        
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+
+    &lt;p class=&#34;module-footer&#34;&gt;
+      
+        
+      
+    &lt;/p&gt;
+  
+  
+
+        &lt;/section&gt;
+      
+    
+  
+
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  &lt;/div&gt;
+  &lt;a class=&#34;close no-text hide-filters&#34;&gt;&lt;i class=&#34;fa fa-times-circle&#34;&gt;&lt;/i&gt;&lt;span class=&#34;text&#34;&gt;close&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+              &lt;/aside&gt;
+            
+    
+
+    
+      
+              &lt;div class=&#34;primary col-sm-9 col-xs-12&#34;&gt;
+                
+                
+  
+  &lt;section class=&#34;module&#34;&gt;
+    &lt;div class=&#34;module-content&#34;&gt;
+      
+        
+        
+
+  
+    &lt;ul class=&#34;dataset-list list-unstyled&#34;&gt;
+    	
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/breakdown-of-covid-19-positive-hospital-admissions&#34;&gt;Breakdown of COVID-19 positive hospital admissions&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of June 16, all COVID-19 datasets will be updated weekly on Thursdays by 2pm.
+This dataset details the percentage of COVID-19 positive patients in hospitals and ICUs for...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/summary-of-cases-in-schools&#34;&gt;Schools COVID-19 data&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Education 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;Effective June 15, 2022, board and school staff will not be expected to report student/staff absences and closures in the Absence Reporting Tool.  The ministry will no longer...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;xlsx&#34;&gt;XLSX&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;json&#34;&gt;JSON&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/status-of-covid-19-cases-in-ontario&#34;&gt;Status of COVID-19 cases in Ontario&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of June 16, all COVID-19 datasets will be updated weekly on Thursdays by 2pm.
+This dataset compiles daily snapshots of publicly reported data on 2019 Novel Coronavirus...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;xlsx&#34;&gt;XLSX&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/ontario-covid-19-outbreaks-data&#34;&gt;Ontario COVID-19 outbreaks data&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of June 16, all COVID-19 datasets will be updated weekly on Thursdays by 2pm.
+This dataset compiles daily snapshots of publicly reported data on 2019 Novel Coronavirus...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/covid-19-vaccine-data-in-ontario&#34;&gt;COVID-19 Vaccine Data in Ontario&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of June 16, all COVID-19 datasets will be updated weekly on Thursdays by 2pm.
+As of January 26, 2023, the population counts are based on Statistics Canada’s 2021 estimates....&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;xlsx&#34;&gt;XLSX&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;txt&#34;&gt;TXT&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/covid-19-self-assessment-tool&#34;&gt;COVID-19 Self-Assessment Tool&lt;/a&gt;
+      
+        &lt;div class=&#34;label label-info&#34;&gt;Algorithm/AI&lt;/div&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Public and Business Service Delivery 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;NOTE: This tool is not intended to provide medical advice. If you have medical questions, consult a healthcare provider or your local public health unit. 
+Purpose
+The COVID-19...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;other&#34;&gt;other&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/summary-of-cases-in-licensed-child-care-settings&#34;&gt;Licensed child care settings COVID-19 data&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Education 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;Effective June 15, 2022, board and school staff will not be expected to report student/staff absences and closures in the Absence Reporting Tool.  The ministry will no longer...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/confirmed-positive-cases-of-covid-19-in-ontario&#34;&gt;Confirmed positive cases of COVID-19 in Ontario&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of June 16, all COVID-19 datasets will be updated weekly on Thursdays by 2pm.
+This dataset compiles daily snapshots of publicly reported data on 2019 Novel Coronavirus...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;xlsx&#34;&gt;XLSX&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/covid-19-cases-in-hospital-and-icu-by-ontario-health-region&#34;&gt;COVID-19 cases in hospital and ICU, by Ontario Health (OH) region&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of June 16, all COVID-19 datasets will be updated weekly on Thursdays by 2pm.
+This dataset compiles daily snapshots of publicly reported data on 2019 Novel Coronavirus...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/deaths-involving-covid-19-by-vaccination-status&#34;&gt;Deaths Involving COVID-19 by Vaccination Status&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of January 26, 2023, data from the date of January 1, 2023 onwards reflect updated population estimates. This update specifically impacts data for the &amp;#39;not fully...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;xlsx&#34;&gt;XLSX&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;docx&#34;&gt;DOCX&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/long-term-care-home-covid-19-data&#34;&gt;Long-Term Care Home COVID-19 Data&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Long-Term Care 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of June 16, all COVID-19 datasets will be updated weekly on Thursdays by 2pm.
+This dataset compiles daily snapshots of publicly reported data on 2019 Novel Coronavirus...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;xlsx&#34;&gt;XLSX&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/deaths-involving-covid-19-by-fatality-type&#34;&gt;Deaths Involving COVID-19 by Fatality Type&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of June 16, all COVID-19 datasets will be updated weekly on Thursdays by 2pm.
+The method used to count COVID-19 deaths has changed, effective December 1, 2022. Prior to...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;xlsx&#34;&gt;XLSX&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/status-of-covid-19-cases-in-ontario-s-correctional-institutions&#34;&gt;Status of COVID-19 cases in Ontario’s Provincial Correctional Institutions&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Solicitor General 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of June 16, all COVID-19 datasets will be updated weekly on Thursdays by 2pm.
+This dataset compiles daily snapshots of reported data on 2019 Novel Coronavirus (COVID-19)...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;xlsx&#34;&gt;XLSX&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;txt&#34;&gt;TXT&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/status-of-covid-19-cases-in-ontario-by-public-health-unit-phu&#34;&gt;Status of COVID-19 cases in Ontario by Public Health Unit (PHU)&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;The last update of this file will occur on Thursday December 1, 2022. For more information about COVID-19 cases and deaths by public health unit, please consult the Public...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/covid-19-testing-of-inmates-in-ontario-s-correctional-institutions&#34;&gt;COVID-19 testing of inmates in Ontario’s Provincial Correctional Institutions&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Solicitor General 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;This dataset compiles daily snapshots of reported data on 2019 Novel Coronavirus (COVID-19) testing of inmates in Ontario&amp;#39;s Provincial Correctional Institutions.
+Data...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;txt&#34;&gt;TXT&lt;/span&gt;
+            &lt;/li&gt;
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;xlsx&#34;&gt;XLSX&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/availability-of-adult-icu-beds-and-occupancy-for-covid-related-critical-illness-crci&#34;&gt;Availability of adult and pediatric ICU beds and occupancy for COVID-related ...&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;As of June 16, all COVID-19 datasets will be updated weekly on Thursdays by 2pm.
+This dataset compiles daily counts of patients (both COVID-related and non-COVID-related) in...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;ul class=&#34;dataset-resources list-unstyled&#34;&gt;
+        Resource formats: 
+        
+          
+            &lt;li&gt;
+              &lt;span class=&#34;label label-default&#34; data-format=&#34;csv&#34;&gt;CSV&lt;/span&gt;
+            &lt;/li&gt;
+          
+        
+      &lt;/ul&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/case-by-case-review-program-cbcrp-data&#34;&gt;Case-by-Case Review Program (CBCRP) data&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;This dataset stores patient and treatment information about systemic therapy
+drug utilization at Ontario hospitals for which reimbursement is being sought
+through the CBCRP....&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;p class=&#34;empty&#34;&gt;This dataset has no data&lt;/p&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/discharge-abstract-database-dad-ontario-hospitals&#34;&gt;Discharge Abstract Database (DAD) / Ontario hospitals&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;This database contains institution and patient information for Ontario. From
+2006/07 onwards only acute care, pediatric, inpatient rehabilitation, and
+child and adolescent...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;p class=&#34;empty&#34;&gt;This dataset has no data&lt;/p&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/ontario-case-costing-initiative-occi&#34;&gt;Ontario Case Costing Initiative (OCCI)&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;This dataset tracks the costs of acute inpatient, day surgery, ambulatory care
+cases, mental health, rehabilitation and complex continuing care. The OCCI
+contains data for...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;p class=&#34;empty&#34;&gt;This dataset has no data&lt;/p&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	        
+
+
+
+
+
+
+
+
+  &lt;li class=&#34;dataset-item&#34;&gt;
+    
+      &lt;div class=&#34;dataset-content&#34;&gt;
+        
+  &lt;h3 class=&#34;dataset-heading&#34;&gt;
+    
+      
+              
+            
+    
+
+    
+      &lt;a href=&#34;/dataset/incident-cancer-case-level-stage-data&#34;&gt;Incident cancer case level stage data&lt;/a&gt;
+      
+      
+    
+
+    
+      
+              
+              
+            
+    
+  &lt;/h3&gt;
+  
+  &lt;p class=&#34;text-muted&#34;&gt;
+    &lt;small&gt;
+      Health 
+        &lt;em&gt;(Provincial&amp;nbsp;Ministry)&lt;/em&gt;
+    &lt;/small&gt;
+  &lt;/p&gt;
+
+        
+          
+        
+        
+  
+    &lt;div&gt;This linked dataset indicates staging data created from the Ontario Cancer
+Registry Information System and Activity Level Reporting source records. It is
+a characteristic of...&lt;/div&gt;
+  
+
+      &lt;/div&gt;
+      
+  
+    
+      &lt;p class=&#34;empty&#34;&gt;This dataset has no data&lt;/p&gt;
+    
+  
+
+    
+  &lt;/li&gt;
+
+	      
+	    
+    &lt;/ul&gt;
+  
+
+      
+      
+    &lt;/div&gt;
+
+    
+      
+      &lt;div class=&#39;pagination-wrapper&#39;&gt;&lt;ul class=&#39;pagination&#39;&gt; &lt;li class=&#34;active&#34;&gt;&lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;page=1&#34;&gt;1&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;page=2&#34;&gt;2&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&#34;/dataset?q=covid+hospital+cases&amp;amp;page=2&#34;&gt;»&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+    
+    
+  &lt;/section&gt;
+
+  
+    
+  &lt;section class=&#34;module&#34;&gt;
+    &lt;div class=&#34;module-content&#34;&gt;
+      
+      &lt;small&gt;
+        
+        
+        
+           You can also access this registry using the &lt;a href=&#34;/api/3&#34;&gt;API&lt;/a&gt; (see &lt;a href=&#34;http://docs.ckan.org/en/2.8/api/&#34;&gt;API Docs&lt;/a&gt;). 
+      &lt;/small&gt;
+      
+    &lt;/div&gt;
+  &lt;/section&gt;
+  
+  
+
+              &lt;/div&gt;
+            
+    
+  &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;footer class=&#34;site-footer&#34;&gt;
+  &lt;div class=&#34;container&#34;&gt;
+    
+    &lt;div class=&#34;row&#34;&gt;
+      &lt;div class=&#34;col-md-7 footer-links&#34;&gt;
+        
+          
+          &lt;ul class=&#34;list-inline&#34;&gt;
+            
+                &lt;li&gt;&lt;a href=&#34;https://www.ontario.ca/page/accessibility&#34;&gt;accessibility&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#34;https://www.ontario.ca/page/privacy-statement&#34;&gt;privacy&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&#34;https://www.ontario.ca/page/terms-use&#34;&gt;terms of use&lt;/a&gt;&lt;/li&gt;
+            
+          &lt;/ul&gt;
+          &lt;p class=&#34;small&#34;&gt;
+            &lt;a href=&#34;https://www.ontario.ca/page/copyright-information&#34;&gt;&amp;copy; King&amp;#8217;s Printer for Ontario, 2022&lt;/a&gt;
+          &lt;/p&gt; 
+        
+        
+      &lt;/div&gt;
+      &lt;div class=&#34;col-md-2 footer-contactus&#34;&gt;
+          
+          &lt;strong&gt;Contact Us&lt;/strong&gt;    
+          &lt;div&gt;
+              &lt;a class=&#34;btn btn-grey&#34; href=&#34;https://www.ontario.ca/feedback/contact-us?id=532365&amp;nid=138269&#34;&gt;
+                &lt;i class=&#34;material-icons&#34;&gt;mail&lt;/i&gt;
+                &lt;i class=&#34;material-icons&#34;&gt; / &lt;/i&gt;
+                &lt;i class=&#34;material-icons&#34;&gt;phone&lt;/i&gt;
+              &lt;/a&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&#34;col-md-3 attribution&#34;&gt;
+        
+          
+          &lt;p&gt;&lt;strong&gt;Powered by&lt;/strong&gt; &lt;a class=&#34;hide-text ckan-footer-logo&#34; href=&#34;http://ckan.org&#34;&gt;&lt;abbr title=&#34;Comprehensive Knowledge Archive Network&#34;&gt;CKAN&lt;/abbr&gt;&lt;/a&gt;&lt;/p&gt;
+        
+        
+        
+          &lt;!-- snippet &#34;snippets/language_selector.html&#34; --&gt;
+        
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+  
+
+  
+    
+  
+&lt;/footer&gt;
+  
+    
+    
+    
+      
+    
+  
+    
+
+      
+  &lt;script&gt;document.getElementsByTagName(&#39;html&#39;)[0].className += &#39; js&#39;;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/fanstatic/vendor/:version:2022-10-27T16:13:53.38/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/fanstatic/vendor/:version:2022-10-27T16:13:53.38/:bundle:bootstrap/js/bootstrap.min.js;jed.min.js;moment-with-locales.min.js;select2/select2.min.js;qs.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/fanstatic/base/:version:2022-10-27T16:13:53.35/:bundle:plugins/jquery.inherit.min.js;plugins/jquery.proxy-all.min.js;plugins/jquery.url-helpers.min.js;plugins/jquery.date-helpers.min.js;plugins/jquery.slug.min.js;plugins/jquery.slug-preview.min.js;plugins/jquery.truncator.min.js;plugins/jquery.masonry.min.js;plugins/jquery.form-warning.min.js;plugins/jquery.images-loaded.min.js;sandbox.min.js;module.min.js;pubsub.min.js;client.min.js;notify.min.js;i18n.min.js;main.min.js;modules/select-switch.min.js;modules/slug-preview.min.js;modules/basic-form.min.js;modules/confirm-action.min.js;modules/api-info.min.js;modules/autocomplete.min.js;modules/custom-fields.min.js;modules/data-viewer.min.js;modules/table-selectable-rows.min.js;modules/resource-form.min.js;modules/resource-upload-field.min.js;modules/resource-reorder.min.js;modules/resource-view-reorder.min.js;modules/follow.min.js;modules/activity-stream.min.js;modules/dashboard.min.js;modules/resource-view-embed.min.js;view-filters.min.js;modules/resource-view-filters-form.min.js;modules/resource-view-filters.min.js;modules/table-toggle-more.min.js;modules/dataset-visibility.min.js;modules/media-grid.min.js;modules/image-upload.min.js;modules/followers-counter.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/fanstatic/base/:version:2022-10-27T16:13:53.35/tracking.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/fanstatic/ontario_theme/:version:2022-12-07T01:14:28.38/msappproxy.js&#34;&gt;&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
