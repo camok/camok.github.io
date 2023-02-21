@@ -18892,26 +18892,93 @@ jp-needs-light-background
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># URLs that don&#39;t exist</span>
-<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://data.ontario.ca/data?=covid&quot;</span><span class="p">)</span><span class="o">...</span>
-<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://data.ontario.ca/data?=covid&quot;</span><span class="p">)</span><span class="o">...</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://data.ontario.ca/data?=covid&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">status_code</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://data.ontario.ca/data?=covid&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ok</span>
 
 <span class="c1"># URLs that DO exist!</span>
-<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://data.ontario.ca/dataset?=covid&quot;</span><span class="p">)</span><span class="o">...</span>
-<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://data.ontario.ca/dataset?=covid&quot;</span><span class="p">)</span><span class="o">...</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://data.ontario.ca/dataset?=covid&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">status_code</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://data.ontario.ca/dataset?=covid&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ok</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>404</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>False</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>200</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[71]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -18939,7 +19006,7 @@ jp-needs-light-background
 <span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://data.ontario.ca&quot;</span>
 
 <span class="c1"># We know what the structure of our query URL will look like</span>
-<span class="n">QUERY</span> <span class="o">=</span> <span class="s2">&quot;/dataset?q=...&quot;</span>
+<span class="n">QUERY</span> <span class="o">=</span> <span class="s2">&quot;/dataset?q=co&quot;</span>
 
 <span class="c1"># Combine the two strings to make a search request</span>
 <span class="n">searchPage</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
