@@ -17842,7 +17842,7 @@ And re-assign global_value to 142
 <span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="nb">dict</span><span class="p">,</span> <span class="n">seq</span><span class="p">):</span>
     
     <span class="c1"># Build a regular expression object</span>
-    <span class="n">regex</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">,</span> <span class="nb">dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
+    <span class="n">regex</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;|&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">escape</span><span class="p">,</span> <span class="nb">dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())))</span>
     
     <span class="c1"># return a call to sub()</span>
     <span class="c1"># Search for each codon, and then replace with the match</span>
