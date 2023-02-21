@@ -22541,12 +22541,12 @@ a characteristic of...&lt;/div&gt;
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[78]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Start with a blank dictionary</span>
@@ -22564,6 +22564,48 @@ a characteristic of...&lt;/div&gt;
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Breakdown of COVID-19 positive hospital admissions: /dataset/breakdown-of-covid-19-positive-hospital-admissions
+Schools COVID-19 data: /dataset/summary-of-cases-in-schools
+Status of COVID-19 cases in Ontario: /dataset/status-of-covid-19-cases-in-ontario
+Ontario COVID-19 outbreaks data: /dataset/ontario-covid-19-outbreaks-data
+COVID-19 Vaccine Data in Ontario: /dataset/covid-19-vaccine-data-in-ontario
+COVID-19 Self-Assessment Tool: /dataset/covid-19-self-assessment-tool
+Licensed child care settings COVID-19 data: /dataset/summary-of-cases-in-licensed-child-care-settings
+Confirmed positive cases of COVID-19 in Ontario: /dataset/confirmed-positive-cases-of-covid-19-in-ontario
+COVID-19 cases in hospital and ICU, by Ontario Health (OH) region: /dataset/covid-19-cases-in-hospital-and-icu-by-ontario-health-region
+Deaths Involving COVID-19 by Vaccination Status: /dataset/deaths-involving-covid-19-by-vaccination-status
+Long-Term Care Home COVID-19 Data: /dataset/long-term-care-home-covid-19-data
+Deaths Involving COVID-19 by Fatality Type: /dataset/deaths-involving-covid-19-by-fatality-type
+Status of COVID-19 cases in Ontario’s Provincial Correctional Institutions: /dataset/status-of-covid-19-cases-in-ontario-s-correctional-institutions
+Status of COVID-19 cases in Ontario by Public Health Unit (PHU): /dataset/status-of-covid-19-cases-in-ontario-by-public-health-unit-phu
+COVID-19 testing of inmates in Ontario’s Provincial Correctional Institutions: /dataset/covid-19-testing-of-inmates-in-ontario-s-correctional-institutions
+Availability of adult and pediatric ICU beds and occupancy for COVID-related ...: /dataset/availability-of-adult-icu-beds-and-occupancy-for-covid-related-critical-illness-crci
+Case-by-Case Review Program (CBCRP) data: /dataset/case-by-case-review-program-cbcrp-data
+Discharge Abstract Database (DAD) / Ontario hospitals: /dataset/discharge-abstract-database-dad-ontario-hospitals
+Ontario Case Costing Initiative (OCCI): /dataset/ontario-case-costing-initiative-occi
+Incident cancer case level stage data: /dataset/incident-cancer-case-level-stage-data
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -22592,8 +22634,8 @@ a characteristic of...&lt;/div&gt;
 
 <span class="c1"># Begin a search of our keywords, looking for &quot;hospital&quot;</span>
 <span class="n">hospitalData_URLs</span> <span class="o">=</span> <span class="p">[</span><span class="n">link_dict</span><span class="p">[</span><span class="n">link_name</span><span class="p">]</span>                         <span class="c1"># Keep the value for keys that pass filter</span>
-                     <span class="k">for</span> <span class="n">link_name</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>      <span class="c1"># Iterate through each dictionary key</span>
-                     <span class="o">...</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;hospital&quot;</span><span class="p">,</span> <span class="n">link_name</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">]</span> <span class="c1"># Search for our pattern and filter for match found</span>
+                     <span class="k">for</span> <span class="n">link_name</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">link_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>      <span class="c1"># Iterate through each dictionary key</span>
+                     <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">&quot;hospital&quot;</span><span class="p">,</span> <span class="n">link_name</span><span class="p">)</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">]</span> <span class="c1"># Search for our pattern and filter for match found</span>
 
 <span class="c1"># Which result pages are we actually interested in?</span>
 <span class="n">hospitalData_URLs</span>
