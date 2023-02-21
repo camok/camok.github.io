@@ -22553,10 +22553,10 @@ a characteristic of...&lt;/div&gt;
 <span class="n">link_dict</span> <span class="o">=</span> <span class="p">{}</span>
 
 <span class="c1"># Find all instances of h3</span>
-<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="o">...</span><span class="p">(</span><span class="s2">&quot;h3&quot;</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;h3&quot;</span><span class="p">):</span>
     <span class="c1"># From the content within there, identify the &quot;a&quot; tag which precedes a link</span>
     <span class="c1"># Link the text within the &quot;a&quot; tag to the actual link under &quot;href=&quot;</span>
-    <span class="n">link_dict</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
+    <span class="n">link_dict</span><span class="p">[</span><span class="n">link</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">text</span><span class="p">]</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
     <span class="c1"># Print those values to see what we are getting!</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">link</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="n">link</span><span class="o">.</span><span class="n">a</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">])</span> 
 </pre></div>
