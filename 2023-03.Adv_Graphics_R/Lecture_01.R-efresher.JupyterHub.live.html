@@ -18554,12 +18554,12 @@ Traceback:
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Start with our wide-format phu data</span>
@@ -18569,12 +18569,65 @@ Traceback:
 <span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">35</span><span class="p">),</span> <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;public_health_unit&quot;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;new_cases&quot;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Just take a quick look at the output.</span>
-<span class="nf">str</span><span class="p">()</span>
+<span class="nf">head</span><span class="p">(</span><span class="m">20</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 20 × 4</caption>
+<thead>
+	<tr><th scope=col>Date</th><th scope=col>Total</th><th scope=col>public_health_unit</th><th scope=col>new_cases</th></tr>
+	<tr><th scope=col>&lt;date&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>2020-01-23</td><td>2</td><td>Algoma_District               </td><td>NA</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Brant_County                  </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Chatham_Kent                  </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Durham_Region                 </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Eastern_Ontario               </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Grey_Bruce                    </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Haldimand_Norfolk             </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Haliburton_Kawartha_Pine_Ridge</td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Halton_Region                 </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>City_of_Hamilton              </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Hastings_Prince_Edward        </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Huron_Perth                   </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>KFLA                          </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Lambton_County                </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Leeds_Grenville_Lanark        </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Middlesex_London              </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Niagara_Region                </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>North_Bay_Parry_Sound_District</td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Northwestern                  </td><td> 0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>City_of_Ottawa                </td><td> 0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
