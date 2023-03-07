@@ -17439,16 +17439,16 @@ Traceback:
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Using lapply and sapply and sum on an actual list</span>
-<span class="n">sum.list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">sum.list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">numeric.vector</span><span class="p">,</span> <span class="n">numeric.df</span><span class="p">)</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">sum.list</span><span class="p">)</span>
 
 <span class="c1"># lapply on the list returns a list</span>
@@ -17463,6 +17463,70 @@ Traceback:
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>List of 2
+ $ : int [1:12] -1 0 1 2 3 4 5 6 7 8 ...
+ $ :&#39;data.frame&#39;:	12 obs. of  3 variables:
+  ..$ geneA: int [1:12] -1 0 1 2 3 4 5 6 7 8 ...
+  ..$ geneB: num [1:12] -2 0 2 4 6 8 10 12 14 16 ...
+  ..$ geneC: num [1:12] -3 0 3 6 9 12 15 18 21 24 ...
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<ol>
+	<li>54</li>
+	<li>324</li>
+</ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>54</li><li>324</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -17475,7 +17539,7 @@ Traceback:
 <span class="n">sum.list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">numeric.df</span><span class="p">,</span> <span class="n">numeric.df</span><span class="p">)</span>
 
 <span class="c1"># Extract the first row from each member of the list</span>
-<span class="nf">lapply</span><span class="p">(</span><span class="n">sum.list</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<span class="nf">lapply</span><span class="p">(</span><span class="n">sum.list</span><span class="p">,</span> <span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">,</span> <span class="p">)</span>
 
 <span class="c1"># Extract the 2nd column from each member of the list</span>
 <span class="nf">lapply</span><span class="p">(</span><span class="n">sum.list</span><span class="p">,</span> <span class="s">&quot;[&quot;</span><span class="p">,</span> <span class="p">,</span> <span class="m">2</span><span class="p">)</span>
