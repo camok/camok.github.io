@@ -41326,25 +41326,25 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># What are the top 10 regions by total caseload?</span>
 <span class="n">covid_phu_long.df</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># group the data by public health unit</span>
-<span class="nf">group_by</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">group_by</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Summarize it by the total number of new cases in each PHU</span>
-<span class="nf">summarise</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">summarise</span><span class="p">(</span><span class="n">total_cases</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="n">new_cases</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Sort all of the data in descending order by total cases</span>
-<span class="nf">arrange</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">total_cases</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># take the top 10 PHUs</span>
 <span class="n">.</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="p">,</span> <span class="p">]</span>
@@ -41353,6 +41353,49 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 10 × 2</caption>
+<thead>
+	<tr><th scope=col>public_health_unit</th><th scope=col>total_cases</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Toronto       </td><td>375424</td></tr>
+	<tr><td>Peel          </td><td>205898</td></tr>
+	<tr><td>York          </td><td>130251</td></tr>
+	<tr><td>Ottawa        </td><td> 89068</td></tr>
+	<tr><td>Hamilton      </td><td> 72789</td></tr>
+	<tr><td>Durham        </td><td> 72373</td></tr>
+	<tr><td>Halton        </td><td> 57093</td></tr>
+	<tr><td>Simcoe Muskoka</td><td> 56390</td></tr>
+	<tr><td>Waterloo      </td><td> 55382</td></tr>
+	<tr><td>Windsor Essex </td><td> 52481</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
