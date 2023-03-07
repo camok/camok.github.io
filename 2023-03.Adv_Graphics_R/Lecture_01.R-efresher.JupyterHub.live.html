@@ -15382,12 +15382,12 @@ bedmasAnswer &lt;- 5 + 4 * 6 - 0 #In line: Describing a part of your code that i
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Build a character vector</span>
@@ -15398,18 +15398,112 @@ bedmasAnswer &lt;- 5 + 4 * 6 - 0 #In line: Describing a part of your code that i
 <span class="n">char.vector</span><span class="p">[</span><span class="m">2</span><span class="p">]</span>
 
 <span class="c1"># subset by multiple values</span>
-<span class="n">char.vector</span><span class="p">[</span><span class="m">2</span><span class="o">:</span><span class="m">10</span><span class="p">]</span>
+<span class="n">char.vector</span><span class="p">[</span><span class="m">2</span><span class="o">:</span><span class="m">3</span><span class="p">]</span>
 
 <span class="c1"># subset by removing values (cannot be mixed with positive values)</span>
-<span class="n">char.vector</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span> <span class="kc">...</span><span class="p">)]</span>
+<span class="n">char.vector</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span> <span class="m">-3</span><span class="p">)]</span>
 
 <span class="c1"># subset with repeating multiple values</span>
-<span class="n">char.vector</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="kc">...</span><span class="p">)]</span>
+<span class="n">char.vector</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">1</span><span class="p">)]</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Canada'</li><li>'United States'</li><li>'Great Britain'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+'United States'
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'United States'</li><li>'Great Britain'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+'United States'
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Canada'</li><li>'United States'</li><li>'Great Britain'</li><li>'Great Britain'</li><li>'United States'</li><li>'Canada'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -15421,7 +15515,7 @@ bedmasAnswer &lt;- 5 + 4 * 6 - 0 #In line: Describing a part of your code that i
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Build a named character vector by including variable names</span>
-<span class="n">character.vector</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;United States&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s">&quot;Great Britain&quot;</span><span class="p">)</span>
+<span class="n">character.vector</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="s">&quot;Canada&quot;</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="s">&quot;United States&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s">&quot;Great Britain&quot;</span><span class="p">)</span>
 <span class="n">character.vector</span>
 
 <span class="c1"># subset by element name</span>
