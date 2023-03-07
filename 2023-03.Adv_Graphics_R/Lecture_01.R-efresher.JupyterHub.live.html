@@ -42419,8 +42419,8 @@ class="
 
     <span class="c1"># 3. Scaling</span>
     <span class="c1"># Start looking at data from March 2020 onwards</span>
-    <span class="nf">scale_x_date</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2020-03-01&quot;</span><span class="p">,</span> <span class="nf">as.Date</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">phu_window_data.df</span><span class="o">$</span><span class="n">start_date</span><span class="p">))</span>
-                 <span class="n">date_breaks</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> <span class="n">date_labels</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span> <span class="o">+</span>
+    <span class="nf">scale_x_date</span><span class="p">(</span><span class="n">limits</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2020-03-01&quot;</span><span class="p">,</span> <span class="nf">as.Date</span><span class="p">(</span><span class="nf">max</span><span class="p">(</span><span class="n">phu_window_data.df</span><span class="o">$</span><span class="n">start_date</span><span class="p">))),</span>
+                 <span class="n">date_breaks</span> <span class="o">=</span> <span class="s">&quot;1 month&quot;</span><span class="p">,</span> <span class="n">date_labels</span> <span class="o">=</span> <span class="s">&quot;%b-%Y&quot;</span><span class="p">)</span> <span class="o">+</span>
 
     <span class="nf">scale_color_viridis_d</span><span class="p">()</span> <span class="o">+</span> 
 
