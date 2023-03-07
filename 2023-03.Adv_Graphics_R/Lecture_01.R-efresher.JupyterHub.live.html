@@ -18659,7 +18659,7 @@ Traceback:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Pivot the data into a long-format set and remove NAs from the value table</span>
@@ -18823,7 +18823,7 @@ FALSE
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Clean up the Public Health Unit names</span>
@@ -18853,7 +18853,7 @@ FALSE
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Take a look at the new set of phu names</span>
@@ -18879,16 +18879,16 @@ FALSE
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre> [1] &#34; Hamilton&#34;                      &#34; Ottawa&#34;                       
- [3] &#34;Algoma&#34;                         &#34;Brant&#34;                         
- [5] &#34;Chatham Kent&#34;                   &#34;Durham&#34;                        
- [7] &#34;Eastern Ontario&#34;                &#34;Grey Bruce&#34;                    
- [9] &#34;Haldimand Norfolk&#34;              &#34;Haliburton Kawartha Pine Ridge&#34;
-[11] &#34;Halton&#34;                         &#34;Hastings Prince Edward&#34;        
-[13] &#34;Huron Perth&#34;                    &#34;KFLA&#34;                          
-[15] &#34;Lambton&#34;                        &#34;Leeds Grenville Lanark&#34;        
-[17] &#34;Middlesex London&#34;               &#34;Niagara&#34;                       
-[19] &#34;North Bay Parry Sound&#34;          &#34;Northwestern&#34;                  
+<pre> [1] &#34;Algoma&#34;                         &#34;Brant&#34;                         
+ [3] &#34;Chatham Kent&#34;                   &#34;Durham&#34;                        
+ [5] &#34;Eastern Ontario&#34;                &#34;Grey Bruce&#34;                    
+ [7] &#34;Haldimand Norfolk&#34;              &#34;Haliburton Kawartha Pine Ridge&#34;
+ [9] &#34;Halton&#34;                         &#34;Hamilton&#34;                      
+[11] &#34;Hastings Prince Edward&#34;         &#34;Huron Perth&#34;                   
+[13] &#34;KFLA&#34;                           &#34;Lambton&#34;                       
+[15] &#34;Leeds Grenville Lanark&#34;         &#34;Middlesex London&#34;              
+[17] &#34;Niagara&#34;                        &#34;North Bay Parry Sound&#34;         
+[19] &#34;Northwestern&#34;                   &#34;Ottawa&#34;                        
 [21] &#34;Peel&#34;                           &#34;Peterborough&#34;                  
 [23] &#34;Porcupine&#34;                      &#34;Renfrew&#34;                       
 [25] &#34;Simcoe Muskoka&#34;                 &#34;Southwestern&#34;                  
@@ -18904,12 +18904,12 @@ FALSE
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Take a quick look at our final dataset</span>
@@ -18922,6 +18922,45 @@ FALSE
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 4</caption>
+<thead>
+	<tr><th scope=col>Date</th><th scope=col>Total</th><th scope=col>public_health_unit</th><th scope=col>new_cases</th></tr>
+	<tr><th scope=col>&lt;date&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>2020-01-23</td><td>2</td><td>Algoma         </td><td>0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Brant          </td><td>0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Chatham Kent   </td><td>0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Durham         </td><td>0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Eastern Ontario</td><td>0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Grey Bruce     </td><td>0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -18938,24 +18977,63 @@ FALSE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Rename our Total column to clarify it&#39;s meaning</span>
 <span class="n">covid_phu_long.df</span>  <span class="o">%&gt;%</span> 
-<span class="nf">rename</span><span class="p">(</span><span class="kc">...</span> <span class="o">=</span> <span class="n">Total</span><span class="p">,</span>
-       <span class="kc">...</span> <span class="o">=</span> <span class="n">Date</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+<span class="nf">rename</span><span class="p">(</span><span class="n">total_phu_new</span> <span class="o">=</span> <span class="n">Total</span><span class="p">,</span>
+       <span class="n">date</span> <span class="o">=</span> <span class="n">Date</span><span class="p">)</span> <span class="o">%&gt;%</span> 
 <span class="nf">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 4</caption>
+<thead>
+	<tr><th scope=col>date</th><th scope=col>total_phu_new</th><th scope=col>public_health_unit</th><th scope=col>new_cases</th></tr>
+	<tr><th scope=col>&lt;date&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>2020-01-23</td><td>2</td><td>Algoma         </td><td>0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Brant          </td><td>0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Chatham Kent   </td><td>0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Durham         </td><td>0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Eastern Ontario</td><td>0</td></tr>
+	<tr><td>2020-01-23</td><td>2</td><td>Grey Bruce     </td><td>0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
