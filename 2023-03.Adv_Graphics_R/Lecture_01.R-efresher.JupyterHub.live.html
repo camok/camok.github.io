@@ -19272,12 +19272,12 @@ FALSE
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Save our data frame as an object</span>
@@ -19290,6 +19290,36 @@ FALSE
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[1] &#34;hospitalizations_pt.csv&#34;                        
+[2] &#34;Lecture01.RData&#34;                                
+[3] &#34;Ontario_covidtesting.csv&#34;                       
+[4] &#34;Ontario_daily_change_in_cases_by_phu.csv&#34;       
+[5] &#34;Ontario_daily_change_in_cases_by_phu_long.RData&#34;
+[6] &#34;Ontario_daily_change_in_cases_by_phu_long.tsv&#34;  
+[7] &#34;Ontario_phu_data.all.facet.png&#34;                 
+[8] &#34;region_hospital_icu_covid_data.csv&#34;             
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -19347,7 +19377,7 @@ FALSE
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Adjust our plot window sizes to go a little wider</span>
@@ -19368,7 +19398,7 @@ FALSE
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Initialize a plot with our data</span>
-<span class="n">phu.plot</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">phu.plot</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">covid_phu</span><span class="p">)</span>
 
 <span class="c1"># Take a quick look at the structure of the data</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">phu.plot</span><span class="p">)</span>
