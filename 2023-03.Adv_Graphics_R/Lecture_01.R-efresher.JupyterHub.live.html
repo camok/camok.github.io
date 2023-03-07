@@ -17679,7 +17679,7 @@ Traceback:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Use mapply in an example on numeric.vector</span>
@@ -17689,7 +17689,7 @@ Traceback:
 <span class="nf">mapply</span><span class="p">(</span><span class="n">sum</span><span class="p">,</span> <span class="n">numeric.df</span><span class="p">,</span> <span class="n">numeric.df</span><span class="p">)</span>
 
 <span class="c1"># # Use mapply on the rep function to see its output</span>
-<span class="c1"># mapply(rep, c(...), 4)</span>
+<span class="nf">mapply</span><span class="p">(</span><span class="n">rep</span><span class="p">,</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;repeat&quot;</span><span class="p">,</span> <span class="s">&quot;this&quot;</span><span class="p">,</span> <span class="s">&quot;phrase&quot;</span><span class="p">),</span> <span class="m">4</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -17718,6 +17718,50 @@ Traceback:
 .list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
 </style>
 <ol class=list-inline><li>-2</li><li>0</li><li>2</li><li>4</li><li>6</li><li>8</li><li>10</li><li>12</li><li>14</li><li>16</li><li>18</li><li>20</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>geneA</dt><dd>108</dd><dt>geneB</dt><dd>216</dd><dt>geneC</dt><dd>324</dd></dl>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 4 × 3 of type chr</caption>
+<thead>
+	<tr><th scope=col>repeat</th><th scope=col>this</th><th scope=col>phrase</th></tr>
+</thead>
+<tbody>
+	<tr><td>repeat</td><td>this</td><td>phrase</td></tr>
+	<tr><td>repeat</td><td>this</td><td>phrase</td></tr>
+	<tr><td>repeat</td><td>this</td><td>phrase</td></tr>
+	<tr><td>repeat</td><td>this</td><td>phrase</td></tr>
+</tbody>
+</table>
 
 </div>
 
