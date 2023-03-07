@@ -42302,11 +42302,11 @@ class="
                 <span class="nf">summarize</span><span class="p">(</span><span class="n">window_mean</span> <span class="o">=</span> <span class="nf">mean</span><span class="p">(</span><span class="n">new_cases</span><span class="p">))</span>
     
     <span class="c1"># Track the start and end dates of the window</span>
-    <span class="n">curr.set</span><span class="o">$</span><span class="n">start_date</span> <span class="o">=</span> <span class="n">case.dates</span><span class="p">[</span><span class="kc">...</span><span class="p">]</span>
-    <span class="n">curr.set</span><span class="o">$</span><span class="n">end_date</span> <span class="o">=</span> <span class="n">case.dates</span><span class="p">[</span><span class="kc">...</span><span class="p">]</span>
+    <span class="n">curr.set</span><span class="o">$</span><span class="n">start_date</span> <span class="o">=</span> <span class="n">case.dates</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">curr.set</span><span class="o">$</span><span class="n">end_date</span> <span class="o">=</span> <span class="n">case.dates</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="n">case_window</span><span class="p">]</span>
     
     <span class="c1"># Add this table to the collected data</span>
-    <span class="n">phu_window_data.df</span> <span class="o">&lt;-</span> <span class="kc">...</span>
+    <span class="n">phu_window_data.df</span> <span class="o">&lt;-</span> <span class="nf">rbind</span><span class="p">(</span><span class="n">phu_window_data.df</span><span class="p">,</span> <span class="n">curr.set</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="c1"># Check on the final structure of the data</span>
