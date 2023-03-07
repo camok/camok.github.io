@@ -18035,21 +18035,51 @@ Traceback:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Use read_csv to look at our PHU daily case data</span>
-<span class="n">covid_phu.df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">covid_phu.df</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;./data//Ontario_daily_change_in_cases_by_phu.csv&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">1099</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">36</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> &#34;,&#34;
+<span class="ansi-green-fg">dbl</span>  (35): Algoma_District, Brant_County, Chatham_Kent, Durham_Region, Easte...
+<span class="ansi-blue-fg">date</span>  (1): Date
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -18061,9 +18091,9 @@ Traceback:
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Check the structure and characteristics of covid_phu</span>
-<span class="nf">str</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">give.attr</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
-<span class="nf">head</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
-<span class="nf">tail</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">covid_phu.df</span><span class="p">,</span> <span class="n">give.attr</span> <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">covid_phu.df</span><span class="p">)</span>
+<span class="nf">tail</span><span class="p">(</span><span class="n">covid_phu.df</span><span class="p">)</span>
 </pre></div>
 
      </div>
