@@ -16230,16 +16230,16 @@ FALSE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Make a named list of various items</span>
-<span class="n">mixed.list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">countries</span> <span class="o">=</span> <span class="n">character.vector</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="n">numeric.vector</span><span class="p">,</span> <span class="n">mixed.data</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span>
+<span class="n">mixed.list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">countries</span> <span class="o">=</span> <span class="n">character.vector</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="n">numeric.vector</span><span class="p">,</span> <span class="n">mixed.data</span> <span class="o">=</span> <span class="n">mixed.df</span><span class="p">)</span>
 
 <span class="c1"># Look at some information about our list</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">mixed.list</span><span class="p">)</span>
@@ -16253,16 +16253,65 @@ FALSE
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>List of 3
+ $ countries : Named chr [1:3] &#34;Canada&#34; &#34;United States&#34; &#34;Great Britain&#34;
+  ..- attr(*, &#34;names&#34;)= chr [1:3] &#34;a&#34; &#34;b&#34; &#34;c&#34;
+ $ values    : int [1:12] -1 0 1 2 3 4 5 6 7 8 ...
+ $ mixed.data:&#39;data.frame&#39;:	3 obs. of  3 variables:
+  ..$ country     : chr [1:3] &#34;Canada&#34; &#34;United States&#34; &#34;Great Britain&#34;
+  ..$ values      : int [1:3] 0 1 2
+  ..$ commonwealth: logi [1:3] TRUE FALSE TRUE
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'countries'</li><li>'values'</li><li>'mixed.data'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Lists can often be unnamed</span>
-<span class="n">unnamed.list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">character.vector</span><span class="p">,</span> <span class="n">numeric.vector</span><span class="p">,</span> <span class="kc">...</span><span class="p">)</span>
+<span class="n">unnamed.list</span> <span class="o">&lt;-</span> <span class="nf">list</span><span class="p">(</span><span class="n">character.vector</span><span class="p">,</span> <span class="n">numeric.vector</span><span class="p">,</span> <span class="n">mixed.df</span><span class="p">)</span>
 
 <span class="c1"># Look at some information about our unnamed list</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">unnamed.list</span><span class="p">)</span>
@@ -16272,6 +16321,50 @@ FALSE
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>List of 3
+ $ : Named chr [1:3] &#34;Canada&#34; &#34;United States&#34; &#34;Great Britain&#34;
+  ..- attr(*, &#34;names&#34;)= chr [1:3] &#34;a&#34; &#34;b&#34; &#34;c&#34;
+ $ : int [1:12] -1 0 1 2 3 4 5 6 7 8 ...
+ $ :&#39;data.frame&#39;:	3 obs. of  3 variables:
+  ..$ country     : chr [1:3] &#34;Canada&#34; &#34;United States&#34; &#34;Great Britain&#34;
+  ..$ values      : int [1:3] 0 1 2
+  ..$ commonwealth: logi [1:3] TRUE FALSE TRUE
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>NULL</pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
