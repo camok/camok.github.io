@@ -19389,16 +19389,16 @@ FALSE
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Initialize a plot with our data</span>
-<span class="n">phu.plot</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">covid_phu</span><span class="p">)</span>
+<span class="n">phu.plot</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">covid_phu_long.df</span><span class="p">)</span>
 
 <span class="c1"># Take a quick look at the structure of the data</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">phu.plot</span><span class="p">)</span>
@@ -19407,6 +19407,93 @@ FALSE
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>List of 9
+ $ data       : tibble [37,366 x 4] (S3: tbl_df/tbl/data.frame)
+  ..$ date              : Date[1:37366], format: &#34;2020-01-23&#34; &#34;2020-01-23&#34; ...
+  ..$ public_health_unit: Factor w/ 34 levels &#34;Algoma&#34;,&#34;Brant&#34;,..: 1 2 3 4 5 6 7 8 9 10 ...
+  ..$ new_cases         : num [1:37366] 0 0 0 0 0 0 0 0 0 0 ...
+  ..$ total_phu_new     : num [1:37366] 2 2 2 2 2 2 2 2 2 2 ...
+ $ layers     : list()
+ $ scales     :Classes &#39;ScalesList&#39;, &#39;ggproto&#39;, &#39;gg&#39; &lt;ggproto object: Class ScalesList, gg&gt;
+    add: function
+    clone: function
+    find: function
+    get_scales: function
+    has_scale: function
+    input: function
+    n: function
+    non_position_scales: function
+    scales: NULL
+    super:  &lt;ggproto object: Class ScalesList, gg&gt; 
+ $ mapping    : Named list()
+  ..- attr(*, &#34;class&#34;)= chr &#34;uneval&#34;
+ $ theme      : list()
+ $ coordinates:Classes &#39;CoordCartesian&#39;, &#39;Coord&#39;, &#39;ggproto&#39;, &#39;gg&#39; &lt;ggproto object: Class CoordCartesian, Coord, gg&gt;
+    aspect: function
+    backtransform_range: function
+    clip: on
+    default: TRUE
+    distance: function
+    expand: TRUE
+    is_free: function
+    is_linear: function
+    labels: function
+    limits: list
+    modify_scales: function
+    range: function
+    render_axis_h: function
+    render_axis_v: function
+    render_bg: function
+    render_fg: function
+    setup_data: function
+    setup_layout: function
+    setup_panel_guides: function
+    setup_panel_params: function
+    setup_params: function
+    train_panel_guides: function
+    transform: function
+    super:  &lt;ggproto object: Class CoordCartesian, Coord, gg&gt; 
+ $ facet      :Classes &#39;FacetNull&#39;, &#39;Facet&#39;, &#39;ggproto&#39;, &#39;gg&#39; &lt;ggproto object: Class FacetNull, Facet, gg&gt;
+    compute_layout: function
+    draw_back: function
+    draw_front: function
+    draw_labels: function
+    draw_panels: function
+    finish_data: function
+    init_scales: function
+    map_data: function
+    params: list
+    setup_data: function
+    setup_params: function
+    shrink: TRUE
+    train_scales: function
+    vars: function
+    super:  &lt;ggproto object: Class FacetNull, Facet, gg&gt; 
+ $ plot_env   :&lt;environment: R_GlobalEnv&gt; 
+ $ labels     : Named list()
+ - attr(*, &#34;class&#34;)= chr [1:2] &#34;gg&#34; &#34;ggplot&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
