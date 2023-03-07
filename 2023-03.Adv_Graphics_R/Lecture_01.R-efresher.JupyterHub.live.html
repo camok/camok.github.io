@@ -16782,12 +16782,12 @@ FALSE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Generate a data frame and include factors</span>
@@ -16805,12 +16805,39 @@ FALSE
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&#39;data.frame&#39;:	3 obs. of  4 variables:
+ $ country     : chr  &#34;Canada&#34; &#34;United States&#34; &#34;Great Britain&#34;
+ $ values      : int  0 1 2
+ $ commonwealth: logi  TRUE FALSE TRUE
+ $ continent   : Factor w/ 2 levels &#34;North America&#34;,..: 1 1 2
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Coerce a factor</span>
@@ -16820,7 +16847,7 @@ FALSE
                       <span class="n">continent</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="s">&quot;North America&quot;</span><span class="p">,</span> <span class="s">&quot;North America&quot;</span><span class="p">,</span> <span class="s">&quot;Europe&quot;</span><span class="p">))</span>
 
 <span class="c1"># Set our factor after declaring the data frame</span>
-<span class="n">mixed.df</span><span class="o">$</span><span class="n">continent</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;North America&quot;</span><span class="p">,</span> <span class="s">&quot;Europe&quot;</span><span class="p">))</span>
+<span class="n">mixed.df</span><span class="o">$</span><span class="n">continent</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">mixed.df</span><span class="o">$</span><span class="n">continent</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;North America&quot;</span><span class="p">,</span> <span class="s">&quot;Europe&quot;</span><span class="p">))</span>
 
 
 <span class="nf">str</span><span class="p">(</span><span class="n">mixed.df</span><span class="p">)</span>
@@ -16829,6 +16856,33 @@ FALSE
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&#39;data.frame&#39;:	3 obs. of  4 variables:
+ $ country     : chr  &#34;Canada&#34; &#34;United States&#34; &#34;Great Britain&#34;
+ $ values      : int  0 1 2
+ $ commonwealth: logi  TRUE FALSE TRUE
+ $ continent   : Factor w/ 2 levels &#34;North America&#34;,..: 1 1 2
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
