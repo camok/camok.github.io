@@ -18659,7 +18659,7 @@ Traceback:
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Pivot the data into a long-format set and remove NAs from the value table</span>
@@ -18668,7 +18668,7 @@ Traceback:
     <span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="o">:</span><span class="m">35</span><span class="p">),</span> <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;public_health_unit&quot;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;new_cases&quot;</span><span class="p">)</span>  <span class="o">%&gt;%</span>
 
     <span class="c1"># Change the values of &quot;new_cases&quot; using the mutate function</span>
-    <span class="nf">mutate</span><span class="p">(</span><span class="n">new_cases</span> <span class="o">=</span> <span class="kc">...</span><span class="p">)</span>
+    <span class="nf">mutate</span><span class="p">(</span><span class="n">new_cases</span> <span class="o">=</span> <span class="nf">replace_na</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">.</span><span class="o">$</span><span class="n">new_cases</span><span class="p">,</span> <span class="n">replace</span> <span class="o">=</span> <span class="m">0</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -18676,12 +18676,12 @@ Traceback:
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Check that we have covered all of the NA values in our data frame by looking for complete cases</span>
@@ -18694,6 +18694,43 @@ Traceback:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+37366
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+FALSE
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
