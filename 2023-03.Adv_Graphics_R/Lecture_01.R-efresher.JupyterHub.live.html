@@ -18818,29 +18818,46 @@ FALSE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Clean up the Public Health Unit names</span>
-<span class="n">covid_phu_long.df</span>  <span class="o">%&gt;%</span> 
+<span class="n">covid_phu_long.df</span>  <span class="o">%&lt;&gt;%</span> 
 
 <span class="c1"># Replaces our public_health_unit values with ones where we remove excess verbage</span>
 <span class="nf">mutate</span><span class="p">(</span><span class="n">public_health_unit</span> <span class="o">=</span> <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">string</span> <span class="o">=</span> <span class="n">.</span><span class="o">$</span><span class="n">public_health_unit</span><span class="p">,</span> 
-                                            <span class="n">pattern</span> <span class="o">=</span> <span class="n">r</span><span class="s">&quot;((_and)*_District|_Region|_County\w*)&quot;</span><span class="p">,</span>
+                                            <span class="n">pattern</span> <span class="o">=</span> <span class="n">r</span><span class="s">&quot;((_and)*_District|_Region|_County\w*|_City|^City_of_)&quot;</span><span class="p">,</span>
                                             <span class="n">replace</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># From the updated version of public_health_unit, replace all _ with a &quot; &quot;</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">public_health_unit</span> <span class="o">=</span> <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">string</span> <span class="o">=</span> <span class="kc">...</span><span class="p">,</span> 
+<span class="nf">mutate</span><span class="p">(</span><span class="n">public_health_unit</span> <span class="o">=</span> <span class="nf">str_replace_all</span><span class="p">(</span><span class="n">string</span> <span class="o">=</span> <span class="n">.</span><span class="o">$</span><span class="n">public_health_unit</span><span class="p">,</span> 
                                             <span class="n">pattern</span> <span class="o">=</span> <span class="s">&quot;_&quot;</span><span class="p">,</span>
                                             <span class="n">replace</span> <span class="o">=</span> <span class="s">&quot; &quot;</span><span class="p">))</span> <span class="o">%&gt;%</span> 
 
 <span class="c1"># Now make sure that it&#39;s a factor for later</span>
 <span class="nf">mutate</span><span class="p">(</span><span class="n">public_health_unit</span> <span class="o">=</span> <span class="nf">as.factor</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">))</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-r"><pre><span></span><span class="c1"># Take a look at the new set of phu names</span>
+<span class="nf">print</span><span class="p">(</span><span class="nf">levels</span><span class="p">(</span><span class="n">covid_phu_long.df</span><span class="o">$</span><span class="n">public_health_unit</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -18861,33 +18878,30 @@ FALSE
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-Error in parse(text = x, srcfile = src): malformed raw string literal at line 6
-Traceback:
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> [1] &#34; Hamilton&#34;                      &#34; Ottawa&#34;                       
+ [3] &#34;Algoma&#34;                         &#34;Brant&#34;                         
+ [5] &#34;Chatham Kent&#34;                   &#34;Durham&#34;                        
+ [7] &#34;Eastern Ontario&#34;                &#34;Grey Bruce&#34;                    
+ [9] &#34;Haldimand Norfolk&#34;              &#34;Haliburton Kawartha Pine Ridge&#34;
+[11] &#34;Halton&#34;                         &#34;Hastings Prince Edward&#34;        
+[13] &#34;Huron Perth&#34;                    &#34;KFLA&#34;                          
+[15] &#34;Lambton&#34;                        &#34;Leeds Grenville Lanark&#34;        
+[17] &#34;Middlesex London&#34;               &#34;Niagara&#34;                       
+[19] &#34;North Bay Parry Sound&#34;          &#34;Northwestern&#34;                  
+[21] &#34;Peel&#34;                           &#34;Peterborough&#34;                  
+[23] &#34;Porcupine&#34;                      &#34;Renfrew&#34;                       
+[25] &#34;Simcoe Muskoka&#34;                 &#34;Southwestern&#34;                  
+[27] &#34;Sudbury&#34;                        &#34;Thunder Bay&#34;                   
+[29] &#34;Timiskaming&#34;                    &#34;Toronto&#34;                       
+[31] &#34;Waterloo&#34;                       &#34;Wellington Dufferin Guelph&#34;    
+[33] &#34;Windsor Essex&#34;                  &#34;York&#34;                          
 </pre>
 </div>
 </div>
 
 </div>
 
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-r"><pre><span></span><span class="c1"># Take a look at the new set of phu names</span>
-<span class="nf">print</span><span class="p">(</span><span class="nf">levels</span><span class="p">(</span><span class="n">covid_phu_long.df</span><span class="o">$</span><span class="n">public_health_unit</span><span class="p">))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
