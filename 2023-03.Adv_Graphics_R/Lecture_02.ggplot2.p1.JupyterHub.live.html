@@ -14904,16 +14904,16 @@ The following objects are masked from &#39;package:base&#39;:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Read in PHU_population_information.csv</span>
-<span class="n">phu_information.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">phu_information.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/COVID-19_map_data_220303.csv&quot;</span><span class="p">)</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">phu_information.df</span><span class="p">)</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">phu_information.df</span><span class="p">)</span>
 </pre></div>
@@ -14921,6 +14921,118 @@ The following objects are masked from &#39;package:base&#39;:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">35</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">19</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">----------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> &#34;,&#34;
+<span class="ansi-red-fg">chr</span>  (1): Geographic area
+<span class="ansi-green-fg">dbl</span> (18): Recent Case Count, Recent Case Rate, Cumulative Case Count, Cumula...
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>spec_tbl_df [35 x 19] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ Geographic area                                     : chr [1:35] &#34;Ontario&#34; &#34;Algoma Public Health&#34; &#34;Brant County Health Unit&#34; &#34;Chatham-Kent Public Health&#34; ...
+ $ Recent Case Count                                   : num [1:35] 25751 733 233 322 876 ...
+ $ Recent Case Rate                                    : num [1:35] 175 622 152 302 151 ...
+ $ Cumulative Case Count                               : num [1:35] 1107408 5275 9908 6924 48526 ...
+ $ Cumulative Case Rate                                : num [1:35] 7516 4476 6452 6494 8342 ...
+ $ Cumulative Hospitalizations Count                   : num [1:35] 42132 206 369 278 2252 ...
+ $ Cumulative Hospitalizations Rate                    : num [1:35] 286 175 240 261 387 ...
+ $ Cumulative Deaths Count                             : num [1:35] 12497 33 76 72 523 ...
+ $ Cumulative Deaths Rate                              : num [1:35] 84.8 28 49.5 67.5 89.9 62.3 98.2 28.4 70.8 49.8 ...
+ $ At least one dose count                             : num [1:35] 12489709 97881 122613 85128 474994 ...
+ $ Completed primary series count                      : num [1:35] 11947990 93941 117653 81743 454665 ...
+ $ At least one dose coverage (%)                      : num [1:35] 84.8 83.1 79.8 79.8 81.7 84.3 81.7 76.6 76.5 82.6 ...
+ $ Completed primary series coverage (%)               : num [1:35] 81.1 79.7 76.6 76.7 78.2 81.1 78.1 73.7 73.8 79.6 ...
+ $ At least one dose count among eligible              : num [1:35] 12486011 97873 122608 85120 474910 ...
+ $ Completed primary series count among eligible       : num [1:35] 11946134 93935 117650 81737 454628 ...
+ $ At least one dose coverage (%) among eligible       : num [1:35] 89.1 86.7 84.6 83.8 86 89.3 85.9 80.8 80.4 86 ...
+ $ Completed primary series coverage (%) among eligible: num [1:35] 85.3 83.2 81.2 80.5 82.4 85.9 82.2 77.7 77.6 82.9 ...
+ $ Population                                          : num [1:35] 14734014 117840 153558 106620 581722 ...
+ $ Eligible population                                 : num [1:35] 14010998 112839 144945 101565 552042 ...
+ - attr(*, &#34;spec&#34;)=
+  .. cols(
+  ..   `Geographic area` = <span class="ansi-red-fg">col_character()</span>,
+  ..   `Recent Case Count` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Recent Case Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Cumulative Case Count` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Cumulative Case Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Cumulative Hospitalizations Count` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Cumulative Hospitalizations Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Cumulative Deaths Count` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Cumulative Deaths Rate` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `At least one dose count` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Completed primary series count` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `At least one dose coverage (%)` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Completed primary series coverage (%)` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `At least one dose count among eligible` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Completed primary series count among eligible` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `At least one dose coverage (%) among eligible` = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Completed primary series coverage (%) among eligible` = <span class="ansi-green-fg">col_double()</span>,
+  ..   Population = <span class="ansi-green-fg">col_double()</span>,
+  ..   `Eligible population` = <span class="ansi-green-fg">col_double()</span>
+  .. )
+ - attr(*, &#34;problems&#34;)=&lt;externalptr&gt; 
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 19</caption>
+<thead>
+	<tr><th scope=col>Geographic area</th><th scope=col>Recent Case Count</th><th scope=col>Recent Case Rate</th><th scope=col>Cumulative Case Count</th><th scope=col>Cumulative Case Rate</th><th scope=col>Cumulative Hospitalizations Count</th><th scope=col>Cumulative Hospitalizations Rate</th><th scope=col>Cumulative Deaths Count</th><th scope=col>Cumulative Deaths Rate</th><th scope=col>At least one dose count</th><th scope=col>Completed primary series count</th><th scope=col>At least one dose coverage (%)</th><th scope=col>Completed primary series coverage (%)</th><th scope=col>At least one dose count among eligible</th><th scope=col>Completed primary series count among eligible</th><th scope=col>At least one dose coverage (%) among eligible</th><th scope=col>Completed primary series coverage (%) among eligible</th><th scope=col>Population</th><th scope=col>Eligible population</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Ontario                                </td><td>25751</td><td>174.8</td><td>1107408</td><td>7516.0</td><td>42132</td><td>286.0</td><td>12497</td><td>84.8</td><td>12489709</td><td>11947990</td><td>84.8</td><td>81.1</td><td>12486011</td><td>11946134</td><td>89.1</td><td>85.3</td><td>14734014</td><td>14010998</td></tr>
+	<tr><td>Algoma Public Health                   </td><td>  733</td><td>622.0</td><td>   5275</td><td>4476.4</td><td>  206</td><td>174.8</td><td>   33</td><td>28.0</td><td>   97881</td><td>   93941</td><td>83.1</td><td>79.7</td><td>   97873</td><td>   93935</td><td>86.7</td><td>83.2</td><td>  117840</td><td>  112839</td></tr>
+	<tr><td>Brant County Health Unit               </td><td>  233</td><td>151.7</td><td>   9908</td><td>6452.3</td><td>  369</td><td>240.3</td><td>   76</td><td>49.5</td><td>  122613</td><td>  117653</td><td>79.8</td><td>76.6</td><td>  122608</td><td>  117650</td><td>84.6</td><td>81.2</td><td>  153558</td><td>  144945</td></tr>
+	<tr><td>Chatham-Kent Public Health             </td><td>  322</td><td>302.0</td><td>   6924</td><td>6494.1</td><td>  278</td><td>260.7</td><td>   72</td><td>67.5</td><td>   85128</td><td>   81743</td><td>79.8</td><td>76.7</td><td>   85120</td><td>   81737</td><td>83.8</td><td>80.5</td><td>  106620</td><td>  101565</td></tr>
+	<tr><td>City of Hamilton Public Health Services</td><td>  876</td><td>150.6</td><td>  48526</td><td>8341.8</td><td> 2252</td><td>387.1</td><td>  523</td><td>89.9</td><td>  474994</td><td>  454665</td><td>81.7</td><td>78.2</td><td>  474910</td><td>  454628</td><td>86.0</td><td>82.4</td><td>  581722</td><td>  552042</td></tr>
+	<tr><td>Durham Region Health Department        </td><td> 1105</td><td>155.3</td><td>  53277</td><td>7488.8</td><td> 1658</td><td>233.1</td><td>  443</td><td>62.3</td><td>  599562</td><td>  576698</td><td>84.3</td><td>81.1</td><td>  599528</td><td>  576686</td><td>89.3</td><td>85.9</td><td>  711426</td><td>  671727</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
