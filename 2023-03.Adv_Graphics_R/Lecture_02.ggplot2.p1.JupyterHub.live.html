@@ -25848,8 +25848,8 @@ class="
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Open our data file and define the column types rather than let the function decide.</span>
-<span class="n">covid_phu.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_tsv</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span>
-<span class="w">                         </span><span class="n">col_types</span><span class="o">=</span><span class="p">(</span><span class="kc">...</span><span class="p">))</span><span class="w"> </span><span class="c1"># Define column types here</span>
+<span class="n">covid_phu.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_tsv</span><span class="p">(</span><span class="s">&quot;data/Ontario_daily_change_in_cases_by_phu_long.tsv&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                         </span><span class="n">col_types</span><span class="o">=</span><span class="p">(</span><span class="s">&quot;Dfdd&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1"># Define column types here</span>
 
 <span class="c1"># Take a peek at the data</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">covid_phu.df</span><span class="p">)</span>
