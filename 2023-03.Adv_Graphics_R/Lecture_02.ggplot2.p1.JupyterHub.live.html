@@ -54028,7 +54028,7 @@ class="
 <span class="c1">#---------- Filter and fix variables ----------#</span>
 <span class="c1"># Filter out some of the excess data</span>
 <span class="nf">filter</span><span class="p">(</span><span class="n">geographic_area</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;Ontario&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1"># Drop Ontario data</span>
-<span class="w">       </span><span class="n">age_group</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">  </span><span class="c1"># Drop combined age data</span>
+<span class="w">       </span><span class="n">age_group</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;All ages&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">  </span><span class="c1"># Drop combined age data</span>
 
 <span class="c1"># Pare down the dataset to just total_cases, total_deaths, and total_hospitalizations</span>
 <span class="nf">select</span><span class="p">(</span><span class="n">period</span><span class="p">,</span><span class="w"> </span><span class="n">from_date</span><span class="p">,</span><span class="w"> </span><span class="n">to_date</span><span class="p">,</span><span class="w"> </span><span class="n">geographic_area</span><span class="p">,</span><span class="w"> </span><span class="n">age_group</span><span class="p">,</span><span class="w"> </span>
@@ -54049,7 +54049,7 @@ class="
 <span class="nf">group_by</span><span class="p">(</span><span class="n">period</span><span class="p">,</span><span class="w"> </span><span class="n">public_health_unit</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># generate percent values for each age group within a PHU</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">percent_cases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">percent_cases</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total_cases</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">total_cases</span><span class="p">),</span><span class="w"> </span>
 <span class="w">       </span><span class="c1"># generate percent hospitalizations for each age group within a PHU</span>
 <span class="w">       </span><span class="n">percent_hospitalizations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total_hospitalizations_count</span><span class="o">/</span><span class="nf">sum</span><span class="p">(</span><span class="n">total_hospitalizations_count</span><span class="p">),</span>
 <span class="w">       </span><span class="c1"># generate percent male and female cases for each age group within a PHU</span>
