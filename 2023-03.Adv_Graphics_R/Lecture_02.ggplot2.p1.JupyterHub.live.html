@@ -15073,12 +15073,12 @@ The following objects are masked from &#39;package:base&#39;:
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Take our PHU information and tidy it up a bit</span>
@@ -15100,7 +15100,7 @@ The following objects are masked from &#39;package:base&#39;:
 <span class="nf">select</span><span class="p">(</span><span class="m">-2</span><span class="p">,</span><span class="w"> </span><span class="m">-3</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Remove any variables containing the words &quot;Completed&quot; or &quot;dose&quot;</span>
-<span class="nf">select</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="nf">matches</span><span class="p">(</span><span class="s">&quot;Completed|dose&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Rename the &quot;Cumulative&quot; data</span>
 <span class="nf">rename_with</span><span class="p">(</span><span class="n">str_replace_all</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="o">=</span><span class="s">&quot;cumulative_&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">replacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
@@ -15117,12 +15117,72 @@ The following objects are masked from &#39;package:base&#39;:
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 9</caption>
+<thead>
+	<tr><th scope=col>public_health_unit</th><th scope=col>case_count</th><th scope=col>case_rate</th><th scope=col>hospitalizations_count</th><th scope=col>hospitalizations_rate</th><th scope=col>deaths_count</th><th scope=col>deaths_rate</th><th scope=col>population</th><th scope=col>eligible_population</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Ontario         </td><td>1107408</td><td>7516.0</td><td>42132</td><td>286.0</td><td>12497</td><td>84.8</td><td>14734014</td><td>14010998</td></tr>
+	<tr><td>Algoma          </td><td>   5275</td><td>4476.4</td><td>  206</td><td>174.8</td><td>   33</td><td>28.0</td><td>  117840</td><td>  112839</td></tr>
+	<tr><td>Brant County    </td><td>   9908</td><td>6452.3</td><td>  369</td><td>240.3</td><td>   76</td><td>49.5</td><td>  153558</td><td>  144945</td></tr>
+	<tr><td>Chatham-Kent    </td><td>   6924</td><td>6494.1</td><td>  278</td><td>260.7</td><td>   72</td><td>67.5</td><td>  106620</td><td>  101565</td></tr>
+	<tr><td>City of Hamilton</td><td>  48526</td><td>8341.8</td><td> 2252</td><td>387.1</td><td>  523</td><td>89.9</td><td>  581722</td><td>  552042</td></tr>
+	<tr><td>Durham Region   </td><td>  53277</td><td>7488.8</td><td> 1658</td><td>233.1</td><td>  443</td><td>62.3</td><td>  711426</td><td>  671727</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [35 x 9] (S3: tbl_df/tbl/data.frame)
+ $ public_health_unit    : chr [1:35] &#34;Ontario&#34; &#34;Algoma&#34; &#34;Brant County&#34; &#34;Chatham-Kent&#34; ...
+ $ case_count            : num [1:35] 1107408 5275 9908 6924 48526 ...
+ $ case_rate             : num [1:35] 7516 4476 6452 6494 8342 ...
+ $ hospitalizations_count: num [1:35] 42132 206 369 278 2252 ...
+ $ hospitalizations_rate : num [1:35] 286 175 240 261 387 ...
+ $ deaths_count          : num [1:35] 12497 33 76 72 523 ...
+ $ deaths_rate           : num [1:35] 84.8 28 49.5 67.5 89.9 62.3 98.2 28.4 70.8 49.8 ...
+ $ population            : num [1:35] 14734014 117840 153558 106620 581722 ...
+ $ eligible_population   : num [1:35] 14010998 112839 144945 101565 552042 ...
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># View the updated PHU list</span>
@@ -15132,6 +15192,67 @@ The following objects are masked from &#39;package:base&#39;:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<ol>
+	<li>'Ontario'</li>
+	<li>'Algoma'</li>
+	<li>'Brant County'</li>
+	<li>'Chatham-Kent'</li>
+	<li>'City of Hamilton'</li>
+	<li>'Durham Region'</li>
+	<li>'Eastern Ontario'</li>
+	<li>'Grey Bruce'</li>
+	<li>'Haldimand-Norfolk'</li>
+	<li>'Haliburton, Kawartha, Pine Ridge'</li>
+	<li>'Halton Region'</li>
+	<li>'Hastings Prince Edward'</li>
+	<li>'Huron Perth'</li>
+	<li>'Kingston, Frontenac and Lennox &amp; Addington'</li>
+	<li>'Lambton'</li>
+	<li>'Leeds, Grenville &amp; Lanark'</li>
+	<li>'Middlesex-London'</li>
+	<li>'Niagara Region'</li>
+	<li>'North Bay Parry Sound'</li>
+	<li>'Northwestern'</li>
+	<li>'Ottawa'</li>
+	<li>'Peel'</li>
+	<li>'Peterborough'</li>
+	<li>'Porcupine'</li>
+	<li>'Sudbury &amp; Districts'</li>
+	<li>'Region of Waterloo'</li>
+	<li>'Renfrew County'</li>
+	<li>'Simcoe Muskoka'</li>
+	<li>'Southwestern'</li>
+	<li>'Thunder Bay'</li>
+	<li>'Timiskaming'</li>
+	<li>'Toronto'</li>
+	<li>'Wellington-Dufferin-Guelph'</li>
+	<li>'Windsor-Essex County'</li>
+	<li>'York Region'</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
