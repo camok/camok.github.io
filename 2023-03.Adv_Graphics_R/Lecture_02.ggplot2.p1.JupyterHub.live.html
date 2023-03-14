@@ -15884,14 +15884,14 @@ class="
 <span class="nf">ggplot</span><span class="p">()</span><span class="w"> </span><span class="o">+</span>
 <span class="w">    </span><span class="c1"># 2. Aesthetics</span>
 <span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">case_count</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hospitalizations_count</span><span class="p">,</span><span class="w"> </span>
-<span class="w">        </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">                       </span><span class="c1">## Set the size aesthetic</span>
+<span class="w">        </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">population</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">                       </span><span class="c1">## Set the size aesthetic</span>
 
 <span class="w">    </span><span class="c1"># set text size</span>
 <span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
 
 <span class="w">    </span><span class="c1"># 3. Scaling</span>
 <span class="w">    </span><span class="c1">## set the range for sizing our dots</span>
-<span class="w">    </span><span class="nf">scale_size</span><span class="p">(</span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Population (M)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">scale_size</span><span class="p">(</span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Population (M)&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># 4. Geoms</span>
 <span class="w">    </span><span class="nf">geom_point</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span>
