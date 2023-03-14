@@ -53889,16 +53889,16 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Open our dataset</span>
-<span class="n">covid_demographics.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">covid_demographics.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/Ontario_age_sex_COVID-19_cases.csv&quot;</span><span class="p">)</span>
 
 <span class="c1"># Take a quick look at it</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">covid_demographics.df</span><span class="p">,</span><span class="w"> </span><span class="n">give.attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
@@ -53908,6 +53908,97 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">560</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">21</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">----------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> &#34;,&#34;
+<span class="ansi-red-fg">chr</span>  (5): Period, From date, To date, Geographic area, Age group
+<span class="ansi-green-fg">dbl</span> (16): Male Cases, Male Rate, Female Cases, Female Rate, Total Cases, Tot...
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>spec_tbl_df [560 x 21] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ Period                              : chr [1:560] &#34;recent COVID-19 cases&#34; &#34;recent COVID-19 cases&#34; &#34;recent COVID-19 cases&#34; &#34;recent COVID-19 cases&#34; ...
+ $ From date                           : chr [1:560] &#34;18-Feb-23&#34; &#34;18-Feb-23&#34; &#34;18-Feb-23&#34; &#34;18-Feb-23&#34; ...
+ $ To date                             : chr [1:560] &#34;04-Mar-23&#34; &#34;04-Mar-23&#34; &#34;04-Mar-23&#34; &#34;04-Mar-23&#34; ...
+ $ Geographic area                     : chr [1:560] &#34;Ontario&#34; &#34;Ontario&#34; &#34;Ontario&#34; &#34;Ontario&#34; ...
+ $ Age group                           : chr [1:560] &#34;0 to 4&#34; &#34;12 to 19&#34; &#34;20 to 39&#34; &#34;40 to 59&#34; ...
+ $ Male Cases                          : num [1:560] 56 24 188 218 24 ...
+ $ Male Rate                           : num [1:560] 15.3 3.6 8.8 11.5 4.4 ...
+ $ Female Cases                        : num [1:560] 36 54 628 649 7 ...
+ $ Female Rate                         : num [1:560] 10.4 8.4 30.7 32.9 1.3 ...
+ $ Total Cases                         : num [1:560] 98 85 838 874 49 ...
+ $ Total Rate                          : num [1:560] 13.7 6.5 20 22.6 4.6 ...
+ $ Male Hospitalizations               : num [1:560] 4 0 3 15 1 57 54 134 0 0 ...
+ $ Male Hospitalizations Rate          : num [1:560] 1.1 0 0.1 0.8 0.2 4 19.8 1.8 0 0 ...
+ $ Female Hospitalizations             : num [1:560] 5 0 7 13 0 42 54 121 0 0 ...
+ $ Female Hospitalizations Rate        : num [1:560] 1.4 0 0.3 0.7 0 2.7 13.4 1.6 0 0 ...
+ $ Total Hospitalizations Count        : num [1:560] 9 0 10 28 1 99 108 255 0 0 ...
+ $ Total Hospitalizations Rate         : num [1:560] 1.3 0 0.2 0.7 0.1 3.3 16 1.7 0 0 ...
+ $ Unknown Sex Hospitalizations        : num [1:560] 0 0 0 0 0 0 0 0 0 0 ...
+ $ Unknown Sex Cases                   : num [1:560] 6 7 22 7 18 3 7 74 0 0 ...
+ $ Unknown Age and Sex Hospitalizations: num [1:560] 0 0 0 0 0 0 0 0 0 0 ...
+ $ Unknown Age and Sex Cases           : num [1:560] 0 0 0 0 0 0 0 4 0 0 ...
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 21</caption>
+<thead>
+	<tr><th scope=col>Period</th><th scope=col>From date</th><th scope=col>To date</th><th scope=col>Geographic area</th><th scope=col>Age group</th><th scope=col>Male Cases</th><th scope=col>Male Rate</th><th scope=col>Female Cases</th><th scope=col>Female Rate</th><th scope=col>Total Cases</th><th scope=col>...</th><th scope=col>Male Hospitalizations</th><th scope=col>Male Hospitalizations Rate</th><th scope=col>Female Hospitalizations</th><th scope=col>Female Hospitalizations Rate</th><th scope=col>Total Hospitalizations Count</th><th scope=col>Total Hospitalizations Rate</th><th scope=col>Unknown Sex Hospitalizations</th><th scope=col>Unknown Sex Cases</th><th scope=col>Unknown Age and Sex Hospitalizations</th><th scope=col>Unknown Age and Sex Cases</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>...</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>cumulative COVID-19 cases</td><td>15-Jan-20</td><td>04-Mar-23</td><td>Southwestern Public Health</td><td>20 to 39</td><td>1911</td><td> 6919.9</td><td> 3569</td><td>13892.6</td><td> 5480</td><td>...</td><td> 28</td><td> 101.4</td><td> 25</td><td>  97.3</td><td>  53</td><td>  99.4</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>cumulative COVID-19 cases</td><td>15-Jan-20</td><td>04-Mar-23</td><td>Southwestern Public Health</td><td>40 to 59</td><td>1858</td><td> 6490.8</td><td> 3214</td><td>11324.9</td><td> 5076</td><td>...</td><td> 82</td><td> 286.5</td><td> 71</td><td> 250.2</td><td> 153</td><td> 268.4</td><td>0</td><td>4</td><td>0</td><td>0</td></tr>
+	<tr><td>cumulative COVID-19 cases</td><td>15-Jan-20</td><td>04-Mar-23</td><td>Southwestern Public Health</td><td>5 to 11 </td><td> 484</td><td> 5024.9</td><td>  395</td><td> 4280.5</td><td>  879</td><td>...</td><td>  4</td><td>  41.5</td><td>  0</td><td>   0.0</td><td>   4</td><td>  21.2</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+	<tr><td>cumulative COVID-19 cases</td><td>15-Jan-20</td><td>04-Mar-23</td><td>Southwestern Public Health</td><td>60 to 79</td><td>1574</td><td> 6725.3</td><td> 1680</td><td> 6644.0</td><td> 3257</td><td>...</td><td>242</td><td>1034.0</td><td>171</td><td> 676.3</td><td> 413</td><td> 848.2</td><td>0</td><td>3</td><td>0</td><td>0</td></tr>
+	<tr><td>cumulative COVID-19 cases</td><td>15-Jan-20</td><td>04-Mar-23</td><td>Southwestern Public Health</td><td>80+     </td><td> 779</td><td>17656.4</td><td> 1230</td><td>19212.7</td><td> 2010</td><td>...</td><td>191</td><td>4329.1</td><td>162</td><td>2530.5</td><td> 353</td><td>3264.3</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+	<tr><td>cumulative COVID-19 cases</td><td>15-Jan-20</td><td>04-Mar-23</td><td>Southwestern Public Health</td><td>All ages</td><td>7391</td><td> 6644.6</td><td>10973</td><td> 9826.2</td><td>18373</td><td>...</td><td>569</td><td> 511.5</td><td>449</td><td> 402.1</td><td>1018</td><td> 456.7</td><td>0</td><td>9</td><td>0</td><td>0</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -53936,7 +54027,7 @@ class="
 
 <span class="c1">#---------- Filter and fix variables ----------#</span>
 <span class="c1"># Filter out some of the excess data</span>
-<span class="nf">filter</span><span class="p">(</span><span class="n">geographic_area</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="c1"># Drop Ontario data</span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">geographic_area</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="s">&quot;Ontario&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1"># Drop Ontario data</span>
 <span class="w">       </span><span class="n">age_group</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">  </span><span class="c1"># Drop combined age data</span>
 
 <span class="c1"># Pare down the dataset to just total_cases, total_deaths, and total_hospitalizations</span>
