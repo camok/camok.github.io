@@ -14859,17 +14859,17 @@ The following objects are masked from &#39;package:base&#39;:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Load some pregenerated data tables for class</span>
 <span class="c1"># Load Lecture03.RData </span>
-<span class="nf">load</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">load</span><span class="p">(</span><span class="s">&quot;data/Lecture03.RData&quot;</span><span class="p">)</span>
 <span class="nf">ls</span><span class="p">()</span>
 </pre></div>
 
@@ -14878,21 +14878,90 @@ The following objects are masked from &#39;package:base&#39;:
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'covid_demographics_total.df'</li><li>'covid_phu_long.df'</li><li>'covid_phu_window.df'</li><li>'phu_by_total_cases_desc'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Remind ourselves what covid_phu_window.df looks like</span>
-<span class="nf">head</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">covid_phu_window.df</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 4</caption>
+<thead>
+	<tr><th scope=col>public_health_unit</th><th scope=col>window_mean</th><th scope=col>start_date</th><th scope=col>end_date</th></tr>
+	<tr><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;date&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Algoma         </td><td>0</td><td>2020-01-23</td><td>2020-02-05</td></tr>
+	<tr><td>Brant          </td><td>0</td><td>2020-01-23</td><td>2020-02-05</td></tr>
+	<tr><td>Chatham Kent   </td><td>0</td><td>2020-01-23</td><td>2020-02-05</td></tr>
+	<tr><td>Durham         </td><td>0</td><td>2020-01-23</td><td>2020-02-05</td></tr>
+	<tr><td>Eastern Ontario</td><td>0</td><td>2020-01-23</td><td>2020-02-05</td></tr>
+	<tr><td>Grey Bruce     </td><td>0</td><td>2020-01-23</td><td>2020-02-05</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
