@@ -15145,17 +15145,17 @@ The following object is masked from &#39;package:dplyr&#39;:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Combine our source and target lists, then take the unique set and put that into the &quot;name&quot; vector.</span>
 
-<span class="n">sankey_nodes.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">sankey_info.df</span><span class="o">$</span><span class="n">source</span><span class="p">,</span><span class="w">      </span><span class="c1"># Location of our source nodes</span>
+<span class="n">sankey_nodes.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">sankey_info.df</span><span class="o">$</span><span class="n">source</span><span class="p">),</span><span class="w">      </span><span class="c1"># Location of our source nodes</span>
 <span class="w">                                     </span><span class="nf">as.character</span><span class="p">(</span><span class="n">sankey_info.df</span><span class="o">$</span><span class="n">target</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">  </span><span class="c1"># Location of our target nodes</span>
 <span class="w">                              </span><span class="nf">unique</span><span class="p">()</span><span class="w"> </span><span class="c1"># Generate the unique combination of the two sets</span>
 <span class="w">                             </span><span class="p">)</span>
@@ -15166,6 +15166,30 @@ The following object is masked from &#39;package:dplyr&#39;:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&#39;data.frame&#39;:	18 obs. of  1 variable:
+ $ name: chr  &#34;CoV&#34; &#34;IVS&#34; &#34;RSV&#34; &#34;A549&#34; ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
