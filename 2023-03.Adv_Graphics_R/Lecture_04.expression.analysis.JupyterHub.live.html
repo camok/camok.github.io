@@ -29205,8 +29205,8 @@ Loading required package: GenomeInfoDb
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Generate the PWF for our vector of genes</span>
-<span class="n">pwf_SARS_CoV_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nullp</span><span class="p">(</span><span class="n">DEgenes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w">      </span><span class="c1"># Our list of DE genes</span>
-<span class="w">                        </span><span class="n">genome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w">                 </span><span class="c1"># The GO annotation we want to use</span>
+<span class="n">pwf_SARS_CoV_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">nullp</span><span class="p">(</span><span class="n">DEgenes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">genes_SARS_CoV_2</span><span class="p">,</span><span class="w">      </span><span class="c1"># Our list of DE genes</span>
+<span class="w">                        </span><span class="n">genome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;hg19&quot;</span><span class="p">,</span><span class="w">                 </span><span class="c1"># The GO annotation we want to use</span>
 <span class="w">                        </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w">               </span><span class="c1"># The id we&#39;ll use to generate the data using gene symbols</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">pwf_SARS_CoV_2</span><span class="p">)</span>
