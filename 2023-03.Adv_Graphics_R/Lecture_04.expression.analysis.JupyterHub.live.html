@@ -19207,7 +19207,7 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 
 <span class="c1"># Use str_match_all to grab the pattern we want, piece by piece</span>
 <span class="c1"># example string: SARS-CoV-2 infection (A549-ACE2 cells, MOI: 2, 24hpi)</span>
-<span class="nf">str_match_all</span><span class="p">(</span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="s">&quot;()&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="nf">str_match_all</span><span class="p">(</span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">r</span><span class="s">&quot;(([\w-]+)[\s\w]+\(([\w-]+)\s*cells))&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Set into a data frame</span>
 <span class="nf">as.data.frame</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
