@@ -19753,7 +19753,7 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 
 <span class="w">    </span><span class="c1">### 2.1.2</span>
 <span class="w">    </span><span class="c1"># Change it so that only high L2FC with low p-values will be in red, the rest as black</span>
-<span class="w">    </span><span class="nf">gghighlight</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">unhighlighted_params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="nf">gghighlight</span><span class="p">(</span><span class="n">padj</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span><span class="p">,</span><span class="w"> </span><span class="nf">abs</span><span class="p">(,</span><span class="w"> </span><span class="n">unhighlighted_params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;black&quot;</span><span class="p">))</span>
 </pre></div>
 
      </div>
