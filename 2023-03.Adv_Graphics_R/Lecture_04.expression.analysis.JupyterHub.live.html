@@ -19641,12 +19641,12 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Convert our numeric columns to the proper type.</span>
@@ -19654,7 +19654,7 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 <span class="n">DE_A549_IAV.df</span><span class="w"> </span><span class="o">%&gt;%</span>
 
 <span class="c1"># Use mutate() with across() to convert columns to numeric</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">mutate</span><span class="p">(</span><span class="nf">across</span><span class="p">(</span><span class="n">.cols</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="o">:</span><span class="m">7</span><span class="p">),</span><span class="w"> </span><span class="n">as.numeric</span><span class="p">))</span>
 
 <span class="c1"># Check the result</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">DE_A549_IAV.df</span><span class="p">)</span>
@@ -19663,6 +19663,37 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [27,914 x 8] (S3: tbl_df/tbl/data.frame)
+ $ GeneName      : chr [1:27914] &#34;A1BG&#34; &#34;A1BG-AS1&#34; &#34;A1CF&#34; &#34;A2M&#34; ...
+ $ baseMean      : num [1:27914] 188.281 71.851 36.154 0.637 15.91 ...
+ $ log2FoldChange: num [1:27914] 0.625 -0.271 -1.411 3.668 -1.107 ...
+ $ lfcSE         : num [1:27914] 0.351 0.515 0.635 4.761 0.924 ...
+ $ stat          : num [1:27914] 1.783 -0.526 -2.222 0.77 -1.198 ...
+ $ pvalue        : num [1:27914] 0.0746 0.5991 0.0263 0.441 0.2308 ...
+ $ padj          : num [1:27914] 0.361 0.863 0.204 NaN 0.61 ...
+ $ status        : chr [1:27914] &#34;OK&#34; &#34;OK&#34; &#34;OK&#34; &#34;Low&#34; ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
