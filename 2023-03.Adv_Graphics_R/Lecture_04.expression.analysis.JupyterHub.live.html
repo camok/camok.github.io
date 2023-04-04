@@ -19568,16 +19568,16 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># We&#39;ll be looking at DE data for IAV infection of A549 cells</span>
-<span class="n">DE_A549_IAV.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_excel</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">sheet</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
+<span class="n">DE_A549_IAV.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;data/Blanco-Melo2020_Supp_Data_4.xlsx&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sheet</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
 
 <span class="c1"># Look at the data frame we&#39;ve made</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">DE_A549_IAV.df</span><span class="p">)</span>
@@ -19586,6 +19586,45 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 8</caption>
+<thead>
+	<tr><th scope=col>GeneName</th><th scope=col>baseMean</th><th scope=col>log2FoldChange</th><th scope=col>lfcSE</th><th scope=col>stat</th><th scope=col>pvalue</th><th scope=col>padj</th><th scope=col>status</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>A1BG    </td><td>188.2808108</td><td>0.62513831855045399</td><td>0.35066646804794899</td><td>1.7827148459058599  </td><td>7.4632733430825202E-2</td><td>0.36098583186238298</td><td>OK </td></tr>
+	<tr><td>A1BG-AS1</td><td> 71.8509755</td><td>-0.271011828295395 </td><td>0.51547397821110097</td><td>-0.52575268539434905</td><td>0.59906005266250995  </td><td>0.86261497584579405</td><td>OK </td></tr>
+	<tr><td>A1CF    </td><td> 36.1544502</td><td>-1.4109515085643001</td><td>0.63504512806976798</td><td>-2.22181298020964   </td><td>2.6295947148654599E-2</td><td>0.20375590069103   </td><td>OK </td></tr>
+	<tr><td>A2M     </td><td>  0.6370128</td><td>3.6682361685538201 </td><td>4.7612924012057203 </td><td>0.77042866924637798 </td><td>0.44104565255438499  </td><td>NaN                </td><td>Low</td></tr>
+	<tr><td>A2M-AS1 </td><td> 15.9095151</td><td>-1.1067414911928199</td><td>0.92353059087077005</td><td>-1.1983809763673401 </td><td>0.23076873499770401  </td><td>0.60966094504213497</td><td>OK </td></tr>
+	<tr><td>A2ML1   </td><td>  0.0000000</td><td>NaN                </td><td>NaN                </td><td>NaN                 </td><td>NaN                  </td><td>NaN                </td><td>Low</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
