@@ -31663,12 +31663,12 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Generate our upset data</span>
@@ -31679,13 +31679,13 @@ class="
 <span class="nf">filter</span><span class="p">(</span><span class="n">GeneName</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">SARS_CoV_2.list</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># convert our L2FC data to a logical based on a value of &gt;2</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">upregulated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">LF2C</span><span class="w"> </span><span class="o">&gt;=</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">padj</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">upregulated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">L2FC</span><span class="w"> </span><span class="o">&gt;=</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">padj</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Select just the gene names, experiments, and the logical variable</span>
 <span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="n">GeneName</span><span class="p">,</span><span class="w"> </span><span class="n">experiment</span><span class="p">,</span><span class="w"> </span><span class="n">upregulated</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Pivot our data wide so that each GeneName is now a row, each experiment is a column</span>
-<span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">experiment</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">upregulated</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Convert to a dataframe for the ComplexUpset package (or it will throw an error)</span>
 <span class="nf">as.data.frame</span><span class="p">()</span>
@@ -31696,6 +31696,40 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&#39;data.frame&#39;:	87 obs. of  11 variables:
+ $ GeneName                         : chr  &#34;CCL5&#34; &#34;ICAM1&#34; &#34;GBP4&#34; &#34;FYN&#34; ...
+ $ SARS-CoV-1                       : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ $ IAV                              : logi  TRUE FALSE FALSE FALSE FALSE FALSE ...
+ $ MERS-CoV                         : logi  FALSE FALSE FALSE FALSE FALSE FALSE ...
+ $ HPIV3                            : logi  FALSE FALSE TRUE FALSE TRUE TRUE ...
+ $ RSV                              : logi  FALSE TRUE TRUE FALSE TRUE TRUE ...
+ $ SARS-CoV-2(Calu-3)               : logi  TRUE TRUE TRUE FALSE TRUE TRUE ...
+ $ SARS-CoV-2(A549)                 : logi  TRUE TRUE TRUE TRUE TRUE TRUE ...
+ $ SARS-CoV-2(A549-ACE2)LowMOI      : logi  FALSE TRUE FALSE FALSE FALSE TRUE ...
+ $ SARS-CoV-2(A549-ACE2)HiMOI       : logi  FALSE FALSE TRUE FALSE TRUE FALSE ...
+ $ SARS-CoV-2(A549-ACE2)-Ruxolitinib: logi  FALSE FALSE FALSE FALSE FALSE TRUE ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
