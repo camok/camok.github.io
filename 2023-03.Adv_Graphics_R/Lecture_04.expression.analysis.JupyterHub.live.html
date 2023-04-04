@@ -31587,12 +31587,12 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># filter for upregulated genes in our SARS-CoV-2/A549 data set and make a list of gene names</span>
@@ -31602,7 +31602,9 @@ class="
 <span class="c1"># Filter our data</span>
 <span class="nf">filter</span><span class="p">(</span><span class="n">pathogen</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;SARS-CoV-2&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">       </span><span class="n">host</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;A549&quot;</span><span class="p">,</span><span class="w"> </span>
-<span class="w">       </span><span class="n">L2</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">       </span><span class="n">L2FC</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">2</span><span class="p">,</span>
+<span class="w">       </span><span class="n">padj</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span>
+<span class="w">      </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Select just our gene names using a shorthand conversion</span>
 <span class="nf">pull</span><span class="p">(</span><span class="n">GeneName</span><span class="p">)</span>
@@ -31616,6 +31618,36 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'CCL5'</li><li>'ICAM1'</li><li>'GBP4'</li><li>'FYN'</li><li>'IL6'</li><li>'IL1A'</li><li>'IL1B'</li><li>'TNFRSF9'</li><li>'EREG'</li><li>'IL3RA'</li><li>'MMP1'</li><li>'CSF2'</li><li>'PTX3'</li><li>'CFB'</li><li>'TREM1'</li><li>'ULBP1'</li><li>'CLEC4E'</li><li>'OLR1'</li><li>'IL8'</li><li>'ATF3'</li><li>'RUNX2'</li><li>'TIPARP'</li><li>'TRIM36'</li><li>'DNAH17'</li><li>'ABCA1'</li><li>'STC2'</li><li>'ADM2'</li><li>'MMP10'</li><li>'SLFN5'</li><li>'HMGN2P46'</li><li>'SERPINB7'</li><li>'BMPER'</li><li>'BCAT1'</li><li>'MTHFD2'</li><li>'ATP6V1C2'</li><li>'TMEM156'</li><li>'C15orf48'</li><li>'RPS6KA2'</li><li>'HSD11B1'</li><li>'SERPINB4'</li><li>'ZMIZ1-AS1'</li><li>'SLC6A15'</li><li>'ECM2'</li><li>'PCDH1'</li><li>'C12orf39'</li><li>'EXPH5'</li><li>'SERPINB3'</li><li>'GREM1'</li><li>'TM6SF1'</li><li>'SCG5'</li><li>'RASGRP2'</li><li>'BEX2'</li><li>'THEG'</li><li>'SDR16C5'</li><li>'TSC22D3'</li><li>'SCN4A'</li><li>'GAS5'</li><li>'ZFAS1'</li><li>'C6orf48'</li><li>'RAB39B'</li><li>'LAMC2'</li><li>'CDCP1'</li><li>'CCBE1'</li><li>'PARP8'</li><li>'MAP2'</li><li>'AIM1'</li><li>'RASGRF2'</li><li>'KCNQ3'</li><li>'CDH3'</li><li>'AMPD3'</li><li>'PTPRE'</li><li>'BCL2A1'</li><li>'ALDH1L2'</li><li>'EGOT'</li><li>'CHAC1'</li><li>'INHBE'</li><li>'ROCK1P1'</li><li>'FLJ35024'</li><li>'FUT1'</li><li>'N4BP3'</li><li>'ANK2'</li><li>'RBMS3'</li><li>'PGM5P2'</li><li>'ARRDC4'</li><li>'ZMAT1'</li><li>'NDUFA4L2'</li><li>'DDIT3'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -31644,13 +31676,13 @@ class="
 <span class="n">blanco_data_long.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Filter our data list using our genes of interest</span>
-<span class="nf">filter</span><span class="p">(</span><span class="n">GeneName</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="nf">filter</span><span class="p">(</span><span class="n">GeneName</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">SARS_CoV_2.list</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># convert our L2FC data to a logical based on a value of &gt;2</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">upregulated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="nf">mutate</span><span class="p">(</span><span class="n">upregulated</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">LF2C</span><span class="w"> </span><span class="o">&gt;=</span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">padj</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Select just the gene names, experiments, and the logical variable</span>
-<span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="n">GeneName</span><span class="p">,</span><span class="w"> </span><span class="n">experiment</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="n">GeneName</span><span class="p">,</span><span class="w"> </span><span class="n">experiment</span><span class="p">,</span><span class="w"> </span><span class="n">upregulated</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Pivot our data wide so that each GeneName is now a row, each experiment is a column</span>
 <span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">values_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
