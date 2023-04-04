@@ -19189,12 +19189,12 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># pattern match for pathogen and host information and save it into a datafram you can access later.</span>
@@ -19225,6 +19225,72 @@ tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message in stri_match_all_regex(string, pattern, omit_no_match = TRUE, opts_regex = opts(pattern)):
+&#34;argument is not an atomic vector; coercing&#34;
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A data.frame: 20 × 3</caption>
+<thead>
+	<tr><th scope=col>notes</th><th scope=col>pathogen</th><th scope=col>host</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>SARS-CoV-2 infection (A549 cells                      </td><td>SARS-CoV-2</td><td>A549     </td></tr>
+	<tr><td>SARS-CoV-1 infection (MRC5 cells                      </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
+	<tr><td>MERS-CoV infection (MRC5 cells                        </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
+	<tr><td>RSV (A549 cells                                       </td><td>RSV       </td><td>A549     </td></tr>
+	<tr><td>HPIV3 (A549 cells                                     </td><td>HPIV3     </td><td>A549     </td></tr>
+	<tr><td>IAV (A549 cells                                       </td><td>IAV       </td><td>A549     </td></tr>
+	<tr><td>SARS-CoV-2 infection (Calu-3cells                     </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
+	<tr><td>SARS-CoV-2 infection (A549-ACE2 cells                 </td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2 infection (A549-ACE2 cells                 </td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2 infection with Ruxolitinib (A549-ACE2 cells</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2 infection (A549 cells                      </td><td>SARS-CoV-2</td><td>A549     </td></tr>
+	<tr><td>SARS-CoV-1 infection (MRC5 cells                      </td><td>SARS-CoV-1</td><td>MRC5     </td></tr>
+	<tr><td>MERS-CoV infection (MRC5 cells                        </td><td>MERS-CoV  </td><td>MRC5     </td></tr>
+	<tr><td>RSV (A549 cells                                       </td><td>RSV       </td><td>A549     </td></tr>
+	<tr><td>HPIV3 (A549 cells                                     </td><td>HPIV3     </td><td>A549     </td></tr>
+	<tr><td>IAV (A549 cells                                       </td><td>IAV       </td><td>A549     </td></tr>
+	<tr><td>SARS-CoV-2 infection (Calu-3cells                     </td><td>SARS-CoV-2</td><td>Calu-3   </td></tr>
+	<tr><td>SARS-CoV-2 infection (A549-ACE2 cells                 </td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2 infection (A549-ACE2 cells                 </td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+	<tr><td>SARS-CoV-2 infection with Ruxolitinib (A549-ACE2 cells</td><td>SARS-CoV-2</td><td>A549-ACE2</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
