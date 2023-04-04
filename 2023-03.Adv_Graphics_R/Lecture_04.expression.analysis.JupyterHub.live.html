@@ -18998,19 +18998,19 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Assign our legend </span>
-<span class="n">blanco_legend.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;./data/Blanco-Melo2020Cell.Supp1.xlsx&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sheet</span><span class="o">=</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">blanco_legend.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;./data/Blanco-Melo2020Cell.Supp1.xlsx&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sheet</span><span class="o">=</span><span class="m">1</span><span class="p">)</span>
 
 <span class="c1"># Assign our data</span>
-<span class="n">blanco_data.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;./data/Blanco-Melo2020Cell.Supp1.xlsx&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sheet</span><span class="o">=</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">blanco_data.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_excel</span><span class="p">(</span><span class="s">&quot;./data/Blanco-Melo2020Cell.Supp1.xlsx&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sheet</span><span class="o">=</span><span class="m">2</span><span class="p">)</span>
 
 <span class="nf">str</span><span class="p">(</span><span class="n">blanco_legend.df</span><span class="p">)</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">blanco_data.df</span><span class="p">)</span>
@@ -19019,6 +19019,54 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [20 x 3] (S3: tbl_df/tbl/data.frame)
+ $ Field      : chr [1:20] &#34;SARS-CoV-2(A549)_L2FC&#34; &#34;SARS-CoV-1_L2FC&#34; &#34;MERS-CoV_L2FC&#34; &#34;RSV_L2FC&#34; ...
+ $ Explanation: chr [1:20] &#34;Fold expresion change Infected vs Control (logarithmic scale to base 2)&#34; &#34;Fold expresion change Infected vs Control (logarithmic scale to base 2)&#34; &#34;Fold expresion change Infected vs Control (logarithmic scale to base 2)&#34; &#34;Fold expresion change Infected vs Control (logarithmic scale to base 2)&#34; ...
+ $ Notes      : chr [1:20] &#34;SARS-CoV-2 infection (A549 cells, MOI: 2, 24hpi)&#34; &#34;SARS-CoV-1 infection (MRC5 cells, MOI: 3, 24hpi Data from: GSE56192)&#34; &#34;MERS-CoV infection (MRC5 cells, MOI: 3, 24hpi Data from: GSE56192)&#34; &#34;RSV (A549 cells, MOI: 2, 24hpi)&#34; ...
+tibble [23,710 x 21] (S3: tbl_df/tbl/data.frame)
+ $ GeneName                              : chr [1:23710] &#34;IFNL1&#34; &#34;IFNL2&#34; &#34;IFNL3&#34; &#34;IFNB1&#34; ...
+ $ SARS-CoV-1_L2FC                       : num [1:23710] 0 0 0 0 0 ...
+ $ IAV_L2FC                              : num [1:23710] 1.37 1.379 1.815 0.468 0.24 ...
+ $ MERS-CoV_L2FC                         : num [1:23710] 0 0.125 0 0 0.125 ...
+ $ HPIV3_L2FC                            : num [1:23710] 7.84 6.84 6.23 6.44 2.62 ...
+ $ RSV_L2FC                              : num [1:23710] 7.14 4.84 4.83 4.86 0 ...
+ $ SARS-CoV-2(Calu-3)_L2FC               : num [1:23710] 7.24 7.88 7.47 8.7 3.33 ...
+ $ SARS-CoV-2(A549)_L2FC                 : num [1:23710] 0 0 0 -0.127 0 ...
+ $ SARS-CoV-2(A549-ACE2)LowMOI_L2FC      : num [1:23710] 0 0 0 0.388 0 ...
+ $ SARS-CoV-2(A549-ACE2)HiMOI_L2FC       : num [1:23710] 5.08 5.25 5.05 5.76 1.54 ...
+ $ SARS-CoV-2(A549-ACE2)-Ruxolitinib_L2FC: num [1:23710] 3.548 1.947 2.511 3.92 0.297 ...
+ $ padj_SARS-CoV-1                       : num [1:23710] 1 1 1 1 1 ...
+ $ padj_IAV                              : num [1:23710] 1.00 1.00 1.00 1.00 1.00 1.11e-06 1.00 1.00 1.00 1.00 ...
+ $ padj_MERS-CoV                         : num [1:23710] 1 1 1 1 1 ...
+ $ padj_HPIV3                            : num [1:23710] 2.62e-68 1.48e-48 3.66e-35 2.13e-42 1.00 ...
+ $ padj_RSV                              : num [1:23710] 4.51e-44 9.74e-17 3.19e-16 4.92e-17 1.00 ...
+ $ padj_SARS-CoV-2(Calu-3)               : num [1:23710] 2.53e-139 5.69e-107 5.51e-102 0.00 4.20e-11 ...
+ $ padj_SARS-CoV-2(A549)                 : num [1:23710] 1 1 1 1 1 ...
+ $ padj_SARS-CoV-2(A549-ACE2)LowMOI      : num [1:23710] 0 0 0 0 0 ...
+ $ padj_SARS-CoV-2(A549-ACE2)HiMOI       : num [1:23710] 1.00 2.69e-20 2.37e-18 1.15e-28 1.00 ...
+ $ padj_SARS-CoV-2(A549-ACE2)-Ruxolitinib: num [1:23710] 1.00 1.00 1.00 1.54e-12 1.00 ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -19035,12 +19083,12 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Look at the entire legend</span>
@@ -19050,6 +19098,59 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 20 × 3</caption>
+<thead>
+	<tr><th scope=col>Field</th><th scope=col>Explanation</th><th scope=col>Notes</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>SARS-CoV-2(A549)_L2FC                 </td><td>Fold expresion change Infected vs Control (logarithmic scale to base 2)</td><td>SARS-CoV-2 infection (A549 cells, MOI: 2, 24hpi)                      </td></tr>
+	<tr><td>SARS-CoV-1_L2FC                       </td><td>Fold expresion change Infected vs Control (logarithmic scale to base 2)</td><td>SARS-CoV-1 infection (MRC5 cells, MOI: 3, 24hpi Data from: GSE56192)  </td></tr>
+	<tr><td>MERS-CoV_L2FC                         </td><td>Fold expresion change Infected vs Control (logarithmic scale to base 2)</td><td>MERS-CoV infection (MRC5 cells, MOI: 3, 24hpi Data from: GSE56192)    </td></tr>
+	<tr><td>RSV_L2FC                              </td><td>Fold expresion change Infected vs Control (logarithmic scale to base 2)</td><td>RSV (A549 cells, MOI: 2, 24hpi)                                       </td></tr>
+	<tr><td>HPIV3_L2FC                            </td><td>Fold expresion change Infected vs Control (logarithmic scale to base 2)</td><td>HPIV3 (A549 cells, MOI: 2, 24hpi)                                     </td></tr>
+	<tr><td>IAV_L2FC                              </td><td>Fold expresion change Infected vs Control (logarithmic scale to base 2)</td><td>IAV (A549 cells, MOI: 5, 9hpi)                                        </td></tr>
+	<tr><td>SARS-CoV-2(Calu-3)_L2FC               </td><td>Fold expresion change Infected vs Control (logarithmic scale to base 2)</td><td>SARS-CoV-2 infection (Calu-3cells, MOI: 2, 24hpi)                     </td></tr>
+	<tr><td>SARS-CoV-2(A549-ACE2)LowMOI_L2FC      </td><td>Fold expresion change Infected vs Control (logarithmic scale to base 2)</td><td>SARS-CoV-2 infection (A549-ACE2 cells, MOI: 0.2, 24hpi)               </td></tr>
+	<tr><td>SARS-CoV-2(A549-ACE2)HiMOI_L2FC       </td><td>Fold expresion change Infected vs Control (logarithmic scale to base 2)</td><td>SARS-CoV-2 infection (A549-ACE2 cells, MOI: 2, 24hpi)                 </td></tr>
+	<tr><td>SARS-CoV-2(A549-ACE2)-Ruxolitinib_L2FC</td><td>Fold expresion change Infected vs Control (logarithmic scale to base 2)</td><td>SARS-CoV-2 infection with Ruxolitinib (A549-ACE2 cells, MOI: 2, 24hpi)</td></tr>
+	<tr><td>padj_SARS-CoV-2(A549)                 </td><td>Benjamini-Hochberg adjusted p-values (Multiple comparisons adjustement)</td><td>SARS-CoV-2 infection (A549 cells, MOI: 2, 24hpi)                      </td></tr>
+	<tr><td>padj_SARS-CoV-1                       </td><td>Benjamini-Hochberg adjusted p-values (Multiple comparisons adjustement)</td><td>SARS-CoV-1 infection (MRC5 cells, MOI: 3, 24hpi Data from: GSE56192)  </td></tr>
+	<tr><td>padj_MERS-CoV                         </td><td>Benjamini-Hochberg adjusted p-values (Multiple comparisons adjustement)</td><td>MERS-CoV infection (MRC5 cells, MOI: 3, 24hpi Data from: GSE56192)    </td></tr>
+	<tr><td>padj_RSV                              </td><td>Benjamini-Hochberg adjusted p-values (Multiple comparisons adjustement)</td><td>RSV (A549 cells, MOI: 2, 24hpi)                                       </td></tr>
+	<tr><td>padj_HPIV3                            </td><td>Benjamini-Hochberg adjusted p-values (Multiple comparisons adjustement)</td><td>HPIV3 (A549 cells, MOI: 2, 24hpi)                                     </td></tr>
+	<tr><td>padj_IAV                              </td><td>Benjamini-Hochberg adjusted p-values (Multiple comparisons adjustement)</td><td>IAV (A549 cells, MOI: 5, 9hpi)                                        </td></tr>
+	<tr><td>padj_SARS-CoV-2(Calu-3)               </td><td>Benjamini-Hochberg adjusted p-values (Multiple comparisons adjustement)</td><td>SARS-CoV-2 infection (Calu-3cells, MOI: 2, 24hpi)                     </td></tr>
+	<tr><td>padj_SARS-CoV-2(A549-ACE2)LowMOI      </td><td>Benjamini-Hochberg adjusted p-values (Multiple comparisons adjustement)</td><td>SARS-CoV-2 infection (A549-ACE2 cells, MOI: 0.2, 24hpi)               </td></tr>
+	<tr><td>padj_SARS-CoV-2(A549-ACE2)HiMOI       </td><td>Benjamini-Hochberg adjusted p-values (Multiple comparisons adjustement)</td><td>SARS-CoV-2 infection (A549-ACE2 cells, MOI: 2, 24hpi)                 </td></tr>
+	<tr><td>padj_SARS-CoV-2(A549-ACE2)-Ruxolitinib</td><td>Benjamini-Hochberg adjusted p-values (Multiple comparisons adjustement)</td><td>SARS-CoV-2 infection with Ruxolitinib (A549-ACE2 cells, MOI: 2, 24hpi)</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
