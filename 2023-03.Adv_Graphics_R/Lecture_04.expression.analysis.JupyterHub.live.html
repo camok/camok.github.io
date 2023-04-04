@@ -15611,22 +15611,22 @@ The following object is masked from &#39;package:dplyr&#39;:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="n">readcounts_24hv72h</span><span class="w"> </span><span class="o">&lt;-</span>
 <span class="w">    </span><span class="n">wyler_readcounts.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Select for just the columns withs SARS-CoV-2 infection and DMSO at 24 and 72h</span>
-<span class="w">    </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="nf">matches</span><span class="p">(</span><span class="n">r</span><span class="s">&quot;((24h|72j)_S2_DMSO)&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="nf">matches</span><span class="p">(</span><span class="n">r</span><span class="s">&quot;((24h|72h)_S2_DMSO)&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Restrict our data analysis to just readcounts above 10 and below 5000</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="nf">if_all</span><span class="p">(</span><span class="n">.cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">everything</span><span class="p">(),</span><span class="w"> </span><span class="n">.fns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">.x</span><span class="w"> </span><span class="o">&gt;</span><span class="m">10</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">.x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">500</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="nf">if_all</span><span class="p">(</span><span class="n">.cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">everything</span><span class="p">(),</span><span class="w"> </span><span class="n">.fns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">.x</span><span class="w"> </span><span class="o">&gt;</span><span class="m">10</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">.x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">5000</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Rename the columns be removing the first portion: AECII_xx</span>
 <span class="w">    </span><span class="nf">rename_with</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nf">str_replace</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.x</span><span class="p">,</span><span class="w"> </span>
@@ -15640,6 +15640,35 @@ The following object is masked from &#39;package:dplyr&#39;:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tibble [12,430 x 6] (S3: tbl_df/tbl/data.frame)
+ $ 24h_S2_DMSO-1: num [1:12430] 24 41 2534 712 204 ...
+ $ 24h_S2_DMSO-2: num [1:12430] 18 46 2484 654 205 ...
+ $ 24h_S2_DMSO-3: num [1:12430] 22 42 2750 739 225 ...
+ $ 72h_S2_DMSO-1: num [1:12430] 24 58 958 1065 147 ...
+ $ 72h_S2_DMSO-2: num [1:12430] 33 63 1163 1081 156 ...
+ $ 72h_S2_DMSO-3: num [1:12430] 23 47 835 1022 124 ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
