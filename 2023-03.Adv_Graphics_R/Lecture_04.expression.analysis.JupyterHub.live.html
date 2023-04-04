@@ -15155,8 +15155,8 @@ The following object is masked from &#39;package:dplyr&#39;:
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Combine our source and target lists, then take the unique set and put that into the &quot;name&quot; vector.</span>
 
-<span class="n">sankey_nodes.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span><span class="w">      </span><span class="c1"># Location of our source nodes</span>
-<span class="w">                                     </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">  </span><span class="c1"># Location of our target nodes</span>
+<span class="n">sankey_nodes.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="nf">as.character</span><span class="p">(</span><span class="n">sankey_info.df</span><span class="o">$</span><span class="n">source</span><span class="p">,</span><span class="w">      </span><span class="c1"># Location of our source nodes</span>
+<span class="w">                                     </span><span class="nf">as.character</span><span class="p">(</span><span class="n">sankey_info.df</span><span class="o">$</span><span class="n">target</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">  </span><span class="c1"># Location of our target nodes</span>
 <span class="w">                              </span><span class="nf">unique</span><span class="p">()</span><span class="w"> </span><span class="c1"># Generate the unique combination of the two sets</span>
 <span class="w">                             </span><span class="p">)</span>
 <span class="c1"># Look at the structure, it&#39;s just a list of the nodes</span>
