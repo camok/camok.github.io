@@ -15273,18 +15273,18 @@ The following object is masked from &#39;package:dplyr&#39;:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Add our sankey_nodes.df as index information that maps between it and `sankey_info.df`</span>
 <span class="n">sankey_info.df</span><span class="w"> </span><span class="o">&lt;-</span>
 <span class="n">sankey_info.df</span><span class="w">  </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">mutate</span><span class="p">(</span><span class="n">IDsource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">match</span><span class="p">(</span><span class="n">.</span><span class="o">$</span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">sankey_nodes.df</span><span class="o">$</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="m">-1</span><span class="p">,</span>
-<span class="w">                           </span><span class="n">IDtarget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="c1"># nodes must be 0-indexed</span>
+<span class="w">                           </span><span class="n">IDtarget</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">match</span><span class="p">(</span><span class="n">.</span><span class="o">$</span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">sankey_nodes.df</span><span class="o">$</span><span class="n">name</span><span class="p">))</span><span class="w"> </span><span class="c1"># nodes must be 0-indexed</span>
 
 <span class="c1"># take a peek at what we&#39;ve wrought</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">sankey_info.df</span><span class="p">)</span>
@@ -15293,6 +15293,45 @@ The following object is masked from &#39;package:dplyr&#39;:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 5</caption>
+<thead>
+	<tr><th scope=col>source</th><th scope=col>target</th><th scope=col>value</th><th scope=col>IDsource</th><th scope=col>IDtarget</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>CoV </td><td>A549  </td><td>0.25</td><td>0</td><td>4</td></tr>
+	<tr><td>CoV </td><td>NHBE  </td><td>0.25</td><td>0</td><td>5</td></tr>
+	<tr><td>IVS </td><td>A549  </td><td>0.25</td><td>1</td><td>4</td></tr>
+	<tr><td>RSV </td><td>A549  </td><td>0.25</td><td>2</td><td>4</td></tr>
+	<tr><td>A549</td><td>RNAseq</td><td>0.70</td><td>3</td><td>6</td></tr>
+	<tr><td>NHBE</td><td>RNAseq</td><td>0.20</td><td>4</td><td>6</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
