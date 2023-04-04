@@ -15028,17 +15028,17 @@ The following object is masked from &#39;package:dplyr&#39;:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Read in our Sankey diagram in ./data/Lecture04_sankey_data.csv </span>
 
-<span class="n">sankey_info.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">sankey_info.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/Lecture04_sankey_data.csv&quot;</span><span class="p">)</span>
 
 <span class="c1"># Check the structure</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">sankey_info.df</span><span class="p">)</span>
@@ -15050,6 +15050,86 @@ The following object is masked from &#39;package:dplyr&#39;:
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">24</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">3</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">--------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> &#34;,&#34;
+<span class="ansi-red-fg">chr</span> (2): source, target
+<span class="ansi-green-fg">dbl</span> (1): value
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>spc_tbl_ [24 x 3] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ source: chr [1:24] &#34;CoV&#34; &#34;CoV&#34; &#34;IVS&#34; &#34;RSV&#34; ...
+ $ target: chr [1:24] &#34;A549&#34; &#34;NHBE&#34; &#34;A549&#34; &#34;A549&#34; ...
+ $ value : num [1:24] 0.25 0.25 0.25 0.25 0.7 0.2 0.4 0.4 0.15 0.15 ...
+ - attr(*, &#34;spec&#34;)=
+  .. cols(
+  ..   source = <span class="ansi-red-fg">col_character()</span>,
+  ..   target = <span class="ansi-red-fg">col_character()</span>,
+  ..   value = <span class="ansi-green-fg">col_double()</span>
+  .. )
+ - attr(*, &#34;problems&#34;)=&lt;externalptr&gt; 
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+	<tr><th scope=col>source</th><th scope=col>target</th><th scope=col>value</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>CoV </td><td>A549  </td><td>0.25</td></tr>
+	<tr><td>CoV </td><td>NHBE  </td><td>0.25</td></tr>
+	<tr><td>IVS </td><td>A549  </td><td>0.25</td></tr>
+	<tr><td>RSV </td><td>A549  </td><td>0.25</td></tr>
+	<tr><td>A549</td><td>RNAseq</td><td>0.70</td></tr>
+	<tr><td>NHBE</td><td>RNAseq</td><td>0.20</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
