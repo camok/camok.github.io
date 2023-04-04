@@ -29761,12 +29761,12 @@ Calculating the p-values...
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Generate an enriched Go term dataset</span>
@@ -29775,7 +29775,7 @@ Calculating the p-values...
 <span class="c1"># GO.wall_SARS_CoV_2[p.adjust(GO.wall_SARS_CoV_2$over_represented_pvalue, method=&quot;BH&quot;) &lt; 0.05, ]</span>
 
 <span class="n">GO.wall_SARS_CoV_2</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="nf">filter</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">filter</span><span class="p">(</span><span class="nf">p.adjust</span><span class="p">(</span><span class="n">over_represented_pvalue</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;BH&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">0.05</span><span class="p">)</span>
 
 <span class="c1"># How many terms come back from our filtering?</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">enriched.GO_SARS_CoV_2</span><span class="p">)</span>
@@ -29786,12 +29786,42 @@ Calculating the p-values...
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&#39;data.frame&#39;:	84 obs. of  7 variables:
+ $ category                : chr  &#34;GO:0006261&#34; &#34;GO:0003688&#34; &#34;GO:0000727&#34; &#34;GO:0008283&#34; ...
+ $ over_represented_pvalue : num  2.86e-10 2.30e-09 3.83e-09 7.78e-09 2.07e-08 ...
+ $ under_represented_pvalue: num  1 1 1 1 1 ...
+ $ numDEInCat              : int  20 9 7 83 73 10 24 136 6 99 ...
+ $ numInCat                : int  142 23 12 1967 1694 39 259 4174 12 2649 ...
+ $ term                    : chr  &#34;DNA-dependent DNA replication&#34; &#34;DNA replication origin binding&#34; &#34;double-strand break repair via break-induced replication&#34; &#34;cell population proliferation&#34; ...
+ $ ontology                : chr  &#34;BP&#34; &#34;MF&#34; &#34;BP&#34; &#34;BP&#34; ...
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Load our goseq data to look at and visualize</span>
@@ -29804,21 +29834,51 @@ Calculating the p-values...
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># What kind of terms do we see in our enrichment?</span>
-<span class="n">enriched.GO_SARS_CoV_2</span><span class="o">$</span><span class="kc">...</span>
+<span class="n">enriched.GO_SARS_CoV_2</span><span class="o">$</span><span class="n">term</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'DNA-dependent DNA replication'</li><li>'DNA replication origin binding'</li><li>'double-strand break repair via break-induced replication'</li><li>'cell population proliferation'</li><li>'regulation of cell population proliferation'</li><li>'DNA replication initiation'</li><li>'DNA replication'</li><li>'extracellular region'</li><li>'MCM complex'</li><li>'cellular response to organic substance'</li><li>'response to stress'</li><li>'pre-replicative complex assembly involved in nuclear cell cycle DNA replication'</li><li>'pre-replicative complex assembly'</li><li>'pre-replicative complex assembly involved in cell cycle DNA replication'</li><li>'cellular response to chemical stimulus'</li><li>'cell cycle'</li><li>'cell cycle G1/S phase transition'</li><li>'cell cycle DNA replication'</li><li>'G1/S transition of mitotic cell cycle'</li><li>'3\'-5\' DNA helicase activity'</li><li>'positive regulation of cell population proliferation'</li><li>'cytokine-mediated signaling pathway'</li><li>'extracellular space'</li><li>'cellular response to biotic stimulus'</li><li>'response to organic substance'</li><li>'cell cycle process'</li><li>'blood vessel development'</li><li>'vasculature development'</li><li>'regulation of extrinsic apoptotic signaling pathway in absence of ligand'</li><li>'nuclear DNA replication'</li><li>'cholesterol biosynthetic process via desmosterol'</li><li>'cholesterol biosynthetic process via lathosterol'</li><li>'cellular response to lipopolysaccharide'</li><li>'negative regulation of signal transduction in absence of ligand'</li><li>'negative regulation of extrinsic apoptotic signaling pathway in absence of ligand'</li><li>'mitotic cell cycle process'</li><li>'response to cytokine'</li><li>'cellular response to cytokine stimulus'</li><li>'enzyme linked receptor protein signaling pathway'</li><li>'DNA unwinding involved in DNA replication'</li><li>'growth factor receptor binding'</li><li>'cellular response to molecule of bacterial origin'</li><li>'steroid metabolic process'</li><li>'mitotic DNA replication'</li><li>'epithelial cell differentiation'</li><li>'extracellular matrix organization'</li><li>'extracellular structure organization'</li><li>'sterol metabolic process'</li><li>'alcohol metabolic process'</li><li>'cholesterol biosynthetic process'</li><li>'secondary alcohol biosynthetic process'</li><li>'positive regulation of cellular component movement'</li><li>'response to chemical'</li><li>'regulation of nucleotide-binding oligomerization domain containing signaling pathway'</li><li>'cholesterol metabolic process'</li><li>'signal transduction in absence of ligand'</li><li>'extrinsic apoptotic signaling pathway in absence of ligand'</li><li>'tissue development'</li><li>'positive regulation of vasculature development'</li><li>'positive regulation of cell motility'</li><li>'sterol biosynthetic process'</li><li>'single-stranded DNA helicase activity'</li><li>'cellular modified amino acid catabolic process'</li><li>'positive regulation of cell migration'</li><li>'cell surface receptor signaling pathway'</li><li>'secondary alcohol metabolic process'</li><li>'positive regulation of locomotion'</li><li>'DNA helicase activity'</li><li>'organic hydroxy compound biosynthetic process'</li><li>'protein kinase B signaling'</li><li>'catalytic activity, acting on DNA'</li><li>'alcohol biosynthetic process'</li><li>'DNA metabolic process'</li><li>'organic hydroxy compound metabolic process'</li><li>'mitotic cell cycle'</li><li>'receptor regulator activity'</li><li>'regulation of transcription involved in G1/S transition of mitotic cell cycle'</li><li>'regulation of cell cycle'</li><li>'steroid biosynthetic process'</li><li>'regulation of nucleotide-binding oligomerization domain containing 2 signaling pathway'</li><li>'fibroblast growth factor-activated receptor activity'</li><li>'nucleotide-binding oligomerization domain containing signaling pathway'</li><li>'inflammatory response'</li><li>'response to lipopolysaccharide'</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
