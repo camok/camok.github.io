@@ -17776,7 +17776,7 @@ class="
 <span class="n">hm_list</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">NULL</span>
 
 <span class="c1"># Create some quick vectors to help ourselves out</span>
-<span class="n">categories</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">...</span>
+<span class="n">categories</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;cases&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hospitalizations&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;deaths&quot;</span><span class="p">)</span>
 
 <span class="c1"># Store the rownames we want to use on our matrices</span>
 <span class="n">mx_rownames</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">covid_demographics_norm_wide.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">pull</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">unique</span><span class="p">()</span>
