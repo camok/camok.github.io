@@ -53428,7 +53428,7 @@ class="
 
 <span class="c1"># Graph our scaled PCA data.</span>
 
-<span class="nf">fviz_pca_ind</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span>
+<span class="nf">fviz_pca_ind</span><span class="p">(</span><span class="n">phu_scaled.pca</span><span class="p">,</span><span class="w"> </span>
 <span class="w">             </span><span class="n">pointsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">covid_demographics_norm.mx</span><span class="p">[,</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="c1"># Set point size and colour by PHU population</span>
 <span class="w">             </span><span class="n">col.ind</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">log10</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">[,</span><span class="m">1</span><span class="p">]),</span>
 <span class="w">             </span><span class="n">repel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="c1"># avoid overlapping text points</span>
