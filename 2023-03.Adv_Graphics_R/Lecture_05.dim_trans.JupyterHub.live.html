@@ -34418,7 +34418,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Compute k-means with k = 3</span>
@@ -34428,7 +34428,7 @@ class="
 
 <span class="c1"># Generate our k-means analysis</span>
 <span class="n">phu_cases.km</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
-<span class="nf">kmeans</span><span class="p">(</span><span class="nf">scale</span><span class="p">(</span><span class="n">covid_</span><span class="p">),</span><span class="w"> </span><span class="c1"># We&#39;ll scale our data for this (more on that later too!)</span>
+<span class="nf">kmeans</span><span class="p">(</span><span class="nf">scale</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">[,</span><span class="m">-1</span><span class="p">]),</span><span class="w"> </span><span class="c1"># We&#39;ll scale our data for this (more on that later too!)</span>
 <span class="w">       </span><span class="n">centers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span>
 <span class="w">       </span><span class="n">nstart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span><span class="p">,</span>
 <span class="w">       </span><span class="n">iter.max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span>
@@ -34439,12 +34439,12 @@ class="
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># What is the structure of our kmeans object?</span>
@@ -34456,21 +34456,88 @@ class="
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>List of 9
+ $ cluster     : Named int [1:34] 2 1 1 2 1 2 1 3 2 1 ...
+  ..- attr(*, &#34;names&#34;)= chr [1:34] &#34;Algoma&#34; &#34;Brant County&#34; &#34;Durham Region&#34; &#34;Grey Bruce&#34; ...
+ $ centers     : num [1:3, 1:7] 0.356 -0.955 0.82 0.349 -1.098 ...
+  ..- attr(*, &#34;dimnames&#34;)=List of 2
+  .. ..$ : chr [1:3] &#34;1&#34; &#34;2&#34; &#34;3&#34;
+  .. ..$ : chr [1:7] &#34;0 to 4&#34; &#34;5 to 11&#34; &#34;12 to 19&#34; &#34;20 to 39&#34; ...
+ $ totss       : num 231
+ $ withinss    : num [1:3] 46.49 13.18 9.07
+ $ tot.withinss: num 68.7
+ $ betweenss   : num 162
+ $ size        : int [1:3] 18 11 5
+ $ iter        : int 2
+ $ ifault      : int 0
+ - attr(*, &#34;class&#34;)= chr &#34;kmeans&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># K-means clusters showing the group of each individuals</span>
-<span class="n">phu_cases.km</span><span class="o">$</span><span class="kc">...</span>
+<span class="n">phu_cases.km</span><span class="o">$</span><span class="n">cluster</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class=dl-inline><dt>Algoma</dt><dd>2</dd><dt>Brant County</dt><dd>1</dd><dt>Durham Region</dt><dd>1</dd><dt>Grey Bruce</dt><dd>2</dd><dt>Haldimand-Norfolk</dt><dd>1</dd><dt>Haliburton, Kawartha, Pine Ridge District</dt><dd>2</dd><dt>Halton Region</dt><dd>1</dd><dt>City of Hamilton</dt><dd>3</dd><dt>Hastings Prince Edward</dt><dd>2</dd><dt>Chatham-Kent</dt><dd>1</dd><dt>Kingston, Frontenac and Lennox &amp; Addington</dt><dd>1</dd><dt>Lambton</dt><dd>1</dd><dt>Leeds, Grenville &amp; Lanark District</dt><dd>2</dd><dt>Middlesex-London</dt><dd>1</dd><dt>Niagara Region</dt><dd>1</dd><dt>North Bay Parry Sound District</dt><dd>2</dd><dt>Northwestern</dt><dd>1</dd><dt>Ottawa</dt><dd>1</dd><dt>Peel</dt><dd>3</dd><dt>Huron Perth</dt><dd>2</dd><dt>Peterborough</dt><dd>2</dd><dt>Porcupine</dt><dd>1</dd><dt>Renfrew County and District</dt><dd>2</dd><dt>Eastern Ontario</dt><dd>1</dd><dt>Simcoe Muskoka District</dt><dd>1</dd><dt>Sudbury &amp; Districts</dt><dd>1</dd><dt>Thunder Bay District</dt><dd>1</dd><dt>Timiskaming</dt><dd>2</dd><dt>Region of Waterloo</dt><dd>1</dd><dt>Wellington-Dufferin-Guelph</dt><dd>1</dd><dt>Windsor-Essex County</dt><dd>3</dd><dt>York Region</dt><dd>3</dd><dt>Toronto</dt><dd>3</dd><dt>Southwestern</dt><dd>2</dd></dl>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
