@@ -59299,12 +59299,12 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># What are the contributions of each age group to the various unscaled dimensions</span>
@@ -59316,12 +59316,51 @@ class="
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 7 × 7 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>Dim.1</th><th scope=col>Dim.2</th><th scope=col>Dim.3</th><th scope=col>Dim.4</th><th scope=col>Dim.5</th><th scope=col>Dim.6</th><th scope=col>Dim.7</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>0 to 4</th><td> 2.988366</td><td>18.4090140</td><td>24.4647380</td><td> 7.30843762</td><td> 7.7732975</td><td>35.27429361</td><td> 3.78185308</td></tr>
+	<tr><th scope=row>5 to 11</th><td> 5.820004</td><td> 9.8367326</td><td>29.0219186</td><td> 3.15138188</td><td> 5.5695018</td><td>44.23345570</td><td> 2.36700587</td></tr>
+	<tr><th scope=row>12 to 19</th><td> 9.644284</td><td> 9.4830079</td><td> 0.2183356</td><td>78.72062273</td><td> 0.1265606</td><td> 0.52509861</td><td> 1.28209108</td></tr>
+	<tr><th scope=row>20 to 39</th><td>31.169813</td><td> 8.3545754</td><td>26.3862589</td><td> 7.05958206</td><td>24.0205061</td><td> 2.96785850</td><td> 0.04140577</td></tr>
+	<tr><th scope=row>40 to 59</th><td>18.763509</td><td> 0.5752396</td><td> 4.0847938</td><td> 0.08899356</td><td>27.6082501</td><td>12.92675802</td><td>35.95245607</td></tr>
+	<tr><th scope=row>60 to 79</th><td>11.718808</td><td> 2.7443694</td><td> 0.7180184</td><td> 3.05207351</td><td>26.2061332</td><td> 0.02187535</td><td>55.53872184</td></tr>
+	<tr><th scope=row>80+</th><td>19.895216</td><td>50.5970612</td><td>15.1059367</td><td> 0.61890865</td><td> 8.6957506</td><td> 4.05066020</td><td> 1.03646629</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Look at our unscaled eigenvalues directly</span>
@@ -59331,6 +59370,45 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 7 × 3 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>eigenvalue</th><th scope=col>percentage of variance</th><th scope=col>cumulative percentage of variance</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>comp 1</th><td>18984392.38</td><td>83.2951059</td><td> 83.29511</td></tr>
+	<tr><th scope=row>comp 2</th><td> 2249160.27</td><td> 9.8683191</td><td> 93.16343</td></tr>
+	<tr><th scope=row>comp 3</th><td>  855190.77</td><td> 3.7521983</td><td> 96.91562</td></tr>
+	<tr><th scope=row>comp 4</th><td>  318216.08</td><td> 1.3961912</td><td> 98.31181</td></tr>
+	<tr><th scope=row>comp 5</th><td>  226908.94</td><td> 0.9955759</td><td> 99.30739</td></tr>
+	<tr><th scope=row>comp 6</th><td>  121882.36</td><td> 0.5347658</td><td> 99.84216</td></tr>
+	<tr><th scope=row>comp 7</th><td>   35975.29</td><td> 0.1578437</td><td>100.00000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
