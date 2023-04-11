@@ -50491,16 +50491,16 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># What is the information associated with our original variables</span>
-<span class="n">phu.var</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_pca_var</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">phu.var</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">get_pca_var</span><span class="p">(</span><span class="n">phu_scaled.pca</span><span class="p">)</span>
 
 <span class="n">phu.var</span>
 </pre></div>
@@ -50508,6 +50508,37 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>Principal Component Analysis Results for variables
+ ===================================================
+  Name       Description                                    
+1 &#34;$coord&#34;   &#34;Coordinates for the variables&#34;                
+2 &#34;$cor&#34;     &#34;Correlations between variables and dimensions&#34;
+3 &#34;$cos2&#34;    &#34;Cos2 for the variables&#34;                       
+4 &#34;$contrib&#34; &#34;contributions of the variables&#34;               </pre>
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -50523,21 +50554,60 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># What is the contribution of each variable?</span>
-<span class="n">phu.var</span><span class="o">$</span><span class="kc">...</span>
+<span class="n">phu.var</span><span class="o">$</span><span class="n">contrib</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 7 × 7 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>Dim.1</th><th scope=col>Dim.2</th><th scope=col>Dim.3</th><th scope=col>Dim.4</th><th scope=col>Dim.5</th><th scope=col>Dim.6</th><th scope=col>Dim.7</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>0 to 4</th><td>10.34590</td><td>40.9538402</td><td> 6.80231618</td><td>13.164244</td><td>2.341191e+01</td><td> 4.1598042</td><td> 1.1619876</td></tr>
+	<tr><th scope=row>5 to 11</th><td>13.92950</td><td>15.5247689</td><td>13.94117607</td><td> 6.128455</td><td>4.187471e+01</td><td> 7.7830343</td><td> 0.8183575</td></tr>
+	<tr><th scope=row>12 to 19</th><td>15.22164</td><td> 2.5003608</td><td>22.64386889</td><td>46.614495</td><td>1.175802e+01</td><td> 0.2326117</td><td> 1.0290033</td></tr>
+	<tr><th scope=row>20 to 39</th><td>16.20731</td><td> 0.2393659</td><td>20.00827009</td><td> 8.205234</td><td>1.759244e+01</td><td>37.3147126</td><td> 0.4326714</td></tr>
+	<tr><th scope=row>40 to 59</th><td>16.52966</td><td> 5.7071663</td><td> 2.79224811</td><td> 4.688363</td><td>6.551208e-04</td><td>18.9749394</td><td>51.3069659</td></tr>
+	<tr><th scope=row>60 to 79</th><td>15.84305</td><td> 9.6533637</td><td> 0.06091353</td><td>12.485206</td><td>3.162872e+00</td><td>14.7586453</td><td>44.0359452</td></tr>
+	<tr><th scope=row>80+</th><td>11.92294</td><td>25.4211341</td><td>33.75120714</td><td> 8.714002</td><td>2.199400e+00</td><td>16.7762526</td><td> 1.2150691</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
