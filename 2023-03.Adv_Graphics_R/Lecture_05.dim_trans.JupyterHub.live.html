@@ -14737,12 +14737,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Packages to help tidy our data</span>
@@ -14771,6 +14771,73 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>-- <span class="ansi-bold">Attaching core tidyverse packages</span> ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse 2.0.0 --
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">dplyr    </span> 1.1.1     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">readr    </span> 2.1.4
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">forcats  </span> 1.0.0     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">stringr  </span> 1.5.0
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">ggplot2  </span> 3.4.1     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">tibble   </span> 3.2.1
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">lubridate</span> 1.9.2     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">tidyr    </span> 1.3.0
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">purrr    </span> 1.0.1     
+-- <span class="ansi-bold">Conflicts</span> ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">filter()</span> masks <span class="ansi-blue-fg">stats</span>::filter()
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">lag()</span>    masks <span class="ansi-blue-fg">stats</span>::lag()
+<span class="ansi-cyan-fg">i</span> Use the conflicted package (<span class="ansi-blue-fg">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
+
+Attaching package: &#39;magrittr&#39;
+
+
+The following object is masked from &#39;package:purrr&#39;:
+
+    set_names
+
+
+The following object is masked from &#39;package:tidyr&#39;:
+
+    extract
+
+
+Loading required package: viridisLite
+
+Loading required package: grid
+
+========================================
+ComplexHeatmap version 2.6.2
+Bioconductor page: http://bioconductor.org/packages/ComplexHeatmap/
+Github page: https://github.com/jokergoo/ComplexHeatmap
+Documentation: http://jokergoo.github.io/ComplexHeatmap-reference
+
+If you use it in published research, please cite:
+Gu, Z. Complex heatmaps reveal patterns and correlations in multidimensional 
+  genomic data. Bioinformatics 2016.
+
+This message can be suppressed by:
+  suppressPackageStartupMessages(library(ComplexHeatmap))
+========================================
+
+
+Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/ve3WBa
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -14792,16 +14859,16 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Import the normalized demographics data</span>
-<span class="n">covid_demographics_norm.df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">covid_demographics_norm.df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;data/phu_demographics_census_norm.csv&quot;</span><span class="p">)</span>
 
 <span class="c1"># Look at it&#39;s structure</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">covid_demographics_norm.df</span><span class="p">,</span><span class="w"> </span><span class="n">give.attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
@@ -14810,6 +14877,63 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">238</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">15</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> &#34;,&#34;
+<span class="ansi-red-fg">chr</span>  (4): from_date, to_date, public_health_unit, age_group
+<span class="ansi-green-fg">dbl</span> (11): total_cases, total_deaths, total_hospitalizations_count, percent_c...
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>spc_tbl_ [238 x 15] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ from_date                   : chr [1:238] &#34;January 15, 2020&#34; &#34;January 15, 2020&#34; &#34;January 15, 2020&#34; &#34;January 15, 2020&#34; ...
+ $ to_date                     : chr [1:238] &#34;March 2, 2022&#34; &#34;March 2, 2022&#34; &#34;March 2, 2022&#34; &#34;March 2, 2022&#34; ...
+ $ public_health_unit          : chr [1:238] &#34;Algoma&#34; &#34;Algoma&#34; &#34;Algoma&#34; &#34;Algoma&#34; ...
+ $ age_group                   : chr [1:238] &#34;0 to 4&#34; &#34;12 to 19&#34; &#34;20 to 39&#34; &#34;40 to 59&#34; ...
+ $ total_cases                 : num [1:238] 181 412 1868 1424 379 ...
+ $ total_deaths                : num [1:238] 0 0 1 5 0 14 13 0 0 2 ...
+ $ total_hospitalizations_count: num [1:238] 9 5 31 48 0 69 44 10 2 35 ...
+ $ percent_cases               : num [1:238] 0.0343 0.0781 0.3543 0.2701 0.0719 ...
+ $ percent_deaths              : num [1:238] 0 0 0.0303 0.1515 0 ...
+ $ percent_hospitalizations    : num [1:238] 0.0437 0.0243 0.1505 0.233 0 ...
+ $ population_2022             : num [1:238] 117840 117840 117840 117840 117840 ...
+ $ individuals_2022            : num [1:238] 5481 9230 24676 33111 7751 ...
+ $ cases_per_100k              : num [1:238] 3302 4464 7570 4301 4890 ...
+ $ deaths_per_100k             : num [1:238] 0 0 4 15 0 46 177 0 0 5 ...
+ $ hospitalizations_per_100k   : num [1:238] 164 54 126 145 0 228 598 116 13 95 ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14920,12 +15044,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Create a wide-format version of our normalized data</span>
@@ -14935,17 +15059,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="w">    </span><span class="n">covid_demographics_norm.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Select for just the PHU, age_group, population size and cases/hosp/deaths_per_100k</span>
-<span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="kc">...</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">11</span><span class="p">,</span><span class="w"> </span><span class="m">13</span><span class="o">:</span><span class="m">15</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Pivot the data to a longer format</span>
-<span class="w">    </span><span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">names_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">values_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">pivot_longer</span><span class="p">(</span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">names_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;category&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">values_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;per_100k&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Get rid of the suffix of &quot;_per_100k&quot;</span>
-<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">...</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">category</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;_per_100k&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">str_remove_all</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">category</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;_per_100k&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Pivot the age_group/per_100k data out wider</span>
-<span class="w">    </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span>
-<span class="w">                </span><span class="n">values_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span>
+<span class="w">    </span><span class="nf">pivot_wider</span><span class="p">(</span><span class="n">names_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age_group</span><span class="p">,</span>
+<span class="w">                </span><span class="n">values_from</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">per_100k</span>
 <span class="w">               </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Move the &quot;5 to 11&quot; category to after &quot;0 to 4&quot;. You could use a longer &quot;select&quot; call to do this too!</span>
@@ -14958,6 +15082,45 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 10</caption>
+<thead>
+	<tr><th scope=col>public_health_unit</th><th scope=col>population_2022</th><th scope=col>category</th><th scope=col>0 to 4</th><th scope=col>5 to 11</th><th scope=col>12 to 19</th><th scope=col>20 to 39</th><th scope=col>40 to 59</th><th scope=col>60 to 79</th><th scope=col>80+</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Algoma      </td><td>117840</td><td>cases           </td><td>3302</td><td>4890</td><td>4464</td><td>7570</td><td>4301</td><td>2331</td><td>4116</td></tr>
+	<tr><td>Algoma      </td><td>117840</td><td>deaths          </td><td>   0</td><td>   0</td><td>   0</td><td>   4</td><td>  15</td><td>  46</td><td> 177</td></tr>
+	<tr><td>Algoma      </td><td>117840</td><td>hospitalizations</td><td> 164</td><td>   0</td><td>  54</td><td> 126</td><td> 145</td><td> 228</td><td> 598</td></tr>
+	<tr><td>Brant County</td><td>153558</td><td>cases           </td><td>4481</td><td>5376</td><td>6499</td><td>9448</td><td>6429</td><td>3995</td><td>5684</td></tr>
+	<tr><td>Brant County</td><td>153558</td><td>deaths          </td><td>   0</td><td>   0</td><td>   0</td><td>   5</td><td>  16</td><td>  93</td><td> 538</td></tr>
+	<tr><td>Brant County</td><td>153558</td><td>hospitalizations</td><td> 116</td><td>  15</td><td>  13</td><td>  95</td><td> 187</td><td> 460</td><td>1393</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -14993,7 +15156,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="n">covid_demographics_norm.mx</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">covid_demographics_norm_wide.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Filter for just case data</span>
-<span class="n">dplyr</span><span class="o">::</span><span class="nf">filter</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">filter</span><span class="p">(</span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cases</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Drop the PHU and category data</span>
 <span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">,</span><span class="w"> </span><span class="n">category</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
