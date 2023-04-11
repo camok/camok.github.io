@@ -34428,7 +34428,7 @@ class="
 
 <span class="c1"># Generate our k-means analysis</span>
 <span class="n">phu_cases.km</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
-<span class="nf">kmeans</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="c1"># We&#39;ll scale our data for this (more on that later too!)</span>
+<span class="nf">kmeans</span><span class="p">(</span><span class="nf">scale</span><span class="p">(</span><span class="n">covid_</span><span class="p">),</span><span class="w"> </span><span class="c1"># We&#39;ll scale our data for this (more on that later too!)</span>
 <span class="w">       </span><span class="n">centers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span>
 <span class="w">       </span><span class="n">nstart</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span><span class="p">,</span>
 <span class="w">       </span><span class="n">iter.max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="p">)</span>
