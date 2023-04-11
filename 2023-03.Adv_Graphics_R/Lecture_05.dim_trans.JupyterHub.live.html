@@ -34586,8 +34586,8 @@ class="
 
 <span class="n">phu_kmeans.plot</span><span class="w"> </span><span class="o">&lt;-</span>
 
-<span class="w">    </span><span class="nf">fviz_cluster</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="c1"># our k-means object</span>
-<span class="w">                 </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="c1"># Our original data needed for PCA to visualize</span>
+<span class="w">    </span><span class="nf">fviz_cluster</span><span class="p">(</span><span class="n">object</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">phu_cases.km</span><span class="p">,</span><span class="w"> </span><span class="c1"># our k-means object</span>
+<span class="w">                 </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">covid_demo</span><span class="p">,</span><span class="w"> </span><span class="c1"># Our original data needed for PCA to visualize</span>
 <span class="w">                 </span><span class="n">ellipse.type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;convex&quot;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">                 </span><span class="n">ggtheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">theme_bw</span><span class="p">(),</span><span class="w"> </span>
 <span class="w">                 </span><span class="n">repel</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="c1"># Try to avoid overlapping text</span>
