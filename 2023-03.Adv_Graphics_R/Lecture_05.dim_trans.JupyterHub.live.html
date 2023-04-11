@@ -26097,16 +26097,16 @@ $$d(p,q) = \sqrt{(p_{1}-q_{2})^2 + (p_{2}-q_{2})^2 + \ldots + (p_{n}-q_{n})^2}$$
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Make a cluster object and take a look at it</span>
-<span class="n">phu.hc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">hclust</span><span class="p">(</span><span class="nf">dist</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">[,</span><span class="m">-1</span><span class="p">]),</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span>
+<span class="n">phu.hc</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">hclust</span><span class="p">(</span><span class="nf">dist</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">[,</span><span class="m">-1</span><span class="p">]),</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ward.D2&quot;</span><span class="p">)</span>
 
 <span class="c1"># What does our hclust object contain?</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">phu.hc</span><span class="p">)</span>
@@ -26115,6 +26115,37 @@ $$d(p,q) = \sqrt{(p_{1}-q_{2})^2 + (p_{2}-q_{2})^2 + \ldots + (p_{n}-q_{n})^2}$$
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>List of 7
+ $ merge      : int [1:33, 1:2] -13 -9 -18 -25 -3 -2 -4 -7 -5 -29 ...
+ $ height     : num [1:33] 870 1178 1304 1364 1433 ...
+ $ order      : int [1:34] 1 4 9 21 6 13 20 28 16 23 ...
+ $ labels     : chr [1:34] &#34;Algoma&#34; &#34;Brant County&#34; &#34;Durham Region&#34; &#34;Grey Bruce&#34; ...
+ $ method     : chr &#34;ward.D2&#34;
+ $ call       : language hclust(d = dist(covid_demographics_norm.mx[, -1]), method = &#34;ward.D2&#34;)
+ $ dist.method: chr &#34;euclidean&#34;
+ - attr(*, &#34;class&#34;)= chr &#34;hclust&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
