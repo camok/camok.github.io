@@ -26173,9 +26173,9 @@ $$d(p,q) = \sqrt{(p_{1}-q_{2})^2 + (p_{2}-q_{2})^2 + \ldots + (p_{n}-q_{n})^2}$$
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Plot out our dendrogram with fviz_dend</span>
 
-<span class="nf">fviz_dend</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w">                        </span><span class="c1"># provide our hclust object</span>
+<span class="nf">fviz_dend</span><span class="p">(</span><span class="n">phu.hc</span><span class="p">,</span><span class="w">                        </span><span class="c1"># provide our hclust object</span>
 <span class="w">          </span><span class="n">cex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.5</span><span class="p">,</span><span class="w">                     </span><span class="c1"># set the text size to be larger</span>
-<span class="w">          </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w">                         </span><span class="c1"># How many clusters do we expect in our data </span>
+<span class="w">          </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w">                         </span><span class="c1"># How many clusters do we expect in our data </span>
 <span class="w">          </span><span class="n">palette</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Set1&quot;</span><span class="p">,</span><span class="w">              </span><span class="c1"># what colours will we use. Many options including RBrewer palettes</span>
 <span class="w">          </span><span class="n">horiz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span>
 <span class="w">          </span><span class="n">labels_track_height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12000</span><span class="p">,</span>
