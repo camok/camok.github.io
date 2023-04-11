@@ -49433,23 +49433,23 @@ Our choices, however, may have inadvertantly been throwing away data that could 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Build a PCA of our PHU data with scaling applied</span>
 <span class="n">phu_scaled.pca</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">PCA</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">[,</span><span class="w"> </span><span class="m">-1</span><span class="p">],</span><span class="w"> </span>
-<span class="w">                      </span><span class="n">scale.unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="c1"># What happens when we don&#39;t scale the data?</span>
-<span class="w">                      </span><span class="n">ncp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span>
+<span class="w">                      </span><span class="n">scale.unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">,</span><span class="w"> </span><span class="c1"># What happens when we don&#39;t scale the data?</span>
+<span class="w">                      </span><span class="n">ncp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span><span class="p">,</span>
 <span class="w">                      </span><span class="n">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="c1"># Build a PCA of our PHU data WITHOUT scaling applied</span>
 <span class="n">phu_unscaled.pca</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">PCA</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">[,</span><span class="m">-1</span><span class="p">],</span><span class="w"> </span>
-<span class="w">                        </span><span class="n">scale.unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">scale.unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span>
 <span class="w">                        </span><span class="n">ncp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span><span class="p">,</span>
 <span class="w">                        </span><span class="n">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
@@ -49459,21 +49459,89 @@ Our choices, however, may have inadvertantly been throwing away data that could 
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>Warning message:
+&#34;ggrepel: 9 unlabeled data points (too many overlaps). Consider increasing max.overlaps&#34;
+Warning message:
+&#34;ggrepel: 17 unlabeled data points (too many overlaps). Consider increasing max.overlaps&#34;
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Take a look at the information inside our PCA object</span>
-<span class="nf">print</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">phu_scaled.pca</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>**Results for the Principal Component Analysis (PCA)**
+The analysis was performed on 34 individuals, described by 7 variables
+*The results are available in the following objects:
+
+   name               description                          
+1  &#34;$eig&#34;             &#34;eigenvalues&#34;                        
+2  &#34;$var&#34;             &#34;results for the variables&#34;          
+3  &#34;$var$coord&#34;       &#34;coord. for the variables&#34;           
+4  &#34;$var$cor&#34;         &#34;correlations variables - dimensions&#34;
+5  &#34;$var$cos2&#34;        &#34;cos2 for the variables&#34;             
+6  &#34;$var$contrib&#34;     &#34;contributions of the variables&#34;     
+7  &#34;$ind&#34;             &#34;results for the individuals&#34;        
+8  &#34;$ind$coord&#34;       &#34;coord. for the individuals&#34;         
+9  &#34;$ind$cos2&#34;        &#34;cos2 for the individuals&#34;           
+10 &#34;$ind$contrib&#34;     &#34;contributions of the individuals&#34;   
+11 &#34;$call&#34;            &#34;summary statistics&#34;                 
+12 &#34;$call$centre&#34;     &#34;mean of the variables&#34;              
+13 &#34;$call$ecart.type&#34; &#34;standard error of the variables&#34;    
+14 &#34;$call$row.w&#34;      &#34;weights for the individuals&#34;        
+15 &#34;$call$col.w&#34;      &#34;weights for the variables&#34;          
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
