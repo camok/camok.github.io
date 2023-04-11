@@ -50626,17 +50626,17 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Look at the coordinates of our variables across the PCs.</span>
-<span class="n">phu.var</span><span class="o">$</span><span class="kc">...</span>
-<span class="n">phu.var</span><span class="o">$</span><span class="kc">...</span>
+<span class="n">phu.var</span><span class="o">$</span><span class="n">coord</span>
+<span class="n">phu.var</span><span class="o">$</span><span class="n">cor</span>
 </pre></div>
 
      </div>
@@ -50644,22 +50644,128 @@ class="
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 7 × 7 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>Dim.1</th><th scope=col>Dim.2</th><th scope=col>Dim.3</th><th scope=col>Dim.4</th><th scope=col>Dim.5</th><th scope=col>Dim.6</th><th scope=col>Dim.7</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>0 to 4</th><td>0.7591766</td><td> 0.60500184</td><td> 0.13304114</td><td>-0.13015935</td><td> 0.1448897723</td><td> 0.04293088</td><td> 0.012086961</td></tr>
+	<tr><th scope=row>5 to 11</th><td>0.8808998</td><td> 0.37249629</td><td> 0.19046153</td><td> 0.08880817</td><td>-0.1937738660</td><td>-0.05872294</td><td>-0.010143502</td></tr>
+	<tr><th scope=row>12 to 19</th><td>0.9208514</td><td> 0.14948951</td><td>-0.24273527</td><td> 0.24492770</td><td> 0.1026801084</td><td>-0.01015194</td><td>-0.011374302</td></tr>
+	<tr><th scope=row>20 to 39</th><td>0.9501982</td><td>-0.04625307</td><td>-0.22817199</td><td>-0.10275972</td><td>-0.1255978821</td><td> 0.12857998</td><td>-0.007375568</td></tr>
+	<tr><th scope=row>40 to 59</th><td>0.9596011</td><td>-0.22584976</td><td>-0.08523826</td><td>-0.07767621</td><td>-0.0007664433</td><td>-0.09169032</td><td> 0.080316458</td></tr>
+	<tr><th scope=row>60 to 79</th><td>0.9394598</td><td>-0.29373027</td><td> 0.01258967</td><td>-0.12675797</td><td> 0.0532549688</td><td>-0.08086425</td><td>-0.074408070</td></tr>
+	<tr><th scope=row>80+</th><td>0.8149864</td><td>-0.47665795</td><td> 0.29634815</td><td> 0.10589763</td><td> 0.0444090428</td><td> 0.08621459</td><td> 0.012359954</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 7 × 7 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>Dim.1</th><th scope=col>Dim.2</th><th scope=col>Dim.3</th><th scope=col>Dim.4</th><th scope=col>Dim.5</th><th scope=col>Dim.6</th><th scope=col>Dim.7</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>0 to 4</th><td>0.7591766</td><td> 0.60500184</td><td> 0.13304114</td><td>-0.13015935</td><td> 0.1448897723</td><td> 0.04293088</td><td> 0.012086961</td></tr>
+	<tr><th scope=row>5 to 11</th><td>0.8808998</td><td> 0.37249629</td><td> 0.19046153</td><td> 0.08880817</td><td>-0.1937738660</td><td>-0.05872294</td><td>-0.010143502</td></tr>
+	<tr><th scope=row>12 to 19</th><td>0.9208514</td><td> 0.14948951</td><td>-0.24273527</td><td> 0.24492770</td><td> 0.1026801084</td><td>-0.01015194</td><td>-0.011374302</td></tr>
+	<tr><th scope=row>20 to 39</th><td>0.9501982</td><td>-0.04625307</td><td>-0.22817199</td><td>-0.10275972</td><td>-0.1255978821</td><td> 0.12857998</td><td>-0.007375568</td></tr>
+	<tr><th scope=row>40 to 59</th><td>0.9596011</td><td>-0.22584976</td><td>-0.08523826</td><td>-0.07767621</td><td>-0.0007664433</td><td>-0.09169032</td><td> 0.080316458</td></tr>
+	<tr><th scope=row>60 to 79</th><td>0.9394598</td><td>-0.29373027</td><td> 0.01258967</td><td>-0.12675797</td><td> 0.0532549688</td><td>-0.08086425</td><td>-0.074408070</td></tr>
+	<tr><th scope=row>80+</th><td>0.8149864</td><td>-0.47665795</td><td> 0.29634815</td><td> 0.10589763</td><td> 0.0444090428</td><td> 0.08621459</td><td> 0.012359954</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># What is the quality of our variables?</span>
 <span class="c1"># The higher the value the better!</span>
-<span class="n">phu.var</span><span class="o">$</span><span class="kc">...</span>
+<span class="n">phu.var</span><span class="o">$</span><span class="n">cos2</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 7 × 7 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>Dim.1</th><th scope=col>Dim.2</th><th scope=col>Dim.3</th><th scope=col>Dim.4</th><th scope=col>Dim.5</th><th scope=col>Dim.6</th><th scope=col>Dim.7</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>0 to 4</th><td>0.5763492</td><td>0.366027221</td><td>0.0176999458</td><td>0.016941457</td><td>2.099305e-02</td><td>0.0018430600</td><td>1.460946e-04</td></tr>
+	<tr><th scope=row>5 to 11</th><td>0.7759844</td><td>0.138753484</td><td>0.0362755942</td><td>0.007886891</td><td>3.754831e-02</td><td>0.0034483833</td><td>1.028906e-04</td></tr>
+	<tr><th scope=row>12 to 19</th><td>0.8479673</td><td>0.022347113</td><td>0.0589204091</td><td>0.059989580</td><td>1.054320e-02</td><td>0.0001030619</td><td>1.293748e-04</td></tr>
+	<tr><th scope=row>20 to 39</th><td>0.9028766</td><td>0.002139346</td><td>0.0520624574</td><td>0.010559560</td><td>1.577483e-02</td><td>0.0165328107</td><td>5.439901e-05</td></tr>
+	<tr><th scope=row>40 to 59</th><td>0.9208343</td><td>0.051008116</td><td>0.0072655606</td><td>0.006033594</td><td>5.874353e-07</td><td>0.0084071150</td><td>6.450733e-03</td></tr>
+	<tr><th scope=row>60 to 79</th><td>0.8825848</td><td>0.086277474</td><td>0.0001584999</td><td>0.016067582</td><td>2.836092e-03</td><td>0.0065390264</td><td>5.536561e-03</td></tr>
+	<tr><th scope=row>80+</th><td>0.6642028</td><td>0.227202798</td><td>0.0878222244</td><td>0.011214308</td><td>1.972163e-03</td><td>0.0074329558</td><td>1.527685e-04</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
