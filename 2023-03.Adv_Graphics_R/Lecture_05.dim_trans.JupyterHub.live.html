@@ -49576,16 +49576,16 @@ The analysis was performed on 34 individuals, described by 7 variables
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Look at our eigenvalues directly</span>
-<span class="n">phu_scaled.pca</span><span class="o">$</span><span class="kc">...</span>
+<span class="n">phu_scaled.pca</span><span class="o">$</span><span class="n">eig</span>
 
 <span class="c1"># Use get_eigenvalue() to look at our eigenvalues</span>
 <span class="nf">get_eigenvalue</span><span class="p">(</span><span class="n">phu_scaled.pca</span><span class="p">)</span>
@@ -49594,6 +49594,73 @@ The analysis was performed on 34 individuals, described by 7 variables
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 7 × 3 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>eigenvalue</th><th scope=col>percentage of variance</th><th scope=col>cumulative percentage of variance</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>comp 1</th><td>5.57079932</td><td>79.5828474</td><td> 79.58285</td></tr>
+	<tr><th scope=row>comp 2</th><td>0.89375555</td><td>12.7679364</td><td> 92.35078</td></tr>
+	<tr><th scope=row>comp 3</th><td>0.26020469</td><td> 3.7172099</td><td> 96.06799</td></tr>
+	<tr><th scope=row>comp 4</th><td>0.12869297</td><td> 1.8384710</td><td> 97.90646</td></tr>
+	<tr><th scope=row>comp 5</th><td>0.08966823</td><td> 1.2809747</td><td> 99.18744</td></tr>
+	<tr><th scope=row>comp 6</th><td>0.04430641</td><td> 0.6329488</td><td> 99.82039</td></tr>
+	<tr><th scope=row>comp 7</th><td>0.01257282</td><td> 0.1796117</td><td>100.00000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 7 × 3 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>eigenvalue</th><th scope=col>variance.percent</th><th scope=col>cumulative.variance.percent</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>Dim.1</th><td>5.57079932</td><td>79.5828474</td><td> 79.58285</td></tr>
+	<tr><th scope=row>Dim.2</th><td>0.89375555</td><td>12.7679364</td><td> 92.35078</td></tr>
+	<tr><th scope=row>Dim.3</th><td>0.26020469</td><td> 3.7172099</td><td> 96.06799</td></tr>
+	<tr><th scope=row>Dim.4</th><td>0.12869297</td><td> 1.8384710</td><td> 97.90646</td></tr>
+	<tr><th scope=row>Dim.5</th><td>0.08966823</td><td> 1.2809747</td><td> 99.18744</td></tr>
+	<tr><th scope=row>Dim.6</th><td>0.04430641</td><td> 0.6329488</td><td> 99.82039</td></tr>
+	<tr><th scope=row>Dim.7</th><td>0.01257282</td><td> 0.1796117</td><td>100.00000</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
