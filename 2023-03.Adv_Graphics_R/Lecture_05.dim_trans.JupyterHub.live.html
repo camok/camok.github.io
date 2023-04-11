@@ -15141,12 +15141,12 @@ Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Now we need to make our matrix and assign row names. </span>
@@ -15156,7 +15156,7 @@ Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/
 <span class="n">covid_demographics_norm.mx</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">covid_demographics_norm_wide.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Filter for just case data</span>
-<span class="n">dplyr</span><span class="o">::</span><span class="nf">filter</span><span class="p">(</span><span class="n">category</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cases</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="n">dplyr</span><span class="o">::</span><span class="nf">filter</span><span class="p">(</span><span class="n">category</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;cases&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Drop the PHU and category data</span>
 <span class="n">dplyr</span><span class="o">::</span><span class="nf">select</span><span class="p">(</span><span class="o">-</span><span class="nf">c</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">,</span><span class="w"> </span><span class="n">category</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
@@ -15165,7 +15165,8 @@ Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/
 <span class="nf">as.matrix</span><span class="p">()</span>
 
 <span class="c1"># Set the row names using the information from the data frame</span>
-<span class="nf">rownames</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">covid_demographics_norm_wide.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="kc">...</span>
+<span class="nf">rownames</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">covid_demographics_norm_wide.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">pull</span><span class="p">(</span><span class="n">public_health_unit</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">unique</span><span class="p">()</span>
 
 <span class="c1"># Take a peek at our data</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">)</span>
@@ -15174,6 +15175,44 @@ Welcome! Want to learn more? See two factoextra-related books at https://goo.gl/
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A matrix: 6 × 8 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>population_2022</th><th scope=col>0 to 4</th><th scope=col>5 to 11</th><th scope=col>12 to 19</th><th scope=col>20 to 39</th><th scope=col>40 to 59</th><th scope=col>60 to 79</th><th scope=col>80+</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>Algoma</th><td>117840</td><td>3302</td><td>4890</td><td>4464</td><td> 7570</td><td>4301</td><td>2331</td><td>4116</td></tr>
+	<tr><th scope=row>Brant County</th><td>153558</td><td>4481</td><td>5376</td><td>6499</td><td> 9448</td><td>6429</td><td>3995</td><td>5684</td></tr>
+	<tr><th scope=row>Durham Region</th><td>711426</td><td>4669</td><td>5697</td><td>6407</td><td>11018</td><td>7333</td><td>4985</td><td>7562</td></tr>
+	<tr><th scope=row>Grey Bruce</th><td>176150</td><td>2324</td><td>3040</td><td>4643</td><td> 5995</td><td>3489</td><td>2022</td><td>3056</td></tr>
+	<tr><th scope=row>Haldimand-Norfolk</th><td>120008</td><td>3002</td><td>4956</td><td>5388</td><td> 9803</td><td>5799</td><td>3568</td><td>6261</td></tr>
+	<tr><th scope=row>Haliburton, Kawartha, Pine Ridge District</th><td>190728</td><td>2263</td><td>2865</td><td>3673</td><td> 7368</td><td>3681</td><td>1923</td><td>3612</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
