@@ -49442,7 +49442,7 @@ Our choices, however, may have inadvertantly been throwing away data that could 
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Build a PCA of our PHU data with scaling applied</span>
-<span class="n">phu_scaled.pca</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">PCA</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span>
+<span class="n">phu_scaled.pca</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">PCA</span><span class="p">(</span><span class="n">covid_demographics_norm.mx</span><span class="p">[,</span><span class="w"> </span><span class="m">-1</span><span class="p">],</span><span class="w"> </span>
 <span class="w">                      </span><span class="n">scale.unit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="c1"># What happens when we don&#39;t scale the data?</span>
 <span class="w">                      </span><span class="n">ncp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span>
 <span class="w">                      </span><span class="n">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
