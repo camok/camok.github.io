@@ -15520,12 +15520,12 @@ Rooted; includes branch lengths.</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Add phylogenetic information to our tree</span>
@@ -15559,6 +15559,58 @@ Rooted; includes branch lengths.</pre>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Formal class &#39;treedata&#39; [package &#34;tidytree&#34;] with 11 slots
+  ..@ file       : chr(0) 
+  ..@ treetext   : chr(0) 
+  ..@ phylo      :List of 5
+  .. ..$ edge       : int [1:12776, 1:2] 6628 6631 6632 6633 6636 6635 6638 6638 6639 6640 ...
+  .. .. ..- attr(*, &#34;dimnames&#34;)=List of 2
+  .. .. .. ..$ : NULL
+  .. .. .. ..$ : chr [1:2] &#34;parent&#34; &#34;node&#34;
+  .. ..$ edge.length: num [1:12776] 0.0757 0 0.0077 0 0 ...
+  .. ..$ tip.label  : chr [1:6627] &#34;Wuhan/WH01/2019&#34; &#34;USA/MA1/2020&#34; &#34;Canada/ON_ON-VIDO-01-2/2020&#34; &#34;Canada/ON_VIDO-01/2020&#34; ...
+  .. ..$ node.label : chr [1:6150] &#34;NODE_0008606&#34; &#34;NODE_0000001&#34; &#34;NODE_0000061&#34; &#34;USA/MA1/2020_travel_history&#34; ...
+  .. ..$ Nnode      : int 6150
+  .. ..- attr(*, &#34;class&#34;)= chr &#34;phylo&#34;
+  ..@ data       : tibble [12,777 x 8] (S3: tbl_df/tbl/data.frame)
+  .. ..$ node               : int [1:12777] 1 2 3 4 5 6 7 8 9 10 ...
+  .. ..$ GISAID             : chr [1:12777] &#34;L&#34; &#34;L&#34; &#34;L&#34; &#34;L&#34; ...
+  .. ..$ emerging_nextstrain: chr [1:12777] &#34;19A&#34; &#34;19A&#34; &#34;19A&#34; &#34;19A&#34; ...
+  .. ..$ PANGO              : chr [1:12777] &#34;B&#34; &#34;B&#34; &#34;B&#34; &#34;B&#34; ...
+  .. ..$ strain_country     : chr [1:12777] &#34;Asia&#34; &#34;USA&#34; &#34;Canada&#34; &#34;Canada&#34; ...
+  .. ..$ strain_division    : chr [1:12777] &#34;Asia&#34; &#34;Massachusetts&#34; &#34;Ontario&#34; &#34;Ontario&#34; ...
+  .. ..$ strain_date        : Date[1:12777], format: &#34;2019-12-26&#34; &#34;2020-01-29&#34; ...
+  .. ..$ Age                : num [1:12777] 44 21 NA NA 54 NA 47 47 23 55 ...
+  ..@ extraInfo  : tibble [0 x 0] (S3: tbl_df/tbl/data.frame)
+ Named list()
+  ..@ tip_seq    : NULL
+  ..@ anc_seq    : NULL
+  ..@ seq_type   : chr(0) 
+  ..@ tipseq_file: chr(0) 
+  ..@ ancseq_file: chr(0) 
+  ..@ info       : list()
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
