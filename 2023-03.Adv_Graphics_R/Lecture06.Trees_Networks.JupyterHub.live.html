@@ -15627,24 +15627,85 @@ Rooted; includes branch lengths.</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Grab our phylo object</span>
-<span class="kc">...</span>
+<span class="n">SC2_variants_time.tree</span><span class="o">@</span><span class="n">phylo</span>
 
 <span class="c1"># Take a peek at our associated node data</span>
-<span class="nf">head</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">SC2_variants_time.tree</span><span class="o">@</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output " data-mime-type="text/plain">
+<pre>
+Phylogenetic tree with 6627 tips and 6150 internal nodes.
+
+Tip labels:
+  Wuhan/WH01/2019, USA/MA1/2020, Canada/ON_ON-VIDO-01-2/2020, Canada/ON_VIDO-01/2020, USA/CA-CDC-5/2020, Taiwan/CGMH-CGU-02/2020, ...
+Node labels:
+  NODE_0008606, NODE_0000001, NODE_0000061, USA/MA1/2020_travel_history, NODE_0000062, Canada/ON_VIDO-01/2020_travel_history, ...
+
+Unrooted; includes branch lengths.</pre>
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tibble: 6 × 8</caption>
+<thead>
+	<tr><th scope=col>node</th><th scope=col>GISAID</th><th scope=col>emerging_nextstrain</th><th scope=col>PANGO</th><th scope=col>strain_country</th><th scope=col>strain_division</th><th scope=col>strain_date</th><th scope=col>Age</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;date&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>1</td><td>L</td><td>19A</td><td>B</td><td>Asia  </td><td>Asia         </td><td>2019-12-26</td><td>44</td></tr>
+	<tr><td>2</td><td>L</td><td>19A</td><td>B</td><td>USA   </td><td>Massachusetts</td><td>2020-01-29</td><td>21</td></tr>
+	<tr><td>3</td><td>L</td><td>19A</td><td>B</td><td>Canada</td><td>Ontario      </td><td>2020-01-23</td><td>NA</td></tr>
+	<tr><td>4</td><td>L</td><td>19A</td><td>B</td><td>Canada</td><td>Ontario      </td><td>2020-01-23</td><td>NA</td></tr>
+	<tr><td>5</td><td>L</td><td>19A</td><td>B</td><td>USA   </td><td>California   </td><td>2020-01-29</td><td>54</td></tr>
+	<tr><td>6</td><td>S</td><td>19A</td><td>B</td><td>Asia  </td><td>Asia         </td><td>2020-02-04</td><td>NA</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
