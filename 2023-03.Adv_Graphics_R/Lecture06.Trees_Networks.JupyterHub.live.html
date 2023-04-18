@@ -22705,12 +22705,12 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># You can make a list of tips to drop when you&#39;re making your ggtree</span>
@@ -22721,13 +22721,12 @@ class="
 <span class="n">SC2_metadata.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Filter for strains that are not from Canada and are from before 2020-11-01</span>
-<span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">Country</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span><span class="o">&amp;</span>
-<span class="w">         </span><span class="n">`Collection Data`</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="kc">...</span>
+<span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">Country</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;Canada&quot;</span><span class="w"> </span><span class="o">&amp;</span>
+<span class="w">         </span><span class="n">`Collection Data`</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="nf">as.Date</span><span class="p">(</span><span class="s">&quot;2020-11-01&quot;</span><span class="p">)</span>
 <span class="w">        </span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span>
 
 <span class="c1"># Just keep the strain information</span>
-<span class="nf">select</span><span class="p">(</span><span class="n">Strain</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="nf">unlist</span><span class="p">()</span>
+<span class="nf">pull</span><span class="p">(</span><span class="n">Strain</span><span class="p">)</span>
 
 <span class="c1"># Take a look at what we got back</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">to_drop</span><span class="p">)</span>
@@ -22738,16 +22737,39 @@ class="
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre> chr [1:6199] &#34;Wuhan/WH01/2019&#34; &#34;USA/MA1/2020&#34; ...
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># At the same time make a dataset to keep. You&#39;ll use this to update the information in the tree later</span>
-<span class="n">to_keep</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">SC2_metadata.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">to_keep</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">SC2_metadata.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="n">Strain</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">to_drop</span><span class="p">)</span>
 
 <span class="c1"># Which tips are we keeping?</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">to_keep</span><span class="p">,</span><span class="w"> </span><span class="n">give.attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
@@ -22756,6 +22778,53 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>spc_tbl_ [428 x 24] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ Strain                    : chr [1:428] &#34;Canada/NS-NML-16223/2021&#34; &#34;Canada/NB-NML-3294/2021&#34; &#34;Canada/NS-NML-16211/2021&#34; &#34;Canada/NB-NML-5584/2021&#34; ...
+ $ GISAID clade              : chr [1:428] &#34;S&#34; &#34;S&#34; &#34;S&#34; &#34;S&#34; ...
+ $ Nextstrain clade          : chr [1:428] &#34;19B&#34; &#34;19B&#34; &#34;19B&#34; &#34;19B&#34; ...
+ $ Age                       : num [1:428] 23 25 35 29 61 79 NA NA NA NA ...
+ $ Clade                     : chr [1:428] &#34;19B&#34; &#34;19B&#34; &#34;19B&#34; &#34;19B&#34; ...
+ $ Country                   : chr [1:428] &#34;Canada&#34; &#34;Canada&#34; &#34;Canada&#34; &#34;Canada&#34; ...
+ $ Admin Division            : chr [1:428] &#34;Nova Scotia&#34; &#34;New Brunswick&#34; &#34;Nova Scotia&#34; &#34;New Brunswick&#34; ...
+ $ Admin Division of exposure: chr [1:428] &#34;Nova Scotia&#34; &#34;New Brunswick&#34; &#34;Nova Scotia&#34; &#34;New Brunswick&#34; ...
+ $ gisaid_epi_isl            : chr [1:428] &#34;EPI_ISL_1055741&#34; &#34;EPI_ISL_961659&#34; &#34;EPI_ISL_1055730&#34; &#34;EPI_ISL_961643&#34; ...
+ $ Host                      : chr [1:428] &#34;Human&#34; &#34;Human&#34; &#34;Human&#34; &#34;Human&#34; ...
+ $ Originating Lab           : chr [1:428] &#34;QEII Health Sciences Centre&#34; &#34;Hôpital Georges L. Dumont&#34; &#34;QEII Health Sciences Centre&#34; &#34;Hôpital Georges L. Dumont&#34; ...
+ $ PANGO lineage             : chr [1:428] &#34;A.2.5&#34; &#34;A.23.1&#34; &#34;A.23.1&#34; &#34;A.23.1&#34; ...
+ $ Submission Date           : chr [1:428] &#34;Older&#34; &#34;Older&#34; &#34;Older&#34; &#34;Older&#34; ...
+ $ Region                    : chr [1:428] &#34;North America&#34; &#34;North America&#34; &#34;North America&#34; &#34;North America&#34; ...
+ $ Region of exposure        : chr [1:428] &#34;North America&#34; &#34;North America&#34; &#34;North America&#34; &#34;North America&#34; ...
+ $ Sex                       : chr [1:428] &#34;Male&#34; &#34;Female&#34; &#34;Female&#34; &#34;Male&#34; ...
+ $ strain                    : chr [1:428] &#34;Canada/NS-NML-16223/2021&#34; &#34;Canada/NB-NML-3294/2021&#34; &#34;Canada/NS-NML-16211/2021&#34; &#34;Canada/NB-NML-5584/2021&#34; ...
+ $ Emerging Nextstrain clade : chr [1:428] &#34;19B&#34; &#34;19B&#34; &#34;19B&#34; &#34;19B&#34; ...
+ $ Submitting Lab            : chr [1:428] &#34;National Microbiology Laboratory (NML)&#34; &#34;National Microbiology Laboratory (NML)&#34; &#34;National Microbiology Laboratory (NML)&#34; &#34;National Microbiology Laboratory (NML)&#34; ...
+ $ url                       : logi [1:428] NA NA NA NA NA NA ...
+ $ Collection Data           : Date[1:428], format: &#34;2021-01-16&#34; &#34;2021-01-02&#34; ...
+ $ Author                    : chr [1:428] &#34;Anna Majer et al&#34; &#34;Anna Majer et al&#34; &#34;Anna Majer et al&#34; &#34;Anna Majer et al&#34; ...
+ $ Country of exposure       : chr [1:428] NA NA NA NA ...
+ $ Location                  : chr [1:428] NA NA NA NA ...
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
