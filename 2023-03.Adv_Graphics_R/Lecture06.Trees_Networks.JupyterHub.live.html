@@ -60078,7 +60078,7 @@ class="
 <span class="w">                          </span><span class="n">guide</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">guide_legend</span><span class="p">(</span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w"> </span>
 
 <span class="c1">### 1.10.1 use this code to create a new colour scale</span>
-<span class="n">tree.plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tree.plot</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kc">...</span>
+<span class="n">tree.plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">tree.plot</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">new_scale_fill</span><span class="p">()</span>
 
 <span class="c1"># Generate a categorical heatmap layer for the Clade variable</span>
 <span class="n">tree.plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">gheatmap</span><span class="p">(</span><span class="n">tree.plot</span><span class="p">,</span><span class="w"> </span><span class="n">curated_tree_info.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="kc">...</span><span class="p">),</span><span class="w"> </span>
