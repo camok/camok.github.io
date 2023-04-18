@@ -15535,10 +15535,10 @@ Rooted; includes branch lengths.</pre>
 <span class="n">SC2_metadata.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Select just a handful of attributes to go to the tree</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">Strain</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;GISAID clade&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Emerging Nextstrain clade&#39;</span><span class="p">,</span><span class="w"> </span>
+<span class="nf">select</span><span class="p">(</span><span class="n">Strain</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;GISAID clade&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Emerging Nextstrain clade&#39;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">       </span><span class="s">&#39;PANGO lineage&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">Country</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Admin Division&#39;</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;Collection Data&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">Age</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
-<span class="nf">...</span><span class="p">(</span><span class="n">strain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Strain</span><span class="p">,</span>
+<span class="nf">rename</span><span class="p">(</span><span class="n">strain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Strain</span><span class="p">,</span>
 <span class="w">       </span><span class="n">GISAID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;GISAID clade&#39;</span><span class="p">,</span><span class="w"> </span>
 <span class="w">       </span><span class="n">emerging_nextstrain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Emerging Nextstrain clade&#39;</span><span class="p">,</span>
 <span class="w">       </span><span class="n">PANGO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;PANGO lineage&#39;</span><span class="p">,</span>
@@ -15547,7 +15547,7 @@ Rooted; includes branch lengths.</pre>
 <span class="w">       </span><span class="n">strain_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#39;Collection Data&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># full_join to our tree to ensure no data is lost although you could also carefully use a left_join</span>
-<span class="nf">full_join</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="o">=</span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="nf">full_join</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">SC2_variants_time.tb</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;label&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;strain&quot;</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># Convert to a tidytree format</span>
 <span class="nf">as.treedata</span><span class="p">()</span>
