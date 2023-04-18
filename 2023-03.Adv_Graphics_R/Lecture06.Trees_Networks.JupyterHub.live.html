@@ -48091,12 +48091,12 @@ class="
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Drop tips from our tree and save it as curated_tree_info.df</span>
@@ -48112,7 +48112,7 @@ class="
 <span class="w">    </span><span class="nf">as_tibble</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Rename our column information</span>
-<span class="w">    </span><span class="nf">rename</span><span class="p">(</span><span class="n">Clade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">Province</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">rename</span><span class="p">(</span><span class="n">Clade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">emerging_nextstrain</span><span class="p">,</span><span class="w"> </span><span class="n">Province</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strain_division</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">Age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">replace_na</span><span class="p">(</span><span class="n">Age</span><span class="p">,</span><span class="w"> </span><span class="n">replace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
@@ -48131,6 +48131,40 @@ class="
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>&#39;data.frame&#39;:	72 obs. of  11 variables:
+ $ parent        : int  40 42 42 44 44 45 45 46 46 48 ...
+ $ node          : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ branch.length : num  0.0757 0.0077 0.0077 0.1439 0.0729 ...
+ $ label         : chr  &#34;Wuhan/WH01/2019&#34; &#34;Canada/ON_ON-VIDO-01-2/2020&#34; &#34;Canada/ON_VIDO-01/2020&#34; &#34;Canada/MB-NML-808/2020&#34; ...
+ $ GISAID        : chr  &#34;L&#34; &#34;L&#34; &#34;L&#34; &#34;S&#34; ...
+ $ Clade         : chr  &#34;19A&#34; &#34;19A&#34; &#34;19A&#34; &#34;19B&#34; ...
+ $ PANGO         : chr  &#34;B&#34; &#34;B&#34; &#34;B&#34; &#34;A.1&#34; ...
+ $ strain_country: chr  &#34;Asia&#34; &#34;Canada&#34; &#34;Canada&#34; &#34;Canada&#34; ...
+ $ Province      : chr  &#34;Asia&#34; &#34;Ontario&#34; &#34;Ontario&#34; &#34;Manitoba&#34; ...
+ $ strain_date   : Date, format: &#34;2019-12-26&#34; &#34;2020-01-23&#34; ...
+ $ Age           : num  44 0 0 0 27 59 0 43 35 53 ...
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -48145,12 +48179,12 @@ class="
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Show our curated tree in a circular format</span>
@@ -48161,7 +48195,7 @@ class="
 <span class="nf">drop.tip</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">curated_drop_list</span><span class="p">)</span><span class="w">  </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="c1"># 1. Data</span>
-<span class="nf">ggtree</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="c1">### 1.9.0 Set the layout to circular</span>
+<span class="nf">ggtree</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;circular&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">### 1.9.0 Set the layout to circular</span>
 <span class="w">    </span><span class="n">mrsd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;2021-02-17&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># Need the most recent sampling date</span>
 <span class="w">    </span><span class="c1"># 2. Aesthetics</span>
 
@@ -48177,7 +48211,7 @@ class="
 <span class="w">    </span><span class="nf">geom_tippoint</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">colour</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strain_division</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1">### 1.9.0 set the tip labels</span>
-<span class="w">    </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">geom_tiplab</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">emerging_nextstra</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="p">)</span>
 
 <span class="c1"># View our tree</span>
 <span class="n">tree.plot</span>
@@ -48186,6 +48220,35 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
+<pre>
+Error in structure(list(mapping = mapping, hjust = hjust, align = align, : &#39;...&#39; used in an incorrect context
+Traceback:
+
+1. geom_tiplab(aes(label = ...), size = 8)
+2. structure(list(mapping = mapping, hjust = hjust, align = align, 
+ .     linetype = linetype, linesize = linesize, geom = geom, offset = offset, 
+ .     as_ylab = as_ylab, node = &#34;external&#34;, ...), class = &#34;tiplab&#34;)</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
