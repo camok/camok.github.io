@@ -48016,7 +48016,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Here&#39;s our representative list of tips from multiple clades</span>
@@ -48073,7 +48073,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Make a new list of tips to drop</span>
@@ -48081,7 +48081,7 @@ class="
 <span class="w">    </span><span class="n">SC2_metadata.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># filter the opposite of our tip labels</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">Strain</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="kc">...</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">Strain</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="n">curated_tips</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Only keep the strain information for what we want to drop</span>
 <span class="w">    </span><span class="nf">pull</span><span class="p">(</span><span class="n">Strain</span><span class="p">)</span>
 </pre></div>
@@ -48106,7 +48106,7 @@ class="
 <span class="w">    </span><span class="n">SC2_variants_time.tree</span><span class="w"> </span><span class="o">%&gt;%</span>
 
 <span class="w">    </span><span class="c1"># Drop the tips we created</span>
-<span class="w">    </span><span class="nf">drop.tip</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">drop.tip</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">curated_drop_list</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Convert to a tibble</span>
 <span class="w">    </span><span class="nf">as_tibble</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
