@@ -15178,12 +15178,12 @@ Rooted; includes branch lengths.</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Convert the phylo object using as_tibble</span>
@@ -15198,6 +15198,61 @@ Rooted; includes branch lengths.</pre>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>tbl_tree [12,777 x 4] (S3: tbl_tree/tbl_df/tbl/data.frame)
+ $ parent       : int [1:12777] 6628 6631 6632 6633 6636 6635 6638 6638 6639 6640 ...
+ $ node         : int [1:12777] 1 2 3 4 5 6 7 8 9 10 ...
+ $ branch.length: num [1:12777] 0.0757 0 0.0077 0 0 ...
+ $ label        : chr [1:12777] &#34;Wuhan/WH01/2019&#34; &#34;USA/MA1/2020&#34; &#34;Canada/ON_ON-VIDO-01-2/2020&#34; &#34;Canada/ON_VIDO-01/2020&#34; ...
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<table class="dataframe">
+<caption>A tbl_tree: 6 × 4</caption>
+<thead>
+	<tr><th scope=col>parent</th><th scope=col>node</th><th scope=col>branch.length</th><th scope=col>label</th></tr>
+	<tr><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>6628</td><td>1</td><td>0.075652198</td><td>Wuhan/WH01/2019            </td></tr>
+	<tr><td>6631</td><td>2</td><td>0.000000000</td><td>USA/MA1/2020               </td></tr>
+	<tr><td>6632</td><td>3</td><td>0.007696891</td><td>Canada/ON_ON-VIDO-01-2/2020</td></tr>
+	<tr><td>6633</td><td>4</td><td>0.000000000</td><td>Canada/ON_VIDO-01/2020     </td></tr>
+	<tr><td>6636</td><td>5</td><td>0.000000000</td><td>USA/CA-CDC-5/2020          </td></tr>
+	<tr><td>6635</td><td>6</td><td>0.044204648</td><td>Taiwan/CGMH-CGU-02/2020    </td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
