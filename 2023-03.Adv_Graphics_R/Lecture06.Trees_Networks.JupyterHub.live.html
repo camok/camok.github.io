@@ -15340,18 +15340,18 @@ Rooted; includes branch lengths.</pre>
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># Check out some of the values for these variables</span>
 
 <span class="c1"># Metadata information on the samples</span>
-<span class="nf">unique</span><span class="p">(</span><span class="n">SC2_metadata.df</span><span class="o">$</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">unique</span><span class="p">(</span><span class="n">SC2_metadata.df</span><span class="o">$</span><span class="n">Country</span><span class="p">)</span>
 
 <span class="nf">unique</span><span class="p">(</span><span class="n">SC2_metadata.df</span><span class="o">$</span><span class="n">Age</span><span class="p">)</span>
 
@@ -15360,7 +15360,7 @@ Rooted; includes branch lengths.</pre>
 
 <span class="nf">unique</span><span class="p">(</span><span class="n">SC2_metadata.df</span><span class="o">$</span><span class="s">&#39;Nextstrain clade&#39;</span><span class="p">)</span>
 
-<span class="nf">unique</span><span class="p">(</span><span class="n">SC2_metadata.df</span><span class="o">$</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">unique</span><span class="p">(</span><span class="n">SC2_metadata.df</span><span class="o">$</span><span class="n">Clade</span><span class="p">)</span>
 
 <span class="nf">unique</span><span class="p">(</span><span class="n">SC2_metadata.df</span><span class="o">$</span><span class="s">&#39;PANGO lineage&#39;</span><span class="p">)</span>
 </pre></div>
@@ -15368,6 +15368,131 @@ Rooted; includes branch lengths.</pre>
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'Asia'</li><li>'USA'</li><li>'Canada'</li><li>'Europe'</li><li>'Guatemala'</li><li>'Panama'</li><li>'Africa'</li><li>'Dominican Republic'</li><li>'Costa Rica'</li><li>'South America'</li><li>'Oceania'</li><li>'Jamaica'</li><li>'Mexico'</li><li>'Barbados'</li><li>'Guadeloupe'</li><li>'Saint Martin'</li><li>'Bermuda'</li><li>'Sint Maarten'</li><li>'Saint Barthélemy'</li><li>'Belize'</li><li>'Saint Lucia'</li><li>'El Salvador'</li><li>'Cuba'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>44</li><li>21</li><li>&lt;NA&gt;</li><li>54</li><li>47</li><li>23</li><li>55</li><li>62</li><li>49</li><li>50</li><li>43</li><li>25</li><li>26</li><li>33</li><li>38</li><li>9</li><li>73</li><li>64</li><li>57</li><li>58</li><li>0</li><li>28</li><li>70</li><li>71</li><li>20</li><li>93</li><li>36</li><li>37</li><li>40</li><li>56</li><li>89</li><li>45</li><li>34</li><li>53</li><li>94</li><li>95</li><li>86</li><li>84</li><li>60</li><li>90</li><li>27</li><li>30</li><li>59</li><li>41</li><li>46</li><li>52</li><li>51</li><li>32</li><li>24</li><li>35</li><li>29</li><li>61</li><li>79</li><li>66</li><li>78</li><li>11</li><li>2</li><li>65</li><li>75</li><li>31</li><li>48</li><li>74</li><li>68</li><li>67</li><li>63</li><li>77</li><li>42</li><li>22</li><li>12</li><li>5</li><li>17</li><li>80</li><li>16</li><li>39</li><li>82</li><li>8</li><li>7</li><li>88</li><li>76</li><li>69</li><li>19</li><li>87</li><li>3</li><li>14</li><li>18</li><li>1</li><li>81</li><li>15</li><li>6</li><li>10</li><li>85</li><li>4</li><li>98</li><li>91</li><li>72</li><li>99</li><li>13</li><li>92</li><li>83</li><li>96</li><li>104</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'L'</li><li>'S'</li><li>'O'</li><li>'V'</li><li>'GR'</li><li>'G'</li><li>'GV'</li><li>'GH'</li><li>'GRY'</li><li>NA</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'19A'</li><li>'19B'</li><li>NA</li><li>'20A'</li><li>'20B'</li><li>'20E (EU1)'</li><li>'20A.EU2'</li><li>'20C'</li><li>'20G'</li><li>'20H/501Y.V2'</li><li>'20D'</li><li>'20J/501Y.V3'</li><li>'20F'</li><li>'20I/501Y.V1'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'19A'</li><li>'19B'</li><li>'20A'</li><li>'20E (EU1)'</li><li>'20C'</li><li>'20G'</li><li>'20H/501Y.V2'</li><li>'20B'</li><li>'20D'</li><li>'20J/501Y.V3'</li><li>'20F'</li><li>'20I/501Y.V1'</li></ol>
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class=list-inline><li>'B'</li><li>'A'</li><li>'A.6'</li><li>'A.2'</li><li>'A.2.4'</li><li>'A.2.5'</li><li>'A.5'</li><li>'A.1'</li><li>'A.21'</li><li>'A.18'</li><li>'A.12'</li><li>'A.28'</li><li>'A.19'</li><li>'A.25'</li><li>'A.23'</li><li>'A.23.1'</li><li>'B.12'</li><li>'B.56'</li><li>'B.4.7'</li><li>'B.31'</li><li>'B.61'</li><li>'B.40'</li><li>'B.35'</li><li>'B.28'</li><li>'B.11'</li><li>'B.55'</li><li>'B.27'</li><li>'B.3'</li><li>'B.4'</li><li>'B.4.8'</li><li>'B.4.2'</li><li>'B.53'</li><li>'B.6'</li><li>'B.1'</li><li>'B.6.6'</li><li>'B.6.1'</li><li>'B.6.2'</li><li>'B.6.8'</li><li>'B.1.256'</li><li>'B.1.1'</li><li>'B.1.1.420'</li><li>'B.1.240'</li><li>'B.1.205'</li><li>'B.1.128'</li><li>'B.1.221'</li><li>'B.1.223'</li><li>'B.1.214.2'</li><li>'B.1.214'</li><li>'B.1.146'</li><li>'B.1.147'</li><li>'B.1.104'</li><li>'B.1.391'</li><li>'B.1.380'</li><li>'B.1.203'</li><li>'B.1.540'</li><li>'B.1.416'</li><li>'B.1.600'</li><li>'B.1.160'</li><li>'B.1.195'</li><li>'B.1.609'</li><li>'B.1.561'</li><li>'B.1.232'</li><li>'B.1.558'</li><li>'B.1.239'</li><li>'B.1.237'</li><li>'B.1.597'</li><li>'B.1.480'</li><li>'B.1.397'</li><li>'B.1.408'</li><li>'B.1.243'</li><li>'B.1.240.2'</li><li>'B.1.240.1'</li><li>'B.1.524'</li><li>'B.1.179'</li><li>'B.1.1.298'</li><li>'B.1.400'</li><li>'B.1.398'</li><li>'B.1.236'</li><li>'B.1.234'</li><li>'B.1.459'</li><li>'B.1.131'</li><li>'B.1.525'</li><li>'B.1.563'</li><li>'B.1.411'</li><li>'B.1.379'</li><li>'B.1.177.31'</li><li>'B.1.177'</li><li>'B.1.177.73'</li><li>'B.1.177.11'</li><li>'B.1.177.14'</li><li>'B.1.177.15'</li><li>'AA.1'</li><li>'B.1.177.44'</li><li>'B.1.177.39'</li><li>'B.1.177.40'</li><li>'B.1.177.35'</li><li>'B.1.177.82'</li><li>'B.1.177.87'</li><li>'B.1.177.75'</li><li>'B.1.177.45'</li><li>'B.1.177.28'</li><li>'B.1.177.32'</li><li>'B.1.177.37'</li><li>'B.1.177.72'</li><li>'B.1.117.2'</li><li>'B.1.177.4'</li><li>'B.1.177.53'</li><li>'W.2'</li><li>'W.1'</li><li>'B.1.177.50'</li><li>'B.1.177.81'</li><li>'B.1.177.58'</li><li>'B.1.177.55'</li><li>'B.1.177.56'</li><li>'B.1.177.57'</li><li>'B.1.177.51'</li><li>'B.1.177.52'</li><li>'B.1.177.21'</li><li>'B.1.177.77'</li><li>'B.1.177.6'</li><li>'B.1.177.7'</li><li>'B.1.177.86'</li><li>'B.1.177.8'</li><li>'B.1.177.62'</li><li>'B.1.177.60'</li><li>'U.3'</li><li>'B.1.177.79'</li><li>'B.1.9.5'</li><li>'B.1.9'</li><li>'B.1.439'</li><li>'B.1.111'</li><li>'B.1.162'</li><li>'B.1.438'</li><li>'B.1.164'</li><li>'B.1.36'</li><li>'B.1.441'</li><li>'B.1.36.35'</li><li>'B.1.468'</li><li>'B.1.462'</li><li>'B.1.471'</li><li>'B.1.469'</li><li>'B.1.466'</li><li>'B.1.466.2'</li><li>'B.1.470'</li><li>'B.1.160.16'</li><li>'B.1.456'</li><li>'B.1.36.29'</li><li>'B.1.36.31'</li><li>'B.1.36.1'</li><li>'B.1.36.8'</li><li>'B.1.36.26'</li><li>'B.1.36.34'</li><li>'B.1.36.7'</li><li>'B.1.36.16'</li><li>'B.1.36.36'</li><li>'B.1.36.38'</li><li>'B.1.36.37'</li><li>'B.1.36.18'</li><li>'B.1.36.10'</li><li>'B.1.476'</li><li>'B.1.281'</li><li>'B.1.273'</li><li>'B.1.544'</li><li>'B.1.270'</li><li>'B.1.277'</li><li>'B.1.279'</li><li>'B.1.314'</li><li>'B.1.367'</li><li>'B.1.370'</li><li>'B.1.413'</li><li>'B.1.316'</li><li>'B.1.3'</li><li>'B.1.509'</li><li>'B.1.504'</li><li>'B.1.362'</li><li>'B.1.499'</li><li>'B.1.615'</li><li>'B.1.611'</li><li>'B.1.505'</li><li>'B.1.422'</li><li>'B.1.596.1'</li><li>'B.1.362.2'</li><li>'B.1.369'</li><li>'B.1.564'</li><li>'B.1.564.1'</li><li>'B.1.369.1'</li><li>'B.1.1.1'</li><li>'B.1.428'</li><li>'B.1.356'</li><li>'B.1.601'</li><li>'B.1.562'</li><li>'B.1.360'</li><li>'B.1.311'</li><li>'B.1.598'</li><li>'B.1.350'</li><li>'B.1.426'</li><li>'B.1.265'</li><li>'B.1.336'</li><li>'B.1.589'</li><li>'B.1.567'</li><li>...</li><li>'B.1.178'</li><li>'B.1.220'</li><li>'B.1.6'</li><li>'B.1.84'</li><li>'B.1.1.170'</li><li>'B.1.93'</li><li>'B.1.91'</li><li>'B.1.219'</li><li>'B.1.211'</li><li>'B.1.388'</li><li>'B.1.210'</li><li>'B.1.555'</li><li>'B.1.206'</li><li>'B.1.260'</li><li>'B.1.420'</li><li>'B.1.192'</li><li>'B.1.258'</li><li>'B.1.258.17'</li><li>'B.1.242'</li><li>'B.1.126'</li><li>'B.1.378'</li><li>'B.1.565'</li><li>'B.1.139'</li><li>'B.1.8'</li><li>'B.1.78'</li><li>'B.1.396'</li><li>'B.1.560'</li><li>'B.1.527'</li><li>'B.1.142'</li><li>'B.1.393'</li><li>'B.1.187'</li><li>'B.1.149'</li><li>'B.1.549'</li><li>'B.1.545'</li><li>'B.1.189'</li><li>'B.1.528'</li><li>'B.1.23'</li><li>'B.1.67'</li><li>'B.1.547'</li><li>'P.2'</li><li>'B.1.1.28'</li><li>'B.1.390'</li><li>'B.1.395'</li><li>'B.1.530'</li><li>'C.35'</li><li>'B.1.233'</li><li>'B.1.543'</li><li>'B.6.7'</li><li>'B.1.1.369'</li><li>'B.1.1.372'</li><li>'C.8'</li><li>'C.36'</li><li>'C.36.1'</li><li>'C.16'</li><li>'C.23'</li><li>'C.1.1'</li><li>'B.1.1.375'</li><li>'C.2.1'</li><li>'C.12'</li><li>'B.1.1.161'</li><li>'B.1.1.87'</li><li>'B.1.1.192'</li><li>'B.1.1.71'</li><li>'B.1.1.10'</li><li>'L.3'</li><li>'L.1'</li><li>'B.1.1.176'</li><li>'B.1.1.398'</li><li>'B.1.1.417'</li><li>'B.1.1.63'</li><li>'B.1.1.422'</li><li>'B.1.1.487'</li><li>'B.1.1.312'</li><li>'B.1.1.331'</li><li>'B.1.1.58'</li><li>'B.1.1.277'</li><li>'K.1'</li><li>'B.1.1.30'</li><li>'B.1.1.516'</li><li>'B.1.1.50'</li><li>'B.1.1.33'</li><li>'N.2'</li><li>'N.3'</li><li>'N.7'</li><li>'N.5'</li><li>'N.8'</li><li>'N.4'</li><li>'B.1.1.409'</li><li>'B.1.1.61'</li><li>'B.1.1.220'</li><li>'R.1'</li><li>'B.1.1.317'</li><li>'B.1.1.464.1'</li><li>'B.1.1.316'</li><li>'B.1.1.254'</li><li>'B.1.1.267'</li><li>'B.1.1.241'</li><li>'B.1.1.25'</li><li>'B.1.1.181'</li><li>'B.1.1.434'</li><li>'B.1.1.243'</li><li>'B.1.1.159'</li><li>'B.1.1.411'</li><li>'B.1.1.232'</li><li>'B.1.1.459'</li><li>'B.1.1.111'</li><li>'B.1.1.294'</li><li>'B.1.1.373'</li><li>'B.1.1.413'</li><li>'B.1.1.354'</li><li>'B.1.1.54'</li><li>'B.1.1.325'</li><li>'B.1.1.399'</li><li>'B.1.1.46'</li><li>'B.1.1.274'</li><li>'B.1.1.410'</li><li>'B.1.1.315'</li><li>'AD.2'</li><li>'B.1.1.142'</li><li>'B.1.1.485'</li><li>'B.1.1.200'</li><li>'B.1.1.339'</li><li>'AL.1'</li><li>'B.1.1.163'</li><li>'B.1.1.378'</li><li>'B.1.1.39'</li><li>'B.1.1.440'</li><li>'B.1.1.297'</li><li>'B.1.1.397'</li><li>'B.1.1.207'</li><li>'B.1.1.391'</li><li>'B.1.1.348'</li><li>'B.1.1.121'</li><li>'B.1.1.512'</li><li>'B.1.1.136'</li><li>'B.1.1.288'</li><li>'B.1.1.368'</li><li>'B.1.1.328'</li><li>'B.1.1.324'</li><li>'B.1.1.360'</li><li>'B.1.1.359'</li><li>'B.1.1.374'</li><li>'B.1.1.12'</li><li>'B.1.1.407'</li><li>'B.1.1.500'</li><li>'B.1.1.432'</li><li>'B.1.301'</li><li>'B.1.1.37'</li><li>'B.1.1.396'</li><li>'B.1.1.330'</li><li>'B.1.1.280'</li><li>'B.1.1.141'</li><li>'B.1.1.273'</li><li>'B.1.1.514'</li><li>'B.1.1.311'</li><li>'B.1.1.377'</li><li>'B.1.1.351'</li><li>'B.1.1.350'</li><li>'B.1.1.266'</li><li>'B.1.1.225'</li><li>'B.1.1.371'</li><li>'B.1.1.438'</li><li>'B.1.1.153'</li><li>'B.1.1.134'</li><li>'B.1.1.439'</li><li>'B.1.1.152'</li><li>'B.1.1.275'</li><li>'B.1.406'</li><li>'B.1.1.261'</li><li>'P.1'</li><li>'B.1.1.263'</li><li>'B.1.1.349'</li><li>'B.1.1.214'</li><li>'B.1.326'</li><li>'B.1.1.269'</li><li>'D.2'</li><li>'B.1.1.381'</li><li>'B.1.1.448'</li><li>'B.1.1.388'</li><li>'B.1.1.157'</li><li>'B.1.1.394'</li><li>'B.1.1.218'</li><li>'B.1.1.27'</li><li>'B.1.1.70'</li><li>'B.1.1.204'</li><li>'B.1.1.301'</li><li>'B.1.1.326'</li><li>'B.1.1.120'</li><li>'B.1.1.389'</li><li>'B.1.1.401'</li><li>'B.1.1.404'</li><li>'B.1.1.416'</li><li>'B.1.1.216'</li><li>'AM.1'</li><li>'AM.4'</li><li>'B.1.1.34'</li><li>'B.1.1.198'</li><li>'B.1.1.319'</li><li>'B.1.1.7'</li><li>NA</li></ol>
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
