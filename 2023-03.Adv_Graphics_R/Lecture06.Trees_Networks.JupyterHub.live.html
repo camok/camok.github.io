@@ -43842,12 +43842,12 @@ class="
 
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># How many offspring does it have?</span>
@@ -43860,7 +43860,7 @@ class="
 <span class="w">    </span><span class="c1"># make a tibble so we can see all the relevant information</span>
 <span class="w">    </span><span class="nf">as_tibble</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Find the offspring of a specific node</span>
-<span class="w">    </span><span class="nf">offspring</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">offspring</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">to_view_MRCA</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Convert to a tree</span>
 <span class="w">    </span><span class="nf">as.treedata</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="nf">str</span><span class="p">()</span>
@@ -43869,6 +43869,58 @@ class="
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Formal class &#39;treedata&#39; [package &#34;tidytree&#34;] with 11 slots
+  ..@ file       : chr(0) 
+  ..@ treetext   : chr(0) 
+  ..@ phylo      :List of 5
+  .. ..$ edge       : int [1:71, 1:2] 728 730 731 732 732 734 735 735 736 737 ...
+  .. .. ..- attr(*, &#34;dimnames&#34;)=List of 2
+  .. .. .. ..$ : NULL
+  .. .. .. ..$ : chr [1:2] &#34;parent&#34; &#34;node&#34;
+  .. ..$ edge.length: num [1:71] 0.1136 0.067 0.0521 0.0306 0.0333 ...
+  .. ..$ tip.label  : chr [1:39] &#34;Canada/NL-NML-16819/2021&#34; &#34;Canada/NL-NML-16824/2021&#34; &#34;Canada/NL-NML-17178/2021&#34; &#34;Canada/NL-NML-16829/2021&#34; ...
+  .. ..$ node.label : chr [1:32] &#34;NODE_0006538&#34; &#34;NODE_0006539&#34; &#34;NODE_0006540&#34; &#34;NODE_0006541&#34; ...
+  .. ..$ Nnode      : int 32
+  .. ..- attr(*, &#34;class&#34;)= chr &#34;phylo&#34;
+  ..@ data       : tibble [71 x 8] (S3: tbl_df/tbl/data.frame)
+  .. ..$ node               : int [1:71] 323 324 325 326 327 328 329 330 331 332 ...
+  .. ..$ GISAID             : chr [1:71] &#34;GRY&#34; &#34;GRY&#34; &#34;GRY&#34; &#34;GRY&#34; ...
+  .. ..$ emerging_nextstrain: chr [1:71] &#34;20I/501Y.V1&#34; &#34;20I/501Y.V1&#34; &#34;20I/501Y.V1&#34; &#34;20I/501Y.V1&#34; ...
+  .. ..$ PANGO              : chr [1:71] &#34;B.1.1.7&#34; &#34;B.1.1.7&#34; &#34;B.1.1.7&#34; &#34;B.1.1.7&#34; ...
+  .. ..$ strain_country     : chr [1:71] &#34;Canada&#34; &#34;Canada&#34; &#34;Canada&#34; &#34;Canada&#34; ...
+  .. ..$ strain_division    : chr [1:71] &#34;Newfoundland and Labrador&#34; &#34;Newfoundland and Labrador&#34; &#34;Newfoundland and Labrador&#34; &#34;Newfoundland and Labrador&#34; ...
+  .. ..$ strain_date        : Date[1:71], format: &#34;2021-02-10&#34; &#34;2021-02-12&#34; ...
+  .. ..$ Age                : num [1:71] 47 16 26 62 60 45 19 45 35 31 ...
+  ..@ extraInfo  : tibble [0 x 0] (S3: tbl_df/tbl/data.frame)
+ Named list()
+  ..@ tip_seq    : NULL
+  ..@ anc_seq    : NULL
+  ..@ seq_type   : chr(0) 
+  ..@ tipseq_file: chr(0) 
+  ..@ ancseq_file: chr(0) 
+  ..@ info       : list()
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
