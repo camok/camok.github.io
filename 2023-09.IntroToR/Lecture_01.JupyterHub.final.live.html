@@ -13326,12 +13326,12 @@ TRUE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [86]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Set up my_data_frame again</span>
@@ -13345,13 +13345,31 @@ TRUE
 <span class="c1">#but methods and the model-fitting functions treat the two classes quite differently.</span>
 <span class="n">my_data_frame</span><span class="o">$</span><span class="n">charCol</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">my_data_frame</span><span class="o">$</span><span class="n">charCol</span><span class="p">,</span><span class="w"> </span>
 <span class="w">                                </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'bacteria'</span><span class="p">,</span><span class="w"> </span><span class="s">'virus'</span><span class="p">,</span><span class="w"> </span><span class="s">'archaea'</span><span class="p">),</span><span class="w"> </span>
-<span class="w">                                 </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
+<span class="w">                                </span><span class="n">ordered</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="n">my_data_frame</span><span class="o">$</span><span class="n">charCol</span><span class="p">)</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">my_data_frame</span><span class="p">)</span>
 <span class="c1">#bacteria, virus, archaea</span>
 <span class="c1">#1,2,3</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[1] bacteria virus    archaea 
+Levels: bacteria &lt; virus &lt; archaea
+'data.frame':	3 obs. of  3 variables:
+ $ charCol: Ord.factor w/ 3 levels "bacteria"&lt;"virus"&lt;..: 1 2 3
+ $ numCol : int  1 2 3
+ $ logCol : logi  TRUE FALSE TRUE
+</pre>
 </div>
 </div>
 </div>
@@ -13369,12 +13387,12 @@ TRUE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [87]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># When labeling factors can go wrong</span>
@@ -13385,7 +13403,7 @@ TRUE
 
 <span class="c1">#factor() will decide the level order on it's OWN before applying the given labels!</span>
 <span class="n">my_data_frame</span><span class="o">$</span><span class="n">charCol</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">my_data_frame</span><span class="o">$</span><span class="n">charCol</span><span class="p">,</span><span class="w"> </span>
-<span class="w">                                  </span><span class="kc">...</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'label_1'</span><span class="p">,</span><span class="w"> </span><span class="s">'label_2'</span><span class="p">,</span><span class="w"> </span><span class="s">'...'</span><span class="p">))</span>
+<span class="w">                                  </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'label_1'</span><span class="p">,</span><span class="w"> </span><span class="s">'label_2'</span><span class="p">,</span><span class="w"> </span><span class="s">'label_3'</span><span class="p">))</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="n">my_data_frame</span><span class="o">$</span><span class="n">character</span><span class="p">)</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">my_data_frame</span><span class="p">)</span>
@@ -13396,6 +13414,23 @@ TRUE
 <span class="c1">#BUT data frame changed to:</span>
 <span class="c1">#virus, archaea, bacteria</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>NULL
+'data.frame':	3 obs. of  3 variables:
+ $ charCol: Factor w/ 3 levels "label_1","label_2",..: 2 3 1
+ $ numCol : int  1 2 3
+ $ logCol : logi  TRUE FALSE TRUE
+</pre>
 </div>
 </div>
 </div>
