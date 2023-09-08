@@ -13455,12 +13455,12 @@ Levels: bacteria &lt; virus &lt; archaea
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [88]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Labeling factors correctly</span>
@@ -13471,14 +13471,31 @@ Levels: bacteria &lt; virus &lt; archaea
 
 <span class="c1"># You need to supply factor() with the levels and labels if you want them turn our how you envision it</span>
 <span class="n">my_data_frame</span><span class="o">$</span><span class="n">charCol</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">my_data_frame</span><span class="o">$</span><span class="n">charCol</span><span class="p">,</span><span class="w"> </span>
-<span class="w">                                </span><span class="kc">...</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'bacteria'</span><span class="p">,</span><span class="w"> </span><span class="s">'virus'</span><span class="p">,</span><span class="w"> </span><span class="s">'archaea'</span><span class="p">),</span><span class="w"> </span><span class="c1"># explicitly order your levels!</span>
-<span class="w">                                </span><span class="kc">...</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'bacteria_label'</span><span class="p">,</span><span class="w"> </span><span class="s">'virus_label'</span><span class="p">,</span><span class="w"> </span><span class="s">'archaea_label'</span><span class="p">))</span><span class="w"> </span><span class="c1"># names the levels</span>
+<span class="w">                                </span><span class="n">levels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'bacteria'</span><span class="p">,</span><span class="w"> </span><span class="s">'virus'</span><span class="p">,</span><span class="w"> </span><span class="s">'archaea'</span><span class="p">),</span><span class="w"> </span><span class="c1"># explicitly order your levels!</span>
+<span class="w">                                </span><span class="n">labels</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">'bacteria_label'</span><span class="p">,</span><span class="w"> </span><span class="s">'virus_label'</span><span class="p">,</span><span class="w"> </span><span class="s">'archaea_label'</span><span class="p">))</span><span class="w"> </span><span class="c1"># names the levels</span>
 
 <span class="c1">#bacteria, virus, archaea</span>
 <span class="c1">#1,2,3</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">my_data_frame</span><span class="o">$</span><span class="n">character</span><span class="p">)</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">my_data_frame</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>NULL
+'data.frame':	3 obs. of  3 variables:
+ $ charCol: Factor w/ 3 levels "bacteria_label",..: 1 2 3
+ $ numCol : int  1 2 3
+ $ logCol : logi  TRUE FALSE TRUE
+</pre>
 </div>
 </div>
 </div>
@@ -13509,12 +13526,12 @@ Levels: bacteria &lt; virus &lt; archaea
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [89]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">my_data_frame</span>
@@ -13524,6 +13541,39 @@ Levels: bacteria &lt; virus &lt; archaea
 
 <span class="nf">print</span><span class="p">(</span><span class="n">my_data_frame</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 3 × 3</caption>
+<thead>
+<tr><th scope="col">charCol</th><th scope="col">numCol</th><th scope="col">logCol</th></tr>
+<tr><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;lgl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>bacteria_label</td><td>1</td><td> TRUE</td></tr>
+<tr><td>virus_label   </td><td>2</td><td>FALSE</td></tr>
+<tr><td>archaea_label </td><td>3</td><td> TRUE</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>         charCol numCol logCol
+1 bacteria_label      1   TRUE
+2    virus_label      2  FALSE
+3  archaea_label      3   TRUE
+</pre>
 </div>
 </div>
 </div>
@@ -13547,23 +13597,76 @@ Levels: bacteria &lt; virus &lt; archaea
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [90]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Multiply the entire data frame</span>
-<span class="n">my_data_frame</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="kc">...</span>
+<span class="n">my_data_frame</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">4</span>
 
 <span class="c1"># Multiple just a single column</span>
-<span class="n">my_data_frame</span><span class="o">$</span><span class="kc">...</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">4</span>
+<span class="n">my_data_frame</span><span class="o">$</span><span class="n">numCol</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">4</span>
 
 <span class="c1"># Slice a column and multiply</span>
-<span class="n">my_data_frame...</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">4</span>
+<span class="n">my_data_frame</span><span class="p">[,</span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">4</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Warning message in Ops.factor(left, right):
+"'*' not meaningful for factors"
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 3 × 3</caption>
+<thead>
+<tr><th scope="col">charCol</th><th scope="col">numCol</th><th scope="col">logCol</th></tr>
+<tr><th scope="col">&lt;lgl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>NA</td><td> 4</td><td>4</td></tr>
+<tr><td>NA</td><td> 8</td><td>0</td></tr>
+<tr><td>NA</td><td>12</td><td>4</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>4</li><li>8</li><li>12</li></ol>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>4</li><li>8</li><li>12</li></ol>
 </div>
 </div>
 </div>
