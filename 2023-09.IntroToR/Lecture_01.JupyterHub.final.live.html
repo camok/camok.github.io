@@ -14010,12 +14010,12 @@ Levels: bacteria &lt; virus &lt; archaea
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [95]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># To reduce confusion you should always clarify your function names!</span>
@@ -14023,6 +14023,23 @@ Levels: bacteria &lt; virus &lt; archaea
 <span class="w">      </span><span class="n">MARGIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span>
 <span class="w">      </span><span class="n">FUN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">rowData</span><span class="p">)</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">rowData</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class="dl-inline"><dt>geneA</dt><dd>27</dd><dt>geneB</dt><dd>29</dd><dt>geneC</dt><dd>52</dd><dt>geneD</dt><dd>51</dd></dl>
 </div>
 </div>
 </div>
@@ -14039,18 +14056,40 @@ Levels: bacteria &lt; virus &lt; archaea
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [96]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">apply</span><span class="p">(</span><span class="n">X</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">counts</span><span class="p">,</span><span class="w"> </span>
 <span class="w">      </span><span class="n">MARGIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span>
-<span class="w">      </span><span class="nf">function</span><span class="p">(</span><span class="n">rowData</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="kc">...</span><span class="p">))</span>
+<span class="w">      </span><span class="nf">function</span><span class="p">(</span><span class="n">rowData</span><span class="p">)</span><span class="w"> </span><span class="n">rowData</span><span class="o">*</span><span class="m">3</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A matrix: 3 × 4 of type dbl</caption>
+<thead>
+<tr><th></th><th scope="col">geneA</th><th scope="col">geneB</th><th scope="col">geneC</th><th scope="col">geneD</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">Site1</th><td> 6</td><td>12</td><td>36</td><td>24</td></tr>
+<tr><th scope="row">Site2</th><td>45</td><td>54</td><td>81</td><td>84</td></tr>
+<tr><th scope="row">Site3</th><td>30</td><td>21</td><td>39</td><td>45</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
