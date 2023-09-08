@@ -11668,32 +11668,112 @@ Traceback:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># A matrix is a 2D object. We can now check out a couple more properties - like the number of rows and columns.</span>
 <span class="n">my_matrix</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="s">"structure"</span><span class="p">)</span>
-<span class="kc">...</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="s">"rows"</span><span class="p">)</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span>
+<span class="nf">nrow</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="s">"columns"</span><span class="p">)</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span>
+<span class="nf">ncol</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="s">"dimensions"</span><span class="p">)</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span><span class="w"> </span><span class="c1"># reported as rows vs columns</span>
+<span class="nf">dim</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span><span class="w"> </span><span class="c1"># reported as rows vs columns</span>
 
 <span class="nf">print</span><span class="p">(</span><span class="s">"length"</span><span class="p">)</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span>
+<span class="nf">length</span><span class="p">(</span><span class="n">my_matrix</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A matrix: 5 × 5 of type dbl</caption>
+<tbody>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[1] "structure"
+ num [1:5, 1:5] 0 0 0 0 0 0 0 0 0 0 ...
+[1] "rows"
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+5
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[1] "columns"
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+5
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[1] "dimensions"
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>5</li><li>5</li></ol>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[1] "length"
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+25
 </div>
 </div>
 </div>
