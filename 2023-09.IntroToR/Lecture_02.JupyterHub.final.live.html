@@ -10459,12 +10459,12 @@ TRUE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Replace the NA values in our table under the "Location" column.</span>
@@ -10475,6 +10475,23 @@ TRUE
 <span class="nf">which</span><span class="p">(</span><span class="nf">apply</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span><span class="n">MARGIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span>
 <span class="w">            </span><span class="nf">function</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="nf">anyNA</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span><span class="w"> </span><span class="c1"># Notice our use of the anyNA() function this time?</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.dl-inline {width: auto; margin:0; padding: 0}
+.dl-inline>dt, .dl-inline>dd {float: none; width: auto; display: inline-block}
+.dl-inline>dt::after {content: ":\0020"; padding-right: .5ex}
+.dl-inline>dt:not(:first-of-type) {padding-left: .5ex}
+</style><dl class="dl-inline"><dt>Time plated</dt><dd>17</dd><dt>Time Incubated</dt><dd>18</dd></dl>
 </div>
 </div>
 </div>
@@ -10501,7 +10518,7 @@ TRUE
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
 <div class="alert alert-block alert-danger">
-<b>Comprehension Question 3:</b> Replace the values in <b>Time plated</b> and <b>Time Incubated</b> with the values 1300 and 1600 respectively. You can do this by completing the skeleton code below where we'll make a copy of the tibble to work on called <b>"comprehension_meta.tbl"</b>. Check for NA values afterwards!
+<b>Comprehension Question 3:</b> Replace the NA values in <b>Time plated</b> and <b>Time Incubated</b> with the values 1300 and 1600 respectively. You can do this by completing the skeleton code below where we'll make a copy of the tibble to work on called <b>"comprehension_meta.tbl"</b>. Check for NA values afterwards!
 </div>
 </div>
 </div>
