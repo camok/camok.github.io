@@ -8431,20 +8431,46 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># read in an excel files by a specific column range</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="nf">read_excel</span><span class="p">(</span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"data/infection_data_all.xlsx"</span><span class="p">,</span><span class="w"> </span>
 <span class="w">                </span><span class="n">sheet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"infection_metadata"</span><span class="p">,</span><span class="w"> </span>
-<span class="w">                </span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">))</span>
+<span class="w">                </span><span class="n">range</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">cell_cols</span><span class="p">(</span><span class="s">"B:D"</span><span class="p">)))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+<tr><th scope="col">experimenter</th><th scope="col">description</th><th scope="col">Infection Date</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+<tr><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
