@@ -12595,22 +12595,48 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [89]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># adding columns can also be done using "base R" code:</span>
 <span class="c1"># This will permanently change meta_trimmed.tbl</span>
-<span class="n">meta_trimmed.tbl</span><span class="o">$</span><span class="n">spore_strain</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="o">$</span><span class="n">`Spore Strain`</span><span class="p">,</span><span class="w"> </span>
+<span class="n">meta_trimmed.tbl</span><span class="o">$</span><span class="n">spore_strain_lot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="o">$</span><span class="n">`Spore Strain`</span><span class="p">,</span><span class="w"> </span>
 <span class="w">                                           </span><span class="n">meta_trimmed.tbl</span><span class="o">$</span><span class="n">`Spore Lot`</span><span class="p">,</span><span class="w"> </span>
 <span class="w">                                           </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"_"</span><span class="p">)</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 13</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">Worm_strain</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Total Spores (M)</th><th scope="col">Total ul spore</th><th scope="col">Spores(M)/cm2</th><th scope="col">Infection Date</th><th scope="col">Fixing Date</th><th scope="col">Staining Date</th><th scope="col">Slide date</th><th scope="col">Imaging Date</th><th scope="col">spore_strain_lot</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>VC20019</td><td>LUAm1</td><td>2A</td><td> 0</td><td>  0.00000</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td><td>LUAm1_2A</td></tr>
+<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>10</td><td> 56.81818</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td><td>LUAm1_2A</td></tr>
+<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>20</td><td>113.63636</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td><td>LUAm1_2A</td></tr>
+<tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>N2     </td><td>LUAm1</td><td>2A</td><td> 0</td><td>  0.00000</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td><td>LUAm1_2A</td></tr>
+<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>10</td><td> 56.81818</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td><td>LUAm1_2A</td></tr>
+<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>20</td><td>113.63636</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td><td>LUAm1_2A</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -12627,21 +12653,58 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [90]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Check the column names before and after removing `compound_salinity`</span>
 <span class="nf">colnames</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">)</span>
 
-<span class="n">meta_trimmed.tbl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="c1"># remove column spore_strain_lot</span>
+<span class="n">meta_trimmed.tbl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">select</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">spore_strain_lot</span><span class="p">)</span><span class="w"> </span><span class="c1"># remove column spore_strain_lot</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>'experiment'</li><li>'Worm_strain'</li><li>'Spore Strain'</li><li>'Spore Lot'</li><li>'Total Spores (M)'</li><li>'Total ul spore'</li><li>'Spores(M)/cm2'</li><li>'Infection Date'</li><li>'Fixing Date'</li><li>'Staining Date'</li><li>'Slide date'</li><li>'Imaging Date'</li><li>'spore_strain_lot'</li></ol>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 12</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">Worm_strain</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Total Spores (M)</th><th scope="col">Total ul spore</th><th scope="col">Spores(M)/cm2</th><th scope="col">Infection Date</th><th scope="col">Fixing Date</th><th scope="col">Staining Date</th><th scope="col">Slide date</th><th scope="col">Imaging Date</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>VC20019</td><td>LUAm1</td><td>2A</td><td> 0</td><td>  0.00000</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>10</td><td> 56.81818</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>20</td><td>113.63636</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>N2     </td><td>LUAm1</td><td>2A</td><td> 0</td><td>  0.00000</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td></tr>
+<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>10</td><td> 56.81818</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>20</td><td>113.63636</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
