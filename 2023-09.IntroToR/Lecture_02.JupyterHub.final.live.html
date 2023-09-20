@@ -9162,12 +9162,12 @@ tibble [276 x 1] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Re-import our microbe.csv file from the data folder if you need to</span>
@@ -9177,8 +9177,51 @@ tibble [276 x 1] (S3: tbl_df/tbl/data.frame)
 <span class="nf">head</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">)</span>
 
 <span class="c1"># Pull just the first 3 rows</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 29</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">experimenter</th><th scope="col">description</th><th scope="col">Infection Date</th><th scope="col">Plate Number</th><th scope="col">Worm_strain</th><th scope="col">Total Worms</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Lot concentration</th><th scope="col">...</th><th scope="col">timepoint</th><th scope="col">infection.type</th><th scope="col">Fixing Date</th><th scope="col">Location</th><th scope="col">Staining Date</th><th scope="col">Stain type</th><th scope="col">Slide date</th><th scope="col">Slide number</th><th scope="col">Slide Box</th><th scope="col">Imaging Date</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">...</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>1</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>1</td><td>2</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>2</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>2</td><td>2</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>3</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>3</td><td>2</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>4</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190430</td><td>DY96            </td><td>190501</td><td>4</td><td>2</td><td>190502</td></tr>
+<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>5</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>5</td><td>2</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>6</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>6</td><td>2</td><td>190516</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 3 × 29</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">experimenter</th><th scope="col">description</th><th scope="col">Infection Date</th><th scope="col">Plate Number</th><th scope="col">Worm_strain</th><th scope="col">Total Worms</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Lot concentration</th><th scope="col">...</th><th scope="col">timepoint</th><th scope="col">infection.type</th><th scope="col">Fixing Date</th><th scope="col">Location</th><th scope="col">Staining Date</th><th scope="col">Stain type</th><th scope="col">Slide date</th><th scope="col">Slide number</th><th scope="col">Slide Box</th><th scope="col">Imaging Date</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">...</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>1</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>1</td><td>2</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>2</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>2</td><td>2</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>3</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>3</td><td>2</td><td>190516</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -9195,17 +9238,47 @@ tibble [276 x 1] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Let's pull up the last 10 rows to look at!</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+<span class="nf">tail</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 10 × 29</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">experimenter</th><th scope="col">description</th><th scope="col">Infection Date</th><th scope="col">Plate Number</th><th scope="col">Worm_strain</th><th scope="col">Total Worms</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Lot concentration</th><th scope="col">...</th><th scope="col">timepoint</th><th scope="col">infection.type</th><th scope="col">Fixing Date</th><th scope="col">Location</th><th scope="col">Staining Date</th><th scope="col">Stain type</th><th scope="col">Slide date</th><th scope="col">Slide number</th><th scope="col">Slide Box</th><th scope="col">Imaging Date</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">...</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>200916_JU1400_ERTm5-96H_1.75M_96hpi</td><td>CM</td><td>NIL tests for ERTM5</td><td>200912</td><td>13</td><td>JU1400</td><td> 500</td><td>ERTm5-96H</td><td>2</td><td>427000</td><td>...</td><td>96</td><td>continuous</td><td>200916</td><td>Sample exhausted</td><td>200921</td><td>microB FISH + DY96</td><td>200921</td><td>13</td><td>6</td><td>201005</td></tr>
+<tr><td>200916_JU1400_ERTm5-96H_3.5M_96hpi </td><td>CM</td><td>NIL tests for ERTM5</td><td>200912</td><td>14</td><td>JU1400</td><td> 500</td><td>ERTm5-96H</td><td>2</td><td>427000</td><td>...</td><td>96</td><td>continuous</td><td>200916</td><td>Sample exhausted</td><td>200921</td><td>microB FISH + DY96</td><td>200921</td><td>14</td><td>6</td><td>201005</td></tr>
+<tr><td>200918_N2_ERTm5_0M_72hpi           </td><td>CM</td><td>NIL tests for ERTM5</td><td>200915</td><td> 1</td><td>N2    </td><td>1000</td><td>ERTm5    </td><td>2</td><td>427000</td><td>...</td><td>72</td><td>continuous</td><td>200918</td><td>Sample exhausted</td><td>200921</td><td>microB FISH + DY96</td><td>200921</td><td> 1</td><td>6</td><td>201006</td></tr>
+<tr><td>200918_N2_ERTm5_3.5M_72hpi         </td><td>CM</td><td>NIL tests for ERTM5</td><td>200915</td><td> 2</td><td>N2    </td><td>1000</td><td>ERTm5    </td><td>2</td><td>427000</td><td>...</td><td>72</td><td>continuous</td><td>200918</td><td>Sample exhausted</td><td>200921</td><td>microB FISH + DY96</td><td>200921</td><td> 2</td><td>6</td><td>201006</td></tr>
+<tr><td>200918_JU1400_ERTm5_0M_72hpi       </td><td>CM</td><td>NIL tests for ERTM5</td><td>200915</td><td> 3</td><td>JU1400</td><td>1000</td><td>ERTm5    </td><td>2</td><td>427000</td><td>...</td><td>72</td><td>continuous</td><td>200918</td><td>Sample exhausted</td><td>200921</td><td>microB FISH + DY96</td><td>200921</td><td> 3</td><td>6</td><td>201006</td></tr>
+<tr><td>200918_JU1400_ERTm5_3.5M_72hpi     </td><td>CM</td><td>NIL tests for ERTM5</td><td>200915</td><td> 4</td><td>JU1400</td><td>1000</td><td>ERTm5    </td><td>2</td><td>427000</td><td>...</td><td>72</td><td>continuous</td><td>200918</td><td>Sample exhausted</td><td>200921</td><td>microB FISH + DY96</td><td>200921</td><td> 4</td><td>6</td><td>201006</td></tr>
+<tr><td>200918_AWR144_ERTm5_0M_72hpi       </td><td>CM</td><td>NIL tests for ERTM5</td><td>200915</td><td> 5</td><td>AWR144</td><td>1000</td><td>ERTm5    </td><td>2</td><td>427000</td><td>...</td><td>72</td><td>continuous</td><td>200918</td><td>Sample exhausted</td><td>200921</td><td>microB FISH + DY96</td><td>200921</td><td> 5</td><td>6</td><td>201006</td></tr>
+<tr><td>200918_AWR144_ERTm5_3.5M_72hpi     </td><td>CM</td><td>NIL tests for ERTM5</td><td>200915</td><td> 6</td><td>AWR144</td><td>1000</td><td>ERTm5    </td><td>2</td><td>427000</td><td>...</td><td>72</td><td>continuous</td><td>200918</td><td>Sample exhausted</td><td>200921</td><td>microB FISH + DY96</td><td>200921</td><td> 6</td><td>6</td><td>201006</td></tr>
+<tr><td>200918_AWR145_ERTm5_0M_72hpi       </td><td>CM</td><td>NIL tests for ERTM5</td><td>200915</td><td> 7</td><td>AWR145</td><td>1000</td><td>ERTm5    </td><td>2</td><td>427000</td><td>...</td><td>72</td><td>continuous</td><td>200918</td><td>Sample exhausted</td><td>200921</td><td>microB FISH + DY96</td><td>200921</td><td> 7</td><td>6</td><td>201006</td></tr>
+<tr><td>200918_AWR145_ERTm5_3.5M_72hpi     </td><td>CM</td><td>NIL tests for ERTM5</td><td>200915</td><td> 8</td><td>AWR145</td><td>1000</td><td>ERTm5    </td><td>2</td><td>427000</td><td>...</td><td>72</td><td>continuous</td><td>200918</td><td>Sample exhausted</td><td>200921</td><td>microB FISH + DY96</td><td>200921</td><td> 8</td><td>6</td><td>201006</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
