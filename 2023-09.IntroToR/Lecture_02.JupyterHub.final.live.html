@@ -10195,7 +10195,7 @@ TRUE
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Which values are NA?</span>
@@ -10205,7 +10205,7 @@ TRUE
 <span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">na_vector</span><span class="p">)</span>
 
 <span class="c1"># Apply this in our code for conditional indexing</span>
-<span class="c1"># removed_na_vector_2 &lt;- na_vector[...] ; removed_na_vector_2</span>
+<span class="n">removed_na_vector_2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">na_vector</span><span class="p">[</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">na_vector</span><span class="p">)]</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">removed_na_vector_2</span>
 </pre></div>
 </div>
 </div>
@@ -10237,6 +10237,17 @@ TRUE
 <ol class="list-inline"><li>TRUE</li><li>TRUE</li><li>FALSE</li><li>TRUE</li><li>TRUE</li><li>FALSE</li></ol>
 </div>
 </div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>5</li><li>6</li><li>7</li><li>7</li></ol>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -10254,17 +10265,34 @@ TRUE
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Which values in infection_meta.tbl are NA? Recall we have 276 rows of data!</span>
-<span class="nf">...</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">))</span>
+<span class="nf">which</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>4480</li><li>4481</li><li>4482</li><li>4483</li><li>4484</li><li>4485</li><li>4486</li><li>4487</li><li>4488</li><li>4489</li><li>4490</li><li>4491</li><li>4492</li><li>4493</li><li>4494</li><li>4495</li><li>4496</li><li>4497</li><li>4498</li><li>4499</li><li>4500</li><li>4501</li><li>4502</li><li>4503</li><li>4504</li><li>4505</li><li>4506</li><li>4507</li><li>4508</li><li>4509</li><li>4510</li><li>4511</li><li>4512</li><li>4513</li><li>4514</li><li>4515</li><li>4516</li><li>4517</li><li>4518</li><li>4519</li><li>4520</li><li>4521</li><li>4522</li><li>4523</li><li>4524</li><li>4525</li><li>4526</li><li>4527</li><li>4528</li><li>4529</li><li>4530</li><li>4531</li><li>4532</li><li>4533</li><li>4534</li><li>4535</li><li>4536</li><li>4537</li><li>4538</li><li>4539</li><li>4540</li><li>4541</li><li>4542</li><li>4543</li><li>4544</li><li>4545</li><li>4546</li><li>4547</li><li>4548</li><li>4549</li><li>4550</li><li>4551</li><li>4552</li><li>4553</li><li>4554</li><li>4555</li><li>4556</li><li>4557</li><li>4558</li><li>4559</li><li>4560</li><li>4561</li><li>4562</li><li>4563</li><li>4564</li><li>4565</li><li>4566</li><li>4567</li><li>4568</li><li>4569</li><li>4570</li><li>4571</li><li>4572</li><li>4573</li><li>4574</li><li>4575</li><li>4576</li><li>4577</li><li>4578</li><li>4579</li><li>4580</li><li>4581</li><li>4582</li><li>4583</li><li>4584</li><li>4585</li><li>4586</li><li>4587</li><li>4588</li><li>4589</li><li>4590</li><li>4591</li><li>4592</li><li>4593</li><li>4594</li><li>4595</li><li>4596</li><li>4597</li><li>4598</li><li>4599</li><li>4600</li><li>4601</li><li>4602</li><li>4603</li><li>4604</li><li>4605</li><li>4606</li><li>4607</li><li>4608</li><li>4609</li><li>4610</li><li>4611</li><li>4612</li><li>4613</li><li>4614</li><li>4615</li><li>4616</li><li>4617</li><li>4618</li><li>4619</li><li>4620</li><li>4621</li><li>4622</li><li>4623</li><li>4624</li><li>4625</li><li>4626</li><li>4627</li><li>4628</li><li>4629</li><li>4630</li><li>4631</li><li>4632</li><li>4633</li><li>4634</li><li>4635</li><li>4636</li><li>4637</li><li>4638</li><li>4639</li><li>4640</li><li>4641</li><li>4642</li><li>4643</li><li>4644</li><li>4645</li><li>4646</li><li>4647</li><li>4648</li><li>4649</li><li>4650</li><li>4651</li><li>4652</li><li>4653</li><li>4654</li><li>4655</li><li>4656</li><li>4657</li><li>4658</li><li>4659</li><li>4660</li><li>4661</li><li>4662</li><li>4663</li><li>4664</li><li>4665</li><li>4666</li><li>4667</li><li>4668</li><li>4669</li><li>4670</li><li>4671</li><li>4672</li><li>4673</li><li>4674</li><li>4675</li><li>4676</li><li>4677</li><li>4678</li><li>4679</li><li>4680</li><li>4681</li><li>4682</li><li>4683</li><li>4684</li><li>4685</li><li>4686</li><li>4687</li><li>4688</li><li>4689</li><li>4690</li><li>4691</li><li>4692</li><li>4756</li><li>4757</li><li>4758</li><li>4759</li><li>4760</li><li>4761</li><li>4762</li><li>4763</li><li>4764</li><li>4765</li><li>4766</li><li>4767</li><li>4768</li><li>4769</li><li>4770</li><li>4771</li><li>4772</li><li>4773</li><li>4774</li><li>4775</li><li>4776</li><li>4777</li><li>4778</li><li>4779</li><li>4780</li><li>4781</li><li>4782</li><li>4783</li><li>4784</li><li>4785</li><li>4786</li><li>4787</li><li>4788</li><li>4789</li><li>4790</li><li>4791</li><li>4792</li><li>4793</li><li>4794</li><li>4795</li><li>4796</li><li>4797</li><li>4798</li><li>4799</li><li>4800</li><li>4801</li><li>4802</li><li>4803</li><li>6109</li><li>6110</li><li>6111</li><li>6118</li><li>6119</li><li>6120</li><li>6136</li><li>6137</li><li>6138</li><li>6139</li><li>6140</li><li>6141</li><li>6142</li><li>6143</li><li>6144</li><li>6145</li><li>6146</li><li>6147</li><li>6148</li><li>6149</li><li>6150</li><li>6151</li><li>6152</li><li>6153</li><li>6154</li><li>6155</li><li>6156</li></ol>
 </div>
 </div>
 </div>
