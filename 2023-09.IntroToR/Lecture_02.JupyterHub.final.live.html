@@ -8954,22 +8954,22 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Pull a single column from our tibble</span>
 <span class="nf">print</span><span class="p">(</span><span class="s">"Indexing a column from a tibble is still a tibble"</span><span class="p">)</span>
-<span class="nf">str</span><span class="p">(</span><span class="n">excel_sheets_list</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">excel_sheets_list</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">1</span><span class="p">])</span>
 
 <span class="c1"># Index a column with the $ notation but you need to know the name of your column</span>
 <span class="nf">cat</span><span class="p">(</span><span class="s">"\n"</span><span class="p">)</span><span class="w"> </span><span class="c1"># print a blank line</span>
 <span class="nf">print</span><span class="p">(</span><span class="s">"Indexing a column into a vector with $"</span><span class="p">)</span>
-<span class="nf">str</span><span class="p">(</span><span class="n">excel_sheets_list</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="o">$</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">excel_sheets_list</span><span class="p">[[</span><span class="m">1</span><span class="p">]]</span><span class="o">$</span><span class="n">experiment</span><span class="p">)</span>
 
 <span class="c1"># Index a column with the pull() function if you know it's position or name</span>
 <span class="nf">cat</span><span class="p">(</span><span class="s">"\n"</span><span class="p">)</span>
@@ -8981,6 +8981,30 @@ a.anchor-link {
 <span class="nf">print</span><span class="p">(</span><span class="s">"Indexing a column from a data.frame becomes a vector"</span><span class="p">)</span>
 <span class="nf">str</span><span class="p">(</span><span class="nf">data.frame</span><span class="p">(</span><span class="n">excel_sheets_list</span><span class="p">[[</span><span class="m">1</span><span class="p">]])[,</span><span class="m">1</span><span class="p">])</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[1] "Indexing a column from a tibble is still a tibble"
+tibble [276 x 1] (S3: tbl_df/tbl/data.frame)
+ $ experiment: chr [1:276] "190426_VC20019_LUAm1_0M_72hpi" "190426_VC20019_LUAm1_10M_72hpi" "190426_VC20019_LUAm1_20M_72hpi" "190426_N2_LUAm1_0M_72hpi" ...
+
+[1] "Indexing a column into a vector with $"
+ chr [1:276] "190426_VC20019_LUAm1_0M_72hpi" ...
+
+[1] "Indexing a column into a vector with pull()"
+ chr [1:276] "190426_VC20019_LUAm1_0M_72hpi" ...
+
+[1] "Indexing a column from a data.frame becomes a vector"
+ chr [1:276] "190426_VC20019_LUAm1_0M_72hpi" ...
+</pre>
 </div>
 </div>
 </div>
