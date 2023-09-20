@@ -12963,14 +12963,14 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [97]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># install.packages("writexl", dependencies = TRUE)</span>
 <span class="c1"># library(writexl)</span>
 
 <span class="c1"># Write a list to a single xlsx file</span>
-<span class="nf">write_xlsx</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="s">"..."</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span><span class="s">"metadata_summary"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">write_result</span><span class="p">),</span>
+<span class="nf">write_xlsx</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="s">"metadata_trimmed"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span><span class="s">"metadata_summary"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">write_result</span><span class="p">),</span>
 <span class="w">           </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"data/metadata_analysis.xlsx"</span><span class="p">,</span>
 <span class="w">           </span><span class="n">col_names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span>
 <span class="w">          </span><span class="p">)</span>
