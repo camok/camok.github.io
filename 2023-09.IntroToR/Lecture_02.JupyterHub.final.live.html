@@ -11179,42 +11179,159 @@ Warning message in cbind(parts$left, chars$ellip_h, parts$right, deparse.level =
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># == means "is exactly". </span>
 <span class="c1"># Query for rows with Plate Size = 6 and Spores(M)/cm2 = 0</span>
 <span class="nf">glimpse</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span>
-<span class="w">               </span><span class="n">`Plate Size`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span><span class="n">`Spores(M)/cm2`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
+<span class="w">               </span><span class="n">`Plate Size`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">`Spores(M)/cm2`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
 
 <span class="c1"># equivalently, the ',' represents an implicit &amp;</span>
 <span class="nf">glimpse</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span>
-<span class="w">               </span><span class="n">`Plate Size`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span>
+<span class="w">               </span><span class="n">`Plate Size`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">6</span><span class="p">,</span><span class="w"> </span>
 <span class="w">               </span><span class="n">`Spores(M)/cm2`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Rows: 77
+Columns: 29
+$ experiment          <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "190426_VC20019_LUAm1_0M_72hpi", "190426_N2_LUAm1_~
+$ experimenter        <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "CM", "CM", "CM", "CM", "CM", "CM", "CM", "CM", "C~
+$ description         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "Wild isolate phenoMIP retest", "Wild isolate phen~
+$ `Infection Date`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190423, 190423, 190423, 190423, 190423, 190423, 19~
+$ `Plate Number`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 4~
+$ Worm_strain         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "VC20019", "N2", "AB1", "JU397", "JU642", "MY6", "~
+$ `Total Worms`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 10~
+$ `Spore Strain`      <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "LUAm1", "LUAm1", "LUAm1", "LUAm1", "LUAm1", "LUAm~
+$ `Spore Lot`         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "2A", "2A", "2A", "2A", "2A", "2A", "2A", "2A", "2~
+$ `Lot concentration` <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 176000, 176000, 176000, 176000, 176000, 176000, 17~
+$ `Total Spores (M)`  <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,~
+$ `Total ul spore`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,~
+$ `Infection Round`   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,~
+$ `40X OP50 (mL)`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.~
+$ `Plate Size`        <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,~
+$ `Spores(M)/cm2`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,~
+$ `Time plated`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1300, 1300, 1300, 1300, 1300, 1300, 1300, 1300, 13~
+$ `Time Incubated`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1600, 1600, 1600, 1600, 1600, 1600, 1600, 1600, 16~
+$ Temp                <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21~
+$ timepoint           <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "72", "72", "72", "72", "72", "72", "72", "72", "7~
+$ infection.type      <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "continuous", "continuous", "continuous", "continu~
+$ `Fixing Date`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190426, 190426, 190426, 190426, 190426, 190426, 19~
+$ Location            <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "Sample exhausted", "Sample exhausted", "Sample ex~
+$ `Staining Date`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190513, 190430, 190430, 190430, 190430, 190430, 19~
+$ `Stain type`        <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "Sp.9 FISH + DY96", "DY96", "DY96", "DY96", "DY96"~
+$ `Slide date`        <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190515, 190501, 190501, 190501, 190501, 190501, 19~
+$ `Slide number`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 4~
+$ `Slide Box`         <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 3, 2,~
+$ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190516, 190502, 190502, 190502, 190502, 190502, 19~
+Rows: 77
+Columns: 29
+$ experiment          <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "190426_VC20019_LUAm1_0M_72hpi", "190426_N2_LUAm1_~
+$ experimenter        <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "CM", "CM", "CM", "CM", "CM", "CM", "CM", "CM", "C~
+$ description         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "Wild isolate phenoMIP retest", "Wild isolate phen~
+$ `Infection Date`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190423, 190423, 190423, 190423, 190423, 190423, 19~
+$ `Plate Number`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 4~
+$ Worm_strain         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "VC20019", "N2", "AB1", "JU397", "JU642", "MY6", "~
+$ `Total Worms`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 10~
+$ `Spore Strain`      <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "LUAm1", "LUAm1", "LUAm1", "LUAm1", "LUAm1", "LUAm~
+$ `Spore Lot`         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "2A", "2A", "2A", "2A", "2A", "2A", "2A", "2A", "2~
+$ `Lot concentration` <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 176000, 176000, 176000, 176000, 176000, 176000, 17~
+$ `Total Spores (M)`  <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,~
+$ `Total ul spore`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,~
+$ `Infection Round`   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,~
+$ `40X OP50 (mL)`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.~
+$ `Plate Size`        <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,~
+$ `Spores(M)/cm2`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,~
+$ `Time plated`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1300, 1300, 1300, 1300, 1300, 1300, 1300, 1300, 13~
+$ `Time Incubated`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1600, 1600, 1600, 1600, 1600, 1600, 1600, 1600, 16~
+$ Temp                <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21~
+$ timepoint           <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "72", "72", "72", "72", "72", "72", "72", "72", "7~
+$ infection.type      <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "continuous", "continuous", "continuous", "continu~
+$ `Fixing Date`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190426, 190426, 190426, 190426, 190426, 190426, 19~
+$ Location            <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "Sample exhausted", "Sample exhausted", "Sample ex~
+$ `Staining Date`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190513, 190430, 190430, 190430, 190430, 190430, 19~
+$ `Stain type`        <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "Sp.9 FISH + DY96", "DY96", "DY96", "DY96", "DY96"~
+$ `Slide date`        <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190515, 190501, 190501, 190501, 190501, 190501, 19~
+$ `Slide number`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 4~
+$ `Slide Box`         <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 2, 2, 3, 2,~
+$ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 190516, 190502, 190502, 190502, 190502, 190502, 19~
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># != means "is not"</span>
 <span class="c1"># Query for experiments on plate size not equal to 6 and Spore density not equal to 0</span>
 <span class="nf">glimpse</span><span class="p">(</span><span class="nf">filter</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span>
-<span class="w">               </span><span class="n">`Plate Size`</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span><span class="m">6</span><span class="p">,</span>
-<span class="w">               </span><span class="n">`Spores(M)/cm2`</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
+<span class="w">               </span><span class="n">`Plate Size`</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span>
+<span class="w">               </span><span class="n">`Spores(M)/cm2`</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m">0</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Rows: 18
+Columns: 29
+$ experiment          <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "200821_N2_LUAm1_30M_72hpi", "200821_JU1400_LUAm1_~
+$ experimenter        <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "CM", "CM", "CM", "CM", "CM", "CM", "CM", "CM", "C~
+$ description         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "RNAseq data rep 1", "RNAseq data rep 1", "RNAseq ~
+$ `Infection Date`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 200818, 200818, 200818, 200818, 200818, 200818, 20~
+$ `Plate Number`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 13, 14, 15, 16, 17, 18, 27, 28, 29, 30, 31, 32, 13~
+$ Worm_strain         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "N2", "JU1400", "N2", "JU1400", "N2", "JU1400", "N~
+$ `Total Worms`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 10000, 10000, 10000, 10000, 10000, 10000, 10000, 1~
+$ `Spore Strain`      <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "LUAm1", "LUAm1", "ERTm5", "ERTm5", "MAM1", "MAM1"~
+$ `Spore Lot`         <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "2A", "2A", "2", "2", "1", "1", "2A", "2A", "2A", ~
+$ `Lot concentration` <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 176000, 176000, 427000, 427000, 370000, 370000, 17~
+$ `Total Spores (M)`  <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 30, 30, 10, 10, 12, 12, 10, 10, 10, 10, 10, 10, 40~
+$ `Total ul spore`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 170.45455, 170.45455, 23.41920, 23.41920, 32.43243~
+$ `Infection Round`   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,~
+$ `40X OP50 (mL)`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 0.25, 0.25, 0.~
+$ `Plate Size`        <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10~
+$ `Spores(M)/cm2`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 0.3821656, 0.3821656, 0.1273885, 0.1273885, 0.1528~
+$ `Time plated`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA~
+$ `Time Incubated`    <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 48, 48, 48, 48, 48, 48, 72, 72, 72, 72, 72, 72, 48~
+$ Temp                <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21~
+$ timepoint           <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "72", "72", "72", "72", "72", "72", "72", "72", "7~
+$ infection.type      <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "continuous", "continuous", "continuous", "continu~
+$ `Fixing Date`       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 200821, 200821, 200821, 200821, 200821, 200821, 20~
+$ Location            <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "Sample exhausted", "Sample exhausted", "Sample ex~
+$ `Staining Date`     <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 200831, 200831, 200831, 200831, 200831, 200831, 20~
+$ `Stain type`        <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "Sp.9 FISH + DY96", "Sp.9 FISH + DY96", "microB FI~
+$ `Slide date`        <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 200903, 200903, 200903, 200903, 200903, 200903, 20~
+$ `Slide number`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 13, 14, 15, 16, 17, 18, 27, 28, 29, 30, 31, 32, 13~
+$ `Slide Box`         <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3,~
+$ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 200912, 200912, 200912, 200912, 200912, 200912, 20~
+</pre>
 </div>
 </div>
 </div>
