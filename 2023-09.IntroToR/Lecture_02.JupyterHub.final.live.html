@@ -11703,12 +11703,12 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># We just want to know information related to strain names, spore info and dates</span>
 
-<span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span>
+<span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span>
 <span class="w">            </span><span class="n">experiment</span><span class="p">,</span><span class="w"> </span><span class="n">Worm_strain</span><span class="p">,</span><span class="w"> </span>
 <span class="w">            </span><span class="n">`Spore Strain`</span><span class="p">,</span><span class="w"> </span><span class="n">`Spore Lot`</span><span class="p">,</span><span class="w"> </span><span class="n">`Total Spores (M)`</span><span class="p">,</span><span class="w"> </span>
 <span class="w">            </span><span class="n">`Infection Date`</span><span class="p">,</span><span class="w"> </span><span class="n">`Fixing Date`</span><span class="p">,</span><span class="w"> </span><span class="n">`Imaging Date`</span><span class="w"> </span><span class="p">))</span>
@@ -11725,7 +11725,7 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <table class="dataframe">
-<caption>A tibble: 276 × 8</caption>
+<caption>A tibble: 6 × 8</caption>
 <thead>
 <tr><th scope="col">experiment</th><th scope="col">Worm_strain</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Total Spores (M)</th><th scope="col">Infection Date</th><th scope="col">Fixing Date</th><th scope="col">Imaging Date</th></tr>
 <tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
@@ -11737,61 +11737,6 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 <tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>N2     </td><td>LUAm1</td><td>2A</td><td> 0</td><td>190423</td><td>190426</td><td>190502</td></tr>
 <tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>10</td><td>190423</td><td>190426</td><td>190516</td></tr>
 <tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>20</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_AB1_LUAm1_0M_72hpi     </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td> 0</td><td>190423</td><td>190426</td><td>190502</td></tr>
-<tr><td>190426_AB1_LUAm1_10M_72hpi    </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td>10</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_AB1_LUAm1_20M_72hpi    </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td>20</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_JU397_LUAm1_0M_72hpi   </td><td>JU397  </td><td>LUAm1</td><td>2A</td><td> 0</td><td>190423</td><td>190426</td><td>190502</td></tr>
-<tr><td>190426_JU397_LUAm1_10M_72hpi  </td><td>JU397  </td><td>LUAm1</td><td>2A</td><td>10</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_JU397_LUAm1_20M_72hpi  </td><td>JU397  </td><td>LUAm1</td><td>2A</td><td>20</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_JU642_LUAm1_0M_72hpi   </td><td>JU642  </td><td>LUAm1</td><td>2A</td><td> 0</td><td>190423</td><td>190426</td><td>190502</td></tr>
-<tr><td>190426_JU642_LUAm1_10M_72hpi  </td><td>JU642  </td><td>LUAm1</td><td>2A</td><td>10</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_JU642_LUAm1_20M_72hpi  </td><td>JU642  </td><td>LUAm1</td><td>2A</td><td>20</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_MY6_LUAm1_0M_72hpi     </td><td>MY6    </td><td>LUAm1</td><td>2A</td><td> 0</td><td>190423</td><td>190426</td><td>190502</td></tr>
-<tr><td>190426_MY6_LUAm1_10M_72hpi    </td><td>MY6    </td><td>LUAm1</td><td>2A</td><td>10</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_MY6_LUAm1_20M_72hpi    </td><td>MY6    </td><td>LUAm1</td><td>2A</td><td>20</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_ED3042_LUAm1_0M_72hpi  </td><td>ED3042 </td><td>LUAm1</td><td>2A</td><td> 0</td><td>190423</td><td>190426</td><td>190502</td></tr>
-<tr><td>190426_ED3042_LUAm1_10M_72hpi </td><td>ED3042 </td><td>LUAm1</td><td>2A</td><td>10</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_ED3042_LUAm1_20M_72hpi </td><td>ED3042 </td><td>LUAm1</td><td>2A</td><td>20</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_JU360_LUAm1_0M_72hpi   </td><td>JU360  </td><td>LUAm1</td><td>2A</td><td> 0</td><td>190423</td><td>190426</td><td>190502</td></tr>
-<tr><td>190426_JU360_LUAm1_10M_72hpi  </td><td>JU360  </td><td>LUAm1</td><td>2A</td><td>10</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_JU360_LUAm1_20M_72hpi  </td><td>JU360  </td><td>LUAm1</td><td>2A</td><td>20</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_JU1400_LUAm1_0M_72hpi  </td><td>JU1400 </td><td>LUAm1</td><td>2A</td><td> 0</td><td>190423</td><td>190426</td><td>190502</td></tr>
-<tr><td>190426_JU1400_LUAm1_10M_72hpi </td><td>JU1400 </td><td>LUAm1</td><td>2A</td><td>10</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_JU1400_LUAm1_20M_72hpi </td><td>JU1400 </td><td>LUAm1</td><td>2A</td><td>20</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_MY1_LUAm1_0M_72hpi     </td><td>MY1    </td><td>LUAm1</td><td>2A</td><td> 0</td><td>190423</td><td>190426</td><td>190502</td></tr>
-<tr><td>190426_MY1_LUAm1_10M_72hpi    </td><td>MY1    </td><td>LUAm1</td><td>2A</td><td>10</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>190426_MY1_LUAm1_20M_72hpi    </td><td>MY1    </td><td>LUAm1</td><td>2A</td><td>20</td><td>190423</td><td>190426</td><td>190516</td></tr>
-<tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
-<tr><td>200904_JU1400_ERTm5_0.35M_72hpi    </td><td>JU1400</td><td>ERTm5    </td><td>2</td><td>0.35</td><td>200901</td><td>200904</td><td>200929</td></tr>
-<tr><td>200904_JU1400_ERTm5_0.2M_72hpi     </td><td>JU1400</td><td>ERTm5    </td><td>2</td><td>0.20</td><td>200901</td><td>200904</td><td>200929</td></tr>
-<tr><td>200905_N2_ERTm5-96H_1.75M_96hpi    </td><td>N2    </td><td>ERTm5-96H</td><td>2</td><td>1.75</td><td>200901</td><td>200905</td><td>201015</td></tr>
-<tr><td>200905_N2_ERTm5-96H_3.5M_96hpi     </td><td>N2    </td><td>ERTm5-96H</td><td>2</td><td>3.50</td><td>200901</td><td>200905</td><td>201015</td></tr>
-<tr><td>200905_JU1400_ERTm5-96H_1.75M_96hpi</td><td>JU1400</td><td>ERTm5-96H</td><td>2</td><td>1.75</td><td>200901</td><td>200905</td><td>201015</td></tr>
-<tr><td>200905_JU1400_ERTm5-96H_3.5M_96hpi </td><td>JU1400</td><td>ERTm5-96H</td><td>2</td><td>3.50</td><td>200901</td><td>200905</td><td>201015</td></tr>
-<tr><td>200905_N2_ERTm5-96H_0M_96hpi       </td><td>N2    </td><td>ERTm5-96H</td><td>2</td><td>0.00</td><td>200901</td><td>200905</td><td>201015</td></tr>
-<tr><td>200905_JU1400_ERTm5-96H_0M_96hpi   </td><td>JU1400</td><td>ERTm5-96H</td><td>2</td><td>0.00</td><td>200901</td><td>200905</td><td>201015</td></tr>
-<tr><td>200915_N2_ERTm5_0M_72hpi           </td><td>N2    </td><td>ERTm5    </td><td>2</td><td>0.00</td><td>200912</td><td>200915</td><td>201005</td></tr>
-<tr><td>200915_N2_ERTm5_3.5M_72hpi         </td><td>N2    </td><td>ERTm5    </td><td>2</td><td>3.50</td><td>200912</td><td>200915</td><td>201005</td></tr>
-<tr><td>200915_JU1400_ERTm5_0M_72hpi       </td><td>JU1400</td><td>ERTm5    </td><td>2</td><td>0.00</td><td>200912</td><td>200915</td><td>201005</td></tr>
-<tr><td>200915_JU1400_ERTm5_3.5M_72hpi     </td><td>JU1400</td><td>ERTm5    </td><td>2</td><td>3.50</td><td>200912</td><td>200915</td><td>201005</td></tr>
-<tr><td>200915_AWR144_ERTm5_0M_72hpi       </td><td>AWR144</td><td>ERTm5    </td><td>2</td><td>0.00</td><td>200912</td><td>200915</td><td>201005</td></tr>
-<tr><td>200915_AWR144_ERTm5_3.5M_72hpi     </td><td>AWR144</td><td>ERTm5    </td><td>2</td><td>3.50</td><td>200912</td><td>200915</td><td>201005</td></tr>
-<tr><td>200915_AWR145_ERTm5_0M_72hpi       </td><td>AWR145</td><td>ERTm5    </td><td>2</td><td>0.00</td><td>200912</td><td>200915</td><td>201005</td></tr>
-<tr><td>200915_AWR145_ERTm5_3.5M_72hpi     </td><td>AWR145</td><td>ERTm5    </td><td>2</td><td>3.50</td><td>200912</td><td>200915</td><td>201005</td></tr>
-<tr><td>200916_N2_ERTm5-96H_0M_96hpi       </td><td>N2    </td><td>ERTm5-96H</td><td>2</td><td>0.00</td><td>200912</td><td>200916</td><td>201005</td></tr>
-<tr><td>200916_N2_ERTm5-96H_1.75M_96hpi    </td><td>N2    </td><td>ERTm5-96H</td><td>2</td><td>1.75</td><td>200912</td><td>200916</td><td>201005</td></tr>
-<tr><td>200916_N2_ERTm5-96H_3.5M_96hpi     </td><td>N2    </td><td>ERTm5-96H</td><td>2</td><td>3.50</td><td>200912</td><td>200916</td><td>201005</td></tr>
-<tr><td>200916_JU1400_ERTm5-96H_0M_96hpi   </td><td>JU1400</td><td>ERTm5-96H</td><td>2</td><td>0.00</td><td>200912</td><td>200916</td><td>201005</td></tr>
-<tr><td>200916_JU1400_ERTm5-96H_1.75M_96hpi</td><td>JU1400</td><td>ERTm5-96H</td><td>2</td><td>1.75</td><td>200912</td><td>200916</td><td>201005</td></tr>
-<tr><td>200916_JU1400_ERTm5-96H_3.5M_96hpi </td><td>JU1400</td><td>ERTm5-96H</td><td>2</td><td>3.50</td><td>200912</td><td>200916</td><td>201005</td></tr>
-<tr><td>200918_N2_ERTm5_0M_72hpi           </td><td>N2    </td><td>ERTm5    </td><td>2</td><td>0.00</td><td>200915</td><td>200918</td><td>201006</td></tr>
-<tr><td>200918_N2_ERTm5_3.5M_72hpi         </td><td>N2    </td><td>ERTm5    </td><td>2</td><td>3.50</td><td>200915</td><td>200918</td><td>201006</td></tr>
-<tr><td>200918_JU1400_ERTm5_0M_72hpi       </td><td>JU1400</td><td>ERTm5    </td><td>2</td><td>0.00</td><td>200915</td><td>200918</td><td>201006</td></tr>
-<tr><td>200918_JU1400_ERTm5_3.5M_72hpi     </td><td>JU1400</td><td>ERTm5    </td><td>2</td><td>3.50</td><td>200915</td><td>200918</td><td>201006</td></tr>
-<tr><td>200918_AWR144_ERTm5_0M_72hpi       </td><td>AWR144</td><td>ERTm5    </td><td>2</td><td>0.00</td><td>200915</td><td>200918</td><td>201006</td></tr>
-<tr><td>200918_AWR144_ERTm5_3.5M_72hpi     </td><td>AWR144</td><td>ERTm5    </td><td>2</td><td>3.50</td><td>200915</td><td>200918</td><td>201006</td></tr>
-<tr><td>200918_AWR145_ERTm5_0M_72hpi       </td><td>AWR145</td><td>ERTm5    </td><td>2</td><td>0.00</td><td>200915</td><td>200918</td><td>201006</td></tr>
-<tr><td>200918_AWR145_ERTm5_3.5M_72hpi     </td><td>AWR145</td><td>ERTm5    </td><td>2</td><td>3.50</td><td>200915</td><td>200918</td><td>201006</td></tr>
 </tbody>
 </table>
 </div>
@@ -11810,21 +11755,47 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Select for columns starting with the word "Spore" or ending with "Date"</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="nf">select</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">,</span><span class="w"> </span>
 <span class="w">            </span><span class="n">experiment</span><span class="p">,</span><span class="w"> </span><span class="n">Worm_strain</span><span class="p">,</span><span class="w"> </span>
-<span class="w">            </span><span class="nf">starts_with</span><span class="p">(</span><span class="kc">...</span><span class="p">),</span><span class="w"> </span><span class="n">`Total Spores (M)`</span><span class="p">,</span><span class="w"> </span>
-<span class="w">            </span><span class="nf">ends_with</span><span class="p">(</span><span class="kc">...</span><span class="p">)))</span>
+<span class="w">            </span><span class="nf">starts_with</span><span class="p">(</span><span class="s">"Spore"</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">),</span><span class="w"> </span><span class="n">`Total Spores (M)`</span><span class="p">,</span><span class="w"> </span>
+<span class="w">            </span><span class="nf">ends_with</span><span class="p">(</span><span class="s">"Date"</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 10</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">Worm_strain</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Spores(M)/cm2</th><th scope="col">Total Spores (M)</th><th scope="col">Infection Date</th><th scope="col">Fixing Date</th><th scope="col">Staining Date</th><th scope="col">Imaging Date</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>0.0000000</td><td> 0</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>0.3538570</td><td>10</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>0.7077141</td><td>20</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>0.0000000</td><td> 0</td><td>190423</td><td>190426</td><td>190430</td><td>190502</td></tr>
+<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>0.3538570</td><td>10</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>0.7077141</td><td>20</td><td>190423</td><td>190426</td><td>190513</td><td>190516</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
