@@ -9627,18 +9627,18 @@ So if we wanted to access a column like "Fixing Date" we would actually need to 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Set up some vectors for a data.frame</span>
 <span class="n">brand</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"wildrose"</span><span class="p">,</span><span class="w"> </span><span class="s">"guinness"</span><span class="p">,</span><span class="w"> </span><span class="s">"grasshoper"</span><span class="p">)</span>
 <span class="n">wheatType</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"Hard Red Spring"</span><span class="p">,</span><span class="w"> </span><span class="s">"Hard Red Winter"</span><span class="p">,</span><span class="w"> </span><span class="s">"Soft Red Winter"</span><span class="w"> </span><span class="p">)</span>
-<span class="n">rating</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span>
+<span class="n">rating</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">7</span><span class="p">,</span><span class="w"> </span><span class="kc">NA</span><span class="p">)</span>
 
 <span class="c1"># Put it all together with cbind (you can use this for data.frames too!)</span>
 <span class="n">NA_example</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">brand</span><span class="p">,</span><span class="w"> </span><span class="n">wheatType</span><span class="p">,</span><span class="w"> </span><span class="n">rating</span><span class="p">)</span>
@@ -9646,6 +9646,29 @@ So if we wanted to access a column like "Fixing Date" we would actually need to 
 <span class="c1"># Look at our data frame</span>
 <span class="n">NA_example</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 3 × 3</caption>
+<thead>
+<tr><th scope="col">brand</th><th scope="col">wheatType</th><th scope="col">rating</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>wildrose  </td><td>Hard Red Spring</td><td> 5</td></tr>
+<tr><td>guinness  </td><td>Hard Red Winter</td><td> 7</td></tr>
+<tr><td>grasshoper</td><td>Soft Red Winter</td><td>NA</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -9663,19 +9686,31 @@ So if we wanted to access a column like "Fixing Date" we would actually need to 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Use the mean() function and see what happens with NA values</span>
 <span class="nf">mean</span><span class="p">(</span><span class="n">rating</span><span class="p">)</span><span class="w"> </span><span class="c1"># some functions need to be explicitly told what to do with NAs. No errors though!</span>
 
-<span class="nf">mean</span><span class="p">(</span><span class="n">rating</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="c1">#Avoid using just "T" as an abbreviation for "TRUE"</span>
+<span class="c1"># mean(rating, ...) #Avoid using just "T" as an abbreviation for "TRUE"</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+&lt;NA&gt;
 </div>
 </div>
 </div>
