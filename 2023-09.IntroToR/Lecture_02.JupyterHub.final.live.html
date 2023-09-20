@@ -12295,7 +12295,8 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Summarise abundance for mean and standard deviation of all rows combined</span>
 <span class="nf">summarise</span><span class="p">(</span><span class="n">meta_trimmed.tbl</span><span class="p">,</span><span class="w"> </span>
-<span class="w">          </span><span class="kc">...</span><span class="p">)</span>
+<span class="w">          </span><span class="n">totalSpores_sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">`Total Spores (M)`</span><span class="p">),</span>
+<span class="w">          </span><span class="n">totalSpores_mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">`Total Spores (M)`</span><span class="p">),</span>
 </pre></div>
 </div>
 </div>
