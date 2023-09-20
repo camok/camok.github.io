@@ -10321,7 +10321,7 @@ TRUE
 <div class="highlight hl-r"><pre><span></span><span class="c1"># ?complete.cases</span>
 
 <span class="c1"># Outputs a logical vector specifying which observations/rows have no missing values across the entire sequence.</span>
-<span class="nf">head</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">complete.case</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">)</span>
 
 <span class="c1"># Use it wisely to keep complete rows. Pop quiz [x,y] will we index by x or by y?</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">[</span><span class="nf">complete.cases</span><span class="p">(</span><span class="n">infection_meta.tbl</span><span class="p">),])</span>
