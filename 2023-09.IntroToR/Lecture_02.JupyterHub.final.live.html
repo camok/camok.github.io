@@ -12351,19 +12351,19 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [85]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Pass along trimmed data</span>
 <span class="n">meta_trimmed.tbl</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># group by Spore strain</span>
-<span class="w">    </span><span class="kc">...</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">`Spore Strain`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1"># Look at the first 10 rows</span>
 <span class="w">    </span><span class="nf">head</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
@@ -12372,12 +12372,42 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A grouped_df: 10 × 12</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">Worm_strain</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Total Spores (M)</th><th scope="col">Total ul spore</th><th scope="col">Spores(M)/cm2</th><th scope="col">Infection Date</th><th scope="col">Fixing Date</th><th scope="col">Staining Date</th><th scope="col">Slide date</th><th scope="col">Imaging Date</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>VC20019</td><td>LUAm1</td><td>2A</td><td> 0</td><td>  0.00000</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>10</td><td> 56.81818</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>VC20019</td><td>LUAm1</td><td>2A</td><td>20</td><td>113.63636</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>N2     </td><td>LUAm1</td><td>2A</td><td> 0</td><td>  0.00000</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td></tr>
+<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>10</td><td> 56.81818</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>N2     </td><td>LUAm1</td><td>2A</td><td>20</td><td>113.63636</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_AB1_LUAm1_0M_72hpi     </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td> 0</td><td>  0.00000</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td></tr>
+<tr><td>190426_AB1_LUAm1_10M_72hpi    </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td>10</td><td> 56.81818</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_AB1_LUAm1_20M_72hpi    </td><td>AB1    </td><td>LUAm1</td><td>2A</td><td>20</td><td>113.63636</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_JU397_LUAm1_0M_72hpi   </td><td>JU397  </td><td>LUAm1</td><td>2A</td><td> 0</td><td>  0.00000</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [86]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Pass along trimmed data</span>
@@ -12387,11 +12417,41 @@ $ `Imaging Date`      <span class="ansi-black-intense-fg">&lt;dbl&gt;</span>
 <span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">`Spore Strain`</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1"># Summarise the data now</span>
-<span class="w">    </span><span class="nf">...</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span>
 <span class="w">              </span><span class="n">totalSpores_sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">`Total Spores (M)`</span><span class="p">),</span>
 <span class="w">              </span><span class="n">totalSpores_mean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">`Total Spores (M)`</span><span class="p">),</span>
 <span class="w">              </span><span class="n">totalSpores_sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">`Total Spores (M)`</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 10 × 4</caption>
+<thead>
+<tr><th scope="col">Spore Strain</th><th scope="col">totalSpores_sum</th><th scope="col">totalSpores_mean</th><th scope="col">totalSpores_sd</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>AWRm78   </td><td> 21.0</td><td> 3.5000000</td><td>0.0000000</td></tr>
+<tr><td>ERTm2    </td><td>  8.0</td><td> 0.6666667</td><td>0.6513389</td></tr>
+<tr><td>ERTm5    </td><td>231.6</td><td> 2.7571429</td><td>2.5221655</td></tr>
+<tr><td>ERTm5-96H</td><td> 21.0</td><td> 1.7500000</td><td>1.4924050</td></tr>
+<tr><td>LUAm1    </td><td>923.0</td><td> 6.7867647</td><td>8.0456182</td></tr>
+<tr><td>LUAm1-HK </td><td> 20.0</td><td>10.0000000</td><td>0.0000000</td></tr>
+<tr><td>LUAm1-pel</td><td> 20.0</td><td>10.0000000</td><td>0.0000000</td></tr>
+<tr><td>LUAm1-sup</td><td> 20.0</td><td>10.0000000</td><td>0.0000000</td></tr>
+<tr><td>LUAm3    </td><td> 60.0</td><td>10.0000000</td><td>0.0000000</td></tr>
+<tr><td>MAM1     </td><td>104.0</td><td> 7.4285714</td><td>3.4577513</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
