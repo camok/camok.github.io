@@ -9720,12 +9720,12 @@ argument.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Import infection_meta.csv and take a peek at it</span>
@@ -9736,6 +9736,82 @@ argument.
 
 <span class="nf">str</span><span class="p">(</span><span class="n">infection_meta.df</span><span class="p">,</span><span class="w"> </span><span class="n">give.attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">276</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">29</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> ","
+<span class="ansi-red-fg">chr</span> (10): experiment, experimenter, description, Worm_strain, Spore Strain, ...
+<span class="ansi-green-fg">dbl</span> (19): Infection Date, Plate Number, Total Worms, Lot concentration, Tota...
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 29</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">experimenter</th><th scope="col">description</th><th scope="col">Infection Date</th><th scope="col">Plate Number</th><th scope="col">Worm_strain</th><th scope="col">Total Worms</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Lot concentration</th><th scope="col">...</th><th scope="col">timepoint</th><th scope="col">infection.type</th><th scope="col">Fixing Date</th><th scope="col">Location</th><th scope="col">Staining Date</th><th scope="col">Stain type</th><th scope="col">Slide date</th><th scope="col">Slide number</th><th scope="col">Slide Box</th><th scope="col">Imaging Date</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">...</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>1</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>1</td><td>2</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>2</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>2</td><td>2</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>3</td><td>VC20019</td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>3</td><td>2</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>4</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190430</td><td>DY96            </td><td>190501</td><td>4</td><td>2</td><td>190502</td></tr>
+<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>5</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>5</td><td>2</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>CM</td><td>Wild isolate phenoMIP retest</td><td>190423</td><td>6</td><td>N2     </td><td>1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>190426</td><td>Sample exhausted</td><td>190513</td><td>Sp.9 FISH + DY96</td><td>190515</td><td>6</td><td>2</td><td>190516</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>spc_tbl_ [276 x 29] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ experiment       : chr [1:276] "190426_VC20019_LUAm1_0M_72hpi" "190426_VC20019_LUAm1_10M_72hpi" "190426_VC20019_LUAm1_20M_72hpi" "190426_N2_LUAm1_0M_72hpi" ...
+ $ experimenter     : chr [1:276] "CM" "CM" "CM" "CM" ...
+ $ description      : chr [1:276] "Wild isolate phenoMIP retest" "Wild isolate phenoMIP retest" "Wild isolate phenoMIP retest" "Wild isolate phenoMIP retest" ...
+ $ Infection Date   : num [1:276] 190423 190423 190423 190423 190423 ...
+ $ Plate Number     : num [1:276] 1 2 3 4 5 6 7 8 9 10 ...
+ $ Worm_strain      : chr [1:276] "VC20019" "VC20019" "VC20019" "N2" ...
+ $ Total Worms      : num [1:276] 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 ...
+ $ Spore Strain     : chr [1:276] "LUAm1" "LUAm1" "LUAm1" "LUAm1" ...
+ $ Spore Lot        : chr [1:276] "2A" "2A" "2A" "2A" ...
+ $ Lot concentration: num [1:276] 176000 176000 176000 176000 176000 176000 176000 176000 176000 176000 ...
+ $ Total Spores (M) : num [1:276] 0 10 20 0 10 20 0 10 20 0 ...
+ $ Total ul spore   : num [1:276] 0 56.8 113.6 0 56.8 ...
+ $ Infection Round  : num [1:276] 1 1 1 1 1 1 1 1 1 1 ...
+ $ 40X OP50 (mL)    : num [1:276] 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 0.15 ...
+ $ Plate Size       : num [1:276] 6 6 6 6 6 6 6 6 6 6 ...
+ $ Spores(M)/cm2    : num [1:276] 0 0.354 0.708 0 0.354 ...
+ $ Time plated      : num [1:276] 1300 1300 1300 1300 1300 1300 1300 1300 1300 1300 ...
+ $ Time Incubated   : num [1:276] 1600 1600 1600 1600 1600 1600 1600 1600 1600 1600 ...
+ $ Temp             : num [1:276] 21 21 21 21 21 21 21 21 21 21 ...
+ $ timepoint        : chr [1:276] "72" "72" "72" "72" ...
+ $ infection.type   : chr [1:276] "continuous" "continuous" "continuous" "continuous" ...
+ $ Fixing Date      : num [1:276] 190426 190426 190426 190426 190426 ...
+ $ Location         : chr [1:276] "Sample exhausted" "Sample exhausted" "Sample exhausted" "Sample exhausted" ...
+ $ Staining Date    : num [1:276] 190513 190513 190513 190430 190513 ...
+ $ Stain type       : chr [1:276] "Sp.9 FISH + DY96" "Sp.9 FISH + DY96" "Sp.9 FISH + DY96" "DY96" ...
+ $ Slide date       : num [1:276] 190515 190515 190515 190501 190515 ...
+ $ Slide number     : num [1:276] 1 2 3 4 5 6 7 8 9 10 ...
+ $ Slide Box        : num [1:276] 2 2 2 2 2 2 2 2 2 2 ...
+ $ Imaging Date     : num [1:276] 190516 190516 190516 190502 190516 ...
+</pre>
 </div>
 </div>
 </div>
@@ -9752,12 +9828,12 @@ argument.
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">trimmed_infection_meta.df</span><span class="w"> </span><span class="o">&lt;-</span>
@@ -9767,13 +9843,39 @@ argument.
 
 <span class="w">    </span><span class="c1"># Use tidy-select verbs to subset our data columns</span>
 <span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="n">experiment</span><span class="p">,</span><span class="w"> </span><span class="n">Worm_strain</span><span class="p">,</span><span class="w"> </span><span class="n">`Total Worms`</span><span class="p">,</span><span class="w"> </span><span class="n">`Plate Size`</span><span class="p">,</span><span class="w"> </span><span class="n">timepoint</span><span class="p">,</span><span class="w"> </span><span class="n">infection.type</span><span class="p">,</span><span class="w"> </span>
-<span class="w">           </span><span class="nf">contains</span><span class="p">(</span><span class="s">"..."</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
-<span class="w">           </span><span class="nf">ends_with</span><span class="p">(</span><span class="s">"..."</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">           </span><span class="nf">contains</span><span class="p">(</span><span class="s">"Spore"</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
+<span class="w">           </span><span class="nf">ends_with</span><span class="p">(</span><span class="s">"Date"</span><span class="p">,</span><span class="w"> </span><span class="n">ignore.case</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">),</span>
 <span class="w">          </span><span class="p">)</span>
 
 <span class="c1"># Check the resulting trimmed dataset</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">trimmed_infection_meta.df</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 16</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">Worm_strain</th><th scope="col">Total Worms</th><th scope="col">Plate Size</th><th scope="col">timepoint</th><th scope="col">infection.type</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Total Spores (M)</th><th scope="col">Total ul spore</th><th scope="col">Spores(M)/cm2</th><th scope="col">Infection Date</th><th scope="col">Fixing Date</th><th scope="col">Staining Date</th><th scope="col">Slide date</th><th scope="col">Imaging Date</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>190426_VC20019_LUAm1_0M_72hpi </td><td>VC20019</td><td>1000</td><td>6</td><td>72</td><td>continuous</td><td>LUAm1</td><td>2A</td><td> 0</td><td>  0.00000</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_10M_72hpi</td><td>VC20019</td><td>1000</td><td>6</td><td>72</td><td>continuous</td><td>LUAm1</td><td>2A</td><td>10</td><td> 56.81818</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_VC20019_LUAm1_20M_72hpi</td><td>VC20019</td><td>1000</td><td>6</td><td>72</td><td>continuous</td><td>LUAm1</td><td>2A</td><td>20</td><td>113.63636</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_0M_72hpi      </td><td>N2     </td><td>1000</td><td>6</td><td>72</td><td>continuous</td><td>LUAm1</td><td>2A</td><td> 0</td><td>  0.00000</td><td>0.0000000</td><td>190423</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td></tr>
+<tr><td>190426_N2_LUAm1_10M_72hpi     </td><td>N2     </td><td>1000</td><td>6</td><td>72</td><td>continuous</td><td>LUAm1</td><td>2A</td><td>10</td><td> 56.81818</td><td>0.3538570</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+<tr><td>190426_N2_LUAm1_20M_72hpi     </td><td>N2     </td><td>1000</td><td>6</td><td>72</td><td>continuous</td><td>LUAm1</td><td>2A</td><td>20</td><td>113.63636</td><td>0.7077141</td><td>190423</td><td>190426</td><td>190513</td><td>190515</td><td>190516</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
