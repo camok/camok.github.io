@@ -9015,12 +9015,12 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">split_embryo_long.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
@@ -9030,14 +9030,61 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <span class="w">    </span><span class="c1"># Group the data by 3 variables and look at the structure</span>
 <span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">fixingDate</span><span class="p">,</span><span class="w"> </span><span class="n">sporeStrain</span><span class="p">,</span><span class="w"> </span><span class="n">sporeDose</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Summarise the data</span>
-<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span>
-<span class="w">              </span><span class="n">meanEmb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">nWorms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">(),</span>
+<span class="w">              </span><span class="n">meanEmb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">embryos</span><span class="p">),</span>
 <span class="w">              </span><span class="n">medianEmb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">median</span><span class="p">(</span><span class="n">embryos</span><span class="p">),</span>
 <span class="w">              </span><span class="n">sdEmb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">sd</span><span class="p">(</span><span class="n">embryos</span><span class="p">),</span>
 <span class="w">              </span><span class="n">maxEmb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">max</span><span class="p">(</span><span class="n">embryos</span><span class="p">)</span><span class="w">          </span>
 <span class="w">             </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="nf">head</span><span class="p">(</span><span class="m">20</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>`summarise()` has grouped output by 'fixingDate', 'sporeStrain'. You can override using the `.groups` argument.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A grouped_df: 20 × 8</caption>
+<thead>
+<tr><th scope="col">fixingDate</th><th scope="col">sporeStrain</th><th scope="col">sporeDose</th><th scope="col">nWorms</th><th scope="col">meanEmb</th><th scope="col">medianEmb</th><th scope="col">sdEmb</th><th scope="col">maxEmb</th></tr>
+<tr><th scope="col">&lt;int&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>190426</td><td>ERTm5</td><td> 0.00</td><td>60</td><td>15.883333</td><td>16</td><td>3.257802</td><td>22</td></tr>
+<tr><td>190426</td><td>ERTm5</td><td> 1.75</td><td>62</td><td> 9.209677</td><td> 9</td><td>4.922804</td><td>21</td></tr>
+<tr><td>190426</td><td>ERTm5</td><td> 3.50</td><td>85</td><td> 4.564706</td><td> 4</td><td>4.277424</td><td>15</td></tr>
+<tr><td>190426</td><td>LUAm1</td><td> 0.00</td><td>45</td><td>16.644444</td><td>17</td><td>2.877464</td><td>23</td></tr>
+<tr><td>190426</td><td>LUAm1</td><td>10.00</td><td>60</td><td> 9.066667</td><td>10</td><td>4.333029</td><td>18</td></tr>
+<tr><td>190426</td><td>LUAm1</td><td>20.00</td><td>60</td><td> 7.700000</td><td> 8</td><td>4.989141</td><td>29</td></tr>
+<tr><td>200707</td><td>ERTm5</td><td> 1.75</td><td>47</td><td> 8.510638</td><td> 9</td><td>4.624473</td><td>20</td></tr>
+<tr><td>200707</td><td>ERTm5</td><td> 3.50</td><td>50</td><td> 4.620000</td><td> 4</td><td>4.289950</td><td>16</td></tr>
+<tr><td>200707</td><td>LUAm1</td><td> 0.00</td><td>50</td><td>16.300000</td><td>17</td><td>3.609794</td><td>26</td></tr>
+<tr><td>200707</td><td>LUAm1</td><td>10.00</td><td>50</td><td>10.040000</td><td>10</td><td>3.533860</td><td>18</td></tr>
+<tr><td>200714</td><td>ERTm5</td><td> 1.75</td><td>50</td><td>12.320000</td><td>13</td><td>4.946407</td><td>26</td></tr>
+<tr><td>200714</td><td>ERTm5</td><td> 3.50</td><td>50</td><td> 6.020000</td><td> 7</td><td>4.709911</td><td>15</td></tr>
+<tr><td>200714</td><td>LUAm1</td><td> 0.00</td><td>50</td><td>15.240000</td><td>15</td><td>3.910008</td><td>22</td></tr>
+<tr><td>200714</td><td>LUAm1</td><td>10.00</td><td>50</td><td> 8.640000</td><td> 9</td><td>4.104552</td><td>19</td></tr>
+<tr><td>200714</td><td>LUAm1</td><td>15.00</td><td>49</td><td> 8.755102</td><td> 9</td><td>5.149962</td><td>27</td></tr>
+<tr><td>200721</td><td>ERTm5</td><td> 1.75</td><td>50</td><td> 9.600000</td><td>11</td><td>5.495824</td><td>21</td></tr>
+<tr><td>200721</td><td>ERTm5</td><td> 3.50</td><td>50</td><td> 5.280000</td><td> 5</td><td>4.673154</td><td>17</td></tr>
+<tr><td>200721</td><td>LUAm1</td><td> 0.00</td><td>50</td><td>15.760000</td><td>17</td><td>5.274351</td><td>26</td></tr>
+<tr><td>200721</td><td>LUAm1</td><td>10.00</td><td>50</td><td>11.980000</td><td>12</td><td>3.667229</td><td>22</td></tr>
+<tr><td>200821</td><td>LUAm1</td><td> 0.00</td><td>50</td><td>20.880000</td><td>21</td><td>4.834569</td><td>33</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
