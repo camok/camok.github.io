@@ -7639,12 +7639,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1">#--------- Install packages to for today's session ----------#</span>
@@ -7653,6 +7653,28 @@ a.anchor-link {
 <span class="c1">#--------- Load packages to for today's session ----------#</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>-- <span class="ansi-bold">Attaching core tidyverse packages</span> ---------------------------------------------------------------- tidyverse 2.0.0 --
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">dplyr    </span> 1.1.0     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">readr    </span> 2.1.4
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">forcats  </span> 1.0.0     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">stringr  </span> 1.5.0
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">ggplot2  </span> 3.4.3     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">tibble   </span> 3.2.1
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">lubridate</span> 1.9.2     <span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">tidyr    </span> 1.3.0
+<span class="ansi-green-fg">v</span> <span class="ansi-blue-fg">purrr    </span> 1.0.2     
+-- <span class="ansi-bold">Conflicts</span> ---------------------------------------------------------------------------------- tidyverse_conflicts() --
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">filter()</span> masks <span class="ansi-blue-fg">stats</span>::filter()
+<span class="ansi-red-fg">x</span> <span class="ansi-blue-fg">dplyr</span>::<span class="ansi-green-fg">lag()</span>    masks <span class="ansi-blue-fg">stats</span>::lag()
+<span class="ansi-cyan-fg">i</span> Use the conflicted package (<span class="ansi-blue-fg">&lt;http://conflicted.r-lib.org/&gt;</span>) to force all conflicts to become errors
+</pre>
 </div>
 </div>
 </div>
@@ -7711,34 +7733,57 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Always check where you are first!</span>
 <span class="nf">getwd</span><span class="p">()</span>
 
-<span class="nf">list.files</span><span class="p">(</span><span class="s">"..."</span><span class="p">)</span>
+<span class="nf">list.files</span><span class="p">(</span><span class="s">"data/"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+'C:/Users/mokca/Dropbox/!CAGEF/Course_Materials/Introduction_to_R/2023.09_Intro_to_R/lecture_03_tidy_data'
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>'data_old'</li><li>'embryo_data_wide.csv'</li><li>'gapminder_wide.csv'</li><li>'infection_meta.csv'</li><li>'spore_dose_info.csv'</li><li>'spore_info.txt'</li></ol>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Read in our file. </span>
 <span class="c1"># Remember we're using the tidyverse to import our data!</span>
-<span class="n">embryos.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"..."</span><span class="p">)</span>
+<span class="n">embryos.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"data/embryo_data_wide.csv"</span><span class="p">)</span>
 
 <span class="c1"># Take a look at the head and structure of your data</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">)</span>
@@ -7746,6 +7791,74 @@ a.anchor-link {
 <span class="nf">str</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">,</span><span class="w"> </span><span class="n">give.attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">list.len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">)</span><span class="w"> </span><span class="c1"># Use the give.attr parameter to make it a little less verbose</span>
 <span class="w">                             </span><span class="c1"># this is nearly equivalent now to glimpse(data)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">154</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">301</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> ","
+<span class="ansi-red-fg">chr</span> (300): 200707_N2_LUAm1_0M_72hpi, 200707_N2_LUAm1_10M_72hpi, 200707_JU140...
+<span class="ansi-green-fg">dbl</span>   (1): worm.number
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 301</caption>
+<thead>
+<tr><th scope="col">worm.number</th><th scope="col">200707_N2_LUAm1_0M_72hpi</th><th scope="col">200707_N2_LUAm1_10M_72hpi</th><th scope="col">200707_JU1400_LUAm1_0M_72hpi</th><th scope="col">200707_JU1400_LUAm1_10M_72hpi</th><th scope="col">200707_ED3052A_LUAm1_0M_72hpi</th><th scope="col">200707_ED3052A_LUAm1_10M_72hpi</th><th scope="col">200707_ED3052B_LUAm1_0M_72hpi</th><th scope="col">200707_ED3052B_LUAm1_10M_72hpi</th><th scope="col">200707_MY1_LUAm1_0M_72hpi</th><th scope="col">...</th><th scope="col">220302_JU1400_ERTm5_3.5M_72hpi</th><th scope="col">220205_JU1400_ERTm5-96H_0M_96hpi</th><th scope="col">220219_JU1400_ERTm5-96H_0M_96hpi</th><th scope="col">220302_JU1400_ERTm5-96H_0M_96hpi</th><th scope="col">220205_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope="col">220219_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope="col">220302_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope="col">220205_JU1400_ERTm5-96H_3.5M_96hpi</th><th scope="col">220219_JU1400_ERTm5-96H_3.5M_96hpi</th><th scope="col">220302_JU1400_ERTm5-96H_3.5M_96hpi</th></tr>
+<tr><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">...</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>0_0_18</td><td>0_1_7 </td><td>0_0_10</td><td>0_1_0</td><td>0_0_12</td><td>0_1_0</td><td>0_0_5 </td><td>0_1_9</td><td>0_0_11</td><td>...</td><td>0_0_5</td><td>0_0_21</td><td>0_0_42</td><td>0_0_20</td><td>0_0_35</td><td>0_0_23</td><td>0_0_8 </td><td>0_0_17</td><td>0_0_0 </td><td>0_0_3</td></tr>
+<tr><td>2</td><td>0_0_18</td><td>0_1_3 </td><td>0_0_9 </td><td>0_1_0</td><td>0_0_11</td><td>0_1_0</td><td>0_0_12</td><td>0_1_2</td><td>0_0_9 </td><td>...</td><td>0_0_5</td><td>0_0_6 </td><td>0_0_34</td><td>0_0_11</td><td>0_0_25</td><td>0_0_22</td><td>0_0_3 </td><td>0_0_39</td><td>0_0_10</td><td>0_0_4</td></tr>
+<tr><td>3</td><td>0_0_9 </td><td>0_1_10</td><td>0_0_13</td><td>0_1_0</td><td>0_0_14</td><td>0_1_1</td><td>0_0_11</td><td>0_1_4</td><td>0_0_10</td><td>...</td><td>0_0_3</td><td>0_0_21</td><td>0_0_38</td><td>0_0_19</td><td>0_0_19</td><td>0_0_1 </td><td>0_0_4 </td><td>0_0_28</td><td>0_0_3 </td><td>0_0_6</td></tr>
+<tr><td>4</td><td>0_0_15</td><td>0_1_8 </td><td>0_0_10</td><td>0_1_0</td><td>0_0_11</td><td>0_1_3</td><td>0_0_9 </td><td>0_1_0</td><td>0_0_11</td><td>...</td><td>0_0_4</td><td>0_0_25</td><td>0_0_33</td><td>0_0_18</td><td>0_0_18</td><td>0_0_24</td><td>0_0_6 </td><td>0_0_15</td><td>0_0_2 </td><td>0_0_5</td></tr>
+<tr><td>5</td><td>0_0_15</td><td>0_1_14</td><td>0_0_11</td><td>0_1_0</td><td>0_0_13</td><td>0_1_0</td><td>0_0_13</td><td>0_1_0</td><td>0_0_10</td><td>...</td><td>0_0_1</td><td>0_0_27</td><td>0_0_33</td><td>0_0_20</td><td>0_0_36</td><td>0_0_14</td><td>0_0_7 </td><td>0_0_26</td><td>0_0_4 </td><td>0_0_8</td></tr>
+<tr><td>6</td><td>0_0_12</td><td>0_1_9 </td><td>0_0_9 </td><td>0_1_0</td><td>0_0_11</td><td>0_1_0</td><td>0_0_7 </td><td>0_1_1</td><td>0_0_21</td><td>...</td><td>0_0_0</td><td>0_0_18</td><td>0_0_34</td><td>0_0_8 </td><td>0_0_27</td><td>0_0_18</td><td>0_0_22</td><td>0_0_33</td><td>0_0_2 </td><td>0_0_6</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>spc_tbl_ [154 x 301] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ worm.number                            : num [1:154] 1 2 3 4 5 6 7 8 9 10 ...
+ $ 200707_N2_LUAm1_0M_72hpi               : chr [1:154] "0_0_18" "0_0_18" "0_0_9" "0_0_15" ...
+ $ 200707_N2_LUAm1_10M_72hpi              : chr [1:154] "0_1_7" "0_1_3" "0_1_10" "0_1_8" ...
+ $ 200707_JU1400_LUAm1_0M_72hpi           : chr [1:154] "0_0_10" "0_0_9" "0_0_13" "0_0_10" ...
+ $ 200707_JU1400_LUAm1_10M_72hpi          : chr [1:154] "0_1_0" "0_1_0" "0_1_0" "0_1_0" ...
+ $ 200707_ED3052A_LUAm1_0M_72hpi          : chr [1:154] "0_0_12" "0_0_11" "0_0_14" "0_0_11" ...
+ $ 200707_ED3052A_LUAm1_10M_72hpi         : chr [1:154] "0_1_0" "0_1_0" "0_1_1" "0_1_3" ...
+ $ 200707_ED3052B_LUAm1_0M_72hpi          : chr [1:154] "0_0_5" "0_0_12" "0_0_11" "0_0_9" ...
+ $ 200707_ED3052B_LUAm1_10M_72hpi         : chr [1:154] "0_1_9" "0_1_2" "0_1_4" "0_1_0" ...
+ $ 200707_MY1_LUAm1_0M_72hpi              : chr [1:154] "0_0_11" "0_0_9" "0_0_10" "0_0_11" ...
+ $ 200707_MY1_LUAm1_10M_72hpi             : chr [1:154] "0_1_0" "0_1_0" "0_1_1" "0_1_0" ...
+ $ 200707_N2_MAM1_4M_72hpi                : chr [1:154] "0_1_15" "0_1_18" "0_1_15" "0_1_13" ...
+ $ 200707_JU1400_MAM1_4M_72hpi            : chr [1:154] "1_1_2" "1_1_3" "0_0_8" "0_1_4" ...
+ $ 200707_N2_LUAm3_10M_72hpi              : chr [1:154] "0_1_27" "0_0_7" "0_1_16" "0_1_12" ...
+ $ 200707_JU1400_LUAm3_10M_72hpi          : chr [1:154] "0_1_0" "0_1_0" "0_1_0" "0_1_0" ...
+ $ 200707_N2_AWRm78_3.5M_72hpi            : chr [1:154] "1_1_15" "1_1_4" "1_1_23" "1_1_18" ...
+ $ 200707_JU1400_AWRm78_3.5M_72hpi        : chr [1:154] "0_1_0" "0_0_0" "0_1_3" "1_1_4" ...
+ $ 200707_N2_ERTm5_1.75M_72hpi            : chr [1:154] "1_1_9" "0_1_13" "0_1_0" "1_1_8" ...
+ $ 200707_N2_ERTm5_3.5M_72hpi             : chr [1:154] "1_1_1" "1_1_4" "0_1_12" "1_1_13" ...
+ $ 200707_JU1400_ERTm5_1.75M_72hpi        : chr [1:154] "0_0_3" "0_0_3" "0_0_5" "0_1_8" ...
+  [list output truncated]
+</pre>
 </div>
 </div>
 </div>
@@ -7789,21 +7902,67 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Let's review our data again</span>
 <span class="c1"># From the top</span>
-<span class="nf">head</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">)</span>
 
 <span class="c1"># And from the bottom</span>
-<span class="nf">tail</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">tail</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 301</caption>
+<thead>
+<tr><th scope="col">worm.number</th><th scope="col">200707_N2_LUAm1_0M_72hpi</th><th scope="col">200707_N2_LUAm1_10M_72hpi</th><th scope="col">200707_JU1400_LUAm1_0M_72hpi</th><th scope="col">200707_JU1400_LUAm1_10M_72hpi</th><th scope="col">200707_ED3052A_LUAm1_0M_72hpi</th><th scope="col">200707_ED3052A_LUAm1_10M_72hpi</th><th scope="col">200707_ED3052B_LUAm1_0M_72hpi</th><th scope="col">200707_ED3052B_LUAm1_10M_72hpi</th><th scope="col">200707_MY1_LUAm1_0M_72hpi</th><th scope="col">...</th><th scope="col">220302_JU1400_ERTm5_3.5M_72hpi</th><th scope="col">220205_JU1400_ERTm5-96H_0M_96hpi</th><th scope="col">220219_JU1400_ERTm5-96H_0M_96hpi</th><th scope="col">220302_JU1400_ERTm5-96H_0M_96hpi</th><th scope="col">220205_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope="col">220219_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope="col">220302_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope="col">220205_JU1400_ERTm5-96H_3.5M_96hpi</th><th scope="col">220219_JU1400_ERTm5-96H_3.5M_96hpi</th><th scope="col">220302_JU1400_ERTm5-96H_3.5M_96hpi</th></tr>
+<tr><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">...</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>0_0_18</td><td>0_1_7 </td><td>0_0_10</td><td>0_1_0</td><td>0_0_12</td><td>0_1_0</td><td>0_0_5 </td><td>0_1_9</td><td>0_0_11</td><td>...</td><td>0_0_5</td><td>0_0_21</td><td>0_0_42</td><td>0_0_20</td><td>0_0_35</td><td>0_0_23</td><td>0_0_8 </td><td>0_0_17</td><td>0_0_0 </td><td>0_0_3</td></tr>
+<tr><td>2</td><td>0_0_18</td><td>0_1_3 </td><td>0_0_9 </td><td>0_1_0</td><td>0_0_11</td><td>0_1_0</td><td>0_0_12</td><td>0_1_2</td><td>0_0_9 </td><td>...</td><td>0_0_5</td><td>0_0_6 </td><td>0_0_34</td><td>0_0_11</td><td>0_0_25</td><td>0_0_22</td><td>0_0_3 </td><td>0_0_39</td><td>0_0_10</td><td>0_0_4</td></tr>
+<tr><td>3</td><td>0_0_9 </td><td>0_1_10</td><td>0_0_13</td><td>0_1_0</td><td>0_0_14</td><td>0_1_1</td><td>0_0_11</td><td>0_1_4</td><td>0_0_10</td><td>...</td><td>0_0_3</td><td>0_0_21</td><td>0_0_38</td><td>0_0_19</td><td>0_0_19</td><td>0_0_1 </td><td>0_0_4 </td><td>0_0_28</td><td>0_0_3 </td><td>0_0_6</td></tr>
+<tr><td>4</td><td>0_0_15</td><td>0_1_8 </td><td>0_0_10</td><td>0_1_0</td><td>0_0_11</td><td>0_1_3</td><td>0_0_9 </td><td>0_1_0</td><td>0_0_11</td><td>...</td><td>0_0_4</td><td>0_0_25</td><td>0_0_33</td><td>0_0_18</td><td>0_0_18</td><td>0_0_24</td><td>0_0_6 </td><td>0_0_15</td><td>0_0_2 </td><td>0_0_5</td></tr>
+<tr><td>5</td><td>0_0_15</td><td>0_1_14</td><td>0_0_11</td><td>0_1_0</td><td>0_0_13</td><td>0_1_0</td><td>0_0_13</td><td>0_1_0</td><td>0_0_10</td><td>...</td><td>0_0_1</td><td>0_0_27</td><td>0_0_33</td><td>0_0_20</td><td>0_0_36</td><td>0_0_14</td><td>0_0_7 </td><td>0_0_26</td><td>0_0_4 </td><td>0_0_8</td></tr>
+<tr><td>6</td><td>0_0_12</td><td>0_1_9 </td><td>0_0_9 </td><td>0_1_0</td><td>0_0_11</td><td>0_1_0</td><td>0_0_7 </td><td>0_1_1</td><td>0_0_21</td><td>...</td><td>0_0_0</td><td>0_0_18</td><td>0_0_34</td><td>0_0_8 </td><td>0_0_27</td><td>0_0_18</td><td>0_0_22</td><td>0_0_33</td><td>0_0_2 </td><td>0_0_6</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 301</caption>
+<thead>
+<tr><th scope="col">worm.number</th><th scope="col">200707_N2_LUAm1_0M_72hpi</th><th scope="col">200707_N2_LUAm1_10M_72hpi</th><th scope="col">200707_JU1400_LUAm1_0M_72hpi</th><th scope="col">200707_JU1400_LUAm1_10M_72hpi</th><th scope="col">200707_ED3052A_LUAm1_0M_72hpi</th><th scope="col">200707_ED3052A_LUAm1_10M_72hpi</th><th scope="col">200707_ED3052B_LUAm1_0M_72hpi</th><th scope="col">200707_ED3052B_LUAm1_10M_72hpi</th><th scope="col">200707_MY1_LUAm1_0M_72hpi</th><th scope="col">...</th><th scope="col">220302_JU1400_ERTm5_3.5M_72hpi</th><th scope="col">220205_JU1400_ERTm5-96H_0M_96hpi</th><th scope="col">220219_JU1400_ERTm5-96H_0M_96hpi</th><th scope="col">220302_JU1400_ERTm5-96H_0M_96hpi</th><th scope="col">220205_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope="col">220219_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope="col">220302_JU1400_ERTm5-96H_1.75M_96hpi</th><th scope="col">220205_JU1400_ERTm5-96H_3.5M_96hpi</th><th scope="col">220219_JU1400_ERTm5-96H_3.5M_96hpi</th><th scope="col">220302_JU1400_ERTm5-96H_3.5M_96hpi</th></tr>
+<tr><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">...</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>149</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>...</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+<tr><td>150</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>...</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+<tr><td>151</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>...</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+<tr><td>152</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>...</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+<tr><td>153</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>...</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+<tr><td>154</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>...</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -7875,12 +8034,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Remember we are piping "data" in as the first argument of pivot_longer</span>
@@ -7888,13 +8047,39 @@ a.anchor-link {
 
 <span class="w">    </span><span class="c1"># Use the pivot_longer command </span>
 <span class="w">    </span><span class="nf">pivot_longer</span><span class="p">(</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="p">,</span><span class="w">                    </span><span class="c1"># Recall what the "." represents?</span>
-<span class="w">                 </span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w">                 </span><span class="c1"># The first column is worm.number and we don't need to pivot that</span>
-<span class="w">                 </span><span class="n">names_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"..."</span><span class="p">,</span><span class="w">           </span><span class="c1"># The variable where we'll store columns names</span>
-<span class="w">                 </span><span class="n">values_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"..."</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">      </span><span class="c1"># The variable where we'll store column values</span>
+<span class="w">                 </span><span class="n">cols</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="m">301</span><span class="p">,</span><span class="w">                 </span><span class="c1"># The first column is worm.number and we don't need to pivot that</span>
+<span class="w">                 </span><span class="n">names_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"experiment"</span><span class="p">,</span><span class="w">           </span><span class="c1"># The variable where we'll store columns names</span>
+<span class="w">                 </span><span class="n">values_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"spores_meronts_embryos"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w">      </span><span class="c1"># The variable where we'll store column values</span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1"># Take a peek at the result</span>
 <span class="w">    </span><span class="nf">head</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 3</caption>
+<thead>
+<tr><th scope="col">worm.number</th><th scope="col">experiment</th><th scope="col">spores_meronts_embryos</th></tr>
+<tr><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>1</td><td>200707_N2_LUAm1_0M_72hpi      </td><td>0_0_18</td></tr>
+<tr><td>1</td><td>200707_N2_LUAm1_10M_72hpi     </td><td>0_1_7 </td></tr>
+<tr><td>1</td><td>200707_JU1400_LUAm1_0M_72hpi  </td><td>0_0_10</td></tr>
+<tr><td>1</td><td>200707_JU1400_LUAm1_10M_72hpi </td><td>0_1_0 </td></tr>
+<tr><td>1</td><td>200707_ED3052A_LUAm1_0M_72hpi </td><td>0_0_12</td></tr>
+<tr><td>1</td><td>200707_ED3052A_LUAm1_10M_72hpi</td><td>0_1_0 </td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
