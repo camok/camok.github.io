@@ -10276,12 +10276,12 @@ tibble [276 x 16] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># inner_join() on our datasets</span>
@@ -10308,6 +10308,39 @@ tibble [276 x 16] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>tibble [11,049 x 20] (S3: tbl_df/tbl/data.frame)
+ $ worm.number   : num [1:11049] 1 1 1 1 1 1 1 1 1 1 ...
+ $ fixingDate    : num [1:11049] 200707 200707 200707 200707 200707 ...
+ $ wormStrain    : chr [1:11049] "N2" "N2" "JU1400" "JU1400" ...
+ $ sporeStrain   : chr [1:11049] "LUAm1" "LUAm1" "LUAm1" "LUAm1" ...
+ $ sporeDose     : num [1:11049] 0 10 0 10 0 10 0 10 0 10 ...
+ $ expTimepoint  : chr [1:11049] "72" "72" "72" "72" ...
+ $ spores        : logi [1:11049] FALSE FALSE FALSE FALSE FALSE FALSE ...
+ $ meronts       : logi [1:11049] FALSE TRUE FALSE TRUE FALSE TRUE ...
+ $ embryos       : int [1:11049] 18 7 10 0 12 0 5 9 11 0 ...
+ $ experiment    : chr [1:11049] "200707_N2_LUAm1_0M_72hpi" "200707_N2_LUAm1_10M_72hpi" "200707_JU1400_LUAm1_0M_72hpi" "200707_JU1400_LUAm1_10M_72hpi" ...
+ $ Total Worms   : num [1:11049] 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 ...
+ $ Plate Size    : num [1:11049] 6 6 6 6 6 6 6 6 6 6 ...
+ $ infection.type: chr [1:11049] "continuous" "continuous" "continuous" "continuous" ...
+ $ Spore Lot     : chr [1:11049] "2A" "2A" "2A" "2A" ...
+ $ Total ul spore: num [1:11049] 0 56.8 0 56.8 0 ...
+ $ Spores(M)/cm2 : num [1:11049] 0 0.354 0 0.354 0 ...
+ $ Infection Date: num [1:11049] 200704 200704 200704 200704 200704 ...
+ $ Staining Date : num [1:11049] 200803 200803 200803 200803 200803 ...
+ $ Slide date    : num [1:11049] 200804 200804 200804 200804 200804 ...
+ $ Imaging Date  : num [1:11049] 200806 200806 200806 200806 200806 ...
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -10321,20 +10354,59 @@ tibble [276 x 16] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Import the spore_dose_info</span>
 <span class="n">spore_dose.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"data/spore_dose_info.csv"</span><span class="p">)</span>
 
 <span class="c1"># What does it look like?</span>
-<span class="nf">str</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">spore_dose.df</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">23</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">4</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> ","
+<span class="ansi-red-fg">chr</span> (2): sporeStrain, doseLevel
+<span class="ansi-green-fg">dbl</span> (2): plateSize, sporeDose
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>spc_tbl_ [23 x 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ sporeStrain: chr [1:23] "LUAm1" "LUAm1" "LUAm1" "LUAm1" ...
+ $ plateSize  : num [1:23] 6 6 6 6 6 6 6 6 6 6 ...
+ $ sporeDose  : num [1:23] 0 5 10 20 0 0.75 1.5 0 0.5 1.5 ...
+ $ doseLevel  : chr [1:23] "Mock" "Low" "Medium" "High" ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   sporeStrain = <span class="ansi-red-fg">col_character()</span>,
+  ..   plateSize = <span class="ansi-green-fg">col_double()</span>,
+  ..   sporeDose = <span class="ansi-green-fg">col_double()</span>,
+  ..   doseLevel = <span class="ansi-red-fg">col_character()</span>
+  .. )
+ - attr(*, "problems")=&lt;externalptr&gt; 
+</pre>
 </div>
 </div>
 </div>
