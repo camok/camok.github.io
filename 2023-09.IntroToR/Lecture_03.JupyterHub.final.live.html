@@ -10879,16 +10879,16 @@ gropd_df [26 x 3] (S3: grouped_df/tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [43]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># read gapminder_wide.csv</span>
-<span class="n">gapminder_wide</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"..."</span><span class="p">)</span>
+<span class="n">gapminder_wide</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"data/gapminder_wide.csv"</span><span class="p">)</span>
 
 <span class="c1"># Take a peek at the data</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">gapminder_wide</span><span class="p">)</span>
@@ -10896,6 +10896,92 @@ gropd_df [26 x 3] (S3: grouped_df/tbl_df/tbl/data.frame)
 <span class="c1"># Look at the structure of our data</span>
 <span class="nf">glimpse</span><span class="p">(</span><span class="n">gapminder_wide</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">142</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">38</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> ","
+<span class="ansi-red-fg">chr</span>  (2): continent, country
+<span class="ansi-green-fg">dbl</span> (36): gdpPercap_1952, gdpPercap_1957, gdpPercap_1962, gdpPercap_1967, gd...
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 38</caption>
+<thead>
+<tr><th scope="col">continent</th><th scope="col">country</th><th scope="col">gdpPercap_1952</th><th scope="col">gdpPercap_1957</th><th scope="col">gdpPercap_1962</th><th scope="col">gdpPercap_1967</th><th scope="col">gdpPercap_1972</th><th scope="col">gdpPercap_1977</th><th scope="col">gdpPercap_1982</th><th scope="col">gdpPercap_1987</th><th scope="col">...</th><th scope="col">pop_1962</th><th scope="col">pop_1967</th><th scope="col">pop_1972</th><th scope="col">pop_1977</th><th scope="col">pop_1982</th><th scope="col">pop_1987</th><th scope="col">pop_1992</th><th scope="col">pop_1997</th><th scope="col">pop_2002</th><th scope="col">pop_2007</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">...</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>Africa</td><td>Algeria     </td><td>2449.0082</td><td>3013.9760</td><td>2550.8169</td><td>3246.9918</td><td>4182.6638</td><td>4910.4168</td><td>5745.1602</td><td>5681.3585</td><td>...</td><td>11000948</td><td>12760499</td><td>14760787</td><td>17152804</td><td>20033753</td><td>23254956</td><td>26298373</td><td>29072015</td><td>31287142</td><td>33333216</td></tr>
+<tr><td>Africa</td><td>Angola      </td><td>3520.6103</td><td>3827.9405</td><td>4269.2767</td><td>5522.7764</td><td>5473.2880</td><td>3008.6474</td><td>2756.9537</td><td>2430.2083</td><td>...</td><td> 4826015</td><td> 5247469</td><td> 5894858</td><td> 6162675</td><td> 7016384</td><td> 7874230</td><td> 8735988</td><td> 9875024</td><td>10866106</td><td>12420476</td></tr>
+<tr><td>Africa</td><td>Benin       </td><td>1062.7522</td><td> 959.6011</td><td> 949.4991</td><td>1035.8314</td><td>1085.7969</td><td>1029.1613</td><td>1277.8976</td><td>1225.8560</td><td>...</td><td> 2151895</td><td> 2427334</td><td> 2761407</td><td> 3168267</td><td> 3641603</td><td> 4243788</td><td> 4981671</td><td> 6066080</td><td> 7026113</td><td> 8078314</td></tr>
+<tr><td>Africa</td><td>Botswana    </td><td> 851.2411</td><td> 918.2325</td><td> 983.6540</td><td>1214.7093</td><td>2263.6111</td><td>3214.8578</td><td>4551.1421</td><td>6205.8839</td><td>...</td><td>  512764</td><td>  553541</td><td>  619351</td><td>  781472</td><td>  970347</td><td> 1151184</td><td> 1342614</td><td> 1536536</td><td> 1630347</td><td> 1639131</td></tr>
+<tr><td>Africa</td><td>Burkina Faso</td><td> 543.2552</td><td> 617.1835</td><td> 722.5120</td><td> 794.8266</td><td> 854.7360</td><td> 743.3870</td><td> 807.1986</td><td> 912.0631</td><td>...</td><td> 4919632</td><td> 5127935</td><td> 5433886</td><td> 5889574</td><td> 6634596</td><td> 7586551</td><td> 8878303</td><td>10352843</td><td>12251209</td><td>14326203</td></tr>
+<tr><td>Africa</td><td>Burundi     </td><td> 339.2965</td><td> 379.5646</td><td> 355.2032</td><td> 412.9775</td><td> 464.0995</td><td> 556.1033</td><td> 559.6032</td><td> 621.8188</td><td>...</td><td> 2961915</td><td> 3330989</td><td> 3529983</td><td> 3834415</td><td> 4580410</td><td> 5126023</td><td> 5809236</td><td> 6121610</td><td> 7021078</td><td> 8390505</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Rows: 142
+Columns: 38
+$ continent      <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "Africa", "Africa", "Africa", "Africa", "Africa", "Afri~
+$ country        <span class="ansi-black-intense-fg">&lt;chr&gt;</span> "Algeria", "Angola", "Benin", "Botswana", "Burkina Faso~
+$ gdpPercap_1952 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 2449.0082, 3520.6103, 1062.7522, 851.2411, 543.2552, 33~
+$ gdpPercap_1957 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 3013.9760, 3827.9405, 959.6011, 918.2325, 617.1835, 379~
+$ gdpPercap_1962 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 2550.8169, 4269.2767, 949.4991, 983.6540, 722.5120, 355~
+$ gdpPercap_1967 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 3246.9918, 5522.7764, 1035.8314, 1214.7093, 794.8266, 4~
+$ gdpPercap_1972 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 4182.6638, 5473.2880, 1085.7969, 2263.6111, 854.7360, 4~
+$ gdpPercap_1977 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 4910.4168, 3008.6474, 1029.1613, 3214.8578, 743.3870, 5~
+$ gdpPercap_1982 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 5745.1602, 2756.9537, 1277.8976, 4551.1421, 807.1986, 5~
+$ gdpPercap_1987 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 5681.3585, 2430.2083, 1225.8560, 6205.8839, 912.0631, 6~
+$ gdpPercap_1992 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 5023.2166, 2627.8457, 1191.2077, 7954.1116, 931.7528, 6~
+$ gdpPercap_1997 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 4797.2951, 2277.1409, 1232.9753, 8647.1423, 946.2950, 4~
+$ gdpPercap_2002 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 5288.0404, 2773.2873, 1372.8779, 11003.6051, 1037.6452,~
+$ gdpPercap_2007 <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 6223.3675, 4797.2313, 1441.2849, 12569.8518, 1217.0330,~
+$ lifeExp_1952   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 43.077, 30.015, 38.223, 47.622, 31.975, 39.031, 38.523,~
+$ lifeExp_1957   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 45.685, 31.999, 40.358, 49.618, 34.906, 40.533, 40.428,~
+$ lifeExp_1962   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 48.303, 34.000, 42.618, 51.520, 37.814, 42.045, 42.643,~
+$ lifeExp_1967   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 51.407, 35.985, 44.885, 53.298, 40.697, 43.548, 44.799,~
+$ lifeExp_1972   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 54.518, 37.928, 47.014, 56.024, 43.591, 44.057, 47.049,~
+$ lifeExp_1977   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 58.014, 39.483, 49.190, 59.319, 46.137, 45.910, 49.355,~
+$ lifeExp_1982   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 61.368, 39.942, 50.904, 61.484, 48.122, 47.471, 52.961,~
+$ lifeExp_1987   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 65.799, 39.906, 52.337, 63.622, 49.557, 48.211, 54.985,~
+$ lifeExp_1992   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 67.744, 40.647, 53.919, 62.745, 50.260, 44.736, 54.314,~
+$ lifeExp_1997   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 69.152, 40.963, 54.777, 52.556, 50.324, 45.326, 52.199,~
+$ lifeExp_2002   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 70.994, 41.003, 54.406, 46.634, 50.650, 47.360, 49.856,~
+$ lifeExp_2007   <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 72.301, 42.731, 56.728, 50.728, 52.295, 49.580, 50.430,~
+$ pop_1952       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 9279525, 4232095, 1738315, 442308, 4469979, 2445618, 50~
+$ pop_1957       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 10270856, 4561361, 1925173, 474639, 4713416, 2667518, 5~
+$ pop_1962       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 11000948, 4826015, 2151895, 512764, 4919632, 2961915, 5~
+$ pop_1967       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 12760499, 5247469, 2427334, 553541, 5127935, 3330989, 6~
+$ pop_1972       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 14760787, 5894858, 2761407, 619351, 5433886, 3529983, 7~
+$ pop_1977       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 17152804, 6162675, 3168267, 781472, 5889574, 3834415, 7~
+$ pop_1982       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 20033753, 7016384, 3641603, 970347, 6634596, 4580410, 9~
+$ pop_1987       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 23254956, 7874230, 4243788, 1151184, 7586551, 5126023, ~
+$ pop_1992       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 26298373, 8735988, 4981671, 1342614, 8878303, 5809236, ~
+$ pop_1997       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 29072015, 9875024, 6066080, 1536536, 10352843, 6121610,~
+$ pop_2002       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 31287142, 10866106, 7026113, 1630347, 12251209, 7021078~
+$ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216, 12420476, 8078314, 1639131, 14326203, 8390505~
+</pre>
 </div>
 </div>
 </div>
