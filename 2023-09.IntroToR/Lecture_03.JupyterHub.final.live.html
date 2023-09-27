@@ -9332,12 +9332,12 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Save the result of this wrangling to an object</span>
@@ -9369,6 +9369,45 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <span class="c1"># Just look at the top 10 scores</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">embryo_summary.df</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>`summarise()` has grouped output by 'wormStrain', 'fixingDate', 'sporeStrain'. You can override using the `.groups`
+argument.
+`summarise()` has grouped output by 'wormStrain'. You can override using the `.groups` argument.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A grouped_df: 10 × 3</caption>
+<thead>
+<tr><th scope="col">wormStrain</th><th scope="col">sporeStrain</th><th scope="col">groupMean</th></tr>
+<tr><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>JU1400          </td><td>LUAm3    </td><td>0.01333333</td></tr>
+<tr><td>VC40171         </td><td>LUAm1    </td><td>0.02666667</td></tr>
+<tr><td>JU1400-MY1-cross</td><td>LUAm1    </td><td>0.10000000</td></tr>
+<tr><td>MY1             </td><td>LUAm1    </td><td>0.22315912</td></tr>
+<tr><td>JU1400          </td><td>ERTm2    </td><td>0.35000000</td></tr>
+<tr><td>JU1400          </td><td>LUAm1    </td><td>0.45984615</td></tr>
+<tr><td>CB4856          </td><td>ERTm2    </td><td>0.80000000</td></tr>
+<tr><td>JU360           </td><td>LUAm1    </td><td>1.08747680</td></tr>
+<tr><td>ED3042          </td><td>LUAm1    </td><td>1.48455182</td></tr>
+<tr><td>JU1400          </td><td>LUAm1-pel</td><td>1.52000000</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
