@@ -11005,12 +11005,12 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Let's do a bulk conversion into long format</span>
@@ -11024,6 +11024,32 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 <span class="w">    </span><span class="c1"># Take a peek at the long-format result</span>
 <span class="w">    </span><span class="nf">head</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 4</caption>
+<thead>
+<tr><th scope="col">continent</th><th scope="col">country</th><th scope="col">obs_type</th><th scope="col">obs_value</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap_1952</td><td>2449.008</td></tr>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap_1957</td><td>3013.976</td></tr>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap_1962</td><td>2550.817</td></tr>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap_1967</td><td>3246.992</td></tr>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap_1972</td><td>4182.664</td></tr>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap_1977</td><td>4910.417</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -11045,12 +11071,12 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Let's do a bulk conversion into long format</span>
@@ -11062,11 +11088,37 @@ $ pop_2007       <span class="ansi-black-intense-fg">&lt;dbl&gt;</span> 33333216
 <span class="w">                 </span><span class="n">values_to</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"obs_value"</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1">### 5.2.2 Separate the data into a category and a year</span>
-<span class="w">    </span><span class="nf">separate</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"obs_type"</span><span class="p">,</span><span class="w"> </span><span class="s">"year"</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"_"</span><span class="p">,</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">separate</span><span class="p">(</span><span class="n">obs_type</span><span class="p">,</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"obs_type"</span><span class="p">,</span><span class="w"> </span><span class="s">"year"</span><span class="p">),</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"_"</span><span class="p">,</span><span class="w"> </span><span class="n">convert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1"># Take a peek at the long-format result</span>
 <span class="w">    </span><span class="nf">head</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 5</caption>
+<thead>
+<tr><th scope="col">continent</th><th scope="col">country</th><th scope="col">obs_type</th><th scope="col">year</th><th scope="col">obs_value</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap</td><td>1952</td><td>2449.008</td></tr>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap</td><td>1957</td><td>3013.976</td></tr>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap</td><td>1962</td><td>2550.817</td></tr>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap</td><td>1967</td><td>3246.992</td></tr>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap</td><td>1972</td><td>4182.664</td></tr>
+<tr><td>Africa</td><td>Algeria</td><td>gdpPercap</td><td>1977</td><td>4910.417</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
