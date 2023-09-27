@@ -9221,7 +9221,7 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Save the results of the wrangling</span>
@@ -9247,7 +9247,7 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sporeStrain</span><span class="p">,</span><span class="w"> </span><span class="n">sporeDose</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1"># Calculate the mean of the means so that each replicate has the same weight</span>
-<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">groupMean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="kc">...</span><span class="p">))</span>
+<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">groupMean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">meanEmb</span><span class="p">))</span>
 <span class="w">  </span>
 <span class="c1"># Sort the data to group by groupMean to see which combo has the lowest value</span>
 <span class="nf">arrange</span><span class="p">(</span><span class="n">wormSporeDose_summary.df</span><span class="p">,</span><span class="w"> </span><span class="n">groupMean</span><span class="p">)</span>
@@ -9264,6 +9264,7 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>`summarise()` has grouped output by 'fixingDate', 'sporeStrain'. You can override using the `.groups` argument.
+`summarise()` has grouped output by 'sporeStrain'. You can override using the `.groups` argument.
 </pre>
 </div>
 </div>
@@ -9271,73 +9272,38 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
 <table class="dataframe">
-<caption>A grouped_df: 68 × 4</caption>
+<caption>A grouped_df: 26 × 3</caption>
 <thead>
-<tr><th scope="col">fixingDate</th><th scope="col">sporeStrain</th><th scope="col">sporeDose</th><th scope="col">meanEmb</th></tr>
-<tr><th scope="col">&lt;int&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+<tr><th scope="col">sporeStrain</th><th scope="col">sporeDose</th><th scope="col">groupMean</th></tr>
+<tr><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
-<tr><td>190426</td><td>ERTm2 </td><td> 0.00</td><td>19.358209</td></tr>
-<tr><td>190426</td><td>ERTm2 </td><td> 0.50</td><td> 9.921875</td></tr>
-<tr><td>190426</td><td>ERTm2 </td><td> 1.50</td><td> 2.111111</td></tr>
-<tr><td>190426</td><td>ERTm5 </td><td> 0.00</td><td>15.883333</td></tr>
-<tr><td>190426</td><td>ERTm5 </td><td> 1.75</td><td> 9.209677</td></tr>
-<tr><td>190426</td><td>ERTm5 </td><td> 3.50</td><td> 4.564706</td></tr>
-<tr><td>190426</td><td>LUAm1 </td><td> 0.00</td><td>16.644444</td></tr>
-<tr><td>190426</td><td>LUAm1 </td><td>10.00</td><td> 9.066667</td></tr>
-<tr><td>190426</td><td>LUAm1 </td><td>20.00</td><td> 7.700000</td></tr>
-<tr><td>190521</td><td>ERTm1 </td><td> 0.00</td><td>13.509259</td></tr>
-<tr><td>190521</td><td>ERTm1 </td><td> 0.75</td><td>10.166667</td></tr>
-<tr><td>190521</td><td>ERTm1 </td><td> 1.50</td><td> 8.254902</td></tr>
-<tr><td>190731</td><td>ERTm1 </td><td> 0.00</td><td>27.040000</td></tr>
-<tr><td>190731</td><td>ERTm1 </td><td> 0.75</td><td>26.860000</td></tr>
-<tr><td>190731</td><td>ERTm1 </td><td> 1.50</td><td>21.820000</td></tr>
-<tr><td>200707</td><td>AWRm78</td><td> 3.50</td><td>12.340000</td></tr>
-<tr><td>200707</td><td>ERTm5 </td><td> 1.75</td><td> 8.510638</td></tr>
-<tr><td>200707</td><td>ERTm5 </td><td> 3.50</td><td> 4.620000</td></tr>
-<tr><td>200707</td><td>LUAm1 </td><td> 0.00</td><td>16.300000</td></tr>
-<tr><td>200707</td><td>LUAm1 </td><td>10.00</td><td>10.040000</td></tr>
-<tr><td>200707</td><td>LUAm3 </td><td>10.00</td><td>11.440000</td></tr>
-<tr><td>200707</td><td>MAM1  </td><td> 4.00</td><td>15.720000</td></tr>
-<tr><td>200714</td><td>AWRm78</td><td> 3.50</td><td>10.600000</td></tr>
-<tr><td>200714</td><td>ERTm5 </td><td> 1.75</td><td>12.320000</td></tr>
-<tr><td>200714</td><td>ERTm5 </td><td> 3.50</td><td> 6.020000</td></tr>
-<tr><td>200714</td><td>LUAm1 </td><td> 0.00</td><td>15.240000</td></tr>
-<tr><td>200714</td><td>LUAm1 </td><td>10.00</td><td> 8.640000</td></tr>
-<tr><td>200714</td><td>LUAm1 </td><td>15.00</td><td> 8.755102</td></tr>
-<tr><td>200714</td><td>LUAm3 </td><td>10.00</td><td>12.400000</td></tr>
-<tr><td>200714</td><td>MAM1  </td><td> 4.00</td><td>14.200000</td></tr>
-<tr><td>...</td><td>...</td><td>...</td><td>...</td></tr>
-<tr><td>200721</td><td>MAM1     </td><td> 8.000</td><td>13.72</td></tr>
-<tr><td>200821</td><td>LUAm1    </td><td> 0.000</td><td>20.88</td></tr>
-<tr><td>200821</td><td>LUAm1    </td><td>10.000</td><td>13.44</td></tr>
-<tr><td>200821</td><td>LUAm1-HK </td><td>10.000</td><td>19.40</td></tr>
-<tr><td>200821</td><td>LUAm1-pel</td><td>10.000</td><td>14.14</td></tr>
-<tr><td>200821</td><td>LUAm1-sup</td><td>10.000</td><td>20.20</td></tr>
-<tr><td>200825</td><td>LUAm1    </td><td> 0.000</td><td>21.08</td></tr>
-<tr><td>200825</td><td>LUAm1    </td><td>10.000</td><td>14.90</td></tr>
-<tr><td>200904</td><td>ERTm5    </td><td> 0.200</td><td>16.34</td></tr>
-<tr><td>200904</td><td>ERTm5    </td><td> 0.350</td><td>16.20</td></tr>
-<tr><td>200904</td><td>ERTm5    </td><td> 0.875</td><td>13.22</td></tr>
-<tr><td>200904</td><td>ERTm5    </td><td> 3.500</td><td> 6.50</td></tr>
-<tr><td>200904</td><td>LUAm1    </td><td> 0.000</td><td>19.72</td></tr>
-<tr><td>200904</td><td>LUAm1    </td><td>10.000</td><td>10.94</td></tr>
-<tr><td>200915</td><td>ERTm5    </td><td> 0.000</td><td>17.44</td></tr>
-<tr><td>200915</td><td>ERTm5    </td><td> 3.500</td><td> 5.66</td></tr>
-<tr><td>200918</td><td>ERTm5    </td><td> 0.000</td><td>21.36</td></tr>
-<tr><td>200918</td><td>ERTm5    </td><td> 3.500</td><td> 5.46</td></tr>
-<tr><td>210202</td><td>ERTm1    </td><td> 1.250</td><td>14.40</td></tr>
-<tr><td>210202</td><td>ERTm2    </td><td> 1.250</td><td> 1.25</td></tr>
-<tr><td>210202</td><td>ERTm5    </td><td> 1.250</td><td>12.60</td></tr>
-<tr><td>220205</td><td>ERTm5    </td><td> 0.000</td><td>22.30</td></tr>
-<tr><td>220205</td><td>ERTm5    </td><td> 1.750</td><td>14.20</td></tr>
-<tr><td>220205</td><td>ERTm5    </td><td> 3.500</td><td> 6.60</td></tr>
-<tr><td>220219</td><td>ERTm5    </td><td> 0.000</td><td>15.55</td></tr>
-<tr><td>220219</td><td>ERTm5    </td><td> 1.750</td><td> 8.05</td></tr>
-<tr><td>220219</td><td>ERTm5    </td><td> 3.500</td><td> 2.60</td></tr>
-<tr><td>220302</td><td>ERTm5    </td><td> 0.000</td><td>15.25</td></tr>
-<tr><td>220302</td><td>ERTm5    </td><td> 1.750</td><td> 7.10</td></tr>
-<tr><td>220302</td><td>ERTm5    </td><td> 3.500</td><td> 1.40</td></tr>
+<tr><td>ERTm2    </td><td> 1.250</td><td> 1.250000</td></tr>
+<tr><td>ERTm2    </td><td> 1.500</td><td> 2.111111</td></tr>
+<tr><td>ERTm5    </td><td> 3.500</td><td> 4.870471</td></tr>
+<tr><td>LUAm1    </td><td>20.000</td><td> 7.700000</td></tr>
+<tr><td>LUAm1    </td><td>15.000</td><td> 8.755102</td></tr>
+<tr><td>ERTm5    </td><td> 1.750</td><td> 9.855759</td></tr>
+<tr><td>ERTm2    </td><td> 0.500</td><td> 9.921875</td></tr>
+<tr><td>LUAm1    </td><td>10.000</td><td>11.286667</td></tr>
+<tr><td>AWRm78   </td><td> 3.500</td><td>11.393333</td></tr>
+<tr><td>LUAm3    </td><td>10.000</td><td>12.340000</td></tr>
+<tr><td>ERTm5    </td><td> 1.250</td><td>12.600000</td></tr>
+<tr><td>ERTm5    </td><td> 0.875</td><td>13.220000</td></tr>
+<tr><td>LUAm1-pel</td><td>10.000</td><td>14.140000</td></tr>
+<tr><td>MAM1     </td><td> 8.000</td><td>14.310000</td></tr>
+<tr><td>ERTm1    </td><td> 1.250</td><td>14.400000</td></tr>
+<tr><td>MAM1     </td><td> 4.000</td><td>14.786667</td></tr>
+<tr><td>ERTm1    </td><td> 1.500</td><td>15.037451</td></tr>
+<tr><td>ERTm5    </td><td> 0.350</td><td>16.200000</td></tr>
+<tr><td>ERTm5    </td><td> 0.200</td><td>16.340000</td></tr>
+<tr><td>LUAm1    </td><td> 0.000</td><td>17.946349</td></tr>
+<tr><td>ERTm5    </td><td> 0.000</td><td>17.963889</td></tr>
+<tr><td>ERTm1    </td><td> 0.750</td><td>18.513333</td></tr>
+<tr><td>ERTm2    </td><td> 0.000</td><td>19.358209</td></tr>
+<tr><td>LUAm1-HK </td><td>10.000</td><td>19.400000</td></tr>
+<tr><td>LUAm1-sup</td><td>10.000</td><td>20.200000</td></tr>
+<tr><td>ERTm1    </td><td> 0.000</td><td>20.274630</td></tr>
 </tbody>
 </table>
 </div>
