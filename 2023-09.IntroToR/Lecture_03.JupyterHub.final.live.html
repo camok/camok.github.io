@@ -10626,12 +10626,12 @@ As you expand your search for this information, you may wish to <b><i>combine</i
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Open and save the spore metadata to an object. You probably did this already but let's redo it just in case...</span>
@@ -10651,6 +10651,41 @@ As you expand your search for this information, you may wish to <b><i>combine</i
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">7</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">5</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> "\t"
+<span class="ansi-red-fg">chr</span> (5): spore.strain, spore.species, infection.location, original.nematode....
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>tibble [7 x 5] (S3: tbl_df/tbl/data.frame)
+ $ spore.strain             : Factor w/ 7 levels "AWRm78","Cider",..: 3 4 5 6 1 2 7
+ $ spore.species            : chr [1:7] "N. parisii" "N. ausubeli" "N. ironsii" "N. ferruginous" ...
+ $ infection.location       : chr [1:7] "intestine" "intestine" "intestine" "epidermis" ...
+ $ original.nematode.species: chr [1:7] "C. elegans" "C. briggsae" "C. briggsae" "C. elegans" ...
+ $ original.location        : chr [1:7] "France" "India" "Hawaii, USA" "France" ...
+gropd_df [26 x 3] (S3: grouped_df/tbl_df/tbl/data.frame)
+ $ sporeStrain: Factor w/ 11 levels "AWRm78","ERTm1",..: 1 2 2 2 2 3 3 3 3 4 ...
+ $ sporeDose  : num [1:26] 3.5 0 0.75 1.25 1.5 0 0.5 1.25 1.5 0 ...
+ $ groupMean  : num [1:26] 11.4 20.3 18.5 14.4 15 ...
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10666,10 +10701,10 @@ As you expand your search for this information, you may wish to <b><i>combine</i
 <span class="w">    </span><span class="n">wormSporeDose_summary.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1"># Filter the spore dose values</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">sporeDose</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1"># Join this with the spore metadata</span>
-<span class="w">    </span><span class="nf">inner_join</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"sporeStrain"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"spore.strain"</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">inner_join</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spore_metadata.df</span><span class="p">,</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">"sporeStrain"</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"spore.strain"</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1"># Sort the data by spore species and then by spore dose</span>
 <span class="w">    </span><span class="nf">arrange</span><span class="p">(</span><span class="n">spore.species</span><span class="p">,</span><span class="w"> </span><span class="n">sporeStrain</span><span class="p">,</span><span class="w"> </span><span class="n">sporeDose</span><span class="p">)</span>
