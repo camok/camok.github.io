@@ -9116,24 +9116,24 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">split_embryo_long.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 
 <span class="w">    </span><span class="c1"># Filter the data to focus on sporeDose of 0 (ie uninfected conditions)</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="n">sporeDose</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">,</span>
 <span class="w">           </span><span class="n">expTimepoint</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">72</span><span class="p">,</span><span class="w">    </span><span class="c1"># Recall there are some 72-hour and 96-hour timepoints. We should stick with one.</span>
 <span class="w">           </span><span class="n">embryos</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">0</span><span class="w">           </span><span class="c1"># There's a quirk of the data in here so we need an extra filter as male animals have -1 embryos</span>
 <span class="w">          </span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1"># Group the data since we are looking at worm strains</span>
-<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">wormStrain</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span>
 <span class="w">    </span><span class="c1"># Summarise the data</span>
 <span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">nWorms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">(),</span>
@@ -9146,6 +9146,52 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 <span class="w">    </span><span class="c1"># Sort the data so we can quickly see the upper and lower ranges</span>
 <span class="w">    </span><span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">meanEmb</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 26 × 6</caption>
+<thead>
+<tr><th scope="col">wormStrain</th><th scope="col">nWorms</th><th scope="col">meanEmb</th><th scope="col">medianEmb</th><th scope="col">sdEmb</th><th scope="col">maxEmb</th></tr>
+<tr><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>MY2             </td><td>123</td><td>21.886179</td><td>21.0</td><td>5.757679</td><td>40</td></tr>
+<tr><td>CB4856          </td><td> 60</td><td>20.750000</td><td>20.0</td><td>4.921847</td><td>32</td></tr>
+<tr><td>AWR145          </td><td>250</td><td>20.656000</td><td>21.0</td><td>5.192834</td><td>48</td></tr>
+<tr><td>AWR144          </td><td>250</td><td>19.228000</td><td>19.0</td><td>4.524811</td><td>32</td></tr>
+<tr><td>MY6             </td><td> 61</td><td>18.360656</td><td>18.0</td><td>4.854664</td><td>31</td></tr>
+<tr><td>N2              </td><td>790</td><td>18.051899</td><td>18.0</td><td>5.510547</td><td>38</td></tr>
+<tr><td>JU360           </td><td>173</td><td>16.832370</td><td>17.0</td><td>3.892553</td><td>35</td></tr>
+<tr><td>VC20019         </td><td>274</td><td>16.419708</td><td>16.0</td><td>3.913316</td><td>28</td></tr>
+<tr><td>JU300           </td><td> 61</td><td>15.622951</td><td>15.0</td><td>4.936814</td><td>32</td></tr>
+<tr><td>JU360-MY1-cross </td><td> 31</td><td>14.838710</td><td>15.0</td><td>2.353675</td><td>19</td></tr>
+<tr><td>JU642           </td><td> 60</td><td>14.733333</td><td>15.0</td><td>3.754621</td><td>21</td></tr>
+<tr><td>JU360-cross     </td><td> 73</td><td>13.643836</td><td>14.0</td><td>2.169036</td><td>20</td></tr>
+<tr><td>ED3042-cross    </td><td> 42</td><td>13.238095</td><td>13.0</td><td>2.526055</td><td>22</td></tr>
+<tr><td>ED3042-MY1-cross</td><td> 33</td><td>12.727273</td><td>13.0</td><td>2.565062</td><td>16</td></tr>
+<tr><td>ED3042          </td><td>111</td><td>12.702703</td><td>12.0</td><td>3.463038</td><td>25</td></tr>
+<tr><td>MY1-cross       </td><td> 54</td><td>12.648148</td><td>13.0</td><td>2.934231</td><td>20</td></tr>
+<tr><td>JU1400-MY1-cross</td><td> 60</td><td>12.583333</td><td>13.0</td><td>2.688908</td><td>18</td></tr>
+<tr><td>MY1             </td><td>265</td><td>12.392453</td><td>12.0</td><td>4.147464</td><td>24</td></tr>
+<tr><td>ED3052B         </td><td>148</td><td>12.047297</td><td>11.5</td><td>4.225505</td><td>26</td></tr>
+<tr><td>JU1400-cross    </td><td> 68</td><td>11.808824</td><td>12.0</td><td>3.537675</td><td>21</td></tr>
+<tr><td>JU397           </td><td> 70</td><td>11.457143</td><td>11.0</td><td>3.462786</td><td>18</td></tr>
+<tr><td>AB1             </td><td> 62</td><td>10.903226</td><td>10.0</td><td>3.242695</td><td>18</td></tr>
+<tr><td>LUA1            </td><td> 70</td><td>10.628571</td><td>10.5</td><td>2.654891</td><td>17</td></tr>
+<tr><td>ED3052A         </td><td>150</td><td>10.526667</td><td>10.0</td><td>2.902664</td><td>23</td></tr>
+<tr><td>JU1400          </td><td>754</td><td>10.274536</td><td>10.0</td><td>3.936442</td><td>24</td></tr>
+<tr><td>VC40171         </td><td>150</td><td> 4.586667</td><td> 3.0</td><td>5.172445</td><td>24</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
