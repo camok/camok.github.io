@@ -8960,21 +8960,44 @@ tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">split_embryo_long.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Group the data by 3 variables and look at the structure</span>
 <span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">fixingDate</span><span class="p">,</span><span class="w"> </span><span class="n">wormStrain</span><span class="p">,</span><span class="w"> </span><span class="n">sporeStrain</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Ungroup the data</span>
-<span class="w">    </span><span class="kc">...</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">ungroup</span><span class="p">()</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="nf">str</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>tibble [15,128 x 10] (S3: tbl_df/tbl/data.frame)
+ $ worm.number : num [1:15128] 1 1 1 1 1 1 1 1 1 1 ...
+ $ experiment  : chr [1:15128] "200707_N2_LUAm1_0M_72hpi" "200707_N2_LUAm1_10M_72hpi" "200707_JU1400_LUAm1_0M_72hpi" "200707_JU1400_LUAm1_10M_72hpi" ...
+ $ fixingDate  : int [1:15128] 200707 200707 200707 200707 200707 200707 200707 200707 200707 200707 ...
+ $ wormStrain  : Factor w/ 26 levels "AB1","AWR144",..: 24 24 10 10 8 8 9 9 20 20 ...
+ $ sporeStrain : Factor w/ 11 levels "AWRm78","ERTm1",..: 6 6 6 6 6 6 6 6 6 6 ...
+ $ sporeDose   : num [1:15128] 0 10 0 10 0 10 0 10 0 10 ...
+ $ expTimepoint: int [1:15128] 72 72 72 72 72 72 72 72 72 72 ...
+ $ spores      : logi [1:15128] FALSE FALSE FALSE FALSE FALSE FALSE ...
+ $ meronts     : logi [1:15128] FALSE TRUE FALSE TRUE FALSE TRUE ...
+ $ embryos     : int [1:15128] 18 7 10 0 12 0 5 9 11 0 ...
+</pre>
 </div>
 </div>
 </div>
