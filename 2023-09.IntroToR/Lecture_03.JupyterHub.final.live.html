@@ -10217,18 +10217,42 @@ tibble [276 x 16] (S3: tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">infection_meta.df</span><span class="w"> </span><span class="o">%&gt;%</span>
 <span class="w">    </span><span class="c1"># Filter for duplicates in both directions to get all non-unique "experiment" entries</span>
-<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">experiment</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">duplicated</span><span class="p">(</span><span class="n">experiment</span><span class="p">,</span><span class="w"> </span><span class="n">fromLast</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TRE</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">filter</span><span class="p">(</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">experiment</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nf">duplicated</span><span class="p">(</span><span class="n">experiment</span><span class="p">,</span><span class="w"> </span><span class="n">fromLast</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A spec_tbl_df: 4 × 29</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">experimenter</th><th scope="col">description</th><th scope="col">Infection Date</th><th scope="col">Plate Number</th><th scope="col">Worm_strain</th><th scope="col">Total Worms</th><th scope="col">Spore Strain</th><th scope="col">Spore Lot</th><th scope="col">Lot concentration</th><th scope="col">...</th><th scope="col">timepoint</th><th scope="col">infection.type</th><th scope="col">Fixing Date</th><th scope="col">Location</th><th scope="col">Staining Date</th><th scope="col">Stain type</th><th scope="col">Slide date</th><th scope="col">Slide number</th><th scope="col">Slide Box</th><th scope="col">Imaging Date</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">...</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>200821_N2_LUAm1_0M_72hpi    </td><td>CM</td><td>Lua1 continuous Infection test 6X NIL, VC40171, RNAseq</td><td>200818</td><td> 1</td><td>N2    </td><td> 1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>200821</td><td>Acetone Samples 200707 CM</td><td>200831</td><td>Sp.9 FISH + DY96</td><td>200903</td><td> 1</td><td>4</td><td>200912</td></tr>
+<tr><td>200821_JU1400_LUAm1_0M_72hpi</td><td>CM</td><td>Lua1 continuous Infection test 6X NIL, VC40171, RNAseq</td><td>200818</td><td> 3</td><td>JU1400</td><td> 1000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>200821</td><td>Acetone Samples 200707 CM</td><td>200831</td><td>Sp.9 FISH + DY96</td><td>200903</td><td> 3</td><td>4</td><td>200912</td></tr>
+<tr><td>200821_N2_LUAm1_0M_72hpi    </td><td>CM</td><td>RNAseq data rep 1                                     </td><td>200818</td><td>11</td><td>N2    </td><td>10000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>200821</td><td>Sample exhausted         </td><td>200831</td><td>Sp.9 FISH + DY96</td><td>200903</td><td>11</td><td>4</td><td>200912</td></tr>
+<tr><td>200821_JU1400_LUAm1_0M_72hpi</td><td>CM</td><td>RNAseq data rep 1                                     </td><td>200818</td><td>12</td><td>JU1400</td><td>10000</td><td>LUAm1</td><td>2A</td><td>176000</td><td>...</td><td>72</td><td>continuous</td><td>200821</td><td>Sample exhausted         </td><td>200831</td><td>Sp.9 FISH + DY96</td><td>200903</td><td>12</td><td>4</td><td>200912</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
