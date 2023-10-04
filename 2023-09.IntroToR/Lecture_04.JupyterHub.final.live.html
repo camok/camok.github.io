@@ -10146,27 +10146,54 @@ spc_tbl_ [456 x 14] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Update our dataframe to convert some variables to factors</span>
 <span class="n">infection_sig.df</span><span class="w"> </span><span class="o">&lt;-</span>
 <span class="w">    </span><span class="n">infection_sig.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="c1"># Use the mutate function to replace variables with factor versions of themselves</span>
-<span class="nf">mutate</span><span class="p">(</span><span class="n">strain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">strain</span><span class="p">),</span><span class="w"> </span>
-<span class="w">       </span><span class="n">spore.strain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">spore.strain</span><span class="p">),</span><span class="w"> </span>
-<span class="w">       </span><span class="n">spore.species</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">spore.species</span><span class="p">),</span>
-<span class="w">       </span><span class="n">fixing.date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">fixing.date</span><span class="p">),</span><span class="w"> </span>
-<span class="w">       </span><span class="n">dose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">dose</span><span class="p">))</span>
+<span class="w">    </span><span class="c1"># Use the mutate function to replace variables with factor versions of themselves</span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">strain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">strain</span><span class="p">),</span><span class="w"> </span>
+<span class="w">           </span><span class="n">spore.strain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">spore.strain</span><span class="p">),</span><span class="w"> </span>
+<span class="w">           </span><span class="n">spore.species</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">spore.species</span><span class="p">),</span>
+<span class="w">           </span><span class="n">fixing.date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">fixing.date</span><span class="p">),</span><span class="w"> </span>
+<span class="w">           </span><span class="n">dose</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">dose</span><span class="p">))</span>
 
 <span class="c1"># Take a look at the resulting changes</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">infection_sig.df</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>tibble [456 x 14] (S3: tbl_df/tbl/data.frame)
+ $ exp.name        : chr [1:456] "N2-LUAm1-1.8" "N2-LUAm1-1.8" "N2-LUAm1-1.8" "N2-LUAm1-1.8" ...
+ $ strain          : Factor w/ 4 levels "AWR144","AWR145",..: 4 4 4 4 4 4 4 4 4 4 ...
+ $ spore.strain    : Factor w/ 1 level "LUAm1": 1 1 1 1 1 1 1 1 1 1 ...
+ $ spore.species   : Factor w/ 1 level "N.ferruginous": 1 1 1 1 1 1 1 1 1 1 ...
+ $ dose            : Factor w/ 1 level "pulse-72H": 1 1 1 1 1 1 1 1 1 1 ...
+ $ spores          : num [1:456] 1.8 1.8 1.8 1.8 1.8 1.8 1.8 1.8 1.8 1.8 ...
+ $ fixing.date     : Factor w/ 3 levels "rep1","rep2",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ slide           : num [1:456] 1 1 1 1 1 1 1 1 1 1 ...
+ $ file            : chr [1:456] "N2.LUAm1.rep1" "N2.LUAm1.rep1" "N2.LUAm1.rep1" "N2.LUAm1.rep1" ...
+ $ worm.number     : num [1:456] 1 2 3 4 5 6 7 8 9 10 ...
+ $ area            : num [1:456] 49838 50425 45533 46459 49215 ...
+ $ percent.infected: num [1:456] 18.53 0 31.16 3.88 0 ...
+ $ area.infected   : num [1:456] 9235 0 14188 1803 0 ...
+ $ timepoint       : chr [1:456] "72hpi" "72hpi" "72hpi" "72hpi" ...
+</pre>
 </div>
 </div>
 </div>
