@@ -37078,12 +37078,12 @@ AAAAAAAAAMCp9/8Dvw8m52V5+k4AAAAASUVORK5CYII=" width="720"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="n">embryo_long.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
@@ -37094,10 +37094,40 @@ AAAAAAAAAMCp9/8Dvw8m52V5+k4AAAAASUVORK5CYII=" width="720"/>
 <span class="w">    </span><span class="c1"># Grab the mean embryo count for each exp and make that a new column</span>
 <span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">meanEmb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">embryos</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Grab the first entry of each group</span>
-<span class="w">    </span><span class="nf">group_modify</span><span class="p">(</span><span class="n">.data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">.f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">.x</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">.x</span><span class="p">,</span><span class="w"> </span><span class="m">1L</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">group_modify</span><span class="p">(</span><span class="n">.data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">.f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="n">.x</span><span class="p">,</span><span class="w"> </span><span class="m">1L</span><span class="p">))</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Take a peek at the resulting tables</span>
 <span class="w">    </span><span class="nf">head</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A grouped_df: 10 × 20</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">worm.number</th><th scope="col">Infection Date</th><th scope="col">wormStrain</th><th scope="col">sporeStrain</th><th scope="col">sporeDose</th><th scope="col">Spores(M)/cm2</th><th scope="col">doseLevel</th><th scope="col">spores</th><th scope="col">meronts</th><th scope="col">embryos</th><th scope="col">expTimepoint</th><th scope="col">infection.type</th><th scope="col">Total Worms</th><th scope="col">Plate Size</th><th scope="col">fixingDate</th><th scope="col">Staining Date</th><th scope="col">Slide date</th><th scope="col">Imaging Date</th><th scope="col">meanEmb</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;lgl&gt;</th><th scope="col">&lt;lgl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>190426_AB1_LUAm1_0M_72hpi   </td><td>1</td><td>190423</td><td>AB1   </td><td>LUAm1</td><td>0</td><td>0</td><td>Mock</td><td>FALSE</td><td>FALSE</td><td>10</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td><td>10.903226</td></tr>
+<tr><td>190426_CB4856_ERTm5_0M_72hpi</td><td>1</td><td>190423</td><td>CB4856</td><td>ERTm5</td><td>0</td><td>0</td><td>Mock</td><td>FALSE</td><td> TRUE</td><td>19</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td><td>20.750000</td></tr>
+<tr><td>190426_ED3042_LUAm1_0M_72hpi</td><td>1</td><td>190423</td><td>ED3042</td><td>LUAm1</td><td>0</td><td>0</td><td>Mock</td><td>FALSE</td><td>FALSE</td><td>17</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td><td>13.147541</td></tr>
+<tr><td>190426_JU1400_ERTm5_0M_72hpi</td><td>1</td><td>190423</td><td>JU1400</td><td>ERTm5</td><td>0</td><td>0</td><td>Mock</td><td>FALSE</td><td> TRUE</td><td> 6</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>190426</td><td>190529</td><td>190530</td><td>201026</td><td> 5.724638</td></tr>
+<tr><td>190426_JU1400_LUAm1_0M_72hpi</td><td>1</td><td>190423</td><td>JU1400</td><td>LUAm1</td><td>0</td><td>0</td><td>Mock</td><td>FALSE</td><td>FALSE</td><td> 4</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td><td> 6.241935</td></tr>
+<tr><td>190426_JU300_ERTm5_0M_72hpi </td><td>1</td><td>190423</td><td>JU300 </td><td>ERTm5</td><td>0</td><td>0</td><td>Mock</td><td>FALSE</td><td> TRUE</td><td>18</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td><td>15.622951</td></tr>
+<tr><td>190426_JU360_ERTm2_0M_72hpi </td><td>1</td><td>190423</td><td>JU360 </td><td>ERTm2</td><td>0</td><td>0</td><td>Mock</td><td>FALSE</td><td> TRUE</td><td>20</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td><td>18.180328</td></tr>
+<tr><td>190426_JU360_LUAm1_0M_72hpi </td><td>1</td><td>190423</td><td>JU360 </td><td>LUAm1</td><td>0</td><td>0</td><td>Mock</td><td>FALSE</td><td>FALSE</td><td>12</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td><td>15.419355</td></tr>
+<tr><td>190426_JU397_LUAm1_0M_72hpi </td><td>1</td><td>190423</td><td>JU397 </td><td>LUAm1</td><td>0</td><td>0</td><td>Mock</td><td>FALSE</td><td>FALSE</td><td>11</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td><td>11.457143</td></tr>
+<tr><td>190426_JU642_LUAm1_0M_72hpi </td><td>1</td><td>190423</td><td>JU642 </td><td>LUAm1</td><td>0</td><td>0</td><td>Mock</td><td>FALSE</td><td>FALSE</td><td>12</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>190426</td><td>190430</td><td>190501</td><td>190502</td><td>14.733333</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
