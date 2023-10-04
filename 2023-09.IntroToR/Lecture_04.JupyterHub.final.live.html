@@ -7812,20 +7812,61 @@ Loading required package: viridisLite
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Open up the microscopy analysis data</span>
-<span class="n">infection_sig.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kc">...</span>
+<span class="n">infection_sig.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_tsv</span><span class="p">(</span><span class="s">"data/infection_signal.tsv"</span><span class="p">)</span>
 
 <span class="c1"># Take a look at the data structure</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">infection_sig.df</span><span class="p">,</span><span class="w"> </span><span class="n">give.attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre><span class="ansi-bold">Rows: </span><span class="ansi-blue-fg">456</span> <span class="ansi-bold">Columns: </span><span class="ansi-blue-fg">14</span>
+<span class="ansi-cyan-fg">--</span> <span class="ansi-bold">Column specification</span> <span class="ansi-cyan-fg">------------------------------------------------------------------------------------------------</span>
+<span class="ansi-bold">Delimiter:</span> "\t"
+<span class="ansi-red-fg">chr</span> (8): exp.name, strain, spore.strain, spore.species, dose, fixing.date, f...
+<span class="ansi-green-fg">dbl</span> (6): spores, slide, worm.number, area, percent.infected, area.infected
+
+<span class="ansi-cyan-fg">i</span> Use `spec()` to retrieve the full column specification for this data.
+<span class="ansi-cyan-fg">i</span> Specify the column types or set `show_col_types = FALSE` to quiet this message.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>spc_tbl_ [456 x 14] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ exp.name        : chr [1:456] "N2-LUAm1-1.8" "N2-LUAm1-1.8" "N2-LUAm1-1.8" "N2-LUAm1-1.8" ...
+ $ strain          : chr [1:456] "N2" "N2" "N2" "N2" ...
+ $ spore.strain    : chr [1:456] "LUAm1" "LUAm1" "LUAm1" "LUAm1" ...
+ $ spore.species   : chr [1:456] "N.ferruginous" "N.ferruginous" "N.ferruginous" "N.ferruginous" ...
+ $ dose            : chr [1:456] "pulse-72H" "pulse-72H" "pulse-72H" "pulse-72H" ...
+ $ spores          : num [1:456] 1.8 1.8 1.8 1.8 1.8 1.8 1.8 1.8 1.8 1.8 ...
+ $ fixing.date     : chr [1:456] "rep1" "rep1" "rep1" "rep1" ...
+ $ slide           : num [1:456] 1 1 1 1 1 1 1 1 1 1 ...
+ $ file            : chr [1:456] "N2.LUAm1.rep1" "N2.LUAm1.rep1" "N2.LUAm1.rep1" "N2.LUAm1.rep1" ...
+ $ worm.number     : num [1:456] 1 2 3 4 5 6 7 8 9 10 ...
+ $ area            : num [1:456] 49838 50425 45533 46459 49215 ...
+ $ percent.infected: num [1:456] 18.53 0 31.16 3.88 0 ...
+ $ area.infected   : num [1:456] 9235 0 14188 1803 0 ...
+ $ timepoint       : chr [1:456] "72hpi" "72hpi" "72hpi" "72hpi" ...
+</pre>
 </div>
 </div>
 </div>
