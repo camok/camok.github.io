@@ -9807,12 +9807,12 @@ GGUAGCGCAGGCGGUAGAGGUCGUCGGCGUGCGCCGCGUAGAGCCCGUCGCAACCCAGGA</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># think of these dots as wildcards to pick any character triplets</span>
@@ -9821,6 +9821,32 @@ GGUAGCGCAGGCGGUAGAGGUCGUCGGCGUGCGCCGCGUAGAGCCCGUCGCAACCCAGGA</pre>
 <span class="c1"># how many codons did we retrieve?</span>
 <span class="nf">length</span><span class="p">(</span><span class="nf">str_extract_all</span><span class="p">(</span><span class="n">mrna</span><span class="p">,</span><span class="w"> </span><span class="s">"..."</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<ol>
+<li><style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>'AUG'</li><li>'GUC'</li><li>'CGC'</li><li>'AAA'</li><li>'GGG'</li><li>'GGA'</li><li>'CCU'</li><li>'UCG'</li><li>'AGG'</li><li>'GAG'</li><li>'CAC'</li><li>'AAG'</li><li>'GCU'</li><li>'GGG'</li><li>'ACG'</li><li>'GCG'</li><li>'AAU'</li><li>'GGC'</li><li>'CUA'</li><li>'UGG'</li><li>'ACA'</li><li>'GGC'</li><li>'GGA'</li><li>'AAG'</li><li>'AGG'</li><li>'GAA'</li><li>'GCC'</li><li>'CUU'</li><li>'CGC'</li><li>'ACC'</li><li>'GAC'</li><li>'GAG'</li><li>'UGC'</li><li>'GAC'</li><li>'AUG'</li><li>'GAU'</li><li>'AGA'</li><li>'GUC'</li><li>'AAG'</li><li>'CCA'</li><li>'CAU'</li><li>'CCA'</li><li>'GCA'</li><li>'AGC'</li><li>'GAG'</li><li>'GUU'</li><li>'CGA'</li><li>'CCC'</li><li>'GAC'</li><li>'ACA'</li><li>'CGG'</li><li>'CAA'</li><li>'GUC'</li><li>'GGG'</li><li>'CUG'</li><li>'GCG'</li><li>'ACG'</li><li>'CGG'</li><li>'AAU'</li><li>'AGG'</li><li>'CCA'</li><li>'UUG'</li><li>'AUA'</li><li>'GCA'</li><li>'GAA'</li><li>'CUC'</li><li>'AGG'</li><li>'UUG'</li><li>'GGC'</li><li>'CAU'</li><li>'UUC'</li><li>'AUC'</li><li>'CUG'</li><li>'UCC'</li><li>'ACG'</li><li>'GCC'</li><li>'GUC'</li><li>'GCG'</li><li>'AGA'</li><li>'CCC'</li><li>'AGU'</li><li>'AAA'</li><li>'AGC'</li><li>'CGC'</li><li>'UCC'</li><li>'UGG'</li><li>'CGA'</li><li>'AAG'</li><li>'CGA'</li><li>'CCU'</li><li>'CUA'</li><li>'GCC'</li><li>'GGA'</li><li>'CAG'</li><li>'CGA'</li><li>'ACG'</li><li>'CCA'</li><li>'UAA'</li><li>'GCC'</li><li>'UUA'</li><li>'GAA'</li><li>'CGU'</li><li>'GCG'</li><li>'GGA'</li><li>'GCG'</li><li>'AGU'</li><li>'UCG'</li><li>'GAA'</li><li>'GCA'</li><li>'GUG'</li><li>'AGG'</li><li>'UUU'</li><li>'GCA'</li><li>'AAG'</li><li>'CCG'</li><li>'CUC'</li><li>'UUC'</li><li>'GUC'</li><li>'CGG'</li><li>'UAA'</li><li>'UAG'</li><li>'CGG'</li><li>'CCG'</li><li>'UAC'</li><li>'CGC'</li><li>'CGG'</li><li>'CUG'</li><li>'CGC'</li><li>'GAC'</li><li>'CCG'</li><li>'ACC'</li><li>'GCA'</li><li>'AGC'</li><li>'GCU'</li><li>'GCG'</li><li>'CUC'</li><li>'CGA'</li><li>'CCU'</li><li>'ACC'</li><li>'GGA'</li><li>'AGG'</li><li>'GGU'</li><li>'AAU'</li><li>'ACU'</li><li>'AAG'</li><li>'AAG'</li><li>'AGC'</li><li>'GAA'</li><li>'GGC'</li><li>'CGC'</li><li>'CGG'</li><li>'GCG'</li><li>'CAA'</li><li>'CGU'</li><li>'CCG'</li><li>'GUA'</li><li>'CGA'</li><li>'CAG'</li><li>'GUC'</li><li>'CGU'</li><li>'CCA'</li><li>'UCU'</li><li>'ACU'</li><li>'GCU'</li><li>'GGU'</li><li>'AGU'</li><li>'CCC'</li><li>'UGU'</li><li>'CGA'</li><li>'AGU'</li><li>'UGC'</li><li>'CGA'</li><li>'GAA'</li><li>'UGG'</li><li>'UCG'</li><li>'GAU'</li><li>'UGA'</li><li>'AGC'</li><li>'UAG'</li><li>'UGA'</li><li>'CCU'</li><li>'GGC'</li><li>'GAC'</li><li>'UAG'</li><li>'CAG'</li><li>'UGC'</li><li>'CGC'</li><li>'UAA'</li><li>'AUA'</li><li>'CGG'</li><li>'CGU'</li><li>'GUA'</li><li>'CCU'</li><li>'GCG'</li><li>'CAA'</li><li>'CGA'</li><li>'CCG'</li><li>'CAA'</li><li>'AAA'</li><li>'GGU'</li><li>'AUC'</li><li>'CGA'</li><li>'GGC'</li><li>'GGG'</li><li>'GGG'</li><li>'ACU'</li><li>'GCU'</li><li>'CGU'</li><li>'AGU'</li><li>'GUU'</li><li>'UGU'</li><li>'UCA'</li><li>'GUC'</li><li>'UCC'</li><li>'ACC'</li><li>'GCU'</li><li>'UUG'</li><li>'GGC'</li><li>'UGU'</li><li>'CCU'</li><li>'GAU'</li><li>'AUU'</li><li>'UCU'</li><li>'AUG'</li><li>'GUC'</li><li>'CGC'</li><li>'AAA'</li><li>'GGG'</li><li>'GGA'</li><li>'CCU'</li><li>'UCG'</li><li>'CGA'</li><li>'GAG'</li><li>'GAC'</li><li>'AAG'</li><li>'GCU'</li><li>'GGG'</li><li>'ACG'</li><li>'GCG'</li><li>'AAU'</li><li>'GGC'</li><li>'CUA'</li><li>'UGG'</li><li>'ACA'</li><li>'GGC'</li><li>'GGA'</li><li>'AAG'</li><li>'AGG'</li><li>'GAA'</li><li>'GCC'</li><li>'CGA'</li><li>'AAG'</li><li>'AGU'</li><li>'UAC'</li><li>'GAG'</li><li>'UGC'</li><li>'GAC'</li><li>'AUC'</li><li>'CAU'</li><li>'AGA'</li><li>'GUC'</li><li>'AAG'</li><li>'CCA'</li><li>'CAU'</li><li>'CCA'</li><li>'GCA'</li><li>'AGC'</li><li>'GAG'</li><li>'GUU'</li><li>'CGA'</li><li>'CUG'</li><li>'CUU'</li><li>'GGG'</li><li>'GGG'</li><li>'CAA'</li><li>'GUC'</li><li>'GGG'</li><li>'CUG'</li><li>'GCG'</li><li>'ACG'</li><li>'CGG'</li><li>'AAU'</li><li>'AGG'</li><li>'CCA'</li><li>'UUG'</li><li>'AUA'</li><li>'GCA'</li><li>'GAA'</li><li>'CUC'</li><li>'AGG'</li><li>'UUG'</li><li>'UGC'</li><li>'UGA'</li><li>'AUU'</li><li>'GCC'</li><li>'CAA'</li><li>'CCG'</li><li>'UAC'</li><li>'CUA'</li><li>'ACA'</li><li>'UCC'</li><li>'GCG'</li><li>'GCG'</li><li>'GGA'</li><li>'UAU'</li><li>'GGA'</li><li>'ACA'</li><li>'GAC'</li><li>'GGA'</li><li>'GGG'</li><li>'GCG'</li><li>'CCA'</li><li>'CGU'</li><li>'ACC'</li><li>'UCG'</li><li>'GCC'</li><li>'CGG'</li><li>'UGG'</li><li>'AGC'</li><li>'UGG'</li><li>'ACU'</li><li>'UAC'</li><li>'CUU'</li><li>'CGG'</li><li>'CCG'</li><li>'CCG'</li><li>'UGG'</li><li>'AGC'</li><li>'GAU'</li><li>'UGC'</li><li>'CGG'</li><li>'UUC'</li><li>'UUA'</li><li>'ACC'</li><li>'UCG'</li><li>'GUU'</li><li>'AGU'</li><li>'UAA'</li><li>'GAA'</li><li>'CGC'</li><li>'CUC'</li><li>'UUG'</li><li>'ACA'</li><li>'CUU'</li><li>'ACG'</li><li>'CGU'</li><li>'UUG'</li><li>'GUU'</li><li>'GGG'</li><li>'AAC'</li><li>'CGG'</li><li>'UAG'</li><li>'CGC'</li><li>'AGG'</li><li>'CGG'</li><li>'UAG'</li><li>'AGG'</li><li>'UCG'</li><li>'UCG'</li><li>'GCG'</li><li>'UGC'</li><li>'GCC'</li><li>'GCG'</li><li>'UAG'</li><li>'AGC'</li><li>'CCG'</li><li>'UCG'</li><li>'CAA'</li><li>'CCC'</li><li>'AGG'</li></ol>
+</li>
+</ol>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+1
 </div>
 </div>
 </div>
@@ -9838,12 +9864,12 @@ GGUAGCGCAGGCGGUAGAGGUCGUCGGCGUGCGCCGCGUAGAGCCCGUCGCAACCCAGGA</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Unlist our results</span>
@@ -9856,6 +9882,29 @@ GGUAGCGCAGGCGGUAGAGGUCGUCGGCGUGCGCCGCGUAGAGCCCGUCGCAACCCAGGA</pre>
 
 <span class="nf">length</span><span class="p">(</span><span class="n">codons</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>'AUG'</li><li>'GUC'</li><li>'CGC'</li><li>'AAA'</li><li>'GGG'</li><li>'GGA'</li><li>'CCU'</li><li>'UCG'</li><li>'AGG'</li><li>'GAG'</li><li>'CAC'</li><li>'AAG'</li><li>'GCU'</li><li>'GGG'</li><li>'ACG'</li><li>'GCG'</li><li>'AAU'</li><li>'GGC'</li><li>'CUA'</li><li>'UGG'</li><li>'ACA'</li><li>'GGC'</li><li>'GGA'</li><li>'AAG'</li><li>'AGG'</li><li>'GAA'</li><li>'GCC'</li><li>'CUU'</li><li>'CGC'</li><li>'ACC'</li><li>'GAC'</li><li>'GAG'</li><li>'UGC'</li><li>'GAC'</li><li>'AUG'</li><li>'GAU'</li><li>'AGA'</li><li>'GUC'</li><li>'AAG'</li><li>'CCA'</li><li>'CAU'</li><li>'CCA'</li><li>'GCA'</li><li>'AGC'</li><li>'GAG'</li><li>'GUU'</li><li>'CGA'</li><li>'CCC'</li><li>'GAC'</li><li>'ACA'</li><li>'CGG'</li><li>'CAA'</li><li>'GUC'</li><li>'GGG'</li><li>'CUG'</li><li>'GCG'</li><li>'ACG'</li><li>'CGG'</li><li>'AAU'</li><li>'AGG'</li><li>'CCA'</li><li>'UUG'</li><li>'AUA'</li><li>'GCA'</li><li>'GAA'</li><li>'CUC'</li><li>'AGG'</li><li>'UUG'</li><li>'GGC'</li><li>'CAU'</li><li>'UUC'</li><li>'AUC'</li><li>'CUG'</li><li>'UCC'</li><li>'ACG'</li><li>'GCC'</li><li>'GUC'</li><li>'GCG'</li><li>'AGA'</li><li>'CCC'</li><li>'AGU'</li><li>'AAA'</li><li>'AGC'</li><li>'CGC'</li><li>'UCC'</li><li>'UGG'</li><li>'CGA'</li><li>'AAG'</li><li>'CGA'</li><li>'CCU'</li><li>'CUA'</li><li>'GCC'</li><li>'GGA'</li><li>'CAG'</li><li>'CGA'</li><li>'ACG'</li><li>'CCA'</li><li>'UAA'</li><li>'GCC'</li><li>'UUA'</li><li>'GAA'</li><li>'CGU'</li><li>'GCG'</li><li>'GGA'</li><li>'GCG'</li><li>'AGU'</li><li>'UCG'</li><li>'GAA'</li><li>'GCA'</li><li>'GUG'</li><li>'AGG'</li><li>'UUU'</li><li>'GCA'</li><li>'AAG'</li><li>'CCG'</li><li>'CUC'</li><li>'UUC'</li><li>'GUC'</li><li>'CGG'</li><li>'UAA'</li><li>'UAG'</li><li>'CGG'</li><li>'CCG'</li><li>'UAC'</li><li>'CGC'</li><li>'CGG'</li><li>'CUG'</li><li>'CGC'</li><li>'GAC'</li><li>'CCG'</li><li>'ACC'</li><li>'GCA'</li><li>'AGC'</li><li>'GCU'</li><li>'GCG'</li><li>'CUC'</li><li>'CGA'</li><li>'CCU'</li><li>'ACC'</li><li>'GGA'</li><li>'AGG'</li><li>'GGU'</li><li>'AAU'</li><li>'ACU'</li><li>'AAG'</li><li>'AAG'</li><li>'AGC'</li><li>'GAA'</li><li>'GGC'</li><li>'CGC'</li><li>'CGG'</li><li>'GCG'</li><li>'CAA'</li><li>'CGU'</li><li>'CCG'</li><li>'GUA'</li><li>'CGA'</li><li>'CAG'</li><li>'GUC'</li><li>'CGU'</li><li>'CCA'</li><li>'UCU'</li><li>'ACU'</li><li>'GCU'</li><li>'GGU'</li><li>'AGU'</li><li>'CCC'</li><li>'UGU'</li><li>'CGA'</li><li>'AGU'</li><li>'UGC'</li><li>'CGA'</li><li>'GAA'</li><li>'UGG'</li><li>'UCG'</li><li>'GAU'</li><li>'UGA'</li><li>'AGC'</li><li>'UAG'</li><li>'UGA'</li><li>'CCU'</li><li>'GGC'</li><li>'GAC'</li><li>'UAG'</li><li>'CAG'</li><li>'UGC'</li><li>'CGC'</li><li>'UAA'</li><li>'AUA'</li><li>'CGG'</li><li>'CGU'</li><li>'GUA'</li><li>'CCU'</li><li>'GCG'</li><li>'CAA'</li><li>'CGA'</li><li>'CCG'</li><li>'CAA'</li><li>'AAA'</li><li>'GGU'</li><li>'AUC'</li><li>'CGA'</li><li>'GGC'</li><li>'GGG'</li><li>'GGG'</li><li>'ACU'</li><li>'GCU'</li><li>'CGU'</li><li>'AGU'</li><li>'GUU'</li><li>'UGU'</li><li>'UCA'</li><li>'GUC'</li><li>'UCC'</li><li>'ACC'</li><li>'GCU'</li><li>'UUG'</li><li>'GGC'</li><li>'UGU'</li><li>'CCU'</li><li>'GAU'</li><li>'AUU'</li><li>'UCU'</li><li>'AUG'</li><li>'GUC'</li><li>'CGC'</li><li>'AAA'</li><li>'GGG'</li><li>'GGA'</li><li>'CCU'</li><li>'UCG'</li><li>'CGA'</li><li>'GAG'</li><li>'GAC'</li><li>'AAG'</li><li>'GCU'</li><li>'GGG'</li><li>'ACG'</li><li>'GCG'</li><li>'AAU'</li><li>'GGC'</li><li>'CUA'</li><li>'UGG'</li><li>'ACA'</li><li>'GGC'</li><li>'GGA'</li><li>'AAG'</li><li>'AGG'</li><li>'GAA'</li><li>'GCC'</li><li>'CGA'</li><li>'AAG'</li><li>'AGU'</li><li>'UAC'</li><li>'GAG'</li><li>'UGC'</li><li>'GAC'</li><li>'AUC'</li><li>'CAU'</li><li>'AGA'</li><li>'GUC'</li><li>'AAG'</li><li>'CCA'</li><li>'CAU'</li><li>'CCA'</li><li>'GCA'</li><li>'AGC'</li><li>'GAG'</li><li>'GUU'</li><li>'CGA'</li><li>'CUG'</li><li>'CUU'</li><li>'GGG'</li><li>'GGG'</li><li>'CAA'</li><li>'GUC'</li><li>'GGG'</li><li>'CUG'</li><li>'GCG'</li><li>'ACG'</li><li>'CGG'</li><li>'AAU'</li><li>'AGG'</li><li>'CCA'</li><li>'UUG'</li><li>'AUA'</li><li>'GCA'</li><li>'GAA'</li><li>'CUC'</li><li>'AGG'</li><li>'UUG'</li><li>'UGC'</li><li>'UGA'</li><li>'AUU'</li><li>'GCC'</li><li>'CAA'</li><li>'CCG'</li><li>'UAC'</li><li>'CUA'</li><li>'ACA'</li><li>'UCC'</li><li>'GCG'</li><li>'GCG'</li><li>'GGA'</li><li>'UAU'</li><li>'GGA'</li><li>'ACA'</li><li>'GAC'</li><li>'GGA'</li><li>'GGG'</li><li>'GCG'</li><li>'CCA'</li><li>'CGU'</li><li>'ACC'</li><li>'UCG'</li><li>'GCC'</li><li>'CGG'</li><li>'UGG'</li><li>'AGC'</li><li>'UGG'</li><li>'ACU'</li><li>'UAC'</li><li>'CUU'</li><li>'CGG'</li><li>'CCG'</li><li>'CCG'</li><li>'UGG'</li><li>'AGC'</li><li>'GAU'</li><li>'UGC'</li><li>'CGG'</li><li>'UUC'</li><li>'UUA'</li><li>'ACC'</li><li>'UCG'</li><li>'GUU'</li><li>'AGU'</li><li>'UAA'</li><li>'GAA'</li><li>'CGC'</li><li>'CUC'</li><li>'UUG'</li><li>'ACA'</li><li>'CUU'</li><li>'ACG'</li><li>'CGU'</li><li>'UUG'</li><li>'GUU'</li><li>'GGG'</li><li>'AAC'</li><li>'CGG'</li><li>'UAG'</li><li>'CGC'</li><li>'AGG'</li><li>'CGG'</li><li>'UAG'</li><li>'AGG'</li><li>'UCG'</li><li>'UCG'</li><li>'GCG'</li><li>'UGC'</li><li>'GCC'</li><li>'GCG'</li><li>'UAG'</li><li>'AGC'</li><li>'CCG'</li><li>'UCG'</li><li>'CAA'</li><li>'CCC'</li><li>'AGG'</li></ol>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+370
 </div>
 </div>
 </div>
