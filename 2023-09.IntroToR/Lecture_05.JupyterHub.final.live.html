@@ -9730,12 +9730,12 @@ GGUAGCGCAGGCGGUAGAGGUCGUCGGCGUGCGCCGCGUAGAGCCCGUCGCAACCCAGGA</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Replace the original mRNA sequence with the trimmed version</span>
@@ -9743,6 +9743,19 @@ GGUAGCGCAGGCGGUAGAGGUCGUCGGCGUGCGCCGCGUAGAGCCCGUCGCAACCCAGGA</pre>
 
 <span class="n">mrna</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">str</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre> chr "AUGGUCCGCAAAGGGGGACCUUCGAGGGAGC\nACAAGGCUGGGACGGCGAAUGGCCUAUGGACAGGCGGAAAGAGGGAAGCCCUUCGCACCG\nACGAGUGCGACAUGGA"| __truncated__
+</pre>
 </div>
 </div>
 </div>
@@ -9762,22 +9775,34 @@ GGUAGCGCAGGCGGUAGAGGUCGUCGGCGUGCGCCGCGUAGAGCCCGUCGCAACCCAGGA</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Remove all the line breaks in our data</span>
 <span class="n">mrna</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span>
 <span class="w">    </span><span class="n">mrna</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">    </span><span class="nf">...</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="s">"(\s)"</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">str_remove_all</span><span class="p">(</span><span class="n">.</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="s">"(\s)"</span><span class="p">)</span><span class="w"> </span>
 
 <span class="c1"># Check the output now</span>
 <span class="nf">cat</span><span class="p">(</span><span class="n">mrna</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>AUGGUCCGCAAAGGGGGACCUUCGAGGGAGCACAAGGCUGGGACGGCGAAUGGCCUAUGGACAGGCGGAAAGAGGGAAGCCCUUCGCACCGACGAGUGCGACAUGGAUAGAGUCAAGCCACAUCCAGCAAGCGAGGUUCGACCCGACACACGGCAAGUCGGGCUGGCGACGCGGAAUAGGCCAUUGAUAGCAGAACUCAGGUUGGGCCAUUUCAUCCUGUCCACGGCCGUCGCGAGACCCAGUAAAAGCCGCUCCUGGCGAAAGCGACCUCUAGCCGGACAGCGAACGCCAUAAGCCUUAGAACGUGCGGGAGCGAGUUCGGAAGCAGUGAGGUUUGCAAAGCCGCUCUUCGUCCGGUAAUAGCGGCCGUACCGCCGGCUGCGCGACCCGACCGCAAGCGCUGCGCUCCGACCUACCGGAAGGGGUAAUACUAAGAAGAGCGAAGGCCGCCGGGCGCAACGUCCGGUACGACAGGUCCGUCCAUCUACUGCUGGUAGUCCCUGUCGAAGUUGCCGAGAAUGGUCGGAUUGAAGCUAGUGACCUGGCGACUAGCAGUGCCGCUAAAUACGGCGUGUACCUGCGCAACGACCGCAAAAAGGUAUCCGAGGCGGGGGGACUGCUCGUAGUGUUUGUUCAGUCUCCACCGCUUUGGGCUGUCCUGAUAUUUCUAUGGUCCGCAAAGGGGGACCUUCGCGAGAGGACAAGGCUGGGACGGCGAAUGGCCUAUGGACAGGCGGAAAGAGGGAAGCCCGAAAGAGUUACGAGUGCGACAUCCAUAGAGUCAAGCCACAUCCAGCAAGCGAGGUUCGACUGCUUGGGGGGCAAGUCGGGCUGGCGACGCGGAAUAGGCCAUUGAUAGCAGAACUCAGGUUGUGCUGAAUUGCCCAACCGUACCUAACAUCCGCGGCGGGAUAUGGAACAGACGGAGGGGCGCCACGUACCUCGGCCCGGUGGAGCUGGACUUACCUUCGGCCGCCGUGGAGCGAUUGCCGGUUCUUAACCUCGGUUAGUUAAGAACGCCUCUUGACACUUACGCGUUUGGUUGGGAACCGGUAGCGCAGGCGGUAGAGGUCGUCGGCGUGCGCCGCGUAGAGCCCGUCGCAACCCAGGA</pre>
 </div>
 </div>
 </div>
