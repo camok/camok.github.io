@@ -8759,7 +8759,7 @@ CCATCGCGTCCGCCATCTCCAGCAGCCGCACGCGGCGCATCTCGGGCAGCGTTGGGTCCT</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Save DNA sequence using the correct header Regex</span>
-<span class="n">dna</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">str_remove</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dino</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"..."</span><span class="p">)</span>
+<span class="n">dna</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">str_remove</span><span class="p">(</span><span class="n">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dino</span><span class="p">,</span><span class="w"> </span><span class="n">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"&gt;.*?[0-9]\\s"</span><span class="p">)</span>
 
 <span class="c1"># View the result</span>
 <span class="nf">cat</span><span class="p">(</span><span class="n">dna</span><span class="p">)</span>
