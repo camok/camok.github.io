@@ -7464,7 +7464,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Student-Name:-Live-HTML-Testing">Student Name: Live HTML Testing<a class="anchor-link" href="#Student-Name:-Live-HTML-Testing">¶</a></h2><h2 id="Student-ID:">Student ID:<a class="anchor-link" href="#Student-ID:">¶</a></h2>
+<h2 id="Student-Name:-Live-HTML">Student Name: Live HTML<a class="anchor-link" href="#Student-Name:-Live-HTML">¶</a></h2><h2 id="Student-ID:">Student ID:<a class="anchor-link" href="#Student-ID:">¶</a></h2>
 </div>
 </div>
 </div>
@@ -7779,7 +7779,7 @@ a.anchor-link {
 | \w, [A-z, 0-9], [[:alnum:]] | word characters (letters + digits)
 | \d, [0-9], [[:digit:]] | digits
 | [A-z], [[:alpha:]] | alphabetical characters
-| \s, [[:space:]] | space
+| \s, [[:space:]] | whitespace (spaces, tabs, line breaks)
 | [[:punct:]] | punctuation
 | [[:lower:]] | lowercase
 | [[:upper:]] | uppercase
@@ -8189,7 +8189,7 @@ SGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQILQQQVLSPQQLQALLQQQQAVMLQQQQLQEFYK</p>
 <hr/>
 <p>As you can see from our output that in the first case, the entire string is output to a single line based on unbroken character strings. You can see that the native output breaks the first part of our string after encountering the final space character before the long string of our sequences.</p>
 <p>On the other hand, the <code>print()</code> function has at least tried to produce an output that wraps the text around based on the overall space available in our markdown output area. This is a much more pleasant way to see the output of our string. However, it doesn't quite look the same as how we input the sequence right?</p>
-<h3 id="3.2.0.2-Use-the-cat()-function-to-concatenate-strings">3.2.0.2 Use the <code>cat()</code> function to concatenate strings<a class="anchor-link" href="#3.2.0.2-Use-the-cat()-function-to-concatenate-strings">¶</a></h3><p>If you have a sharp eye, you might notice now the presence of additional <code>\n</code> characters in our string. These metacharacters represent line breaks and they were inserted by the line breaks present in our original coding cell that assigned the <code>dino</code> variable. If we wanted to see <code>dino</code> with all of it's metacharacters interpreted, you could use the <code>cat()</code> function instead. Note that unlike <code>print()</code>, the <code>cat()</code> function is limited to atomic input objects!</p>
+<h3 id="3.2.0.2-Use-the-cat()-function-to-interpret-and-concatenate-strings">3.2.0.2 Use the <code>cat()</code> function to interpret and concatenate strings<a class="anchor-link" href="#3.2.0.2-Use-the-cat()-function-to-interpret-and-concatenate-strings">¶</a></h3><p>If you have a sharp eye, you might notice now the presence of additional <code>\n</code> characters in our string. These metacharacters represent line breaks and they were inserted by the line breaks present in our original coding cell that assigned the <code>dino</code> variable. If we wanted to see <code>dino</code> with all of it's metacharacters interpreted, you could use the <code>cat()</code> function instead. Note that unlike <code>print()</code>, the <code>cat()</code> function is limited to atomic input objects!</p>
 <div class="alert alert-block alert-success">
 <b>The cat() function has many uses!</b> Although we are using <b>cat()</b> in a very rudimentary way, you can use it to concatenate strings and also write them directly to file! If you're interested in other uses of <b>cat()</b> check out this <u><a href="https://www.statology.org/r-cat-function/">nice tutorial</a></u>
 </div>
