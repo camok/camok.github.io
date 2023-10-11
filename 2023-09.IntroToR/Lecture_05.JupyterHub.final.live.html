@@ -11835,12 +11835,12 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [76]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Let's do some quick math to help us convince ourselves of what will be happening</span>
@@ -11849,11 +11849,23 @@ DDREIEEEPLSEDLE                         </td></tr>
 <span class="n">vecNum2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">11</span><span class="o">:</span><span class="m">21</span><span class="p">)</span>
 
 <span class="c1"># Put these vectors into a list</span>
-<span class="n">listNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">listNum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">vecNum1</span><span class="p">,</span><span class="w"> </span><span class="n">vecNum2</span><span class="p">)</span>
 
 <span class="c1"># Take the sum of each vector</span>
-<span class="kc">...</span>
+<span class="nf">sum</span><span class="p">(</span><span class="n">vecNum1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">sum</span><span class="p">(</span><span class="n">vecNum2</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+231
 </div>
 </div>
 </div>
@@ -11879,10 +11891,10 @@ DDREIEEEPLSEDLE                         </td></tr>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Can we just take the sum of the two vectors added together?</span>
-<span class="nf">sum</span><span class="p">(</span><span class="n">vecNum1</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span><span class="n">vecNum2</span><span class="p">)</span>
+<span class="nf">sum</span><span class="p">(</span><span class="n">vecNum1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vecNum2</span><span class="p">)</span>
 
 <span class="c1"># Or do we provide each vector as an argument?</span>
-<span class="nf">sum</span><span class="p">(</span><span class="n">vecNum1</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span><span class="n">vecNum2</span><span class="p">)</span>
+<span class="nf">sum</span><span class="p">(</span><span class="n">vecNum1</span><span class="p">,</span><span class="w"> </span><span class="n">vecNum2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
