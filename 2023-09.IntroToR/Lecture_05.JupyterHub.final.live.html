@@ -11684,14 +11684,14 @@ DDREIEEEPLSEDLE                         </td></tr>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [74]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># What happens if we call rbind?</span>
 <span class="nf">rbind</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span><span class="w"> </span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
 
 <span class="c1"># What about rbind.data.frame?</span>
-<span class="c1"># ...(fasta_header[[1]][,-1], fasta_header[[2]][,-1])</span>
+<span class="nf">rbind.data.frame</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span><span class="w"> </span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -11713,6 +11713,22 @@ DDREIEEEPLSEDLE                         </td></tr>
 </table>
 </div>
 </div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 2 × 4</caption>
+<thead>
+<tr><th scope="col">c..NP_683696.2....NP_683697.2..</th><th scope="col">c..forkhead.box.protein.P2.isoform.II....forkhead.box.protein.P2.isoform.III.</th><th scope="col">c..Homo....Homo..</th><th scope="col">c..sapiens....sapiens..</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>NP_683696.2</td><td>forkhead box protein P2 isoform II </td><td>Homo</td><td>sapiens</td></tr>
+<tr><td>NP_683697.2</td><td>forkhead box protein P2 isoform III</td><td>Homo</td><td>sapiens</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -11727,12 +11743,12 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [75]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Create a data frame and place-hold the column names to match with what we have in fasta6</span>
@@ -11740,15 +11756,60 @@ DDREIEEEPLSEDLE                         </td></tr>
 
 <span class="nf">rm</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="c1">## remove any previous instances of i</span>
 
-<span class="nf">for </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="kc">...</span><span class="p">){</span>
+<span class="nf">for </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="p">(</span><span class="nf">length</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">)</span><span class="m">-1</span><span class="p">)){</span>
 <span class="w">    </span><span class="c1"># Drop the last potential list in fasta_header since it was blank!</span>
 
-<span class="w">    </span><span class="n">header.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rbind.data.frame</span><span class="p">(</span><span class="n">header.df</span><span class="p">,</span><span class="w"> </span><span class="n">fasta_header</span><span class="p">[[</span><span class="kc">...</span><span class="p">]][,</span><span class="w"> </span><span class="m">-1</span><span class="p">])</span>
+<span class="w">    </span><span class="n">header.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">rbind.data.frame</span><span class="p">(</span><span class="n">header.df</span><span class="p">,</span><span class="w"> </span><span class="n">fasta_header</span><span class="p">[[</span><span class="n">i</span><span class="p">]][,</span><span class="w"> </span><span class="m">-1</span><span class="p">])</span>
 <span class="p">}</span>
 
 <span class="nf">head</span><span class="p">(</span><span class="n">header.df</span><span class="p">)</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">header.df</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>Warning message in rm(i):
+"object 'i' not found"
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 6 × 4</caption>
+<thead>
+<tr><th></th><th scope="col">X.NP_683696.2.</th><th scope="col">X.forkhead.box.protein.P2.isoform.II.</th><th scope="col">X.Homo.</th><th scope="col">X.sapiens.</th></tr>
+<tr><th></th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">1</th><td>NP_683696.2   </td><td>forkhead box protein P2 isoform II </td><td>Homo</td><td>sapiens</td></tr>
+<tr><th scope="row">2</th><td>NP_683697.2   </td><td>forkhead box protein P2 isoform III</td><td>Homo</td><td>sapiens</td></tr>
+<tr><th scope="row">3</th><td>NP_683698.2   </td><td>forkhead box protein P2 isoform IV </td><td>Homo</td><td>sapiens</td></tr>
+<tr><th scope="row">4</th><td>NP_001166238.1</td><td>forkhead box protein P2 isoform VI </td><td>Homo</td><td>sapiens</td></tr>
+<tr><th scope="row">5</th><td>NP_001166237.1</td><td>forkhead box protein P2 isoform V  </td><td>Homo</td><td>sapiens</td></tr>
+<tr><th scope="row">6</th><td>NP_055306.1   </td><td>forkhead box protein P2 isoform I  </td><td>Homo</td><td>sapiens</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>'data.frame':	67 obs. of  4 variables:
+ $ X.NP_683696.2.                       : chr  "NP_683696.2" "NP_683697.2" "NP_683698.2" "NP_001166238.1" ...
+ $ X.forkhead.box.protein.P2.isoform.II.: chr  "forkhead box protein P2 isoform II" "forkhead box protein P2 isoform III" "forkhead box protein P2 isoform IV" "forkhead box protein P2 isoform VI" ...
+ $ X.Homo.                              : chr  "Homo" "Homo" "Homo" "Homo" ...
+ $ X.sapiens.                           : chr  "sapiens" "sapiens" "sapiens" "sapiens" ...
+</pre>
 </div>
 </div>
 </div>
