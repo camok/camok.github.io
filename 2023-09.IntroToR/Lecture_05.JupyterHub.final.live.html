@@ -11482,20 +11482,59 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [70]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Convert the results of str_match_all into a data frame</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">])</span>
+<span class="nf">data.frame</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">])</span>
 
 <span class="c1"># You need to transpose the trimmed data for proper coercion</span>
-<span class="nf">data.frame</span><span class="p">(</span><span class="nf">...</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]))</span>
+<span class="nf">data.frame</span><span class="p">(</span><span class="nf">t</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="w"> </span><span class="m">2</span><span class="o">:</span><span class="m">5</span><span class="p">]))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 4 × 1</caption>
+<thead>
+<tr><th scope="col">fasta_header..1.....2.5.</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>NP_683696.2                       </td></tr>
+<tr><td>forkhead box protein P2 isoform II</td></tr>
+<tr><td>Homo                              </td></tr>
+<tr><td>sapiens                           </td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 1 × 4</caption>
+<thead>
+<tr><th scope="col">X1</th><th scope="col">X2</th><th scope="col">X3</th><th scope="col">X4</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;chr&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>NP_683696.2</td><td>forkhead box protein P2 isoform II</td><td>Homo</td><td>sapiens</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -11518,12 +11557,12 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">)</span>
@@ -11532,12 +11571,93 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>List of 68
+ $ : chr [1, 1:5] "NP_683696.2 forkhead box protein P2 isoform II Homo sapiens" "NP_683696.2" "forkhead box protein P2 isoform II" "Homo" ...
+ $ : chr [1, 1:5] "NP_683697.2 forkhead box protein P2 isoform III Homo sapiens" "NP_683697.2" "forkhead box protein P2 isoform III" "Homo" ...
+ $ : chr [1, 1:5] "NP_683698.2 forkhead box protein P2 isoform IV Homo sapiens" "NP_683698.2" "forkhead box protein P2 isoform IV" "Homo" ...
+ $ : chr [1, 1:5] "NP_001166238.1 forkhead box protein P2 isoform VI Homo sapiens" "NP_001166238.1" "forkhead box protein P2 isoform VI" "Homo" ...
+ $ : chr [1, 1:5] "NP_001166237.1 forkhead box protein P2 isoform V Homo sapiens" "NP_001166237.1" "forkhead box protein P2 isoform V" "Homo" ...
+ $ : chr [1, 1:5] "NP_055306.1 forkhead box protein P2 isoform I Homo sapiens" "NP_055306.1" "forkhead box protein P2 isoform I" "Homo" ...
+ $ : chr [1, 1:5] "XP_035110075.1 forkhead box protein P2 isoform X7 Callithrix jacchus" "XP_035110075.1" "forkhead box protein P2 isoform X7" "Callithrix" ...
+ $ : chr [1, 1:5] "XP_035110074.1 forkhead box protein P2 isoform X6 Callithrix jacchus" "XP_035110074.1" "forkhead box protein P2 isoform X6" "Callithrix" ...
+ $ : chr [1, 1:5] "XP_035110071.1 forkhead box protein P2 isoform X5 Callithrix jacchus" "XP_035110071.1" "forkhead box protein P2 isoform X5" "Callithrix" ...
+ $ : chr [1, 1:5] "XP_035110069.1 forkhead box protein P2 isoform X4 Callithrix jacchus" "XP_035110069.1" "forkhead box protein P2 isoform X4" "Callithrix" ...
+ $ : chr [1, 1:5] "XP_035110067.1 forkhead box protein P2 isoform X3 Callithrix jacchus" "XP_035110067.1" "forkhead box protein P2 isoform X3" "Callithrix" ...
+ $ : chr [1, 1:5] "XP_035110066.1 forkhead box protein P2 isoform X2 Callithrix jacchus" "XP_035110066.1" "forkhead box protein P2 isoform X2" "Callithrix" ...
+ $ : chr [1, 1:5] "XP_035110065.1 forkhead box protein P2 isoform X1 Callithrix jacchus" "XP_035110065.1" "forkhead box protein P2 isoform X1" "Callithrix" ...
+ $ : chr [1, 1:5] "NP_001266466.1 forkhead box protein P2 Gorilla gorilla" "NP_001266466.1" "forkhead box protein P2" "Gorilla" ...
+ $ : chr [1, 1:5] "NP_001266127.1 forkhead box protein P2 Pan paniscus" "NP_001266127.1" "forkhead box protein P2" "Pan" ...
+ $ : chr [1, 1:5] "NP_001162393.1 forkhead box protein P2 Papio anubis" "NP_001162393.1" "forkhead box protein P2" "Papio" ...
+ $ : chr [1, 1:5] "NP_001028193.1 forkhead box protein P2 Macaca mulatta" "NP_001028193.1" "forkhead box protein P2" "Macaca" ...
+ $ : chr [1, 1:5] "XP_034819293.1 forkhead box protein P2 isoform X8 Pan paniscus" "XP_034819293.1" "forkhead box protein P2 isoform X8" "Pan" ...
+ $ : chr [1, 1:5] "XP_034819292.1 forkhead box protein P2 isoform X7 Pan paniscus" "XP_034819292.1" "forkhead box protein P2 isoform X7" "Pan" ...
+ $ : chr [1, 1:5] "XP_034819288.1 forkhead box protein P2 isoform X6 Pan paniscus" "XP_034819288.1" "forkhead box protein P2 isoform X6" "Pan" ...
+ $ : chr [1, 1:5] "XP_034819284.1 forkhead box protein P2 isoform X4 Pan paniscus" "XP_034819284.1" "forkhead box protein P2 isoform X4" "Pan" ...
+ $ : chr [1, 1:5] "XP_034819282.1 forkhead box protein P2 isoform X3 Pan paniscus" "XP_034819282.1" "forkhead box protein P2 isoform X3" "Pan" ...
+ $ : chr [1, 1:5] "XP_034819281.1 forkhead box protein P2 isoform X2 Pan paniscus" "XP_034819281.1" "forkhead box protein P2 isoform X2" "Pan" ...
+ $ : chr [1, 1:5] "XP_034819280.1 forkhead box protein P2 isoform X1 Pan paniscus" "XP_034819280.1" "forkhead box protein P2 isoform X1" "Pan" ...
+ $ : chr [1, 1:5] "XP_033048832.1 forkhead box protein P2 Trachypithecus francoisi" "XP_033048832.1" "forkhead box protein P2" "Trachypithecus" ...
+ $ : chr [1, 1:5] "XP_032617393.1 forkhead box protein P2 isoform X2 Hylobates moloch" "XP_032617393.1" "forkhead box protein P2 isoform X2" "Hylobates" ...
+ $ : chr [1, 1:5] "XP_032131555.1 forkhead box protein P2 Sapajus apella" "XP_032131555.1" "forkhead box protein P2" "Sapajus" ...
+ $ : chr [1, 1:5] "XP_023084007.2 forkhead box protein P2 isoform X7 Piliocolobus tephrosceles" "XP_023084007.2" "forkhead box protein P2 isoform X7" "Piliocolobus" ...
+ $ : chr [1, 1:5] "XP_023084004.2 forkhead box protein P2 isoform X4 Piliocolobus tephrosceles" "XP_023084004.2" "forkhead box protein P2 isoform X4" "Piliocolobus" ...
+ $ : chr [1, 1:5] "XP_023084003.2 forkhead box protein P2 isoform X3 Piliocolobus tephrosceles" "XP_023084003.2" "forkhead box protein P2 isoform X3" "Piliocolobus" ...
+ $ : chr [1, 1:5] "XP_023084002.2 forkhead box protein P2 isoform X2 Piliocolobus tephrosceles" "XP_023084002.2" "forkhead box protein P2 isoform X2" "Piliocolobus" ...
+ $ : chr [1, 1:5] "XP_023084001.2 forkhead box protein P2 isoform X1 Piliocolobus tephrosceles" "XP_023084001.2" "forkhead box protein P2 isoform X1" "Piliocolobus" ...
+ $ : chr [1, 1:5] "XP_023084006.1 forkhead box protein P2 isoform X6 Piliocolobus tephrosceles" "XP_023084006.1" "forkhead box protein P2 isoform X6" "Piliocolobus" ...
+ $ : chr [1, 1:5] "XP_023084005.1 forkhead box protein P2 isoform X5 Piliocolobus tephrosceles" "XP_023084005.1" "forkhead box protein P2 isoform X5" "Piliocolobus" ...
+ $ : chr [1, 1:5] "XP_009201986.1 forkhead box protein P2 isoform X4 Papio anubis" "XP_009201986.1" "forkhead box protein P2 isoform X4" "Papio" ...
+ $ : chr [1, 1:5] "XP_030868490.1 forkhead box protein P2 isoform X5 Gorilla gorilla gorilla" "XP_030868490.1" "forkhead box protein P2 isoform X5 Gorilla" "gorilla" ...
+ $ : chr [1, 1:5] "XP_030868489.1 forkhead box protein P2 isoform X4 Gorilla gorilla gorilla" "XP_030868489.1" "forkhead box protein P2 isoform X4 Gorilla" "gorilla" ...
+ $ : chr [1, 1:5] "XP_030868487.1 forkhead box protein P2 isoform X2 Gorilla gorilla gorilla" "XP_030868487.1" "forkhead box protein P2 isoform X2 Gorilla" "gorilla" ...
+ $ : chr [1, 1:5] "XP_030868486.1 forkhead box protein P2 isoform X1 Gorilla gorilla gorilla" "XP_030868486.1" "forkhead box protein P2 isoform X1 Gorilla" "gorilla" ...
+ $ : chr [1, 1:5] "XP_030789170.1 forkhead box protein P2 Rhinopithecus roxellana" "XP_030789170.1" "forkhead box protein P2" "Rhinopithecus" ...
+ $ : chr [1, 1:5] "XP_028700593.1 forkhead box protein P2 isoform X1 Macaca mulatta" "XP_028700593.1" "forkhead box protein P2 isoform X1" "Macaca" ...
+ $ : chr [1, 1:5] "XP_024106057.1 forkhead box protein P2 Pongo abelii" "XP_024106057.1" "forkhead box protein P2" "Pongo" ...
+ $ : chr [1, 1:5] "XP_023368970.1 LOW QUALITY PROTEIN: forkhead box protein P2 Otolemur garnettii" "XP_023368970.1" "LOW QUALITY PROTEIN: forkhead box protein P2" "Otolemur" ...
+ $ : chr [1, 1:5] "XP_020145349.1 forkhead box protein P2 Microcebus murinus" "XP_020145349.1" "forkhead box protein P2" "Microcebus" ...
+ $ : chr [1, 1:5] "XP_017720094.1 PREDICTED: forkhead box protein P2 Rhinopithecus bieti" "XP_017720094.1" "PREDICTED: forkhead box protein P2" "Rhinopithecus" ...
+ $ : chr [1, 1:5] "XP_017390531.1 PREDICTED: LOW QUALITY PROTEIN: forkhead box protein P2 Cebus capucinus imitator" "XP_017390531.1" "PREDICTED: LOW QUALITY PROTEIN: forkhead box protein P2 Cebus" "capucinus" ...
+ $ : chr [1, 1:5] "XP_012508208.1 PREDICTED: forkhead box protein P2 isoform X9 Propithecus coquereli" "XP_012508208.1" "PREDICTED: forkhead box protein P2 isoform X9" "Propithecus" ...
+ $ : chr [1, 1:5] "XP_012508207.1 PREDICTED: forkhead box protein P2 isoform X8 Propithecus coquereli" "XP_012508207.1" "PREDICTED: forkhead box protein P2 isoform X8" "Propithecus" ...
+ $ : chr [1, 1:5] "XP_012508206.1 PREDICTED: forkhead box protein P2 isoform X7 Propithecus coquereli" "XP_012508206.1" "PREDICTED: forkhead box protein P2 isoform X7" "Propithecus" ...
+ $ : chr [1, 1:5] "XP_012508205.1 PREDICTED: forkhead box protein P2 isoform X6 Propithecus coquereli" "XP_012508205.1" "PREDICTED: forkhead box protein P2 isoform X6" "Propithecus" ...
+ $ : chr [1, 1:5] "XP_012508204.1 PREDICTED: forkhead box protein P2 isoform X5 Propithecus coquereli" "XP_012508204.1" "PREDICTED: forkhead box protein P2 isoform X5" "Propithecus" ...
+ $ : chr [1, 1:5] "XP_012508203.1 PREDICTED: forkhead box protein P2 isoform X4 Propithecus coquereli" "XP_012508203.1" "PREDICTED: forkhead box protein P2 isoform X4" "Propithecus" ...
+ $ : chr [1, 1:5] "XP_012508202.1 PREDICTED: forkhead box protein P2 isoform X3 Propithecus coquereli" "XP_012508202.1" "PREDICTED: forkhead box protein P2 isoform X3" "Propithecus" ...
+ $ : chr [1, 1:5] "XP_012508200.1 PREDICTED: forkhead box protein P2 isoform X2 Propithecus coquereli" "XP_012508200.1" "PREDICTED: forkhead box protein P2 isoform X2" "Propithecus" ...
+ $ : chr [1, 1:5] "XP_012508199.1 PREDICTED: forkhead box protein P2 isoform X1 Propithecus coquereli" "XP_012508199.1" "PREDICTED: forkhead box protein P2 isoform X1" "Propithecus" ...
+ $ : chr [1, 1:5] "XP_011943178.1 PREDICTED: forkhead box protein P2 isoform X2 Cercocebus atys" "XP_011943178.1" "PREDICTED: forkhead box protein P2 isoform X2" "Cercocebus" ...
+ $ : chr [1, 1:5] "XP_011943177.1 PREDICTED: forkhead box protein P2 isoform X1 Cercocebus atys" "XP_011943177.1" "PREDICTED: forkhead box protein P2 isoform X1" "Cercocebus" ...
+ $ : chr [1, 1:5] "XP_011811343.1 PREDICTED: forkhead box protein P2 Colobus angolensis palliatus" "XP_011811343.1" "PREDICTED: forkhead box protein P2 Colobus" "angolensis" ...
+ $ : chr [1, 1:5] "XP_007980850.1 PREDICTED: forkhead box protein P2 isoform X9 Chlorocebus sabaeus" "XP_007980850.1" "PREDICTED: forkhead box protein P2 isoform X9" "Chlorocebus" ...
+ $ : chr [1, 1:5] "XP_007980849.1 PREDICTED: forkhead box protein P2 isoform X8 Chlorocebus sabaeus" "XP_007980849.1" "PREDICTED: forkhead box protein P2 isoform X8" "Chlorocebus" ...
+ $ : chr [1, 1:5] "XP_007980844.1 PREDICTED: forkhead box protein P2 isoform X7 Chlorocebus sabaeus" "XP_007980844.1" "PREDICTED: forkhead box protein P2 isoform X7" "Chlorocebus" ...
+ $ : chr [1, 1:5] "XP_007980842.1 PREDICTED: forkhead box protein P2 isoform X6 Chlorocebus sabaeus" "XP_007980842.1" "PREDICTED: forkhead box protein P2 isoform X6" "Chlorocebus" ...
+ $ : chr [1, 1:5] "XP_007980840.1 PREDICTED: forkhead box protein P2 isoform X5 Chlorocebus sabaeus" "XP_007980840.1" "PREDICTED: forkhead box protein P2 isoform X5" "Chlorocebus" ...
+ $ : chr [1, 1:5] "XP_007980839.1 PREDICTED: forkhead box protein P2 isoform X4 Chlorocebus sabaeus" "XP_007980839.1" "PREDICTED: forkhead box protein P2 isoform X4" "Chlorocebus" ...
+ $ : chr [1, 1:5] "XP_007980837.1 PREDICTED: forkhead box protein P2 isoform X3 Chlorocebus sabaeus" "XP_007980837.1" "PREDICTED: forkhead box protein P2 isoform X3" "Chlorocebus" ...
+ $ : chr [1, 1:5] "XP_007980836.1 PREDICTED: forkhead box protein P2 isoform X2 Chlorocebus sabaeus" "XP_007980836.1" "PREDICTED: forkhead box protein P2 isoform X2" "Chlorocebus" ...
+ $ : chr [1, 1:5] "XP_007980835.1 PREDICTED: forkhead box protein P2 isoform X1 Chlorocebus sabaeus" "XP_007980835.1" "PREDICTED: forkhead box protein P2 isoform X1" "Chlorocebus" ...
+ $ : chr[0 , 1:5] 
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">str</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]])</span>
@@ -11546,20 +11666,51 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre> chr [1, 1:5] "NP_683697.2 forkhead box protein P2 isoform III Homo sapiens" ...
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># What happens if we call rbind?</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span><span class="w"> </span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
+<span class="nf">rbind</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span><span class="w"> </span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
 
 <span class="c1"># What about rbind.data.frame?</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">1</span><span class="p">]][,</span><span class="m">-1</span><span class="p">],</span><span class="w"> </span><span class="n">fasta_header</span><span class="p">[[</span><span class="m">2</span><span class="p">]][,</span><span class="m">-1</span><span class="p">])</span>
+<span class="c1"># ...(fasta_header[[1]][,-1], fasta_header[[2]][,-1])</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A matrix: 2 × 4 of type chr</caption>
+<tbody>
+<tr><td>NP_683696.2</td><td>forkhead box protein P2 isoform II </td><td>Homo</td><td>sapiens</td></tr>
+<tr><td>NP_683697.2</td><td>forkhead box protein P2 isoform III</td><td>Homo</td><td>sapiens</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
