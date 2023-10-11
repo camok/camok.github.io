@@ -11153,35 +11153,67 @@ DDREIEEEPLSEDLE                         </td></tr>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Which entries within our dataset are duplicated by sequence?</span>
-<span class="nf">which</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">which</span><span class="p">(</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">header_seq_fasta</span><span class="p">[,</span><span class="m">2</span><span class="p">]))</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>9</li><li>11</li><li>13</li><li>17</li><li>22</li><li>25</li><li>26</li><li>28</li><li>29</li><li>30</li><li>32</li><li>36</li><li>37</li><li>38</li><li>39</li><li>40</li><li>43</li><li>52</li><li>54</li><li>55</li><li>56</li><li>59</li><li>63</li><li>64</li><li>65</li><li>66</li><li>68</li><li>69</li><li>70</li><li>71</li><li>72</li><li>73</li><li>74</li><li>75</li><li>76</li><li>77</li><li>78</li><li>79</li><li>80</li><li>83</li><li>87</li><li>99</li><li>100</li><li>101</li><li>102</li><li>103</li><li>105</li><li>106</li><li>109</li><li>110</li><li>111</li><li>113</li><li>115</li><li>118</li><li>122</li><li>123</li><li>124</li><li>125</li><li>126</li><li>127</li><li>128</li><li>129</li></ol>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Use which to filter out duplicated copies</span>
-<span class="n">header_seq_subset</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">header_seq_fasta</span><span class="p">[</span><span class="kc">...</span><span class="p">]</span>
+<span class="n">header_seq_subset</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">header_seq_fasta</span><span class="p">[</span><span class="o">-</span><span class="nf">which</span><span class="p">(</span><span class="nf">duplicated</span><span class="p">(</span><span class="n">header_seq_fasta</span><span class="p">[,</span><span class="m">2</span><span class="p">])),]</span>
 
 <span class="c1"># Take a look at the resulting subset</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">header_seq_subset</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>tibble [68 x 2] (S3: tbl_df/tbl/data.frame)
+ $ V1: chr [1:68] "NP_683696.2 forkhead box protein P2 isoform II Homo sapiens" "NP_683697.2 forkhead box protein P2 isoform III Homo sapiens" "NP_683698.2 forkhead box protein P2 isoform IV Homo sapiens" "NP_001166238.1 forkhead box protein P2 isoform VI Homo sapiens" ...
+ $ V2: chr [1:68] "MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQELLPETKLCICGHSSGDGHPH"| __truncated__ "MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQI"| __truncated__ "MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQVPVSVAMMTPQVITPQQMQQI"| __truncated__ "MMQESATETISNSSMNQNGMSTLSSQLDAGSRDGRSSGDTSSEVSTVELLHLQQQQALQAARQLLLQQQT\r\nSGLKSPKSSDKQRPLQELLPETKLCICGHSSGDGHPH"| __truncated__ ...
+</pre>
 </div>
 </div>
 </div>
