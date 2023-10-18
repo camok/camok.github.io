@@ -14687,7 +14687,7 @@ HDFvTwbBbQAAAABJRU5ErkJggg==" width="420"/>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1">## Bartlett's H0: There is homoskedasticity between samples cholesterol of age groups</span>
-<span class="nf">bartlett.test</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">cholesterol</span><span class="p">)</span>
+<span class="nf">bartlett.test</span><span class="p">(</span><span class="n">chol</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">age_group</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="o">=</span><span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="c1">#equivalent to</span>
 <span class="nf">bartlett.test</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">,</span><span class="w"> </span><span class="n">cholesterol</span><span class="o">$</span><span class="n">age_group</span><span class="p">)</span>
