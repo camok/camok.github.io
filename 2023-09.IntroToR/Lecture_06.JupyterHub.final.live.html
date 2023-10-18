@@ -7837,17 +7837,17 @@ The following object is masked from 'package:MASS':
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Load our data with a new function: read.delim</span>
 <span class="c1"># It will recognize the missing column header and make the first column of data into row names</span>
-<span class="n">cholesterol</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.delim</span><span class="p">(</span><span class="s">"data/SISG-Data-cholesterol.txt"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">cholesterol</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read.delim</span><span class="p">(</span><span class="s">"data/SISG-Data-cholesterol.txt"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">" "</span><span class="p">,</span><span class="w"> </span><span class="n">header</span><span class="o">=</span><span class="kc">TRUE</span><span class="p">)</span>
 
 <span class="c1"># Check the structure of our data set</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">cholesterol</span><span class="p">)</span>
@@ -7855,6 +7855,48 @@ The following object is masked from 'package:MASS':
 <span class="c1"># What does it look like</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">cholesterol</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>'data.frame':	400 obs. of  9 variables:
+ $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ sex      : int  1 1 0 0 1 1 0 0 0 0 ...
+ $ age      : int  74 51 64 34 52 39 79 38 52 58 ...
+ $ chol     : int  215 204 205 182 175 176 159 169 175 189 ...
+ $ BMI      : num  26.2 24.7 24.2 23.8 34.1 22.7 22.9 24.9 20.4 22 ...
+ $ TG       : int  367 150 213 111 328 53 274 137 125 209 ...
+ $ rs174548 : int  1 2 0 1 0 0 2 1 0 0 ...
+ $ rs4775401: int  2 1 1 1 0 2 1 1 1 1 ...
+ $ APOE     : int  4 4 4 1 1 4 1 1 4 5 ...
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 6 × 9</caption>
+<thead>
+<tr><th></th><th scope="col">ID</th><th scope="col">sex</th><th scope="col">age</th><th scope="col">chol</th><th scope="col">BMI</th><th scope="col">TG</th><th scope="col">rs174548</th><th scope="col">rs4775401</th><th scope="col">APOE</th></tr>
+<tr><th></th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">1</th><td>1</td><td>1</td><td>74</td><td>215</td><td>26.2</td><td>367</td><td>1</td><td>2</td><td>4</td></tr>
+<tr><th scope="row">2</th><td>2</td><td>1</td><td>51</td><td>204</td><td>24.7</td><td>150</td><td>2</td><td>1</td><td>4</td></tr>
+<tr><th scope="row">3</th><td>3</td><td>0</td><td>64</td><td>205</td><td>24.2</td><td>213</td><td>0</td><td>1</td><td>4</td></tr>
+<tr><th scope="row">4</th><td>4</td><td>0</td><td>34</td><td>182</td><td>23.8</td><td>111</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><th scope="row">5</th><td>5</td><td>1</td><td>52</td><td>175</td><td>34.1</td><td>328</td><td>0</td><td>0</td><td>1</td></tr>
+<tr><th scope="row">6</th><td>6</td><td>1</td><td>39</td><td>176</td><td>22.7</td><td> 53</td><td>0</td><td>2</td><td>4</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
