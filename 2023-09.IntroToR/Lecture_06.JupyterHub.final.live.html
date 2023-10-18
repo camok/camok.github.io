@@ -29318,17 +29318,39 @@ F-statistic:  9.14 on 5 and 394 DF,  p-value: 3.062e-08
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># anova to compare the 2 models of two-way ANOVA</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">sex_rs174548Fit</span><span class="p">,</span><span class="w"> </span><span class="n">sexInt_rs174548Fit_aov</span><span class="p">)</span>
+<span class="nf">anova</span><span class="p">(</span><span class="n">sex_rs174548Fit</span><span class="p">,</span><span class="w"> </span><span class="n">sexInt_rs174548Fit_aov</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A anova: 2 × 6</caption>
+<thead>
+<tr><th></th><th scope="col">Res.Df</th><th scope="col">RSS</th><th scope="col">Df</th><th scope="col">Sum of Sq</th><th scope="col">F</th><th scope="col">Pr(&gt;F)</th></tr>
+<tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">1</th><td>396</td><td>178680.6</td><td>NA</td><td>      NA</td><td>      NA</td><td>        NA</td></tr>
+<tr><th scope="row">2</th><td>394</td><td>174901.7</td><td> 2</td><td>3778.947</td><td>4.256407</td><td>0.01483039</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -29344,17 +29366,40 @@ F-statistic:  9.14 on 5 and 394 DF,  p-value: 3.062e-08
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Use AIC to help compare all three models we've generated</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">sexFit</span><span class="p">,</span><span class="w"> </span><span class="n">sex_rs174548Fit</span><span class="p">,</span><span class="w"> </span><span class="n">sexInt_rs174548Fit_aov</span><span class="p">)</span>
+<span class="nf">AIC</span><span class="p">(</span><span class="n">sexFit</span><span class="p">,</span><span class="w"> </span><span class="n">sex_rs174548Fit</span><span class="p">,</span><span class="w"> </span><span class="n">sexInt_rs174548Fit_aov</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 3 × 2</caption>
+<thead>
+<tr><th></th><th scope="col">df</th><th scope="col">AIC</th></tr>
+<tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">sexFit</th><td>3</td><td>3592.509</td></tr>
+<tr><th scope="row">sex_rs174548Fit</th><td>5</td><td>3585.907</td></tr>
+<tr><th scope="row">sexInt_rs174548Fit_aov</th><td>7</td><td>3581.357</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
