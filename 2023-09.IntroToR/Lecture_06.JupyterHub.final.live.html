@@ -11929,17 +11929,36 @@ AAAAACKBxA4AAABAJJDYAQAAAIjE/wGWsuJXfoQLJwAAAABJRU5ErkJggg==" width="420"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># What kind of output does this test create?</span>
-<span class="nf">str</span><span class="p">(</span><span class="nf">...</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">))</span>
+<span class="nf">str</span><span class="p">(</span><span class="nf">shapiro.test</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>List of 4
+ $ statistic: Named num 0.997
+  ..- attr(*, "names")= chr "W"
+ $ p.value  : num 0.774
+ $ method   : chr "Shapiro-Wilk normality test"
+ $ data.name: chr "cholesterol$chol"
+ - attr(*, "class")= chr "htest"
+</pre>
 </div>
 </div>
 </div>
@@ -11953,8 +11972,8 @@ AAAAACKBxA4AAABAJJDYAQAAAIjE/wGWsuJXfoQLJwAAAABJRU5ErkJggg==" width="420"/>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Run the Shapiro-Wilks on both age groups</span>
-<span class="nf">shapiro.test</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="kc">...</span><span class="p">])</span><span class="w"> </span><span class="c1"># 55 years and younger</span>
-<span class="nf">shapiro.test</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="kc">...</span><span class="p">])</span><span class="w"> </span><span class="c1"># Older than 55 years</span>
+<span class="nf">shapiro.test</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">age_group</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">])</span><span class="w"> </span><span class="c1"># 55 years and younger</span>
+<span class="nf">shapiro.test</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">age_group</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">])</span><span class="w"> </span><span class="c1"># Older than 55 years</span>
 
 <span class="c1"># Normality test for all cholesterol levels, regardless of the age group</span>
 <span class="c1"># H0 or null hypothesis: samples come from a population that follows a normal distribution</span>
