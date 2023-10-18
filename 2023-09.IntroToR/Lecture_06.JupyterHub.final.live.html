@@ -20143,17 +20143,47 @@ Coefficients:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Look at the summary information of 'fit'</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">ageFit</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+Call:
+lm(formula = chol ~ age, data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-60.453 -14.643  -0.022  14.659  58.995 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 166.90168    4.26488  39.134  &lt; 2e-16 ***
+age           0.31033    0.07524   4.125 4.52e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 21.69 on 398 degrees of freedom
+Multiple R-squared:  0.04099,	Adjusted R-squared:  0.03858 
+F-statistic: 17.01 on 1 and 398 DF,  p-value: 4.522e-05
+</pre>
 </div>
 </div>
 </div>
