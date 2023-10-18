@@ -11864,22 +11864,45 @@ AAAAACKBxA4AAABAJJDYAQAAAIjE/wGWsuJXfoQLJwAAAABJRU5ErkJggg==" width="420"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Add an age_group variable to our cholesterol dataset</span>
 <span class="n">cholesterol</span><span class="w"> </span><span class="o">&lt;-</span>
 <span class="w">    </span><span class="n">cholesterol</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
-<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">age_group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">...</span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">55</span><span class="p">))</span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">age_group</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as.numeric</span><span class="p">(</span><span class="n">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">55</span><span class="p">))</span>
 
 <span class="c1"># Check our updated dataset</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">cholesterol</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>'data.frame':	400 obs. of  10 variables:
+ $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ sex      : int  1 1 0 0 1 1 0 0 0 0 ...
+ $ age      : int  74 51 64 34 52 39 79 38 52 58 ...
+ $ chol     : int  215 204 205 182 175 176 159 169 175 189 ...
+ $ BMI      : num  26.2 24.7 24.2 23.8 34.1 22.7 22.9 24.9 20.4 22 ...
+ $ TG       : int  367 150 213 111 328 53 274 137 125 209 ...
+ $ rs174548 : int  1 2 0 1 0 0 2 1 0 0 ...
+ $ rs4775401: int  2 1 1 1 0 2 1 1 1 1 ...
+ $ APOE     : int  4 4 4 1 1 4 1 1 4 5 ...
+ $ age_group: num  1 0 1 0 0 0 1 0 0 1 ...
+</pre>
 </div>
 </div>
 </div>
