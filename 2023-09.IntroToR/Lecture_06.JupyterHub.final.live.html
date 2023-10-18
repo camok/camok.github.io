@@ -28293,17 +28293,39 @@ F-statistic: 4.487 on 2 and 397 DF,  p-value: 0.01184
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># anova() returns only significant differences in the model</span>
 <span class="nf">anova</span><span class="p">(</span><span class="n">rs174548Fit</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A anova: 2 × 5</caption>
+<thead>
+<tr><th></th><th scope="col">Df</th><th scope="col">Sum Sq</th><th scope="col">Mean Sq</th><th scope="col">F value</th><th scope="col">Pr(&gt;F)</th></tr>
+<tr><th></th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">as.factor(rs174548)</th><td>  2</td><td>  4314.195</td><td>2157.0973</td><td>4.486538</td><td>0.01183627</td></tr>
+<tr><th scope="row">Residuals</th><td>397</td><td>190874.915</td><td> 480.7932</td><td>      NA</td><td>        NA</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
