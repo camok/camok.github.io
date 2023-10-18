@@ -7709,9 +7709,9 @@ a.anchor-link {
 <span class="c1"># install.packages("tidyverse", dependencies = TRUE) # This package should already be installed on Jupyter Hub</span>
 
 <span class="c1"># None of these packages are already available on JupyterHub</span>
-<span class="n">devtools</span><span class="o">::</span><span class="nf">install_version</span><span class="p">(</span><span class="n">package</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"pbkrtest"</span><span class="p">,</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"0.5.0.1"</span><span class="p">,</span><span class="w"> </span><span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
-<span class="nf">install.packages</span><span class="p">(</span><span class="s">"car"</span><span class="p">,</span><span class="w"> </span><span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="c1"># ~6 minutes to install all dependencies</span>
-<span class="nf">install.packages</span><span class="p">(</span><span class="s">"gee"</span><span class="p">,</span><span class="w"> </span><span class="n">dependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="c1"># ~ 3 minutes to install all dependencies</span>
+<span class="c1"># devtools::install_version(package = "pbkrtest", version = "0.5.0.1", dependencies = TRUE)</span>
+<span class="c1"># install.packages("car", dependencies = TRUE) # ~6 minutes to install all dependencies</span>
+<span class="c1"># install.packages("gee", dependencies = TRUE) # ~ 3 minutes to install all dependencies</span>
 
 <span class="c1">#--------- Load packages to for today's session ----------#</span>
 <span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
