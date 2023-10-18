@@ -36556,12 +36556,12 @@ F-statistic: 14.35 on 3 and 396 DF,  p-value: 6.795e-09
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># anova comparison of the two interaction models</span>
@@ -36570,6 +36570,44 @@ F-statistic: 14.35 on 3 and 396 DF,  p-value: 6.795e-09
 <span class="c1"># AIC comparison of the two interaction models</span>
 <span class="nf">AIC</span><span class="p">(</span><span class="n">ageSexFit</span><span class="p">,</span><span class="w"> </span><span class="n">ageIntSexFit</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A anova: 2 × 6</caption>
+<thead>
+<tr><th></th><th scope="col">Res.Df</th><th scope="col">RSS</th><th scope="col">Df</th><th scope="col">Sum of Sq</th><th scope="col">F</th><th scope="col">Pr(&gt;F)</th></tr>
+<tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">1</th><td>397</td><td>176162.3</td><td>NA</td><td>      NA</td><td>       NA</td><td>      NA</td></tr>
+<tr><th scope="row">2</th><td>396</td><td>176048.7</td><td> 1</td><td>113.5242</td><td>0.2553587</td><td>0.613608</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 2 × 2</caption>
+<thead>
+<tr><th></th><th scope="col">df</th><th scope="col">AIC</th></tr>
+<tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">ageSexFit</th><td>4</td><td>3578.229</td></tr>
+<tr><th scope="row">ageIntSexFit</th><td>5</td><td>3579.971</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -36586,12 +36624,12 @@ F-statistic: 14.35 on 3 and 396 DF,  p-value: 6.795e-09
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Compare the two models with anova</span>
@@ -36600,6 +36638,44 @@ F-statistic: 14.35 on 3 and 396 DF,  p-value: 6.795e-09
 <span class="c1"># Use AIC to compare the models</span>
 <span class="nf">AIC</span><span class="p">(</span><span class="n">sexFit</span><span class="p">,</span><span class="w"> </span><span class="n">ageSexFit</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A anova: 2 × 6</caption>
+<thead>
+<tr><th></th><th scope="col">Res.Df</th><th scope="col">RSS</th><th scope="col">Df</th><th scope="col">Sum of Sq</th><th scope="col">F</th><th scope="col">Pr(&gt;F)</th></tr>
+<tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">1</th><td>398</td><td>183479.7</td><td>NA</td><td>      NA</td><td>      NA</td><td>          NA</td></tr>
+<tr><th scope="row">2</th><td>397</td><td>176162.3</td><td> 1</td><td>7317.467</td><td>16.49067</td><td>5.891828e-05</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 2 × 2</caption>
+<thead>
+<tr><th></th><th scope="col">df</th><th scope="col">AIC</th></tr>
+<tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">sexFit</th><td>3</td><td>3592.509</td></tr>
+<tr><th scope="row">ageSexFit</th><td>4</td><td>3578.229</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
