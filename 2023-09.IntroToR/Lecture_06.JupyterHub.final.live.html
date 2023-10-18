@@ -28872,20 +28872,37 @@ F-statistic:  12.2 on 3 and 396 DF,  p-value: 1.196e-07
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Use aov to generate our linear model</span>
-<span class="n">sex_rs174548Fit_aov</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ao</span><span class="p">(</span><span class="n">chol</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
+<span class="n">sex_rs174548Fit_aov</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aov</span><span class="p">(</span><span class="n">chol</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="c1"># Look at a summary of the model</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">sex_rs174548Fit_aov</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>                     Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+as.factor(sex)        1  11709   11709  25.951 5.43e-07 ***
+as.factor(rs174548)   2   4799    2400   5.318  0.00526 ** 
+Residuals           396 178681     451                     
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</pre>
 </div>
 </div>
 </div>
