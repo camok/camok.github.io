@@ -20034,17 +20034,36 @@ $\bar{y}$ - sample mean</br></br></p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Generating a linear model. Looks a lot like the bartlett.test() format right?</span>
-<span class="nf">lm</span><span class="p">(</span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
+<span class="nf">lm</span><span class="p">(</span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chol</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+Call:
+lm(formula = chol ~ age, data = cholesterol)
+
+Coefficients:
+(Intercept)          age  
+   166.9017       0.3103  
+</pre>
 </div>
 </div>
 </div>
@@ -20061,20 +20080,52 @@ $\bar{y}$ - sample mean</br></br></p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Assign the linear model to an object</span>
 <span class="n">ageFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">formula</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chol</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="c1"># ageFit is a list of 12 elements that can be individually accessed by using the dollar operator</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">ageFit</span><span class="p">,</span><span class="w"> </span><span class="n">give.attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
+<span class="nf">str</span><span class="p">(</span><span class="n">ageFit</span><span class="p">,</span><span class="w"> </span><span class="n">give.attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>List of 12
+ $ coefficients : Named num [1:2] 166.9 0.31
+ $ residuals    : Named num [1:400] 25.13 21.27 18.24 4.55 -8.04 ...
+ $ effects      : Named num [1:400] -3678.3 89.45 17.61 1.86 -9.49 ...
+ $ rank         : int 2
+ $ fitted.values: Named num [1:400] 190 183 187 177 183 ...
+ $ assign       : int [1:2] 0 1
+ $ qr           :List of 5
+  ..$ qr   : num [1:400, 1:2] -20 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 ...
+  ..$ qraux: num [1:2] 1.05 1.02
+  ..$ pivot: int [1:2] 1 2
+  ..$ tol  : num 1e-07
+  ..$ rank : int 2
+ $ df.residual  : int 398
+ $ xlevels      : Named list()
+ $ call         : language lm(formula = chol ~ age, data = cholesterol)
+ $ terms        :Classes 'terms', 'formula'  language chol ~ age
+ $ model        :'data.frame':	400 obs. of  2 variables:
+  ..$ chol: int [1:400] 215 204 205 182 175 176 159 169 175 189 ...
+  ..$ age : int [1:400] 74 51 64 34 52 39 79 38 52 58 ...
+</pre>
 </div>
 </div>
 </div>
@@ -20101,7 +20152,7 @@ $\bar{y}$ - sample mean</br></br></p>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Look at the summary information of 'fit'</span>
-<span class="kc">...</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">ageFit</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
