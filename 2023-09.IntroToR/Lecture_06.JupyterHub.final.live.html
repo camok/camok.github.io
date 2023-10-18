@@ -16393,21 +16393,44 @@ YII=" width="420"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1">#?t.test</span>
 
 <span class="c1"># Provide t.test with the two groups of data to compare</span>
-<span class="nf">t.test</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="kc">...</span><span class="p">],</span><span class="w"> </span><span class="c1"># 55 years or younger</span>
-<span class="w">       </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="c1"># 56 years or older</span>
+<span class="nf">t.test</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">age_group</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="p">],</span><span class="w"> </span><span class="c1"># 55 years or younger</span>
+<span class="w">       </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="o">$</span><span class="n">chol</span><span class="p">[</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">age_group</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="c1"># 56 years or older</span>
 <span class="w">       </span><span class="n">alternative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"two.sided"</span><span class="p">,</span><span class="w"> </span><span class="n">conf.level</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.95</span><span class="p">,</span><span class="w"> </span><span class="n">var.equal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+	Two Sample t-test
+
+data:  cholesterol$chol[cholesterol$age_group == 0] and cholesterol$chol[cholesterol$age_group == 1]
+t = -3.6349, df = 398, p-value = 0.0003146
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -12.202574  -3.636122
+sample estimates:
+mean of x mean of y 
+ 179.9751  187.8945 
+</pre>
 </div>
 </div>
 </div>
