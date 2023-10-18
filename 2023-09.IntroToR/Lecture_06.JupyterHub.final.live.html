@@ -36464,19 +36464,51 @@ F-statistic: 21.44 on 2 and 397 DF,  p-value: 1.44e-09
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Build a new interaction model between cholesterol and age</span>
-<span class="n">ageIntSexFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">chol</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
+<span class="n">ageIntSexFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">chol</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="nf">summary</span><span class="p">(</span><span class="n">ageIntSexFit</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+Call:
+lm(formula = chol ~ age * sex, data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-56.474 -14.377  -1.215  14.764  58.301 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 160.31151    5.86268  27.344  &lt; 2e-16 ***
+age           0.33460    0.10442   3.204  0.00146 ** 
+sex          14.56271    8.29802   1.755  0.08004 .  
+age:sex      -0.07399    0.14642  -0.505  0.61361    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 21.08 on 396 degrees of freedom
+Multiple R-squared:  0.09806,	Adjusted R-squared:  0.09123 
+F-statistic: 14.35 on 3 and 396 DF,  p-value: 6.795e-09
+</pre>
 </div>
 </div>
 </div>
