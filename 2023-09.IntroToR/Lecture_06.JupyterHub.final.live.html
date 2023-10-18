@@ -9503,12 +9503,12 @@ rkJggg==" width="420"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1">#Revisit the structure of our data</span>
@@ -9531,6 +9531,49 @@ rkJggg==" width="420"/>
 <span class="c1"># Then we can concatenate values to a printout with the cat() function</span>
 <span class="nf">cat</span><span class="p">(</span><span class="s">"Most frequent chol value is:"</span><span class="p">,</span><span class="w"> </span><span class="nf">names</span><span class="p">(</span><span class="n">mode</span><span class="p">[</span><span class="m">1</span><span class="p">]),</span><span class="w"> </span><span class="s">"with"</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="p">[</span><span class="m">1</span><span class="p">],</span><span class="w"> </span><span class="s">"occurrences"</span><span class="p">)</span><span class="w"> </span><span class="c1"># most frequent value in our dataset</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>'data.frame':	400 obs. of  9 variables:
+ $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ sex      : int  1 1 0 0 1 1 0 0 0 0 ...
+ $ age      : int  74 51 64 34 52 39 79 38 52 58 ...
+ $ chol     : int  215 204 205 182 175 176 159 169 175 189 ...
+ $ BMI      : num  26.2 24.7 24.2 23.8 34.1 22.7 22.9 24.9 20.4 22 ...
+ $ TG       : int  367 150 213 111 328 53 274 137 125 209 ...
+ $ rs174548 : int  1 2 0 1 0 0 2 1 0 0 ...
+ $ rs4775401: int  2 1 1 1 0 2 1 1 1 1 ...
+ $ APOE     : int  4 4 4 1 1 4 1 1 4 5 ...
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 1 × 6</caption>
+<thead>
+<tr><th scope="col">mean_chol</th><th scope="col">median_chol</th><th scope="col">min_chol</th><th scope="col">max_chol</th><th scope="col">sd_chol</th><th scope="col">variance_chol</th></tr>
+<tr><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>183.915</td><td>184</td><td>117</td><td>247</td><td>22.11777</td><td>489.1958</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Most frequent chol value is: 191 with 12 occurrences</pre>
 </div>
 </div>
 </div>
@@ -9562,7 +9605,7 @@ rkJggg==" width="420"/>
 <span class="c1"># 1. Data</span>
 <span class="nf">ggplot</span><span class="p">(</span><span class="n">cholesterol</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <span class="w">    </span><span class="c1"># 2. Aesthetics</span>
-<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">chol</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># Subtract the mean from each value to centre the distribution around 0</span>
+<span class="w">    </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">chol</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nf">mean</span><span class="p">(</span><span class="n">chol</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="c1"># Subtract the mean from each value to centre the distribution around 0</span>
 <span class="w">    </span><span class="c1"># 4. Geoms</span>
 <span class="w">    </span><span class="nf">geom_density</span><span class="p">()</span><span class="w"> </span><span class="c1"># Use a kernel density estimate</span>
 </pre></div>
