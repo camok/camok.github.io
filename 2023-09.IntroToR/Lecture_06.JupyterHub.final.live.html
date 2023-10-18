@@ -24775,12 +24775,12 @@ Y \sim Normal({\alpha_i}, {\sigma^2})
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Let us look at the structure of our dataset to again</span>
@@ -24788,11 +24788,51 @@ Y \sim Normal({\alpha_i}, {\sigma^2})
 
 <span class="c1"># First, take a look at the levels of the factor rs174548 using the level() function. </span>
 <span class="c1"># It's the equivalent to ask for unique() in a character vector</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">rs174548</span><span class="p">)</span>
+<span class="nf">unique</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">rs174548</span><span class="p">)</span>
 
 <span class="c1"># Get the levels</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">rs174548</span><span class="p">)</span>
+<span class="nf">levels</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">rs174548</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>'data.frame':	400 obs. of  10 variables:
+ $ ID       : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ sex      : int  1 1 0 0 1 1 0 0 0 0 ...
+ $ age      : int  74 51 64 34 52 39 79 38 52 58 ...
+ $ chol     : int  215 204 205 182 175 176 159 169 175 189 ...
+ $ BMI      : num  26.2 24.7 24.2 23.8 34.1 22.7 22.9 24.9 20.4 22 ...
+ $ TG       : int  367 150 213 111 328 53 274 137 125 209 ...
+ $ rs174548 : int  1 2 0 1 0 0 2 1 0 0 ...
+ $ rs4775401: int  2 1 1 1 0 2 1 1 1 1 ...
+ $ APOE     : int  4 4 4 1 1 4 1 1 4 5 ...
+ $ age_group: num  1 0 1 0 0 0 1 0 0 1 ...
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>1</li><li>2</li><li>0</li></ol>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>NULL</pre>
 </div>
 </div>
 </div>
@@ -24810,17 +24850,34 @@ Y \sim Normal({\alpha_i}, {\sigma^2})
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Make it a factor and then get its levels</span>
-<span class="nf">levels</span><span class="p">(</span><span class="nf">...</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">rs174548</span><span class="p">))</span>
+<span class="nf">levels</span><span class="p">(</span><span class="nf">factor</span><span class="p">(</span><span class="n">cholesterol</span><span class="o">$</span><span class="n">rs174548</span><span class="p">))</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>'0'</li><li>'1'</li><li>'2'</li></ol>
 </div>
 </div>
 </div>
