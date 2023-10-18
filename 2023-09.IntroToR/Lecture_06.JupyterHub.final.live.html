@@ -29008,12 +29008,12 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Build a linear model based on the "sex" variable</span>
@@ -29024,17 +29024,69 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+Call:
+lm(formula = chol ~ as.factor(sex), data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-62.299 -14.343  -0.888  14.701  57.701 
+
+Coefficients:
+                Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)      178.477      1.522  117.26  &lt; 2e-16 ***
+as.factor(sex)1   10.821      2.147    5.04 7.09e-07 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 21.47 on 398 degrees of freedom
+Multiple R-squared:  0.05999,	Adjusted R-squared:  0.05763 
+F-statistic:  25.4 on 1 and 398 DF,  p-value: 7.087e-07
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Compare the two models with anova(), NOT Anova()</span>
-<span class="nf">anova</span><span class="p">(</span><span class="n">sexFit</span><span class="p">,</span><span class="w"> </span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">anova</span><span class="p">(</span><span class="n">sexFit</span><span class="p">,</span><span class="w"> </span><span class="n">sex_rs174548Fit</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A anova: 2 × 6</caption>
+<thead>
+<tr><th></th><th scope="col">Res.Df</th><th scope="col">RSS</th><th scope="col">Df</th><th scope="col">Sum of Sq</th><th scope="col">F</th><th scope="col">Pr(&gt;F)</th></tr>
+<tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">1</th><td>398</td><td>183479.7</td><td>NA</td><td>      NA</td><td>      NA</td><td>         NA</td></tr>
+<tr><th scope="row">2</th><td>396</td><td>178680.6</td><td> 2</td><td>4799.139</td><td>5.318035</td><td>0.005258707</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -29085,22 +29137,58 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Build an interaction model with two factors with aov()</span>
-<span class="n">sexInt_rs174548Fit_aov</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aov</span><span class="p">(</span><span class="n">chol</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="kc">...</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
+<span class="n">sexInt_rs174548Fit_aov</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">aov</span><span class="p">(</span><span class="n">chol</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">sex</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">rs174548</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
 
 <span class="nf">summary</span><span class="p">(</span><span class="n">sexInt_rs174548Fit_aov</span><span class="p">)</span>
 
 <span class="c1"># Look at the Type-III SS summary</span>
 <span class="nf">Anova</span><span class="p">(</span><span class="n">sexInt_rs174548Fit_aov</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>                                    Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+as.factor(sex)                       1  11709   11709  26.378 4.42e-07 ***
+as.factor(rs174548)                  2   4799    2400   5.405  0.00483 ** 
+as.factor(sex):as.factor(rs174548)   2   3779    1889   4.256  0.01483 *  
+Residuals                          394 174902     444                     
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A anova: 4 × 4</caption>
+<thead>
+<tr><th></th><th scope="col">Sum Sq</th><th scope="col">Df</th><th scope="col">F value</th><th scope="col">Pr(&gt;F)</th></tr>
+<tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">as.factor(sex)</th><td> 12194.317</td><td>  1</td><td>27.470072</td><td>2.606525e-07</td></tr>
+<tr><th scope="row">as.factor(rs174548)</th><td>  4799.139</td><td>  2</td><td> 5.405498</td><td>4.831173e-03</td></tr>
+<tr><th scope="row">as.factor(sex):as.factor(rs174548)</th><td>  3778.947</td><td>  2</td><td> 4.256407</td><td>1.483039e-02</td></tr>
+<tr><th scope="row">Residuals</th><td>174901.651</td><td>394</td><td>       NA</td><td>          NA</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
