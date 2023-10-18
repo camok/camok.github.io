@@ -11963,12 +11963,12 @@ AAAAACKBxA4AAABAJJDYAQAAAIjE/wGWsuJXfoQLJwAAAABJRU5ErkJggg==" width="420"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Run the Shapiro-Wilks on both age groups</span>
@@ -11987,12 +11987,51 @@ AAAAACKBxA4AAABAJJDYAQAAAIjE/wGWsuJXfoQLJwAAAABJRU5ErkJggg==" width="420"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+	Shapiro-Wilk normality test
+
+data:  cholesterol$chol[cholesterol$age_group == 0]
+W = 0.99489, p-value = 0.7306
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+	Shapiro-Wilk normality test
+
+data:  cholesterol$chol[cholesterol$age_group == 1]
+W = 0.99166, p-value = 0.311
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+	Shapiro-Wilk normality test
+
+data:  log(cholesterol$chol)
+W = 0.98982, p-value = 0.007116
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Use group_by and summarise to analyse multiple subsets of your data for normality</span>
@@ -12000,9 +12039,31 @@ AAAAACKBxA4AAABAJJDYAQAAAIjE/wGWsuJXfoQLJwAAAABJRU5ErkJggg==" width="420"/>
 <span class="w">    </span><span class="c1"># Subgroup data by age_group</span>
 <span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">age_group</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Apply shapiro-wilks to each group and save the data you want</span>
-<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">shapiro.test</span><span class="p">(</span><span class="n">chol</span><span class="p">)</span><span class="o">$</span><span class="kc">...</span><span class="p">,</span>
-<span class="w">              </span><span class="n">pvalue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">shapiro.test</span><span class="p">(</span><span class="n">chol</span><span class="p">)</span><span class="o">$</span><span class="kc">...</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">W</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">shapiro.test</span><span class="p">(</span><span class="n">chol</span><span class="p">)</span><span class="o">$</span><span class="n">statistic</span><span class="p">,</span>
+<span class="w">              </span><span class="n">pvalue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">shapiro.test</span><span class="p">(</span><span class="n">chol</span><span class="p">)</span><span class="o">$</span><span class="n">p.value</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 2 × 3</caption>
+<thead>
+<tr><th scope="col">age_group</th><th scope="col">W</th><th scope="col">pvalue</th></tr>
+<tr><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>0.9948905</td><td>0.7306410</td></tr>
+<tr><td>1</td><td>0.9916584</td><td>0.3110017</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
