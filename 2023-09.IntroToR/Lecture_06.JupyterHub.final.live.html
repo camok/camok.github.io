@@ -29017,7 +29017,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Build a linear model based on the "sex" variable</span>
-<span class="n">sexFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="kc">...</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
+<span class="n">sexFit</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">lm</span><span class="p">(</span><span class="n">chol</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="nf">as.factor</span><span class="p">(</span><span class="n">sex</span><span class="p">),</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cholesterol</span><span class="p">)</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">sexFit</span><span class="p">)</span>
 </pre></div>
 </div>
