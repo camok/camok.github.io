@@ -29468,12 +29468,12 @@ F-statistic:  9.14 on 5 and 394 DF,  p-value: 3.062e-08
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Is our design balanced?</span>
@@ -29481,6 +29481,39 @@ F-statistic:  9.14 on 5 and 394 DF,  p-value: 3.062e-08
 <span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="n">rs174548</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="nf">summarize</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">n</span><span class="p">())</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>`summarise()` has grouped output by 'sex'. You can override using the `.groups` argument.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A grouped_df: 6 × 3</caption>
+<thead>
+<tr><th scope="col">sex</th><th scope="col">rs174548</th><th scope="col">n</th></tr>
+<tr><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;int&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>0</td><td>0</td><td>110</td></tr>
+<tr><td>0</td><td>1</td><td> 77</td></tr>
+<tr><td>0</td><td>2</td><td> 12</td></tr>
+<tr><td>1</td><td>0</td><td>117</td></tr>
+<tr><td>1</td><td>1</td><td> 70</td></tr>
+<tr><td>1</td><td>2</td><td> 14</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -29497,17 +29530,41 @@ F-statistic:  9.14 on 5 and 394 DF,  p-value: 3.062e-08
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Run TukeyHSD on our aov model</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">sexInt_rs174548Fit_aov</span><span class="p">)</span>
+<span class="nf">anova</span><span class="p">(</span><span class="n">sexInt_rs174548Fit_aov</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A anova: 4 × 5</caption>
+<thead>
+<tr><th></th><th scope="col">Df</th><th scope="col">Sum Sq</th><th scope="col">Mean Sq</th><th scope="col">F value</th><th scope="col">Pr(&gt;F)</th></tr>
+<tr><th></th><th scope="col">&lt;int&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">as.factor(sex)</th><td>  1</td><td> 11709.372</td><td>11709.3722</td><td>26.377639</td><td>4.423841e-07</td></tr>
+<tr><th scope="row">as.factor(rs174548)</th><td>  2</td><td>  4799.139</td><td> 2399.5697</td><td> 5.405498</td><td>4.831173e-03</td></tr>
+<tr><th scope="row">as.factor(sex):as.factor(rs174548)</th><td>  2</td><td>  3778.947</td><td> 1889.4737</td><td> 4.256407</td><td>1.483039e-02</td></tr>
+<tr><th scope="row">Residuals</th><td>394</td><td>174901.651</td><td>  443.9128</td><td>       NA</td><td>          NA</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
