@@ -23704,12 +23704,12 @@ BDsAAABFEOwAAAAUQbADAABQBMEOAABAEf8DRp2kFtKyjdIAAAAASUVORK5CYII=" width="420"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Define our multiple linear regression</span>
@@ -23718,6 +23718,37 @@ BDsAAABFEOwAAAAUQbADAABQBMEOAABAEf8DRp2kFtKyjdIAAAAASUVORK5CYII=" width="420"/>
 <span class="c1"># summarise the model</span>
 <span class="nf">summary</span><span class="p">(</span><span class="n">ageBMIFit</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+Call:
+lm(formula = chol ~ age + BMI, data = cholesterol)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-58.994 -15.793   0.571  14.159  62.992 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 137.1612     9.0061  15.230  &lt; 2e-16 ***
+age           0.2023     0.0795   2.544 0.011327 *  
+BMI           1.4266     0.3822   3.732 0.000217 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 21.34 on 397 degrees of freedom
+Multiple R-squared:  0.07351,	Adjusted R-squared:  0.06884 
+F-statistic: 15.75 on 2 and 397 DF,  p-value: 2.62e-07
+</pre>
 </div>
 </div>
 </div>
@@ -23740,19 +23771,41 @@ BDsAAABFEOwAAAAUQbADAABQBMEOAABAEf8DRp2kFtKyjdIAAAAASUVORK5CYII=" width="420"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Here we're using the anova() function to compare the coefficients of two linear models. </span>
 <span class="c1"># Think of this as a "secondary" use of the anova function. We are not running an ANOVA per se.</span>
 
-<span class="nf">anova</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">anova</span><span class="p">(</span><span class="n">ageFit</span><span class="p">,</span><span class="w"> </span><span class="n">ageBMIFit</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A anova: 2 × 6</caption>
+<thead>
+<tr><th></th><th scope="col">Res.Df</th><th scope="col">RSS</th><th scope="col">Df</th><th scope="col">Sum of Sq</th><th scope="col">F</th><th scope="col">Pr(&gt;F)</th></tr>
+<tr><th></th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><th scope="row">1</th><td>398</td><td>187187.5</td><td>NA</td><td>     NA</td><td>      NA</td><td>          NA</td></tr>
+<tr><th scope="row">2</th><td>397</td><td>180841.7</td><td> 1</td><td>6345.76</td><td>13.93079</td><td>0.0002173567</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
