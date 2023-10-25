@@ -59228,7 +59228,7 @@ gg==" width="1260"/>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Description: This function, given a set of data from the embryo.df format will produce</span>
@@ -59247,7 +59247,7 @@ gg==" width="1260"/>
 <span class="c1"># [3] save plot filename</span>
 
 <span class="c1">### 3.4.0 Define a new function where we set the data.df parameter as input.</span>
-<span class="n">set.facet.plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="n">set.facet.plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">data.df</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="c1"># Set the default value of infDate to 190423</span>
 <span class="w">    </span><span class="n">save.facet.plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">infDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"190423"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -59296,10 +59296,10 @@ gg==" width="1260"/>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Step 2. Make a function where the data set is embryos.df</span>
-<span class="n">make.embryo.plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">set.facet.plot</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">make.embryo.plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">set.facet.plot</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">)</span>
 
 <span class="c1"># Make a plot and filter it by infection Date</span>
-<span class="n">infection.results</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">make.embryo.plot</span><span class="p">(</span><span class="s">"..."</span><span class="p">)</span>
+<span class="n">infection.results</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">make.embryo.plot</span><span class="p">(</span><span class="s">"200704"</span><span class="p">)</span>
 
 <span class="n">infection.results</span><span class="p">[[</span><span class="m">2</span><span class="p">]]</span>
 </pre></div>
