@@ -55851,7 +55851,7 @@ AAAAAKDCSMQCAAAAAAAAAAAAQIWRiAUAAAAAAAAAAACACiMRCwAAAAAAAAAAAAAV9n8BwgsC
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Description: This function, given a set of data from the embryo.df format will produce</span>
@@ -55890,7 +55890,7 @@ AAAAAKDCSMQCAAAAAAAAAAAAQIWRiAUAAAAAAAAAAACACiMRCwAAAAAAAAAAAAAV9n8BwgsC
 <span class="w">        </span><span class="nf">facet_grid</span><span class="p">(</span><span class="n">sporeStrain</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">doseLevel</span><span class="p">)</span>
 
 <span class="w">    </span><span class="c1"># Save the name of the plot file</span>
-<span class="w">    </span><span class="n">save.file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">infDate</span><span class="p">,</span><span class="w"> </span><span class="s">"graph.facet.function.png"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"_"</span><span class="p">)</span>
+<span class="w">    </span><span class="n">save.file</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">infDate</span><span class="p">,</span><span class="w"> </span><span class="s">"boxplot.facet.saveFunction.png"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"_"</span><span class="p">)</span>
 <span class="w">       </span>
 <span class="w">    </span><span class="c1"># Save each plot as it's generated</span>
 <span class="w">    </span><span class="nf">ggsave</span><span class="p">(</span><span class="n">plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">infectionPlot</span><span class="p">,</span><span class="w"> </span><span class="n">filename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">paste</span><span class="p">(</span><span class="n">infDate</span><span class="p">,</span><span class="w"> </span><span class="s">"boxplot.facet.saveFunction.png"</span><span class="p">,</span><span class="w"> </span><span class="n">sep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"_"</span><span class="p">),</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"data/"</span><span class="w"> </span><span class="p">,</span><span class="w"> </span>
@@ -55916,10 +55916,10 @@ AAAAAKDCSMQCAAAAAAAAAAAAQIWRiAUAAAAAAAAAAACACiMRCwAAAAAAAAAAAAAV9n8BwgsC
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Call on save.facet.plot function now</span>
 
-<span class="n">inf200704.plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">save.facet.plot</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">,</span><span class="w"> </span><span class="s">"..."</span><span class="p">)</span>
+<span class="n">inf200704.plot</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">save.facet.plot</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">,</span><span class="w"> </span><span class="s">"200704"</span><span class="p">)</span>
 
 <span class="c1"># Look at the data</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">inf200704.plot...</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">inf200704.plot</span><span class="p">[[</span><span class="m">1</span><span class="p">]])</span>
 
 <span class="c1"># Display the plot to output</span>
 <span class="n">inf200704.plot</span><span class="p">[[</span><span class="m">3</span><span class="p">]]</span>
