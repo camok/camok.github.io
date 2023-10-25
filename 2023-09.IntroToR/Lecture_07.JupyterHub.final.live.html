@@ -43345,7 +43345,7 @@ hZIhUMWOQqFQKBQKJUOgih2FQqFQKBRKhvD/AZAsdaZrl/JqAAAAAElFTkSuQmCC" width="420"/>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Build a very specific subset of data looking at only N2 and JU1400 populations </span>
@@ -43366,7 +43366,7 @@ hZIhUMWOQqFQKBQKJUOgih2FQqFQKBRKhvD/AZAsdaZrl/JqAAAAAElFTkSuQmCC" width="420"/>
 
 <span class="c1"># for loop to calculate difference in means between N2 and JU1400 infected by LUAm1 on the same date</span>
 
-<span class="nf">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">results</span><span class="o">$</span><span class="n">infectionDate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="nf">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">result</span><span class="o">$</span><span class="n">infectionDate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1"># Generate a t-test on subset by day</span>
 <span class="w">    </span><span class="n">t</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">t.test</span><span class="p">(</span><span class="n">embryos</span><span class="w"> </span><span class="o">~</span><span class="w"> </span><span class="n">wormStrain</span><span class="p">,</span><span class="w"> </span><span class="n">subdata</span><span class="p">[</span><span class="n">subdata</span><span class="o">$</span><span class="n">infectionDate</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="p">])</span>
 <span class="w">    </span><span class="c1"># write the results to our data frame</span>
@@ -43405,6 +43405,27 @@ hZIhUMWOQqFQKBQKJUOgih2FQqFQKBRKhvD/AZAsdaZrl/JqAAAAAElFTkSuQmCC" width="420"/>
 </table>
 </div>
 </div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A data.frame: 7 × 3</caption>
+<thead>
+<tr><th scope="col">infectionDate</th><th scope="col">difference</th><th scope="col">p_value</th></tr>
+<tr><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>200704</td><td> -9.940000</td><td>1.737888e-25</td></tr>
+<tr><td>200711</td><td> -8.400000</td><td>6.851135e-20</td></tr>
+<tr><td>200718</td><td>-11.560000</td><td>1.451323e-28</td></tr>
+<tr><td>200818</td><td>-10.980000</td><td>4.447701e-25</td></tr>
+<tr><td>200822</td><td>-14.120000</td><td>1.175066e-34</td></tr>
+<tr><td>200901</td><td>-10.460000</td><td>8.480135e-28</td></tr>
+<tr><td>190423</td><td> -9.028205</td><td>2.445116e-23</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -43432,9 +43453,9 @@ hZIhUMWOQqFQKBQKJUOgih2FQqFQKBRKhvD/AZAsdaZrl/JqAAAAAElFTkSuQmCC" width="420"/>
 <span class="w">    </span><span class="c1"># Pass the subdata</span>
 <span class="w">    </span><span class="n">subdata</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Group the data</span>
-<span class="w">    </span><span class="kc">...</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
+<span class="w">    </span><span class="nf">group_by</span><span class="p">(</span><span class="n">infectionDate</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Use Summarise to do the repetitive work for you</span>
-<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">difference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">diff</span><span class="p">(</span><span class="nf">t.test</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span><span class="o">$</span><span class="n">estimate</span><span class="p">),</span>
+<span class="w">    </span><span class="nf">summarise</span><span class="p">(</span><span class="n">difference</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">diff</span><span class="p">(</span><span class="nf">t.test</span><span class="p">(</span><span class="n">em</span><span class="p">)</span><span class="o">$</span><span class="n">estimate</span><span class="p">),</span>
 <span class="w">              </span><span class="n">p_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">t.test</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span><span class="o">$</span><span class="n">p.value</span><span class="p">)</span>
 
 <span class="n">subdata_ttest</span>
