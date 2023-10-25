@@ -8362,18 +8362,61 @@ Traceback:
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Pull down the structure and colnames of our embryos.df</span>
 <span class="nf">str</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">,</span><span class="w"> </span><span class="n">give.attr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">)</span>
-<span class="nf">...</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">)</span>
+<span class="nf">colnames</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>spc_tbl_ [9,802 x 19] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ experiment   : chr [1:9802] "200707_N2_LUAm1_0M_72hpi" "200707_N2_LUAm1_10M_72hpi" "200707_JU1400_LUAm1_0M_72hpi" "200707_JU1400_LUAm1_10M_72hpi" ...
+ $ wormNumber   : num [1:9802] 1 1 1 1 1 1 1 1 1 1 ...
+ $ infectionDate: Factor w/ 9 levels "200704","200711",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ wormStrain   : Factor w/ 18 levels "N2","JU1400",..: 1 1 2 2 3 3 4 4 5 5 ...
+ $ sporeStrain  : Factor w/ 6 levels "LUAm1","MAM1",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ sporeDose    : Factor w/ 11 levels "0","10","4","3.5",..: 1 2 1 2 1 2 1 2 1 2 ...
+ $ sporesM_cm2  : num [1:9802] 0 0.354 0 0.354 0 ...
+ $ doseLevel    : Factor w/ 6 levels "Mock","Medium",..: 1 2 1 2 1 2 1 2 1 2 ...
+ $ spores       : logi [1:9802] FALSE FALSE FALSE FALSE FALSE FALSE ...
+ $ meronts      : logi [1:9802] FALSE TRUE FALSE TRUE FALSE TRUE ...
+ $ embryos      : num [1:9802] 18 7 10 0 12 0 5 9 11 0 ...
+ $ expTimepoint : num [1:9802] 72 72 72 72 72 72 72 72 72 72 ...
+ $ infectionType: Factor w/ 1 level "continuous": 1 1 1 1 1 1 1 1 1 1 ...
+ $ totalWorms   : num [1:9802] 1000 1000 1000 1000 1000 1000 1000 1000 1000 1000 ...
+ $ plateSize    : num [1:9802] 6 6 6 6 6 6 6 6 6 6 ...
+ $ fixingDate   : Factor w/ 9 levels "200707","200714",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ stainingDate : Factor w/ 10 levels "200803","200810",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ slideDate    : Factor w/ 9 levels "200804","200811",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ imagingDate  : Factor w/ 13 levels "200806","200813",..: 1 1 1 1 1 1 1 1 1 1 ...
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>'experiment'</li><li>'wormNumber'</li><li>'infectionDate'</li><li>'wormStrain'</li><li>'sporeStrain'</li><li>'sporeDose'</li><li>'sporesM_cm2'</li><li>'doseLevel'</li><li>'spores'</li><li>'meronts'</li><li>'embryos'</li><li>'expTimepoint'</li><li>'infectionType'</li><li>'totalWorms'</li><li>'plateSize'</li><li>'fixingDate'</li><li>'stainingDate'</li><li>'slideDate'</li><li>'imagingDate'</li></ol>
 </div>
 </div>
 </div>
