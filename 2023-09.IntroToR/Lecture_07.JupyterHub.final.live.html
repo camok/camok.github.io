@@ -52037,16 +52037,44 @@ gg==" width="1260"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="nf">unique</span><span class="p">(</span><span class="n">embryos.df</span><span class="o">$</span><span class="n">infectionDate</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>200704</li><li>200711</li><li>200718</li><li>200818</li><li>200822</li><li>200901</li><li>200912</li><li>200915</li><li>190423</li></ol>
+<details>
+<summary style="display:list-item;cursor:pointer">
+<strong>Levels</strong>:
+	</summary>
+<style>
+	.list-inline {list-style: none; margin:0; padding: 0}
+	.list-inline>li {display: inline-block}
+	.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+	</style>
+<ol class="list-inline"><li>'200704'</li><li>'200711'</li><li>'200718'</li><li>'200818'</li><li>'200822'</li><li>'200901'</li><li>'200912'</li><li>'200915'</li><li>'190423'</li></ol>
+</details>
 </div>
 </div>
 </div>
@@ -52063,7 +52091,7 @@ gg==" width="1260"/>
 <span class="nf">for </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nf">unique</span><span class="p">(</span><span class="n">embryos.df</span><span class="o">$</span><span class="n">infectionDate</span><span class="p">)[</span><span class="m">1</span><span class="o">:</span><span class="m">3</span><span class="p">]){</span>
 
 <span class="w">    </span><span class="c1"># Call on our function now</span>
-<span class="w">    </span><span class="nf">make.facet.plot</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="w">    </span><span class="nf">make.facet.plot</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">,</span><span class="w"> </span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
 </div>
