@@ -59163,13 +59163,13 @@ gg==" width="1260"/>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Define our function(s)</span>
-<span class="n">make.power</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1"># This sets the variable values (via lexical scoping) of the exponent</span>
+<span class="n">make.power</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">power</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1"># This sets the variable values (via lexical scoping) of the exponent</span>
 <span class="w">    </span>
-<span class="w">    </span><span class="n">pow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1"># When we call on the resulting function it will require a base value</span>
+<span class="w">    </span><span class="n">pow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">base</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1"># When we call on the resulting function it will require a base value</span>
 <span class="w">        </span>
 <span class="w">        </span><span class="n">base</span><span class="o">^</span><span class="n">power</span><span class="w"> </span><span class="c1"># Make the actual calculation</span>
 <span class="w">    </span><span class="p">}</span><span class="w">    </span>
@@ -59179,22 +59179,34 @@ gg==" width="1260"/>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Define a new function that does cubic calculations</span>
-<span class="n">cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">make.power</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="n">cube</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">make.power</span><span class="p">(</span><span class="m">3</span><span class="p">)</span>
 
 <span class="c1"># Now we have a function cube() that takes a parameter called base to calculate base^power</span>
 
 <span class="c1"># Call on our cubic function using a base of 4</span>
-<span class="nf">cube</span><span class="p">(</span><span class="kc">...</span><span class="p">)</span>
+<span class="nf">cube</span><span class="p">(</span><span class="m">4</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+64
 </div>
 </div>
 </div>
