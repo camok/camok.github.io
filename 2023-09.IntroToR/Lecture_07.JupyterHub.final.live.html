@@ -7743,12 +7743,12 @@ Loading required package: viridisLite
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># set working directory</span>
@@ -7756,11 +7756,54 @@ Loading required package: viridisLite
 <span class="nf">list.files</span><span class="p">(</span><span class="s">"./data"</span><span class="p">)</span>
 
 <span class="c1"># read our file in with read_csv()</span>
-<span class="n">embryos.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">...</span><span class="p">(</span><span class="s">"..."</span><span class="p">,</span><span class="w"> </span><span class="n">col_types</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"cdffffdfllddfddffff"</span><span class="p">)</span>
+<span class="n">embryos.df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"data/embryo_data_long_merged.csv"</span><span class="p">,</span><span class="w"> </span><span class="n">col_types</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"cdffffdfllddfddffff"</span><span class="p">)</span>
 
 <span class="c1"># explore our loaded data frame</span>
 <span class="nf">head</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+'C:/Users/mokca/Dropbox/!CAGEF/Course_Materials/Introduction_to_R/2023.09_Intro_to_R/lecture_07_flow_control'
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<style>
+.list-inline {list-style: none; margin:0; padding: 0}
+.list-inline>li {display: inline-block}
+.list-inline>li:not(:last-child)::after {content: "\00b7"; padding: 0 .5ex}
+</style>
+<ol class="list-inline"><li>'190423_boxplot.facet.png'</li><li>'190423_boxplot.facet.saveFunction.png'</li><li>'190423_boxplot.png'</li><li>'200704_boxplot.facet.makeFunction.png'</li><li>'200704_boxplot.facet.png'</li><li>'200704_boxplot.facet.saveFunction.png'</li><li>'200704_boxplot.png'</li><li>'200704_graph.facet.saveFunction.tryCatchv2.png'</li><li>'200704_graph.facet.saveFunction2.png'</li><li>'200711_boxplot.facet.makeFunction.png'</li><li>'200711_boxplot.facet.png'</li><li>'200711_boxplot.png'</li><li>'200718_boxplot.facet.makeFunction.png'</li><li>'200718_boxplot.facet.png'</li><li>'200718_boxplot.png'</li><li>'200818_boxplot.facet.png'</li><li>'200818_boxplot.png'</li><li>'200822_boxplot.facet.png'</li><li>'200822_boxplot.png'</li><li>'200901_boxplot.facet.png'</li><li>'200901_boxplot.png'</li><li>'200912_boxplot.facet.png'</li><li>'200912_boxplot.png'</li><li>'200915_boxplot.facet.png'</li><li>'200915_boxplot.png'</li><li>'221019_graph.facet.saveFunction.tryCatchv2.png'</li><li>'embryo_data_long_merged.csv'</li><li>'Lecture07.all.RData'</li><li>'Lecture07.R'</li><li>'Lecture07.Rdata'</li><li>'old'</li></ol>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<table class="dataframe">
+<caption>A tibble: 6 × 19</caption>
+<thead>
+<tr><th scope="col">experiment</th><th scope="col">wormNumber</th><th scope="col">infectionDate</th><th scope="col">wormStrain</th><th scope="col">sporeStrain</th><th scope="col">sporeDose</th><th scope="col">sporesM_cm2</th><th scope="col">doseLevel</th><th scope="col">spores</th><th scope="col">meronts</th><th scope="col">embryos</th><th scope="col">expTimepoint</th><th scope="col">infectionType</th><th scope="col">totalWorms</th><th scope="col">plateSize</th><th scope="col">fixingDate</th><th scope="col">stainingDate</th><th scope="col">slideDate</th><th scope="col">imagingDate</th></tr>
+<tr><th scope="col">&lt;chr&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;lgl&gt;</th><th scope="col">&lt;lgl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;dbl&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th><th scope="col">&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+<tr><td>200707_N2_LUAm1_0M_72hpi      </td><td>1</td><td>200704</td><td>N2     </td><td>LUAm1</td><td>0 </td><td>0.000000</td><td>Mock  </td><td>FALSE</td><td>FALSE</td><td>18</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td></tr>
+<tr><td>200707_N2_LUAm1_10M_72hpi     </td><td>1</td><td>200704</td><td>N2     </td><td>LUAm1</td><td>10</td><td>0.353857</td><td>Medium</td><td>FALSE</td><td> TRUE</td><td> 7</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td></tr>
+<tr><td>200707_JU1400_LUAm1_0M_72hpi  </td><td>1</td><td>200704</td><td>JU1400 </td><td>LUAm1</td><td>0 </td><td>0.000000</td><td>Mock  </td><td>FALSE</td><td>FALSE</td><td>10</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td></tr>
+<tr><td>200707_JU1400_LUAm1_10M_72hpi </td><td>1</td><td>200704</td><td>JU1400 </td><td>LUAm1</td><td>10</td><td>0.353857</td><td>Medium</td><td>FALSE</td><td> TRUE</td><td> 0</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td></tr>
+<tr><td>200707_ED3052A_LUAm1_0M_72hpi </td><td>1</td><td>200704</td><td>ED3052A</td><td>LUAm1</td><td>0 </td><td>0.000000</td><td>Mock  </td><td>FALSE</td><td>FALSE</td><td>12</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td></tr>
+<tr><td>200707_ED3052A_LUAm1_10M_72hpi</td><td>1</td><td>200704</td><td>ED3052A</td><td>LUAm1</td><td>10</td><td>0.353857</td><td>Medium</td><td>FALSE</td><td> TRUE</td><td> 0</td><td>72</td><td>continuous</td><td>1000</td><td>6</td><td>200707</td><td>200803</td><td>200804</td><td>200806</td></tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
