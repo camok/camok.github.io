@@ -57172,17 +57172,70 @@ AIAsoxALAAAAAAAAAAAAAFlGIRYAAAAAAAAAAAAAsuz/ArTVwwo0lFSfAAAAAElFTkSuQmCC
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-r"><pre><span></span><span class="c1"># Rerun our function without an infection date</span>
 <span class="nf">save.facet.plot</span><span class="p">(</span><span class="n">embryos.df</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-yellow-intense-fg ansi-bold">Error</span><span class="ansi-bold"> in `filter()`:</span>
+<span class="ansi-cyan-fg">i</span> In argument: `infectionDate == infDate`.
+<span class="ansi-bold">Caused by error:</span>
+<span class="ansi-yellow-fg">!</span> argument "infDate" is missing, with no default
+Traceback:
+
+1. save.facet.plot(embryos.df)
+2. data.df %&gt;% filter(infectionDate == infDate)   # at line 19 of file &lt;text&gt;
+3. filter(., infectionDate == infDate)
+4. filter.data.frame(., infectionDate == infDate)
+5. filter_rows(.data, dots, by)
+6. filter_eval(dots, mask = mask, error_call = error_call)
+7. withCallingHandlers(mask$eval_all_filter(dots, env_filter), error = dplyr_error_handler(dots = dots, 
+ .     mask = mask, bullets = filter_bullets, error_call = error_call), 
+ .     warning = function(cnd) {
+ .         local_error_context(dots, i, mask)
+ .         warning_handler(cnd)
+ .     }, `dplyr:::signal_filter_one_column_matrix` = function(e) {
+ .         warn_filter_one_column_matrix(call = error_call)
+ .     }, `dplyr:::signal_filter_across` = function(e) {
+ .         warn_filter_across(call = error_call)
+ .     }, `dplyr:::signal_filter_data_frame` = function(e) {
+ .         warn_filter_data_frame(call = error_call)
+ .     })
+8. mask$eval_all_filter(dots, env_filter)
+9. eval()
+10. .handleSimpleError(function (cnd) 
+  . {
+  .     local_error_context(dots, i = frame[[i_sym]], mask = mask)
+  .     if (inherits(cnd, "dplyr:::internal_error")) {
+  .         parent &lt;- error_cnd(message = bullets(cnd))
+  .     }
+  .     else {
+  .         parent &lt;- cnd
+  .     }
+  .     message &lt;- c(cnd_bullet_header(action), i = if (has_active_group_context(mask)) cnd_bullet_cur_group_label())
+  .     abort(message, class = error_class, parent = parent, call = error_call)
+  . }, "argument \"infDate\" is missing, with no default", base::quote(eval()))
+11. h(simpleError(msg, call))
+12. abort(message, class = error_class, parent = parent, call = error_call)
+13. signal_abort(cnd, .file)</pre>
 </div>
 </div>
 </div>
@@ -57223,7 +57276,7 @@ AIAsoxALAAAAAAAAAAAAAFlGIRYAAAAAAAAAAAAAsuz/ArTVwwo0lFSfAAAAAElFTkSuQmCC
 <span class="c1"># [3] save plot filename</span>
 
 <span class="c1">### 3.3.0 Set the default value of infDate to 190423</span>
-<span class="n">save.facet.plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">data.df</span><span class="p">,</span><span class="w"> </span><span class="n">infDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"..."</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="n">save.facet.plot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">data.df</span><span class="p">,</span><span class="w"> </span><span class="n">infDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"190423"</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="c1"># We've updated the plot to use a filter() function!</span>
 <span class="w">    </span><span class="n">infection.data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">data.df</span><span class="w"> </span><span class="o">%&gt;%</span><span class="w"> </span><span class="nf">filter</span><span class="p">(</span><span class="n">infectionDate</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">infDate</span><span class="p">)</span>
