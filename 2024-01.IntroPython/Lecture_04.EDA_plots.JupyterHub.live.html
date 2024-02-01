@@ -10554,7 +10554,7 @@ Name: pathogenStrain, dtype: int64</pre>
  <span class="p">[</span><span class="s1">'pathogenStrain'</span><span class="p">]</span>
  
  <span class="c1"># Determine the total number of values in each group, the number of unique, and what they are</span>
- <span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">...</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">,</span> <span class="s2">"nunique"</span><span class="p">,</span> <span class="s2">"unique"</span><span class="p">])</span>
+ <span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">size</span><span class="p">,</span> <span class="s2">"count"</span><span class="p">,</span> <span class="s2">"nunique"</span><span class="p">,</span> <span class="s2">"unique"</span><span class="p">])</span>
 <span class="p">)</span>
 </pre></div>
 </div>
