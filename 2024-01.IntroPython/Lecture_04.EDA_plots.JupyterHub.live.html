@@ -7622,7 +7622,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># ----- Always run this at the beginning of class so we can get multi-command output ----- #</span>
@@ -7640,7 +7640,7 @@ a.anchor-link {
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>seaborn
+<span class="c1"># !pip install seaborn</span>
 </pre></div>
 </div>
 </div>
@@ -7791,7 +7791,7 @@ a.anchor-link {
 <li><p>Our measurements might be comprised of entries where LUAm1 is a <code>pathogenStrain</code>, but it's <code>pathogenDose</code> is 0! So it's not really being used to infect at all.</p>
 </li>
 </ol>
-<p>Let's adress the 2nd question and circle back around to the first in a little bit as it is slightly more complex.</p>
+<p>Let's address the 2nd question and circle back around to the first in a little bit as it is slightly more complex.</p>
 </div>
 </div>
 </div>
@@ -8001,6 +8001,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 <h3 id="1.1.6-Use-the-.query()-method-to-conditional-filter-your-data">1.1.6 Use the <code>.query()</code> method to conditional filter your data<a class="anchor-link" href="#1.1.6-Use-the-.query()-method-to-conditional-filter-your-data">¶</a></h3><p>Thus far we have seen the use of boolean logic to help produce conditional filtering by selecting on the resulting arrays with the <code>.loc[]</code> or <code>.iloc[]</code> methods. However, you might have noticed that the code is rather clunky:</p>
 <p><code>embryo_merged_subset.loc[embryo_merged_subset.loc[:, 'pathogenDose'] &gt; 0, 'pathogenStrain']</code></p>
 <p>As an alternative, we can use the <code>.query()</code> method which has its roots in database querying language. This method has two main parameters:</p>
@@ -8857,7 +8858,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h3 id="2.1.1-Use-the-figure()-to-set-your-figure-size">2.1.1 Use the <code>figure()</code> to set your figure size<a class="anchor-link" href="#2.1.1-Use-the-figure()-to-set-your-figure-size">¶</a></h3><p>As we can see from our first attempt, the plot is rather small. We definitely have some problems with the basics of this plot and we'll address the first one that might help. This figure could be a little larger so we can see the x-axis labels better. Use the <code>figure()</code> method to set your figure size using the <code>figsize</code> parameter.</p>
+<h3 id="2.1.1-Use-the-figure()-function-to-set-your-figure-size">2.1.1 Use the <code>figure()</code> function to set your figure size<a class="anchor-link" href="#2.1.1-Use-the-figure()-function-to-set-your-figure-size">¶</a></h3><p>As we can see from our first attempt, the plot is rather small. We definitely have some problems with the basics of this plot and we'll address the first one that might help. This figure could be a little larger so we can see the x-axis labels better. Use the <code>figure()</code> method to set your figure size using the <code>figsize</code> parameter.</p>
 </div>
 </div>
 </div>
@@ -8890,7 +8891,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="2.1.2-Rotate-your-x-axis-text-with-the-xticks()-method">2.1.2 Rotate your x-axis text with the <code>xticks()</code> method<a class="anchor-link" href="#2.1.2-Rotate-your-x-axis-text-with-the-xticks()-method">¶</a></h3><p>Now that our plot is larger, we can still see the x-axis labels are still too large. We can, however, rotate the text and see if that helps. Let's rotate to a 90-degree angle. We'll alter these axis properties through the <code>xticks()</code> method.</p>
+<h3 id="2.1.2-Rotate-your-x-axis-text-with-the-xticks()-function">2.1.2 Rotate your x-axis text with the <code>xticks()</code> function<a class="anchor-link" href="#2.1.2-Rotate-your-x-axis-text-with-the-xticks()-function">¶</a></h3><p>Now that our plot is larger, we can still see the x-axis labels are still too large. We can, however, rotate the text and see if that helps. Let's rotate to a 90-degree angle. We'll alter these axis properties through the <code>xticks()</code> method.</p>
 </div>
 </div>
 </div>
