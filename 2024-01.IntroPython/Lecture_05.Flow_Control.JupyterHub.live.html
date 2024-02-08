@@ -11613,7 +11613,7 @@ memory usage: 2.5+ MB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a list to hold our results</span>
@@ -11623,14 +11623,14 @@ memory usage: 2.5+ MB
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
 
     <span class="c1"># Print some column values for the row</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
-<span class="c1">#     print(row.Index, row.wormStrain, row.sporesPresent, row.numEmbryos, ...)</span>
-<span class="c1">#     # Produce some new values based on the values in the current row</span>
-<span class="c1">#     summation[0] = summation[0] + row.sporesPresent</span>
-<span class="c1">#     summation[1] = summation[1] + row.numEmbryos</span>
+    <span class="c1"># print(row)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">Index</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">wormStrain</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">sporesPresent</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">numEmbryos</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">_14</span><span class="p">)</span>
+    <span class="c1"># Produce some new values based on the values in the current row</span>
+    <span class="n">summation</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">summation</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">row</span><span class="o">.</span><span class="n">sporesPresent</span>
+    <span class="n">summation</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">summation</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">row</span><span class="o">.</span><span class="n">numEmbryos</span>
 
 <span class="c1"># # Display your summations from sporesPresent and numEmbryos</span>
-<span class="c1"># summation</span>
+<span class="n">summation</span>
 </pre></div>
 </div>
 </div>
@@ -11643,17 +11643,23 @@ memory usage: 2.5+ MB
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Pandas(Index=0, _1=1, date=190426, wormStrain='AB1', pathogenStrain='LUAm1', pathogenDose='0M', doseLevel='Mock', timepoint='72hpi', merontsPresent=False, sporesPresent=False, numEmbryos=10, experiment='190426_AB1_LUAm1_0M_72hpi', experimenter='CM', description='Wild isolate phenoMIP retest', _14=190423, _15=7, _16=1000, _17='2A', _18=176000, _19=0.0, _20=1, _21=0.15, _22=6, _23=0.0, Temp=21, _25='continuous', _26=190430, _27='DY96', _28=190501, _29=7, _30=2, _31=190502)
-Pandas(Index=1, _1=2, date=190426, wormStrain='AB1', pathogenStrain='LUAm1', pathogenDose='0M', doseLevel='Mock', timepoint='72hpi', merontsPresent=False, sporesPresent=False, numEmbryos=9, experiment='190426_AB1_LUAm1_0M_72hpi', experimenter='CM', description='Wild isolate phenoMIP retest', _14=190423, _15=7, _16=1000, _17='2A', _18=176000, _19=0.0, _20=1, _21=0.15, _22=6, _23=0.0, Temp=21, _25='continuous', _26=190430, _27='DY96', _28=190501, _29=7, _30=2, _31=190502)
-Pandas(Index=2, _1=3, date=190426, wormStrain='AB1', pathogenStrain='LUAm1', pathogenDose='0M', doseLevel='Mock', timepoint='72hpi', merontsPresent=False, sporesPresent=False, numEmbryos=16, experiment='190426_AB1_LUAm1_0M_72hpi', experimenter='CM', description='Wild isolate phenoMIP retest', _14=190423, _15=7, _16=1000, _17='2A', _18=176000, _19=0.0, _20=1, _21=0.15, _22=6, _23=0.0, Temp=21, _25='continuous', _26=190430, _27='DY96', _28=190501, _29=7, _30=2, _31=190502)
-Pandas(Index=3, _1=4, date=190426, wormStrain='AB1', pathogenStrain='LUAm1', pathogenDose='0M', doseLevel='Mock', timepoint='72hpi', merontsPresent=False, sporesPresent=False, numEmbryos=13, experiment='190426_AB1_LUAm1_0M_72hpi', experimenter='CM', description='Wild isolate phenoMIP retest', _14=190423, _15=7, _16=1000, _17='2A', _18=176000, _19=0.0, _20=1, _21=0.15, _22=6, _23=0.0, Temp=21, _25='continuous', _26=190430, _27='DY96', _28=190501, _29=7, _30=2, _31=190502)
-Pandas(Index=4, _1=5, date=190426, wormStrain='AB1', pathogenStrain='LUAm1', pathogenDose='0M', doseLevel='Mock', timepoint='72hpi', merontsPresent=False, sporesPresent=False, numEmbryos=8, experiment='190426_AB1_LUAm1_0M_72hpi', experimenter='CM', description='Wild isolate phenoMIP retest', _14=190423, _15=7, _16=1000, _17='2A', _18=176000, _19=0.0, _20=1, _21=0.15, _22=6, _23=0.0, Temp=21, _25='continuous', _26=190430, _27='DY96', _28=190501, _29=7, _30=2, _31=190502)
-Pandas(Index=5, _1=6, date=190426, wormStrain='AB1', pathogenStrain='LUAm1', pathogenDose='0M', doseLevel='Mock', timepoint='72hpi', merontsPresent=False, sporesPresent=False, numEmbryos=13, experiment='190426_AB1_LUAm1_0M_72hpi', experimenter='CM', description='Wild isolate phenoMIP retest', _14=190423, _15=7, _16=1000, _17='2A', _18=176000, _19=0.0, _20=1, _21=0.15, _22=6, _23=0.0, Temp=21, _25='continuous', _26=190430, _27='DY96', _28=190501, _29=7, _30=2, _31=190502)
-Pandas(Index=6, _1=7, date=190426, wormStrain='AB1', pathogenStrain='LUAm1', pathogenDose='0M', doseLevel='Mock', timepoint='72hpi', merontsPresent=False, sporesPresent=False, numEmbryos=18, experiment='190426_AB1_LUAm1_0M_72hpi', experimenter='CM', description='Wild isolate phenoMIP retest', _14=190423, _15=7, _16=1000, _17='2A', _18=176000, _19=0.0, _20=1, _21=0.15, _22=6, _23=0.0, Temp=21, _25='continuous', _26=190430, _27='DY96', _28=190501, _29=7, _30=2, _31=190502)
-Pandas(Index=7, _1=8, date=190426, wormStrain='AB1', pathogenStrain='LUAm1', pathogenDose='0M', doseLevel='Mock', timepoint='72hpi', merontsPresent=False, sporesPresent=False, numEmbryos=18, experiment='190426_AB1_LUAm1_0M_72hpi', experimenter='CM', description='Wild isolate phenoMIP retest', _14=190423, _15=7, _16=1000, _17='2A', _18=176000, _19=0.0, _20=1, _21=0.15, _22=6, _23=0.0, Temp=21, _25='continuous', _26=190430, _27='DY96', _28=190501, _29=7, _30=2, _31=190502)
-Pandas(Index=8, _1=9, date=190426, wormStrain='AB1', pathogenStrain='LUAm1', pathogenDose='0M', doseLevel='Mock', timepoint='72hpi', merontsPresent=False, sporesPresent=False, numEmbryos=10, experiment='190426_AB1_LUAm1_0M_72hpi', experimenter='CM', description='Wild isolate phenoMIP retest', _14=190423, _15=7, _16=1000, _17='2A', _18=176000, _19=0.0, _20=1, _21=0.15, _22=6, _23=0.0, Temp=21, _25='continuous', _26=190430, _27='DY96', _28=190501, _29=7, _30=2, _31=190502)
-Pandas(Index=9, _1=10, date=190426, wormStrain='AB1', pathogenStrain='LUAm1', pathogenDose='0M', doseLevel='Mock', timepoint='72hpi', merontsPresent=False, sporesPresent=False, numEmbryos=16, experiment='190426_AB1_LUAm1_0M_72hpi', experimenter='CM', description='Wild isolate phenoMIP retest', _14=190423, _15=7, _16=1000, _17='2A', _18=176000, _19=0.0, _20=1, _21=0.15, _22=6, _23=0.0, Temp=21, _25='continuous', _26=190430, _27='DY96', _28=190501, _29=7, _30=2, _31=190502)
+<pre>0 AB1 False 10 190423
+1 AB1 False 9 190423
+2 AB1 False 16 190423
+3 AB1 False 13 190423
+4 AB1 False 8 190423
+5 AB1 False 13 190423
+6 AB1 False 18 190423
+7 AB1 False 18 190423
+8 AB1 False 10 190423
+9 AB1 False 16 190423
 </pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>[0, 131]</pre>
 </div>
 </div>
 </div>
