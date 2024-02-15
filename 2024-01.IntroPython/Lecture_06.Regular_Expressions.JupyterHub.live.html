@@ -8494,7 +8494,7 @@ a.anchor-link {
 <span class="n">txt</span> <span class="o">=</span> <span class="s2">"The rain in Spain"</span>
 
 <span class="c1"># The regular expression looks for any words that starts with an upper case "S":</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">txt</span><span class="p">)</span> 
+<span class="n">x</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s2">"</span><span class="se">\\</span><span class="s2">bS</span><span class="se">\\</span><span class="s2">w+"</span><span class="p">,</span> <span class="n">txt</span><span class="p">)</span> 
 
 <span class="c1"># What did we search for?</span>
 <span class="n">x</span><span class="o">.</span><span class="n">re</span>
