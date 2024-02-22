@@ -11268,26 +11268,38 @@ WARNING: Skipping C:\Users\mokca\anaconda3\envs\CSBJupyter\Lib\site-packages\jup
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Set up your base URL</span>
 <span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">"https://data.ontario.ca"</span>
 
 <span class="c1"># We know what the structure of our query URL will look like</span>
-<span class="n">QUERY</span> <span class="o">=</span> <span class="s2">"/dataset?q=..."</span>
+<span class="n">QUERY</span> <span class="o">=</span> <span class="s2">"/dataset?q=covid+hospital+cases"</span>
 
 <span class="c1"># Combine the two strings to make a search request</span>
-<span class="n">searchPage</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">searchPage</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">BASE_URL</span><span class="o">+</span><span class="n">QUERY</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">header</span><span class="p">)</span>
 
 <span class="c1"># We should get back a "Response" object</span>
 <span class="n">searchPage</span><span class="o">.</span><span class="n">ok</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[65]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>True</pre>
 </div>
 </div>
 </div>
@@ -11304,17 +11316,98 @@ WARNING: Skipping C:\Users\mokca\anaconda3\envs\CSBJupyter\Lib\site-packages\jup
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># How can we access the text of the page?</span>
-<span class="o">...</span><span class="p">(</span><span class="n">searchPage</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">searchPage</span><span class="o">.</span><span class="n">text</span><span class="p">[:</span><span class="mi">2000</span><span class="p">])</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 9]&gt; &lt;html lang="en" class="ie9"&gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html lang="en"&gt; &lt;!--&lt;![endif]--&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+      &lt;meta name="generator" content="ckan 2.9.7" /&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Dataset - Ontario Data Catalogue&lt;/title&gt;
+
+    
+    &lt;link rel="shortcut icon" href="/favicon.ico" /&gt;
+    
+  
+  
+  &lt;!-- Google Tag Manager --&gt;
+&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TK6PW9Z');&lt;/script&gt;
+&lt;!-- End Google Tag Manager --&gt;
+  
+  
+  
+  
+  
+  &lt;script&gt;
+    window.dataLayer = window.dataLayer || [];
+
+    // Only resource views have a resourceName
+    if (''.length &gt; 0) {
+        // Even if a resource exists, it might not have a name.
+        // In this case, default to name "Data".
+        resourceName = '' ? '' : 'Data';
+    }
+    // No resourceName for dataset page views
+    else {
+        resourceName = '';
+    }
+
+    // Pushed when a dataset page or a resource page is viewed
+    if (''.length &gt; 0) {
+        window.dataLayer.push({
+            'event': 'Pageview',
+            'ministryTag': '',
+            'group': '',
+            'dataAvailability': '',
+            'datasetName': '',
+            'resourceName': resourceName
+        });
+    }
+    // Pushed when any other page is viewed
+    else {
+        window.dataLayer.push({
+            'event': 'Pageview',
+            'ministryTag': '',
+            'group': '',
+            'dataAvailability': '',
+            'datasetName': '',
+            'resourceName': ''
+        });
+    }
+&lt;/script&gt;
+  
+&lt;svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     style="display:none"
+     ar
+</pre>
 </div>
 </div>
 </div>
