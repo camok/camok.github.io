@@ -10462,12 +10462,12 @@ And re-assign global_value to 142
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Where is our content located</span>
@@ -10482,8 +10482,20 @@ And re-assign global_value to 142
 <span class="n">tgz_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOUSING_PATH</span><span class="p">,</span> <span class="s2">"housing.tgz"</span><span class="p">)</span> 
 
 <span class="c1"># Retrieve the dataset using the URL we defined</span>
-<span class="o">...</span><span class="p">(</span><span class="n">HOUSING_URL</span><span class="p">,</span> <span class="n">tgz_path</span><span class="p">)</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">HOUSING_URL</span><span class="p">,</span> <span class="n">tgz_path</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>('datasets\\housing\\housing.tgz', &lt;http.client.HTTPMessage at 0x1a17fdfa690&gt;)</pre>
 </div>
 </div>
 </div>
@@ -10511,7 +10523,7 @@ And re-assign global_value to 142
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#Extract file </span>
 <span class="kn">import</span> <span class="nn">tarfile</span>
 
-<span class="n">tgz_path</span> <span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOUSING_PATH</span><span class="p">,</span> <span class="s1">'housing.tgz'</span><span class="p">)</span> <span class="c1"># the file we are interested in</span>
+<span class="n">tgz_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOUSING_PATH</span><span class="p">,</span> <span class="s1">'housing.tgz'</span><span class="p">)</span> <span class="c1"># the file we are interested in</span>
 
 <span class="c1"># Open a connection to the path</span>
 <span class="n">housing_tgz</span> <span class="o">=</span> <span class="o">...</span>
