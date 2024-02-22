@@ -11212,7 +11212,7 @@ WARNING: Skipping C:\Users\mokca\anaconda3\envs\CSBJupyter\Lib\site-packages\jup
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a header to pretend you are requesting information via a browser!</span>
-<span class="o">...</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'User-Agent'</span><span class="p">:</span> <span class="s1">'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'</span><span class="p">}</span>
+<span class="n">header</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'User-Agent'</span><span class="p">:</span> <span class="s1">'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'</span><span class="p">}</span>
 
 <span class="c1"># URLs that don't exist</span>
 <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"https://data.ontario.ca/data?=covid"</span><span class="p">,</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">header</span><span class="p">)</span><span class="o">...</span>
