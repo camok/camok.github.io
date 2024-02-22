@@ -10082,12 +10082,12 @@ And re-assign global_value to 142
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">DNA</span> <span class="o">=</span> <span class="s1">'GCGTTGCTGGCGTTTTTCCATAGGCTCCGCCCCCCTGACGAGCATCACAAAAATCGACGCGGTGGCGAAACCCGACAGGACTATAAAGATACCAGGCGTTTCCCCCTGGAA'</span>\
@@ -10109,6 +10109,18 @@ And re-assign global_value to 142
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'GCGTTGCTGGCGTTTTTCCATAGGCTCCGCCCCCCTGACGAGCATCACAAAAATCGACGCGGTGGCGAAACCCGACAGGACTATAAAGATACCAGGCGTTTCCCCCTGGAAGCTCCCTCGTGTTCCGACCCTGCCGCTTACCGGATACCTGTCCGCCTTTCTCCCTTCGGGAAGCGTGGCTGCTCACGCTGTACCTATCTCAGTTCGGTGTAGGTCGTTCGCTCCAAGCTGGGCTGTGTGCCGTTCAGCCCGACCGCTGCGCCTTATCCGGTAACTATCGTCTTGAGTCCAACCCGGTAAAGTAGGACAGGTGCCGGCAGCGCTCTGGGTCATTTTCGGCGAGGACCGCTTTCGCTGGAGATCGGCCTGTCGCTTGCGGTATTCGGAATCTTGCACGCCCTCGCTCAAGCCTTCGTCACTCCAAACGTTTCGGCGAGAAGCAGGCCATTATCGCCGGCATGGCGGCCGACGCGCTGGGCTGGCGTTCGCGACGCGAGGCTGGATGGCCTTCCCCATTATGATTCTTCTCGCTTCCGGCGGCCCGCGTTGCAGGCCATGCTGTCCAGGCAGGTAGATGACGACCATCAGGGACAGCTTCAACGGCTCTTACCAGCCTAACTTCGATCACTGGACCGCTGATCGTCACGGCGATTTATGCCGCACATGGACGCGTTGCTGGCGTTTTTCCATAGGCTCCGCCCCCCTGACGAGCATCACAAACAAGTCAGAGGTGGCGAAACCCGACAGGACTATAAAGATACCAGGCGTTTCCCCCTGGAAGCGCTCTCCTGTTCCGACCCTGCCGCTTACCGGATACCTGTCCGCCTTTCTCCCTTCGGGCTTTCTCAATGCTCACGCTGTAGGTATCTCAGTTCGGTGTAGGTCGTTCGCTCCAAGCTGACGAACCCCCCGTTCAGCCCGACCGCTGCGCCTTATCCGGTAACTATCGTCTTGAGTCCAACACGACTTAACGGGTTGGCATGGATTGTAGGCGCCGCCCTATACCTTGTCTGCCTCCCCGCGGTGCATGGAGCCGGGCCACCTCGACCTGAATGGAAGCCGGCGGCACCTCGCTAACGGCCAAGAATTGGAGCCAATCAATTCTTGCGGAGAACTGTGAATGCGCAAACCAACCCTTGGCCATCGCGTCCGCCATCTCCAGCAGCCGCACGCGGCGCATCTCGGGCAGCGTTGGGTCCT'</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -10121,19 +10133,19 @@ And re-assign global_value to 142
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
 
 <span class="c1"># Translate our DNA to mRNA</span>
 <span class="n">mRNA</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">'.'</span><span class="p">,</span> <span class="c1"># pattern</span>
-              <span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="p">{</span><span class="s1">'G'</span><span class="p">:</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">:</span><span class="s1">'G'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">:</span><span class="s1">'U'</span><span class="p">,</span> <span class="s1">'T'</span><span class="p">:</span><span class="s1">'A'</span><span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="s2">"X"</span><span class="p">),</span> <span class="c1"># repl</span>
+              <span class="k">lambda</span> <span class="n">m</span><span class="p">:</span> <span class="p">{</span><span class="s1">'G'</span><span class="p">:</span><span class="s1">'C'</span><span class="p">,</span> <span class="s1">'C'</span><span class="p">:</span><span class="s1">'G'</span><span class="p">,</span> <span class="s1">'A'</span><span class="p">:</span><span class="s1">'U'</span><span class="p">,</span> <span class="s1">'T'</span><span class="p">:</span><span class="s1">'A'</span><span class="p">}</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">(),</span> <span class="s2">"X"</span><span class="p">),</span> <span class="c1"># repl</span>
               <span class="n">DNA</span> <span class="c1"># string</span>
              <span class="p">)</span> 
 <span class="c1"># this does what we wanted</span>
@@ -10141,6 +10153,18 @@ And re-assign global_value to 142
 <span class="c1"># Show the output of our lambda function</span>
 <span class="n">mRNA</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>'CGCAACGACCGCAAAAAGGUAUCCGAGGCGGGGGGACUGCUCGUAGUGUUUUUAGCUGCGCCACCGCUUUGGGCUGUCCUGAUAUUUCUAUGGUCCGCAAAGGGGGACCUUCGAGGGAGCACAAGGCUGGGACGGCGAAUGGCCUAUGGACAGGCGGAAAGAGGGAAGCCCUUCGCACCGACGAGUGCGACAUGGAUAGAGUCAAGCCACAUCCAGCAAGCGAGGUUCGACCCGACACACGGCAAGUCGGGCUGGCGACGCGGAAUAGGCCAUUGAUAGCAGAACUCAGGUUGGGCCAUUUCAUCCUGUCCACGGCCGUCGCGAGACCCAGUAAAAGCCGCUCCUGGCGAAAGCGACCUCUAGCCGGACAGCGAACGCCAUAAGCCUUAGAACGUGCGGGAGCGAGUUCGGAAGCAGUGAGGUUUGCAAAGCCGCUCUUCGUCCGGUAAUAGCGGCCGUACCGCCGGCUGCGCGACCCGACCGCAAGCGCUGCGCUCCGACCUACCGGAAGGGGUAAUACUAAGAAGAGCGAAGGCCGCCGGGCGCAACGUCCGGUACGACAGGUCCGUCCAUCUACUGCUGGUAGUCCCUGUCGAAGUUGCCGAGAAUGGUCGGAUUGAAGCUAGUGACCUGGCGACUAGCAGUGCCGCUAAAUACGGCGUGUACCUGCGCAACGACCGCAAAAAGGUAUCCGAGGCGGGGGGACUGCUCGUAGUGUUUGUUCAGUCUCCACCGCUUUGGGCUGUCCUGAUAUUUCUAUGGUCCGCAAAGGGGGACCUUCGCGAGAGGACAAGGCUGGGACGGCGAAUGGCCUAUGGACAGGCGGAAAGAGGGAAGCCCGAAAGAGUUACGAGUGCGACAUCCAUAGAGUCAAGCCACAUCCAGCAAGCGAGGUUCGACUGCUUGGGGGGCAAGUCGGGCUGGCGACGCGGAAUAGGCCAUUGAUAGCAGAACUCAGGUUGUGCUGAAUUGCCCAACCGUACCUAACAUCCGCGGCGGGAUAUGGAACAGACGGAGGGGCGCCACGUACCUCGGCCCGGUGGAGCUGGACUUACCUUCGGCCGCCGUGGAGCGAUUGCCGGUUCUUAACCUCGGUUAGUUAAGAACGCCUCUUGACACUUACGCGUUUGGUUGGGAACCGGUAGCGCAGGCGGUAGAGGUCGUCGGCGUGCGCCGCGUAGAGCCCGUCGCAACCCAGGA'</pre>
 </div>
 </div>
 </div>
