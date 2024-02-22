@@ -9719,7 +9719,7 @@ Tyrosine
 <span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'wolf'</span><span class="p">,</span> <span class="s1">'sheep'</span><span class="p">,</span> <span class="s1">'duck'</span><span class="p">,</span> <span class="s1">'dolphin'</span><span class="p">]</span>
 
 <span class="c1"># filter returns an iterator yielding those items of iterable for which function(item) is true.</span>
-<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="o">...</span><span class="p">))</span> 
+<span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'d'</span><span class="p">),</span> <span class="n">list_1</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
