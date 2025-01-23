@@ -15765,7 +15765,7 @@ If you have multi-index columns:
                       <span class="p">)</span>
 
 <span class="c1"># Save your initial joined DataFrame</span>
-<span class="n">embryo_long_final</span> <span class="o">=</span> <span class="p">(</span><span class="o">...</span>
+<span class="n">embryo_long_final</span> <span class="o">=</span> <span class="p">(</span><span class="n">embryo</span>
                      <span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="c1"># Join what follows to the trimmed data</span>
                          <span class="c1"># pop() the experiment column</span>
                          <span class="n">embryo_long_trimmed</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"experiment"</span><span class="p">)</span>    
