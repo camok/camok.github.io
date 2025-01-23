@@ -15006,8 +15006,8 @@ If you have multi-index columns:
 <span class="n">experiment_Info</span> <span class="o">=</span> <span class="n">experiment_Info_copy</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="c1"># Change the column names</span>
-<span class="n">experiment_Info</span><span class="o">...</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">'date'</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">'wormStrain'</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">'pathogenStrain'</span><span class="p">,</span> 
-                                  <span class="mi">3</span><span class="p">:</span><span class="s1">'pathogenDose'</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">'timepoint'</span><span class="p">,</span> <span class="o">...</span><span class="p">},</span>
+<span class="n">experiment_Info</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">'date'</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s1">'wormStrain'</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span><span class="s1">'pathogenStrain'</span><span class="p">,</span> 
+                                  <span class="mi">3</span><span class="p">:</span><span class="s1">'pathogenDose'</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span><span class="s1">'timepoint'</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span><span class="s1">'measuremenType'</span><span class="p">},</span>
                        <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span>
                       <span class="p">)</span>
 
