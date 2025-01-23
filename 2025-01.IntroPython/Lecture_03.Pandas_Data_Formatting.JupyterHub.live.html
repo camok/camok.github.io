@@ -13727,12 +13727,12 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\L
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span>pd.melt<span class="o">?</span>
@@ -13741,12 +13741,147 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\L
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre><span class="ansi-red-intense-fg ansi-bold">Signature:</span>
+pd<span class="ansi-yellow-intense-fg ansi-bold">.</span>melt<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">
+</span>    frame<span class="ansi-yellow-intense-fg ansi-bold">:</span> <span class="ansi-blue-intense-fg ansi-bold">'DataFrame'</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">
+</span>    id_vars<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">
+</span>    value_vars<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">
+</span>    var_name<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">
+</span>    value_name<span class="ansi-yellow-intense-fg ansi-bold">:</span> <span class="ansi-blue-intense-fg ansi-bold">'Hashable'</span> <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-blue-intense-fg ansi-bold">'value'</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">
+</span>    col_level<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">
+</span>    ignore_index<span class="ansi-yellow-intense-fg ansi-bold">:</span> <span class="ansi-blue-intense-fg ansi-bold">'bool'</span> <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">True</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-yellow-intense-fg ansi-bold">
+</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-yellow-intense-fg ansi-bold">-&gt;</span> <span class="ansi-blue-intense-fg ansi-bold">'DataFrame'</span>
+<span class="ansi-red-intense-fg ansi-bold">Docstring:</span>
+Unpivot a DataFrame from wide to long format, optionally leaving identifiers set.
+
+This function is useful to massage a DataFrame into a format where one
+or more columns are identifier variables (`id_vars`), while all other
+columns, considered measured variables (`value_vars`), are "unpivoted" to
+the row axis, leaving just two non-identifier columns, 'variable' and
+'value'.
+
+Parameters
+----------
+id_vars : tuple, list, or ndarray, optional
+    Column(s) to use as identifier variables.
+value_vars : tuple, list, or ndarray, optional
+    Column(s) to unpivot. If not specified, uses all columns that
+    are not set as `id_vars`.
+var_name : scalar
+    Name to use for the 'variable' column. If None it uses
+    ``frame.columns.name`` or 'variable'.
+value_name : scalar, default 'value'
+    Name to use for the 'value' column.
+col_level : int or str, optional
+    If columns are a MultiIndex then use this level to melt.
+ignore_index : bool, default True
+    If True, original index is ignored. If False, the original index is retained.
+    Index labels will be repeated as necessary.
+
+Returns
+-------
+DataFrame
+    Unpivoted DataFrame.
+
+See Also
+--------
+DataFrame.melt : Identical method.
+pivot_table : Create a spreadsheet-style pivot table as a DataFrame.
+DataFrame.pivot : Return reshaped DataFrame organized
+    by given index / column values.
+DataFrame.explode : Explode a DataFrame from list-like
+        columns to long format.
+
+Notes
+-----
+Reference :ref:`the user guide &lt;reshaping.melt&gt;` for more examples.
+
+Examples
+--------
+&gt;&gt;&gt; df = pd.DataFrame({'A': {0: 'a', 1: 'b', 2: 'c'},
+...                    'B': {0: 1, 1: 3, 2: 5},
+...                    'C': {0: 2, 1: 4, 2: 6}})
+&gt;&gt;&gt; df
+   A  B  C
+0  a  1  2
+1  b  3  4
+2  c  5  6
+
+&gt;&gt;&gt; pd.melt(df, id_vars=['A'], value_vars=['B'])
+   A variable  value
+0  a        B      1
+1  b        B      3
+2  c        B      5
+
+&gt;&gt;&gt; pd.melt(df, id_vars=['A'], value_vars=['B', 'C'])
+   A variable  value
+0  a        B      1
+1  b        B      3
+2  c        B      5
+3  a        C      2
+4  b        C      4
+5  c        C      6
+
+The names of 'variable' and 'value' columns can be customized:
+
+&gt;&gt;&gt; pd.melt(df, id_vars=['A'], value_vars=['B'],
+...         var_name='myVarname', value_name='myValname')
+   A myVarname  myValname
+0  a         B          1
+1  b         B          3
+2  c         B          5
+
+Original index values can be kept around:
+
+&gt;&gt;&gt; pd.melt(df, id_vars=['A'], value_vars=['B', 'C'], ignore_index=False)
+   A variable  value
+0  a        B      1
+1  b        B      3
+2  c        B      5
+0  a        C      2
+1  b        C      4
+2  c        C      6
+
+If you have multi-index columns:
+
+&gt;&gt;&gt; df.columns = [list('ABC'), list('DEF')]
+&gt;&gt;&gt; df
+   A  B  C
+   D  E  F
+0  a  1  2
+1  b  3  4
+2  c  5  6
+
+&gt;&gt;&gt; pd.melt(df, col_level=0, id_vars=['A'], value_vars=['B'])
+   A variable  value
+0  a        B      1
+1  b        B      3
+2  c        B      5
+
+&gt;&gt;&gt; pd.melt(df, id_vars=[('A', 'D')], value_vars=[('B', 'E')])
+  (A, D) variable_0 variable_1  value
+0      a          B          E      1
+1      b          B          E      3
+2      c          B          E      5
+<span class="ansi-red-intense-fg ansi-bold">File:</span>      c:\users\mokca\anaconda3\envs\csbjupyter\lib\site-packages\pandas\core\reshape\melt.py
+<span class="ansi-red-intense-fg ansi-bold">Type:</span>      function</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Restore our copy of the subset</span>
@@ -13765,20 +13900,256 @@ File <span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\CSBJupyter\L
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>worm.number</th>
+<th>200707_N2_LUAm1_0M_72hpi_sporesPresent</th>
+<th>200707_N2_LUAm1_0M_72hpi_merontsPresent</th>
+<th>200707_N2_LUAm1_0M_72hpi_numEmbryos</th>
+<th>200707_N2_LUAm1_10M_72hpi_sporesPresent</th>
+<th>200707_N2_LUAm1_10M_72hpi_merontsPresent</th>
+<th>200707_N2_LUAm1_10M_72hpi_numEmbryos</th>
+<th>200707_JU1400_LUAm1_0M_72hpi_sporesPresent</th>
+<th>200707_JU1400_LUAm1_0M_72hpi_merontsPresent</th>
+<th>200707_JU1400_LUAm1_0M_72hpi_numEmbryos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>18.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>7.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>10.0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>18.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>3.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>9.0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>9.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>10.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>13.0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>15.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>8.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>10.0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>15.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>14.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>11.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>(100, 10)</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
+<pre>Index(['worm.number', '200707_N2_LUAm1_0M_72hpi_sporesPresent',
+       '200707_N2_LUAm1_0M_72hpi_merontsPresent',
+       '200707_N2_LUAm1_0M_72hpi_numEmbryos',
+       '200707_N2_LUAm1_10M_72hpi_sporesPresent',
+       '200707_N2_LUAm1_10M_72hpi_merontsPresent',
+       '200707_N2_LUAm1_10M_72hpi_numEmbryos',
+       '200707_JU1400_LUAm1_0M_72hpi_sporesPresent',
+       '200707_JU1400_LUAm1_0M_72hpi_merontsPresent',
+       '200707_JU1400_LUAm1_0M_72hpi_numEmbryos'],
+      dtype='object')</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Call on the melt function</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">frame</span> <span class="o">=</span> <span class="n">embryo_wide_subset</span><span class="p">,</span>
-        <span class="n">id_vars</span><span class="o">=</span> <span class="o">...</span><span class="p">,</span>
-        <span class="n">var_name</span><span class="o">=...</span><span class="p">,</span>
-        <span class="n">value_name</span><span class="o">=...</span><span class="p">)</span>
+        <span class="n">id_vars</span><span class="o">=</span> <span class="n">embryo_wide_subset</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+        <span class="n">var_name</span><span class="o">=</span> <span class="s2">"experiment"</span><span class="p">,</span>
+        <span class="n">value_name</span><span class="o">=</span> <span class="s2">"measurements"</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[48]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>worm.number</th>
+<th>experiment</th>
+<th>measurements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>200707_N2_LUAm1_0M_72hpi_sporesPresent</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2</td>
+<td>200707_N2_LUAm1_0M_72hpi_sporesPresent</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3</td>
+<td>200707_N2_LUAm1_0M_72hpi_sporesPresent</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4</td>
+<td>200707_N2_LUAm1_0M_72hpi_sporesPresent</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5</td>
+<td>200707_N2_LUAm1_0M_72hpi_sporesPresent</td>
+<td>0.0</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>895</th>
+<td>96</td>
+<td>200707_JU1400_LUAm1_0M_72hpi_numEmbryos</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>896</th>
+<td>97</td>
+<td>200707_JU1400_LUAm1_0M_72hpi_numEmbryos</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>897</th>
+<td>98</td>
+<td>200707_JU1400_LUAm1_0M_72hpi_numEmbryos</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>898</th>
+<td>99</td>
+<td>200707_JU1400_LUAm1_0M_72hpi_numEmbryos</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>899</th>
+<td>100</td>
+<td>200707_JU1400_LUAm1_0M_72hpi_numEmbryos</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+<p>900 rows × 3 columns</p>
+</div>
 </div>
 </div>
 </div>
