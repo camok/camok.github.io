@@ -9452,7 +9452,7 @@ Name: count, dtype: int64</pre>
 <span class="p">(</span><span class="n">embryo_merged_subset</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'pathogenDose == 0'</span><span class="p">)</span>
  
                      <span class="c1"># Group by wormStrain and take the numEmbryos columns</span>
-                     <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'wormStrain'</span><span class="p">])[</span><span class="o">...</span><span class="p">]</span>
+                     <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'wormStrain'</span><span class="p">])[</span><span class="s1">'numEmbryos]</span>
                      
                      <span class="c1"># Calculate the mean</span>
                      <span class="o">...</span>
