@@ -7932,7 +7932,7 @@ memory usage: 2.5+ MB
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Subset the data from our dataset for the first 19 columns</span>
-<span class="n">embryo_merged_subset</span> <span class="o">=</span> <span class="n">embryo_merged</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="n">embryo_merged_subset</span> <span class="o">=</span> <span class="n">embryo_merged</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">19</span><span class="p">]</span>
 
 <span class="c1"># What does the subset look like?</span>
 <span class="n">embryo_merged_subset</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
