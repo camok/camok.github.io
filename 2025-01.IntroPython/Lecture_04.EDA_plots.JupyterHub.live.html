@@ -8373,7 +8373,7 @@ File <span class="ansi-green-intense-fg ansi-bold">ops.pyx:107</span>, in <span 
                                      <span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">pat</span> <span class="o">=</span> <span class="s2">"M"</span><span class="p">,</span> <span class="n">expand</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
                             
                                      <span class="c1"># Convert the first column to a float, and then provide only that to insert                                    </span>
-                                     <span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span><span class="o">...</span><span class="p">})[</span><span class="mi">0</span><span class="p">])</span>    <span class="c1"># The [0] index slices our DataFrame returns just the first column as a Series</span>
+                                     <span class="o">.</span><span class="n">astype</span><span class="p">({</span><span class="mi">0</span><span class="p">:</span><span class="s1">'float64'</span><span class="p">})[</span><span class="mi">0</span><span class="p">])</span>    <span class="c1"># The [0] index slices our DataFrame returns just the first column as a Series</span>
                            <span class="p">)</span>
 
 <span class="c1"># Check on the updated subset data</span>
