@@ -12677,16 +12677,16 @@ dtype: object</pre>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Filter the data by N2 animals with a pathogenDose of 0</span>
-<span class="n">N2_mock_data</span> <span class="o">=</span> <span class="n">embryo_merged_subset</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'wormStrain == "N2" '</span><span class="p">)</span>
+<span class="n">N2_mock_data</span> <span class="o">=</span> <span class="n">embryo_merged_subset</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">'wormStrain == "N2" &amp; pathogenDose == 0'</span><span class="p">)</span>
 
 <span class="c1"># Filter code for using loc instead:</span>
 <span class="c1"># N2_mock_data = embryo_merged_subset.loc[(embryo_merged_subset['wormStrain'] == "N2") &amp;</span>
@@ -12696,6 +12696,44 @@ dtype: object</pre>
 <span class="c1"># Check on the data created</span>
 <span class="n">N2_mock_data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+Index: 720 entries, 503 to 10748
+Data columns (total 19 columns):
+ #   Column             Non-Null Count  Dtype  
+---  ------             --------------  -----  
+ 0   worm.number        720 non-null    int64  
+ 1   date               720 non-null    int64  
+ 2   wormStrain         720 non-null    object 
+ 3   pathogenStrain     720 non-null    object 
+ 4   pathogenDose       720 non-null    float64
+ 5   doseLevel          720 non-null    object 
+ 6   timepoint          720 non-null    object 
+ 7   merontsPresent     720 non-null    bool   
+ 8   sporesPresent      720 non-null    bool   
+ 9   numEmbryos         720 non-null    int64  
+ 10  experiment         720 non-null    object 
+ 11  experimenter       720 non-null    object 
+ 12  description        720 non-null    object 
+ 13  Infection Date     720 non-null    int64  
+ 14  Plate Number       720 non-null    int64  
+ 15  Total Worms        720 non-null    int64  
+ 16  Spore Lot          720 non-null    object 
+ 17  Lot concentration  720 non-null    int64  
+ 18  Total ul spore     720 non-null    float64
+dtypes: bool(2), float64(2), int64(7), object(8)
+memory usage: 102.7+ KB
+</pre>
 </div>
 </div>
 </div>
