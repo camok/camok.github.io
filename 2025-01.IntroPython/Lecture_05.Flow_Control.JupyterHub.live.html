@@ -12515,8 +12515,6 @@ Calculate the mean with a method that already exists
 
 <span class="c1"># First or outer for loop and track wormStrains with i</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">'wormStrain'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span> 
-
-    <span class="n">data2</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">query</span><span class="p">()</span>
     
     <span class="c1"># Second or inner for loop to track pathogenStrain with j</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">data2</span><span class="p">[</span><span class="s1">'pathogenStrain'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
