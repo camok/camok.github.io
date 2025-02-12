@@ -10359,26 +10359,26 @@ a.anchor-link {
 <tr>
 <td style="text-align:left">Lookahead</td>
 <td style="text-align:left">Checks if what immediately <em>follows</em> the current position matches the pattern</td>
-<td style="text-align:left">(?=pattern)</td>
+<td style="text-align:left">&lt;regex&gt;(?=pattern)</td>
 </tr>
 <tr>
 <td style="text-align:left">Lookbehind</td>
 <td style="text-align:left">Checks if what immediately <em>precedes</em> the current position matches the pattern</td>
-<td style="text-align:left">(?&lt;=pattern)</td>
+<td style="text-align:left">(?&lt;=pattern)&lt;regex&gt;</td>
 </tr>
 <tr>
 <td style="text-align:left">Negative Lookahead</td>
 <td style="text-align:left">Checks if what immediately <em>follows</em> the current position DOES NOT match the pattern</td>
-<td style="text-align:left">(?!pattern)</td>
+<td style="text-align:left">&lt;regex&gt;(?!pattern)</td>
 </tr>
 <tr>
 <td style="text-align:left">Negative Lookbehind</td>
 <td style="text-align:left">Checks if what immediately <em>precedes</em> the current position DOES NOT match the pattern</td>
-<td style="text-align:left">(?&lt;!pattern)</td>
+<td style="text-align:left">(?&lt;!pattern)&lt;regex&gt;</td>
 </tr>
 </tbody>
 </table>
-<p>What we should note about this option is that unlike a normal regular expression, the string is not <em>consumed</em> as we search ahead, for instance. The search is anchored at the last position read and checks, before it returns to where you started. This also means that overlapping conditions could exist in your regular expression.</p>
+<p>What we should note about this option is that unlike a normal regular expression, the string is not <em>consumed</em> as we search ahead, for instance. Nor is the lookahead or lookbehind pattern returned as part of the matching expression. The search is anchored at the last position read and checks, before it returns to where you started. This also means that overlapping conditions could exist in your regular expression.</p>
 <p>Generally this syntax works well when we anchor a start and end point. For our case, we'll use the <code>\A</code> and <code>\Z</code> and modify our selection pattern of <code>.*[dD]ate</code></p>
 <div class="alert alert-block alert-success">
 <b>Looking around the Lookaround syntax:</b> The Lookaround syntax has many more uses such as setting multiple requirements for pattern matching! Suppose you wanted to be sure the substrings <b>A</b> and <b>B</b> were within your target string BUT you didn't care about the specific order of these. Rather than making multiple regular expressions to handle the combinations, the lookaround syntax will let you define the presence of these <i>regardless of order</i>. You can <a href="https://www.rexegg.com/regex-lookarounds.html">find out more with this nice tutorial!</a>
