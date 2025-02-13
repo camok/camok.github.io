@@ -10675,7 +10675,7 @@ As if the strings were thine, shouldst know of this.
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># split using multiple delimeters (stop codons in this case), and save them as a list</span>
 
-<span class="n">translation</span> <span class="o">=</span> <span class="o">...</span><span class="p">(</span><span class="s1">'UAG|UGA|UAA'</span><span class="p">,</span> <span class="n">codon_str</span><span class="p">)</span> <span class="c1"># stops at the first encounter of either stop codon</span>
+<span class="n">translation</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'UAG|UGA|UAA'</span><span class="p">,</span> <span class="n">codon_str</span><span class="p">)</span> <span class="c1"># stops at the first encounter of either stop codon</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Number of strings after splitting: '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">translation</span><span class="p">)))</span> <span class="c1"># 14 strings after splitting with stop codons</span>
 
