@@ -10253,7 +10253,7 @@ As if the strings were thine, shouldst know of this.
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Wrap our list comprehension in [] or list()</span>
 <span class="c1"># Store results of each hit as a (start, end) tuple </span>
-<span class="p">[(</span><span class="o">...</span><span class="p">)</span> 
+<span class="p">[(</span><span class="n">m</span><span class="o">.</span><span class="n">start</span><span class="p">(),</span> <span class="n">m</span><span class="o">.</span><span class="n">end</span><span class="p">())</span> 
  <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="s1">'AUG'</span><span class="p">,</span> <span class="n">mrna</span><span class="p">)]</span> <span class="c1"># m invokes MatchObject instances (built-in)</span>
 
 <span class="c1"># Or cast it as a list. Same result using the .span() method</span>
