@@ -9321,10 +9321,10 @@ three
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Make a function with the **kwargs parameter</span>
-<span class="k">def</span> <span class="nf">print_keys</span><span class="p">(</span><span class="o">**</span><span class="n">kwar</span><span class="p">):</span> <span class="c1"># kwargs will be a dictionary containing the names as keys and the values as values</span>
+<span class="k">def</span> <span class="nf">print_keys</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># kwargs will be a dictionary containing the names as keys and the values as values</span>
 
     <span class="c1"># Generate an iterator from the kwargs dictionary</span>
-    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">...</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
         <span class="c1"># Print the values with the .format function substitute</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">'key: </span><span class="si">{0}</span><span class="s1"> == value: </span><span class="si">{1}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">))</span>
 </pre></div>
