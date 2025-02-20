@@ -9165,11 +9165,11 @@ three
 
 <span class="c1"># Run func() using the list as-is</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"Run print_multiple() without unpacking values"</span><span class="p">)</span>
-<span class="n">print_multiple</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">print_multiple</span><span class="p">(</span><span class="n">list_of_arg_values</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Run print_multiple() with unpacked values"</span><span class="p">)</span>
 <span class="c1"># Run func() with the unpacked list</span>
-<span class="n">print_multiple</span><span class="p">(</span><span class="o">...</span><span class="p">)</span> 
+<span class="n">print_multiple</span><span class="p">(</span><span class="o">*</span><span class="n">lis</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
