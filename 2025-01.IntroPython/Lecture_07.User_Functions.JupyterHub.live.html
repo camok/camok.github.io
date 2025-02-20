@@ -10500,7 +10500,7 @@ RNDRKKVSEAGGLLVVFLAAPPLWAVLIFLWSAKGDLRGSURLGRRSTARTGPSTARTDRRKEGSPSHRRVRHGSQGPHP
 <span class="n">tgz_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">HOUSING_PATH</span><span class="p">,</span> <span class="s2">"housing.tgz"</span><span class="p">)</span> 
 
 <span class="c1"># Retrieve the dataset using the URL we defined</span>
-<span class="o">...</span><span class="p">(</span><span class="n">HOUSING_URL</span><span class="p">,</span> <span class="n">tgz_path</span><span class="p">)</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlretrieve</span><span class="p">(</span><span class="n">HOUSING_URL</span><span class="p">,</span> <span class="n">tgz_path</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
