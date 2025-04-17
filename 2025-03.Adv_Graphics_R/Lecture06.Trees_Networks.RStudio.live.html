@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 13:55:17 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 14:04:28 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -584,7 +584,7 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 13:56:12 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 14:05:26 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
 library(tidyverse)
 library(readxl)
@@ -1503,8 +1503,8 @@ SC2_variants_time.tree %&gt;%
   
   # 1. Data
   ggtree(tr = ., 
-       mrsd = ...,    ### 1.6.2 Set the most recent sampling date
-       as.Date = ...) +       ### 1.6.2 Make sure it&#39;s set as a data 
+       mrsd = &quot;2021-02-17&quot;,    ### 1.6.2 Set the most recent sampling date
+       as.Date = TRUE) +       ### 1.6.2 Make sure it&#39;s set as a data 
     # 2. Aesthetics
     aes(color = emerging_nextstrain) + 
     
@@ -1531,7 +1531,7 @@ SC2_variants_time.tree %&gt;%
     # Add tips labels to our tree tips
     # Change our tip shape by strain_division
     geom_tippoint(aes(shape = strain_division), alpha = 0.7, size = 3)  # Add tips only    </code></pre>
-<pre><code>## Error in ggtree(tr = ., mrsd = ..., as.Date = ...): could not find function &quot;ggtree&quot;</code></pre>
+<pre><code>## Error in ggtree(tr = ., mrsd = &quot;2021-02-17&quot;, as.Date = TRUE): could not find function &quot;ggtree&quot;</code></pre>
 <hr />
 </div>
 </div>
@@ -1597,19 +1597,24 @@ to_view &lt;-
   
     # Filter our tip information
     filter(`Emerging Nextstrain clade` %in% c(&quot;20I/501Y.V1&quot;, &quot;20H/501Y.V2&quot;) &amp; 
-           Country == ... &amp;
+           Country == &quot;Canada&quot; &amp;
            `Collection Data` &gt;= as.Date(&quot;2021-02-16&quot;)
           ) %&gt;% 
   
     # Just keep the strain names
-    pull(Strain)</code></pre>
-<pre><code>## [1m[33mError[39m in `filter()`:[22m
-## [1m[22m[36mi[39m In argument: `&amp;...`.
-## [1mCaused by error:[22m
-## [33m![39m &#39;...&#39; used in an incorrect context</code></pre>
-<pre class="r"><code># What&#39;s the list look like?
+    pull(Strain)
+
+# What&#39;s the list look like?
 to_view</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;to_view&#39; not found</code></pre>
+<pre><code>##  [1] &quot;Canada/NL-NML-17170/2021&quot; &quot;Canada/NL-NML-17182/2021&quot;
+##  [3] &quot;Canada/NL-NML-17173/2021&quot; &quot;Canada/NL-NML-17193/2021&quot;
+##  [5] &quot;Canada/NL-NML-17157/2021&quot; &quot;Canada/NL-NML-17185/2021&quot;
+##  [7] &quot;Canada/NL-NML-17189/2021&quot; &quot;Canada/NL-NML-17196/2021&quot;
+##  [9] &quot;Canada/NL-NML-17184/2021&quot; &quot;Canada/NL-NML-17166/2021&quot;
+## [11] &quot;Canada/NL-NML-17191/2021&quot; &quot;Canada/NL-NML-17172/2021&quot;
+## [13] &quot;Canada/NL-NML-17187/2021&quot; &quot;Canada/NL-NML-17168/2021&quot;
+## [15] &quot;Canada/NL-NML-17194/2021&quot; &quot;Canada/NL-NML-17158/2021&quot;
+## [17] &quot;Canada/NL-NML-17183/2021&quot; &quot;Canada/NL-NML-17165/2021&quot;</code></pre>
 <pre class="r"><code># Calculate the MRCA from a subset of our tips
 
 to_view_MRCA &lt;-
@@ -1620,11 +1625,11 @@ to_view_MRCA &lt;-
   drop.tip(., to_drop) %&gt;%
   
   # Determine the MRCA between the first 4 tips in the list
-  MRCA(., ...)</code></pre>
-<pre><code>## Error in SC2_variants_time.tree %&gt;% drop.tip(., to_drop) %&gt;% MRCA(., ...): &#39;...&#39; used in an incorrect context</code></pre>
+  MRCA(., to_view[1:4])</code></pre>
+<pre><code>## [33m![39m # Invaild edge matrix for [34m[34m&lt;phylo&gt;[34m[39m. A [34m[34m&lt;tbl_df&gt;[34m[39m is returned.</code></pre>
 <pre class="r"><code># What kind of value does MRCA() return?
 to_view_MRCA</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;to_view_MRCA&#39; not found</code></pre>
+<pre><code>## [1] 727</code></pre>
 <pre class="r"><code># How many offspring does it have?
 
 # Pass along our tree information
@@ -1635,11 +1640,41 @@ SC2_variants_time.tree %&gt;%
   # make a tibble so we can see all the relevant information
   as_tibble() %&gt;% 
   # Find the offspring of a specific node
-  offspring(., ...) %&gt;% 
+  offspring(., to_view_MRCA) %&gt;% 
   # Convert to a tree
   as.treedata() %&gt;% 
   str()</code></pre>
-<pre><code>## Error in as.treedata(.): &#39;...&#39; used in an incorrect context</code></pre>
+<pre><code>## [33m![39m # Invaild edge matrix for [34m[34m&lt;phylo&gt;[34m[39m. A [34m[34m&lt;tbl_df&gt;[34m[39m is returned.</code></pre>
+<pre><code>## Formal class &#39;treedata&#39; [package &quot;tidytree&quot;] with 11 slots
+##   ..@ file       : chr(0) 
+##   ..@ treetext   : chr(0) 
+##   ..@ phylo      :List of 5
+##   .. ..$ edge       : int [1:71, 1:2] 728 730 731 732 732 734 735 735 736 737 ...
+##   .. .. ..- attr(*, &quot;dimnames&quot;)=List of 2
+##   .. .. .. ..$ : NULL
+##   .. .. .. ..$ : chr [1:2] &quot;parent&quot; &quot;node&quot;
+##   .. ..$ edge.length: num [1:71] 0.1136 0.067 0.0521 0.0306 0.0333 ...
+##   .. ..$ tip.label  : chr [1:39] &quot;Canada/NL-NML-16819/2021&quot; &quot;Canada/NL-NML-16824/2021&quot; &quot;Canada/NL-NML-17178/2021&quot; &quot;Canada/NL-NML-16829/2021&quot; ...
+##   .. ..$ node.label : chr [1:32] &quot;NODE_0006538&quot; &quot;NODE_0006539&quot; &quot;NODE_0006540&quot; &quot;NODE_0006541&quot; ...
+##   .. ..$ Nnode      : int 32
+##   .. ..- attr(*, &quot;class&quot;)= chr &quot;phylo&quot;
+##   ..@ data       : tibble [71 x 8] (S3: tbl_df/tbl/data.frame)
+##   .. ..$ node               : int [1:71] 323 324 325 326 327 328 329 330 331 332 ...
+##   .. ..$ GISAID             : chr [1:71] &quot;GRY&quot; &quot;GRY&quot; &quot;GRY&quot; &quot;GRY&quot; ...
+##   .. ..$ emerging_nextstrain: chr [1:71] &quot;20I/501Y.V1&quot; &quot;20I/501Y.V1&quot; &quot;20I/501Y.V1&quot; &quot;20I/501Y.V1&quot; ...
+##   .. ..$ PANGO              : chr [1:71] &quot;B.1.1.7&quot; &quot;B.1.1.7&quot; &quot;B.1.1.7&quot; &quot;B.1.1.7&quot; ...
+##   .. ..$ strain_country     : chr [1:71] &quot;Canada&quot; &quot;Canada&quot; &quot;Canada&quot; &quot;Canada&quot; ...
+##   .. ..$ strain_division    : chr [1:71] &quot;Newfoundland and Labrador&quot; &quot;Newfoundland and Labrador&quot; &quot;Newfoundland and Labrador&quot; &quot;Newfoundland and Labrador&quot; ...
+##   .. ..$ strain_date        : Date[1:71], format: &quot;2021-02-10&quot; &quot;2021-02-12&quot; ...
+##   .. ..$ Age                : num [1:71] 47 16 26 62 60 45 19 45 35 31 ...
+##   ..@ extraInfo  : tibble [0 x 0] (S3: tbl_df/tbl/data.frame)
+##  Named list()
+##   ..@ tip_seq    : NULL
+##   ..@ anc_seq    : NULL
+##   ..@ seq_type   : chr(0) 
+##   ..@ tipseq_file: chr(0) 
+##   ..@ ancseq_file: chr(0) 
+##   ..@ info       : list()</code></pre>
 <hr />
 <div id="pass-a-ggplot2-object-to-viewclade" class="section level3">
 <h3>1.7.1 Pass a <code>ggplot2</code> object to
