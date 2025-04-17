@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 14:45:54 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 15:10:36 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -584,7 +584,7 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 14:46:50 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 15:11:07 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
 library(tidyverse)
 library(readxl)
@@ -2737,11 +2737,11 @@ Global Outbreak lineage</li>
 SC2_metadata.df %&gt;% 
 
   # We&#39;ll grab information about each case that relates to its geographical region
-  ...(Strain, Country, &#39;Admin Division&#39;, &#39;Admin Division of exposure&#39;, &#39;Region of exposure&#39;, Region,
+  select(Strain, Country, &#39;Admin Division&#39;, &#39;Admin Division of exposure&#39;, &#39;Region of exposure&#39;, Region,
          &#39;Nextstrain clade&#39;, &#39;GISAID clade&#39;, &#39;PANGO lineage&#39;, &#39;Collection Data&#39;) %&gt;% 
   
   # Do a bunch of renaming for our variables
-  ...(source_location = &#39;Admin Division of exposure&#39;, 
+  rename(source_location = &#39;Admin Division of exposure&#39;, 
          case_location = &#39;Admin Division&#39;,
          source_region = &#39;Region of exposure&#39;,
          case_region = &#39;Region&#39;,
@@ -2749,10 +2749,20 @@ SC2_metadata.df %&gt;%
          Nextstrain = &#39;Nextstrain clade&#39;,
          GISAID = &#39;GISAID clade&#39;,
          PANGO = &#39;PANGO lineage&#39;
-        )</code></pre>
-<pre><code>## Error in ...(., source_location = &quot;Admin Division of exposure&quot;, case_location = &quot;Admin Division&quot;, : could not find function &quot;...&quot;</code></pre>
-<pre class="r"><code>head(SC2_graph_info.df)</code></pre>
-<pre><code>## Error in head(SC2_graph_info.df): object &#39;SC2_graph_info.df&#39; not found</code></pre>
+        )
+
+head(SC2_graph_info.df)</code></pre>
+<pre><code>## [90m# A tibble: 6 x 10[39m
+##   Strain         Country case_location source_location source_region case_region
+##   [3m[90m&lt;chr&gt;[39m[23m          [3m[90m&lt;chr&gt;[39m[23m   [3m[90m&lt;chr&gt;[39m[23m         [3m[90m&lt;chr&gt;[39m[23m           [3m[90m&lt;chr&gt;[39m[23m         [3m[90m&lt;chr&gt;[39m[23m      
+## [90m1[39m Wuhan/WH01/20~ Asia    Asia          Asia            Asia          Asia       
+## [90m2[39m USA/MA1/2020   USA     Massachusetts Asia            Asia          North Amer~
+## [90m3[39m Canada/ON_ON-~ Canada  Ontario       Ontario         North America North Amer~
+## [90m4[39m Canada/ON_VID~ Canada  Ontario       Asia            Asia          North Amer~
+## [90m5[39m USA/CA-CDC-5/~ USA     California    Asia            Asia          North Amer~
+## [90m6[39m Taiwan/CGMH-C~ Asia    Asia          Asia            Asia          Asia       
+## [90m# i 4 more variables: Nextstrain &lt;chr&gt;, GISAID &lt;chr&gt;, PANGO &lt;chr&gt;,[39m
+## [90m#   collection_date &lt;date&gt;[39m</code></pre>
 <hr />
 </div>
 <div id="use-the-tidygraph-package-to-help-prepare-data" class="section level2">
@@ -2795,7 +2805,7 @@ SC2_graph_info.df %&gt;%
         ) %&gt;%  
 
   # Filter for just strain data from Canada and Asia
-  filter(Country %in% c(...)) %&gt;% 
+  filter(Country %in% c(&quot;Canada&quot;, &quot;Asia&quot;)) %&gt;% 
 
   # Convert to an igraph
   as_tbl_graph() %&gt;% 
@@ -2896,11 +2906,11 @@ SC2_graph_info.df %&gt;%
       theme(text = element_text(size = 10)) +
 
       ### 2.2.0 Add our edges
-      ...(aes(colour = Nextstrain), arrow=arrow(), width = 1) +
+      geom_edge_link(aes(colour = Nextstrain), arrow=arrow(), width = 1) +
 
       ### 2.2.0 Add our nodes and label them
-      ...(size = 7) + 
-      ...(aes(label = name), size = 5, repel = TRUE)</code></pre>
+      geom_node_point(size = 7) + 
+      geom_node_text(aes(label = name), size = 5, repel = TRUE)</code></pre>
 <pre><code>## Error in ggraph(.): could not find function &quot;ggraph&quot;</code></pre>
 <hr />
 <div id="use-geom_edge_fan-to-visualize-parallel-edges" class="section level3">
@@ -2939,7 +2949,7 @@ SC2_graph_info.df %&gt;%
       theme(text = element_text(size = 10)) +
 
       ### 2.2.1 Add our edges
-      ...(aes(colour = ...), arrow=arrow()) +
+      geom_edge_fan(aes(colour = ...), arrow=arrow()) +
 
       # Add our nodes and label them
       geom_node_point(size = 7) + 
