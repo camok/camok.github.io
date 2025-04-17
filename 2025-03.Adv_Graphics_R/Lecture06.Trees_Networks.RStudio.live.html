@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 13:36:41 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 13:49:55 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -584,7 +584,7 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 13:38:08 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 13:50:25 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
 library(tidyverse)
 library(readxl)
@@ -1126,11 +1126,28 @@ converting it is stored in the <code>data</code> slot. There are
 additional slots where we can add sequencing information for comparison
 in different types of phylogenetic tree visualizations.</p>
 <pre class="r"><code># Grab our phylo object
-...</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): &#39;...&#39; used in an incorrect context</code></pre>
+SC2_variants_time.tree@phylo</code></pre>
+<pre><code>## 
+## Phylogenetic tree with 6627 tips and 6150 internal nodes.
+## 
+## Tip labels:
+##   Wuhan/WH01/2019, USA/MA1/2020, Canada/ON_ON-VIDO-01-2/2020, Canada/ON_VIDO-01/2020, USA/CA-CDC-5/2020, Taiwan/CGMH-CGU-02/2020, ...
+## Node labels:
+##   NODE_0008606, NODE_0000001, NODE_0000061, USA/MA1/2020_travel_history, NODE_0000062, Canada/ON_VIDO-01/2020_travel_history, ...
+## 
+## Unrooted; includes branch lengths.</code></pre>
 <pre class="r"><code># Take a peek at our associated node data
-head(...)</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): &#39;...&#39; used in an incorrect context</code></pre>
+head(SC2_variants_time.tree@data)</code></pre>
+<pre><code>## [90m# A tibble: 6 x 8[39m
+##    node GISAID emerging_nextstrain PANGO strain_country strain_division
+##   [3m[90m&lt;int&gt;[39m[23m [3m[90m&lt;chr&gt;[39m[23m  [3m[90m&lt;chr&gt;[39m[23m               [3m[90m&lt;chr&gt;[39m[23m [3m[90m&lt;chr&gt;[39m[23m          [3m[90m&lt;chr&gt;[39m[23m          
+## [90m1[39m     1 L      19A                 B     Asia           Asia           
+## [90m2[39m     2 L      19A                 B     USA            Massachusetts  
+## [90m3[39m     3 L      19A                 B     Canada         Ontario        
+## [90m4[39m     4 L      19A                 B     Canada         Ontario        
+## [90m5[39m     5 L      19A                 B     USA            California     
+## [90m6[39m     6 S      19A                 B     Asia           Asia           
+## [90m# i 2 more variables: strain_date &lt;date&gt;, Age &lt;dbl&gt;[39m</code></pre>
 <hr />
 </div>
 </div>
@@ -1172,7 +1189,7 @@ SC2_variants_time.tree %&gt;%
 # 1. Data
 ggtree(tr = .) + 
   # 2. Aesthetics
-  aes(color = ...) + 
+  aes(color = emerging_nextstrain) + 
   
   # Themes
   theme_tree2() + 
@@ -1210,25 +1227,46 @@ to_drop &lt;-
   SC2_metadata.df %&gt;% 
   
   # Filter for strains that are not from Canada and are from before 2020-11-01
-  filter(!(Country == ... &amp;
-           `Collection Data` &gt;= ...
+  filter(!(Country == &quot;Canada&quot; &amp;
+           `Collection Data` &gt;= as.Date(&quot;2020-11-01&quot;)
           )) %&gt;%
   
   # Just keep the strain information
-  pull(Strain)</code></pre>
-<pre><code>## [1m[33mError[39m in `filter()`:[22m
-## [1m[22m[36mi[39m In argument: `!(Country == ... &amp; `Collection Data` &gt;= ...)`.
-## [1mCaused by error:[22m
-## [33m![39m &#39;...&#39; used in an incorrect context</code></pre>
-<pre class="r"><code># Take a look at what we got back
+  pull(Strain)
+
+# Take a look at what we got back
 str(to_drop)</code></pre>
-<pre><code>## Error in str(to_drop): object &#39;to_drop&#39; not found</code></pre>
+<pre><code>##  chr [1:6199] &quot;Wuhan/WH01/2019&quot; &quot;USA/MA1/2020&quot; ...</code></pre>
 <pre class="r"><code># At the same time make a dataset to keep. You&#39;ll use this to update the information in the tree later
-to_keep &lt;- SC2_metadata.df %&gt;% filter(...)</code></pre>
-<pre><code>## Error in SC2_metadata.df %&gt;% filter(...): &#39;...&#39; used in an incorrect context</code></pre>
-<pre class="r"><code># Which tips are we keeping?
+to_keep &lt;- SC2_metadata.df %&gt;% filter(!Strain %in% to_drop)
+
+# Which tips are we keeping?
 str(to_keep, give.attr = FALSE)         </code></pre>
-<pre><code>## Error in str(to_keep, give.attr = FALSE): object &#39;to_keep&#39; not found</code></pre>
+<pre><code>## spc_tbl_ [428 x 24] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ Strain                    : chr [1:428] &quot;Canada/NS-NML-16223/2021&quot; &quot;Canada/NB-NML-3294/2021&quot; &quot;Canada/NS-NML-16211/2021&quot; &quot;Canada/NB-NML-5584/2021&quot; ...
+##  $ GISAID clade              : chr [1:428] &quot;S&quot; &quot;S&quot; &quot;S&quot; &quot;S&quot; ...
+##  $ Nextstrain clade          : chr [1:428] &quot;19B&quot; &quot;19B&quot; &quot;19B&quot; &quot;19B&quot; ...
+##  $ Age                       : num [1:428] 23 25 35 29 61 79 NA NA NA NA ...
+##  $ Clade                     : chr [1:428] &quot;19B&quot; &quot;19B&quot; &quot;19B&quot; &quot;19B&quot; ...
+##  $ Country                   : chr [1:428] &quot;Canada&quot; &quot;Canada&quot; &quot;Canada&quot; &quot;Canada&quot; ...
+##  $ Admin Division            : chr [1:428] &quot;Nova Scotia&quot; &quot;New Brunswick&quot; &quot;Nova Scotia&quot; &quot;New Brunswick&quot; ...
+##  $ Admin Division of exposure: chr [1:428] &quot;Nova Scotia&quot; &quot;New Brunswick&quot; &quot;Nova Scotia&quot; &quot;New Brunswick&quot; ...
+##  $ gisaid_epi_isl            : chr [1:428] &quot;EPI_ISL_1055741&quot; &quot;EPI_ISL_961659&quot; &quot;EPI_ISL_1055730&quot; &quot;EPI_ISL_961643&quot; ...
+##  $ Host                      : chr [1:428] &quot;Human&quot; &quot;Human&quot; &quot;Human&quot; &quot;Human&quot; ...
+##  $ Originating Lab           : chr [1:428] &quot;QEII Health Sciences Centre&quot; &quot;Hôpital Georges L. Dumont&quot; &quot;QEII Health Sciences Centre&quot; &quot;Hôpital Georges L. Dumont&quot; ...
+##  $ PANGO lineage             : chr [1:428] &quot;A.2.5&quot; &quot;A.23.1&quot; &quot;A.23.1&quot; &quot;A.23.1&quot; ...
+##  $ Submission Date           : chr [1:428] &quot;Older&quot; &quot;Older&quot; &quot;Older&quot; &quot;Older&quot; ...
+##  $ Region                    : chr [1:428] &quot;North America&quot; &quot;North America&quot; &quot;North America&quot; &quot;North America&quot; ...
+##  $ Region of exposure        : chr [1:428] &quot;North America&quot; &quot;North America&quot; &quot;North America&quot; &quot;North America&quot; ...
+##  $ Sex                       : chr [1:428] &quot;Male&quot; &quot;Female&quot; &quot;Female&quot; &quot;Male&quot; ...
+##  $ strain                    : chr [1:428] &quot;Canada/NS-NML-16223/2021&quot; &quot;Canada/NB-NML-3294/2021&quot; &quot;Canada/NS-NML-16211/2021&quot; &quot;Canada/NB-NML-5584/2021&quot; ...
+##  $ Emerging Nextstrain clade : chr [1:428] &quot;19B&quot; &quot;19B&quot; &quot;19B&quot; &quot;19B&quot; ...
+##  $ Submitting Lab            : chr [1:428] &quot;National Microbiology Laboratory (NML)&quot; &quot;National Microbiology Laboratory (NML)&quot; &quot;National Microbiology Laboratory (NML)&quot; &quot;National Microbiology Laboratory (NML)&quot; ...
+##  $ url                       : logi [1:428] NA NA NA NA NA NA ...
+##  $ Collection Data           : Date[1:428], format: &quot;2021-01-16&quot; &quot;2021-01-02&quot; ...
+##  $ Author                    : chr [1:428] &quot;Anna Majer et al&quot; &quot;Anna Majer et al&quot; &quot;Anna Majer et al&quot; &quot;Anna Majer et al&quot; ...
+##  $ Country of exposure       : chr [1:428] NA NA NA NA ...
+##  $ Location                  : chr [1:428] NA NA NA NA ...</code></pre>
 <hr />
 </div>
 <div id="update-our-pruned-tree-and-add-some-extra-geom_-layers" class="section level2">
