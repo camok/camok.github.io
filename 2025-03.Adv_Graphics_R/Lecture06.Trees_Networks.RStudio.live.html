@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 13:51:59 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 13:54:52 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -584,7 +584,7 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 13:53:19 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 13:55:47 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
 library(tidyverse)
 library(readxl)
@@ -1484,7 +1484,7 @@ SC2_variants_time.tree %&gt;%
     # 4. Geoms
     # Add tips labels to our tree tips
     ### 1.6.1 Change our tip shape by strain_division
-    ...  # Add tips only    </code></pre>
+    geom_tippoint(aes(shape=strain_division), alpha = 0.7, size =3)  # Add tips only    </code></pre>
 <pre><code>## Error in ggtree(tr = .): could not find function &quot;ggtree&quot;</code></pre>
 <hr />
 </div>
