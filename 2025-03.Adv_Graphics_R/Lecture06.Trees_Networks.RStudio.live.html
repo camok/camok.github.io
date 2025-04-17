@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 13:36:30 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 13:36:41 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -543,29 +543,11 @@ BiocManager::install(&quot;ggnewscale&quot;, update = FALSE)</code></pre>
 ##   `force = TRUE` to re-install: &#39;ggtreeExtra&#39;</code></pre>
 <pre class="r"><code># New CRAN packages we haven&#39;t worked with before
 install.packages(&quot;tidytree&quot;)</code></pre>
-<pre><code>## Installing package into &#39;C:/Users/mokca/AppData/Local/R/win-library/4.0&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
-<pre><code>## 
-##   There is a binary version available but the source version is later:
-##          binary source needs_compilation
-## tidytree  0.3.9  0.4.6             FALSE</code></pre>
-<pre><code>## installing the source package &#39;tidytree&#39;</code></pre>
+<pre><code>## Warning: package &#39;tidytree&#39; is in use and will not be installed</code></pre>
 <pre class="r"><code>install.packages(&quot;ggseqlogo&quot;)</code></pre>
-<pre><code>## Installing package into &#39;C:/Users/mokca/AppData/Local/R/win-library/4.0&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
-<pre><code>## 
-##   There is a binary version available but the source version is later:
-##           binary source needs_compilation
-## ggseqlogo    0.1    0.2             FALSE</code></pre>
-<pre><code>## installing the source package &#39;ggseqlogo&#39;</code></pre>
+<pre><code>## Warning: package &#39;ggseqlogo&#39; is in use and will not be installed</code></pre>
 <pre class="r"><code>install.packages(&quot;qqman&quot;)</code></pre>
-<pre><code>## Installing package into &#39;C:/Users/mokca/AppData/Local/R/win-library/4.0&#39;
-## (as &#39;lib&#39; is unspecified)</code></pre>
-<pre><code>## 
-##   There is a binary version available but the source version is later:
-##       binary source needs_compilation
-## qqman  0.1.8  0.1.9             FALSE</code></pre>
-<pre><code>## installing the source package &#39;qqman&#39;</code></pre>
+<pre><code>## Warning: package &#39;qqman&#39; is in use and will not be installed</code></pre>
 <pre class="r"><code>install.packages(&quot;ggraph&quot;)</code></pre>
 <pre><code>## Installing package into &#39;C:/Users/mokca/AppData/Local/R/win-library/4.0&#39;
 ## (as &#39;lib&#39; is unspecified)</code></pre>
@@ -602,104 +584,25 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 13:37:30 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 13:38:08 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
-library(tidyverse)</code></pre>
-<pre><code>## -- [1mAttaching core tidyverse packages[22m --------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse 2.0.0 --
-## [32mv[39m [34mdplyr    [39m 1.1.3     [32mv[39m [34mreadr    [39m 2.1.4
-## [32mv[39m [34mforcats  [39m 1.0.0     [32mv[39m [34mstringr  [39m 1.5.0
-## [32mv[39m [34mggplot2  [39m 3.5.2     [32mv[39m [34mtibble   [39m 3.2.1
-## [32mv[39m [34mlubridate[39m 1.9.2     [32mv[39m [34mtidyr    [39m 1.3.0
-## [32mv[39m [34mpurrr    [39m 1.0.2     
-## -- [1mConflicts[22m --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
-## [31mx[39m [34mdplyr[39m::[32mfilter()[39m   masks [34mstats[39m::filter()
-## [31mx[39m [34mpurrr[39m::[32mis_empty()[39m masks [34mgit2r[39m::is_empty()
-## [31mx[39m [34mdplyr[39m::[32mlag()[39m      masks [34mstats[39m::lag()
-## [31mx[39m [34mdplyr[39m::[32mpull()[39m     masks [34mgit2r[39m::pull()
-## [31mx[39m [34mpurrr[39m::[32mwhen()[39m     masks [34mgit2r[39m::when()
-## [36mi[39m Use the conflicted package ([3m[34m&lt;http://conflicted.r-lib.org/&gt;[39m[23m) to force all conflicts to become errors</code></pre>
-<pre class="r"><code>library(readxl)
+library(tidyverse)
+library(readxl)
 
 # Packages for the graphical analysis section
-library(viridis)</code></pre>
-<pre><code>## Loading required package: viridisLite</code></pre>
-<pre class="r"><code>library(RColorBrewer)
+library(viridis)
+library(RColorBrewer)
 library(ggnewscale)
 
 # Packages for today&#39;s lecture about trees
-library(tidytree)</code></pre>
-<pre><code>## [90mIf you use the ggtree package suite in published research, please
-## cite the appropriate paper(s):
-## 
-## Guangchuang Yu.  Data Integration, Manipulation and Visualization of
-## Phylogenetic Trees (1st edition). Chapman and Hall/CRC. 2022,
-## doi:10.1201/9781003279242
-## 
-## Shuangbin Xu, Lin Li, Xiao Luo, Meijun Chen, Wenli Tang, Li Zhan, Zehan
-## Dai, Tommy T. Lam, Yi Guan, Guangchuang Yu. Ggtree: A serialized data
-## object for visualization of a phylogenetic tree and annotation data.
-## iMeta 2022, 1(4):e56. doi:10.1002/imt2.56 [39m
-## 
-## Attaching package: &#39;tidytree&#39;
-## 
-## The following object is masked from &#39;package:git2r&#39;:
-## 
-##     pull
-## 
-## The following object is masked from &#39;package:stats&#39;:
-## 
-##     filter</code></pre>
-<pre class="r"><code>library(ggtree)</code></pre>
+library(tidytree)
+library(ggtree)</code></pre>
 <pre><code>## Error: package or namespace load failed for &#39;ggtree&#39; in loadNamespace(j &lt;- i[[1L]], c(lib.loc, .libPaths()), versionCheck = vI[[j]]):
 ##  there is no package called &#39;aplot&#39;</code></pre>
-<pre class="r"><code>library(ggtreeExtra)</code></pre>
-<pre><code>## ggtreeExtra v1.0.4  For help: https://yulab-smu.top/treedata-book/
-## 
-## If you use ggtreeExtra in published research, please cite the paper:
-## 
-## SB Xu, Z Dai, P Guo, X Fu, S Liu, L Zhou, W Tang, T Feng, M Chen, L Zhan, T Wu, E Hu, G Yu. ggtreeExtra: Compact visualization of richly annotated phylogenetic data. Research Square. doi: 10.21203/rs.3.rs-155672/v2, (preprint).</code></pre>
-<pre class="r"><code>library(treeio)</code></pre>
-<pre><code>## Registered S3 methods overwritten by &#39;treeio&#39;:
-##   method              from    
-##   MRCA.phylo          tidytree
-##   MRCA.treedata       tidytree
-##   Nnode.treedata      tidytree
-##   Ntip.treedata       tidytree
-##   ancestor.phylo      tidytree
-##   ancestor.treedata   tidytree
-##   child.phylo         tidytree
-##   child.treedata      tidytree
-##   full_join.phylo     tidytree
-##   full_join.treedata  tidytree
-##   groupClade.phylo    tidytree
-##   groupClade.treedata tidytree
-##   groupOTU.phylo      tidytree
-##   groupOTU.treedata   tidytree
-##   is.rooted.treedata  tidytree
-##   nodeid.phylo        tidytree
-##   nodeid.treedata     tidytree
-##   nodelab.phylo       tidytree
-##   nodelab.treedata    tidytree
-##   offspring.phylo     tidytree
-##   offspring.treedata  tidytree
-##   parent.phylo        tidytree
-##   parent.treedata     tidytree
-##   root.treedata       tidytree
-##   rootnode.phylo      tidytree
-##   sibling.phylo       tidytree
-## treeio v1.14.4  For help: https://yulab-smu.top/treedata-book/
-## 
-## If you use treeio in published research, please cite:
-## 
-## LG Wang, TTY Lam, S Xu, Z Dai, L Zhou, T Feng, P Guo, CW Dunn, BR Jones, T Bradley, H Zhu, Y Guan, Y Jiang, G Yu. treeio: an R package for phylogenetic tree input and output with richly annotated and associated data. Molecular Biology and Evolution 2020, 37(2):599-603. doi: 10.1093/molbev/msz240
-## 
-## 
-## Attaching package: &#39;treeio&#39;
-## 
-## The following objects are masked from &#39;package:tidytree&#39;:
-## 
-##     drop.tip, get.treetext, getNodeNum, isTip, tree_subset</code></pre>
-<pre class="r"><code># Packages for graphs
+<pre class="r"><code>library(ggtreeExtra)
+library(treeio)
+
+# Packages for graphs
 library(ggraph)</code></pre>
 <pre><code>## Error in library(ggraph): there is no package called &#39;ggraph&#39;</code></pre>
 <pre class="r"><code>library(tidygraph)</code></pre>
@@ -708,21 +611,11 @@ library(ggraph)</code></pre>
 library(ggseqlogo)
 
 # Packages for Manhattan plots
-library(qqman)</code></pre>
-<pre><code>## 
-## For example usage please run: vignette(&#39;qqman&#39;)
-## 
-## Citation appreciated but not required:
-## Turner, (2018). qqman: an R package for visualizing GWAS results using Q-Q and manhattan plots. Journal of Open Source Software, 3(25), 731, https://doi.org/10.21105/joss.00731.</code></pre>
-<pre class="r"><code># Date calculation helpers
+library(qqman)
+
+# Date calculation helpers
 library(lubridate)
 library(zoo)</code></pre>
-<pre><code>## 
-## Attaching package: &#39;zoo&#39;
-## 
-## The following objects are masked from &#39;package:base&#39;:
-## 
-##     as.Date, as.Date.numeric</code></pre>
 <hr />
 </div>
 </div>
