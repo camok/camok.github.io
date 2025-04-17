@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 14:04:53 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 14:09:01 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -584,7 +584,7 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 14:05:49 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 14:09:35 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
 library(tidyverse)
 library(readxl)
@@ -1733,8 +1733,8 @@ SC2_variants_time.tree %&gt;%
     geom_tippoint(aes(shape = strain_division), size = 3)  # Add tips only   </code></pre>
 <pre><code>## Error in ggtree(tr = ., mrsd = &quot;2021-02-16&quot;): could not find function &quot;ggtree&quot;</code></pre>
 <pre class="r"><code>### 1.7.1 View the clade we made using the same MRCA call we already used.
-viewClade(tree.plot, ...)</code></pre>
-<pre><code>## Error in viewClade(tree.plot, ...): could not find function &quot;viewClade&quot;</code></pre>
+viewClade(tree.plot, MRCA(tree.plot, to_view[1:5]))</code></pre>
+<pre><code>## Error in viewClade(tree.plot, MRCA(tree.plot, to_view[1:5])): could not find function &quot;viewClade&quot;</code></pre>
 <hr />
 </div>
 </div>
