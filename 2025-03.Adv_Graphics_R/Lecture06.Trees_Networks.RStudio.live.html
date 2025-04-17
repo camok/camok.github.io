@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 14:32:34 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 14:42:54 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -584,7 +584,7 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 14:33:29 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 14:43:52 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
 library(tidyverse)
 library(readxl)
@@ -2387,10 +2387,10 @@ dataframe containing our extracted metadata.</p>
   
   # Split the experimental information into bits and pieces
   # Begin with breaking off the time information
-  separate(..., into = c(&quot;time&quot;, &quot;condition&quot;), extra = &quot;merge&quot;, sep = &quot;_&quot;, remove = FALSE) %&gt;% 
+  separate(experiment, into = c(&quot;time&quot;, &quot;condition&quot;), extra = &quot;merge&quot;, sep = &quot;_&quot;, remove = FALSE) %&gt;% 
   
   # Next break our data into infections vs treatments
-  separate(..., into = c(&quot;infection&quot;, &quot;treatment&quot;), sep = &quot;_&quot;) %&gt;% 
+  separate(condition, into = c(&quot;infection&quot;, &quot;treatment&quot;), sep = &quot;_&quot;) %&gt;% 
   
   # We need to slide over some of the data using a coalesce step
   mutate(treatment = coalesce(treatment, infection),
@@ -2406,10 +2406,17 @@ dataframe containing our extracted metadata.</p>
            rowwise() %&gt;% 
            mutate(totalCount = sum(c_across(-1))) %&gt;% pull(totalCount)
          )</code></pre>
-<pre><code>## Error in mutate(., treatment = coalesce(treatment, infection), treatment = str_remove(treatment, : &#39;...&#39; used in an incorrect context</code></pre>
+<pre><code>## Warning: [1m[22mExpected 2 pieces. Missing pieces filled with `NA` in 18 rows
+## [1, 2, 3, 4, 5, 6, 13, 14, 15, 16, 17, 18, 25, 26, 27, 28, 29, 30].</code></pre>
 <pre class="r"><code># Take a peek at what we&#39;ve made
 head(wyler_readcounts_metadata.df)</code></pre>
-<pre><code>## Error in head(wyler_readcounts_metadata.df): object &#39;wyler_readcounts_metadata.df&#39; not found</code></pre>
+<pre><code>##         experiment time infection  treatment totalCount
+## 1       24h_DMSO-1  24h      None       DMSO   13060896
+## 2       24h_DMSO-2  24h      None       DMSO    9390107
+## 3       24h_DMSO-3  24h      None       DMSO   11313261
+## 4 24h_200nM17AAG-1  24h      None 200nM17AAG   12924988
+## 5 24h_200nM17AAG-2  24h      None 200nM17AAG   11662245
+## 6 24h_200nM17AAG-3  24h      None 200nM17AAG   12522172</code></pre>
 <hr />
 </div>
 <div id="generate-the-hclust-object-for-your-graph" class="section level3">
@@ -2422,27 +2429,43 @@ others. We’ll use a standard euclidean distance method to create the
 distance matrix before passing it onto the <code>hclust()</code>
 function to create our <code>hclust</code> object.</p>
 <pre class="r"><code># Generate an hclust object where rows are experimental information
-wyler.hc &lt;- ...(...(...(wyler_readcounts.mx)), 
-                   method = &quot;ward.D2&quot;)</code></pre>
-<pre><code>## Error in ...(...(...(wyler_readcounts.mx)), method = &quot;ward.D2&quot;): could not find function &quot;...&quot;</code></pre>
-<pre class="r"><code># Check out if it looks correct
+wyler.hc &lt;- hclust(dist(t(wyler_readcounts.mx)), 
+                   method = &quot;ward.D2&quot;)
+
+# Check out if it looks correct
 str(wyler.hc)</code></pre>
-<pre><code>## Error in str(wyler.hc): object &#39;wyler.hc&#39; not found</code></pre>
+<pre><code>## List of 7
+##  $ merge      : int [1:35, 1:2] -4 -34 -28 -14 -11 -30 -22 -3 -8 -16 ...
+##  $ height     : num [1:35] 15802 18709 19680 19819 22833 ...
+##  $ order      : int [1:36] 5 11 12 10 4 6 17 22 23 24 ...
+##  $ labels     : chr [1:36] &quot;24h_DMSO-1&quot; &quot;24h_DMSO-2&quot; &quot;24h_DMSO-3&quot; &quot;24h_200nM17AAG-1&quot; ...
+##  $ method     : chr &quot;ward.D2&quot;
+##  $ call       : language hclust(d = dist(t(wyler_readcounts.mx)), method = &quot;ward.D2&quot;)
+##  $ dist.method: chr &quot;euclidean&quot;
+##  - attr(*, &quot;class&quot;)= chr &quot;hclust&quot;</code></pre>
 <pre class="r"><code># What&#39;s the range of our branch/edge lengths?
 range(wyler.hc$height)</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;wyler.hc&#39; not found</code></pre>
+<pre><code>## [1]  15802.1 657653.0</code></pre>
 <hr />
 <p>Note how our branch heights range from ~15000 to ~66000? This is
 quite the range and to display it a little easier, we are going to
 change our heights (aka lengths) by an order of 10000. This will scale
 down the figure for a better visualization.</p>
 <pre class="r"><code># Adjust the height sizes to a smaller scale for plotting
-wyler.hc$height &lt;- wyler.hc$height/...</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;wyler.hc&#39; not found</code></pre>
-<pre class="r"><code>str(wyler.hc)</code></pre>
-<pre><code>## Error in str(wyler.hc): object &#39;wyler.hc&#39; not found</code></pre>
+wyler.hc$height &lt;- wyler.hc$height/10000
+
+str(wyler.hc)</code></pre>
+<pre><code>## List of 7
+##  $ merge      : int [1:35, 1:2] -4 -34 -28 -14 -11 -30 -22 -3 -8 -16 ...
+##  $ height     : num [1:35] 1.58 1.87 1.97 1.98 2.28 ...
+##  $ order      : int [1:36] 5 11 12 10 4 6 17 22 23 24 ...
+##  $ labels     : chr [1:36] &quot;24h_DMSO-1&quot; &quot;24h_DMSO-2&quot; &quot;24h_DMSO-3&quot; &quot;24h_200nM17AAG-1&quot; ...
+##  $ method     : chr &quot;ward.D2&quot;
+##  $ call       : language hclust(d = dist(t(wyler_readcounts.mx)), method = &quot;ward.D2&quot;)
+##  $ dist.method: chr &quot;euclidean&quot;
+##  - attr(*, &quot;class&quot;)= chr &quot;hclust&quot;</code></pre>
 <pre class="r"><code>range(wyler.hc$height)</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;wyler.hc&#39; not found</code></pre>
+<pre><code>## [1]  1.58021 65.76530</code></pre>
 <hr />
 </div>
 <div id="convert-your-hclust-object-to-a-tree-with-metadata" class="section level3">
@@ -2474,13 +2497,38 @@ wyler.tree &lt;-
   # and then to a tibble object so you can add in the metadata
   as_tibble() %&gt;% 
   # Merge it with our metadata
-  full_join(x = ., y = ..., by = c(...)) %&gt;% 
+  full_join(x = ., y = wyler_readcounts_metadata.df, by = c(&quot;label&quot; = &quot;experiment&quot;)) %&gt;% 
   # Convert it back to a tree
-  as.treedata()</code></pre>
-<pre><code>## Error in as.treedata(.): &#39;...&#39; used in an incorrect context</code></pre>
-<pre class="r"><code># Check out the tree you&#39;ve made
+  as.treedata()
+
+# Check out the tree you&#39;ve made
 str(wyler.tree)</code></pre>
-<pre><code>## Error in str(wyler.tree): object &#39;wyler.tree&#39; not found</code></pre>
+<pre><code>## Formal class &#39;treedata&#39; [package &quot;tidytree&quot;] with 11 slots
+##   ..@ file       : chr(0) 
+##   ..@ treetext   : chr(0) 
+##   ..@ phylo      :List of 4
+##   .. ..$ edge       : int [1:70, 1:2] 50 53 71 69 59 69 71 56 50 60 ...
+##   .. .. ..- attr(*, &quot;dimnames&quot;)=List of 2
+##   .. .. .. ..$ : NULL
+##   .. .. .. ..$ : chr [1:2] &quot;parent&quot; &quot;node&quot;
+##   .. ..$ edge.length: num [1:70] 1.65 4.33 1.23 0.79 1.57 ...
+##   .. ..$ tip.label  : chr [1:36] &quot;24h_DMSO-1&quot; &quot;24h_DMSO-2&quot; &quot;24h_DMSO-3&quot; &quot;24h_200nM17AAG-1&quot; ...
+##   .. ..$ Nnode      : int 35
+##   .. ..- attr(*, &quot;class&quot;)= chr &quot;phylo&quot;
+##   ..@ data       : tibble [71 x 5] (S3: tbl_df/tbl/data.frame)
+##   .. ..$ node      : int [1:71] 1 2 3 4 5 6 7 8 9 10 ...
+##   .. ..$ time      : chr [1:71] &quot;24h&quot; &quot;24h&quot; &quot;24h&quot; &quot;24h&quot; ...
+##   .. ..$ infection : chr [1:71] &quot;None&quot; &quot;None&quot; &quot;None&quot; &quot;None&quot; ...
+##   .. ..$ treatment : chr [1:71] &quot;DMSO&quot; &quot;DMSO&quot; &quot;DMSO&quot; &quot;200nM17AAG&quot; ...
+##   .. ..$ totalCount: num [1:71] 13060896 9390107 11313261 12924988 11662245 ...
+##   ..@ extraInfo  : tibble [0 x 0] (S3: tbl_df/tbl/data.frame)
+##  Named list()
+##   ..@ tip_seq    : NULL
+##   ..@ anc_seq    : NULL
+##   ..@ seq_type   : chr(0) 
+##   ..@ tipseq_file: chr(0) 
+##   ..@ ancseq_file: chr(0) 
+##   ..@ info       : list()</code></pre>
 <pre class="r"><code># Build our tree metadata for graphing
 wyler_treeinfo.df &lt;-
   wyler.tree %&gt;% 
@@ -2489,12 +2537,20 @@ wyler_treeinfo.df &lt;-
   # Convert to a data frame
   as.data.frame() %&gt;% 
   # Remove internal node data
-  filter(...) %&gt;% 
-  `rownames&lt;-`(.$label)</code></pre>
-<pre><code>## Error in is.data.frame(x): &#39;...&#39; used in an incorrect context</code></pre>
-<pre class="r"><code># Check the metadata you&#39;ve made to see that it only covers tip data
+  filter(! is.na(label)) %&gt;% 
+  `rownames&lt;-`(.$label)
+
+# Check the metadata you&#39;ve made to see that it only covers tip data
 str(wyler_treeinfo.df)</code></pre>
-<pre><code>## Error in str(wyler_treeinfo.df): object &#39;wyler_treeinfo.df&#39; not found</code></pre>
+<pre><code>## &#39;data.frame&#39;:    36 obs. of  8 variables:
+##  $ parent       : int  50 53 71 69 59 69 71 56 50 60 ...
+##  $ node         : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ branch.length: num  1.65 4.33 1.23 0.79 1.57 ...
+##  $ label        : chr  &quot;24h_DMSO-1&quot; &quot;24h_DMSO-2&quot; &quot;24h_DMSO-3&quot; &quot;24h_200nM17AAG-1&quot; ...
+##  $ time         : chr  &quot;24h&quot; &quot;24h&quot; &quot;24h&quot; &quot;24h&quot; ...
+##  $ infection    : chr  &quot;None&quot; &quot;None&quot; &quot;None&quot; &quot;None&quot; ...
+##  $ treatment    : chr  &quot;DMSO&quot; &quot;DMSO&quot; &quot;DMSO&quot; &quot;200nM17AAG&quot; ...
+##  $ totalCount   : num  13060896 9390107 11313261 12924988 11662245 ...</code></pre>
 <hr />
 </div>
 <div id="use-ggtree-to-plot-your-converted-hclust-object" class="section level3">
