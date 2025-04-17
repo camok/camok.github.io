@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 13:49:21 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 13:52:13 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -584,7 +584,7 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 13:50:41 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 13:52:43 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
 library(tidyverse)
 library(readxl)
@@ -1431,7 +1431,7 @@ SC2_variants_time.tree %&gt;%
     
     # 4. Geoms
     ### 1.6.0 Add tips labels to our tree tips
-    ...  </code></pre>
+    geom_tiplab()</code></pre>
 <pre><code>## Error in ggtree(tr = .): could not find function &quot;ggtree&quot;</code></pre>
 <hr />
 <div id="replace-labels-with-points-using-different-geoms" class="section level3">
