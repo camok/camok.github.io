@@ -359,9 +359,9 @@ display: none;
 <div id="advanced-graphics-and-data-visualization-in-r" class="section level1">
 <h1>Advanced Graphics and Data Visualization in R</h1>
 </div>
-<div id="lecture-06-trees-network-diagrams-and-genomic-representations-live-html" class="section level1">
+<div id="lecture-06-trees-network-diagrams-and-genomic-representations-live-html-testing" class="section level1">
 <h1>Lecture 06: Trees, Network Diagrams and Genomic Representations Live
-HTML</h1>
+HTML testing</h1>
 <div id="an-overview-of-advanced-graphics-and-data-visualization-in-r" class="section level2">
 <h2>0.1.0 An overview of Advanced Graphics and Data Visualization in
 R</h2>
@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 10:22:14 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 13:36:30 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -523,20 +523,14 @@ BiocManager::install(&quot;ggnewscale&quot;, update = FALSE)</code></pre>
 ## Replacement repositories:
 ##     CRAN: https://cran.r-project.org</code></pre>
 <pre><code>## Bioconductor version 3.12 (BiocManager 1.30.22), R 4.0.5 (2021-03-31)</code></pre>
-<pre><code>## Installing package(s) &#39;ggnewscale&#39;</code></pre>
-<pre><code>## also installing the dependency &#39;ggplot2&#39;</code></pre>
-<pre><code>## 
-##   There are binary versions available but the source versions are later:
-##            binary source needs_compilation
-## ggplot2     3.3.5  3.5.2             FALSE
-## ggnewscale  0.4.7  0.5.1             FALSE</code></pre>
-<pre><code>## installing the source packages &#39;ggplot2&#39;, &#39;ggnewscale&#39;</code></pre>
+<pre><code>## Warning: package(s) not installed when version(s) same as or greater than current; use
+##   `force = TRUE` to re-install: &#39;ggnewscale&#39;</code></pre>
 <pre class="r"><code>BiocManager::install(&quot;ggtree&quot;, update = FALSE)</code></pre>
 <pre><code>## &#39;getOption(&quot;repos&quot;)&#39; replaces Bioconductor standard repositories, see
 ## &#39;help(&quot;repositories&quot;, package = &quot;BiocManager&quot;)&#39; for details.
 ## Replacement repositories:
-##     CRAN: https://cran.r-project.org</code></pre>
-<pre><code>## Bioconductor version 3.12 (BiocManager 1.30.22), R 4.0.5 (2021-03-31)</code></pre>
+##     CRAN: https://cran.r-project.org
+## Bioconductor version 3.12 (BiocManager 1.30.22), R 4.0.5 (2021-03-31)</code></pre>
 <pre><code>## Warning: package(s) not installed when version(s) same as or greater than current; use
 ##   `force = TRUE` to re-install: &#39;ggtree&#39;</code></pre>
 <pre class="r"><code>BiocManager::install(&quot;ggtreeExtra&quot;, update = FALSE)</code></pre>
@@ -608,7 +602,7 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 10:25:00 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 13:37:30 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
 library(tidyverse)</code></pre>
 <pre><code>## -- [1mAttaching core tidyverse packages[22m --------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse 2.0.0 --
@@ -641,11 +635,10 @@ library(tidytree)</code></pre>
 ## Phylogenetic Trees (1st edition). Chapman and Hall/CRC. 2022,
 ## doi:10.1201/9781003279242
 ## 
-## LG Wang, TTY Lam, S Xu, Z Dai, L Zhou, T Feng, P Guo, CW Dunn, BR
-## Jones, T Bradley, H Zhu, Y Guan, Y Jiang, G Yu. treeio: an R package
-## for phylogenetic tree input and output with richly annotated and
-## associated data. Molecular Biology and Evolution. 2020, 37(2):599-603.
-## doi: 10.1093/molbev/msz240 [39m
+## Shuangbin Xu, Lin Li, Xiao Luo, Meijun Chen, Wenli Tang, Li Zhan, Zehan
+## Dai, Tommy T. Lam, Yi Guan, Guangchuang Yu. Ggtree: A serialized data
+## object for visualization of a phylogenetic tree and annotation data.
+## iMeta 2022, 1(4):e56. doi:10.1002/imt2.56 [39m
 ## 
 ## Attaching package: &#39;tidytree&#39;
 ## 
@@ -758,8 +751,8 @@ only define the presence of a relationship.</p>
 <p>In tree terminology, it is helpful to define a few more terms:</p>
 <table>
 <colgroup>
-<col width="17%" />
-<col width="82%" />
+<col width="22%" />
+<col width="77%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -814,8 +807,8 @@ features.</p>
 of formats, some of which are described below.</p>
 <table>
 <colgroup>
-<col width="6%" />
-<col width="93%" />
+<col width="16%" />
+<col width="83%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -874,16 +867,41 @@ fair amount of metadata.</strong></p>
 <p>Let’s begin by opening up the tree data and some related metadata
 before taking a look under the hood.</p>
 <pre class="r"><code># Import our Newick Tree
-SC2_variants_time.phylo &lt;- read.tree(...)</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): &#39;...&#39; used in an incorrect context</code></pre>
-<pre class="r"><code># Import our metadata
-SC2_metadata.df &lt;- read_tsv(...)</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): &#39;...&#39; used in an incorrect context</code></pre>
+SC2_variants_time.phylo &lt;- read.tree(&quot;data/nextstrain_ncov_north-america_canada_timetree.nwk&quot;)
+
+# Import our metadata
+SC2_metadata.df &lt;- read_tsv(&quot;data/nextstrain_ncov_north-america_canada_metadata.tsv&quot;)</code></pre>
+<pre><code>## [1mRows: [22m[34m6627[39m [1mColumns: [22m[34m24[39m
+## [36m--[39m [1mColumn specification[22m [36m-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[39m
+## [1mDelimiter:[22m &quot;\t&quot;
+## [31mchr[39m  (21): Strain, GISAID clade, Nextstrain clade, Clade, Country, Admin Div...
+## [32mdbl[39m   (1): Age
+## [33mlgl[39m   (1): url
+## [34mdate[39m  (1): Collection Data
+## 
+## [36mi[39m Use `spec()` to retrieve the full column specification for this data.
+## [36mi[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <pre class="r"><code># What does the tree look like?
-str(...)</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): &#39;...&#39; used in an incorrect context</code></pre>
+str(SC2_variants_time.phylo)</code></pre>
+<pre><code>## List of 6
+##  $ edge       : int [1:12776, 1:2] 6628 6628 6629 6630 6631 6630 6632 6632 6633 6629 ...
+##  $ edge.length: num [1:12776] 0.0757 0.0848 0.0336 0.0501 0 ...
+##  $ Nnode      : int 6150
+##  $ node.label : chr [1:6150] &quot;NODE_0008606&quot; &quot;NODE_0000001&quot; &quot;NODE_0000061&quot; &quot;USA/MA1/2020_travel_history&quot; ...
+##  $ tip.label  : chr [1:6627] &quot;Wuhan/WH01/2019&quot; &quot;USA/MA1/2020&quot; &quot;Canada/ON_ON-VIDO-01-2/2020&quot; &quot;Canada/ON_VIDO-01/2020&quot; ...
+##  $ root.edge  : num 2020
+##  - attr(*, &quot;class&quot;)= chr &quot;phylo&quot;
+##  - attr(*, &quot;order&quot;)= chr &quot;cladewise&quot;</code></pre>
 <pre class="r"><code>SC2_variants_time.phylo</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;SC2_variants_time.phylo&#39; not found</code></pre>
+<pre><code>## 
+## Phylogenetic tree with 6627 tips and 6150 internal nodes.
+## 
+## Tip labels:
+##   Wuhan/WH01/2019, USA/MA1/2020, Canada/ON_ON-VIDO-01-2/2020, Canada/ON_VIDO-01/2020, USA/CA-CDC-5/2020, Taiwan/CGMH-CGU-02/2020, ...
+## Node labels:
+##   NODE_0008606, NODE_0000001, NODE_0000061, USA/MA1/2020_travel_history, NODE_0000062, Canada/ON_VIDO-01/2020_travel_history, ...
+## 
+## Rooted; includes branch lengths.</code></pre>
 <hr />
 <div id="the-phylo-object-is-a-simple-list" class="section level3">
 <h3>1.2.1 The <code>phylo</code> object is a simple list</h3>
@@ -913,13 +931,26 @@ that will parse and convert the <code>phylo</code> format to a
 <p>Let’s convert our variant phylo object to something we can work
 with.</p>
 <pre class="r"><code># Convert the phylo object using as_tibble
-SC2_variants_time.tb &lt;- ...</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): &#39;...&#39; used in an incorrect context</code></pre>
-<pre class="r"><code># Check out the structure now
+SC2_variants_time.tb &lt;- as_tibble(SC2_variants_time.phylo)
+
+# Check out the structure now
 str(SC2_variants_time.tb)</code></pre>
-<pre><code>## Error in str(SC2_variants_time.tb): object &#39;SC2_variants_time.tb&#39; not found</code></pre>
+<pre><code>## tbl_tree [12,777 x 4] (S3: tbl_tree/tbl_df/tbl/data.frame)
+##  $ parent       : int [1:12777] 6628 6631 6632 6633 6636 6635 6638 6638 6639 6640 ...
+##  $ node         : int [1:12777] 1 2 3 4 5 6 7 8 9 10 ...
+##  $ branch.length: num [1:12777] 0.0757 0 0.0077 0 0 ...
+##  $ label        : chr [1:12777] &quot;Wuhan/WH01/2019&quot; &quot;USA/MA1/2020&quot; &quot;Canada/ON_ON-VIDO-01-2/2020&quot; &quot;Canada/ON_VIDO-01/2020&quot; ...</code></pre>
 <pre class="r"><code>head(SC2_variants_time.tb)</code></pre>
-<pre><code>## Error in head(SC2_variants_time.tb): object &#39;SC2_variants_time.tb&#39; not found</code></pre>
+<pre><code>## [33m![39m # Invaild edge matrix for [34m[34m&lt;phylo&gt;[34m[39m. A [34m[34m&lt;tbl_df&gt;[34m[39m is returned.</code></pre>
+<pre><code>## [90m# A tibble: 6 x 4[39m
+##   parent  node branch.length label                      
+##    [3m[90m&lt;int&gt;[39m[23m [3m[90m&lt;int&gt;[39m[23m         [3m[90m&lt;dbl&gt;[39m[23m [3m[90m&lt;chr&gt;[39m[23m                      
+## [90m1[39m   [4m6[24m628     1       0.075[4m7[24m  Wuhan/WH01/2019            
+## [90m2[39m   [4m6[24m631     2       0       USA/MA1/2020               
+## [90m3[39m   [4m6[24m632     3       0.007[4m7[24m[4m0[24m Canada/ON_ON-VIDO-01-2/2020
+## [90m4[39m   [4m6[24m633     4       0       Canada/ON_VIDO-01/2020     
+## [90m5[39m   [4m6[24m636     5       0       USA/CA-CDC-5/2020          
+## [90m6[39m   [4m6[24m635     6       0.044[4m2[24m  Taiwan/CGMH-CGU-02/2020</code></pre>
 <hr />
 </div>
 </div>
@@ -951,24 +982,153 @@ the correct direction <code>*_join()</code> to avoid data loss. A
 <p>Let’s take a quick look at our metadata and identify what we’re
 interested in.</p>
 <pre class="r"><code># Look at the metadata, which bits of information would be nice to add?
-str(..., give.attr = FALSE)</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): &#39;...&#39; used in an incorrect context</code></pre>
+str(SC2_metadata.df, give.attr = FALSE)</code></pre>
+<pre><code>## spc_tbl_ [6,627 x 24] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ Strain                    : chr [1:6627] &quot;Wuhan/WH01/2019&quot; &quot;USA/MA1/2020&quot; &quot;Canada/ON_ON-VIDO-01-2/2020&quot; &quot;Canada/ON_VIDO-01/2020&quot; ...
+##  $ GISAID clade              : chr [1:6627] &quot;L&quot; &quot;L&quot; &quot;L&quot; &quot;L&quot; ...
+##  $ Nextstrain clade          : chr [1:6627] &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; ...
+##  $ Age                       : num [1:6627] 44 21 NA NA 54 NA 47 47 23 55 ...
+##  $ Clade                     : chr [1:6627] &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; ...
+##  $ Country                   : chr [1:6627] &quot;Asia&quot; &quot;USA&quot; &quot;Canada&quot; &quot;Canada&quot; ...
+##  $ Admin Division            : chr [1:6627] &quot;Asia&quot; &quot;Massachusetts&quot; &quot;Ontario&quot; &quot;Ontario&quot; ...
+##  $ Admin Division of exposure: chr [1:6627] &quot;Asia&quot; &quot;Asia&quot; &quot;Ontario&quot; &quot;Asia&quot; ...
+##  $ gisaid_epi_isl            : chr [1:6627] &quot;EPI_ISL_406798&quot; &quot;EPI_ISL_409067&quot; &quot;EPI_ISL_425177&quot; &quot;EPI_ISL_413015&quot; ...
+##  $ Host                      : chr [1:6627] &quot;Human&quot; &quot;Human&quot; &quot;Human&quot; &quot;Human&quot; ...
+##  $ Originating Lab           : chr [1:6627] &quot;General Hospital of Central Theater Command of People&#39;s Liberation Army of China&quot; &quot;Massachusetts Department of Public Health&quot; &quot;Public Health Ontario&quot; &quot;Public Health Ontario Laboratory&quot; ...
+##  $ PANGO lineage             : chr [1:6627] &quot;B&quot; &quot;B&quot; &quot;B&quot; &quot;B&quot; ...
+##  $ Submission Date           : chr [1:6627] &quot;Older&quot; &quot;Older&quot; &quot;Older&quot; &quot;Older&quot; ...
+##  $ Region                    : chr [1:6627] &quot;Asia&quot; &quot;North America&quot; &quot;North America&quot; &quot;North America&quot; ...
+##  $ Region of exposure        : chr [1:6627] &quot;Asia&quot; &quot;Asia&quot; &quot;North America&quot; &quot;Asia&quot; ...
+##  $ Sex                       : chr [1:6627] &quot;Male&quot; &quot;Male&quot; &quot;Male&quot; &quot;Male&quot; ...
+##  $ strain                    : chr [1:6627] &quot;Wuhan/WH01/2019&quot; &quot;USA/MA1/2020&quot; &quot;Canada/ON_ON-VIDO-01-2/2020&quot; &quot;Canada/ON_VIDO-01/2020&quot; ...
+##  $ Emerging Nextstrain clade : chr [1:6627] &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; ...
+##  $ Submitting Lab            : chr [1:6627] &quot;BGI &amp; Institute of Microbiology, Chinese Academy of Sciences &amp; Shandong First Medical University &amp; Shandong Aca&quot;| __truncated__ &quot;Pathogen Discovery, Respiratory Viruses Branch, Division of Viral Diseases, Centers for Disease Control and Prevention&quot; &quot;Public Health Agency of Canada - National Microbiology Laboratory&quot; &quot;National Microbiology Laboratory&quot; ...
+##  $ url                       : logi [1:6627] NA NA NA NA NA NA ...
+##  $ Collection Data           : Date[1:6627], format: &quot;2019-12-26&quot; &quot;2020-01-29&quot; ...
+##  $ Author                    : chr [1:6627] &quot;Weijun Chen et al (https://dx.doi.org/10.1016/S0140-6736(20)30251-8)&quot; &quot;Clinton R. Paden et al (https://dx.doi.org/10.1101/2020.03.09.20032896)&quot; &quot;Amrit S. Boese et al&quot; &quot;Shari Tyson et al&quot; ...
+##  $ Country of exposure       : chr [1:6627] NA &quot;Asia&quot; NA &quot;Asia&quot; ...
+##  $ Location                  : chr [1:6627] NA &quot;Boston&quot; NA NA ...</code></pre>
 <pre class="r"><code># Check out some of the values for these variables
 
 # Metadata information on the samples
-unique(SC2_metadata.df$...)</code></pre>
-<pre><code>## Error in unique(SC2_metadata.df$...): object &#39;SC2_metadata.df&#39; not found</code></pre>
+unique(SC2_metadata.df$Country)</code></pre>
+<pre><code>##  [1] &quot;Asia&quot;               &quot;USA&quot;                &quot;Canada&quot;            
+##  [4] &quot;Europe&quot;             &quot;Guatemala&quot;          &quot;Panama&quot;            
+##  [7] &quot;Africa&quot;             &quot;Dominican Republic&quot; &quot;Costa Rica&quot;        
+## [10] &quot;South America&quot;      &quot;Oceania&quot;            &quot;Jamaica&quot;           
+## [13] &quot;Mexico&quot;             &quot;Barbados&quot;           &quot;Guadeloupe&quot;        
+## [16] &quot;Saint Martin&quot;       &quot;Bermuda&quot;            &quot;Sint Maarten&quot;      
+## [19] &quot;Saint Barthélemy&quot;   &quot;Belize&quot;             &quot;Saint Lucia&quot;       
+## [22] &quot;El Salvador&quot;        &quot;Cuba&quot;</code></pre>
 <pre class="r"><code>unique(SC2_metadata.df$Age)</code></pre>
-<pre><code>## Error in unique(SC2_metadata.df$Age): object &#39;SC2_metadata.df&#39; not found</code></pre>
+<pre><code>##   [1]  44  21  NA  54  47  23  55  62  49  50  43  25  26  33  38   9  73  64
+##  [19]  57  58   0  28  70  71  20  93  36  37  40  56  89  45  34  53  94  95
+##  [37]  86  84  60  90  27  30  59  41  46  52  51  32  24  35  29  61  79  66
+##  [55]  78  11   2  65  75  31  48  74  68  67  63  77  42  22  12   5  17  80
+##  [73]  16  39  82   8   7  88  76  69  19  87   3  14  18   1  81  15   6  10
+##  [91]  85   4  98  91  72  99  13  92  83  96 104</code></pre>
 <pre class="r"><code># Metadata information on the genomes
 unique(SC2_metadata.df$&#39;GISAID clade&#39;)</code></pre>
-<pre><code>## Error in unique(SC2_metadata.df$&quot;GISAID clade&quot;): object &#39;SC2_metadata.df&#39; not found</code></pre>
+<pre><code>##  [1] &quot;L&quot;   &quot;S&quot;   &quot;O&quot;   &quot;V&quot;   &quot;GR&quot;  &quot;G&quot;   &quot;GV&quot;  &quot;GH&quot;  &quot;GRY&quot; NA</code></pre>
 <pre class="r"><code>unique(SC2_metadata.df$&#39;Nextstrain clade&#39;)</code></pre>
-<pre><code>## Error in unique(SC2_metadata.df$&quot;Nextstrain clade&quot;): object &#39;SC2_metadata.df&#39; not found</code></pre>
-<pre class="r"><code>unique(SC2_metadata.df$...)</code></pre>
-<pre><code>## Error in unique(SC2_metadata.df$...): object &#39;SC2_metadata.df&#39; not found</code></pre>
+<pre><code>##  [1] &quot;19A&quot;         &quot;19B&quot;         NA            &quot;20A&quot;         &quot;20B&quot;        
+##  [6] &quot;20E (EU1)&quot;   &quot;20A.EU2&quot;     &quot;20C&quot;         &quot;20G&quot;         &quot;20H/501Y.V2&quot;
+## [11] &quot;20D&quot;         &quot;20J/501Y.V3&quot; &quot;20F&quot;         &quot;20I/501Y.V1&quot;</code></pre>
+<pre class="r"><code>unique(SC2_metadata.df$Clade)</code></pre>
+<pre><code>##  [1] &quot;19A&quot;         &quot;19B&quot;         &quot;20A&quot;         &quot;20E (EU1)&quot;   &quot;20C&quot;        
+##  [6] &quot;20G&quot;         &quot;20H/501Y.V2&quot; &quot;20B&quot;         &quot;20D&quot;         &quot;20J/501Y.V3&quot;
+## [11] &quot;20F&quot;         &quot;20I/501Y.V1&quot;</code></pre>
 <pre class="r"><code>unique(SC2_metadata.df$&#39;PANGO lineage&#39;)</code></pre>
-<pre><code>## Error in unique(SC2_metadata.df$&quot;PANGO lineage&quot;): object &#39;SC2_metadata.df&#39; not found</code></pre>
+<pre><code>##   [1] &quot;B&quot;           &quot;A&quot;           &quot;A.6&quot;         &quot;A.2&quot;         &quot;A.2.4&quot;      
+##   [6] &quot;A.2.5&quot;       &quot;A.5&quot;         &quot;A.1&quot;         &quot;A.21&quot;        &quot;A.18&quot;       
+##  [11] &quot;A.12&quot;        &quot;A.28&quot;        &quot;A.19&quot;        &quot;A.25&quot;        &quot;A.23&quot;       
+##  [16] &quot;A.23.1&quot;      &quot;B.12&quot;        &quot;B.56&quot;        &quot;B.4.7&quot;       &quot;B.31&quot;       
+##  [21] &quot;B.61&quot;        &quot;B.40&quot;        &quot;B.35&quot;        &quot;B.28&quot;        &quot;B.11&quot;       
+##  [26] &quot;B.55&quot;        &quot;B.27&quot;        &quot;B.3&quot;         &quot;B.4&quot;         &quot;B.4.8&quot;      
+##  [31] &quot;B.4.2&quot;       &quot;B.53&quot;        &quot;B.6&quot;         &quot;B.1&quot;         &quot;B.6.6&quot;      
+##  [36] &quot;B.6.1&quot;       &quot;B.6.2&quot;       &quot;B.6.8&quot;       &quot;B.1.256&quot;     &quot;B.1.1&quot;      
+##  [41] &quot;B.1.1.420&quot;   &quot;B.1.240&quot;     &quot;B.1.205&quot;     &quot;B.1.128&quot;     &quot;B.1.221&quot;    
+##  [46] &quot;B.1.223&quot;     &quot;B.1.214.2&quot;   &quot;B.1.214&quot;     &quot;B.1.146&quot;     &quot;B.1.147&quot;    
+##  [51] &quot;B.1.104&quot;     &quot;B.1.391&quot;     &quot;B.1.380&quot;     &quot;B.1.203&quot;     &quot;B.1.540&quot;    
+##  [56] &quot;B.1.416&quot;     &quot;B.1.600&quot;     &quot;B.1.160&quot;     &quot;B.1.195&quot;     &quot;B.1.609&quot;    
+##  [61] &quot;B.1.561&quot;     &quot;B.1.232&quot;     &quot;B.1.558&quot;     &quot;B.1.239&quot;     &quot;B.1.237&quot;    
+##  [66] &quot;B.1.597&quot;     &quot;B.1.480&quot;     &quot;B.1.397&quot;     &quot;B.1.408&quot;     &quot;B.1.243&quot;    
+##  [71] &quot;B.1.240.2&quot;   &quot;B.1.240.1&quot;   &quot;B.1.524&quot;     &quot;B.1.179&quot;     &quot;B.1.1.298&quot;  
+##  [76] &quot;B.1.400&quot;     &quot;B.1.398&quot;     &quot;B.1.236&quot;     &quot;B.1.234&quot;     &quot;B.1.459&quot;    
+##  [81] &quot;B.1.131&quot;     &quot;B.1.525&quot;     &quot;B.1.563&quot;     &quot;B.1.411&quot;     &quot;B.1.379&quot;    
+##  [86] &quot;B.1.177.31&quot;  &quot;B.1.177&quot;     &quot;B.1.177.73&quot;  &quot;B.1.177.11&quot;  &quot;B.1.177.14&quot; 
+##  [91] &quot;B.1.177.15&quot;  &quot;AA.1&quot;        &quot;B.1.177.44&quot;  &quot;B.1.177.39&quot;  &quot;B.1.177.40&quot; 
+##  [96] &quot;B.1.177.35&quot;  &quot;B.1.177.82&quot;  &quot;B.1.177.87&quot;  &quot;B.1.177.75&quot;  &quot;B.1.177.45&quot; 
+## [101] &quot;B.1.177.28&quot;  &quot;B.1.177.32&quot;  &quot;B.1.177.37&quot;  &quot;B.1.177.72&quot;  &quot;B.1.117.2&quot;  
+## [106] &quot;B.1.177.4&quot;   &quot;B.1.177.53&quot;  &quot;W.2&quot;         &quot;W.1&quot;         &quot;B.1.177.50&quot; 
+## [111] &quot;B.1.177.81&quot;  &quot;B.1.177.58&quot;  &quot;B.1.177.55&quot;  &quot;B.1.177.56&quot;  &quot;B.1.177.57&quot; 
+## [116] &quot;B.1.177.51&quot;  &quot;B.1.177.52&quot;  &quot;B.1.177.21&quot;  &quot;B.1.177.77&quot;  &quot;B.1.177.6&quot;  
+## [121] &quot;B.1.177.7&quot;   &quot;B.1.177.86&quot;  &quot;B.1.177.8&quot;   &quot;B.1.177.62&quot;  &quot;B.1.177.60&quot; 
+## [126] &quot;U.3&quot;         &quot;B.1.177.79&quot;  &quot;B.1.9.5&quot;     &quot;B.1.9&quot;       &quot;B.1.439&quot;    
+## [131] &quot;B.1.111&quot;     &quot;B.1.162&quot;     &quot;B.1.438&quot;     &quot;B.1.164&quot;     &quot;B.1.36&quot;     
+## [136] &quot;B.1.441&quot;     &quot;B.1.36.35&quot;   &quot;B.1.468&quot;     &quot;B.1.462&quot;     &quot;B.1.471&quot;    
+## [141] &quot;B.1.469&quot;     &quot;B.1.466&quot;     &quot;B.1.466.2&quot;   &quot;B.1.470&quot;     &quot;B.1.160.16&quot; 
+## [146] &quot;B.1.456&quot;     &quot;B.1.36.29&quot;   &quot;B.1.36.31&quot;   &quot;B.1.36.1&quot;    &quot;B.1.36.8&quot;   
+## [151] &quot;B.1.36.26&quot;   &quot;B.1.36.34&quot;   &quot;B.1.36.7&quot;    &quot;B.1.36.16&quot;   &quot;B.1.36.36&quot;  
+## [156] &quot;B.1.36.38&quot;   &quot;B.1.36.37&quot;   &quot;B.1.36.18&quot;   &quot;B.1.36.10&quot;   &quot;B.1.476&quot;    
+## [161] &quot;B.1.281&quot;     &quot;B.1.273&quot;     &quot;B.1.544&quot;     &quot;B.1.270&quot;     &quot;B.1.277&quot;    
+## [166] &quot;B.1.279&quot;     &quot;B.1.314&quot;     &quot;B.1.367&quot;     &quot;B.1.370&quot;     &quot;B.1.413&quot;    
+## [171] &quot;B.1.316&quot;     &quot;B.1.3&quot;       &quot;B.1.509&quot;     &quot;B.1.504&quot;     &quot;B.1.362&quot;    
+## [176] &quot;B.1.499&quot;     &quot;B.1.615&quot;     &quot;B.1.611&quot;     &quot;B.1.505&quot;     &quot;B.1.422&quot;    
+## [181] &quot;B.1.596.1&quot;   &quot;B.1.362.2&quot;   &quot;B.1.369&quot;     &quot;B.1.564&quot;     &quot;B.1.564.1&quot;  
+## [186] &quot;B.1.369.1&quot;   &quot;B.1.1.1&quot;     &quot;B.1.428&quot;     &quot;B.1.356&quot;     &quot;B.1.601&quot;    
+## [191] &quot;B.1.562&quot;     &quot;B.1.360&quot;     &quot;B.1.311&quot;     &quot;B.1.598&quot;     &quot;B.1.350&quot;    
+## [196] &quot;B.1.426&quot;     &quot;B.1.265&quot;     &quot;B.1.336&quot;     &quot;B.1.589&quot;     &quot;B.1.567&quot;    
+## [201] &quot;B.1.588.1&quot;   &quot;B.1.595&quot;     &quot;B.1.596&quot;     &quot;B.1.2&quot;       &quot;B.1.349&quot;    
+## [206] &quot;B.1.366&quot;     &quot;B.1.576&quot;     &quot;B.1.603&quot;     &quot;B.1.526.2&quot;   &quot;B.1.526&quot;    
+## [211] &quot;B.1.291&quot;     &quot;B.1.575&quot;     &quot;B.1.428.3&quot;   &quot;B.1.428.1&quot;   &quot;B.1.428.2&quot;  
+## [216] &quot;B.1.427&quot;     &quot;B.1.429&quot;     &quot;B.1.495&quot;     &quot;B.1.517&quot;     &quot;B.1.324&quot;    
+## [221] &quot;B.1.298&quot;     &quot;B.1.573&quot;     &quot;B.1.320&quot;     &quot;B.1.361&quot;     &quot;B.1.582&quot;    
+## [226] &quot;B.1.612&quot;     &quot;B.1.351&quot;     &quot;B.1.1.255&quot;   &quot;B.1.1.430&quot;   &quot;B.1.1.306&quot;  
+## [231] &quot;AE.7&quot;        &quot;AE.2&quot;        &quot;AE.5&quot;        &quot;AE.6&quot;        &quot;AE.4&quot;       
+## [236] &quot;AE.8&quot;        &quot;B.1.153&quot;     &quot;B.1.329&quot;     &quot;B.1.535&quot;     &quot;B.1.313&quot;    
+## [241] &quot;B.1.170&quot;     &quot;B.1.22.1&quot;    &quot;B.1.201&quot;     &quot;B.1.227&quot;     &quot;B.1.415&quot;    
+## [246] &quot;B.1.94&quot;      &quot;B.1.1.519&quot;   &quot;B.1.1.222&quot;   &quot;B.1.552&quot;     &quot;B.1.199&quot;    
+## [251] &quot;B.1.178&quot;     &quot;B.1.220&quot;     &quot;B.1.6&quot;       &quot;B.1.84&quot;      &quot;B.1.1.170&quot;  
+## [256] &quot;B.1.93&quot;      &quot;B.1.91&quot;      &quot;B.1.219&quot;     &quot;B.1.211&quot;     &quot;B.1.388&quot;    
+## [261] &quot;B.1.210&quot;     &quot;B.1.555&quot;     &quot;B.1.206&quot;     &quot;B.1.260&quot;     &quot;B.1.420&quot;    
+## [266] &quot;B.1.192&quot;     &quot;B.1.258&quot;     &quot;B.1.258.17&quot;  &quot;B.1.242&quot;     &quot;B.1.126&quot;    
+## [271] &quot;B.1.378&quot;     &quot;B.1.565&quot;     &quot;B.1.139&quot;     &quot;B.1.8&quot;       &quot;B.1.78&quot;     
+## [276] &quot;B.1.396&quot;     &quot;B.1.560&quot;     &quot;B.1.527&quot;     &quot;B.1.142&quot;     &quot;B.1.393&quot;    
+## [281] &quot;B.1.187&quot;     &quot;B.1.149&quot;     &quot;B.1.549&quot;     &quot;B.1.545&quot;     &quot;B.1.189&quot;    
+## [286] &quot;B.1.528&quot;     &quot;B.1.23&quot;      &quot;B.1.67&quot;      &quot;B.1.547&quot;     &quot;P.2&quot;        
+## [291] &quot;B.1.1.28&quot;    &quot;B.1.390&quot;     &quot;B.1.395&quot;     &quot;B.1.530&quot;     &quot;C.35&quot;       
+## [296] &quot;B.1.233&quot;     &quot;B.1.543&quot;     &quot;B.6.7&quot;       &quot;B.1.1.369&quot;   &quot;B.1.1.372&quot;  
+## [301] &quot;C.8&quot;         &quot;C.36&quot;        &quot;C.36.1&quot;      &quot;C.16&quot;        &quot;C.23&quot;       
+## [306] &quot;C.1.1&quot;       &quot;B.1.1.375&quot;   &quot;C.2.1&quot;       &quot;C.12&quot;        &quot;B.1.1.161&quot;  
+## [311] &quot;B.1.1.87&quot;    &quot;B.1.1.192&quot;   &quot;B.1.1.71&quot;    &quot;B.1.1.10&quot;    &quot;L.3&quot;        
+## [316] &quot;L.1&quot;         &quot;B.1.1.176&quot;   &quot;B.1.1.398&quot;   &quot;B.1.1.417&quot;   &quot;B.1.1.63&quot;   
+## [321] &quot;B.1.1.422&quot;   &quot;B.1.1.487&quot;   &quot;B.1.1.312&quot;   &quot;B.1.1.331&quot;   &quot;B.1.1.58&quot;   
+## [326] &quot;B.1.1.277&quot;   &quot;K.1&quot;         &quot;B.1.1.30&quot;    &quot;B.1.1.516&quot;   &quot;B.1.1.50&quot;   
+## [331] &quot;B.1.1.33&quot;    &quot;N.2&quot;         &quot;N.3&quot;         &quot;N.7&quot;         &quot;N.5&quot;        
+## [336] &quot;N.8&quot;         &quot;N.4&quot;         &quot;B.1.1.409&quot;   &quot;B.1.1.61&quot;    &quot;B.1.1.220&quot;  
+## [341] &quot;R.1&quot;         &quot;B.1.1.317&quot;   &quot;B.1.1.464.1&quot; &quot;B.1.1.316&quot;   &quot;B.1.1.254&quot;  
+## [346] &quot;B.1.1.267&quot;   &quot;B.1.1.241&quot;   &quot;B.1.1.25&quot;    &quot;B.1.1.181&quot;   &quot;B.1.1.434&quot;  
+## [351] &quot;B.1.1.243&quot;   &quot;B.1.1.159&quot;   &quot;B.1.1.411&quot;   &quot;B.1.1.232&quot;   &quot;B.1.1.459&quot;  
+## [356] &quot;B.1.1.111&quot;   &quot;B.1.1.294&quot;   &quot;B.1.1.373&quot;   &quot;B.1.1.413&quot;   &quot;B.1.1.354&quot;  
+## [361] &quot;B.1.1.54&quot;    &quot;B.1.1.325&quot;   &quot;B.1.1.399&quot;   &quot;B.1.1.46&quot;    &quot;B.1.1.274&quot;  
+## [366] &quot;B.1.1.410&quot;   &quot;B.1.1.315&quot;   &quot;AD.2&quot;        &quot;B.1.1.142&quot;   &quot;B.1.1.485&quot;  
+## [371] &quot;B.1.1.200&quot;   &quot;B.1.1.339&quot;   &quot;AL.1&quot;        &quot;B.1.1.163&quot;   &quot;B.1.1.378&quot;  
+## [376] &quot;B.1.1.39&quot;    &quot;B.1.1.440&quot;   &quot;B.1.1.297&quot;   &quot;B.1.1.397&quot;   &quot;B.1.1.207&quot;  
+## [381] &quot;B.1.1.391&quot;   &quot;B.1.1.348&quot;   &quot;B.1.1.121&quot;   &quot;B.1.1.512&quot;   &quot;B.1.1.136&quot;  
+## [386] &quot;B.1.1.288&quot;   &quot;B.1.1.368&quot;   &quot;B.1.1.328&quot;   &quot;B.1.1.324&quot;   &quot;B.1.1.360&quot;  
+## [391] &quot;B.1.1.359&quot;   &quot;B.1.1.374&quot;   &quot;B.1.1.12&quot;    &quot;B.1.1.407&quot;   &quot;B.1.1.500&quot;  
+## [396] &quot;B.1.1.432&quot;   &quot;B.1.301&quot;     &quot;B.1.1.37&quot;    &quot;B.1.1.396&quot;   &quot;B.1.1.330&quot;  
+## [401] &quot;B.1.1.280&quot;   &quot;B.1.1.141&quot;   &quot;B.1.1.273&quot;   &quot;B.1.1.514&quot;   &quot;B.1.1.311&quot;  
+## [406] &quot;B.1.1.377&quot;   &quot;B.1.1.351&quot;   &quot;B.1.1.350&quot;   &quot;B.1.1.266&quot;   &quot;B.1.1.225&quot;  
+## [411] &quot;B.1.1.371&quot;   &quot;B.1.1.438&quot;   &quot;B.1.1.153&quot;   &quot;B.1.1.134&quot;   &quot;B.1.1.439&quot;  
+## [416] &quot;B.1.1.152&quot;   &quot;B.1.1.275&quot;   &quot;B.1.406&quot;     &quot;B.1.1.261&quot;   &quot;P.1&quot;        
+## [421] &quot;B.1.1.263&quot;   &quot;B.1.1.349&quot;   &quot;B.1.1.214&quot;   &quot;B.1.326&quot;     &quot;B.1.1.269&quot;  
+## [426] &quot;D.2&quot;         &quot;B.1.1.381&quot;   &quot;B.1.1.448&quot;   &quot;B.1.1.388&quot;   &quot;B.1.1.157&quot;  
+## [431] &quot;B.1.1.394&quot;   &quot;B.1.1.218&quot;   &quot;B.1.1.27&quot;    &quot;B.1.1.70&quot;    &quot;B.1.1.204&quot;  
+## [436] &quot;B.1.1.301&quot;   &quot;B.1.1.326&quot;   &quot;B.1.1.120&quot;   &quot;B.1.1.389&quot;   &quot;B.1.1.401&quot;  
+## [441] &quot;B.1.1.404&quot;   &quot;B.1.1.416&quot;   &quot;B.1.1.216&quot;   &quot;AM.1&quot;        &quot;AM.4&quot;       
+## [446] &quot;B.1.1.34&quot;    &quot;B.1.1.198&quot;   &quot;B.1.1.319&quot;   &quot;B.1.1.7&quot;     NA</code></pre>
 <hr />
 <div id="pick-the-tip-attributes-that-are-most-interesting-or-relevant" class="section level3">
 <h3>1.3.1 Pick the tip attributes that are most interesting or
@@ -1006,7 +1166,7 @@ SC2_variants_time.tree &lt;-
   SC2_metadata.df %&gt;% 
   
   # Select just a handful of attributes to go to the tree
-  ...(Strain, &#39;GISAID clade&#39;, &#39;Emerging Nextstrain clade&#39;, 
+  select(Strain, &#39;GISAID clade&#39;, &#39;Emerging Nextstrain clade&#39;, 
          &#39;PANGO lineage&#39;, Country, &#39;Admin Division&#39;, &#39;Collection Data&#39;, Age) %&gt;% 
   
   rename(strain = Strain,
@@ -1018,14 +1178,43 @@ SC2_variants_time.tree &lt;-
          strain_date = &#39;Collection Data&#39;) %&gt;% 
   
   # full_join to our tree to ensure no data is lost although you could also carefully use a left_join
-  full_join(x=..., y=..., by=...) %&gt;% 
+  left_join(x=SC2_variants_time.tb, y=., by=c(&quot;label&quot; = &quot;strain&quot;)) %&gt;% 
   
   # Convert to a tidytree format
-  as.treedata()</code></pre>
-<pre><code>## Error in as.treedata(.): &#39;...&#39; used in an incorrect context</code></pre>
-<pre class="r"><code># Look at the resulting structure
+  as.treedata()
+
+# Look at the resulting structure
 str(SC2_variants_time.tree)</code></pre>
-<pre><code>## Error in str(SC2_variants_time.tree): object &#39;SC2_variants_time.tree&#39; not found</code></pre>
+<pre><code>## Formal class &#39;treedata&#39; [package &quot;tidytree&quot;] with 11 slots
+##   ..@ file       : chr(0) 
+##   ..@ treetext   : chr(0) 
+##   ..@ phylo      :List of 5
+##   .. ..$ edge       : int [1:12776, 1:2] 6628 6631 6632 6633 6636 6635 6638 6638 6639 6640 ...
+##   .. .. ..- attr(*, &quot;dimnames&quot;)=List of 2
+##   .. .. .. ..$ : NULL
+##   .. .. .. ..$ : chr [1:2] &quot;parent&quot; &quot;node&quot;
+##   .. ..$ edge.length: num [1:12776] 0.0757 0 0.0077 0 0 ...
+##   .. ..$ tip.label  : chr [1:6627] &quot;Wuhan/WH01/2019&quot; &quot;USA/MA1/2020&quot; &quot;Canada/ON_ON-VIDO-01-2/2020&quot; &quot;Canada/ON_VIDO-01/2020&quot; ...
+##   .. ..$ node.label : chr [1:6150] &quot;NODE_0008606&quot; &quot;NODE_0000001&quot; &quot;NODE_0000061&quot; &quot;USA/MA1/2020_travel_history&quot; ...
+##   .. ..$ Nnode      : int 6150
+##   .. ..- attr(*, &quot;class&quot;)= chr &quot;phylo&quot;
+##   ..@ data       : tibble [12,777 x 8] (S3: tbl_df/tbl/data.frame)
+##   .. ..$ node               : int [1:12777] 1 2 3 4 5 6 7 8 9 10 ...
+##   .. ..$ GISAID             : chr [1:12777] &quot;L&quot; &quot;L&quot; &quot;L&quot; &quot;L&quot; ...
+##   .. ..$ emerging_nextstrain: chr [1:12777] &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; ...
+##   .. ..$ PANGO              : chr [1:12777] &quot;B&quot; &quot;B&quot; &quot;B&quot; &quot;B&quot; ...
+##   .. ..$ strain_country     : chr [1:12777] &quot;Asia&quot; &quot;USA&quot; &quot;Canada&quot; &quot;Canada&quot; ...
+##   .. ..$ strain_division    : chr [1:12777] &quot;Asia&quot; &quot;Massachusetts&quot; &quot;Ontario&quot; &quot;Ontario&quot; ...
+##   .. ..$ strain_date        : Date[1:12777], format: &quot;2019-12-26&quot; &quot;2020-01-29&quot; ...
+##   .. ..$ Age                : num [1:12777] 44 21 NA NA 54 NA 47 47 23 55 ...
+##   ..@ extraInfo  : tibble [0 x 0] (S3: tbl_df/tbl/data.frame)
+##  Named list()
+##   ..@ tip_seq    : NULL
+##   ..@ anc_seq    : NULL
+##   ..@ seq_type   : chr(0) 
+##   ..@ tipseq_file: chr(0) 
+##   ..@ ancseq_file: chr(0) 
+##   ..@ info       : list()</code></pre>
 <hr />
 </div>
 <div id="how-to-access-s4-object-types" class="section level3">
@@ -1134,7 +1323,10 @@ to_drop &lt;-
   
   # Just keep the strain information
   pull(Strain)</code></pre>
-<pre><code>## Error in filter(., !(Country == ... &amp; `Collection Data` &gt;= ...)): object &#39;SC2_metadata.df&#39; not found</code></pre>
+<pre><code>## [1m[33mError[39m in `filter()`:[22m
+## [1m[22m[36mi[39m In argument: `!(Country == ... &amp; `Collection Data` &gt;= ...)`.
+## [1mCaused by error:[22m
+## [33m![39m &#39;...&#39; used in an incorrect context</code></pre>
 <pre class="r"><code># Take a look at what we got back
 str(to_drop)</code></pre>
 <pre><code>## Error in str(to_drop): object &#39;to_drop&#39; not found</code></pre>
@@ -1155,10 +1347,10 @@ spruce up our tree with some tip labels to begin with. We’ll accomplish
 this with the <code>geom_tiplab()</code> layer.</p>
 <table>
 <colgroup>
-<col width="12%" />
-<col width="9%" />
-<col width="13%" />
-<col width="64%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="51%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1425,8 +1617,8 @@ take on the form of <code>function(tbl_tree, node_number)</code> or
 <code>function(tbl_tree, node_label)</code></p>
 <table>
 <colgroup>
-<col width="16%" />
-<col width="83%" />
+<col width="22%" />
+<col width="77%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1480,7 +1672,10 @@ to_view &lt;-
   
     # Just keep the strain names
     pull(Strain)</code></pre>
-<pre><code>## Error in filter(., `Emerging Nextstrain clade` %in% c(&quot;20I/501Y.V1&quot;, &quot;20H/501Y.V2&quot;) &amp; : object &#39;SC2_metadata.df&#39; not found</code></pre>
+<pre><code>## [1m[33mError[39m in `filter()`:[22m
+## [1m[22m[36mi[39m In argument: `&amp;...`.
+## [1mCaused by error:[22m
+## [33m![39m &#39;...&#39; used in an incorrect context</code></pre>
 <pre class="r"><code># What&#39;s the list look like?
 to_view</code></pre>
 <pre><code>## Error in eval(expr, envir, enclos): object &#39;to_view&#39; not found</code></pre>
@@ -1635,7 +1830,10 @@ curated_drop_list &lt;-
   filter(!(Strain %in% ...)) %&gt;% 
   # Only keep the strain information for what we want to drop
   pull(Strain)</code></pre>
-<pre><code>## Error in filter(., !(Strain %in% ...)): object &#39;SC2_metadata.df&#39; not found</code></pre>
+<pre><code>## [1m[33mError[39m in `filter()`:[22m
+## [1m[22m[36mi[39m In argument: `!(Strain %in% ...)`.
+## [1mCaused by error:[22m
+## [33m![39m &#39;...&#39; used in an incorrect context</code></pre>
 <pre class="r"><code># Drop tips from our tree and save it as curated_tree_info.df
 curated_tree_info.df &lt;-
 
@@ -2341,7 +2539,31 @@ we can’t convert some of it to a network diagram to better understand
 strain information? We’ll begin by selecting some information from our
 Nextstrain metadata set.</p>
 <pre class="r"><code>str(SC2_metadata.df, give.attr = FALSE)</code></pre>
-<pre><code>## Error in str(SC2_metadata.df, give.attr = FALSE): object &#39;SC2_metadata.df&#39; not found</code></pre>
+<pre><code>## spc_tbl_ [6,627 x 24] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ Strain                    : chr [1:6627] &quot;Wuhan/WH01/2019&quot; &quot;USA/MA1/2020&quot; &quot;Canada/ON_ON-VIDO-01-2/2020&quot; &quot;Canada/ON_VIDO-01/2020&quot; ...
+##  $ GISAID clade              : chr [1:6627] &quot;L&quot; &quot;L&quot; &quot;L&quot; &quot;L&quot; ...
+##  $ Nextstrain clade          : chr [1:6627] &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; ...
+##  $ Age                       : num [1:6627] 44 21 NA NA 54 NA 47 47 23 55 ...
+##  $ Clade                     : chr [1:6627] &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; ...
+##  $ Country                   : chr [1:6627] &quot;Asia&quot; &quot;USA&quot; &quot;Canada&quot; &quot;Canada&quot; ...
+##  $ Admin Division            : chr [1:6627] &quot;Asia&quot; &quot;Massachusetts&quot; &quot;Ontario&quot; &quot;Ontario&quot; ...
+##  $ Admin Division of exposure: chr [1:6627] &quot;Asia&quot; &quot;Asia&quot; &quot;Ontario&quot; &quot;Asia&quot; ...
+##  $ gisaid_epi_isl            : chr [1:6627] &quot;EPI_ISL_406798&quot; &quot;EPI_ISL_409067&quot; &quot;EPI_ISL_425177&quot; &quot;EPI_ISL_413015&quot; ...
+##  $ Host                      : chr [1:6627] &quot;Human&quot; &quot;Human&quot; &quot;Human&quot; &quot;Human&quot; ...
+##  $ Originating Lab           : chr [1:6627] &quot;General Hospital of Central Theater Command of People&#39;s Liberation Army of China&quot; &quot;Massachusetts Department of Public Health&quot; &quot;Public Health Ontario&quot; &quot;Public Health Ontario Laboratory&quot; ...
+##  $ PANGO lineage             : chr [1:6627] &quot;B&quot; &quot;B&quot; &quot;B&quot; &quot;B&quot; ...
+##  $ Submission Date           : chr [1:6627] &quot;Older&quot; &quot;Older&quot; &quot;Older&quot; &quot;Older&quot; ...
+##  $ Region                    : chr [1:6627] &quot;Asia&quot; &quot;North America&quot; &quot;North America&quot; &quot;North America&quot; ...
+##  $ Region of exposure        : chr [1:6627] &quot;Asia&quot; &quot;Asia&quot; &quot;North America&quot; &quot;Asia&quot; ...
+##  $ Sex                       : chr [1:6627] &quot;Male&quot; &quot;Male&quot; &quot;Male&quot; &quot;Male&quot; ...
+##  $ strain                    : chr [1:6627] &quot;Wuhan/WH01/2019&quot; &quot;USA/MA1/2020&quot; &quot;Canada/ON_ON-VIDO-01-2/2020&quot; &quot;Canada/ON_VIDO-01/2020&quot; ...
+##  $ Emerging Nextstrain clade : chr [1:6627] &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; ...
+##  $ Submitting Lab            : chr [1:6627] &quot;BGI &amp; Institute of Microbiology, Chinese Academy of Sciences &amp; Shandong First Medical University &amp; Shandong Aca&quot;| __truncated__ &quot;Pathogen Discovery, Respiratory Viruses Branch, Division of Viral Diseases, Centers for Disease Control and Prevention&quot; &quot;Public Health Agency of Canada - National Microbiology Laboratory&quot; &quot;National Microbiology Laboratory&quot; ...
+##  $ url                       : logi [1:6627] NA NA NA NA NA NA ...
+##  $ Collection Data           : Date[1:6627], format: &quot;2019-12-26&quot; &quot;2020-01-29&quot; ...
+##  $ Author                    : chr [1:6627] &quot;Weijun Chen et al (https://dx.doi.org/10.1016/S0140-6736(20)30251-8)&quot; &quot;Clinton R. Paden et al (https://dx.doi.org/10.1101/2020.03.09.20032896)&quot; &quot;Amrit S. Boese et al&quot; &quot;Shari Tyson et al&quot; ...
+##  $ Country of exposure       : chr [1:6627] NA &quot;Asia&quot; NA &quot;Asia&quot; ...
+##  $ Location                  : chr [1:6627] NA &quot;Boston&quot; NA NA ...</code></pre>
 <hr />
 <div id="perform-a-bit-of-data-wrangling-to-select-our-data" class="section level3">
 <h3>2.0.1 Perform a bit of data wrangling to select our data</h3>
@@ -2452,9 +2674,9 @@ compatible with <code>ggplot2</code> (for the most part). Some of the
 functions we are interested in are:</p>
 <table>
 <colgroup>
-<col width="8%" />
-<col width="15%" />
-<col width="75%" />
+<col width="17%" />
+<col width="17%" />
+<col width="64%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -2994,9 +3216,9 @@ assignment. Please provide answers in markdown or code cells that
 immediately follow each question section.</p>
 <table>
 <colgroup>
-<col width="21%" />
 <col width="24%" />
-<col width="53%" />
+<col width="24%" />
+<col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
