@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 14:08:23 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 14:13:19 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -584,7 +584,7 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 14:09:45 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 14:13:51 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
 library(tidyverse)
 library(readxl)
@@ -1793,13 +1793,9 @@ curated_drop_list &lt;-
   SC2_metadata.df %&gt;% 
 
   # filter the opposite of our tip labels
-  filter(!(Strain %in% ...)) %&gt;% 
+  filter(!(Strain %in% curated_tips)) %&gt;% 
   # Only keep the strain information for what we want to drop
   pull(Strain)</code></pre>
-<pre><code>## [1m[33mError[39m in `filter()`:[22m
-## [1m[22m[36mi[39m In argument: `!(Strain %in% ...)`.
-## [1mCaused by error:[22m
-## [33m![39m &#39;...&#39; used in an incorrect context</code></pre>
 <pre class="r"><code># Drop tips from our tree and save it as curated_tree_info.df
 curated_tree_info.df &lt;-
 
@@ -1807,25 +1803,36 @@ curated_tree_info.df &lt;-
   SC2_variants_time.tree %&gt;%
 
   # Drop the tips we created
-  drop.tip(., ...) %&gt;% 
+  drop.tip(., curated_drop_list) %&gt;% 
 
   # Convert to a tibble
   as_tibble() %&gt;% 
 
   # Rename our column information
-  rename(Clade = ..., Province = ...) %&gt;% 
+  rename(Clade = emerging_nextstrain, Province = strain_division) %&gt;% 
 
   mutate(Age = replace_na(Age, replace = 0)) %&gt;% 
 
   # Convert this to a data frame
-  as.data.frame()</code></pre>
-<pre><code>## Error in mutate(., Age = replace_na(Age, replace = 0)): &#39;...&#39; used in an incorrect context</code></pre>
-<pre class="r"><code># Set the rownames from the label information
-rownames(curated_tree_info.df) &lt;- curated_tree_info.df$label</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;curated_tree_info.df&#39; not found</code></pre>
-<pre class="r"><code># Let&#39;s view the tree
+  as.data.frame()
+
+# Set the rownames from the label information
+rownames(curated_tree_info.df) &lt;- curated_tree_info.df$label
+
+# Let&#39;s view the tree
 str(curated_tree_info.df)</code></pre>
-<pre><code>## Error in str(curated_tree_info.df): object &#39;curated_tree_info.df&#39; not found</code></pre>
+<pre><code>## &#39;data.frame&#39;:    72 obs. of  11 variables:
+##  $ parent        : int  40 42 42 44 44 45 45 46 46 48 ...
+##  $ node          : int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ branch.length : num  0.0757 0.0077 0.0077 0.1439 0.0729 ...
+##  $ label         : chr  &quot;Wuhan/WH01/2019&quot; &quot;Canada/ON_ON-VIDO-01-2/2020&quot; &quot;Canada/ON_VIDO-01/2020&quot; &quot;Canada/MB-NML-808/2020&quot; ...
+##  $ GISAID        : chr  &quot;L&quot; &quot;L&quot; &quot;L&quot; &quot;S&quot; ...
+##  $ Clade         : chr  &quot;19A&quot; &quot;19A&quot; &quot;19A&quot; &quot;19B&quot; ...
+##  $ PANGO         : chr  &quot;B&quot; &quot;B&quot; &quot;B&quot; &quot;A.1&quot; ...
+##  $ strain_country: chr  &quot;Asia&quot; &quot;Canada&quot; &quot;Canada&quot; &quot;Canada&quot; ...
+##  $ Province      : chr  &quot;Asia&quot; &quot;Ontario&quot; &quot;Ontario&quot; &quot;Manitoba&quot; ...
+##  $ strain_date   : Date, format: &quot;2019-12-26&quot; &quot;2020-01-23&quot; ...
+##  $ Age           : num  44 0 0 0 27 59 0 43 35 53 ...</code></pre>
 <hr />
 </div>
 <div id="convert-your-tree-style-with-the-layout-parameter" class="section level2">
@@ -1847,7 +1854,7 @@ tree.plot &lt;-
   drop.tip(., curated_drop_list)  %&gt;% 
   
   # 1. Data
-  ggtree(., layout = ..., ### 1.9.0 Set the layout to circular
+  ggtree(., layout = &quot;circular&quot;, ### 1.9.0 Set the layout to circular
          mrsd = &quot;2021-02-17&quot;) + # Need the most recent sampling date
     # 2. Aesthetics
 
@@ -1864,7 +1871,7 @@ tree.plot &lt;-
 
     ### 1.9.0 set the tip labels
     geom_tiplab(aes(label = ...), size = 8)</code></pre>
-<pre><code>## Error in ggtree(., layout = ..., mrsd = &quot;2021-02-17&quot;): could not find function &quot;ggtree&quot;</code></pre>
+<pre><code>## Error in ggtree(., layout = &quot;circular&quot;, mrsd = &quot;2021-02-17&quot;): could not find function &quot;ggtree&quot;</code></pre>
 <pre class="r"><code># View our tree
 tree.plot</code></pre>
 <pre><code>## Error in eval(expr, envir, enclos): object &#39;tree.plot&#39; not found</code></pre>
