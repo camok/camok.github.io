@@ -512,7 +512,7 @@ plots.</p>
 date-based information.</p>
 <pre class="r"><code># When do we start installing the packages
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 14:15:24 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 14:19:19 EDT&quot;</code></pre>
 <pre class="r"><code># New bioconductor packages we haven&#39;t worked with before
 if (!requireNamespace(&quot;BiocManager&quot;, quietly = TRUE))
     install.packages(&quot;BiocManager&quot;)
@@ -584,7 +584,7 @@ install.packages(&quot;tidytree&quot;)</code></pre>
 ## had non-zero exit status</code></pre>
 <pre class="r"><code># When do we finish?
 Sys.time()</code></pre>
-<pre><code>## [1] &quot;2025-04-17 14:16:43 EDT&quot;</code></pre>
+<pre><code>## [1] &quot;2025-04-17 14:19:49 EDT&quot;</code></pre>
 <pre class="r"><code># Packages to help tidy our data
 library(tidyverse)
 library(readxl)
@@ -1927,11 +1927,11 @@ tree.plot &lt;-
     geom_tippoint(aes(colour = strain_division), size = 5) # Add tips only </code></pre>
 <pre><code>## Error in ggtree(., layout = &quot;circular&quot;, mrsd = &quot;2021-02-17&quot;): could not find function &quot;ggtree&quot;</code></pre>
 <pre class="r"><code>### 1.10.0 Add a circular heatmap with gheatmap()
-tree.plot &lt;- ...(tree.plot, ..., 
+tree.plot &lt;- gheatmap(tree.plot, curated_tree_info.df %&gt;% select(parent, node, branch.length), 
                       offset = 0.1, width = 0.1,
                       colnames_angle = 90, font.size = 6, hjust = 1) + 
   scale_fill_continuous(name = &quot;Tree coding&quot;) </code></pre>
-<pre><code>## Error in ...(tree.plot, ..., offset = 0.1, width = 0.1, colnames_angle = 90, : could not find function &quot;...&quot;</code></pre>
+<pre><code>## Error in gheatmap(tree.plot, curated_tree_info.df %&gt;% select(parent, node, : could not find function &quot;gheatmap&quot;</code></pre>
 <pre class="r"><code>tree.plot</code></pre>
 <pre><code>## Error in eval(expr, envir, enclos): object &#39;tree.plot&#39; not found</code></pre>
 <hr />
